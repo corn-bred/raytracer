@@ -4,15 +4,27 @@ in vec2 TexCoords;
 
 out vec4 FragColor;
 
-uniform vec2 Dimensions;
-uniform vec3 CamUp;
-uniform vec3 CamFront;
-uniform vec3 CamRight;
-uniform float FOV;
+uniform mat4 invProjection;
+uniform mat4 View;
+uniform vec4 CameraPos;
+
+class Ray {
+    vec3 orig;
+    vec3 dir;
+
+    vec3 At(double t) {
+        return orig + dir * vec3(t);
+    }
+};
 
 void main () {
-    vec2 Coords = (TexCoords + 1) / 2;
-    vec2 PointLocal = Dimensions * TexCoords;
-    vec3 Point = vec3(CamRight * TexCoords.x, CamUp * TexCoords.y, CamFront * );
-    FragColor = vec4(TexCoords, 0.0, 1.0);
+    vec4 NDCoords = vec4(TexCoords.xy * 2 - 1.0, -1.0, 1.0);
+
+    vec4 Result = NDCoords * invProjection;
+    Result = vec4(Result.xyz / Result.w, 1.0);
+
+    Result = Result * View;
+    Result = vec4(Result.xyz / Result.w, 1.0);
+
+    FragColor = vec4(Result.xyz, 1.0);
 }

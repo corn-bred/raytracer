@@ -19,9 +19,9 @@ class Shader {
 
     void use();
 
-    void setbool(const std::string &unifName, bool val);
-    void setint(const std::string &unifName, int val);
-    void setfloat(const std::string &unifName, float val);
+    void setBool(const std::string &unifName, bool val);
+    void setInt(const std::string &unifName, int val);
+    void setFloat(const std::string &unifName, float val);
 
     void setVec2(const std::string &name, const glm::vec2 &value);
     void setVec2(const std::string &name, float x, float y);

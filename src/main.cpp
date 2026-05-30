@@ -21,8 +21,10 @@ float quadVertices[] = {
      1.0f,  1.0f,  1.0f, 1.0f
 };	
 
-unsigned int WIDTH = 800, HEIGHT = 600;
-float fov = 100;
+double AspectRatio = 16.0/9.0;
+unsigned int WIDTH = 1200;
+unsigned int HEIGHT = WIDTH / AspectRatio;
+float FOV = 100;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter;
 
@@ -69,11 +71,11 @@ void mouseCallback(GLFWwindow *window, double xpos, double ypos) {
 
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 {
-    fov -= (float)yoffset;
-    if (fov < 1.0f)
-        fov = 1.0f;
-    if (fov > 90.0f)
-        fov = 90.0f;
+    FOV -= (float)yoffset;
+    if (FOV < 1.0f)
+        FOV = 1.0f;
+    if (FOV > 90.0f)
+        FOV = 90.0f;
 }
 
 int main () {
@@ -93,6 +95,9 @@ int main () {
     }
 
     glfwMakeContextCurrent(window);
+
+    glfwSwapInterval(0);
+
     glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);  
@@ -155,11 +160,25 @@ int main () {
         }
         LastFrame = CurrentFrame;
 
+        glm::mat4 projection = glm::mat4(1.0f);
+        projection = glm::perspective(glm::radians(FOV), (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
+
+        CameraMain.updateCamera();
+        
+        glm::mat4 view = CameraMain.calculateView();
+
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         ShaderQuad.use();
+
+        ShaderQuad.setMat4("View", view);
+        ShaderQuad.setMat4("invProjection", glm::inverse(projection));
+        ShaderQuad.setVec3("cameraPos", CameraMain.position);
+
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glfwSwapBuffers(window);
+
+        FPSCounter++;
     }
     glDeleteTextures(1, &FramebufferColourBuffer);
     glDeleteFramebuffers(1, &FramebufferMain);
