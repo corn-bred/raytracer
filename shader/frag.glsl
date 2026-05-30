@@ -25,6 +25,10 @@ void main () {
 
     Result = Result * View;
     Result = vec4(Result.xyz / Result.w, 1.0);
+    Result = normalize(Result);
+    Ray ray;
+    ray.orig = vec3(CameraPos.xyz);
+    ray.dir = vec3(Result.xyz);
 
-    FragColor = vec4(Result.xyz, 1.0);
+    FragColor = vec4(ray.dir, 1.0);
 }

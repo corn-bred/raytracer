@@ -24,7 +24,7 @@ float quadVertices[] = {
 double AspectRatio = 16.0/9.0;
 unsigned int WIDTH = 1200;
 unsigned int HEIGHT = WIDTH / AspectRatio;
-float FOV = 100;
+float FOV = 100.0;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter;
 
@@ -57,25 +57,28 @@ void processInput(GLFWwindow *window, Camera camera) {
     camera.keyboardprocess(movements, DeltaTime, cameraSpeed);
 }
 
-float LastX, LastY;
+float LastX = -1.0, LastY = -1.0;
 
 void mouseCallback(GLFWwindow *window, double xpos, double ypos) {
-
-    float xoffset = xpos - LastX;
-    float yoffset = LastY - ypos;
+    float xoffset = 0;
+    float yoffset = 0;
+    if (LastX != -1.0 && LastY != -1.0) {
+        xoffset = xpos - LastX;
+        yoffset = LastY - ypos;
+    }
+    
     LastX = xpos;
     LastY = ypos;
-
+    
     CameraMain.mouseprocess(xoffset, yoffset, GL_TRUE);
 }
 
-void scrollCallback(GLFWwindow* window, double xoffset, double yoffset)
-{
+void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
     FOV -= (float)yoffset;
     if (FOV < 1.0f)
         FOV = 1.0f;
-    if (FOV > 90.0f)
-        FOV = 90.0f;
+    if (FOV > 170.0f)
+        FOV = 170.0f;
 }
 
 int main () {
@@ -98,11 +101,16 @@ int main () {
 
     glfwSwapInterval(0);
 
+    GLFWmonitor *monitor = glfwGetPrimaryMonitor();
+    GLFWvidmode *mode = const_cast<GLFWvidmode*>(glfwGetVideoMode(monitor));
+    glfwSetWindowPos(window, (mode->width - WIDTH)/2, (mode->height - HEIGHT)/2);
+
     glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);  
     glfwSetCursorPosCallback(window, mouseCallback);
-    
+    CameraMain.mouseprocess(0, 0, GL_TRUE);
+
     glfwSetScrollCallback(window, scrollCallback);
 
     if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
@@ -161,7 +169,7 @@ int main () {
         LastFrame = CurrentFrame;
 
         glm::mat4 projection = glm::mat4(1.0f);
-        projection = glm::perspective(glm::radians(FOV), (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
+        projection = glm::perspective((float)glm::radians(FOV), (float)AspectRatio, 0.1f, 100.0f);
 
         CameraMain.updateCamera();
         
