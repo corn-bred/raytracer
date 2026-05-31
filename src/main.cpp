@@ -180,7 +180,7 @@ int main () {
         ShaderQuad.setMat4("invView", glm::inverse(view));
         ShaderQuad.setMat4("invProjection", glm::inverse(projection));
         ShaderQuad.setVec3("CameraPos", CameraMain.position);
-        cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
+        //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
