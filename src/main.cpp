@@ -36,24 +36,23 @@ void framebufferSizeCallback(GLFWwindow *window, int width, int height) {
     glViewport(0, 0, width, height);
 }
 
-void processInput(GLFWwindow *window, Camera camera) {
+void processInput(GLFWwindow *window, Camera &camera) {
     const float cameraSpeed = 2.5f;
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     bool movements[6] = {false}; //W:0 S:1 A:2 D:3 SPACE:4 CONTROL:5
     if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        movements[0] = GLFW_PRESS;
+        movements[0] = true;
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        movements[1] = GLFW_PRESS;
+        movements[1] = true;
     if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        movements[2] = GLFW_PRESS;
+        movements[2] = true;
     if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        movements[3] = GLFW_PRESS;
+        movements[3] = true;
     if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
-        movements[4] = GLFW_PRESS;
+        movements[4] = true;
     if(glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
-        movements[5] = GLFW_PRESS;
-    
+        movements[5] = true;
     camera.keyboardprocess(movements, DeltaTime, cameraSpeed);
 }
 
@@ -178,9 +177,10 @@ int main () {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         ShaderQuad.use();
 
-        ShaderQuad.setMat4("View", view);
+        ShaderQuad.setMat4("invView", glm::inverse(view));
         ShaderQuad.setMat4("invProjection", glm::inverse(projection));
-        ShaderQuad.setVec3("cameraPos", CameraMain.position);
+        ShaderQuad.setVec3("CameraPos", CameraMain.position);
+        cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
