@@ -8,12 +8,6 @@ uniform mat4 invProjection;
 uniform mat4 invView;
 uniform vec3 CameraPos;
 
-class HitRecord {
-    vec3 Position;
-    vec3 Normal;
-    float t;
-}
-
 class Ray {
     vec3 Origin;
     vec3 Direction;
@@ -23,8 +17,20 @@ class Ray {
     }
 };
 
+class HitRecord {
+    vec3 Position;
+    vec3 Normal;
+    float t;
+    bool facingFront;
+
+    void setFaceNormal(Ray r, vec3 outwardNormal) {
+        facingFront = (dot(r.Direction, outwardNormal) < 0.0);
+        Normal = facingFront? outwardNormal : -outwardNormal;
+    }
+};
+
 class Sphere {
-    Sphere(const point3& center, double radius) : center(center), radius(fmax(0,radius)) {}
+    Sphere(const point3 center, double radius) : center(center), radius(fmax(0,radius)) {}
 
     bool hit(Ray r, double ray_tmin, double ray_tmax, inout HitRecord rec) {
         vec3 OriginToCenter = center - ray.Origin;
@@ -49,14 +55,15 @@ class Sphere {
 
         rec.t = root;
         rec.Position = r.At(rec.t);
-        rec.Normal = (rec.Position - center) / radius;
+        vec3 outwardNormal = (rec.Position - center) / radius;
+        rec.setFaceNormal(r, outwardNormal);
 
         return true;
     }
 
     vec3 center;
     double radius;
-}
+};
 
 vec3 rayColour(Ray r) {
     float t = willIntersectSphere(vec3(0,0,-1), 0.5, r);
