@@ -180,6 +180,10 @@ int main () {
         ShaderQuad.setMat4("invView", glm::inverse(view));
         ShaderQuad.setMat4("invProjection", glm::inverse(projection));
         ShaderQuad.setVec3("CameraPos", CameraMain.position);
+        ShaderQuad.setVec3("uObjects[0].center", glm::vec3(0,0,-1));
+        ShaderQuad.setFloat("uObjects[0].radius", 0.5);
+        ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,-100.5,-1));
+        ShaderQuad.setFloat("uObjects[1].radius", 100);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
