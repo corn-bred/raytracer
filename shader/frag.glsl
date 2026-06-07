@@ -13,6 +13,18 @@ uniform vec3 CameraPos;
 const double infinity = 1.0 / 0.0;
 const double pi = 3.1415926535897932385;
 
+double degrees_to_radians(double degrees) {
+    return degrees * pi / 180.0;
+}
+
+double rand(double seed) {
+    return fract(sin(seed) * 43758.5453123);
+}
+
+double randRange(double seed, double min, double max) {
+    return min + (max - min) * rand(seed);
+}
+
 struct Ray {
     vec3 Origin;
     vec3 Direction;
