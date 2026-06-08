@@ -9,21 +9,34 @@ out vec4 FragColor;
 uniform mat4 invProjection;
 uniform mat4 invView;
 uniform vec3 CameraPos;
+uniform float glfwTime;
+uniform int Width;
+uniform int Height;
+uniform int MSAAsamples;
 
 const double infinity = 1.0 / 0.0;
 const double pi = 3.1415926535897932385;
 
-double degrees_to_radians(double degrees) {
+double degreesToRadians(double degrees) {
     return degrees * pi / 180.0;
 }
 
 double rand(double seed) {
-    return fract(sin(seed) * 43758.5453123);
+    return fract(sin(float(seed)) * 43758.5453123);
 }
 
 double randRange(double seed, double min, double max) {
     return min + (max - min) * rand(seed);
 }
+
+vec3 sampleSquare(float seed, int sampleIndex) {
+    float seedX = seed + float(sampleIndex);
+    float seedY = seedX + 3.14159;
+    return vec3(rand(seedX) - 0.5, rand(seedY) - 0.5, 0.0);
+}
+
+
+//Ray
 
 struct Ray {
     vec3 Origin;
@@ -33,6 +46,8 @@ struct Ray {
 vec3 RayAt(inout Ray ray, double t) {
     return ray.Origin + ray.Direction * vec3(t);
 }
+
+//      HitRecord
 
 struct HitRecord {
     vec3 Position;
@@ -47,6 +62,10 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
     hitrecord.facingFront = (dot(r.Direction, outwardNormal) < 0.0);
     hitrecord.Normal = hitrecord.facingFront? outwardNormal : -outwardNormal;
 }
+
+
+
+//      Sphere
 
 struct Sphere {
     vec3 center;
@@ -87,6 +106,10 @@ bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, i
 
 uniform Sphere uObjects[HITTABLE_LIST_ARRAY_SIZE];
 
+
+
+//      HittableList
+
 struct HittableList {
     Sphere objects[HITTABLE_LIST_ARRAY_SIZE];
     //bool hitSphere();
@@ -109,6 +132,28 @@ bool HittableListHitSphere(inout HittableList hittablelist, Ray r, double ray_tm
     return anythingHit;
 }
 
+
+
+
+Ray getRay(float i, float j, int SampleNumber) {
+    vec3 Offset = sampleSquare(2, SampleNumber);
+    vec2 PixelSample = vec2(i + Offset.x + 0.5, j + Offset.y + 0.5);
+    vec4 NDCoords = vec4(PixelSample.x / Width * 2.0 - 1.0, (PixelSample.y / Height * 2.0 - 1.0), -1.0, 1.0);
+
+    vec3 RayOrigin = CameraPos;
+    vec4 RayDirection = invProjection * NDCoords;
+    RayDirection = vec4(RayDirection.xyz / RayDirection.w, 1.0);
+    RayDirection = normalize(invView * vec4(RayDirection.xyz, 0.0));
+
+    Ray r;
+    r.Origin = RayOrigin;
+    r.Direction = vec3(RayDirection.xyz);
+
+    return r;
+}
+
+
+
 vec3 rayColour(Ray r, HittableList world) {
     HitRecord rec;
 
@@ -122,20 +167,20 @@ vec3 rayColour(Ray r, HittableList world) {
     return ( (1.0-a) * vec3(1.0, 1.0, 1.0) + a * vec3(0.5, 0.7, 1.0) );
 }
 
+
+
+
 void main () {
-    vec4 NDCoords = vec4(TexCoords.xy * 2 - 1.0, -1.0, 1.0);
-
-    vec4 Result = invProjection * NDCoords;
-    Result = vec4(Result.xyz / Result.w, 1.0);
-
-    Result = normalize(invView * vec4(Result.xyz, 0.0));
-
-    Ray ray;
-    ray.Origin = CameraPos;
-    ray.Direction = vec3(Result.xyz);
-
     HittableList world;
     world.objects = uObjects;
 
-    FragColor = vec4(rayColour(ray, world), 1.0);
+    vec3 PixelColour = vec3(0.0);
+    for(int samples = 0; samples < MSAAsamples; samples++) {
+        Ray r = getRay(gl_FragCoord.x, gl_FragCoord.y, samples);
+        PixelColour += rayColour(r, world);
+        
+    }
+    PixelColour /= float(MSAAsamples);
+    
+    FragColor = vec4(PixelColour, 1.0);
 }

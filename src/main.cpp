@@ -184,6 +184,10 @@ int main () {
         ShaderQuad.setFloat("uObjects[0].radius", 0.5);
         ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,-100.5,-1));
         ShaderQuad.setFloat("uObjects[1].radius", 100);
+        ShaderQuad.setInt("Width", WIDTH);
+        ShaderQuad.setInt("Height", HEIGHT);
+        ShaderQuad.setFloat("glfwTime", CurrentFrame);
+        ShaderQuad.setInt("MSAAsamples", 4);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
