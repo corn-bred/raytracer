@@ -243,6 +243,7 @@ void main () {
 
     float TotalSamples = float(FrameIndex + 1);
     vec3 AccumulatedColour = (PreviousSample * float(FrameIndex) + NewSample) / TotalSamples;
+
     if (FrameIndex == 1) {
         AccumulatedColour = NewSample;
     }
