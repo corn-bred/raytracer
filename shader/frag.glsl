@@ -243,5 +243,8 @@ void main () {
 
     float TotalSamples = float(FrameIndex + 1);
     vec3 AccumulatedColour = (PreviousSample * float(FrameIndex) + NewSample) / TotalSamples;
+    if (FrameIndex == 1) {
+        AccumulatedColour = NewSample;
+    }
     FragColor = vec4(AccumulatedColour, 1.0);
 }

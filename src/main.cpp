@@ -26,7 +26,7 @@ unsigned int WIDTH = 1200;
 unsigned int HEIGHT = WIDTH / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
-unsigned int FPSCounter;
+unsigned int FPSCounter, ShownFPS;
 int FrameIndex = 0;
 
 Camera CameraMain(glm::vec3(0.0, 0.0, 0.0));
@@ -178,11 +178,12 @@ int main () {
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;
         if (floor(CurrentFrame) != floor(LastFrame)) {
-            stringstream titlestring;
-            titlestring << "Cornbread Program (FPS: " << FPSCounter << ")";
-            glfwSetWindowTitle(window, titlestring.str().c_str()); 
+            ShownFPS = FPSCounter;
             FPSCounter = 0;
         }
+        stringstream titlestring;
+        titlestring << "Cornbread Program (FPS: " << ShownFPS << ", Frame index: " << FrameIndex <<")";
+        glfwSetWindowTitle(window, titlestring.str().c_str()); 
         LastFrame = CurrentFrame;
 
         glm::mat4 projection = glm::mat4(1.0f);
@@ -212,7 +213,7 @@ int main () {
         ShaderQuad.setInt("Width", WIDTH);
         ShaderQuad.setInt("Height", HEIGHT);
         ShaderQuad.setFloat("glfwTime", CurrentFrame);
-        ShaderQuad.setInt("MSAAsamples", 1);
+        ShaderQuad.setInt("MSAAsamples", 4);
         ShaderQuad.setInt("MaximumDepth", 4);
         ShaderQuad.setInt("FrameIndex", FrameIndex);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
