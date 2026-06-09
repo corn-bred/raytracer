@@ -190,7 +190,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
     vec3 colour = vec3(1.0);
 
     HitRecord rec;
-    if (HittableListHitSphere(world, r, 1e-4, infinity, rec)) {
+    if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
         colour *= 0.5;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
@@ -199,7 +199,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             r.Origin = rec.Position;
             r.Direction = dir;
 
-            if(HittableListHitSphere(world, r, 1e-4, infinity, rec)) {
+            if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
                 colour *= 0.5;
             } else {
                 vec3 unitDir = normalize(r.Direction);
