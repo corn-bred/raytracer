@@ -13,6 +13,9 @@ uniform float glfwTime;
 uniform int Width;
 uniform int Height;
 uniform int MSAAsamples;
+uniform int MaximumDepth;
+uniform sampler2D TextureAccumulation;
+uniform int FrameIndex;
 
 const double infinity = 1.0 / 0.0;
 const double pi = 3.1415926535897932385;
@@ -31,12 +34,39 @@ double randRange(double seed, double min, double max) {
 
 vec3 sampleSquare(float seed, int sampleIndex) {
     float seedX = seed + float(sampleIndex);
-    float seedY = seedX + 3.14159;
-    return vec3(rand(seedX) - 0.5, rand(seedY) - 0.5, 0.0);
+    float seedY = seedX + 3.12534;
+    return vec3(randRange(seedX, -0.5, 0.5), randRange(seedY, -0.5, 0.5), 0.0);
 }
 
+vec3 randVec3(double seed) {
+    return vec3(rand(seed), rand(seed + 10.3454), rand(seed + 5.3543));
+}
 
-//Ray
+vec3 randRangeVec3(double seed, double min, double max) {
+    return vec3(randRange(seed, min, max), randRange(seed + 10.3454, min, max), randRange(seed + 5.3543, min, max));
+}
+
+vec3 randUnitVec3(double seed){
+    for (int i = 0; i < 50; i++) {
+        vec3 p = randRangeVec3(gl_FragCoord.x * 1.243 + gl_FragCoord.y * 6.23584 + i * 1.43584 + seed, -1, 1);
+        float LengthSquared = length(p)*length(p); //Length squared, why is it named that
+        if ( 1e-8 < LengthSquared && LengthSquared <= 1) { // Uh oh, underflow protector
+            return normalize(p);
+        }
+    }
+    return vec3(1.0, 0.0, 0.0);
+}
+
+vec3 randOnHemisphere(double seed, vec3 Normal) {
+    vec3 OnUnitSphere = randUnitVec3(seed);
+    if(dot(OnUnitSphere, Normal) > 0.0) {
+        return OnUnitSphere;
+    } else {
+        return -OnUnitSphere;
+    }
+}
+
+//      Ray
 
 struct Ray {
     vec3 Origin;
@@ -154,17 +184,43 @@ Ray getRay(float i, float j, int SampleNumber) {
 
 
 
-vec3 rayColour(Ray r, HittableList world) {
-    HitRecord rec;
 
-    if(HittableListHitSphere(world, r, 0, infinity, rec)) {
-        return 0.5 * (rec.Normal + vec3(1.0, 1.0, 1.0));
+
+vec3 rayColour(Ray r, int maxDepth, HittableList world) {
+    vec3 colour = vec3(1.0);
+
+    HitRecord rec;
+    if (HittableListHitSphere(world, r, 1e-4, infinity, rec)) {
+        colour *= 0.5;
+
+        for (int depth = 0; depth < maxDepth; ++depth) {
+
+            vec3 dir = randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y + glfwTime + float(depth), rec.Normal);
+            r.Origin = rec.Position;
+            r.Direction = dir;
+
+            if(HittableListHitSphere(world, r, 1e-4, infinity, rec)) {
+                colour *= 0.5;
+            } else {
+                vec3 unitDir = normalize(r.Direction);
+                float a = 0.5 * (unitDir.y + 1.0);
+                vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+                colour *= sky;
+                return colour;
+            }
+
+        }
+
+    } else {
+
+        vec3 unitDir = normalize(r.Direction);
+        float a = 0.5 * (unitDir.y + 1.0);
+        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+        colour *= sky;
+
     }
 
-    vec3 UnitDirection = normalize(r.Direction);
-    
-    float a = 0.5 * (r.Direction.y + 1.0);
-    return ( (1.0-a) * vec3(1.0, 1.0, 1.0) + a * vec3(0.5, 0.7, 1.0) );
+    return colour;
 }
 
 
@@ -174,13 +230,18 @@ void main () {
     HittableList world;
     world.objects = uObjects;
 
+    vec3 PreviousSample = texture(TextureAccumulation, TexCoords).rgb;
+
     vec3 PixelColour = vec3(0.0);
     for(int samples = 0; samples < MSAAsamples; samples++) {
         Ray r = getRay(gl_FragCoord.x, gl_FragCoord.y, samples);
-        PixelColour += rayColour(r, world);
-        
+        PixelColour += rayColour(r, MaximumDepth, world);
     }
     PixelColour /= float(MSAAsamples);
-    
-    FragColor = vec4(PixelColour, 1.0);
+
+    vec3 NewSample = PixelColour;
+
+    float TotalSamples = float(FrameIndex + 1);
+    vec3 AccumulatedColour = (PreviousSample * float(FrameIndex) + NewSample) / TotalSamples;
+    FragColor = vec4(AccumulatedColour, 1.0);
 }

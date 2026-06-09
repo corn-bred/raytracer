@@ -27,6 +27,7 @@ unsigned int HEIGHT = WIDTH / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter;
+int FrameIndex = 0;
 
 Camera CameraMain(glm::vec3(0.0, 0.0, 0.0));
 
@@ -36,23 +37,37 @@ void framebufferSizeCallback(GLFWwindow *window, int width, int height) {
     glViewport(0, 0, width, height);
 }
 
-void processInput(GLFWwindow *window, Camera &camera) {
+void processInput(GLFWwindow *window, Camera &camera) { //Spaghetti code GO
     const float cameraSpeed = 2.5f;
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
+        FrameIndex = 0;
+    }
     bool movements[6] = {false}; //W:0 S:1 A:2 D:3 SPACE:4 CONTROL:5
-    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
         movements[0] = true;
-    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        FrameIndex = 0;
+    }
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
         movements[1] = true;
-    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        FrameIndex = 0;
+    }
+    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
         movements[2] = true;
-    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        FrameIndex = 0;
+    }
+    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
         movements[3] = true;
-    if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+        FrameIndex = 0;
+    }
+    if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
         movements[4] = true;
-    if(glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
+        FrameIndex = 0;
+    }
+    if(glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) {
         movements[5] = true;
+        FrameIndex = 0;
+    }
     camera.keyboardprocess(movements, DeltaTime, cameraSpeed);
 }
 
@@ -70,6 +85,7 @@ void mouseCallback(GLFWwindow *window, double xpos, double ypos) {
     LastY = ypos;
     
     CameraMain.mouseprocess(xoffset, yoffset, GL_TRUE);
+    FrameIndex = 0;
 }
 
 void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
@@ -78,6 +94,7 @@ void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
         FOV = 1.0f;
     if (FOV > 170.0f)
         FOV = 170.0f;
+    FrameIndex = 0;
 }
 
 int main () {
@@ -122,40 +139,41 @@ int main () {
     glGenFramebuffers(1, &FramebufferMain);
     glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
 
-    GLuint FramebufferColourBuffer;
-    glGenTextures(1, &FramebufferColourBuffer);
-    glBindTexture(GL_TEXTURE_2D, FramebufferColourBuffer);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WIDTH, HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
+    int ReadTexture = 0, WriteTexture = 1;
+    GLuint FramebufferAccumulationTexture[2];
+    glGenTextures(2, FramebufferAccumulationTexture);
 
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, FramebufferColourBuffer, 0);
-
-    if (!glCheckFramebufferStatus(GL_FRAMEBUFFER)) {
-        cerr << "Framebuffer is incomplete\n";
-        glDeleteTextures(1, &FramebufferColourBuffer);
-        glDeleteFramebuffers(1, &FramebufferMain);
-        glfwTerminate();
-        return 1;
+    for(int i = 0; i < 2; i++) {
+        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[i]);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     }
+
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     Shader ShaderQuad("shader/vert.glsl", "shader/frag.glsl");
+    Shader ShaderSample("shader/vertSample.glsl", "shader/fragSample.glsl");
 
     VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
     BufferQuad.addAttribute(0, 4, 2, GL_FLOAT, sizeof(float), 0);
     BufferQuad.addAttribute(1, 4, 2, GL_FLOAT, sizeof(float), 2);
 
+    
+
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);
+        FrameIndex++;
 
         glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
 
-        glClearColor(1.0, 1.0, 1.0, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
+        if (FrameIndex == 1) {
+            glClearColor(0.0, 0.0, 0.0, 1.0);
+            glClear(GL_COLOR_BUFFER_BIT);
+        }
 
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;
@@ -174,8 +192,15 @@ int main () {
         
         glm::mat4 view = CameraMain.calculateView();
 
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
         ShaderQuad.use();
+
+        glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
+
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, FramebufferAccumulationTexture[WriteTexture], 0);
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[ReadTexture]);
+        ShaderQuad.setInt("TextureAccumulation", 0);
 
         ShaderQuad.setMat4("invView", glm::inverse(view));
         ShaderQuad.setMat4("invProjection", glm::inverse(projection));
@@ -187,16 +212,32 @@ int main () {
         ShaderQuad.setInt("Width", WIDTH);
         ShaderQuad.setInt("Height", HEIGHT);
         ShaderQuad.setFloat("glfwTime", CurrentFrame);
-        ShaderQuad.setInt("MSAAsamples", 4);
+        ShaderQuad.setInt("MSAAsamples", 1);
+        ShaderQuad.setInt("MaximumDepth", 4);
+        ShaderQuad.setInt("FrameIndex", FrameIndex);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
-        glfwSwapBuffers(window);
 
+        swap(ReadTexture, WriteTexture);
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+        ShaderSample.use();
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[ReadTexture]);
+        ShaderSample.setInt("TextureAccumulation", 0);
+
+        BufferQuad.bind();
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+
+        glfwSwapBuffers(window);
+        
         FPSCounter++;
     }
-    glDeleteTextures(1, &FramebufferColourBuffer);
+    glDeleteTextures(2, FramebufferAccumulationTexture);
     glDeleteFramebuffers(1, &FramebufferMain);
     glfwTerminate();
     return 0;
