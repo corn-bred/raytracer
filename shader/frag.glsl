@@ -84,6 +84,8 @@ struct HitRecord {
     vec3 Normal;
     float t;
     bool facingFront;
+    float Roughness;
+    vec3 Albedo;
 
     //void HitRecordSetFaceNormal();
 };
@@ -100,6 +102,8 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
 struct Sphere {
     vec3 center;
     float radius;
+    float roughness;
+    vec3 albedo;
 
     //bool hit();
 };
@@ -128,6 +132,11 @@ bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, i
 
     rec.t = float(root);
     rec.Position = RayAt(ray, rec.t);
+
+    //copy data
+    rec.Roughness = sphere.roughness;
+    rec.Albedo = sphere.albedo;
+
     vec3 outwardNormal = vec3(rec.Position - sphere.center) / vec3(sphere.radius);
     HitRecordSetFaceNormal(rec, ray, outwardNormal);
 
@@ -191,11 +200,11 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
     HitRecord rec;
     if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
-        colour *= 0.5;
+        colour = rec.Albedo;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
 
-            vec3 dir = randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y + glfwTime + float(depth), rec.Normal);
+            vec3 dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y + glfwTime + float(depth), rec.Normal)* rec.Roughness);
             r.Origin = rec.Position;
             r.Direction = dir;
 

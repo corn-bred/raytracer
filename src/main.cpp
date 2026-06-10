@@ -206,16 +206,24 @@ int main () {
         ShaderQuad.setMat4("invView", glm::inverse(view));
         ShaderQuad.setMat4("invProjection", glm::inverse(projection));
         ShaderQuad.setVec3("CameraPos", CameraMain.position);
+
         ShaderQuad.setVec3("uObjects[0].center", glm::vec3(0,0,-1));
         ShaderQuad.setFloat("uObjects[0].radius", 0.5);
+        ShaderQuad.setVec3("uObjects[0].albedo", glm::vec3(1,0,0));
+        ShaderQuad.setFloat("uObjects[0].roughness", 1);
+
         ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,-100.5,-1));
         ShaderQuad.setFloat("uObjects[1].radius", 100);
+        ShaderQuad.setVec3("uObjects[1].albedo", glm::vec3(0.2,1,0.2));
+        ShaderQuad.setFloat("uObjects[1].roughness", 0.1);
+
         ShaderQuad.setInt("Width", WIDTH);
         ShaderQuad.setInt("Height", HEIGHT);
         ShaderQuad.setFloat("glfwTime", CurrentFrame);
-        ShaderQuad.setInt("MSAAsamples", 4);
-        ShaderQuad.setInt("MaximumDepth", 4);
+        ShaderQuad.setInt("MSAAsamples", 10);
+        ShaderQuad.setInt("MaximumDepth", 10);
         ShaderQuad.setInt("FrameIndex", FrameIndex);
+        ShaderQuad.setFloat("Roughness", CurrentFrame/1.0);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
