@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 2
+#define HITTABLE_LIST_ARRAY_SIZE 4
 
 in vec2 TexCoords;
 
@@ -200,7 +200,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
     HitRecord rec;
     if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
-        colour = rec.Albedo;
+        colour = rec.Albedo * colour;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
 
@@ -209,7 +209,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             r.Direction = dir;
 
             if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
-                colour *= 0.5;
+                colour = rec.Albedo * colour;
             } else {
                 vec3 unitDir = normalize(r.Direction);
                 float a = 0.5 * (unitDir.y + 1.0);
