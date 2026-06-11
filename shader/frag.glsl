@@ -87,7 +87,7 @@ struct HitRecord {
     float Roughness;
     vec3 Albedo;
     bool isDielectric;
-    float IOR;
+    float ior;
 
     //void HitRecordSetFaceNormal();
 };
@@ -107,7 +107,7 @@ struct Sphere {
     float roughness;
     vec3 albedo;
     bool dielectric;
-    float IOR;
+    float ior;
 
     //bool hit();
 };
@@ -141,7 +141,7 @@ bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, i
     rec.Roughness = sphere.roughness;
     rec.Albedo = sphere.albedo;
     rec.isDielectric = sphere.dielectric;
-    rec.IOR = sphere.IOR;
+    rec.ior = sphere.ior;
 
     vec3 outwardNormal = vec3(rec.Position - sphere.center) / vec3(sphere.radius);
     HitRecordSetFaceNormal(rec, ray, outwardNormal);
@@ -212,8 +212,8 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             vec3 dir = vec3(0.0);
 
             if (rec.isDielectric) {
-                float ri = rec.facingFront ? (1.0/rec.IOR) : rec.IOR;
-                vec3 Incident = -normalize(r.Direction);
+                float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
+                vec3 Incident = normalize(r.Direction);
                 vec3 Normal = normalize(rec.Normal);
                 vec3 Refracted = refract(Incident, Normal, ri);
 

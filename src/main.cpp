@@ -221,7 +221,7 @@ int main () {
         ShaderQuad.setFloat("uObjects[2].radius", 0.5);
         ShaderQuad.setVec3("uObjects[2].albedo", glm::vec3(1,1,1));
         ShaderQuad.setBool("uObjects[2].dielectric", true);
-        ShaderQuad.setFloat("uObject[2].IOR", 1);
+        ShaderQuad.setFloat("uObjects[2].ior", 1.50);
 
         ShaderQuad.setVec3("uObjects[3].center", glm::vec3(1,0,-1));
         ShaderQuad.setFloat("uObjects[3].radius", 0.5);
