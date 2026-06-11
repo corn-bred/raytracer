@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 4
+#define HITTABLE_LIST_ARRAY_SIZE 5
 
 in vec2 TexCoords;
 
@@ -17,7 +17,7 @@ uniform int MaximumDepth;
 uniform sampler2D TextureAccumulation;
 uniform int FrameIndex;
 
-const double infinity = 1.0 / 0.0;
+const float infinity = 1.0 / 0.0;
 const double pi = 3.1415926535897932385;
 
 double degreesToRadians(double degrees) {
@@ -64,6 +64,12 @@ vec3 randOnHemisphere(double seed, vec3 Normal) {
     } else {
         return -OnUnitSphere;
     }
+}
+
+float reflectance(float cosine, float ior) {
+    float r0 = (1 - ior) / (1 + ior);
+    r0 = pow(r0, 2);
+    return r0 + (1-r0) * pow((1 - cosine), 5);
 }
 
 //      Ray
@@ -206,6 +212,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
     HitRecord rec;
     if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
+        if (!rec.isDielectric)
         colour = rec.Albedo * colour;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
@@ -217,7 +224,9 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                 vec3 Normal = normalize(rec.Normal);
                 vec3 Refracted = refract(Incident, Normal, ri);
 
-                if (length(Refracted) < 0.001) {
+                float CosTheta = min(dot(-Incident, Normal), 1.0);
+
+                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(double(glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454))) {
                     dir = reflect(Incident, Normal);
                 } else {
                     dir = Refracted;
@@ -231,6 +240,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             r.Direction = dir;
 
             if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
+                if (!rec.isDielectric)
                 colour = rec.Albedo * colour;
             } else {
                 vec3 unitDir = normalize(r.Direction);

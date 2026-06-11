@@ -221,12 +221,18 @@ int main () {
         ShaderQuad.setFloat("uObjects[2].radius", 0.5);
         ShaderQuad.setVec3("uObjects[2].albedo", glm::vec3(1,1,1));
         ShaderQuad.setBool("uObjects[2].dielectric", true);
-        ShaderQuad.setFloat("uObjects[2].ior", 1.50);
+        ShaderQuad.setFloat("uObjects[2].ior", 1.5);
 
-        ShaderQuad.setVec3("uObjects[3].center", glm::vec3(1,0,-1));
-        ShaderQuad.setFloat("uObjects[3].radius", 0.5);
-        ShaderQuad.setVec3("uObjects[3].albedo", glm::vec3(0.8,0.6,0.2));
-        ShaderQuad.setFloat("uObjects[3].roughness", 0.5);
+        ShaderQuad.setVec3("uObjects[3].center", glm::vec3(-1,0,-1));
+        ShaderQuad.setFloat("uObjects[3].radius", 0.4);
+        ShaderQuad.setVec3("uObjects[3].albedo", glm::vec3(1,1,1));
+        ShaderQuad.setBool("uObjects[3].dielectric", true);
+        ShaderQuad.setFloat("uObjects[3].ior", 1.0 / 1.5);
+
+        ShaderQuad.setVec3("uObjects[4].center", glm::vec3(1,0,-1));
+        ShaderQuad.setFloat("uObjects[4].radius", 0.5);
+        ShaderQuad.setVec3("uObjects[4].albedo", glm::vec3(0.8,0.6,0.2));
+        ShaderQuad.setFloat("uObjects[4].roughness", 0);
 
         ShaderQuad.setInt("Width", WIDTH);
         ShaderQuad.setInt("Height", HEIGHT);
