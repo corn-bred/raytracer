@@ -166,7 +166,7 @@ int main () {
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);
-        FrameIndex++;
+        FrameIndex=1;
 
         glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
 
@@ -212,24 +212,24 @@ int main () {
         ShaderQuad.setVec3("uObjects[0].albedo", glm::vec3(0.8,0.8,0));
         ShaderQuad.setFloat("uObjects[0].roughness", 1);
 
-        ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,0,-1.2));
+        ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,(cos(CurrentFrame * 3)+1)/10 + 0.1, -1.2));
         ShaderQuad.setFloat("uObjects[1].radius", 0.5);
         ShaderQuad.setVec3("uObjects[1].albedo", glm::vec3(0.1,0.2,0.5));
         ShaderQuad.setFloat("uObjects[1].roughness", 1);
 
-        ShaderQuad.setVec3("uObjects[2].center", glm::vec3(-1,0,-1));
+        ShaderQuad.setVec3("uObjects[2].center", glm::vec3(-1,(cos(CurrentFrame * 3+1)+1)/10 + 0.1,-1));
         ShaderQuad.setFloat("uObjects[2].radius", 0.5);
         ShaderQuad.setVec3("uObjects[2].albedo", glm::vec3(1,1,1));
         ShaderQuad.setBool("uObjects[2].dielectric", true);
         ShaderQuad.setFloat("uObjects[2].ior", 1.5);
 
-        ShaderQuad.setVec3("uObjects[3].center", glm::vec3(-1,0,-1));
+        ShaderQuad.setVec3("uObjects[3].center", glm::vec3(-1,(cos(CurrentFrame * 3+1)+1)/10 + 0.1,-1));
         ShaderQuad.setFloat("uObjects[3].radius", 0.4);
         ShaderQuad.setVec3("uObjects[3].albedo", glm::vec3(1,1,1));
         ShaderQuad.setBool("uObjects[3].dielectric", true);
         ShaderQuad.setFloat("uObjects[3].ior", 1.0 / 1.5);
 
-        ShaderQuad.setVec3("uObjects[4].center", glm::vec3(1,0,-1));
+        ShaderQuad.setVec3("uObjects[4].center", glm::vec3(1,(cos(CurrentFrame * 3 -1)+1)/10 + 0.1,-1));
         ShaderQuad.setFloat("uObjects[4].radius", 0.5);
         ShaderQuad.setVec3("uObjects[4].albedo", glm::vec3(0.8,0.6,0.2));
         ShaderQuad.setFloat("uObjects[4].roughness", 0);
