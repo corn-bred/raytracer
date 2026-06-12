@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 5
+#define HITTABLE_LIST_ARRAY_SIZE 4
 
 in vec2 TexCoords;
 
@@ -33,8 +33,8 @@ double randRange(double seed, double min, double max) {
 }
 
 vec3 sampleSquare(float seed, int sampleIndex) {
-    float seedX = seed + float(sampleIndex);
-    float seedY = seedX + 3.12534;
+    float seedX = seed + float(sampleIndex) + TexCoords.x + glfwTime;
+    float seedY = seedX + 3.12534 + TexCoords.y;
     return vec3(randRange(seedX, -0.5, 0.5), randRange(seedY, -0.5, 0.5), 0.0);
 }
 
