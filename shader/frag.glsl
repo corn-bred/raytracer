@@ -261,7 +261,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                     dir = Refracted;
                 }
             } else {
-                dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y + glfwTime + float(depth), rec.Normal)* rec.Roughness);
+                dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y * 1.664 + glfwTime + float(depth), rec.Normal)* rec.Roughness);
             }
 
             
