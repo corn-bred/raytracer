@@ -16,16 +16,19 @@ uniform int MSAAsamples;
 uniform int MaximumDepth;
 uniform sampler2D TextureAccumulation;
 uniform int FrameIndex;
+uniform float DefocusAngle;
+uniform float FocusDist;
 
 const float infinity = 1.0 / 0.0;
 const double pi = 3.1415926535897932385;
+float DefocusRadius;
 
 double degreesToRadians(double degrees) {
     return degrees * pi / 180.0;
 }
 
 double rand(double seed) {
-    return fract(sin(float(seed)) * 43758.5453123);
+    return fract(sin(float(seed * 12.9898)) * 43758.5453123);
 }
 
 double randRange(double seed, double min, double max) {
@@ -47,14 +50,20 @@ vec3 randRangeVec3(double seed, double min, double max) {
 }
 
 vec3 randUnitVec3(double seed){
-    for (int i = 0; i < 50; i++) {
-        vec3 p = randRangeVec3(gl_FragCoord.x * 1.243 + gl_FragCoord.y * 6.23584 + i * 1.43584 + seed, -1, 1);
-        float LengthSquared = length(p)*length(p); //Length squared, why is it named that
-        if ( 1e-8 < LengthSquared && LengthSquared <= 1) { // Uh oh, underflow protector
-            return normalize(p);
-        }
-    }
-    return vec3(1.0, 0.0, 0.0);
+    float theta = float(randRange(seed, 0.0, 2.0 * pi));
+    float z = float(randRange(seed + 1.0, -1.0, 1.0)); //r depends on z
+    float r = sqrt(1.0 - z*z);
+    return vec3(r * cos(theta), r * sin(theta), z);
+}
+
+vec2 randRangeVec2(double seed, double min, double max) {
+    return vec2(randRange(seed, min, max), randRange(seed + 10, min, max));
+}
+
+vec2 randUnitVec2(double seed){
+    float r = float(sqrt(randRange(seed, 0.0, 1.0)));
+    float theta = float(randRange(seed + 0.5, 0.0, 2.0 * pi));
+    return vec2(r * cos(theta), r * sin(theta));
 }
 
 vec3 randOnHemisphere(double seed, vec3 Normal) {
@@ -189,16 +198,36 @@ bool HittableListHitSphere(inout HittableList hittablelist, Ray r, double ray_tm
 Ray getRay(float i, float j, int SampleNumber) {
     vec3 Offset = sampleSquare(2, SampleNumber);
     vec2 PixelSample = vec2(i + Offset.x + 0.5, j + Offset.y + 0.5);
+
+    //Normalization
     vec4 NDCoords = vec4(PixelSample.x / Width * 2.0 - 1.0, (PixelSample.y / Height * 2.0 - 1.0), -1.0, 1.0);
 
-    vec3 RayOrigin = CameraPos;
-    vec4 RayDirection = invProjection * NDCoords;
-    RayDirection = vec4(RayDirection.xyz / RayDirection.w, 1.0);
-    RayDirection = normalize(invView * vec4(RayDirection.xyz, 0.0));
+    //Finding Camera Position
+    vec4 CameraTemp = invProjection * NDCoords; //vec4 CameraTemp is a temporary for vec3 PinholeDir as the final variable.
+    CameraTemp = vec4(CameraTemp.xyz / CameraTemp.w, 1.0);
+    vec3 PinholeDir = normalize((invView * vec4(CameraTemp.xyz, 0.0)).xyz);
+    
+    //Finding focus point in world space
+    vec3 focusPoint = CameraPos + PinholeDir * FocusDist;
+
+    //Finding camera unit axes (Extracting them via inverted view matrix)
+    vec3 CamRight   = normalize((invView * vec4(1.0, 0.0, 0.0, 0.0)).xyz);
+    vec3 CamUp      = normalize((invView * vec4(0.0, 1.0, 0.0, 0.0)).xyz);
+    vec3 CamForward = normalize((invView * vec4(0.0, 0.0, -1.0, 0.0)).xyz);
+
+    //Random 2D point on unit (circle) disk
+    vec2 DiskPoint = vec2(randUnitVec2(glfwTime + gl_FragCoord.x + gl_FragCoord.y * 2.435 + float(SampleNumber)));
+
+    //Random point onto 3D world space
+    vec3 LensOffset = (CamRight * DiskPoint.x + CamUp * DiskPoint.y) * DefocusRadius;
+
+    //Final calculations for ray
+    vec3 RayOrigin = CameraPos + LensOffset;
+    vec3 RayDirection = normalize(focusPoint - RayOrigin); //Points towards focusPoint in local translation space
 
     Ray r;
     r.Origin = RayOrigin;
-    r.Direction = vec3(RayDirection.xyz);
+    r.Direction = RayDirection;
 
     return r;
 }
@@ -270,6 +299,8 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 void main () {
     HittableList world;
     world.objects = uObjects;
+
+    DefocusRadius = FocusDist * tan(float(degreesToRadians(DefocusAngle / 2)));
 
     vec3 PreviousSample = texture(TextureAccumulation, TexCoords).rgb;
 
