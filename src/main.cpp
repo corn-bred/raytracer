@@ -8,6 +8,13 @@
 #include <sstream>
 #include "shaders.h"
 #include "vertexbuffer.h"
+#include <time.h>
+#include <cstdlib>
+#include <iostream>
+#include <limits>
+#include <memory>
+#include "objecthandler.h"
+
 
 using namespace std;
 
@@ -19,7 +26,19 @@ float quadVertices[] = {
     -1.0f,  1.0f,  0.0f, 1.0f,
      1.0f, -1.0f,  1.0f, 0.0f,
      1.0f,  1.0f,  1.0f, 1.0f
-};	
+};
+
+// Utility Functions
+
+inline double random_double() {
+    // Returns a random real in [0,1).
+    return rand() / (RAND_MAX + 1.0);
+}
+
+inline double random_double(double min, double max) {
+    // Returns a random real in [min,max).
+    return min + (max-min)*random_double();
+}
 
 double AspectRatio = 16.0/9.0;
 unsigned int WIDTH = 1200;
@@ -98,6 +117,8 @@ void scrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
 }
 
 int main () {
+    srand(time(0));
+
     if (!glfwInit()) {
         cerr << "GLFW initialization failure\n";
         return 1;
@@ -161,7 +182,7 @@ int main () {
     BufferQuad.addAttribute(0, 4, 2, GL_FLOAT, sizeof(float), 0);
     BufferQuad.addAttribute(1, 4, 2, GL_FLOAT, sizeof(float), 2);
 
-    
+    ObjectArray uObjects(ShaderQuad, "uObjects");
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -213,30 +234,16 @@ int main () {
         ShaderQuad.setInt("MaximumDepth", 10);
         ShaderQuad.setInt("FrameIndex", FrameIndex);
         ShaderQuad.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderQuad.setFloat("DefocusAngle", 10.0);
+        ShaderQuad.setFloat("DefocusAngle", 2.0);
         ShaderQuad.setFloat("FocusDist", 1.0);
 
-        ShaderQuad.setVec3("uObjects[0].center", glm::vec3(0,-100.5,-1));
-        ShaderQuad.setFloat("uObjects[0].radius", 100);
-        ShaderQuad.setVec3("uObjects[0].albedo", glm::vec3(0.8,0.8,0));
-        ShaderQuad.setFloat("uObjects[0].roughness", 1);
+        uObjects.setMaterial(0, glm::vec3(0, -1000.5, -1), 1000,glm::vec3(0.5), 1);
 
-        ShaderQuad.setVec3("uObjects[1].center", glm::vec3(0,0, -1.2));
-        ShaderQuad.setFloat("uObjects[1].radius", 0.5);
-        ShaderQuad.setVec3("uObjects[1].albedo", glm::vec3(0.1,0.2,0.5));
-        ShaderQuad.setFloat("uObjects[1].roughness", 1);
+        uObjects.setMaterial(1, glm::vec3(0,0, -1.2), 0.5, glm::vec3(0.1,0.2,0.5), 1);
 
-        ShaderQuad.setVec3("uObjects[2].center", glm::vec3(-1,0,-1));
-        ShaderQuad.setFloat("uObjects[2].radius", 0.5);
-        ShaderQuad.setVec3("uObjects[2].albedo", glm::vec3(1,1,1));
-        ShaderQuad.setBool("uObjects[2].dielectric", true);
-        ShaderQuad.setFloat("uObjects[2].ior", 1.1);
-
-        ShaderQuad.setVec3("uObjects[3].center", glm::vec3(1,0,-1));
-        ShaderQuad.setFloat("uObjects[3].radius", 0.5);
-        ShaderQuad.setVec3("uObjects[3].albedo", glm::vec3(0.8,0.6,0.2));
-        ShaderQuad.setFloat("uObjects[3].roughness", 0.5);
+        uObjects.setMaterial(2, glm::vec3(-1,0,-1), 0.5, glm::vec3(1.0), 1, 1.5);
         
+        uObjects.setMaterial(3, glm::vec3(1,0,-1), 0.5, glm::vec3(0.8, 0.6, 0.2), 0.5);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
