@@ -21,7 +21,7 @@ class ObjectArray {
         _ObjectArrayName = objectarrayname;
     }
 
-    void setMaterial(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+    void setMaterial(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f, float specularprob = -1.0f) {
         {
             std::stringstream UniformName;
             UniformName << _ObjectArrayName << "[" << id << "].center";
@@ -57,6 +57,18 @@ class ObjectArray {
             std::stringstream UniformName(_ObjectArrayName);
             UniformName << _ObjectArrayName << "[" << id << "].ior";
             _LinkedShader.setFloat(UniformName.str(), ior);
+            }
+        }
+        if (ior >= 0) {
+            {
+            std::stringstream UniformName(_ObjectArrayName);
+            UniformName << _ObjectArrayName << "[" << id << "].thinlayer";
+            _LinkedShader.setBool(UniformName.str(), true);
+            }
+            {
+            std::stringstream UniformName(_ObjectArrayName);
+            UniformName << _ObjectArrayName << "[" << id << "].specularprob";
+            _LinkedShader.setFloat(UniformName.str(), specularprob);
             }
         } 
     }

@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 4
+#define HITTABLE_LIST_ARRAY_SIZE 5
 
 in vec2 TexCoords;
 
@@ -101,8 +101,12 @@ struct HitRecord {
     bool facingFront;
     float Roughness;
     vec3 Albedo;
+
     bool isDielectric;
     float ior;
+
+    bool ThinLayer;
+    float SpecularProbability;
 
     //void HitRecordSetFaceNormal();
 };
@@ -121,8 +125,12 @@ struct Sphere {
     float radius;
     float roughness;
     vec3 albedo;
+
     bool dielectric;
     float ior;
+
+    bool thinlayer;
+    float specularprob; //Probability whether the reflection bounces off the thin layer.
 
     //bool hit();
 };
@@ -157,6 +165,8 @@ bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, i
     rec.Albedo = sphere.albedo;
     rec.isDielectric = sphere.dielectric;
     rec.ior = sphere.ior;
+    rec.ThinLayer = sphere.thinlayer;
+    rec.SpecularProbability = sphere.specularprob;
 
     vec3 outwardNormal = vec3(rec.Position - sphere.center) / vec3(sphere.radius);
     HitRecordSetFaceNormal(rec, ray, outwardNormal);
@@ -242,9 +252,11 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
     HitRecord rec;
     if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
         if (!rec.isDielectric)
-        colour = rec.Albedo * colour;
+            colour = rec.Albedo * colour;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
+            double seed = glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454;
+
             vec3 dir = vec3(0.0);
 
             if (rec.isDielectric) {
@@ -255,22 +267,21 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
                 float CosTheta = min(dot(-Incident, Normal), 1.0);
 
-                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(double(glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454))) {
+                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed)) {
                     dir = reflect(Incident, Normal);
                 } else {
                     dir = Refracted;
                 }
             } else {
-                dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(gl_FragCoord.x + gl_FragCoord.y * 1.664 + glfwTime + float(depth), rec.Normal)* rec.Roughness);
+                dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
             }
 
-            
             r.Origin = rec.Position;
             r.Direction = dir;
 
             if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
                 if (!rec.isDielectric)
-                colour = rec.Albedo * colour;
+                    colour = rec.Albedo * colour;
             } else {
                 vec3 unitDir = normalize(r.Direction);
                 float a = 0.5 * (unitDir.y + 1.0);
