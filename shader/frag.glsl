@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 6
+#define HITTABLE_LIST_ARRAY_SIZE 5
 
 in vec2 TexCoords;
 
