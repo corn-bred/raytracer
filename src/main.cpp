@@ -234,13 +234,15 @@ int main () {
         ShaderQuad.setInt("MaximumDepth", 10);
         ShaderQuad.setInt("FrameIndex", FrameIndex);
         ShaderQuad.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderQuad.setFloat("DefocusAngle", 2.5);
-        ShaderQuad.setFloat("FocusDist", 1.0);
+        ShaderQuad.setFloat("DefocusAngle", 1.5);
+        ShaderQuad.setFloat("FocusDist", 2.0);
 
         uObjects.setMaterial(0, glm::vec3(0, -1000.5, -1), 1000,glm::vec3(0.5), 1);
-        uObjects.setMaterial(1, glm::vec3(0,0, -1.2), 0.5, glm::vec3(1, 0.0, 0.0), 0, -1.0f, 0.4);
-        uObjects.setMaterial(2, glm::vec3(-1,0,-1), 0.5, glm::vec3(0.9), 1);
-        uObjects.setMaterial(3, glm::vec3(1,0,-1), 0.5, glm::vec3(1.0), 1);
+        uObjects.setEmissor(1, glm::vec3(0,4, -0), 3, glm::vec3(4.0), 1);
+        uObjects.setMaterial(2, glm::vec3(-1,0,0), 0.5, glm::vec3(0.9), 1, 1.5);
+        uObjects.setMaterial(3, glm::vec3(1,0,0), 0.5, glm::vec3(0.8, 0.6, 0.7), 0.4);
+        uObjects.setMaterial(4, glm::vec3(0,0,1), 0.5, glm::vec3(0.2, 0.6, 1), 1, 2);
+        uObjects.setMaterial(5, glm::vec3(0,0,-1), 0.5, glm::vec3(0.8, 0.4, 0.7), 1);
         
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 

@@ -1,6 +1,6 @@
 #version 420 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 5
+#define HITTABLE_LIST_ARRAY_SIZE 6
 
 in vec2 TexCoords;
 
@@ -105,8 +105,7 @@ struct HitRecord {
     bool isDielectric;
     float ior;
 
-    bool ThinLayer;
-    float SpecularProbability;
+    bool isEmissive;
 
     //void HitRecordSetFaceNormal();
 };
@@ -129,8 +128,7 @@ struct Sphere {
     bool dielectric;
     float ior;
 
-    bool thinlayer;
-    float specularprob; //Probability whether the reflection bounces off the thin layer.
+    bool emissive;
 
     //bool hit();
 };
@@ -165,8 +163,7 @@ bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, i
     rec.Albedo = sphere.albedo;
     rec.isDielectric = sphere.dielectric;
     rec.ior = sphere.ior;
-    rec.ThinLayer = sphere.thinlayer;
-    rec.SpecularProbability = sphere.specularprob;
+    rec.isEmissive = sphere.emissive;
 
     vec3 outwardNormal = vec3(rec.Position - sphere.center) / vec3(sphere.radius);
     HitRecordSetFaceNormal(rec, ray, outwardNormal);
@@ -255,6 +252,9 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             colour = rec.Albedo * colour;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
+            if (rec.isEmissive) {
+                return colour;
+            }
             double seed = glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454;
 
             vec3 dir = vec3(0.0);
@@ -280,25 +280,20 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             r.Direction = dir;
 
             if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
-                if (!rec.isDielectric)
+                if (!rec.isDielectric) {
                     colour = rec.Albedo * colour;
+                    
+                }
             } else {
-                vec3 unitDir = normalize(r.Direction);
-                float a = 0.5 * (unitDir.y + 1.0);
-                vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+                vec3 sky = vec3(0.0, 0.0, 0.0);
                 colour *= sky;
-                return colour;
             }
 
         }
 
     } else {
-
-        vec3 unitDir = normalize(r.Direction);
-        float a = 0.5 * (unitDir.y + 1.0);
-        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+        vec3 sky = vec3(0.0, 0.0, 0.0);
         colour *= sky;
-
     }
 
     return colour;
