@@ -285,14 +285,15 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                     
                 }
             } else {
-                vec3 sky = vec3(0.0, 0.0, 0.0);
+                vec3 sky = vec3(0.5, 0.6, 0.3);
                 colour *= sky;
+                return colour;
             }
 
         }
 
     } else {
-        vec3 sky = vec3(0.0, 0.0, 0.0);
+        vec3 sky = vec3(0.5, 0.6, 0.3);
         colour *= sky;
     }
 
