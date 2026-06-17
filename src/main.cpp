@@ -238,8 +238,8 @@ int main () {
         ShaderQuad.setFloat("FocusDist", 1.0);
 
         uObjects.setMaterial(0, glm::vec3(0, -1000.5, -1), 1000,glm::vec3(0.5), 1);
-        uObjects.setEmissor(1, glm::vec3(0,3, -0), 2, glm::vec3(4.0), 1);
-        uObjects.setMaterial(2, glm::vec3(-1,0,0), 0.5, glm::vec3(0.9), 1, 1.5);
+        uObjects.setEmissor(1, glm::vec3(0, 3, 0), 2, glm::vec3(4.0), 1);
+        uObjects.setMaterial(2, glm::vec3(-1,0,0), 0.5, glm::vec3(0.9), 0.05, 1.5);
         uObjects.setMaterial(3, glm::vec3(1,0,0), 0.5, glm::vec3(0.8, 0.6, 0.7), 0.7);
         uObjects.setMaterial(4, glm::vec3(0,0,-0.5), 0.5, glm::vec3(0.2, 1, 0.6), 1);
         
