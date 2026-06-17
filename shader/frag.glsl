@@ -259,10 +259,12 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
             vec3 dir = vec3(0.0);
 
+            vec3 Incident = normalize(r.Direction);
+            vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+
             if (rec.isDielectric) {
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
-                vec3 Incident = normalize(r.Direction);
-                vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+                
                 vec3 Refracted = refract(Incident, Normal, ri);
 
                 float CosTheta = min(dot(-Incident, Normal), 1.0);
@@ -273,7 +275,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                     dir = Refracted;
                 }
             } else {
-                dir = normalize(reflect(r.Direction, rec.Normal) + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+                dir = reflect(Incident, Normal);
             }
 
             r.Origin = rec.Position;
