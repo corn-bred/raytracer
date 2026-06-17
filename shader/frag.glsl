@@ -255,7 +255,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             if (rec.isEmissive) {
                 return colour;
             }
-            float seed = glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454;
+            float seed = glfwTime + gl_FragCoord.x * fract(3.96 + glfwTime) + gl_FragCoord.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
 
             vec3 dir = vec3(0.0);
 
@@ -269,7 +269,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
                 float CosTheta = min(dot(-Incident, Normal), 1.0);
 
-                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed)) {
+                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
                     dir = reflect(Incident, Normal);
                 } else {
                     dir = Refracted;
