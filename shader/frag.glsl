@@ -1,4 +1,4 @@
-#version 420 core
+#version 330 core
 
 #define HITTABLE_LIST_ARRAY_SIZE 5
 
@@ -20,18 +20,18 @@ uniform float DefocusAngle;
 uniform float FocusDist;
 
 const float infinity = 1.0 / 0.0;
-const double pi = 3.1415926535897932385;
+const float pi = 3.1415926535897932385;
 float DefocusRadius;
 
-double degreesToRadians(double degrees) {
+float degreesToRadians(float degrees) {
     return degrees * pi / 180.0;
 }
 
-double rand(double seed) {
+float rand(float seed) {
     return fract(sin(float(seed * 12.9898)) * 43758.5453123);
 }
 
-double randRange(double seed, double min, double max) {
+float randRange(float seed, float min, float max) {
     return min + (max - min) * rand(seed);
 }
 
@@ -41,32 +41,32 @@ vec3 sampleSquare(float seed, int sampleIndex) {
     return vec3(randRange(seedX, -0.5, 0.5), randRange(seedY, -0.5, 0.5), 0.0);
 }
 
-vec3 randVec3(double seed) {
+vec3 randVec3(float seed) {
     return vec3(rand(seed), rand(seed + 10.3454), rand(seed + 5.3543));
 }
 
-vec3 randRangeVec3(double seed, double min, double max) {
+vec3 randRangeVec3(float seed, float min, float max) {
     return vec3(randRange(seed, min, max), randRange(seed + 10.3454, min, max), randRange(seed + 5.3543, min, max));
 }
 
-vec3 randUnitVec3(double seed){
+vec3 randUnitVec3(float seed){
     float theta = float(randRange(seed, 0.0, 2.0 * pi));
     float z = float(randRange(seed + 1.0, -1.0, 1.0)); //r depends on z
     float r = sqrt(1.0 - z*z);
     return vec3(r * cos(theta), r * sin(theta), z);
 }
 
-vec2 randRangeVec2(double seed, double min, double max) {
+vec2 randRangeVec2(float seed, float min, float max) {
     return vec2(randRange(seed, min, max), randRange(seed + 10, min, max));
 }
 
-vec2 randUnitVec2(double seed){
+vec2 randUnitVec2(float seed){
     float r = float(sqrt(randRange(seed, 0.0, 1.0)));
     float theta = float(randRange(seed + 0.5, 0.0, 2.0 * pi));
     return vec2(r * cos(theta), r * sin(theta));
 }
 
-vec3 randOnHemisphere(double seed, vec3 Normal) {
+vec3 randOnHemisphere(float seed, vec3 Normal) {
     vec3 OnUnitSphere = randUnitVec3(seed);
     if(dot(OnUnitSphere, Normal) > 0.0) {
         return OnUnitSphere;
@@ -88,7 +88,7 @@ struct Ray {
     vec3 Direction;
 };
 
-vec3 RayAt(inout Ray ray, double t) {
+vec3 RayAt(inout Ray ray, float t) {
     return ray.Origin + ray.Direction * vec3(t);
 }
 
@@ -134,21 +134,21 @@ struct Sphere {
 };
 
 // spagetti code go
-bool SphereHit(inout Sphere sphere, Ray ray, double ray_tmin, double ray_tmax, inout HitRecord rec) {
+bool SphereHit(inout Sphere sphere, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
     vec3 OriginToCenter = sphere.center - ray.Origin;
     // Q u a d r a t i c
-    double a = pow(length(ray.Direction), 2); // Should be 1
-    double h = dot(ray.Direction, OriginToCenter); // dir*oc
-    double c = pow(length(OriginToCenter), 2) - sphere.radius * sphere.radius; // length(oc)^2 - r^2
-    double discriminant = h*h - a*c;
+    float a = pow(length(ray.Direction), 2); // Should be 1
+    float h = dot(ray.Direction, OriginToCenter); // dir*oc
+    float c = pow(length(OriginToCenter), 2) - sphere.radius * sphere.radius; // length(oc)^2 - r^2
+    float discriminant = h*h - a*c;
 
     if (discriminant < 0)
         return false;
 
-    double sqrtd = sqrt(discriminant);
+    float sqrtd = sqrt(discriminant);
 
     // Find nearest root
-    double root = (h - sqrtd) / a;
+    float root = (h - sqrtd) / a;
     if (root <= ray_tmin || ray_tmax <= root) {
         root = (h + sqrtd) / a;
         if (root <= ray_tmin || ray_tmax <= root)
@@ -182,10 +182,10 @@ struct HittableList {
     //bool hitSphere();
 };
 
-bool HittableListHitSphere(inout HittableList hittablelist, Ray r, double ray_tmin, double ray_tmax, inout HitRecord rec) {
+bool HittableListHitSphere(inout HittableList hittablelist, Ray r, float ray_tmin, float ray_tmax, inout HitRecord rec) {
     HitRecord TempRec;
     bool anythingHit = false;
-    double ClosestSoFar = ray_tmax;
+    float ClosestSoFar = ray_tmax;
 
     for (int i = 0; i < HITTABLE_LIST_ARRAY_SIZE; i++) {
         Sphere object = hittablelist.objects[i];
@@ -255,7 +255,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             if (rec.isEmissive) {
                 return colour;
             }
-            double seed = glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454;
+            float seed = glfwTime + gl_FragCoord.x * 3.36 + gl_FragCoord.y * 1.53 + depth * 1.3454;
 
             vec3 dir = vec3(0.0);
 
