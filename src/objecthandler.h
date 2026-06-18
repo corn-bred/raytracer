@@ -21,7 +21,12 @@ class ObjectArray {
         _ObjectArrayName = objectarrayname;
     }
 
-    void setMaterial(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+    void addSphere(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+        {
+            std::stringstream UniformName;
+            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
+            _LinkedShader.setFloat(UniformName.str(), 0);
+        }
         {
             std::stringstream UniformName;
             UniformName << _ObjectArrayName << "[" << id << "].center";
@@ -56,7 +61,12 @@ class ObjectArray {
         }
     }
 
-    void setEmissor(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
+    void addSphereEmission(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
+        {
+            std::stringstream UniformName;
+            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
+            _LinkedShader.setFloat(UniformName.str(), 0);
+        }
         {
             std::stringstream UniformName;
             UniformName << _ObjectArrayName << "[" << id << "].center";

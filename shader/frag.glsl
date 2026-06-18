@@ -96,6 +96,11 @@ vec3 RayAt(inout Ray ray, float t) {
 
 struct HitRecord {
     vec3 Position;
+
+    vec3 TriPoint1;
+    vec3 TriPoint2;
+    vec3 TriPoint3;
+
     vec3 Normal;
     float t;
     bool facingFront;
@@ -119,9 +124,15 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
 
 //      Sphere
 
-struct Sphere {
-    vec3 center;
-    float radius;
+struct Object {
+    int objecttype; //0: Sphere, 1: Triangle
+    vec3 Spherecenter;
+    float Sphereradius;
+
+    vec3 Trianglep1;
+    vec3 Trianglep2;
+    vec3 Trianglep3;
+
     float roughness;
     vec3 albedo;
 
@@ -134,12 +145,12 @@ struct Sphere {
 };
 
 // spagetti code go
-bool SphereHit(inout Sphere sphere, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
-    vec3 OriginToCenter = sphere.center - ray.Origin;
+bool SphereHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
+    vec3 OriginToCenter = object.Spherecenter - ray.Origin;
     // Q u a d r a t i c
     float a = pow(length(ray.Direction), 2); // Should be 1
     float h = dot(ray.Direction, OriginToCenter); // dir*oc
-    float c = pow(length(OriginToCenter), 2) - sphere.radius * sphere.radius; // length(oc)^2 - r^2
+    float c = pow(length(OriginToCenter), 2) - object.Sphereradius * object.Sphereradius; // length(oc)^2 - r^2
     float discriminant = h*h - a*c;
 
     if (discriminant < 0)
@@ -159,41 +170,43 @@ bool SphereHit(inout Sphere sphere, Ray ray, float ray_tmin, float ray_tmax, ino
     rec.Position = RayAt(ray, rec.t);
 
     //copy data
-    rec.Roughness = sphere.roughness;
-    rec.Albedo = sphere.albedo;
-    rec.isDielectric = sphere.dielectric;
-    rec.ior = sphere.ior;
-    rec.isEmissive = sphere.emissive;
+    rec.Roughness = object.roughness;
+    rec.Albedo = object.albedo;
+    rec.isDielectric = object.dielectric;
+    rec.ior = object.ior;
+    rec.isEmissive = object.emissive;
 
-    vec3 outwardNormal = vec3(rec.Position - sphere.center) / vec3(sphere.radius);
+    vec3 outwardNormal = vec3(rec.Position - object.Spherecenter) / vec3(object.Sphereradius);
     HitRecordSetFaceNormal(rec, ray, outwardNormal);
 
     return true;
 }
 
-uniform Sphere uObjects[HITTABLE_LIST_ARRAY_SIZE];
+uniform Object uObjects[HITTABLE_LIST_ARRAY_SIZE];
 
 
 
 //      HittableList
 
 struct HittableList {
-    Sphere objects[HITTABLE_LIST_ARRAY_SIZE];
+    Object objects[HITTABLE_LIST_ARRAY_SIZE];
     //bool hitSphere();
 };
 
-bool HittableListHitSphere(inout HittableList hittablelist, Ray r, float ray_tmin, float ray_tmax, inout HitRecord rec) {
+bool HittableListHit(inout HittableList hittablelist, Ray r, float ray_tmin, float ray_tmax, inout HitRecord rec) {
     HitRecord TempRec;
     bool anythingHit = false;
     float ClosestSoFar = ray_tmax;
 
     for (int i = 0; i < HITTABLE_LIST_ARRAY_SIZE; i++) {
-        Sphere object = hittablelist.objects[i];
-        if(SphereHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
-            anythingHit = true;
-            ClosestSoFar = TempRec.t;
-            rec = TempRec;
-        }
+        Object object = hittablelist.objects[i];
+        //if(object.objecttype == 0) {
+            if(SphereHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
+                anythingHit = true;
+                ClosestSoFar = TempRec.t;
+                rec = TempRec;
+            }
+        //}
     }
 
     return anythingHit;
@@ -247,7 +260,8 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
     vec3 colour = vec3(1.0);
 
     HitRecord rec;
-    if (HittableListHitSphere(world, r, 0.001, infinity, rec)) {
+
+    if (HittableListHit(world, r, 0.001, infinity, rec)) {
         if (!rec.isDielectric)
             colour = rec.Albedo * colour;
 
@@ -281,7 +295,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             r.Origin = rec.Position;
             r.Direction = dir;
 
-            if(HittableListHitSphere(world, r, 0.001, infinity, rec)) {
+            if(HittableListHit(world, r, 0.001, infinity, rec)) {
                 if (!rec.isDielectric) {
                     colour = rec.Albedo * colour;
                     
