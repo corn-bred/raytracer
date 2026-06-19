@@ -182,6 +182,52 @@ bool SphereHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, ino
     return true;
 }
 
+bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
+    vec3 Edge1 = object.Trianglep2 - object.Trianglep1;
+    vec3 Edge2 = object.Trianglep3 - object.Trianglep1;
+
+    vec3 tVec = ray.Origin - object.Trianglep1; // Arrow from point 1 to ray origin
+    vec3 pVec = cross(ray.Direction, Edge2);    // Perpendicular arrow of the ray direction
+    vec3 qVec = cross(tVec, Edge1);             // 
+
+    float det = dot(Edge1, pVec);
+    if (det > -0.001 && det < 0.001) return false;
+    float invdet = 1.0 / det;
+
+    float u = dot(tVec, pVec) * invdet;
+    float v = dot(ray.Direction, qVec) * invdet;
+
+    if (!((u >= 0 && u <= 1) && (v >= 0 && v <= 1) && (u + v) < 1)) return false;
+
+    float t = dot(Edge2, qVec) * invdet;
+
+    if (t < ray_tmin || t > ray_tmax) return false;
+
+    if (t < 0) return false;
+
+    rec.t = t;
+
+    vec3 normal = normalize(cross(Edge1, Edge2));
+
+    rec.Position = RayAt(ray, rec.t);
+
+    if (det < 0) normal *= -1;
+
+    rec.Normal = normal;
+
+    rec.TriPoint1 = object.Trianglep1;
+    rec.TriPoint2 = object.Trianglep2;
+    rec.TriPoint3 = object.Trianglep3;
+
+    rec.Roughness = object.roughness;
+    rec.Albedo = object.albedo;
+    rec.isDielectric = object.dielectric;
+    rec.ior = object.ior;
+    rec.isEmissive = object.emissive;
+
+    return true;
+}
+
 uniform Object uObjects[HITTABLE_LIST_ARRAY_SIZE];
 
 
@@ -200,13 +246,19 @@ bool HittableListHit(inout HittableList hittablelist, Ray r, float ray_tmin, flo
 
     for (int i = 0; i < HITTABLE_LIST_ARRAY_SIZE; i++) {
         Object object = hittablelist.objects[i];
-        //if(object.objecttype == 0) {
+        if(object.objecttype == 0) {
             if(SphereHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
                 anythingHit = true;
                 ClosestSoFar = TempRec.t;
                 rec = TempRec;
             }
-        //}
+        } else if (object.objecttype == 1) {
+            if(TriangleHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
+                anythingHit = true;
+                ClosestSoFar = TempRec.t;
+                rec = TempRec;
+            }
+        }
     }
 
     return anythingHit;
