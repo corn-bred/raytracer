@@ -1,6 +1,6 @@
 #version 330 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 5
+#define HITTABLE_LIST_ARRAY_SIZE 14
 
 in vec2 TexCoords;
 
@@ -203,7 +203,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     if (t < ray_tmin || t > ray_tmax) return false;
 
-    if (t < 0) return false;
+    //if (t < 0) return false;
 
     rec.t = t;
 
@@ -353,7 +353,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                     
                 }
             } else {
-                vec3 sky = vec3(0.5, 0.6, 0.3);
+                vec3 sky = vec3(0.0);
                 colour *= sky;
                 return colour;
             }
@@ -361,7 +361,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
         }
 
     } else {
-        vec3 sky = vec3(0.5, 0.6, 0.3);
+        vec3 sky = vec3(0.0);
         colour *= sky;
     }
 
