@@ -318,9 +318,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             colour = rec.Albedo * colour;
 
         for (int depth = 0; depth < maxDepth; ++depth) {
-            if (rec.isEmissive) {
-                return colour;
-            }
+            
             float seed = glfwTime + gl_FragCoord.x * fract(3.96 + glfwTime) + gl_FragCoord.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
 
             vec3 dir = vec3(0.0);
@@ -346,8 +344,13 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
             r.Origin = rec.Position;
             r.Direction = dir;
+
             float AngFalloff = max(0.0, dot(Normal, -Incident));
             vec3 Attenuation = rec.Albedo * AngFalloff;
+
+            if (rec.isEmissive) {
+                return Attenuation * colour;
+            }
 
             if(HittableListHit(world, r, 0.001, infinity, rec)) {
                 if (!rec.isDielectric) {
