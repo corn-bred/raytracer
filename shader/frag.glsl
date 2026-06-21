@@ -1,4 +1,4 @@
-#version 330 core
+#version 430 core
 
 #define HITTABLE_LIST_ARRAY_SIZE 14
 
@@ -21,6 +21,7 @@ uniform float FocusDist;
 
 const float infinity = 1.0 / 0.0;
 const float pi = 3.1415926535897932385;
+
 float DefocusRadius;
 
 float degreesToRadians(float degrees) {
@@ -314,11 +315,10 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
     HitRecord rec;
 
     if (HittableListHit(world, r, 0.001, infinity, rec)) {
-        if (!rec.isDielectric)
-            colour = rec.Albedo * colour;
 
-        for (int depth = 0; depth < maxDepth; ++depth) {
-            
+        int depth = 0;
+
+        do {
             float seed = glfwTime + gl_FragCoord.x * fract(3.96 + glfwTime) + gl_FragCoord.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
 
             vec3 dir = vec3(0.0);
@@ -355,15 +355,15 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             if(HittableListHit(world, r, 0.001, infinity, rec)) {
                 if (!rec.isDielectric) {
                     colour = Attenuation * colour;
-                    
                 }
             } else {
                 vec3 sky = vec3(0.0);
                 colour *= sky;
                 return colour;
             }
-
-        }
+            
+            depth++;
+        } while (depth < maxDepth);
 
     } else {
         vec3 sky = vec3(0.0);

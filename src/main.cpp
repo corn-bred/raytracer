@@ -124,7 +124,7 @@ int main () {
         return 1;
     }
 
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Raytracer", NULL, NULL);
@@ -237,8 +237,8 @@ int main () {
         ShaderQuad.setFloat("DefocusAngle", 0.5); //sigma toes
         ShaderQuad.setFloat("FocusDist", 2.5);
 
-        uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(10.0));
-        uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(10.0));
+        uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
+        uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
 
         uObjects.addTriangle(2, glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
         uObjects.addTriangle(3, glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
