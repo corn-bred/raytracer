@@ -203,7 +203,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     if (t < ray_tmin || t > ray_tmax) return false;
 
-    //if (t < 0) return false;
+    if (t < 0) return false;
 
     rec.t = t;
 
@@ -346,10 +346,12 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
             r.Origin = rec.Position;
             r.Direction = dir;
+            float AngFalloff = max(0.0, dot(Normal, -Incident));
+            vec3 Attenuation = rec.Albedo * AngFalloff;
 
             if(HittableListHit(world, r, 0.001, infinity, rec)) {
                 if (!rec.isDielectric) {
-                    colour = rec.Albedo * colour;
+                    colour = Attenuation * colour;
                     
                 }
             } else {

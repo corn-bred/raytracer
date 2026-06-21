@@ -234,11 +234,11 @@ int main () {
         ShaderQuad.setInt("MaximumDepth", 10);
         ShaderQuad.setInt("FrameIndex", FrameIndex);
         ShaderQuad.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderQuad.setFloat("DefocusAngle", 1); //sigma toes
-        ShaderQuad.setFloat("FocusDist", 1.0);
+        ShaderQuad.setFloat("DefocusAngle", 0.5); //sigma toes
+        ShaderQuad.setFloat("FocusDist", 2.5);
 
-        uObjects.addTriangleEmission(0, glm::vec3(1,2.4,-1), glm::vec3(-1,2.4,-1), glm::vec3(1,2.4,1), glm::vec3(4.0));
-        uObjects.addTriangleEmission(1, glm::vec3(-1,2.4,-1), glm::vec3(1,2.4,1), glm::vec3(-1,2.4,1), glm::vec3(4.0));
+        uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(6.0));
+        uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(6.0));
 
         uObjects.addTriangle(2, glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
         uObjects.addTriangle(3, glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
@@ -256,7 +256,7 @@ int main () {
         uObjects.addTriangle(11, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
 
         uObjects.addSphere(12, glm::vec3(1, -1.75, 1), 0.75, glm::vec3(1.0), 0.0, 1.5);
-        uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.2);
+        uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         BufferQuad.bind();
