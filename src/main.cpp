@@ -156,9 +156,7 @@ int main () {
         return 1;
     }
 
-    GLuint FramebufferMain;
-    glGenFramebuffers(1, &FramebufferMain);
-    glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
+    GLuint ComputeShader = glCreateShader(GL_COMPUTE_SHADER);
 
     int ReadTexture = 0, WriteTexture = 1;
     GLuint FramebufferAccumulationTexture[2];
