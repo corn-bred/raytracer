@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include "shaders.h"
+#include "computeshader.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -11,9 +12,9 @@
 class ObjectArray {
     public:
 
-    ObjectArray(Shader &designatedshader, std::string objectarrayname) : _LinkedShader(designatedshader), _ObjectArrayName(objectarrayname) {}
+    ObjectArray(ComputeShader &designatedshader, std::string objectarrayname) : _LinkedShader(designatedshader), _ObjectArrayName(objectarrayname) {}
 
-    ObjectArray(Shader &designatedshader) : _LinkedShader(designatedshader) {}
+    ObjectArray(ComputeShader &designatedshader) : _LinkedShader(designatedshader) {}
 
     ObjectArray() = delete;
 
@@ -184,6 +185,6 @@ class ObjectArray {
     bool dielectric;
     float ior;*/
     private:
-    Shader &_LinkedShader;
+    ComputeShader &_LinkedShader;
     std::string _ObjectArrayName;
 };

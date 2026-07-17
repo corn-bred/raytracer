@@ -14,6 +14,8 @@
 #include <limits>
 #include <memory>
 #include "objecthandler.h"
+#include "computeshader.h"
+#include "SSBO.h"
 
 
 using namespace std;
@@ -156,42 +158,37 @@ int main () {
         return 1;
     }
 
-    GLuint ComputeShader = glCreateShader(GL_COMPUTE_SHADER);
+    GLuint ComputeShaderAccumulationTexture;
+    glGenTextures(1, &ComputeShaderAccumulationTexture);
 
-    int ReadTexture = 0, WriteTexture = 1;
-    GLuint FramebufferAccumulationTexture[2];
-    glGenTextures(2, FramebufferAccumulationTexture);
-
-    for(int i = 0; i < 2; i++) {
-        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[i]);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    }
-
+    glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    Shader ShaderQuad("shader/vert.glsl", "shader/frag.glsl");
     Shader ShaderSample("shader/vertSample.glsl", "shader/fragSample.glsl");
 
     VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
     BufferQuad.addAttribute(0, 4, 2, GL_FLOAT, sizeof(float), 0);
     BufferQuad.addAttribute(1, 4, 2, GL_FLOAT, sizeof(float), 2);
 
-    ObjectArray uObjects(ShaderQuad, "uObjects");
+    ComputeShader ShaderCompute("shader/main.comp");
+
+    ObjectArray uObjects(ShaderCompute, "uObjects");
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);
         FrameIndex++;
 
-        glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
-
         if (FrameIndex == 1) {
-            glClearColor(0.0, 0.0, 0.0, 1.0);
-            glClear(GL_COLOR_BUFFER_BIT);
+            const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
+            glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+            glClearBufferData(GL_TEXTURE, GL_RGBA8, GL_RGBA, GL_FLOAT, black);
         }
 
         float CurrentFrame = glfwGetTime();
@@ -212,28 +209,22 @@ int main () {
         
         glm::mat4 view = CameraMain.calculateView();
 
-        ShaderQuad.use();
+        ShaderCompute.bind();
 
-        glBindFramebuffer(GL_FRAMEBUFFER, FramebufferMain);
+        glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA8);
 
-        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, FramebufferAccumulationTexture[WriteTexture], 0);
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[ReadTexture]);
-        ShaderQuad.setInt("TextureAccumulation", 0);
-
-        ShaderQuad.setMat4("invView", glm::inverse(view));
-        ShaderQuad.setMat4("invProjection", glm::inverse(projection));
-        ShaderQuad.setVec3("CameraPos", CameraMain.position);
-        ShaderQuad.setInt("Width", WIDTH);
-        ShaderQuad.setInt("Height", HEIGHT);
-        ShaderQuad.setFloat("glfwTime", CurrentFrame);
-        ShaderQuad.setInt("MSAAsamples", 1);
-        ShaderQuad.setInt("MaximumDepth", 10);
-        ShaderQuad.setInt("FrameIndex", FrameIndex);
-        ShaderQuad.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderQuad.setFloat("DefocusAngle", 0.5); //sigma toes
-        ShaderQuad.setFloat("FocusDist", 2.5);
+        ShaderCompute.setMat4("invView", glm::inverse(view));
+        ShaderCompute.setMat4("invProjection", glm::inverse(projection));
+        ShaderCompute.setVec3("CameraPos", CameraMain.position);
+        ShaderCompute.setInt("Width", WIDTH);
+        ShaderCompute.setInt("Height", HEIGHT);
+        ShaderCompute.setFloat("glfwTime", CurrentFrame);
+        ShaderCompute.setInt("MSAAsamples", 1);
+        ShaderCompute.setInt("MaximumDepth", 10);
+        ShaderCompute.setInt("FrameIndex", FrameIndex);
+        ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
+        ShaderCompute.setFloat("DefocusAngle", 0.5); 
+        ShaderCompute.setFloat("FocusDist", 2.5);
 
         uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
         uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
@@ -257,17 +248,12 @@ int main () {
         uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
-        BufferQuad.bind();
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        swap(ReadTexture, WriteTexture);
-
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        ShaderCompute.use((WIDTH + 255) / 256, (HEIGHT + 255) / 256, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, FramebufferAccumulationTexture[ReadTexture]);
+        glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
         ShaderSample.setInt("TextureAccumulation", 0);
 
         BufferQuad.bind();
@@ -277,8 +263,7 @@ int main () {
         
         FPSCounter++;
     }
-    glDeleteTextures(2, FramebufferAccumulationTexture);
-    glDeleteFramebuffers(1, &FramebufferMain);
+    glDeleteTextures(1, &ComputeShaderAccumulationTexture);
     glfwTerminate();
     return 0;
 }

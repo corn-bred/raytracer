@@ -2,9 +2,9 @@
 
 #define HITTABLE_LIST_ARRAY_SIZE 14
 
-in vec2 TexCoords;
+layout(local_size_x = 256, local_size_y = 1, local_size_z = 1) in;
 
-out vec4 FragColor;
+layout(rgba8, binding = 0) uniform image2D ImageOut;
 
 uniform mat4 invProjection;
 uniform mat4 invView;
@@ -24,6 +24,8 @@ const float pi = 3.1415926535897932385;
 
 float DefocusRadius;
 
+ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.xy);
+
 float degreesToRadians(float degrees) {
     return degrees * pi / 180.0;
 }
@@ -37,8 +39,8 @@ float randRange(float seed, float min, float max) {
 }
 
 vec3 sampleSquare(float seed, int sampleIndex) {
-    float seedX = seed + float(sampleIndex) + TexCoords.x + glfwTime;
-    float seedY = seedX + 3.12534 + TexCoords.y;
+    float seedX = seed + float(sampleIndex) + PixelCoords.x + glfwTime;
+    float seedY = seedX + 3.12534 + PixelCoords.y;
     return vec3(randRange(seedX, -0.5, 0.5), randRange(seedY, -0.5, 0.5), 0.0);
 }
 
@@ -289,7 +291,7 @@ Ray getRay(float i, float j, int SampleNumber) {
     vec3 CamForward = normalize((invView * vec4(0.0, 0.0, -1.0, 0.0)).xyz);
 
     //Random 2D point on unit (circle) disk
-    vec2 DiskPoint = vec2(randUnitVec2(glfwTime + gl_FragCoord.x + gl_FragCoord.y * 2.435 + float(SampleNumber)));
+    vec2 DiskPoint = vec2(randUnitVec2(glfwTime + PixelCoords.x + PixelCoords.y * 2.435 + float(SampleNumber)));
 
     //Random point onto 3D world space
     vec3 LensOffset = (CamRight * DiskPoint.x + CamUp * DiskPoint.y) * DefocusRadius;
@@ -319,7 +321,7 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
         int depth = 0;
 
         do {
-            float seed = glfwTime + gl_FragCoord.x * fract(3.96 + glfwTime) + gl_FragCoord.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
+            float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
 
             vec3 dir = vec3(0.0);
 
@@ -382,11 +384,11 @@ void main () {
 
     DefocusRadius = FocusDist * tan(float(degreesToRadians(DefocusAngle / 2)));
 
-    vec3 PreviousSample = texture(TextureAccumulation, TexCoords).rgb;
+    vec3 PreviousSample = imageLoad(ImageOut, PixelCoords).rgb;
 
     vec3 PixelColour = vec3(0.0);
     for(int samples = 0; samples < MSAAsamples; samples++) {
-        Ray r = getRay(gl_FragCoord.x, gl_FragCoord.y, samples);
+        Ray r = getRay(PixelCoords.x, PixelCoords.y, samples);
         PixelColour += rayColour(r, MaximumDepth, world);
     }
     PixelColour /= float(MSAAsamples);
@@ -399,5 +401,5 @@ void main () {
     if (FrameIndex == 1) {
         AccumulatedColour = NewSample;
     }
-    FragColor = vec4(AccumulatedColour, 1.0);
+    imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
 }
