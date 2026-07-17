@@ -2,9 +2,9 @@
 
 #define HITTABLE_LIST_ARRAY_SIZE 14
 
-layout(local_size_x = 256, local_size_y = 1, local_size_z = 1) in;
+layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
-layout(rgba8, binding = 0) uniform image2D ImageOut;
+layout(rgba32f, binding = 0) uniform image2D ImageOut;
 
 uniform mat4 invProjection;
 uniform mat4 invView;
@@ -24,7 +24,7 @@ const float pi = 3.1415926535897932385;
 
 float DefocusRadius;
 
-ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.xy);
+ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
 
 float degreesToRadians(float degrees) {
     return degrees * pi / 180.0;

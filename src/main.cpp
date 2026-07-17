@@ -44,7 +44,7 @@ inline double random_double(double min, double max) {
 
 double AspectRatio = 16.0/9.0;
 unsigned int WIDTH = 1200;
-unsigned int HEIGHT = WIDTH / AspectRatio;
+unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter, ShownFPS;
@@ -162,7 +162,7 @@ int main () {
     glGenTextures(1, &ComputeShaderAccumulationTexture);
 
     glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -173,10 +173,12 @@ int main () {
     Shader ShaderSample("shader/vertSample.glsl", "shader/fragSample.glsl");
 
     VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
-    BufferQuad.addAttribute(0, 4, 2, GL_FLOAT, sizeof(float), 0);
-    BufferQuad.addAttribute(1, 4, 2, GL_FLOAT, sizeof(float), 2);
+    BufferQuad.addAttribute(0, 2, GL_FLOAT, 4, 0);
+    BufferQuad.addAttribute(1, 2, GL_FLOAT, 4, 2);
 
     ComputeShader ShaderCompute("shader/main.comp");
+
+    cout << "Compute Shader Program ID: " << ShaderCompute.ID << endl;
 
     ObjectArray uObjects(ShaderCompute, "uObjects");
 
@@ -188,7 +190,8 @@ int main () {
         if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
             glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
-            glClearBufferData(GL_TEXTURE, GL_RGBA8, GL_RGBA, GL_FLOAT, black);
+            glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
+            glBindTexture(GL_TEXTURE_2D, 0);
         }
 
         float CurrentFrame = glfwGetTime();
@@ -211,7 +214,13 @@ int main () {
 
         ShaderCompute.bind();
 
-        glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA8);
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR) {
+            cout << "Compute error: " << err << endl;
+        }
+
+
+        glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         ShaderCompute.setMat4("invView", glm::inverse(view));
         ShaderCompute.setMat4("invProjection", glm::inverse(projection));
@@ -248,8 +257,10 @@ int main () {
         uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
-        ShaderCompute.use((WIDTH + 255) / 256, (HEIGHT + 255) / 256, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+        ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
+        
+        
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
@@ -257,6 +268,7 @@ int main () {
         ShaderSample.setInt("TextureAccumulation", 0);
 
         BufferQuad.bind();
+
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
         glfwSwapBuffers(window);
