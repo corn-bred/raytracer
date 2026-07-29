@@ -1,7 +1,5 @@
 #version 430 core
 
-#define HITTABLE_LIST_ARRAY_SIZE 14
-
 layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D ImageOut;
@@ -95,14 +93,58 @@ vec3 RayAt(inout Ray ray, float t) {
     return ray.Origin + ray.Direction * vec3(t);
 }
 
+//      BVH
+
+struct Triangle {
+    vec3 v0, v1, v2;
+};
+
+struct FlatNode {
+    vec3 BBMin, BBMax;
+    int LeftChild_or_Count; //this is really awesome compressed data waow
+    int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
+};
+
+//Buffer that contains the volumes
+layout(std430, binding = 0) readonly buffer BVHBuffer {
+    FlatNode Nodes[]; 
+};
+
+//Buffer that contains the triangle indices
+layout(std430, binding = 1) readonly buffer TriangleIndices {
+    int TriIndices[];
+};
+
+//Slabs method intersection testing
+bool IntersectAABB(Ray ray, vec3 BBMin, vec3 BBMax, out float tNear, out float tFar) {
+    vec3 invDir = 1.0 / ray.Direction; //division is EXPENSIVE
+
+    //REMEMBER:
+    //  let p be intersection point
+    //  let o be origin
+    //  let d be direction
+    //  t = (p - o) / d
+    //  t = (p - o) * (1.0 / d)
+    //  do that for a vector and you'll get the individual t for each axis
+
+    vec3 t1 = (BBMin - ray.Origin) * invDir; //t for bounding box min
+    vec3 t2 = (BBMax - ray.Origin) * invDir; //t for bounding box max
+
+    vec3 tMin = min(t1, t2); //finds the minimum for each axis
+    vec3 tMax = max(t1, t2); //finds the maximum for each axis
+
+    tNear = max(tMax.x, max(tMax.y, tMax.z)); //finds the maximum out of all the nearest axes
+    tFar = min(tMin.x, min(tMin.y, tMin.z)); //finds the minimum out of all the farthest axes
+
+    return (tNear <= tFar && tFar >= 0.0); //if the farthest entrance is less than the closest exit, then that means there is a space with all axes overlapping on the same number, the therefore can collide with the box. 
+}
+
 //      HitRecord
 
 struct HitRecord {
     vec3 Position;
 
-    vec3 TriPoint1;
-    vec3 TriPoint2;
-    vec3 TriPoint3;
+    Triangle triangle;
 
     vec3 Normal;
     float t;
@@ -128,13 +170,7 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
 //      Sphere
 
 struct Object {
-    int objecttype; //0: Sphere, 1: Triangle
-    vec3 Spherecenter;
-    float Sphereradius;
-
-    vec3 Trianglep1;
-    vec3 Trianglep2;
-    vec3 Trianglep3;
+    Triangle triangle;
 
     float roughness;
     vec3 albedo;
@@ -147,49 +183,11 @@ struct Object {
     //bool hit();
 };
 
-// spagetti code go
-bool SphereHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
-    vec3 OriginToCenter = object.Spherecenter - ray.Origin;
-    // Q u a d r a t i c
-    float a = pow(length(ray.Direction), 2); // Should be 1
-    float h = dot(ray.Direction, OriginToCenter); // dir*oc
-    float c = pow(length(OriginToCenter), 2) - object.Sphereradius * object.Sphereradius; // length(oc)^2 - r^2
-    float discriminant = h*h - a*c;
-
-    if (discriminant < 0)
-        return false;
-
-    float sqrtd = sqrt(discriminant);
-
-    // Find nearest root
-    float root = (h - sqrtd) / a;
-    if (root <= ray_tmin || ray_tmax <= root) {
-        root = (h + sqrtd) / a;
-        if (root <= ray_tmin || ray_tmax <= root)
-            return false;
-    }
-
-    rec.t = float(root);
-    rec.Position = RayAt(ray, rec.t);
-
-    //copy data
-    rec.Roughness = object.roughness;
-    rec.Albedo = object.albedo;
-    rec.isDielectric = object.dielectric;
-    rec.ior = object.ior;
-    rec.isEmissive = object.emissive;
-
-    vec3 outwardNormal = vec3(rec.Position - object.Spherecenter) / vec3(object.Sphereradius);
-    HitRecordSetFaceNormal(rec, ray, outwardNormal);
-
-    return true;
-}
-
 bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
-    vec3 Edge1 = object.Trianglep2 - object.Trianglep1;
-    vec3 Edge2 = object.Trianglep3 - object.Trianglep1;
+    vec3 Edge1 = object.triangle.v1 - object.triangle.v0;
+    vec3 Edge2 = object.triangle.v2 - object.triangle.v0;
 
-    vec3 tVec = ray.Origin - object.Trianglep1; // Arrow from point 1 to ray origin
+    vec3 tVec = ray.Origin - object.triangle.v0; // Arrow from point 1 to ray origin
     vec3 pVec = cross(ray.Direction, Edge2);    // Perpendicular arrow of the ray direction
     vec3 qVec = cross(tVec, Edge1);             // 
 
@@ -218,9 +216,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     rec.Normal = normal;
 
-    rec.TriPoint1 = object.Trianglep1;
-    rec.TriPoint2 = object.Trianglep2;
-    rec.TriPoint3 = object.Trianglep3;
+    rec.triangle = object.triangle;
 
     rec.Roughness = object.roughness;
     rec.Albedo = object.albedo;
@@ -231,44 +227,64 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
     return true;
 }
 
-uniform Object uObjects[HITTABLE_LIST_ARRAY_SIZE];
+//      More BVH
 
-
-
-//      HittableList
-
-struct HittableList {
-    Object objects[HITTABLE_LIST_ARRAY_SIZE];
-    //bool hitSphere();
+//Buffer that contains the actual data and vertices
+layout(std430, binding = 2) readonly buffer ObjectData {
+    Object Objects[];
 };
 
-bool HittableListHit(inout HittableList hittablelist, Ray r, float ray_tmin, float ray_tmax, inout HitRecord rec) {
-    HitRecord TempRec;
-    bool anythingHit = false;
-    float ClosestSoFar = ray_tmax;
+bool TraverseBVH(Ray ray, out HitRecord rec) {
+    bool isHit = false;
+    rec.t = 1e30;
 
-    for (int i = 0; i < HITTABLE_LIST_ARRAY_SIZE; i++) {
-        Object object = hittablelist.objects[i];
-        if(object.objecttype == 0) {
-            if(SphereHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
-                anythingHit = true;
-                ClosestSoFar = TempRec.t;
-                rec = TempRec;
+    int Stack[64]; //maximum size for node depth, also holds the node indices
+    int StackIndex = 0;
+    Stack[StackIndex++] = 0; // cuz root index is always 0
+
+    while(StackIndex > 0) {
+        //Get node
+        int NodeIndex = Stack[--StackIndex];
+        FlatNode Node = Nodes[NodeIndex];
+
+        //Intersection test
+        float tNear, tFar;
+        if (!IntersectAABB(ray, Node.BBMin, Node.BBMax, tNear, tFar)) {
+            continue; //if not touching, continue lower on the stack
+        } 
+
+        //Is Node a leaf or a parent?
+        if (Node.LeftChild_or_Count < 0) { //if leaf
+            int Start = Node.RightChild_or_Start;
+            int Count = -Node.LeftChild_or_Count;
+
+            HitRecord tempRec;
+            for (int i = 0 ; i < Count; i++) { //cycle through each triangle for testing
+                int TriIndex = TriIndices[Start + i];
+
+                Object tri = Objects[TriIndex];
+
+                if (TriangleHit(tri, ray, 0.001, rec.t, tempRec)) {
+                    isHit = true;
+                    if (tempRec.t < rec.t) { // if there are multiple triangles the ray can hit inside of that leaf
+                        rec = tempRec;
+                    }
+                }
+
             }
-        } else if (object.objecttype == 1) {
-            if(TriangleHit(object, r, ray_tmin, ClosestSoFar, TempRec)) {
-                anythingHit = true;
-                ClosestSoFar = TempRec.t;
-                rec = TempRec;
-            }
+
+        } else { //if parent
+            //Push back children indices
+            Stack[StackIndex++] = Node.LeftChild_or_Count;
+            Stack[StackIndex++] = Node.RightChild_or_Start;
         }
+
     }
 
-    return anythingHit;
+    return isHit;
 }
 
-
-
+//      HittableList
 
 Ray getRay(float i, float j, int SampleNumber) {
     vec3 Offset = sampleSquare(2, SampleNumber);
@@ -307,16 +323,17 @@ Ray getRay(float i, float j, int SampleNumber) {
     return r;
 }
 
-
-
-
-
-vec3 rayColour(Ray r, int maxDepth, HittableList world) {
+vec3 rayColour(Ray r, int maxDepth) {
     vec3 colour = vec3(1.0);
 
     HitRecord rec;
 
-    if (HittableListHit(world, r, 0.001, infinity, rec)) {
+    if (!TraverseBVH(r, rec)) {
+
+        vec3 sky = vec3(0.0);
+        colour *= sky;
+
+    } else {
 
         int depth = 0;
 
@@ -326,9 +343,10 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             vec3 dir = vec3(0.0);
 
             vec3 Incident = normalize(r.Direction);
-            vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+            vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with
 
-            if (rec.isDielectric) {
+            //Ray direction prep for next sample
+            if (rec.isDielectric) { //for glass
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
                 
                 vec3 Refracted = refract(Incident, Normal, ri);
@@ -340,21 +358,27 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
                 } else {
                     dir = Refracted;
                 }
-            } else {
+            } else { //for normal
                 dir = reflect(Incident, Normal);
             }
 
+            //change ray data and prep for next sample
             r.Origin = rec.Position;
             r.Direction = dir;
 
+            //Colour calculation 
+
+            //Lambert's cosine law
             float AngFalloff = max(0.0, dot(Normal, -Incident));
+
+            //Colour
             vec3 Attenuation = rec.Albedo * AngFalloff;
 
-            if (rec.isEmissive) {
+            if (rec.isEmissive) { // if is emissive, end sample loop
                 return Attenuation * colour;
             }
-
-            if(HittableListHit(world, r, 0.001, infinity, rec)) {
+            
+            if(TraverseBVH(r, rec)) {
                 if (!rec.isDielectric) {
                     colour = Attenuation * colour;
                 }
@@ -367,9 +391,6 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
             depth++;
         } while (depth < maxDepth);
 
-    } else {
-        vec3 sky = vec3(0.0);
-        colour *= sky;
     }
 
     return colour;
@@ -379,9 +400,6 @@ vec3 rayColour(Ray r, int maxDepth, HittableList world) {
 
 
 void main () {
-    HittableList world;
-    world.objects = uObjects;
-
     DefocusRadius = FocusDist * tan(float(degreesToRadians(DefocusAngle / 2)));
 
     vec3 PreviousSample = imageLoad(ImageOut, PixelCoords).rgb;
@@ -389,7 +407,7 @@ void main () {
     vec3 PixelColour = vec3(0.0);
     for(int samples = 0; samples < MSAAsamples; samples++) {
         Ray r = getRay(PixelCoords.x, PixelCoords.y, samples);
-        PixelColour += rayColour(r, MaximumDepth, world);
+        PixelColour += rayColour(r, MaximumDepth);
     }
     PixelColour /= float(MSAAsamples);
 

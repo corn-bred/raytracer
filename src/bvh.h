@@ -85,7 +85,14 @@ class BVH {
 
         return -1; // default
     }
-
+    //1. Set node's start and end
+    //2. Create bounding box for node
+    //3. Check for leaf thresholds
+    // ONWARD ARE NON-LEAF OPERATIONS
+    //4. Choose axis to split
+    //5. Find all centroids and sort them
+    //6. Split them in half and give them to left and right children
+    //7. Recursively build the children
     BVHNode *RecursiveBuild(int start, int end) {
         BVHNode *node = new BVHNode();
 
@@ -108,7 +115,7 @@ class BVH {
 
         int axis = ChooseSplitAxis(start, end);
         if (axis == -1) {
-            node->isLeaf = true; // if axis is equal to -1 (error thrown) an't split (all centroids at same position)
+            node->isLeaf = true; // if axis is equal to -1 (error thrown) can't split (all centroids at same position)
             return node;
         }
 
@@ -153,6 +160,7 @@ class BVH {
             return node;
         }
 
+        //Recursively build the next children
         node->LeftChild = RecursiveBuild(start, midIndex);
         node->LeftChild = RecursiveBuild(midIndex, end);
         node->isLeaf = false;
@@ -160,7 +168,7 @@ class BVH {
         return node;
     }
 
-    int RecursiveFlatten(BVHNode *node) {
+    int RecursiveFlatten(BVHNode *node) { //Just conversion
         int idx = FlatNodes.size();
         FlatNodes.push_back(FlatNode());
 
