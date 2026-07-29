@@ -178,9 +178,30 @@ int main () {
 
     ComputeShader ShaderCompute("shader/main.comp");
 
-    cout << "Compute Shader Program ID: " << ShaderCompute.ID << endl;
-
     ObjectArray uObjects(ShaderCompute, "uObjects");
+
+    ShaderCompute.bind();
+
+    uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
+    uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
+
+    uObjects.addTriangle(2, glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(3, glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
+
+    uObjects.addTriangle(4, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(5, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
+
+    uObjects.addTriangle(6, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(7, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
+
+    uObjects.addTriangle(8, glm::vec3(2.5,2.5,-2.5), glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
+    uObjects.addTriangle(9, glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
+
+    uObjects.addTriangle(10, glm::vec3(-2.5,2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
+    uObjects.addTriangle(11, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
+
+    uObjects.addSphere(12, glm::vec3(1, -1.75, 1), 0.75, glm::vec3(1.0), 0.0, 1.5);
+    uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -214,12 +235,6 @@ int main () {
 
         ShaderCompute.bind();
 
-        GLenum err = glGetError();
-        if (err != GL_NO_ERROR) {
-            cout << "Compute error: " << err << endl;
-        }
-
-
         glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         ShaderCompute.setMat4("invView", glm::inverse(view));
@@ -229,32 +244,12 @@ int main () {
         ShaderCompute.setInt("Height", HEIGHT);
         ShaderCompute.setFloat("glfwTime", CurrentFrame);
         ShaderCompute.setInt("MSAAsamples", 1);
-        ShaderCompute.setInt("MaximumDepth", 10);
+        ShaderCompute.setInt("MaximumDepth", 100);
         ShaderCompute.setInt("FrameIndex", FrameIndex);
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
         ShaderCompute.setFloat("DefocusAngle", 0.5); 
         ShaderCompute.setFloat("FocusDist", 2.5);
 
-        uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
-        uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
-
-        uObjects.addTriangle(2, glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
-        uObjects.addTriangle(3, glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
-
-        uObjects.addTriangle(4, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
-        uObjects.addTriangle(5, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
-
-        uObjects.addTriangle(6, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
-        uObjects.addTriangle(7, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
-
-        uObjects.addTriangle(8, glm::vec3(2.5,2.5,-2.5), glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
-        uObjects.addTriangle(9, glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
-
-        uObjects.addTriangle(10, glm::vec3(-2.5,2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
-        uObjects.addTriangle(11, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
-
-        uObjects.addSphere(12, glm::vec3(1, -1.75, 1), 0.75, glm::vec3(1.0), 0.0, 1.5);
-        uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
         ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
