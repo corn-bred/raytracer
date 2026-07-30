@@ -17,7 +17,7 @@ class ObjectArray {
 
     ObjectArray(std::vector<Object> &objects) : Objects(objects) {}
 
-    void addTriangle(glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+    void addTriangle(Vertex Vert1, Vertex Vert2, Vertex Vert3, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
         int index = Objects.size();
         Objects.push_back(Object());
         Objects[index].triangle.v0 = Vert1;
@@ -41,7 +41,7 @@ class ObjectArray {
         Objects[index].padding2[1] = 0.0f;
     }
 
-    void addTriangleEmission(glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
+    void addTriangleEmission(Vertex Vert1, Vertex Vert2, Vertex Vert3, glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
         int index = Objects.size();
         Objects.push_back(Object());
         Objects[index].triangle.v0 = Vert1;

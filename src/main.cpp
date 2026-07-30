@@ -17,7 +17,9 @@
 #include "computeshader.h"
 #include "SSBO.h"
 #include "bvh.h"
-
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+#include "model.h"
 
 using namespace std;
 
@@ -179,31 +181,9 @@ int main () {
 
     ComputeShader ShaderCompute("shader/main.comp");
 
-    std::vector<Object> Objects;
+    Model model("assets/stanford-bunny.obj");
 
-    ObjectArray uObjects(Objects);
-
-    ShaderCompute.bind();
-
-    uObjects.addTriangleEmission(glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
-    uObjects.addTriangleEmission(glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
-
-    uObjects.addTriangle(glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
-
-    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
-
-    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
-
-    uObjects.addTriangle(glm::vec3(2.5,2.5,-2.5), glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
-    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
-
-    uObjects.addTriangle(glm::vec3(-2.5,2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
-    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
-
-    BVH mainBVH(Objects);
+    BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
     mainBVH.Flatten();
 

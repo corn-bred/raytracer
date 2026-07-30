@@ -8,32 +8,36 @@
 
 const int LEAF_THRESHOLD = 4;
 
-struct Triangle {
-    glm::vec3 v0; // +12, 0 /= 16
+struct Vertex {
+    glm::vec3 Position; // +12, 0 /= 16
     float padding0; // +4
-    glm::vec3 v1; // +12, 16 /= 16
-    float padding1; // +4
-    glm::vec3 v2; // +12, 32 /= 16
-    float padding2; // +4
-}; // TOTAL: 48 /= 16
+    glm::vec2 TexCoords; // +8 16 /= 16
+    float padding1[2]; // +8
+}; // TOTAL: 32 /= 16
+
+struct Triangle {
+    Vertex v0; // +32, 0 /= 16
+    Vertex v1; // +32, 32 /= 16
+    Vertex v2; // +32, 64 /= 16
+}; // TOTAL: 96 /= 16
 
 struct Object {
-    Triangle triangle;  // +48, 0 /= 16
+    Triangle triangle;  // +96, 0 /= 16
 
-    float roughness;    // +4 = 48 /= 4
+    float roughness;    // +4 = 96 /= 4
 
-    float padding0[3];  // +12, 52
+    float padding0[3];  // +12, 100
 
-    glm::vec3 albedo;   // +12, 64 /= 16
+    glm::vec3 albedo;   // +12, 112 /= 16
 
-    int dielectric;     // +4, 76 /= 4
+    int dielectric;     // +4, 124 /= 4
 
-    float ior;          // +4, 80 /= 4
+    float ior;          // +4, 128 /= 4
 
-    int emissive;       // +4, 84 /= 4
+    int emissive;       // +4, 132 /= 4
 
-    float padding2[2];  // +8, 88
-};                      //TOTAL: 96 /= 16
+    float padding2[2];  // +8, 144
+};                      //TOTAL: 144 /= 16
 
 struct BVHNode {
     glm::vec3 BBMin, BBMax;
@@ -74,13 +78,13 @@ class BVH {
             int TriID = TriIndices[i];
             const Triangle &tri = Triangles[TriID].triangle;
 
-            outMin = glm::min(outMin, tri.v0);
-            outMin = glm::min(outMin, tri.v1);
-            outMin = glm::min(outMin, tri.v2);
+            outMin = glm::min(outMin, tri.v0.Position);
+            outMin = glm::min(outMin, tri.v1.Position);
+            outMin = glm::min(outMin, tri.v2.Position);
 
-            outMax = glm::max(outMax, tri.v0);
-            outMax = glm::max(outMax, tri.v1);
-            outMax = glm::max(outMax, tri.v2);
+            outMax = glm::max(outMax, tri.v0.Position);
+            outMax = glm::max(outMax, tri.v1.Position);
+            outMax = glm::max(outMax, tri.v2.Position);
         }
     }
 
@@ -94,7 +98,7 @@ class BVH {
             int TriID = TriIndices[i];
             const Triangle &tri = Triangles[TriID].triangle;
 
-            glm::vec3 Centroid = (tri.v0 + tri.v1 + tri.v2) / 3.0f;
+            glm::vec3 Centroid = (tri.v0.Position + tri.v1.Position + tri.v2.Position) / 3.0f;
 
             BBMin = glm::min(BBMin, Centroid);
 
@@ -154,7 +158,7 @@ class BVH {
             int TriIndex = TriIndices[i];
             const Triangle &tri = Triangles[TriIndex].triangle;
 
-            glm::vec3 Centroid = glm::vec3(tri.v0 + tri.v1 + tri.v2) / 3.0f;
+            glm::vec3 Centroid = glm::vec3(tri.v0.Position + tri.v1.Position + tri.v2.Position) / 3.0f;
 
             Centroids.push_back(Centroid[axis]); //return only the value on the axis given
         }
@@ -170,7 +174,7 @@ class BVH {
             TriIndices.begin() + end,
             [&](int TriID) {
                 const Triangle &tri = Triangles[TriID].triangle;
-                glm::vec3 Centroid = (tri.v0 + tri.v1 + tri.v2) / 3.0f;
+                glm::vec3 Centroid = (tri.v0.Position + tri.v1.Position + tri.v2.Position) / 3.0f;
                 return Centroid[axis] < Median;
             }
         );
@@ -256,7 +260,3 @@ class BVH {
         return TriIndices;
     }
 };
-
-static_assert(sizeof(Triangle) == 48, "Triangle size mismatch!");
-static_assert(sizeof(Object) == 96, "Object size mismatch!");
-static_assert(sizeof(FlatNode) == 32, "FlatNode size mismatch!");

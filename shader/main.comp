@@ -95,14 +95,18 @@ vec3 RayAt(inout Ray ray, float t) {
 
 //      BVH
 
-struct Triangle {
-    vec3 v0; // +12, 0 /= 16
+struct Vertex {
+    vec3 Position; // +12, 0 /= 16
     float padding0; // +4
-    vec3 v1; // +12, 16 /= 16
-    float padding1; // +4
-    vec3 v2; // +12, 32 /= 16
-    float padding2; // +4
-}; // TOTAL: 48 /= 16
+    vec2 TexCoords; // +8 16 /= 16
+    float padding1[2]; // +8
+}; // TOTAL: 32 /= 16
+
+struct Triangle {
+    Vertex v0; // +32, 0 /= 16
+    Vertex v1; // +32, 32 /= 16
+    Vertex v2; // +32, 64 /= 16
+}; // TOTAL: 96 /= 16
 
 struct FlatNode {
     vec3 BBMin;
@@ -174,28 +178,28 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
 //      Sphere
 
 struct Object {
-    Triangle triangle;
+    Triangle triangle;  // +96, 0 /= 16
 
-    float roughness;  
+    float roughness;    // +4 = 96 /= 4
 
-    float padding0[3];
+    float padding0[3];  // +12, 100
 
-    vec3 albedo; 
+    vec3 albedo;   // +12, 112 /= 16
 
-    int dielectric;   
+    int dielectric;     // +4, 124 /= 4
 
-    float ior;        
+    float ior;          // +4, 128 /= 4
 
-    int emissive;     
+    int emissive;       // +4, 132 /= 4
 
-    float padding2[2];
-};                    
+    float padding2[2];  // +8, 144
+};                      //TOTAL: 144 /= 16                 
 
 bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
-    vec3 Edge1 = object.triangle.v1 - object.triangle.v0;
-    vec3 Edge2 = object.triangle.v2 - object.triangle.v0;
+    vec3 Edge1 = object.triangle.v1.Position - object.triangle.v0.Position;
+    vec3 Edge2 = object.triangle.v2.Position - object.triangle.v0.Position;
 
-    vec3 tVec = ray.Origin - object.triangle.v0; // Arrow from point 1 to ray origin
+    vec3 tVec = ray.Origin - object.triangle.v0.Position; // Arrow from point 1 to ray origin
     vec3 pVec = cross(ray.Direction, Edge2);    // Perpendicular arrow of the ray direction
     vec3 qVec = cross(tVec, Edge1);             // 
 
@@ -359,7 +363,9 @@ vec3 rayColour(Ray r, int maxDepth) {
 
     if (!TraverseBVH(r, rec)) {
 
-        vec3 sky = vec3(0.0);
+        vec3 unitDir = normalize(r.Direction);
+        float a = 0.5 * (unitDir.y + 1.0);
+        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
         colour *= sky;
 
     } else {
@@ -416,9 +422,10 @@ vec3 rayColour(Ray r, int maxDepth) {
                     colour = Attenuation * colour;
                 }
             } else {
-                vec3 sky = vec3(0.0);
+                vec3 unitDir = normalize(r.Direction);
+                float a = 0.5 * (unitDir.y + 1.0);
+                vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
                 colour *= sky;
-                return colour;
             }
             
             depth++;
