@@ -16,6 +16,7 @@
 #include "objecthandler.h"
 #include "computeshader.h"
 #include "SSBO.h"
+#include "bvh.h"
 
 
 using namespace std;
@@ -178,31 +179,42 @@ int main () {
 
     ComputeShader ShaderCompute("shader/main.comp");
 
-    ObjectArray uObjects(ShaderCompute, "uObjects");
+    std::vector<Object> Objects;
+
+    ObjectArray uObjects(Objects);
 
     ShaderCompute.bind();
 
-    uObjects.addTriangleEmission(0, glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
-    uObjects.addTriangleEmission(1, glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
+    uObjects.addTriangleEmission(glm::vec3(1,2.49,-1), glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(4.0));
+    uObjects.addTriangleEmission(glm::vec3(-1,2.49,-1), glm::vec3(1,2.49,1), glm::vec3(-1,2.49,1), glm::vec3(4.0));
 
-    uObjects.addTriangle(2, glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(3, glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(-2.5,2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0), 1.0);
 
-    uObjects.addTriangle(4, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(5, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0), 1.0);
 
-    uObjects.addTriangle(6, glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
-    uObjects.addTriangle(7, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
+    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(2.5,2.5,-2.5), glm::vec3(-2.5,2.5,-2.5), glm::vec3(1.0), 1.0);
 
-    uObjects.addTriangle(8, glm::vec3(2.5,2.5,-2.5), glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
-    uObjects.addTriangle(9, glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
+    uObjects.addTriangle(glm::vec3(2.5,2.5,-2.5), glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
+    uObjects.addTriangle(glm::vec3(2.5,-2.5,-2.5), glm::vec3(2.5,2.5,2.5), glm::vec3(2.5,-2.5,2.5), glm::vec3(0.0, 1.0, 0.0), 1.0);
 
-    uObjects.addTriangle(10, glm::vec3(-2.5,2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
-    uObjects.addTriangle(11, glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
+    uObjects.addTriangle(glm::vec3(-2.5,2.5,-2.5), glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
+    uObjects.addTriangle(glm::vec3(-2.5,-2.5,-2.5), glm::vec3(-2.5,2.5,2.5), glm::vec3(-2.5,-2.5,2.5), glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    uObjects.addSphere(12, glm::vec3(1, -1.75, 1), 0.75, glm::vec3(1.0), 0.0, 1.5);
-    uObjects.addSphere(13, glm::vec3(-1, -1.75, -1), 0.75, glm::vec3(1.0), 0.0);
+    BVH mainBVH(Objects);
+    mainBVH.Build();
+    mainBVH.Flatten();
 
+    ShaderStorageBuffer BVHBuffer(mainBVH.GetBVH().data(), mainBVH.GetBVH().size() * sizeof(FlatNode), GL_STATIC_DRAW);
+    ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
+    ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
+    ShaderCompute.bind();
+    BVHBuffer.bindToShader(0);
+    TriangleIndices.bindToShader(1);
+    ObjectData.bindToShader(2);
+    
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);

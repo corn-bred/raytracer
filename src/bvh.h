@@ -12,6 +12,24 @@ struct Triangle {
     glm::vec3 v0, v1, v2;
 };
 
+struct Object {
+    Triangle triangle;  // +48, 0 /= 16
+
+    float roughness;    // +4 = 48 /= 4
+
+    float padding0[3];  // +12, 52
+
+    glm::vec3 albedo;   // +12, 64 /= 16
+
+    int dielectric;     // +4, 76 /= 4
+
+    float ior;          // +4, 80 /= 4
+
+    int emissive;       // +4, 84 /= 4
+
+    float padding2[2];  // +8, 88
+};                      //TOTAL: 96 /= 16
+
 struct BVHNode {
     glm::vec3 BBMin, BBMax;
     BVHNode *LeftChild, *RightChild;
@@ -22,14 +40,15 @@ struct BVHNode {
 };
 
 struct FlatNode {
-    glm::vec3 BBMin, BBMax;
+    glm::vec3 BBMin;
     int LeftChild_or_Count; //this is really awesome compressed data waow
+    glm::vec3 BBMax;
     int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
 };
 
 class BVH {
     private:
-    const std::vector<Triangle> &Triangles;
+    std::vector<Object> Triangles;
     std::vector<int> TriIndices;
     std::vector<FlatNode> FlatNodes;
     BVHNode *Root;
@@ -48,15 +67,15 @@ class BVH {
 
         for (int i = start; i < end; i++) {
             int TriID = TriIndices[i];
-            const Triangle &tri = Triangles[TriID];
+            const Triangle &tri = Triangles[TriID].triangle;
 
-            outMin = std::min(outMin, tri.v0);
-            outMin = std::min(outMin, tri.v1);
-            outMin = std::min(outMin, tri.v2);
+            outMin = glm::min(outMin, tri.v0);
+            outMin = glm::min(outMin, tri.v1);
+            outMin = glm::min(outMin, tri.v2);
 
-            outMax = std::max(outMax, tri.v0);
-            outMax = std::max(outMax, tri.v1);
-            outMax = std::max(outMax, tri.v2);
+            outMax = glm::max(outMax, tri.v0);
+            outMax = glm::max(outMax, tri.v1);
+            outMax = glm::max(outMax, tri.v2);
         }
     }
 
@@ -68,7 +87,7 @@ class BVH {
 
         for (int i = start; i < end; i++) {
             int TriID = TriIndices[i];
-            const Triangle &tri = Triangles[TriID];
+            const Triangle &tri = Triangles[TriID].triangle;
 
             glm::vec3 Centroid = (tri.v0 + tri.v1 + tri.v2) / 3.0f;
 
@@ -98,7 +117,7 @@ class BVH {
 
         //Set basic start and end
         node->Start = start;
-        node->Count = start - end;
+        node->Count = end - start;
 
         //Calculate Bounding Box for node
 
@@ -128,7 +147,7 @@ class BVH {
 
         for (int i = start ; i < end ; i++) {
             int TriIndex = TriIndices[i];
-            const Triangle &tri = Triangles[TriIndex];
+            const Triangle &tri = Triangles[TriIndex].triangle;
 
             glm::vec3 Centroid = glm::vec3(tri.v0 + tri.v1 + tri.v2) / 3.0f;
 
@@ -145,7 +164,7 @@ class BVH {
             TriIndices.begin() + start,
             TriIndices.begin() + end,
             [&](int TriID) {
-                const Triangle &tri = Triangles[TriID];
+                const Triangle &tri = Triangles[TriID].triangle;
                 glm::vec3 Centroid = (tri.v0 + tri.v1 + tri.v2) / 3.0f;
                 return Centroid[axis] < Median;
             }
@@ -162,7 +181,7 @@ class BVH {
 
         //Recursively build the next children
         node->LeftChild = RecursiveBuild(start, midIndex);
-        node->LeftChild = RecursiveBuild(midIndex, end);
+        node->RightChild = RecursiveBuild(midIndex, end);
         node->isLeaf = false;
 
         return node;
@@ -192,7 +211,7 @@ class BVH {
 
     public:
 
-    BVH(const std::vector<Triangle> &triangles) : 
+    BVH(const std::vector<Object> &triangles) : 
             Triangles(triangles), Root(nullptr) {
         TriIndices.resize(triangles.size());
         std::iota(TriIndices.begin(), TriIndices.end(), 0);
@@ -217,7 +236,22 @@ class BVH {
         FlatNodes.reserve(2 * Triangles.size() - 1); //Maximum possible amount of nodes
 
         RecursiveFlatten(Root);
+
     }
 
+    std::vector<Object> &GetData() {
+        return Triangles;
+    }
 
+    std::vector<FlatNode> &GetBVH() {
+        return FlatNodes;
+    }
+
+    std::vector<int> &GetTriIndices() {
+        return TriIndices;
+    }
 };
+
+static_assert(sizeof(Triangle) == 36, "Triangle size mismatch!");
+static_assert(sizeof(Object) == 96, "Object size mismatch!");
+static_assert(sizeof(FlatNode) == 64, "FlatNode size mismatch! Use vec4 in C++.");

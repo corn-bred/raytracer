@@ -100,8 +100,9 @@ struct Triangle {
 };
 
 struct FlatNode {
-    vec3 BBMin, BBMax;
+    vec3 BBMin;
     int LeftChild_or_Count; //this is really awesome compressed data waow
+    vec3 BBMax;
     int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
 };
 
@@ -133,8 +134,8 @@ bool IntersectAABB(Ray ray, vec3 BBMin, vec3 BBMax, out float tNear, out float t
     vec3 tMin = min(t1, t2); //finds the minimum for each axis
     vec3 tMax = max(t1, t2); //finds the maximum for each axis
 
-    tNear = max(tMax.x, max(tMax.y, tMax.z)); //finds the maximum out of all the nearest axes
-    tFar = min(tMin.x, min(tMin.y, tMin.z)); //finds the minimum out of all the farthest axes
+    tNear = max(tMin.x, max(tMin.y, tMin.z)); //finds the maximum out of all the nearest axes
+    tFar = min(tMax.x, min(tMax.y, tMax.z)); //finds the minimum out of all the farthest axes
 
     return (tNear <= tFar && tFar >= 0.0); //if the farthest entrance is less than the closest exit, then that means there is a space with all axes overlapping on the same number, the therefore can collide with the box. 
 }
@@ -165,23 +166,25 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
     hitrecord.Normal = hitrecord.facingFront? outwardNormal : -outwardNormal;
 }
 
-
-
 //      Sphere
 
 struct Object {
     Triangle triangle;
 
-    float roughness;
-    vec3 albedo;
+    float roughness;  
 
-    bool dielectric;
-    float ior;
+    float padding0[3];
 
-    bool emissive;
+    vec3 albedo; 
 
-    //bool hit();
-};
+    int dielectric;   
+
+    float ior;        
+
+    int emissive;     
+
+    float padding2[2];
+};                    
 
 bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
     vec3 Edge1 = object.triangle.v1 - object.triangle.v0;
@@ -220,9 +223,9 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     rec.Roughness = object.roughness;
     rec.Albedo = object.albedo;
-    rec.isDielectric = object.dielectric;
+    rec.isDielectric = (object.dielectric == 1);
     rec.ior = object.ior;
-    rec.isEmissive = object.emissive;
+    rec.isEmissive = (object.emissive == 1);
 
     return true;
 }
@@ -242,7 +245,10 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
     int StackIndex = 0;
     Stack[StackIndex++] = 0; // cuz root index is always 0
 
-    while(StackIndex > 0) {
+    int maxIterations = 10000; // safety limit
+    int iterations = 0;
+
+    while(StackIndex > 0 && iterations < maxIterations) {
         //Get node
         int NodeIndex = Stack[--StackIndex];
         FlatNode Node = Nodes[NodeIndex];
@@ -279,6 +285,7 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
             Stack[StackIndex++] = Node.RightChild_or_Start;
         }
 
+        iterations++;
     }
 
     return isHit;
@@ -323,6 +330,23 @@ Ray getRay(float i, float j, int SampleNumber) {
     return r;
 }
 
+vec3 rayColourDebug(Ray r, int maxDepth) {
+    vec3 colour = vec3(1.0);
+
+    HitRecord rec;
+
+    if (!TraverseBVH(r, rec)) {
+
+        colour = vec3(1.0, 0.0, 0.0);
+
+    } else {
+        colour = vec3(0.0, 1.0, 0.0);
+        
+    }
+
+    return colour;
+}
+
 vec3 rayColour(Ray r, int maxDepth) {
     vec3 colour = vec3(1.0);
 
@@ -344,6 +368,10 @@ vec3 rayColour(Ray r, int maxDepth) {
 
             vec3 Incident = normalize(r.Direction);
             vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with
+
+            //Storing
+
+            bool currentIsDielectric = rec.isDielectric;
 
             //Ray direction prep for next sample
             if (rec.isDielectric) { //for glass
@@ -375,11 +403,11 @@ vec3 rayColour(Ray r, int maxDepth) {
             vec3 Attenuation = rec.Albedo * AngFalloff;
 
             if (rec.isEmissive) { // if is emissive, end sample loop
-                return Attenuation * colour;
+                return rec.Albedo * colour;
             }
             
             if(TraverseBVH(r, rec)) {
-                if (!rec.isDielectric) {
+                if (!currentIsDielectric) {
                     colour = Attenuation * colour;
                 }
             } else {
@@ -407,7 +435,7 @@ void main () {
     vec3 PixelColour = vec3(0.0);
     for(int samples = 0; samples < MSAAsamples; samples++) {
         Ray r = getRay(PixelCoords.x, PixelCoords.y, samples);
-        PixelColour += rayColour(r, MaximumDepth);
+        PixelColour += rayColourDebug(r, MaximumDepth);
     }
     PixelColour /= float(MSAAsamples);
 

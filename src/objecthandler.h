@@ -8,183 +8,55 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "bvh.h"
 
 class ObjectArray {
     public:
 
-    ObjectArray(ComputeShader &designatedshader, std::string objectarrayname) : _LinkedShader(designatedshader), _ObjectArrayName(objectarrayname) {}
+    std::vector<Object> &Objects;
 
-    ObjectArray(ComputeShader &designatedshader) : _LinkedShader(designatedshader) {}
+    ObjectArray(std::vector<Object> &objects) : Objects(objects) {}
 
-    ObjectArray() = delete;
-
-    void modifyObjectName(std::string objectarrayname) {
-        _ObjectArrayName = objectarrayname;
-    }
-
-    void addSphere(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
-            _LinkedShader.setInt(UniformName.str(), 0);
-        }
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].Spherecenter";
-            _LinkedShader.setVec3(UniformName.str(), center);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Sphereradius";
-            _LinkedShader.setFloat(UniformName.str(), radius);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].roughness";
-            _LinkedShader.setFloat(UniformName.str(), roughness);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].albedo";
-            _LinkedShader.setVec3(UniformName.str(), albedo);
-        }
+    void addTriangle(glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+        int index = Objects.size();
+        Objects.push_back(Object());
+        Objects[index].triangle.v0 = Vert1;
+        Objects[index].triangle.v1 = Vert2;
+        Objects[index].triangle.v2 = Vert3;
+        Objects[index].roughness = roughness;
+        Objects[index].albedo = albedo;
+        Objects[index].emissive = 0;
+        
         if (ior >= 0) {
-            {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].dielectric";
-            _LinkedShader.setBool(UniformName.str(), true);
-            }
-            {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].ior";
-            _LinkedShader.setFloat(UniformName.str(), ior);
-            }
+            Objects[index].dielectric = 1;
+            Objects[index].ior = ior;
+        } else {
+            Objects[index].dielectric = 0;
         }
+
+        Objects[index].padding0[0] = 0.0f;
+        Objects[index].padding0[1] = 0.0f;
+        Objects[index].padding0[2] = 0.0f;
+        Objects[index].padding2[0] = 0.0f;
+        Objects[index].padding2[1] = 0.0f;
     }
 
-    void addSphereEmission(unsigned int id, glm::vec3 center = glm::vec3(0.0), float radius = 1, glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
-            _LinkedShader.setInt(UniformName.str(), 0);
-        }
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].Spherecenter";
-            _LinkedShader.setVec3(UniformName.str(), center);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Sphereradius";
-            _LinkedShader.setFloat(UniformName.str(), radius);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].roughness";
-            _LinkedShader.setFloat(UniformName.str(), roughness);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].albedo";
-            _LinkedShader.setVec3(UniformName.str(), lightstrength);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].emissive";
-            _LinkedShader.setBool(UniformName.str(), true);
-        }
-    }
+    void addTriangleEmission(glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
+        int index = Objects.size();
+        Objects.push_back(Object());
+        Objects[index].triangle.v0 = Vert1;
+        Objects[index].triangle.v1 = Vert2;
+        Objects[index].triangle.v2 = Vert3;
+        Objects[index].roughness = roughness;
+        Objects[index].albedo = lightstrength;
+        Objects[index].emissive = 1;
+        
+        Objects[index].dielectric = 0;
 
-    void addTriangle(unsigned int id, glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
-            _LinkedShader.setInt(UniformName.str(), 1);
-        }
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep1";
-            _LinkedShader.setVec3(UniformName.str(), Vert1);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep2";
-            _LinkedShader.setVec3(UniformName.str(), Vert2);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep3";
-            _LinkedShader.setVec3(UniformName.str(), Vert3);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].roughness";
-            _LinkedShader.setFloat(UniformName.str(), roughness);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].albedo";
-            _LinkedShader.setVec3(UniformName.str(), albedo);
-        }
-        if (ior >= 0) {
-            {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].dielectric";
-            _LinkedShader.setBool(UniformName.str(), true);
-            }
-            {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].ior";
-            _LinkedShader.setFloat(UniformName.str(), ior);
-            }
-        }
+        Objects[index].padding0[0] = 0.0f;
+        Objects[index].padding0[1] = 0.0f;
+        Objects[index].padding0[2] = 0.0f;
+        Objects[index].padding2[0] = 0.0f;
+        Objects[index].padding2[1] = 0.0f;
     }
-
-    void addTriangleEmission(unsigned int id, glm::vec3 Vert1 = glm::vec3(0.0), glm::vec3 Vert2 = glm::vec3(0.0), glm::vec3 Vert3 = glm::vec3(0.0), glm::vec3 lightstrength = glm::vec3(4.0), float roughness = 1) {
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].objecttype";
-            _LinkedShader.setInt(UniformName.str(), 1);
-        }
-        {
-            std::stringstream UniformName;
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep1";
-            _LinkedShader.setVec3(UniformName.str(), Vert1);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep2";
-            _LinkedShader.setVec3(UniformName.str(), Vert2);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].Trianglep3";
-            _LinkedShader.setVec3(UniformName.str(), Vert3);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].roughness";
-            _LinkedShader.setFloat(UniformName.str(), roughness);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].albedo";
-            _LinkedShader.setVec3(UniformName.str(), lightstrength);
-        }
-        {
-            std::stringstream UniformName(_ObjectArrayName);
-            UniformName << _ObjectArrayName << "[" << id << "].emissive";
-            _LinkedShader.setBool(UniformName.str(), true);
-        }
-    }
-
-    /*vec3 center;
-    float radius;
-    float roughness;
-    vec3 albedo;
-    bool dielectric;
-    float ior;*/
-    private:
-    ComputeShader &_LinkedShader;
-    std::string _ObjectArrayName;
 };
