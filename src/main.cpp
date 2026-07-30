@@ -181,7 +181,7 @@ int main () {
 
     ComputeShader ShaderCompute("shader/main.comp");
 
-    Model model("assets/stanford-bunny.obj");
+    Model model("assets/backpack.obj");
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();

@@ -49,11 +49,15 @@ struct BVHNode {
 };
 
 struct FlatNode {
-    glm::vec3 BBMin;
-    int LeftChild_or_Count; //this is really awesome compressed data waow
-    glm::vec3 BBMax;
+    glm::vec3 BBMin; // +12,  0 /= 16
+    float padding0; // +4
+    int LeftChild_or_Count; // +4, 16 /= 16//this is really awesome compressed data waow
+    float padding1[3]; // +12
+    glm::vec3 BBMax; // +12, 32 /= 16
+    float padding2; // +4, 
     int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
-};
+    float padding3[3]; // +12
+}; //TOTAL: 64 /= 16
 
 class BVH {
     private:
@@ -260,3 +264,8 @@ class BVH {
         return TriIndices;
     }
 };
+
+static_assert(sizeof(Vertex) == 32, "Vertex size mismatch!");
+static_assert(sizeof(Triangle) == 96, "Triangle size mismatch!");
+static_assert(sizeof(Object) == 144, "Object size mismatch!");
+static_assert(sizeof(FlatNode) == 64, "FlatNode size mismatch!");

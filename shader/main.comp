@@ -109,11 +109,15 @@ struct Triangle {
 }; // TOTAL: 96 /= 16
 
 struct FlatNode {
-    vec3 BBMin;
-    int LeftChild_or_Count; //this is really awesome compressed data waow
-    vec3 BBMax;
+    vec3 BBMin; // +12,  0 /= 16
+    float padding0; // +4
+    int LeftChild_or_Count; // +4, 16 /= 16//this is really awesome compressed data waow
+    float padding1[3]; // +12
+    vec3 BBMax; // +12, 32 /= 16
+    float padding2; // +4, 
     int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
-};
+    float padding3[3]; // +12
+}; //TOTAL: 64 /= 16
 
 //Buffer that contains the volumes
 layout(std430, binding = 0) readonly buffer BVHBuffer {
@@ -258,6 +262,7 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
     int iterations = 0;
 
     while(StackIndex > 0 && iterations < maxIterations) {
+        iterations++;
         //Get node
         int NodeIndex = Stack[--StackIndex];
         FlatNode Node = Nodes[NodeIndex];
@@ -293,8 +298,6 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
             Stack[StackIndex++] = Node.LeftChild_or_Count;
             Stack[StackIndex++] = Node.RightChild_or_Start;
         }
-
-        iterations++;
     }
 
     return isHit;
@@ -447,7 +450,7 @@ void main () {
     vec3 PixelColour = vec3(0.0);
     for(int samples = 0; samples < MSAAsamples; samples++) {
         Ray r = getRay(PixelCoords.x, PixelCoords.y, samples);
-        PixelColour += rayColour(r, MaximumDepth);
+        PixelColour += rayColourDebug(r, MaximumDepth);
     }
     PixelColour /= float(MSAAsamples);
 

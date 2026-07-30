@@ -76,6 +76,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
+            float Scale = 1.0f;
             //cerr << "EBO creation\n";
             // indices
             for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
@@ -85,7 +86,7 @@ class Model {
                 unsigned int i1 = face.mIndices[1];
                 unsigned int i2 = face.mIndices[2];
 
-                tri.v0.Position = glm::vec3(mesh->mVertices[i0].x, mesh->mVertices[i0].y, mesh->mVertices[i0].z);
+                tri.v0.Position = glm::vec3(mesh->mVertices[i0].x, mesh->mVertices[i0].y, mesh->mVertices[i0].z) * Scale;
                 if (mesh->mTextureCoords[0]) { // does the mesh contain texture coordinates?
                     glm::vec2 vec;
                     vec.x = mesh->mTextureCoords[0][i0].x; 
@@ -95,7 +96,7 @@ class Model {
                     tri.v0.TexCoords = glm::vec2(0.0f);
                 }
 
-                tri.v1.Position = glm::vec3(mesh->mVertices[i1].x, mesh->mVertices[i1].y, mesh->mVertices[i1].z);
+                tri.v1.Position = glm::vec3(mesh->mVertices[i1].x, mesh->mVertices[i1].y, mesh->mVertices[i1].z) * Scale;
                 if (mesh->mTextureCoords[0]) { // does the mesh contain texture coordinates?
                     glm::vec2 vec;
                     vec.x = mesh->mTextureCoords[0][i1].x; 
@@ -105,7 +106,7 @@ class Model {
                     tri.v1.TexCoords = glm::vec2(0.0f);
                 }
 
-                tri.v2.Position = glm::vec3(mesh->mVertices[i2].x, mesh->mVertices[i2].y, mesh->mVertices[i2].z);
+                tri.v2.Position = glm::vec3(mesh->mVertices[i2].x, mesh->mVertices[i2].y, mesh->mVertices[i2].z) * Scale;
                 if (mesh->mTextureCoords[0]) { // does the mesh contain texture coordinates?
                     glm::vec2 vec;
                     vec.x = mesh->mTextureCoords[0][i2].x; 
