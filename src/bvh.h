@@ -9,8 +9,13 @@
 const int LEAF_THRESHOLD = 4;
 
 struct Triangle {
-    glm::vec3 v0, v1, v2;
-};
+    glm::vec3 v0; // +12, 0 /= 16
+    float padding0; // +4
+    glm::vec3 v1; // +12, 16 /= 16
+    float padding1; // +4
+    glm::vec3 v2; // +12, 32 /= 16
+    float padding2; // +4
+}; // TOTAL: 48 /= 16
 
 struct Object {
     Triangle triangle;  // +48, 0 /= 16
@@ -252,6 +257,6 @@ class BVH {
     }
 };
 
-static_assert(sizeof(Triangle) == 36, "Triangle size mismatch!");
+static_assert(sizeof(Triangle) == 48, "Triangle size mismatch!");
 static_assert(sizeof(Object) == 96, "Object size mismatch!");
-static_assert(sizeof(FlatNode) == 64, "FlatNode size mismatch! Use vec4 in C++.");
+static_assert(sizeof(FlatNode) == 32, "FlatNode size mismatch!");
