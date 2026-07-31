@@ -181,11 +181,65 @@ int main () {
 
     ComputeShader ShaderCompute("shader/main.comp");
 
+    //CORNELL BOX
+
+    /*std::vector<Object> Objects;
+
+    ObjectArray uObjects(Objects);
+
+    Triangle tempTri;
+    
+    tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
+    uObjects.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(4.0));
+    tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
+    uObjects.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(4.0));
+
+    tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+    tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+
+    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,-2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+    tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,-2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+
+    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,-2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+    tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
+
+    tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(0.0, 1.0, 0.0), 1.0);
+    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(2.5,-2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(0.0, 1.0, 0.0), 1.0);
+
+    tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
+    tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
+    uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
+
+    BVH mainBVH(Objects);*/
+
     Model model("assets/backpack.obj");
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
     mainBVH.Flatten();
+
+    std::cout << "=== BVH Statistics ===" << std::endl;
+    std::cout << "Nodes: " << mainBVH.GetBVH().size() << std::endl;
+    std::cout << "Triangles: " << mainBVH.GetData().size() << std::endl;
+    std::cout << "TriIndices: " << mainBVH.GetTriIndices().size() << std::endl;
+
+    auto& flat = mainBVH.GetBVH();
+    for (int i = 0; i < std::min(10, (int)flat.size()); i++) {
+        std::cout << "Node " << i << ": "
+                  << "Min=(" << flat[i].BBMin.x << ", " << flat[i].BBMin.y << ", " << flat[i].BBMin.z << "), "
+                  << "Max=(" << flat[i].BBMax.x << ", " << flat[i].BBMax.y << ", " << flat[i].BBMax.z << "), "
+                  << "Left=" << flat[i].LeftChild_or_Count << ", "
+                  << "Right=" << flat[i].RightChild_or_Start << std::endl;
+    }
 
     ShaderStorageBuffer BVHBuffer(mainBVH.GetBVH().data(), mainBVH.GetBVH().size() * sizeof(FlatNode), GL_STATIC_DRAW);
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
@@ -236,10 +290,10 @@ int main () {
         ShaderCompute.setInt("Height", HEIGHT);
         ShaderCompute.setFloat("glfwTime", CurrentFrame);
         ShaderCompute.setInt("MSAAsamples", 1);
-        ShaderCompute.setInt("MaximumDepth", 100);
+        ShaderCompute.setInt("MaximumDepth", 10);
         ShaderCompute.setInt("FrameIndex", FrameIndex);
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderCompute.setFloat("DefocusAngle", 0.5); 
+        ShaderCompute.setFloat("DefocusAngle", 0.0); 
         ShaderCompute.setFloat("FocusDist", 2.5);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";

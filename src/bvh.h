@@ -6,7 +6,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <algorithm>
 
-const int LEAF_THRESHOLD = 4;
+const int LEAF_THRESHOLD = 8;
 
 struct Vertex {
     glm::vec3 Position; // +12, 0 /= 16
@@ -122,7 +122,7 @@ class BVH {
     //3. Check for leaf thresholds
     // ONWARD ARE NON-LEAF OPERATIONS
     //4. Choose axis to split
-    //5. Find all centroids and sort them
+    //5. Find all centroids and sort them via the bounding box's spatial midpoint
     //6. Split them in half and give them to left and right children
     //7. Recursively build the children
     BVHNode *RecursiveBuild(int start, int end) {
