@@ -122,7 +122,7 @@ class BVH {
     //3. Check for leaf thresholds
     // ONWARD ARE NON-LEAF OPERATIONS
     //4. Choose axis to split
-    //5. Find all centroids and sort them via the bounding box's spatial midpoint
+    //5. Find all centroids and sort them via the SAH
     //6. Split them in half and give them to left and right children
     //7. Recursively build the children
     BVHNode *RecursiveBuild(int start, int end) {
@@ -143,58 +143,106 @@ class BVH {
             return node;
         }
 
-        //Find axis to split
+        //SAH time
 
-        int axis = ChooseSplitAxis(start, end);
-        if (axis == -1) {
-            node->isLeaf = true; // if axis is equal to -1 (error thrown) can't split (all centroids at same position)
-            return node;
-        }
+        float BestCost = std::numeric_limits<float>::max();
+        int axis = 0;
+        int split = start;
 
-        //Compare centroids on given axis
+        //Test each axis to find best split
+        for (int iAxis = 0; iAxis < 3; iAxis++) {
+            //First, sort for the axis (lowest value to highest value on axis)
+            std::sort(TriIndices.begin() + start, TriIndices.begin() + end, 
+                [&](int a, int b) {
+                    const Triangle &triA = Triangles[a].triangle;
+                    const Triangle &triB = Triangles[b].triangle;
 
-        //Find centroids on given axis by ChooseSplitAxis() on all triangles
+                    glm::vec3 CentroidA = (triA.v0.Position + triA.v1.Position + triA.v2.Position) / 3.0f;
+                    glm::vec3 CentroidB = (triB.v0.Position + triB.v1.Position + triB.v2.Position) / 3.0f;
 
-        std::vector<float> Centroids; // float is the centroid's position on an axis given
-        Centroids.reserve(end-start);
+                    return CentroidA[iAxis] < CentroidB[iAxis];
+                }
+            );
+            
+            int Count = end - start;
 
-        for (int i = start ; i < end ; i++) {
-            int TriIndex = TriIndices[i];
-            const Triangle &tri = Triangles[TriIndex].triangle;
+            //Prebuild AABBs for each triangle (Count tests in total)
 
-            glm::vec3 Centroid = glm::vec3(tri.v0.Position + tri.v1.Position + tri.v2.Position) / 3.0f;
+            std::vector<glm::vec3> aMin(Count), aMax(Count), bMin(Count), bMax(Count);
 
-            Centroids.push_back(Centroid[axis]); //return only the value on the axis given
-        }
+            // Box A
+            glm::vec3 minVal = glm::vec3(std::numeric_limits<float>::max());
+            glm::vec3 maxVal = glm::vec3(std::numeric_limits<float>::lowest());
+            for (int i = 0; i < Count; i++) {
+                const Triangle &tri = Triangles[TriIndices[start + i]].triangle;
 
-        //Find the median centroid as a guideline for splitting the triangles to the children
+                minVal = glm::min(minVal, tri.v0.Position);
+                minVal = glm::min(minVal, tri.v1.Position);
+                minVal = glm::min(minVal, tri.v2.Position);
 
-        std::nth_element(Centroids.begin(), Centroids.begin() + Centroids.size() / 2, Centroids.end());
-        float Median = Centroids[Centroids.size() / 2];
+                maxVal = glm::max(maxVal, tri.v0.Position);
+                maxVal = glm::max(maxVal, tri.v1.Position);
+                maxVal = glm::max(maxVal, tri.v2.Position);
 
-        //interator and sort specified part of index
-        auto mid = std::partition(
-            TriIndices.begin() + start,
-            TriIndices.begin() + end,
-            [&](int TriID) {
-                const Triangle &tri = Triangles[TriID].triangle;
-                glm::vec3 Centroid = (tri.v0.Position + tri.v1.Position + tri.v2.Position) / 3.0f;
-                return Centroid[axis] < Median;
+                aMin[i] = minVal;
+                aMax[i] = maxVal;
             }
-        );
 
-        //middle index (convert interator to index)
-        int midIndex = std::distance(TriIndices.begin(), mid);
+            // Box B
+            minVal = glm::vec3(std::numeric_limits<float>::max());
+            maxVal = glm::vec3(std::numeric_limits<float>::lowest());
+            for (int i = Count - 1; i >= 0; i--) { //this time, backwards
+                const Triangle &tri = Triangles[TriIndices[start + i]].triangle;
 
-        //Ensure that we don't give children no triangles (unless they are leaf nodes)
-        if (midIndex == start || midIndex == end) {
+                minVal = glm::min(minVal, tri.v0.Position);
+                minVal = glm::min(minVal, tri.v1.Position);
+                minVal = glm::min(minVal, tri.v2.Position);
+
+                maxVal = glm::max(maxVal, tri.v0.Position);
+                maxVal = glm::max(maxVal, tri.v1.Position);
+                maxVal = glm::max(maxVal, tri.v2.Position);
+
+                bMin[i] = minVal;
+                bMax[i] = maxVal;
+            }
+
+            // time to evaluate every single possible group of triangles each group can have :)
+            for (int i = 0; i < Count - 1; i++) {
+                glm::vec3 aSize = aMax[i] - aMin[i];
+                glm::vec3 bSize = bMax[i + 1] - bMin[i + 1];
+
+                float aArea = 2.0f * (aSize.x * aSize.y + aSize.y * aSize.z + aSize.z * aSize.x);
+                float bArea = 2.0f * (bSize.x * bSize.y + bSize.y * bSize.z + bSize.z * bSize.x);
+
+                float Cost = (i + 1) * aArea + (Count - i - 1) * bArea;
+
+                if (Cost < BestCost) {
+                    BestCost = Cost;
+                    axis = iAxis;
+                    split = start + i + 1;
+                }
+            }
+        }
+
+        //dont make 0 triangle nodes
+        if (split == start || split == end) {
             node->isLeaf = true;
             return node;
         }
 
+        std::nth_element(TriIndices.begin() + start, TriIndices.begin() + split, TriIndices.begin() + end, 
+            [&](int a, int b) {
+                const Triangle &triA = Triangles[a].triangle;
+                const Triangle &triB = Triangles[b].triangle;
+                glm::vec3 CentroidA = (triA.v0.Position + triA.v1.Position + triA.v2.Position) / 3.0f;
+                glm::vec3 CentroidB = (triB.v0.Position + triB.v1.Position + triB.v2.Position) / 3.0f;
+                return CentroidA[axis] < CentroidB[axis];
+            }
+        );
+
         //Recursively build the next children
-        node->LeftChild = RecursiveBuild(start, midIndex);
-        node->RightChild = RecursiveBuild(midIndex, end);
+        node->LeftChild = RecursiveBuild(start, split);
+        node->RightChild = RecursiveBuild(split, end);
         node->isLeaf = false;
 
         return node;
