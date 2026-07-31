@@ -290,7 +290,7 @@ int main () {
         ShaderCompute.setInt("Height", HEIGHT);
         ShaderCompute.setFloat("glfwTime", CurrentFrame);
         ShaderCompute.setInt("MSAAsamples", 1);
-        ShaderCompute.setInt("MaximumDepth", 10);
+        ShaderCompute.setInt("MaximumDepth", 4);
         ShaderCompute.setInt("FrameIndex", FrameIndex);
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
         ShaderCompute.setFloat("DefocusAngle", 0.0); 

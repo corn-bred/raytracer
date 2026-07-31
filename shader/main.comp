@@ -32,6 +32,11 @@ float rand(float seed) {
     return fract(sin(float(seed * 12.9898)) * 43758.5453123);
 }
 
+float fastRand(vec3 seed) {
+    float x = dot(seed, vec3(12.9898, 78.233, 45.164));
+    return fract(x * 43758.5453);
+}
+
 float randRange(float seed, float min, float max) {
     return min + (max - min) * rand(seed);
 }
@@ -296,14 +301,17 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
             }
 
         } else { //if parent
-            if (tNear < tFar) {
-                // Farther first, nearer last
-                Stack[StackIndex++] = Node.RightChild_or_Start;
-                Stack[StackIndex++] = Node.LeftChild_or_Count;
+            float nearDist = max(tNear, 0.0);
+            float farDist = max(tFar, 0.0);
+        
+            if (nearDist < farDist) {
+                Stack[StackIndex++] = Node.RightChild_or_Start; // Farther first
+                Stack[StackIndex++] = Node.LeftChild_or_Count;  // Nearer last
             } else {
                 Stack[StackIndex++] = Node.LeftChild_or_Count;
                 Stack[StackIndex++] = Node.RightChild_or_Start;
             }
+
         }
     }
 
@@ -372,78 +380,62 @@ vec3 rayColour(Ray r, int maxDepth) {
     vec3 colour = vec3(1.0);
 
     HitRecord rec;
+    for (int depth = 0; depth < maxDepth; depth++) {
+        float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
+        
+        if(!TraverseBVH(r, rec)) {
+            vec3 unitDir = normalize(r.Direction);
+            float a = 0.5 * (unitDir.y + 1.0);
+            vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+            colour *= sky;
+            return colour;
+        }
 
-    if (!TraverseBVH(r, rec)) {
-        vec3 unitDir = normalize(r.Direction);
-        float a = 0.5 * (unitDir.y + 1.0);
-        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
-        colour *= sky;
-        return colour;
+        vec3 dir = vec3(0.0);
 
-    } else {
+        vec3 Incident = normalize(r.Direction);
+        vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with
 
-        int depth = 0;
+        //Storing
 
-        do {
-            float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
+        bool currentIsDielectric = rec.isDielectric;
 
-            vec3 dir = vec3(0.0);
+        //Ray direction prep for next sample
+        if (rec.isDielectric) { //for glass
+            float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
+            
+            vec3 Refracted = refract(Incident, Normal, ri);
 
-            vec3 Incident = normalize(r.Direction);
-            vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with
+            float CosTheta = min(dot(-Incident, Normal), 1.0);
 
-            //Storing
-
-            bool currentIsDielectric = rec.isDielectric;
-
-            //Ray direction prep for next sample
-            if (rec.isDielectric) { //for glass
-                float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
-                
-                vec3 Refracted = refract(Incident, Normal, ri);
-
-                float CosTheta = min(dot(-Incident, Normal), 1.0);
-
-                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-                    dir = reflect(Incident, Normal);
-                } else {
-                    dir = Refracted;
-                }
-            } else { //for normal
+            if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
                 dir = reflect(Incident, Normal);
-            }
-
-            //change ray data and prep for next sample
-            r.Direction = dir;
-            r.Origin = rec.Position + r.Direction * 0.0001;
-
-            //Colour calculation 
-
-            //Lambert's cosine law
-            float AngFalloff = max(0.0, dot(Normal, -Incident));
-
-            //Colour
-            vec3 Attenuation = rec.Albedo * AngFalloff;
-
-            if (rec.isEmissive) { // if is emissive, end sample loop
-                return rec.Albedo * colour;
-            }
-            
-            if(TraverseBVH(r, rec)) {
-                if (!currentIsDielectric) {
-                    colour = Attenuation * colour;
-                }
             } else {
-                vec3 unitDir = normalize(r.Direction);
-                float a = 0.5 * (unitDir.y + 1.0);
-                vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
-                colour *= sky;
-                return colour;
+                dir = Refracted;
             }
-            
-            depth++;
-        } while (depth < maxDepth);
+        } else { //for normal
+            dir = reflect(Incident, Normal);
+        }
 
+        //change ray data and prep for next sample
+        r.Direction = dir;
+        r.Origin = rec.Position + r.Direction * 0.0001;
+
+        //Colour calculation 
+
+        //Lambert's cosine law
+        float AngFalloff = max(0.0, dot(Normal, -Incident));
+
+        //Colour
+        vec3 Attenuation = rec.Albedo * AngFalloff;
+
+        if (rec.isEmissive) { // if is emissive, end sample loop
+            return rec.Albedo * colour;
+        }
+
+        if (!currentIsDielectric) {
+            colour = Attenuation * colour;
+        }
     }
 
     return colour;
