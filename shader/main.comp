@@ -28,13 +28,15 @@ float degreesToRadians(float degrees) {
     return degrees * pi / 180.0;
 }
 
-float rand(float seed) {
-    return fract(sin(float(seed * 12.9898)) * 43758.5453123);
+float hash(vec3 p) {
+    p = fract(p * 0.3183099 + 0.1);
+    p *= 17.0;
+    return fract(p.x * p.y * p.z * (p.x + p.y + p.z));
 }
 
-float fastRand(vec3 seed) {
-    float x = dot(seed, vec3(12.9898, 78.233, 45.164));
-    return fract(x * 43758.5453);
+float rand(float seed) {
+    vec3 p = vec3(seed, seed * 2.345, seed * 5.678);
+    return hash(p);
 }
 
 float randRange(float seed, float min, float max) {
@@ -394,7 +396,7 @@ vec3 rayColour(Ray r, int maxDepth) {
         vec3 dir = vec3(0.0);
 
         vec3 Incident = normalize(r.Direction);
-        vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with
+        vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with roughness
 
         //Storing
 

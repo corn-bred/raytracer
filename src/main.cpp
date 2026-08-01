@@ -20,6 +20,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "model.h"
+#include "texturebuffer.h"
 
 using namespace std;
 
@@ -221,7 +222,7 @@ int main () {
 
     BVH mainBVH(Objects);*/
 
-    Model model("assets/backpack.obj");
+    Model model("assets/stanford-bunny.obj");
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();

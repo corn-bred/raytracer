@@ -76,7 +76,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
-            float Scale = 1.0f;
+            float Scale = 50.0f;
             //cerr << "EBO creation\n";
             // indices
             for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
@@ -115,7 +115,7 @@ class Model {
                 } else {
                     tri.v2.TexCoords = glm::vec2(0.0f);
                 }   
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.6, 0.0)); //temp colour
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.6, 0.0), 0.25); //temp colour
             }  
 
             //cerr << "Texture creation\n";
