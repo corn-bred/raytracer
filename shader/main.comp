@@ -186,7 +186,7 @@ void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal
     hitrecord.Normal = hitrecord.facingFront? outwardNormal : -outwardNormal;
 }
 
-//      Sphere
+//      Triangle
 
 struct Object {
     Triangle triangle;  // +96, 0 /= 16
@@ -196,15 +196,19 @@ struct Object {
     float padding0[3];  // +12, 100
 
     vec3 albedo;   // +12, 112 /= 16
+    int albedoTextureIdx; // +4, 124 /= 4
 
-    int dielectric;     // +4, 124 /= 4
+    int dielectric;     // +4, 128 /= 4
 
-    float ior;          // +4, 128 /= 4
+    float ior;          // +4, 132 /= 4
 
-    int emissive;       // +4, 132 /= 4
+    int emissive;       // +4, 136 /= 4
 
-    float padding2[2];  // +8, 144
-};                      //TOTAL: 144 /= 16                 
+    float padding1;     // +4
+
+    float padding2[4];  // +16  
+};                      //TOTAL: 160 /= 16
+         
 
 bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
     vec3 Edge1 = object.triangle.v1.Position - object.triangle.v0.Position;

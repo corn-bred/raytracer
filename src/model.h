@@ -33,6 +33,8 @@ class Model {
     ObjectArray objectHandler;
     std::vector<Texture> textures_loaded;
 
+    GLuint TextureArrayID = 0;
+
     public:
         Model(const char *path) : objectHandler(Objects) {
             std::cerr << "Loading model...\n";
@@ -62,12 +64,16 @@ class Model {
         }
 
         void processNode(aiNode *node, const aiScene *scene) {
+
             //cerr << "Processing meshes in scene...\n";
+
             for (unsigned int i = 0; i < node->mNumMeshes; i++) {
                 aiMesh *mesh = scene->mMeshes[node->mMeshes[i]]; 
                 processMesh(mesh, scene);
+
                 //cerr << "Mesh returned successfully.\n";
             }
+
             //cerr << "Meshes processed. Processing the nodes...\n";
             
             for (unsigned int i = 0; i < node->mNumChildren; i++) {
@@ -77,8 +83,11 @@ class Model {
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
             float Scale = 50.0f;
+
             //cerr << "EBO creation\n";
+
             // indices
+
             for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
                 Triangle tri;
                 aiFace face = mesh->mFaces[i];
@@ -119,54 +128,112 @@ class Model {
             }  
 
             //cerr << "Texture creation\n";
+
             //// process material
+
             //cerr << "Material processing...\n";
+
             if(mesh->mMaterialIndex >= 0) {
+
                 //cerr << "Mesh has material index.\n";
+
                 aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+
                 std::vector<Texture> diffuseMaps = loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
                 //cerr << "Inserting diffuse textures...\n";
                 textures_loaded.insert(textures_loaded.end(), diffuseMaps.begin(), diffuseMaps.end());
                 //cerr << "Diffuse textures loaded.";
+
                 std::vector<Texture> specularMaps = loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
                 //cerr << "Inserting specular textures...\n";
                 textures_loaded.insert(textures_loaded.end(), specularMaps.begin(), specularMaps.end());
                 //cerr << "Specular textures loaded.\n";
+
             }
+
             //cerr << "Mesh processing complete. Returning...\n";
             std::cout << "Mesh has " << mesh->mNumVertices << " vertices and " << mesh->mNumFaces << " faces." << std::endl;
         }  
 
         std::vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
             //cerr << "Loading textures...\n";
+
             std::vector<Texture> textures;
             //cerr << "Material count: " << mat->GetTextureCount(type) << "\n";
+
             for (unsigned int i = 0; i < mat->GetTextureCount(type); i++) {
                 //cerr << "Material #" << i << "\n";
+
                 aiString str;
+
                 mat->GetTexture(type, i, &str);
+
                 bool skip = false;
+
                 for (unsigned int j = 0; j < textures_loaded.size(); j++) {
+
                     if(std::strcmp(textures_loaded[j].path.data(), str.C_Str()) == 0) { //are the textures the same?
                         textures.push_back(textures_loaded[j]); //add the texture then
                         skip = true; 
+
                         //cerr << "Texture added\n";
+
                         break;
                     }
+
                 } if(!skip) {   // if texture hasn't been loaded already, load it
                     //cerr << "New texture found\n";
+
                     Texture texture;
+
                     texture.ID = TextureFromFile(str.C_Str(), directory);
                     texture.type = typeName;
                     texture.path = str.C_Str();
+
                     textures.push_back(texture);
                     textures_loaded.push_back(texture); // add to loaded textures
                     //cerr << "New texture loaded\n";
                 }
             }
+
             std::cerr << "Textures all loaded. Returning...\n";
             return textures;
         } 
+
+        void BuildTextureArray() { //GL_TEXTURE_2D_ARRAY
+            if (textures_loaded.empty()) return; //most obvious check ever?
+
+            glm::ivec2 MaxSize(0); //maximum size of a texture
+
+            for (auto &Tex : textures_loaded) {
+                glm::ivec2 Size;
+                stbi_info(Tex.path.c_str(), &Size.x, &Size.y, nullptr); //idc about channel #
+                MaxSize = glm::max(MaxSize, Size);
+            }
+
+            glGenTextures(1, &TextureArrayID);
+            glBindTexture(GL_TEXTURE_2D_ARRAY, TextureArrayID);
+            glTexStorage3D(GL_TEXTURE_2D_ARRAY, 1, GL_RGBA8, MaxSize.x, MaxSize.y, textures_loaded.size()); //depth = size of textures_loaded
+
+            for (int i = 0; i < textures_loaded.size(); i++) {
+                glm::ivec2 size;
+                unsigned char *data = stbi_load(textures_loaded[i].path.c_str(), &size.x, &size.y, nullptr, 4); //req_comp is requested components (components = colour components = channels)
+                
+                if (data) { //does data exist?? if so then write it to the 2d texture array
+                    glTexSubImage3D(GL_TEXTURE_2D_ARRAY, i, 0, 0, 0, size.x, size.y, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
+
+                    //free it now since it exists it needs to be unloaded
+                    stbi_image_free(data);
+                }
+            }
+
+            //final stuff
+            glTexParameteri(GL_IMAGE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+            glTexParameteri(GL_IMAGE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+            glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
+            //reset
+        }
 
         unsigned int TextureFromFile(const char *path, const std::string &directory) {
             std::string filename = std::string(path);

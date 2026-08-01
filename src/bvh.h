@@ -29,15 +29,18 @@ struct Object {
     float padding0[3];  // +12, 100
 
     glm::vec3 albedo;   // +12, 112 /= 16
+    int albedoTextureIdx; // +4, 124 /= 4
 
-    int dielectric;     // +4, 124 /= 4
+    int dielectric;     // +4, 128 /= 4
 
-    float ior;          // +4, 128 /= 4
+    float ior;          // +4, 132 /= 4
 
-    int emissive;       // +4, 132 /= 4
+    int emissive;       // +4, 136 /= 4
 
-    float padding2[2];  // +8, 144
-};                      //TOTAL: 144 /= 16
+    float padding1;     // +4
+
+    float padding2[4];  // +16  
+};                      //TOTAL: 160 /= 16
 
 struct BVHNode {
     glm::vec3 BBMin, BBMax;
@@ -315,5 +318,5 @@ class BVH {
 
 static_assert(sizeof(Vertex) == 32, "Vertex size mismatch!");
 static_assert(sizeof(Triangle) == 96, "Triangle size mismatch!");
-static_assert(sizeof(Object) == 144, "Object size mismatch!");
+static_assert(sizeof(Object) == 160, "Object size mismatch!");
 static_assert(sizeof(FlatNode) == 64, "FlatNode size mismatch!");
