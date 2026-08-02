@@ -131,7 +131,7 @@ class Model {
                 } else {
                     tri.v2.TexCoords = glm::vec2(0.0f);
                 }   
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 0); //temp colour
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 1); //temp colour
             }  
 
             //cerr << "Texture creation\n";
@@ -205,7 +205,8 @@ class Model {
 
             glm::ivec2 MaxSize(0); //maximum size of a texture
 
-            for (auto &Tex : textures_loaded) {
+            for (auto &texIt : textureCache) {
+                Texture &Tex = texIt.second;
                 glm::ivec2 Size;
                 stbi_info(Tex.path.c_str(), &Size.x, &Size.y, nullptr); //idc about channel #
                 MaxSize = glm::max(MaxSize, Size);
@@ -215,16 +216,21 @@ class Model {
             glBindTexture(GL_TEXTURE_2D_ARRAY, TextureArrayID);
             glTexStorage3D(GL_TEXTURE_2D_ARRAY, 1, GL_RGBA8, MaxSize.x, MaxSize.y, textures_loaded.size()); //depth = size of textures_loaded
 
-            for (int i = 0; i < textures_loaded.size(); i++) {
+            int index = 0;
+            for (auto &texIt : textureCache) {
+                Texture &Tex = texIt.second;
+
                 glm::ivec2 size;
-                unsigned char *data = stbi_load(textures_loaded[i].path.c_str(), &size.x, &size.y, nullptr, 4); //req_comp is requested components (components = colour components = channels)
+                unsigned char *data = stbi_load(Tex.path.c_str(), &size.x, &size.y, nullptr, 4); //req_comp is requested components (components = colour components = channels)
 
                 if (data) { //does data exist?? if so then write it to the 2d texture array
-                    glTexSubImage3D(GL_TEXTURE_2D_ARRAY, 0, 0, 0, i, size.x, size.y, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
+                    glTexSubImage3D(GL_TEXTURE_2D_ARRAY, 0, 0, 0, index, size.x, size.y, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
 
                     //free it now since it exists it needs to be unloaded
                     stbi_image_free(data);
                 }
+
+                index++;
             }
 
             //final stuff
