@@ -17,7 +17,7 @@ class ObjectArray {
 
     ObjectArray(std::vector<Object> &objects) : Objects(objects) {}
 
-    void addTriangle(Vertex Vert1, Vertex Vert2, Vertex Vert3, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, float ior = -1.0f) {
+    void addTriangle(Vertex Vert1, Vertex Vert2, Vertex Vert3, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, int AlbedoIdx = -1, float ior = -1.0f) {
         int index = Objects.size();
         Objects.push_back(Object());
         Objects[index].triangle.v0 = Vert1;
@@ -26,6 +26,7 @@ class ObjectArray {
         Objects[index].roughness = roughness;
         Objects[index].albedo = albedo;
         Objects[index].emissive = 0;
+        Objects[index].albedoTextureIdx = AlbedoIdx;
         
         if (ior >= 0) {
             Objects[index].dielectric = 1;

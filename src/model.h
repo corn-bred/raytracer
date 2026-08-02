@@ -19,6 +19,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <unordered_map>
 
 struct Texture {
     GLuint ID;
@@ -35,13 +36,20 @@ class Model {
 
     GLuint TextureArrayID = 0;
 
+    std::unordered_map<std::string, Texture> textureCache;
+
     public:
         Model(const char *path) : objectHandler(Objects) {
             std::cerr << "Loading model...\n";
             loadModel(path);
+            BuildTextureArray();
+            std::cout << "Texture array ID: " << TextureArrayID << std::endl;
         }
         inline std::vector<Object> &GetObjectVector() {
             return Objects;
+        }
+        inline GLuint GetTextureArrayID() {
+            return TextureArrayID;
         }
     private:
         // model data
@@ -82,8 +90,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
-            float Scale = 50.0f;
-
+            float Scale = 1.0f;
             //cerr << "EBO creation\n";
 
             // indices
@@ -124,7 +131,7 @@ class Model {
                 } else {
                     tri.v2.TexCoords = glm::vec2(0.0f);
                 }   
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.6, 0.0), 0.25); //temp colour
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 0); //temp colour
             }  
 
             //cerr << "Texture creation\n";
@@ -165,38 +172,31 @@ class Model {
                 //cerr << "Material #" << i << "\n";
 
                 aiString str;
-
                 mat->GetTexture(type, i, &str);
 
-                bool skip = false;
+                std::string fullPath = directory + '/' + str.C_Str();
 
-                for (unsigned int j = 0; j < textures_loaded.size(); j++) {
+                std::cout << "Looking up: " << fullPath << std::endl;
 
-                    if(std::strcmp(textures_loaded[j].path.data(), str.C_Str()) == 0) { //are the textures the same?
-                        textures.push_back(textures_loaded[j]); //add the texture then
-                        skip = true; 
-
-                        //cerr << "Texture added\n";
-
-                        break;
-                    }
-
-                } if(!skip) {   // if texture hasn't been loaded already, load it
-                    //cerr << "New texture found\n";
-
-                    Texture texture;
-
-                    texture.ID = TextureFromFile(str.C_Str(), directory);
-                    texture.type = typeName;
-                    texture.path = str.C_Str();
-
-                    textures.push_back(texture);
-                    textures_loaded.push_back(texture); // add to loaded textures
-                    //cerr << "New texture loaded\n";
+                auto it = textureCache.find(fullPath);
+                if (it != textureCache.end()) { //if already loaded
+                    textures.push_back(it->second);
+                    continue;
                 }
+
+                Texture texture;
+                texture.ID = TextureFromFile(str.C_Str(), directory);
+                texture.type = typeName;
+                texture.path = fullPath;
+                textures.push_back(texture);
+                textures_loaded.push_back(texture); // add to loaded textures
+
+                textureCache[fullPath] = texture;
+                textures_loaded.push_back(texture);
+                textures.push_back(texture);
             }
 
-            std::cerr << "Textures all loaded. Returning...\n";
+            std::cout << "Textures all loaded. Returning...\n";
             return textures;
         } 
 
@@ -218,9 +218,9 @@ class Model {
             for (int i = 0; i < textures_loaded.size(); i++) {
                 glm::ivec2 size;
                 unsigned char *data = stbi_load(textures_loaded[i].path.c_str(), &size.x, &size.y, nullptr, 4); //req_comp is requested components (components = colour components = channels)
-                
+
                 if (data) { //does data exist?? if so then write it to the 2d texture array
-                    glTexSubImage3D(GL_TEXTURE_2D_ARRAY, i, 0, 0, 0, size.x, size.y, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
+                    glTexSubImage3D(GL_TEXTURE_2D_ARRAY, 0, 0, 0, i, size.x, size.y, 1, GL_RGBA, GL_UNSIGNED_BYTE, data);
 
                     //free it now since it exists it needs to be unloaded
                     stbi_image_free(data);
@@ -228,8 +228,8 @@ class Model {
             }
 
             //final stuff
-            glTexParameteri(GL_IMAGE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
-            glTexParameteri(GL_IMAGE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+            glTexParameteri(GL_TEXTURE_2D_ARRAY, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
             glBindTexture(GL_TEXTURE_2D_ARRAY, 0);
             //reset
@@ -238,14 +238,16 @@ class Model {
         unsigned int TextureFromFile(const char *path, const std::string &directory) {
             std::string filename = std::string(path);
             filename = directory + '/' + filename;
+            std::cout << "Loading texture: " << filename << std::endl;
 
             unsigned int textureID;
             glGenTextures(1, &textureID);
 
+            stbi_set_flip_vertically_on_load(true);
+
             int width, height, nrComponents;
             unsigned char *data = stbi_load(filename.c_str(), &width, &height, &nrComponents, 0);
 
-            stbi_set_flip_vertically_on_load(true);
             if (data) {
                 GLenum format;
                 if (nrComponents == 1)

@@ -222,7 +222,7 @@ int main () {
 
     BVH mainBVH(Objects);*/
 
-    Model model("assets/stanford-bunny.obj");
+    Model model("assets/backpack.obj");
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
@@ -296,6 +296,9 @@ int main () {
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
         ShaderCompute.setFloat("DefocusAngle", 0.0); 
         ShaderCompute.setFloat("FocusDist", 2.5);
+        ShaderCompute.setInt("MeshTextures", 1);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 

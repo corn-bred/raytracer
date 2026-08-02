@@ -17,6 +17,8 @@ uniform int FrameIndex;
 uniform float DefocusAngle;
 uniform float FocusDist;
 
+uniform sampler2DArray MeshTextures;
+
 const float infinity = 1.0 / 0.0;
 const float pi = 3.1415926535897932385;
 
@@ -171,12 +173,16 @@ struct HitRecord {
     float t;
     bool facingFront;
     float Roughness;
+
     vec3 Albedo;
+    int albedoTextureIdx;
 
     bool isDielectric;
     float ior;
 
     bool isEmissive;
+
+    vec2 barycentric;
 
     //void HitRecordSetFaceNormal();
 };
@@ -250,6 +256,8 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
     rec.isDielectric = (object.dielectric == 1);
     rec.ior = object.ior;
     rec.isEmissive = (object.emissive == 1);
+    rec.barycentric = vec2(u, v);
+    rec.albedoTextureIdx = object.albedoTextureIdx;
 
     return true;
 }
@@ -433,7 +441,18 @@ vec3 rayColour(Ray r, int maxDepth) {
         float AngFalloff = max(0.0, dot(Normal, -Incident));
 
         //Colour
-        vec3 Attenuation = rec.Albedo * AngFalloff;
+        vec3 Attenuation = vec3(0.0);
+        if (rec.albedoTextureIdx >= 0) {
+            vec2 tcoordsv0 = rec.triangle.v0.TexCoords;
+            vec2 tcoordsv1 = rec.triangle.v1.TexCoords;
+            vec2 tcoordsv2 = rec.triangle.v2.TexCoords;
+
+            vec2 tcoords = (1.0 - rec.barycentric.x - rec.barycentric.y) * tcoordsv0 + rec.barycentric.x * tcoordsv1 + rec.barycentric.y * tcoordsv2;
+            vec4 texColor = texture(MeshTextures, vec3(tcoords, float(rec.albedoTextureIdx)));
+            Attenuation = texColor.rgb * AngFalloff;
+        } else {
+            Attenuation = rec.Albedo * AngFalloff;
+        }
 
         if (rec.isEmissive) { // if is emissive, end sample loop
             return rec.Albedo * colour;
