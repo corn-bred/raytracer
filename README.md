@@ -18,6 +18,6 @@ Example:
 Triangles in scene: 67919
 
 Non-statically-linked build command:
-`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -I include -L lib -lglfw3dll`
+`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -I include -L lib -lglfw3dll -lassimp -lz`
 Statically-linked build command:
-`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -L "lib" -I "include" -static -static-libgcc -static-libstdc++ -lglfw3 -lopengl32 -lgdi32`
+`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -L "lib" -I "include" -static -static-libgcc -static-libstdc++ -lglfw3 -lopengl32 -lgdi32 -lassimp -lz`
