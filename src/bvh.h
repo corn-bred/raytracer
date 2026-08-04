@@ -25,8 +25,9 @@ struct Object {
     Triangle triangle;  // +96, 0 /= 16
 
     float roughness;    // +4 = 96 /= 4
+    int roughnessTextureIdx; // +4 100 /= 4
 
-    float padding0[3];  // +12, 100
+    float padding0[2];  // +8, 104
 
     glm::vec3 albedo;   // +12, 112 /= 16
     int albedoTextureIdx; // +4, 124 /= 4

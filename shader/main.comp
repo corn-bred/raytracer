@@ -172,7 +172,9 @@ struct HitRecord {
     vec3 Normal;
     float t;
     bool facingFront;
+
     float Roughness;
+    int roughnessTextureIdx;
 
     vec3 Albedo;
     int albedoTextureIdx;
@@ -198,8 +200,9 @@ struct Object {
     Triangle triangle;  // +96, 0 /= 16
 
     float roughness;    // +4 = 96 /= 4
+    int roughnessTextureIdx; // +4 100 /= 4
 
-    float padding0[3];  // +12, 100
+    float padding0[2];  // +8, 104
 
     vec3 albedo;   // +12, 112 /= 16
     int albedoTextureIdx; // +4, 124 /= 4
@@ -258,6 +261,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
     rec.isEmissive = (object.emissive == 1);
     rec.barycentric = vec2(u, v);
     rec.albedoTextureIdx = object.albedoTextureIdx;
+    rec.roughnessTextureIdx = object.roughnessTextureIdx;
 
     return true;
 }
@@ -398,18 +402,30 @@ vec3 rayColour(Ray r, int maxDepth) {
         float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
         
         if(!TraverseBVH(r, rec)) {
-            vec3 unitDir = normalize(r.Direction);
+            /*vec3 unitDir = normalize(r.Direction);
             float a = 0.5 * (unitDir.y + 1.0);
-            vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
-            colour *= sky;
+            vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);*/
+            colour *= vec3(0.0);
             return colour;
         }
 
         vec3 dir = vec3(0.0);
 
-        vec3 Incident = normalize(r.Direction);
-        vec3 Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with roughness
+        vec2 tcoordsv0 = rec.triangle.v0.TexCoords;
+        vec2 tcoordsv1 = rec.triangle.v1.TexCoords;
+        vec2 tcoordsv2 = rec.triangle.v2.TexCoords;
 
+        vec2 tcoords = (1.0 - rec.barycentric.x - rec.barycentric.y) * tcoordsv0 + rec.barycentric.x * tcoordsv1 + rec.barycentric.y * tcoordsv2;
+
+        vec3 Incident = normalize(r.Direction);
+
+        vec3 Normal;
+        if (rec.roughnessTextureIdx >= 0) {
+            Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * textureLod(MeshTextures, vec3(tcoords, float(rec.roughnessTextureIdx)), 0.0).r); //Normal with roughness
+        } else {
+            Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with roughness
+        }
+        
         //Storing
 
         bool currentIsDielectric = rec.isDielectric;
@@ -443,11 +459,6 @@ vec3 rayColour(Ray r, int maxDepth) {
         //Colour
         vec3 Attenuation = vec3(0.0);
         if (rec.albedoTextureIdx >= 0) {
-            vec2 tcoordsv0 = rec.triangle.v0.TexCoords;
-            vec2 tcoordsv1 = rec.triangle.v1.TexCoords;
-            vec2 tcoordsv2 = rec.triangle.v2.TexCoords;
-
-            vec2 tcoords = (1.0 - rec.barycentric.x - rec.barycentric.y) * tcoordsv0 + rec.barycentric.x * tcoordsv1 + rec.barycentric.y * tcoordsv2;
             vec4 texColor = textureLod(MeshTextures, vec3(tcoords, float(rec.albedoTextureIdx)), 0.0);
             Attenuation = texColor.rgb * AngFalloff;
         } else {

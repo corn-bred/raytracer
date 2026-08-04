@@ -30,6 +30,7 @@ struct Texture {
 // TEXTURE IS USELESS FOR NOW BUT ILL DO LATER
 
 class Model {
+    public:
     std::vector<Object> Objects;
     ObjectArray objectHandler;
     std::vector<Texture> textures_loaded;
@@ -37,8 +38,7 @@ class Model {
     GLuint TextureArrayID = 0;
 
     std::unordered_map<std::string, Texture> textureCache;
-
-    public:
+    
         Model(const char *path) : objectHandler(Objects) {
             std::cerr << "Loading model...\n";
             loadModel(path);
@@ -90,7 +90,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
-            float Scale = 1.0f;
+            float Scale = 0.7f;
             //cerr << "EBO creation\n";
 
             // indices
@@ -131,7 +131,7 @@ class Model {
                 } else {
                     tri.v2.TexCoords = glm::vec2(0.0f);
                 }   
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 1); //temp colour
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 1, 0); //temp colour
             }  
 
             //cerr << "Texture creation\n";
