@@ -246,6 +246,9 @@ int main () {
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
     ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
     ShaderCompute.bind();
+    ShaderCompute.setInt("MeshTextures", 1);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
@@ -273,6 +276,8 @@ int main () {
         glfwSetWindowTitle(window, titlestring.str().c_str()); 
         LastFrame = CurrentFrame;
 
+        cout << "Delta: " << DeltaTime * 1000 << " ms" << endl;
+
         glm::mat4 projection = glm::mat4(1.0f);
         projection = glm::perspective((float)glm::radians(FOV), (float)AspectRatio, 0.1f, 100.0f);
 
@@ -296,9 +301,6 @@ int main () {
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
         ShaderCompute.setFloat("DefocusAngle", 0.0); 
         ShaderCompute.setFloat("FocusDist", 2.5);
-        ShaderCompute.setInt("MeshTextures", 1);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 

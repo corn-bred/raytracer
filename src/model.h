@@ -176,13 +176,15 @@ class Model {
 
                 std::string fullPath = directory + '/' + str.C_Str();
 
-                std::cout << "Looking up: " << fullPath << std::endl;
+                std::cout << "Looking up: " << fullPath << "... ";
 
                 auto it = textureCache.find(fullPath);
                 if (it != textureCache.end()) { //if already loaded
                     textures.push_back(it->second);
+                    std::cout << "already loaded." << std::endl;
                     continue;
                 }
+                std::cout << "new texture." << std::endl;
 
                 Texture texture;
                 texture.ID = TextureFromFile(str.C_Str(), directory);
@@ -192,8 +194,6 @@ class Model {
                 textures_loaded.push_back(texture); // add to loaded textures
 
                 textureCache[fullPath] = texture;
-                textures_loaded.push_back(texture);
-                textures.push_back(texture);
             }
 
             std::cout << "Textures all loaded. Returning...\n";

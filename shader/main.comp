@@ -448,7 +448,7 @@ vec3 rayColour(Ray r, int maxDepth) {
             vec2 tcoordsv2 = rec.triangle.v2.TexCoords;
 
             vec2 tcoords = (1.0 - rec.barycentric.x - rec.barycentric.y) * tcoordsv0 + rec.barycentric.x * tcoordsv1 + rec.barycentric.y * tcoordsv2;
-            vec4 texColor = texture(MeshTextures, vec3(tcoords, float(rec.albedoTextureIdx)));
+            vec4 texColor = textureLod(MeshTextures, vec3(tcoords, float(rec.albedoTextureIdx)), 0.0);
             Attenuation = texColor.rgb * AngFalloff;
         } else {
             Attenuation = rec.Albedo * AngFalloff;
