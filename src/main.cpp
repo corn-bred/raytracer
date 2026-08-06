@@ -222,9 +222,9 @@ int main () {
 
     BVH mainBVH(Objects);*/
 
-    Model model("assets/backpack.obj");
+    Model model("assets/sword.obj");
 
-    Triangle tempTri;
+    /*Triangle tempTri;
     
     tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
     model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(10.0));
@@ -254,13 +254,13 @@ int main () {
     tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,2.5);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
-    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
+    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);*/
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
     mainBVH.Flatten();
 
-    std::cout << "=== BVH Statistics ===" << std::endl;
+    std::cout << "BVH Statistics" << std::endl;
     std::cout << "Nodes: " << mainBVH.GetBVH().size() << std::endl;
     std::cout << "Triangles: " << mainBVH.GetData().size() << std::endl;
     std::cout << "TriIndices: " << mainBVH.GetTriIndices().size() << std::endl;
@@ -308,7 +308,7 @@ int main () {
         glfwSetWindowTitle(window, titlestring.str().c_str()); 
         LastFrame = CurrentFrame;
 
-        cout << "Delta: " << DeltaTime * 1000 << " ms" << endl;
+        //cout << "Delta: " << DeltaTime * 1000 << " ms" << endl;
 
         glm::mat4 projection = glm::mat4(1.0f);
         projection = glm::perspective((float)glm::radians(FOV), (float)AspectRatio, 0.1f, 100.0f);
@@ -331,7 +331,7 @@ int main () {
         ShaderCompute.setInt("MaximumDepth", 4);
         ShaderCompute.setInt("FrameIndex", FrameIndex);
         ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderCompute.setFloat("DefocusAngle", 0.0); 
+        ShaderCompute.setFloat("DefocusAngle", 0.5); 
         ShaderCompute.setFloat("FocusDist", 2.5);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";

@@ -10,38 +10,40 @@ const int LEAF_THRESHOLD = 8;
 
 struct Vertex {
     glm::vec3 Position; // +12, 0 /= 16
-    float padding0; // +4
-    glm::vec2 TexCoords; // +8 16 /= 16
-    float padding1[2]; // +8
-}; // TOTAL: 32 /= 16
+    float padding0; // +4, 16
+    glm::vec3 Normal; // +12, 16 /= 16
+    float padding1; // +4, 32
+    glm::vec2 TexCoords; // +8, 32 /= 16
+    float padding2[2]; // +8, 48
+}; // TOTAL: 48 /= 16
 
 struct Triangle {
-    Vertex v0; // +32, 0 /= 16
-    Vertex v1; // +32, 32 /= 16
-    Vertex v2; // +32, 64 /= 16
-}; // TOTAL: 96 /= 16
+    Vertex v0; // +48, 0 /= 16
+    Vertex v1; // +48, 48 /= 16
+    Vertex v2; // +48, 96 /= 16
+}; // TOTAL: 144 /= 16
 
 struct Object {
-    Triangle triangle;  // +96, 0 /= 16
+    Triangle triangle;  // +144, 0 /= 16
 
-    float roughness;    // +4 = 96 /= 4
-    int roughnessTextureIdx; // +4 100 /= 4
+    float roughness;    // +4 = 144 /= 4
+    int roughnessTextureIdx; // +4 148 /= 4
 
-    float padding0[2];  // +8, 104
+    float padding0[2];  // +8, 152
 
-    glm::vec3 albedo;   // +12, 112 /= 16
-    int albedoTextureIdx; // +4, 124 /= 4
+    glm::vec3 albedo;   // +12, 160 /= 16
+    int albedoTextureIdx; // +4, 172 /= 4
 
-    int dielectric;     // +4, 128 /= 4
+    int dielectric;     // +4, 176 /= 4
 
-    float ior;          // +4, 132 /= 4
+    float ior;          // +4, 180 /= 4
 
-    int emissive;       // +4, 136 /= 4
+    int emissive;       // +4, 184 /= 4
 
-    float padding1;     // +4
+    float padding1;     // +4, 192
 
-    float padding2[4];  // +16  
-};                      //TOTAL: 160 /= 16
+    float padding2[4];  // +16, 208
+};                      //TOTAL: 208 /= 16
 
 struct BVHNode {
     glm::vec3 BBMin, BBMax;
@@ -317,7 +319,7 @@ class BVH {
     }
 };
 
-static_assert(sizeof(Vertex) == 32, "Vertex size mismatch!");
-static_assert(sizeof(Triangle) == 96, "Triangle size mismatch!");
-static_assert(sizeof(Object) == 160, "Object size mismatch!");
+static_assert(sizeof(Vertex) == 48, "Vertex size mismatch!");
+static_assert(sizeof(Triangle) == 144, "Triangle size mismatch!");
+static_assert(sizeof(Object) == 208, "Object size mismatch!");
 static_assert(sizeof(FlatNode) == 64, "FlatNode size mismatch!");

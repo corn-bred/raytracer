@@ -111,6 +111,11 @@ class Model {
                 } else {
                     tri.v0.TexCoords = glm::vec2(0.0f);
                 }
+                if (mesh->HasNormals()) { //normal add
+                    tri.v0.Normal.x = mesh->mNormals[i0].x;
+                    tri.v0.Normal.y = mesh->mNormals[i0].y;
+                    tri.v0.Normal.z = mesh->mNormals[i0].z; 
+                }
 
                 tri.v1.Position = glm::vec3(mesh->mVertices[i1].x, mesh->mVertices[i1].y, mesh->mVertices[i1].z) * Scale;
                 if (mesh->mTextureCoords[0]) { // does the mesh contain texture coordinates?
@@ -120,6 +125,11 @@ class Model {
                     tri.v1.TexCoords = vec;
                 } else {
                     tri.v1.TexCoords = glm::vec2(0.0f);
+                }
+                if (mesh->HasNormals()) { //normal add
+                    tri.v1.Normal.x = mesh->mNormals[i1].x;
+                    tri.v1.Normal.y = mesh->mNormals[i1].y;
+                    tri.v1.Normal.z = mesh->mNormals[i1].z; 
                 }
 
                 tri.v2.Position = glm::vec3(mesh->mVertices[i2].x, mesh->mVertices[i2].y, mesh->mVertices[i2].z) * Scale;
@@ -131,7 +141,13 @@ class Model {
                 } else {
                     tri.v2.TexCoords = glm::vec2(0.0f);
                 }   
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0, 0.3, 0.0), 1.0, 1, 0); //temp colour
+                if (mesh->HasNormals()) { //normal add
+                    tri.v2.Normal.x = mesh->mNormals[i2].x;
+                    tri.v2.Normal.y = mesh->mNormals[i2].y;
+                    tri.v2.Normal.z = mesh->mNormals[i2].z; 
+                }
+
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.05); //temp colour
             }  
 
             //cerr << "Texture creation\n";
