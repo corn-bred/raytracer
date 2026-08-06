@@ -147,7 +147,7 @@ class Model {
                     tri.v2.Normal.z = mesh->mNormals[i2].z; 
                 }
 
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.05); //temp colour
+                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.05, 1, 0); //temp colour
             }  
 
             //cerr << "Texture creation\n";
