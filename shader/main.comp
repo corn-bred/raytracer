@@ -140,6 +140,12 @@ layout(std430, binding = 1) readonly buffer TriangleIndices {
     int TriIndices[];
 };
 
+layout(std430, binding = 3) readonly buffer LightBuffer {
+    int LightIndices[];
+};
+
+uniform int EmissorSize;
+
 //Slabs method intersection testing
 bool IntersectAABB(Ray ray, vec3 BBMin, vec3 BBMax, out float tNear, out float tFar) {
     vec3 invDir = 1.0 / ray.Direction; //division is EXPENSIVE

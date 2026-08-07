@@ -15,6 +15,8 @@ class ObjectArray {
 
     std::vector<Object> &Objects;
 
+    std::vector<int> LightIndices;
+
     ObjectArray(std::vector<Object> &objects) : Objects(objects) {}
 
     void addTriangle(Vertex Vert1, Vertex Vert2, Vertex Vert3, glm::vec3 albedo = glm::vec3(0.0), float roughness = 1, int AlbedoIdx = -1, int RoughnessIdx = -1, float ior = -1.0f) {
@@ -60,5 +62,7 @@ class ObjectArray {
         Objects[index].padding0[1] = 0.0f;
         Objects[index].padding2[0] = 0.0f;
         Objects[index].padding2[1] = 0.0f;
+
+        LightIndices.push_back(index);
     }
 };

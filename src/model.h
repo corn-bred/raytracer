@@ -147,7 +147,16 @@ class Model {
                     tri.v2.Normal.z = mesh->mNormals[i2].z; 
                 }
 
-                objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.05, 1, 0); //temp colour
+                aiMaterial* mat = scene->mMaterials[mesh->mMaterialIndex];
+                aiColor3D EmissiveColor(0.0f, 0.0f, 0.0f);
+                float EmissiveIntensity = 1.0f;
+
+                if (mat->Get(AI_MATKEY_COLOR_EMISSIVE, EmissiveColor) == AI_SUCCESS && (EmissiveColor.r > 0.0 || EmissiveColor.g > 0.0 || EmissiveColor.b > 0.0)) {
+                    mat->Get(AI_MATKEY_EMISSIVE_INTENSITY, EmissiveIntensity);
+                    objectHandler.addTriangleEmission(tri.v0, tri.v1, tri.v2, glm::vec3(EmissiveColor.r, EmissiveColor.g, EmissiveColor.b) * EmissiveIntensity);
+                } else {
+                    objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.05, 1, 0); //temp colour
+                }
             }  
 
             //cerr << "Texture creation\n";
