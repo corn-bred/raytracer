@@ -393,12 +393,12 @@ vec3 ComputeDirectLight(HitRecord rec, vec3 Normal, float seed) {
     HitRecord DirectRec;
     bool isOccluded = (TraverseBVH(DirectRay, DirectRec) && DirectRec.t < Dist);
 
-    if (isOccluded) return vec3(0.0);
+    //if (isOccluded) return vec3(0.0);
 
     //Actual light contribution
 
     float cosHit = max(0.0, dot(Normal, LightDir)); // Lambert's cosine law
-    float cosLight = max(0.0, dot(Normal, -LightDir)); // Light orientation
+    float cosLight = max(0.0, dot(LightNormal, -LightDir)); // Light orientation
     float rSquared = Dist * Dist; // Light distance attenuation
 
     float Area = length(cross(v1.Position - v0.Position, v2.Position - v0.Position)) * 0.5; // Area of triangle
@@ -468,17 +468,18 @@ vec3 rayColourDebug(Ray r, int maxDepth) {
 }
 
 vec3 rayColour(Ray r, int maxDepth) {
-    vec3 colour = vec3(1.0);
+    vec3 Throughput = vec3(1.0);
+    vec3 colour = vec3(0.0);
 
     HitRecord rec;
     for (int depth = 0; depth < maxDepth; depth++) {
         float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
         
         if(!TraverseBVH(r, rec)) {
-            vec3 unitDir = normalize(r.Direction);
+            /*vec3 unitDir = normalize(r.Direction);
             float a = 0.5 * (unitDir.y + 1.0);
             vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
-            colour *= sky;
+            colour *= sky;*/
             return colour;
         }
 
@@ -497,6 +498,13 @@ vec3 rayColour(Ray r, int maxDepth) {
             Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * textureLod(MeshTextures, vec3(tcoords, float(rec.roughnessTextureIdx)), 0.0).r); //Normal with roughness
         } else {
             Normal = normalize(rec.Normal + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness); //Normal with roughness
+        }
+
+        //Direct Light
+
+        if (EmissorSize > 0) {
+            vec3 DirectLight = ComputeDirectLight(rec, Normal, seed);
+            colour += DirectLight * Throughput;
         }
         
         //Storing
@@ -539,11 +547,12 @@ vec3 rayColour(Ray r, int maxDepth) {
         }
 
         if (rec.isEmissive) { // if is emissive, end sample loop
-            return rec.Albedo * colour;
+            colour += Throughput * rec.Albedo;
+            return colour;
         }
 
         if (!currentIsDielectric) {
-            colour = Attenuation * colour;
+            Throughput *= Attenuation;
         }
     }
 

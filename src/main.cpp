@@ -184,45 +184,57 @@ int main () {
 
     //CORNELL BOX
 
-    /*std::vector<Object> Objects;
+    std::vector<Object> Objects;
 
     ObjectArray uObjects(Objects);
 
     Triangle tempTri;
     
     tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
+    tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
     uObjects.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(4.0));
     tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
+    tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
     uObjects.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(4.0));
 
-    tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,2.5);
+    tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
 
     tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,-2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
-    tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,-2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
+    tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,2.5); tempTri.v2.Position = glm::vec3(2.5,-2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
 
-    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,-2.5);
+    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,-2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, 0.0, 1.0); tempTri.v1.Normal = glm::vec3(0.0, 0.0, 1.0); tempTri.v2.Normal = glm::vec3(0.0, 0.0, 1.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
+    tempTri.v0.Normal = glm::vec3(0.0, 0.0, 1.0); tempTri.v1.Normal = glm::vec3(0.0, 0.0, 1.0); tempTri.v2.Normal = glm::vec3(0.0, 0.0, 1.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), 1.0);
 
     tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(-1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(-1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(-1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(0.0, 1.0, 0.0), 1.0);
-    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(2.5,-2.5,2.5);
+    tempTri.v0.Position = glm::vec3(2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,-2.5,2.5); tempTri.v2.Position = glm::vec3(2.5,2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(-1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(-1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(-1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(0.0, 1.0, 0.0), 1.0);
 
-    tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,2.5);
+    tempTri.v0.Position = glm::vec3(-2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,-2.5);
+    tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
+    tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    BVH mainBVH(Objects);*/
+    BVH mainBVH(Objects);
 
-    Model model("assets/backpack2.obj");
+    /*Model model("assets/backpack2.obj");
 
     Triangle tempTri;
     
@@ -268,7 +280,7 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    BVH mainBVH(model.GetObjectVector());
+    BVH mainBVH(model.GetObjectVector());*/
     mainBVH.Build();
     mainBVH.Flatten();
 
@@ -289,16 +301,16 @@ int main () {
     ShaderStorageBuffer BVHBuffer(mainBVH.GetBVH().data(), mainBVH.GetBVH().size() * sizeof(FlatNode), GL_STATIC_DRAW);
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
     ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
-    ShaderStorageBuffer EmissionData(model.objectHandler.LightIndices.data(), model.objectHandler.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
+    ShaderStorageBuffer EmissionData(uObjects.LightIndices.data(), uObjects.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
     ShaderCompute.bind();
-    ShaderCompute.setInt("MeshTextures", 1);
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
+    //ShaderCompute.setInt("MeshTextures", 1);
+    //glActiveTexture(GL_TEXTURE1);
+    //glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
     EmissionData.bindToShader(3);
-    ShaderCompute.setInt("EmissorSize", model.objectHandler.LightIndices.size());
+    ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
     
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
