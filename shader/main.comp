@@ -349,6 +349,67 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
     return isHit;
 }
 
+// Direct light calculation
+
+vec3 ComputeDirectLight(HitRecord rec, vec3 Normal, float seed) {
+
+    //Picking random light
+    int EmissorIdx = LightIndices[int(rand(seed) * EmissorSize)];
+    Object Light = Objects[EmissorIdx];
+
+    Vertex v0 = Light.triangle.v0;
+    Vertex v1 = Light.triangle.v1;
+    Vertex v2 = Light.triangle.v2;
+
+    //Picking random point in light
+    
+    float r1 = rand(seed + 1.0);
+    float r2 = rand(seed + 2.0);
+    float sqrt_r1 = sqrt(r1);
+    
+    float u = 1.0 - sqrt_r1;
+    float v = sqrt_r1 * (1.0 - r2);
+    float w = sqrt_r1 * r2;
+
+    vec3 LightPos = u * v0.Position + v * v1.Position + w * v2.Position;
+
+    //Light normal
+
+    vec3 LightNormal = normalize(cross(v1.Position - v2.Position, v2.Position - v0.Position));
+    if (dot(LightNormal, -LightPos) < 0.0) LightNormal *= -1;
+
+    //Creating the ray (from bounced area to light)
+
+    vec3 ToLight = LightPos - rec.Position;
+    float Dist = length(ToLight);
+    vec3 LightDir = ToLight / Dist; //because normalize needs more data and we will use Dist later too
+
+    //Actual ray
+
+    Ray DirectRay;
+    DirectRay.Origin = rec.Position + LightDir * 0.001; // to prevent overlap
+    DirectRay.Direction = LightDir;
+
+    HitRecord DirectRec;
+    bool isOccluded = (TraverseBVH(DirectRay, DirectRec) && DirectRec.t < Dist);
+
+    if (isOccluded) return vec3(0.0);
+
+    //Actual light contribution
+
+    float cosHit = max(0.0, dot(Normal, LightDir)); // Lambert's cosine law
+    float cosLight = max(0.0, dot(Normal, -LightDir)); // Light orientation
+    float rSquared = Dist * Dist; // Light distance attenuation
+
+    float Area = length(cross(v1.Position - v0.Position, v2.Position - v0.Position)) * 0.5; // Area of triangle
+    float PDF = 1.0 / (float(EmissorSize) * Area); // The chance of picking that specific point on triangle
+
+    vec3 BRDF = rec.Albedo / 3.14159; // PI is a normalization factor
+    vec3 LightColour = Light.albedo; //light colour
+
+    return (BRDF * (LightColour * cosHit * cosLight)) / (rSquared * PDF);
+}
+
 //      HittableList
 
 Ray getRay(float i, float j, int SampleNumber) {
