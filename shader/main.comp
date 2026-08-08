@@ -407,7 +407,24 @@ vec3 ComputeDirectLight(HitRecord rec, vec3 Normal, float seed) {
     float Area = length(cross(v1.Position - v0.Position, v2.Position - v0.Position)) * 0.5; // Area of triangle
     float PDF = 1.0 / (float(EmissorSize) * Area); // The chance of picking that specific point on triangle
 
-    vec3 BRDF = rec.Albedo / 3.14159; // PI is a normalization factor
+    // BRDF calculation
+
+    vec2 tcoordsv0 = rec.triangle.v0.TexCoords;
+    vec2 tcoordsv1 = rec.triangle.v1.TexCoords;
+    vec2 tcoordsv2 = rec.triangle.v2.TexCoords;
+
+    vec2 tcoords = (1.0 - rec.barycentric.x - rec.barycentric.y) * tcoordsv0 + rec.barycentric.x * tcoordsv1 + rec.barycentric.y * tcoordsv2;
+
+    vec3 BRDF = vec3(0.0);
+
+    if (rec.albedoTextureIdx >= 0) {
+        BRDF = textureLod(MeshTextures, vec3(tcoords, float(rec.albedoTextureIdx)), 0.0).rgb;
+    } else {
+        BRDF = rec.Albedo;
+    }
+
+    BRDF /= 3.14159; // PI is a normalization factor
+
     vec3 LightColour = Light.albedo; //light colour
 
     return (BRDF * (LightColour * cosHit * cosLight)) / (rSquared * PDF);
