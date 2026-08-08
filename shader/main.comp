@@ -566,6 +566,8 @@ vec3 rayColour(Ray r, int maxDepth) {
             Attenuation = rec.Albedo * AngFalloff;
         }
 
+        Attenuation *= 2.0;
+
         if (rec.isEmissive) { // if is emissive, end sample loop
             colour += Throughput * rec.Albedo;
             return colour;
