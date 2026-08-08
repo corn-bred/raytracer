@@ -494,6 +494,16 @@ vec3 rayColour(Ray r, int maxDepth) {
     HitRecord rec;
     for (int depth = 0; depth < maxDepth; depth++) {
         float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
+
+        //Russian roulette
+        if (depth > 2) {
+            float survival = randRange(seed + 10.0, 0.0, 1.0);
+            if (survival < 0.5) {
+                return colour;
+            }
+            if (PixelCoords.x > Width / 2.0)
+                Throughput *= 2.0; //compensation
+        }
         
         if(!TraverseBVH(r, rec, false)) {
             /*vec3 unitDir = normalize(r.Direction);

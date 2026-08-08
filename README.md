@@ -14,6 +14,7 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 - UV albedo & roughness textures
 - Smooth shading
 - Next Event Estimation (NEE)
+- Russian roulette
 
 Example:
 ![render 1](render1.png)
