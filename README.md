@@ -12,6 +12,8 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 - Metals
 - Lambertians
 - UV albedo & roughness textures
+- Smooth shading
+- Next Event Estimation (NEE)
 
 Example:
 ![render 1](render1.png)
