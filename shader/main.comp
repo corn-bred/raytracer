@@ -252,6 +252,10 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     if (t < 0) return false;
 
+    if (isShadowRay) {
+        return true; // early exit because we dont need the rest of the data
+    }
+
     rec.t = t;
 
     float w = 1.0 - u - v; //final barycentric coord
@@ -324,6 +328,7 @@ bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
                 Object tri = Objects[TriIndex];
 
                 if (TriangleHit(tri, ray, 1e-6, rec.t, tempRec, isShadowRay)) {
+                    if (isShadowRay) return true;
                     isHit = true;
                     if (tempRec.t < rec.t) { // if there are multiple triangles the ray can hit inside of that leaf
                         rec = tempRec;
