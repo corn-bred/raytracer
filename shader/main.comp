@@ -227,7 +227,9 @@ struct Object {
 };                      //TOTAL: 208 /= 16
          
 
-bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec) {
+bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec, bool isShadowRay) {
+    if (isShadowRay && object.emissive == 1) return false;
+
     vec3 Edge1 = object.triangle.v1.Position - object.triangle.v0.Position;
     vec3 Edge2 = object.triangle.v2.Position - object.triangle.v0.Position;
 
@@ -287,7 +289,7 @@ layout(std430, binding = 2) readonly buffer ObjectData {
 
 int totaliteration;
 
-bool TraverseBVH(Ray ray, out HitRecord rec) {
+bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
     bool isHit = false;
     rec.t = 1e30;
 
@@ -321,7 +323,7 @@ bool TraverseBVH(Ray ray, out HitRecord rec) {
 
                 Object tri = Objects[TriIndex];
 
-                if (TriangleHit(tri, ray, 1e-6, rec.t, tempRec)) {
+                if (TriangleHit(tri, ray, 1e-6, rec.t, tempRec, isShadowRay)) {
                     isHit = true;
                     if (tempRec.t < rec.t) { // if there are multiple triangles the ray can hit inside of that leaf
                         rec = tempRec;
@@ -387,13 +389,14 @@ vec3 ComputeDirectLight(HitRecord rec, vec3 Normal, float seed) {
     //Actual ray
 
     Ray DirectRay;
-    DirectRay.Origin = rec.Position + LightDir * 0.001; // to prevent overlap
+    DirectRay.Origin = rec.Position + LightDir * 0.001; // to prevent overlap & banding
     DirectRay.Direction = LightDir;
 
     HitRecord DirectRec;
-    bool isOccluded = (TraverseBVH(DirectRay, DirectRec) && DirectRec.t < Dist);
+    bool HitLight = TraverseBVH(DirectRay, DirectRec, true);
+    bool isOccluded = (HitLight && DirectRec.t < Dist - 0.001);
 
-    //if (isOccluded) return vec3(0.0);
+    if (isOccluded) return vec3(0.0, 0.0, 0.0);
 
     //Actual light contribution
 
@@ -454,7 +457,7 @@ vec3 rayColourDebug(Ray r, int maxDepth) {
 
     HitRecord rec;
 
-    if (!TraverseBVH(r, rec)) {
+    if (!TraverseBVH(r, rec, false)) {
 
         colour = vec3(0.0);
 
@@ -475,7 +478,7 @@ vec3 rayColour(Ray r, int maxDepth) {
     for (int depth = 0; depth < maxDepth; depth++) {
         float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + depth * fract(2.47 + glfwTime * 3);
         
-        if(!TraverseBVH(r, rec)) {
+        if(!TraverseBVH(r, rec, false)) {
             /*vec3 unitDir = normalize(r.Direction);
             float a = 0.5 * (unitDir.y + 1.0);
             vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);

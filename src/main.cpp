@@ -302,15 +302,20 @@ int main () {
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
     ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
     ShaderStorageBuffer EmissionData(model.objectHandler.LightIndices.data(), model.objectHandler.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
+    //ShaderStorageBuffer EmissionData(uObjects.LightIndices.data(), uObjects.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
     ShaderCompute.bind();
+
     ShaderCompute.setInt("MeshTextures", 1);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
+
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
     EmissionData.bindToShader(3);
+    
     ShaderCompute.setInt("EmissorSize", model.objectHandler.LightIndices.size());
+    //ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
     
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
