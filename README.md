@@ -19,6 +19,7 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 Example:
 ![render 1](render1.png)
 Triangles in scene: 67919
+GPU: NVIDIA GTX 1050
 
 Non-statically-linked build command:
 `g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -I include -L lib -lglfw3dll -lassimp -lz`
