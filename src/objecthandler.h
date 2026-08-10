@@ -73,32 +73,87 @@ struct VertexData {
     glm::vec2 TexCoords;
 };
 
+struct MaterialData {
+    GLintptr StartData;
+    GLsizei DataCount;
+
+    int AlbedoIdx = -1;
+    int RoughnessIdx = -1;
+
+    glm::vec3 fallbackAlbedo;
+    float fallbackRoughness;
+};
+
 class GBufferManager {
     std::vector<Object> &_Objects;
     Shader &_LinkedShader;
     VertexBuffer *_Data;
+    std::vector<MaterialData> Materials;
 
     public:
-    /*
-    layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aNormal;
-layout (location = 2) in vec2 aTexCoords;*/
+    
     GBufferManager(Shader &designatedShader, std::vector<Object> &objects) : _LinkedShader(designatedShader), _Objects(objects) {
+        std::map<std::tuple<int, int, glm::vec3, float>, std::vector<int>> MaterialGroups;
+
+        for (int i = 0; i < _Objects.size(); i++) {
+            int albedoIdx = _Objects[i].albedoTextureIdx;
+            int roughnessIdx = _Objects[i].roughnessTextureIdx;
+            glm::vec3 fallbackAlbedo = _Objects[i].albedo;
+            float fallbackRoughness = _Objects[i].roughness;
+            MaterialGroups [ std::tuple <int, int, glm::vec3, float> {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness} ] .push_back(i);
+        }
+
         std::vector<VertexData> vboData;
-        vboData.reserve(_Objects.size() * 3);
 
-        for (auto x : _Objects) {
-            vboData.push_back({x.triangle.v0.Position, x.triangle.v0.Normal, x.triangle.v0.TexCoords});
+        for (const auto &pair : MaterialGroups) {
+            int albedoIdx = std::get<0>(pair.first);
+            int roughnessIdx = std::get<1>(pair.first);
+            glm::vec3 fallbackAlbedo = std::get<2>(pair.first);
+            float fallbackRoughness = std::get<3>(pair.first);
 
-            vboData.push_back({x.triangle.v1.Position, x.triangle.v1.Normal, x.triangle.v1.TexCoords});
+            const std::vector<int> &ObjectIndices = pair.second;
 
-            vboData.push_back({x.triangle.v2.Position, x.triangle.v2.Normal, x.triangle.v2.TexCoords});
+            MaterialData data;
+            data.StartData = vboData.size();
+            data.AlbedoIdx = albedoIdx;
+            data.RoughnessIdx = roughnessIdx;
+            data.fallbackAlbedo = fallbackAlbedo;
+            data.fallbackRoughness = fallbackRoughness;
+
+            for (int ObjectIdx : ObjectIndices) {
+                auto &x = _Objects[ObjectIdx];
+                vboData.push_back({x.triangle.v0.Position, x.triangle.v0.Normal, x.triangle.v0.TexCoords});
+
+                vboData.push_back({x.triangle.v1.Position, x.triangle.v1.Normal, x.triangle.v1.TexCoords});
+
+                vboData.push_back({x.triangle.v2.Position, x.triangle.v2.Normal, x.triangle.v2.TexCoords});
+            }
+
+            data.DataCount = vboData.size() - data.StartData;
+            Materials.push_back(data);
         }
 
         _Data = new VertexBuffer(vboData.data(), vboData.size() * sizeof(VertexData), GL_STATIC_DRAW);
-        _Data->addAttribute(0, 8, GL_FLOAT, 3, 0);
-        _Data->addAttribute(1, 8, GL_FLOAT, 3, 3);
-        _Data->addAttribute(2, 8, GL_FLOAT, 2, 6);
+        _Data->addAttribute(0, 3, GL_FLOAT, 8, 0);
+        _Data->addAttribute(1, 3, GL_FLOAT, 8, 3);
+        _Data->addAttribute(2, 2, GL_FLOAT, 8, 6);
+
+        _LinkedShader.use();
+        _Data->bind();
+    }
+    void Draw() {
+        _Data->bind();
+
+        for (const auto &material : Materials) {
+            _LinkedShader.setInt("albedoTextureIdx", material.AlbedoIdx);
+            _LinkedShader.setInt("roughnessTextureIdx", material.RoughnessIdx);
+            _LinkedShader.setVec3("Albedo", material.fallbackAlbedo);
+            _LinkedShader.setFloat("Roughness", material.fallbackRoughness);
+                
+            glDrawArrays(GL_TRIANGLES, material.StartData, material.DataCount);
+        }
+
+        _Data->unbind();
     }
 };
 
