@@ -32,7 +32,7 @@ struct Texture {
 class Model {
     public:
     std::vector<Object> Objects;
-    ObjectArray objectHandler;
+    ComputeObjectArray objectHandler;
     std::vector<Texture> textures_loaded;
 
     GLuint TextureArrayID = 0;

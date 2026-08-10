@@ -186,7 +186,7 @@ int main () {
 
     /*std::vector<Object> Objects;
 
-    ObjectArray uObjects(Objects);
+    ComputeObjectArray uObjects(Objects);
 
     Triangle tempTri;
     
