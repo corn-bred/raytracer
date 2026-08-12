@@ -174,11 +174,70 @@ int main () {
     
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    Shader ShaderSample("shader/vertSample.glsl", "shader/fragSample.glsl");
+    Shader ShaderSample("shader/sample.vert", "shader/sample.frag");
 
     VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
     BufferQuad.addAttribute(0, 2, GL_FLOAT, 4, 0);
     BufferQuad.addAttribute(1, 2, GL_FLOAT, 4, 2);
+
+    //  Framebuffer setup
+
+    GLuint gBufferFBO;
+
+    glGenFramebuffers(1, &gBufferFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
+
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth;
+
+    //  gPosition
+    glGenTextures(1, &gPosition);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
+
+    //  gNormal
+    glGenTextures(1, &gNormal);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, gNormal, 0);
+
+    //  gAlbedo
+    glGenTextures(1, &gAlbedo);
+    glBindTexture(GL_TEXTURE_2D, gAlbedo);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
+
+    //  gRouughness
+    glGenTextures(1, &gRoughness);
+    glBindTexture(GL_TEXTURE_2D, gRoughness);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, gRoughness, 0);
+
+    //  gDepth
+    glGenRenderbuffers(1, &gDepth);
+    glBindRenderbuffer(GL_RENDERBUFFER, gDepth);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth, 0);
+
+    GLuint attachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
+    glDrawBuffers(4, attachments);
+
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+        cerr << "G-Buffer FBO is incomplete" << endl;
+        return 1;
+    }
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    // temporary standalone compute pass
 
     ComputeShader ShaderCompute("shader/main.comp");
 
@@ -280,6 +339,10 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
+    Shader gBufferShader("shader/gBuffer.vert", "shader/gBuffer.frag");
+
+    GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects);
+
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
     mainBVH.Flatten();
@@ -349,7 +412,7 @@ int main () {
         
         glm::mat4 view = CameraMain.calculateView();
 
-        ShaderCompute.bind();
+        /*ShaderCompute.bind();
 
         glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
@@ -368,14 +431,29 @@ int main () {
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
-        ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+        ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);*/
 
-        
-        
+        glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        glm::mat4 matmodel = glm::mat4(1.0f);
+        gBufferShader.setMat4("model", matmodel);
+        gBufferShader.setMat4("view", view);
+        gBufferShader.setMat4("projection", projection);
+
+        glm::mat3 normalMatrix = glm::mat3(glm::transpose(glm::inverse(matmodel)));
+        gBufferShader.setMat3("normalMatrix", normalMatrix);
+
+        gBufferHandler.bindTextures(model.GetTextureArrayID());
+
+        gBufferHandler.draw();
+
+        //drawing to screen
+
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+        glBindTexture(GL_TEXTURE_2D, gAlbedo);
         ShaderSample.setInt("TextureAccumulation", 0);
 
         BufferQuad.bind();

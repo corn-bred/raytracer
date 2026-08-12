@@ -1,13 +1,16 @@
 #pragma once
 #include <string>
 #include <sstream>
-#include "shaders.h"
-#include "computeshader.h"
+#include <map>
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
+#include "shaders.h"
+#include "computeshader.h"
 #include "bvh.h"
 
 class ComputeObjectArray {
@@ -84,6 +87,25 @@ struct MaterialData {
     float fallbackRoughness;
 };
 
+struct MaterialKey {
+    int albedoIdx;
+    int roughnessIdx;
+    glm::vec3 fallbackAlbedo;
+    float fallbackRoughness;
+
+    bool operator<(const MaterialKey& other) const { // glm::vec3 does not have a comparison operator
+        if (albedoIdx != other.albedoIdx) return albedoIdx < other.albedoIdx;
+        
+        if (roughnessIdx != other.roughnessIdx) return roughnessIdx < other.roughnessIdx;
+        
+        if (fallbackAlbedo.x != other.fallbackAlbedo.x) return fallbackAlbedo.x < other.fallbackAlbedo.x;
+        if (fallbackAlbedo.y != other.fallbackAlbedo.y) return fallbackAlbedo.y < other.fallbackAlbedo.y;
+        if (fallbackAlbedo.z != other.fallbackAlbedo.z) return fallbackAlbedo.z < other.fallbackAlbedo.z;
+        
+        return fallbackRoughness < other.fallbackRoughness;
+    }
+};
+
 class GBufferManager {
     std::vector<Object> &_Objects;
     Shader &_LinkedShader;
@@ -93,23 +115,24 @@ class GBufferManager {
     public:
     
     GBufferManager(Shader &designatedShader, std::vector<Object> &objects) : _LinkedShader(designatedShader), _Objects(objects) {
-        std::map<std::tuple<int, int, glm::vec3, float>, std::vector<int>> MaterialGroups;
+        std::map<MaterialKey, std::vector<int>> MaterialGroups;
 
         for (int i = 0; i < _Objects.size(); i++) {
             int albedoIdx = _Objects[i].albedoTextureIdx;
             int roughnessIdx = _Objects[i].roughnessTextureIdx;
             glm::vec3 fallbackAlbedo = _Objects[i].albedo;
             float fallbackRoughness = _Objects[i].roughness;
-            MaterialGroups [ std::tuple <int, int, glm::vec3, float> {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness} ] .push_back(i);
+            MaterialGroups [ MaterialKey {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness} ] .push_back(i);
         }
 
         std::vector<VertexData> vboData;
+        vboData.reserve(_Objects.size() * 3);
 
         for (const auto &pair : MaterialGroups) {
-            int albedoIdx = std::get<0>(pair.first);
-            int roughnessIdx = std::get<1>(pair.first);
-            glm::vec3 fallbackAlbedo = std::get<2>(pair.first);
-            float fallbackRoughness = std::get<3>(pair.first);
+            int albedoIdx = pair.first.albedoIdx;
+            int roughnessIdx = pair.first.roughnessIdx;
+            glm::vec3 fallbackAlbedo = pair.first.fallbackAlbedo;
+            float fallbackRoughness = pair.first.fallbackRoughness;
 
             const std::vector<int> &ObjectIndices = pair.second;
 
@@ -141,7 +164,7 @@ class GBufferManager {
         _LinkedShader.use();
         _Data->bind();
     }
-    void Draw() {
+    void draw() {
         _Data->bind();
 
         for (const auto &material : Materials) {
@@ -154,6 +177,11 @@ class GBufferManager {
         }
 
         _Data->unbind();
+    }
+    void bindTextures(GLuint textureArrayID) {
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D_ARRAY, textureArrayID);
+        _LinkedShader.setInt("MeshTextures", 1);
     }
 };
 
