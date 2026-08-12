@@ -42,7 +42,7 @@ vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 
 
 vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir);
 
-#define NR_LIGHTS 4
+#define NR_LIGHTS 1
 
 uniform LightUniversal pointLights[NR_LIGHTS];
 

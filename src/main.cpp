@@ -182,6 +182,8 @@ int main () {
 
     //  Framebuffer setup
 
+    // PASS 1: G-BUFFER
+
     GLuint gBufferFBO;
 
     glGenFramebuffers(1, &gBufferFBO);
@@ -213,7 +215,7 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
 
-    //  gRouughness
+    //  gRoughness
     glGenTextures(1, &gRoughness);
     glBindTexture(GL_TEXTURE_2D, gRoughness);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
@@ -236,6 +238,34 @@ int main () {
     }
 
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    Shader gBufferShader("shader/gBuffer.vert", "shader/gBuffer.frag");
+
+    // PASS 2: RASTERIZATION & DIRECT LIGHT
+
+    GLuint RasterFBO;
+
+    glGenFramebuffers(1, &RasterFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, RasterFBO);
+
+    GLuint RasterOutput;
+
+    glGenTextures(1, &RasterOutput);
+    glBindTexture(GL_TEXTURE_2D, RasterOutput);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, RasterOutput, 0);
+
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+        cerr << "Rasterizer FBO is incomplete" << endl;
+        return 1;
+    }
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    Shader RasterShader("shader/raster.vert", "shader/raster.frag");
+    RasterLightArray RasterLightHandler(RasterShader, "pointLights");
 
     // temporary standalone compute pass
 
@@ -339,7 +369,7 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    Shader gBufferShader("shader/gBuffer.vert", "shader/gBuffer.frag");
+    
 
     GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects);
 
@@ -433,7 +463,10 @@ int main () {
 
         ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);*/
 
+        //Pass 1
+
         glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         gBufferShader.use();
 
@@ -451,6 +484,37 @@ int main () {
 
         glDisable(GL_DEPTH_TEST);
 
+        //Pass 2
+
+        glBindFramebuffer(GL_FRAMEBUFFER, RasterFBO);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
+        RasterShader.use();
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, gPosition);
+        RasterShader.setInt("gPosition", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, gNormal);
+        RasterShader.setInt("gNormal", 1);
+
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, gAlbedo);
+        RasterShader.setInt("gAlbedo", 2);
+
+        glActiveTexture(GL_TEXTURE3);
+        glBindTexture(GL_TEXTURE_2D, gRoughness);
+        RasterShader.setInt("gRoughness", 3);
+
+        RasterShader.setVec3("viewPos", CameraMain.position);
+
+        RasterLightHandler.addLightSpotlight(0, glm::vec3(0.0f, 2.48, 0.0f), glm::vec3(0.0, -1.0, 0.0), glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
+
+        BufferQuad.bind();
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+
         //drawing to screen
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -460,7 +524,7 @@ int main () {
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gAlbedo);
+        glBindTexture(GL_TEXTURE_2D, RasterOutput);
         ShaderSample.setInt("TextureAccumulation", 0);
 
         BufferQuad.bind();
