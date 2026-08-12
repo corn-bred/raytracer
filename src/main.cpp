@@ -225,7 +225,7 @@ int main () {
     glGenRenderbuffers(1, &gDepth);
     glBindRenderbuffer(GL_RENDERBUFFER, gDepth);
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth, 0);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
     GLuint attachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
     glDrawBuffers(4, attachments);
@@ -385,12 +385,12 @@ int main () {
         processInput(window, CameraMain);
         FrameIndex++;
 
-        if (FrameIndex == 1) {
+        /*if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
             glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
             glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
             glBindTexture(GL_TEXTURE_2D, 0);
-        }
+        }*/
 
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;
@@ -435,6 +435,7 @@ int main () {
 
         glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        gBufferShader.use();
 
         glm::mat4 matmodel = glm::mat4(1.0f);
         gBufferShader.setMat4("model", matmodel);
@@ -445,10 +446,16 @@ int main () {
         gBufferShader.setMat3("normalMatrix", normalMatrix);
 
         gBufferHandler.bindTextures(model.GetTextureArrayID());
-
+        
         gBufferHandler.draw();
 
+        glDisable(GL_DEPTH_TEST);
+
         //drawing to screen
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);  
 
         ShaderSample.use();
 

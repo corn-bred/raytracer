@@ -167,6 +167,8 @@ class GBufferManager {
     void draw() {
         _Data->bind();
 
+        glEnable(GL_DEPTH_TEST);
+
         for (const auto &material : Materials) {
             _LinkedShader.setInt("albedoTextureIdx", material.AlbedoIdx);
             _LinkedShader.setInt("roughnessTextureIdx", material.RoughnessIdx);
