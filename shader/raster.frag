@@ -13,6 +13,8 @@ uniform sampler2D gRoughness;
 
 uniform vec3 viewPos;
 
+#define NR_LIGHTS 2
+
 //starts at 1 because uninitialized data will be 0 (if uniform only though)
 
 #define LIGHT_POINT 1
@@ -42,8 +44,6 @@ vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 
 
 vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir);
 
-#define NR_LIGHTS 1
-
 uniform LightUniversal pointLights[NR_LIGHTS];
 
 void main() {
@@ -54,6 +54,11 @@ void main() {
     vec3 Normal = texture(gNormal, TexCoords).rgb;
 
     float Roughness = texture(gRoughness, TexCoords).r;
+
+    if (length(Normal) < 0.001) {
+        FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+        return;
+    }
 
     vec3 viewDir = normalize(viewPos - FragPos);
 
@@ -85,11 +90,17 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     float attenuation = 1.0f / (light.Constant + light.Linear * dist + light.Quadratic * (dist*dist) );
 
     float diff = max(dot(normal, lightDir), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo);
+    vec3 diffuse = diff * (light.Colour * albedo) / 3.14159;
 
-    vec3 reflectDir = reflect(-lightDir, normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 1.0 - roughness);
-    vec3 specular = (1.0 - roughness) * spec * light.Colour;  
+    vec3 H = normalize(viewDir + lightDir);
+    float NdotH = max(0.0, dot(normal, H));
+    float specPower = 1.0 / (roughness + 0.001);
+    float specIntensity = pow(NdotH, specPower);
+
+    float NdotV = max(0.0, dot(normal, viewDir));
+    vec3 F0 = vec3(0.04);
+    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+    vec3 specular = light.Colour * specIntensity * F;
     
     diffuse *= attenuation;
     specular *= attenuation;
@@ -103,11 +114,17 @@ vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 
     vec3 lightDir = normalize(-light.Direction);
 
     float diff = max(dot(normal, lightDir), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo.rgb);
+    vec3 diffuse = diff * (light.Colour * albedo.rgb) / 3.14159;
+    
+    vec3 H = normalize(viewDir + lightDir);
+    float NdotH = max(0.0, dot(normal, H));
+    float specPower = 1.0 / (roughness + 0.001);
+    float specIntensity = pow(NdotH, specPower);
 
-    vec3 reflectDir = reflect(-lightDir, normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 1.0 - roughness);
-    vec3 specular = (1.0 - roughness) * spec * light.Colour;
+    float NdotV = max(0.0, dot(normal, viewDir));
+    vec3 F0 = vec3(0.04);
+    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+    vec3 specular = light.Colour * specIntensity * F;
 
     vec3 result = (diffuse + specular);
     return result;
@@ -123,11 +140,17 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
     float attenuation = 1.0f / (light.Constant + light.Linear * dist + light.Quadratic * (dist*dist) );
 
     float diff = max(dot(normal, surfToLight), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo);
+    vec3 diffuse = diff * (light.Colour * albedo) / 3.14159;
 
-    vec3 reflectDir = reflect(-surfToLight, normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 1.0 - roughness);
-    vec3 specular = (1.0 - roughness) * spec * light.Colour;  
+    vec3 H = normalize(viewDir + surfToLight);
+    float NdotH = max(0.0, dot(normal, H));
+    float specPower = 1.0 / (roughness + 0.001);
+    float specIntensity = pow(NdotH, specPower);
+
+    float NdotV = max(0.0, dot(normal, viewDir));
+    vec3 F0 = vec3(0.04);
+    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+    vec3 specular = light.Colour * specIntensity * F;
 
     //ambient *= attenuation;
     diffuse *= attenuation;

@@ -371,7 +371,7 @@ int main () {
 
     
 
-    GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects);
+    GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects, false);
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
@@ -510,7 +510,8 @@ int main () {
 
         RasterShader.setVec3("viewPos", CameraMain.position);
 
-        RasterLightHandler.addLightSpotlight(0, glm::vec3(0.0f, 2.48, 0.0f), glm::vec3(0.0, -1.0, 0.0), glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
+        RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(1.0), 1.0f, 0.09f, 0.032f);
+        RasterLightHandler.addLightSpotlight(1, CameraMain.position, CameraMain.front, glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
 
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);

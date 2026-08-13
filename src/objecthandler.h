@@ -107,14 +107,22 @@ struct MaterialKey {
 };
 
 class GBufferManager {
-    std::vector<Object> &_Objects;
+    std::vector<Object> _Objects;
     Shader &_LinkedShader;
     VertexBuffer *_Data;
     std::vector<MaterialData> Materials;
 
     public:
     
-    GBufferManager(Shader &designatedShader, std::vector<Object> &objects) : _LinkedShader(designatedShader), _Objects(objects) {
+    GBufferManager(Shader &designatedShader, std::vector<Object> &objects, bool keepLights = true) : _LinkedShader(designatedShader) {
+        if (!keepLights) {
+            for (auto &object : objects) {
+                if (!object.emissive) _Objects.push_back(object);
+            }
+        } else {
+            _Objects = objects;
+        }
+
         std::map<MaterialKey, std::vector<int>> MaterialGroups;
 
         for (int i = 0; i < _Objects.size(); i++) {
@@ -164,6 +172,7 @@ class GBufferManager {
         _LinkedShader.use();
         _Data->bind();
     }
+
     void draw() {
         _Data->bind();
 
@@ -180,6 +189,7 @@ class GBufferManager {
 
         _Data->unbind();
     }
+
     void bindTextures(GLuint textureArrayID) {
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D_ARRAY, textureArrayID);
