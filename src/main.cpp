@@ -162,10 +162,10 @@ int main () {
         return 1;
     }
 
-    GLuint ComputeShaderAccumulationTexture;
-    glGenTextures(1, &ComputeShaderAccumulationTexture);
+    GLuint RaytraceShaderAccumulationTexture;
+    glGenTextures(1, &RaytraceShaderAccumulationTexture);
 
-    glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+    glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -210,7 +210,7 @@ int main () {
     //  gAlbedo
     glGenTextures(1, &gAlbedo);
     glBindTexture(GL_TEXTURE_2D, gAlbedo);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB8_ALPHA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
@@ -269,7 +269,7 @@ int main () {
 
     // temporary standalone compute pass
 
-    ComputeShader ShaderCompute("shader/main.comp");
+    ComputeShader RaytraceShader("shader/raytrace.comp");
 
     //CORNELL BOX
 
@@ -369,8 +369,6 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    
-
     GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects, false);
 
     BVH mainBVH(model.GetObjectVector());
@@ -394,20 +392,30 @@ int main () {
     ShaderStorageBuffer BVHBuffer(mainBVH.GetBVH().data(), mainBVH.GetBVH().size() * sizeof(FlatNode), GL_STATIC_DRAW);
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
     ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
-    ShaderStorageBuffer EmissionData(model.objectHandler.LightIndices.data(), model.objectHandler.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
     //ShaderStorageBuffer EmissionData(uObjects.LightIndices.data(), uObjects.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
-    ShaderCompute.bind();
+    RaytraceShader.bind();
 
-    ShaderCompute.setInt("MeshTextures", 1);
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
+    RaytraceShader.setInt("gPosition", 0);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+
+    RaytraceShader.setInt("gNormal", 1);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+
+    RaytraceShader.setInt("gAlbedo", 2);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, gAlbedo);
+
+    RaytraceShader.setInt("gRoughness", 3);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, gRoughness);
 
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
-    EmissionData.bindToShader(3);
     
-    ShaderCompute.setInt("EmissorSize", model.objectHandler.LightIndices.size());
+    RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
     //ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
     
     while (!glfwWindowShouldClose(window)) {
@@ -415,12 +423,12 @@ int main () {
         processInput(window, CameraMain);
         FrameIndex++;
 
-        /*if (FrameIndex == 1) {
+        if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
-            glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+            glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
             glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
             glBindTexture(GL_TEXTURE_2D, 0);
-        }*/
+        }
 
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;
@@ -441,27 +449,6 @@ int main () {
         CameraMain.updateCamera();
         
         glm::mat4 view = CameraMain.calculateView();
-
-        /*ShaderCompute.bind();
-
-        glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-
-        ShaderCompute.setMat4("invView", glm::inverse(view));
-        ShaderCompute.setMat4("invProjection", glm::inverse(projection));
-        ShaderCompute.setVec3("CameraPos", CameraMain.position);
-        ShaderCompute.setInt("Width", WIDTH);
-        ShaderCompute.setInt("Height", HEIGHT);
-        ShaderCompute.setFloat("glfwTime", CurrentFrame);
-        ShaderCompute.setInt("MSAAsamples", 1);
-        ShaderCompute.setInt("MaximumDepth", 4);
-        ShaderCompute.setInt("FrameIndex", FrameIndex);
-        ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
-        ShaderCompute.setFloat("DefocusAngle", 0.5); 
-        ShaderCompute.setFloat("FocusDist", 2.5);
-
-        //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
-
-        ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);*/
 
         //Pass 1
 
@@ -516,6 +503,23 @@ int main () {
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
+        //Pass 3
+
+        RaytraceShader.bind();
+
+        glBindImageTexture(0, RaytraceShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+
+        RaytraceShader.setInt("Width", WIDTH);
+        RaytraceShader.setInt("Height", HEIGHT);
+        RaytraceShader.setFloat("glfwTime", CurrentFrame);
+        RaytraceShader.setInt("MSAAsamples", 1);
+        RaytraceShader.setInt("MaximumDepth", 1);
+        RaytraceShader.setInt("FrameIndex", FrameIndex);
+
+        //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
+
+        RaytraceShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+
         //drawing to screen
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -526,7 +530,11 @@ int main () {
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, RasterOutput);
-        ShaderSample.setInt("TextureAccumulation", 0);
+        ShaderSample.setInt("Raster", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+        ShaderSample.setInt("Raytrace", 1);
 
         BufferQuad.bind();
 
@@ -536,7 +544,7 @@ int main () {
         
         FPSCounter++;
     }
-    glDeleteTextures(1, &ComputeShaderAccumulationTexture);
+    glDeleteTextures(1, &RaytraceShaderAccumulationTexture);
     glfwTerminate();
     return 0;
 }

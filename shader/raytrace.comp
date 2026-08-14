@@ -1,0 +1,453 @@
+#version 430 core
+
+layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
+
+layout(rgba32f, binding = 0) uniform image2D ImageOut;
+
+uniform float glfwTime;
+uniform int Width;
+uniform int Height;
+uniform int MSAAsamples;
+uniform int MaximumDepth;
+uniform sampler2D TextureAccumulation;
+uniform int FrameIndex;
+
+uniform sampler2D gPosition;
+uniform sampler2D gNormal;
+uniform sampler2D gAlbedo;
+uniform sampler2D gRoughness;
+
+const float infinity = 1.0 / 0.0;
+const float pi = 3.1415926535897932385;
+
+ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
+
+float degreesToRadians(float degrees) {
+    return degrees * pi / 180.0;
+}
+
+float hash(vec3 p) {
+    p = fract(p * 0.3183099 + 0.1);
+    p *= 17.0;
+    return fract(p.x * p.y * p.z * (p.x + p.y + p.z));
+}
+
+float rand(float seed) {
+    vec3 p = vec3(seed, seed * 2.345, seed * 5.678);
+    return hash(p);
+}
+
+float randRange(float seed, float min, float max) {
+    return min + (max - min) * rand(seed);
+}
+
+vec3 randVec3(float seed) {
+    return vec3(rand(seed), rand(seed + 10.3454), rand(seed + 5.3543));
+}
+
+vec3 randRangeVec3(float seed, float min, float max) {
+    return vec3(randRange(seed, min, max), randRange(seed + 10.3454, min, max), randRange(seed + 5.3543, min, max));
+}
+
+vec3 randUnitVec3(float seed){
+    float theta = float(randRange(seed, 0.0, 2.0 * pi));
+    float z = float(randRange(seed + 1.0, -1.0, 1.0)); //r depends on z
+    float r = sqrt(1.0 - z*z);
+    return vec3(r * cos(theta), r * sin(theta), z);
+}
+
+vec2 randRangeVec2(float seed, float min, float max) {
+    return vec2(randRange(seed, min, max), randRange(seed + 10, min, max));
+}
+
+vec3 randOnHemisphere(float seed, vec3 Normal) {
+    vec3 OnUnitSphere = randUnitVec3(seed);
+    if(dot(OnUnitSphere, Normal) > 0.0) {
+        return OnUnitSphere;
+    } else {
+        return -OnUnitSphere;
+    }
+}
+
+float reflectance(float cosine, float ior) {
+    float r0 = (1 - ior) / (1 + ior);
+    r0 = pow(r0, 2);
+    return r0 + (1-r0) * pow((1 - cosine), 5);
+}
+
+//      Ray
+
+struct Ray {
+    vec3 Origin;
+    vec3 Direction;
+};
+
+vec3 RayAt(inout Ray ray, float t) {
+    return ray.Origin + ray.Direction * vec3(t);
+}
+
+//      BVH
+
+struct Vertex {
+    vec3 Position; // +12, 0 /= 16
+    float padding0; // +4
+    vec3 Normal; // +12, 16 /= 16
+    float padding1; // +4
+    vec2 TexCoords; // +8, 32 /= 16
+    float padding2[2]; // +8
+}; // TOTAL: 48 /= 16
+
+struct Triangle {
+    Vertex v0; // +48, 0 /= 16
+    Vertex v1; // +48, 48 /= 16
+    Vertex v2; // +48, 96 /= 16
+}; // TOTAL: 144 /= 16
+
+struct FlatNode {
+    vec3 BBMin; // +12,  0 /= 16
+    float padding0; // +4
+    int LeftChild_or_Count; // +4, 16 /= 16//this is really awesome compressed data waow
+    float padding1[3]; // +12
+    vec3 BBMax; // +12, 32 /= 16
+    float padding2; // +4, 
+    int RightChild_or_Start; //if its a leaf it will show count and start if not its gonna show the indexes of left child and right child if you didnt know
+    float padding3[3]; // +12
+}; //TOTAL: 64 /= 16
+
+//Buffer that contains the volumes
+layout(std430, binding = 0) readonly buffer BVHBuffer {
+    FlatNode Nodes[]; 
+};
+
+//Buffer that contains the triangle indices
+layout(std430, binding = 1) readonly buffer TriangleIndices {
+    int TriIndices[];
+};
+
+uniform int EmissorSize;
+
+//Slabs method intersection testing
+bool IntersectAABB(Ray ray, vec3 BBMin, vec3 BBMax, out float tNear, out float tFar) {
+    vec3 invDir = 1.0 / ray.Direction; //division is EXPENSIVE
+
+    //REMEMBER:
+    //  let p be intersection point
+    //  let o be origin
+    //  let d be direction
+    //  t = (p - o) / d
+    //  t = (p - o) * (1.0 / d)
+    //  do that for a vector and you'll get the individual t for each axis
+
+    vec3 t1 = (BBMin - ray.Origin) * invDir; //t for bounding box min
+    vec3 t2 = (BBMax - ray.Origin) * invDir; //t for bounding box max
+
+    vec3 tMin = min(t1, t2); //finds the minimum for each axis
+    vec3 tMax = max(t1, t2); //finds the maximum for each axis
+
+    tNear = max(tMin.x, max(tMin.y, tMin.z)); //finds the maximum out of all the nearest axes
+    tFar = min(tMax.x, min(tMax.y, tMax.z)); //finds the minimum out of all the farthest axes
+
+    return (tNear <= tFar && tFar >= 0.0); //if the farthest entrance is less than the closest exit, then that means there is a space with all axes overlapping on the same number, the therefore can collide with the box. 
+}
+
+//      HitRecord
+
+struct HitRecord {
+    vec3 Position;
+
+    Triangle triangle;
+
+    vec3 Normal;
+    float t;
+    bool facingFront;
+
+    float Roughness;
+    int roughnessTextureIdx;
+
+    vec3 Albedo;
+    int albedoTextureIdx;
+
+    bool isDielectric;
+    float ior;
+
+    bool isEmissive;
+
+    vec2 barycentric;
+
+    //void HitRecordSetFaceNormal();
+};
+
+void HitRecordSetFaceNormal(inout HitRecord hitrecord, Ray r, vec3 outwardNormal) {
+    hitrecord.facingFront = (dot(r.Direction, outwardNormal) < 0.0);
+    hitrecord.Normal = hitrecord.facingFront? outwardNormal : -outwardNormal;
+}
+
+//      Triangle
+
+struct Object {
+    Triangle triangle;  // +144, 0 /= 16
+
+    float roughness;    // +4 = 144 /= 4
+    int roughnessTextureIdx; // +4 148 /= 4
+
+    float padding0[2];  // +8, 152
+
+    vec3 albedo;   // +12, 160 /= 16
+    int albedoTextureIdx; // +4, 172 /= 4
+
+    int dielectric;     // +4, 176 /= 4
+
+    float ior;          // +4, 180 /= 4
+
+    int emissive;       // +4, 184 /= 4
+
+    float padding1;     // +4, 192
+
+    float padding2[4];  // +16, 208
+};                      //TOTAL: 208 /= 16
+         
+
+bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, inout HitRecord rec, bool isShadowRay) {
+    if (isShadowRay && object.emissive == 1) return false;
+
+    vec3 Edge1 = object.triangle.v1.Position - object.triangle.v0.Position;
+    vec3 Edge2 = object.triangle.v2.Position - object.triangle.v0.Position;
+
+    vec3 tVec = ray.Origin - object.triangle.v0.Position; // Arrow from point 1 to ray origin
+    vec3 pVec = cross(ray.Direction, Edge2);    // Perpendicular arrow of the ray direction
+    vec3 qVec = cross(tVec, Edge1);             // 
+
+    float det = dot(Edge1, pVec);
+    if (det > -1e-8 && det < 1e-8) return false; //BROO 0.001 IS TOO LARGE THATS WHYYYY
+    float invdet = 1.0 / det;
+
+    float u = dot(tVec, pVec) * invdet;
+    float v = dot(ray.Direction, qVec) * invdet;
+
+    if (!((u >= 0 && u <= 1) && (v >= 0 && v <= 1) && (u + v) < 1)) return false;
+
+    float t = dot(Edge2, qVec) * invdet;
+
+    if (t < ray_tmin || t > ray_tmax) return false;
+
+    if (t < 0) return false;
+
+    if (isShadowRay) {
+        return true; // early exit because we dont need the rest of the data
+    }
+
+    rec.t = t;
+
+    float w = 1.0 - u - v; //final barycentric coord
+
+    vec3 normal = normalize(w * object.triangle.v0.Normal + u * object.triangle.v1.Normal + v * object.triangle.v2.Normal); // mix em (only for smooth shading)
+
+    //vec3 normal = normalize(cross(Edge1, Edge2)); // cross product em for their perpendicular line (only for flat shading)
+
+    rec.Position = RayAt(ray, rec.t);
+
+    if (det < 0) normal *= -1;
+
+    rec.Normal = normal;
+
+    rec.triangle = object.triangle;
+
+    rec.Roughness = object.roughness;
+    rec.Albedo = object.albedo;
+    rec.isDielectric = (object.dielectric == 1);
+    rec.ior = object.ior;
+    rec.isEmissive = (object.emissive == 1);
+    rec.barycentric = vec2(u, v);
+    rec.albedoTextureIdx = object.albedoTextureIdx;
+    rec.roughnessTextureIdx = object.roughnessTextureIdx;
+
+    return true;
+}
+
+//      More BVH
+
+//Buffer that contains the actual data and vertices
+layout(std430, binding = 2) readonly buffer ObjectData {
+    Object Objects[];
+};
+
+int totaliteration;
+
+bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
+    bool isHit = false;
+    rec.t = 1e30;
+
+    int Stack[64]; //maximum size for node depth, also holds the node indices
+    int StackIndex = 0;
+    Stack[StackIndex++] = 0; // cuz root index is always 0
+
+    int maxIterations = 1024; // safety limit
+    int iterations = 0;
+
+    while(StackIndex > 0 && iterations < maxIterations) {
+        iterations++;
+        //Get node
+        int NodeIndex = Stack[--StackIndex];
+        FlatNode Node = Nodes[NodeIndex];
+
+        //Intersection test
+        float tNear, tFar;
+        if (!IntersectAABB(ray, Node.BBMin, Node.BBMax, tNear, tFar)) {
+            continue; //if not touching, continue lower on the stack
+        } 
+
+        //Is Node a leaf or a parent?
+        if (Node.LeftChild_or_Count < 0) { //if leaf
+            int Start = Node.RightChild_or_Start;
+            int Count = -Node.LeftChild_or_Count;
+
+            HitRecord tempRec;
+            for (int i = 0 ; i < Count; i++) { //cycle through each triangle for testing
+                int TriIndex = TriIndices[Start + i];
+
+                Object tri = Objects[TriIndex];
+
+                if (TriangleHit(tri, ray, 1e-6, rec.t, tempRec, isShadowRay)) {
+                    if (isShadowRay) return true;
+                    isHit = true;
+                    if (tempRec.t < rec.t) { // if there are multiple triangles the ray can hit inside of that leaf
+                        rec = tempRec;
+                    }
+                }
+
+            }
+
+        } else { //if parent
+            float nearDist = max(tNear, 0.0);
+            float farDist = max(tFar, 0.0);
+        
+            if (nearDist < farDist) {
+                Stack[StackIndex++] = Node.RightChild_or_Start; // Farther first
+                Stack[StackIndex++] = Node.LeftChild_or_Count;  // Nearer last
+            } else {
+                Stack[StackIndex++] = Node.LeftChild_or_Count;
+                Stack[StackIndex++] = Node.RightChild_or_Start;
+            }
+
+        }
+    }
+
+    iterations = totaliteration;
+    return isHit;
+}
+
+vec3 rayColourDebug(Ray r, int maxDepth) {
+    vec3 colour = vec3(1.0);
+
+    HitRecord rec;
+
+    if (!TraverseBVH(r, rec, false)) {
+
+        colour = vec3(0.0);
+
+    } else {
+        colour = vec3(0.6);
+        
+        
+    }
+
+    return colour;
+}
+
+vec3 rayColour(int maxDepth) {
+    vec3 colour = vec3(1.0);
+
+    float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2);
+
+    vec3 WorldPos = texelFetch(gPosition, PixelCoords, 0).rgb;
+    vec3 WorldNormal = texelFetch(gNormal, PixelCoords, 0).rgb;
+    vec3 Albedo = texelFetch(gAlbedo, PixelCoords, 0).rgb;
+    float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
+    
+    if (length(WorldNormal) < 0.001) {
+        colour = vec3(0.0);
+        return colour;
+    }
+
+    vec3 Normal = normalize(normalize(WorldNormal) + randOnHemisphere(seed + 6.35, WorldNormal) * Roughness); //Normal with roughness
+
+    Ray r;
+    r.Origin = WorldPos + normalize(WorldNormal) * 0.001; //float precision
+    r.Direction = Normal;
+
+    HitRecord rec;
+
+    for (int i = 0; i < maxDepth; i++) {
+        seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + i * fract(2.47 + glfwTime * 3);
+
+        if(TraverseBVH(r, rec, false)) {
+            vec3 NextRayDir = vec3(0.0);
+            vec3 Incident = normalize(r.Direction); //ray direction
+
+            //normal of surface that was hit
+            Normal = normalize(normalize(rec.Normal) + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+
+            //colour
+
+            if (rec.isEmissive) { // if is emissive, end sample loop
+                colour *= rec.Albedo;
+                return colour;
+            } else if (!rec.isDielectric) {
+                float AngFalloff = max(0.0, dot(rec.Normal, -Incident));
+                colour *= AngFalloff * rec.Albedo;
+            }
+
+            //Direction calculation
+
+            if (rec.isDielectric) { //for glass
+                float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
+
+                vec3 Refracted = refract(Incident, Normal, ri);
+
+                float CosTheta = min(dot(-Incident, Normal), 1.0);
+
+                if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
+                    NextRayDir = reflect(Incident, rec.Normal);
+                } else {
+                    NextRayDir = Refracted;
+                }
+            } else { //for normal
+                NextRayDir = reflect(Incident, Normal);
+            }
+
+            //change ray data and prep for next sample
+            r.Direction = NextRayDir;
+            r.Origin = rec.Position + r.Direction * 0.0001;
+        } else {
+            /*vec3 unitDir = normalize(r.Direction);
+            float a = 0.5 * (unitDir.y + 1.0);
+            vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+            colour *= sky;*/
+            colour = vec3(0.0);
+            return colour;
+        }
+    }
+
+    return colour;
+}
+
+
+void main () {
+    vec3 PreviousSample = imageLoad(ImageOut, PixelCoords).rgb;
+
+    vec3 PixelColour = vec3(0.0);
+    for(int samples = 0; samples < MSAAsamples; samples++) {
+        PixelColour += rayColour(MaximumDepth);
+    }
+    PixelColour /= float(MSAAsamples);
+
+    vec3 NewSample = PixelColour;
+
+    float TotalSamples = float(FrameIndex + 1);
+    vec3 AccumulatedColour = (PreviousSample * float(FrameIndex) + NewSample) / TotalSamples;
+
+    if (FrameIndex == 1) {
+        AccumulatedColour = NewSample;
+    }
+    imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
+}
