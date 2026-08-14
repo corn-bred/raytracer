@@ -13,7 +13,7 @@ uniform sampler2D gRoughness;
 
 uniform vec3 viewPos;
 
-#define NR_LIGHTS 2
+#define NR_LIGHTS 1
 
 //starts at 1 because uninitialized data will be 0 (if uniform only though)
 

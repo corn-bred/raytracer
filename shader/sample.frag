@@ -18,7 +18,7 @@ float linearToGamma(float LinearComponent)
 void main () {
     vec3 RasterData = texture(Raster, TexCoords).rgb;
     vec3 RaytraceData = texture(Raytrace, TexCoords).rgb;
-    vec3 Result = RasterData + RaytraceData;
+    vec3 Result = RaytraceData;
     Result = vec3(linearToGamma(Result.r), linearToGamma(Result.g), linearToGamma(Result.b));
     FragColor = vec4(Result, 1.0);
 }

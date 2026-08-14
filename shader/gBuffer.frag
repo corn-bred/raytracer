@@ -27,6 +27,8 @@ void main() {
     else
         gAlbedo = Albedo;
 
+    gAlbedo = pow(gAlbedo, vec3(2.2));
+
     if (roughnessTextureIdx >= 0)
         gRoughness = textureLod(MeshTextures, vec3(TexCoords, float(roughnessTextureIdx)), 0.0).r;
     else

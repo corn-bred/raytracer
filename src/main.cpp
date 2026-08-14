@@ -252,7 +252,7 @@ int main () {
 
     glGenTextures(1, &RasterOutput);
     glBindTexture(GL_TEXTURE_2D, RasterOutput);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, RasterOutput, 0);
@@ -400,15 +400,15 @@ int main () {
     glBindTexture(GL_TEXTURE_2D, gPosition);
 
     RaytraceShader.setInt("gNormal", 1);
-    glActiveTexture(GL_TEXTURE0);
+    glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, gNormal);
 
     RaytraceShader.setInt("gAlbedo", 2);
-    glActiveTexture(GL_TEXTURE0);
+    glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_2D, gAlbedo);
 
     RaytraceShader.setInt("gRoughness", 3);
-    glActiveTexture(GL_TEXTURE0);
+    glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, gRoughness);
 
     BVHBuffer.bindToShader(0);
@@ -498,7 +498,7 @@ int main () {
         RasterShader.setVec3("viewPos", CameraMain.position);
 
         RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(1.0), 1.0f, 0.09f, 0.032f);
-        RasterLightHandler.addLightSpotlight(1, CameraMain.position, CameraMain.front, glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
+        //RasterLightHandler.addLightSpotlight(1, CameraMain.position, CameraMain.front, glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
 
         BufferQuad.bind();
         glDrawArrays(GL_TRIANGLES, 0, 6);
@@ -515,10 +515,11 @@ int main () {
         RaytraceShader.setInt("MSAAsamples", 1);
         RaytraceShader.setInt("MaximumDepth", 1);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
+        RaytraceShader.setVec3("CameraPos", CameraMain.position);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
-        RaytraceShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+        RaytraceShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
 
         //drawing to screen
 

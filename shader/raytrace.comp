@@ -11,6 +11,7 @@ uniform int MSAAsamples;
 uniform int MaximumDepth;
 uniform sampler2D TextureAccumulation;
 uniform int FrameIndex;
+uniform vec3 CameraPos;
 
 uniform sampler2D gPosition;
 uniform sampler2D gNormal;
@@ -246,7 +247,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     rec.Position = RayAt(ray, rec.t);
 
-    if (det < 0) normal *= -1;
+    //if (det < 0) normal *= -1;
 
     rec.Normal = normal;
 
@@ -357,7 +358,7 @@ vec3 rayColourDebug(Ray r, int maxDepth) {
 vec3 rayColour(int maxDepth) {
     vec3 colour = vec3(1.0);
 
-    float seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2);
+    float seed = glfwTime + PixelCoords.x * (3.96 + glfwTime) + PixelCoords.y * (5.9 + glfwTime * 2);
 
     vec3 WorldPos = texelFetch(gPosition, PixelCoords, 0).rgb;
     vec3 WorldNormal = texelFetch(gNormal, PixelCoords, 0).rgb;
@@ -373,12 +374,12 @@ vec3 rayColour(int maxDepth) {
 
     Ray r;
     r.Origin = WorldPos + normalize(WorldNormal) * 0.001; //float precision
-    r.Direction = Normal;
+    r.Direction = reflect(Normal, normalize(CameraPos - WorldPos));
 
     HitRecord rec;
 
     for (int i = 0; i < maxDepth; i++) {
-        seed = glfwTime + PixelCoords.x * fract(3.96 + glfwTime) + PixelCoords.y * fract(5.9 + glfwTime * 2) + i * fract(2.47 + glfwTime * 3);
+        seed = glfwTime + PixelCoords.x * (3.96 + glfwTime) + PixelCoords.y * (5.9 + glfwTime * 2) + i * (2.47 + glfwTime * 3);
 
         if(TraverseBVH(r, rec, false)) {
             vec3 NextRayDir = vec3(0.0);
@@ -407,13 +408,14 @@ vec3 rayColour(int maxDepth) {
                 float CosTheta = min(dot(-Incident, Normal), 1.0);
 
                 if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-                    NextRayDir = reflect(Incident, rec.Normal);
+                    NextRayDir = reflect(Incident, Normal);
                 } else {
                     NextRayDir = Refracted;
                 }
             } else { //for normal
                 NextRayDir = reflect(Incident, Normal);
             }
+            NextRayDir = vec3(-1.0, 0.0, 0.0);
 
             //change ray data and prep for next sample
             r.Direction = NextRayDir;
