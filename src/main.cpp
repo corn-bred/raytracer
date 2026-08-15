@@ -54,6 +54,15 @@ float DeltaTime, LastFrame;
 unsigned int FPSCounter, ShownFPS;
 int FrameIndex = 0;
 
+enum class Output {
+    Raster,
+    Raytrace,
+    Combined,
+    Comparison
+};
+
+Output OutputType = Output::Combined;
+
 Camera CameraMain(glm::vec3(0.0, 0.0, 5.05));
 
 void framebufferSizeCallback(GLFWwindow *window, int width, int height) {
@@ -94,6 +103,19 @@ void processInput(GLFWwindow *window, Camera &camera) { //Spaghetti code GO
         FrameIndex = 0;
     }
     camera.keyboardprocess(movements, DeltaTime, cameraSpeed);
+
+    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS) {
+        OutputType = Output::Raster;
+    }
+    if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS) {
+        OutputType = Output::Raytrace;
+    }
+    if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS) {
+        OutputType = Output::Combined;
+    }
+    if (glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS) {
+        OutputType = Output::Comparison;
+    }
 }
 
 float LastX = -1.0, LastY = -1.0;
@@ -329,10 +351,10 @@ int main () {
     
     tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(5.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0));
     tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(5.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0));
 
     tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
@@ -436,8 +458,28 @@ int main () {
             ShownFPS = FPSCounter;
             FPSCounter = 0;
         }
+
         stringstream titlestring;
-        titlestring << "Cornbread Program (FPS: " << ShownFPS << ", Frame index: " << FrameIndex <<")";
+        titlestring << "Cornbread Program (FPS: " << ShownFPS << ", Frame index: " << FrameIndex << ", Rendering type: ";
+        switch (OutputType) {
+            case Output::Raster:
+                titlestring << "Raster"; 
+                break;
+            case Output::Raytrace:
+                titlestring << "Raytracing"; 
+                break;
+            case Output::Combined:
+                titlestring << "Combined"; 
+                break;
+            case Output::Comparison:
+                titlestring << "Comparison"; 
+                break;
+            default:
+                titlestring << "Unknown"; 
+                break;
+        }
+        titlestring << ")";
+
         glfwSetWindowTitle(window, titlestring.str().c_str()); 
         LastFrame = CurrentFrame;
 
@@ -536,6 +578,8 @@ int main () {
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
         ShaderSample.setInt("Raytrace", 1);
+
+        ShaderSample.setInt("OutputType", static_cast<int>(OutputType));
 
         BufferQuad.bind();
 

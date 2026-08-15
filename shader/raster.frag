@@ -100,7 +100,7 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     float NdotV = max(0.0, dot(normal, viewDir));
     vec3 F0 = vec3(0.04);
     vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F;
+    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
     
     diffuse *= attenuation;
     specular *= attenuation;
@@ -124,7 +124,7 @@ vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 
     float NdotV = max(0.0, dot(normal, viewDir));
     vec3 F0 = vec3(0.04);
     vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F;
+    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
 
     vec3 result = (diffuse + specular);
     return result;
@@ -150,7 +150,7 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
     float NdotV = max(0.0, dot(normal, viewDir));
     vec3 F0 = vec3(0.04);
     vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F;
+    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
 
     //ambient *= attenuation;
     diffuse *= attenuation;

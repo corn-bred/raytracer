@@ -370,11 +370,11 @@ vec3 rayColour(int maxDepth) {
         return colour;
     }
 
-    vec3 Normal = normalize(normalize(WorldNormal) + randOnHemisphere(seed + 6.35, WorldNormal) * Roughness); //Normal with roughness
+    vec3 Normal = normalize(mix(normalize(WorldNormal), randOnHemisphere(seed, WorldNormal), Roughness)); //Normal with roughness
 
     Ray r;
     r.Origin = WorldPos + normalize(WorldNormal) * 0.001; //float precision
-    r.Direction = normalize(mix(reflect(normalize(WorldPos - CameraPos), Normal), randOnHemisphere(seed, WorldNormal), Roughness));
+    r.Direction = normalize(reflect(normalize(WorldPos - CameraPos), Normal));
 
     vec3 startDir = r.Direction;
 
