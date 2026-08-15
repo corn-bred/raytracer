@@ -351,10 +351,10 @@ int main () {
     
     tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(3.0));
     tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(3.0));
 
     tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
@@ -539,7 +539,7 @@ int main () {
 
         RasterShader.setVec3("viewPos", CameraMain.position);
 
-        RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(1.0), 1.0f, 0.09f, 0.032f);
+        RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(3.0), 1.0f, 0.09f, 0.032f);
         //RasterLightHandler.addLightSpotlight(1, CameraMain.position, CameraMain.front, glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
 
         BufferQuad.bind();
