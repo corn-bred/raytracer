@@ -364,7 +364,7 @@ vec3 rayColour(int maxDepth) {
     vec3 WorldPos = texelFetch(gPosition, PixelCoords, 0).rgb;
     vec3 WorldNormal = texelFetch(gNormal, PixelCoords, 0).rgb;
     vec3 Albedo = texelFetch(gAlbedo, PixelCoords, 0).rgb;
-    float Roughness = 1.0; 
+    float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
     
     if (length(WorldNormal) < 0.001) {
         colour = vec3(0.0);
@@ -389,7 +389,7 @@ vec3 rayColour(int maxDepth) {
             vec3 Incident = normalize(r.Direction); //ray direction
 
             //normal of surface that was hit
-            Normal = normalize(normalize(rec.Normal) + randOnHemisphere(seed + 6.35, rec.Normal) * rec.Roughness);
+            Normal = mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness);
 
             //colour
 

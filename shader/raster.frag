@@ -89,18 +89,21 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     float dist = length(light.Position - fragPos);
     float attenuation = 1.0f / (light.Constant + light.Linear * dist + light.Quadratic * (dist*dist) );
 
-    float diff = max(dot(normal, lightDir), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo) / 3.14159;
+    float NdotL = max(dot(normal, lightDir), 0.0);
+    float NdotV = max(dot(normal, viewDir), 0.0);
+
+    vec3 diffuse = NdotL * (light.Colour * albedo) / 3.14159;
 
     vec3 H = normalize(viewDir + lightDir);
     float NdotH = max(0.0, dot(normal, H));
     float specPower = 1.0 / (roughness + 0.001);
     float specIntensity = pow(NdotH, specPower);
+    float Normalization = (specPower + 2.0) / (2.0 * 3.14159);
 
-    float NdotV = max(0.0, dot(normal, viewDir));
     vec3 F0 = vec3(0.04);
     vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
+
+    vec3 specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
     
     diffuse *= attenuation;
     specular *= attenuation;
