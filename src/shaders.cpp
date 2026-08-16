@@ -40,7 +40,7 @@ Shader::Shader(const char* vertexFilePath, const char* fragmentFilePath) {
 
     if (!success) {
         glGetShaderInfoLog(vertex, 512, NULL, infolog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infolog << std::endl;
+        std::cout << "On file \"" << vertexFilePath << "\": \nERROR::SHADER::VERTEX::COMPILATION_FAILED\nVertex code: \n" << vShaderCode << '\n' << infolog << std::endl;
     }
 
     fragment = glCreateShader(GL_FRAGMENT_SHADER);
@@ -50,7 +50,7 @@ Shader::Shader(const char* vertexFilePath, const char* fragmentFilePath) {
 
     if (!success) {
         glGetShaderInfoLog(fragment, 512, NULL, infolog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infolog << std::endl;
+        std::cout << "On file \"" << fragmentFilePath << "\": \nERROR::SHADER::FRAGMENT::COMPILATION_FAILED\nFragment code: \n" << fShaderCode << '\n' << infolog << std::endl;
     }
 
     ID = glCreateProgram();

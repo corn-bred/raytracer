@@ -194,7 +194,6 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
         specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
     }
 
-    //ambient *= attenuation;
     diffuse *= attenuation;
     specular *= attenuation;
 

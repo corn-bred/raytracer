@@ -37,5 +37,6 @@ void main() {
     else
         gRoughness = Roughness;
 
-    gIsDielectric
+    gIsDielectric = isDielectric ? 1.0 : 0.0;
+    gIOR = IOR;
 }
