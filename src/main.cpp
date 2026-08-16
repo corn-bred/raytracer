@@ -211,7 +211,7 @@ int main () {
     glGenFramebuffers(1, &gBufferFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
 
-    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth;
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth, gIsDielectric, gIOR;
 
     //  gPosition
     glGenTextures(1, &gPosition);
@@ -251,8 +251,20 @@ int main () {
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
-    GLuint attachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
-    glDrawBuffers(4, attachments);
+    //  gIsDielectric
+    glGenTextures(1, &gIsDielectric);
+    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
+
+    //  gIOR
+    glGenTextures(1, &gIOR);
+    glBindTexture(GL_TEXTURE_2D, gIOR);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);
+
+    GLuint attachments[6] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5};
+    glDrawBuffers(6, attachments);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
@@ -295,7 +307,7 @@ int main () {
 
     //CORNELL BOX
 
-    /*std::vector<Object> Objects;
+    std::vector<Object> Objects;
 
     ComputeObjectArray uObjects(Objects);
 
@@ -343,9 +355,9 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    BVH mainBVH(Objects);*/
+    BVH mainBVH(Objects);
 
-    Model model("assets/backpack2.obj");
+    /*Model model("assets/backpack2.obj");
 
     Triangle tempTri;
     
@@ -389,11 +401,11 @@ int main () {
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
-    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
+    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);*/
 
-    GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects, false);
+    GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);
 
-    BVH mainBVH(model.GetObjectVector());
+    //BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
     mainBVH.Flatten();
 
@@ -433,11 +445,19 @@ int main () {
     glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, gRoughness);
 
+    RaytraceShader.setInt("gIsDielectric", 4);
+    glActiveTexture(GL_TEXTURE4);
+    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+
+    RaytraceShader.setInt("gIOR", 5);
+    glActiveTexture(GL_TEXTURE5);
+    glBindTexture(GL_TEXTURE_2D, gIOR);
+
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
     
-    RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
+    RaytraceShader.setInt("EmissorSize", uObjects.LightIndices.size());
     //ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
     
     while (!glfwWindowShouldClose(window)) {
@@ -507,7 +527,7 @@ int main () {
         glm::mat3 normalMatrix = glm::mat3(glm::transpose(glm::inverse(matmodel)));
         gBufferShader.setMat3("normalMatrix", normalMatrix);
 
-        gBufferHandler.bindTextures(model.GetTextureArrayID());
+        //gBufferHandler.bindTextures(model.GetTextureArrayID());
         
         gBufferHandler.draw();
 
@@ -536,6 +556,14 @@ int main () {
         glActiveTexture(GL_TEXTURE3);
         glBindTexture(GL_TEXTURE_2D, gRoughness);
         RasterShader.setInt("gRoughness", 3);
+
+        RasterShader.setInt("gIsDielectric", 4);
+        glActiveTexture(GL_TEXTURE4);
+        glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+
+        RasterShader.setInt("gIOR", 5);
+        glActiveTexture(GL_TEXTURE5);
+        glBindTexture(GL_TEXTURE_2D, gIOR);
 
         RasterShader.setVec3("viewPos", CameraMain.position);
 

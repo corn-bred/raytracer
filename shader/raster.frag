@@ -10,6 +10,8 @@ uniform sampler2D gPosition;
 uniform sampler2D gNormal;
 uniform sampler2D gAlbedo;
 uniform sampler2D gRoughness;
+uniform sampler2D gIsDielectric;
+uniform sampler2D gIOR;
 
 uniform vec3 viewPos;
 
@@ -38,11 +40,11 @@ struct LightUniversal { //not for area lights
     float Quadratic;
 };
 
-vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir);
+vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir);
 
-vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 viewDir);
+vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 viewDir);
 
-vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir);
+vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir);
 
 uniform LightUniversal pointLights[NR_LIGHTS];
 
@@ -55,6 +57,10 @@ void main() {
 
     float Roughness = texture(gRoughness, TexCoords).r;
 
+    float isDielectric = texture(gIsDielectric, TexCoords).r;
+    
+    float IOR = texture(gIOR, TexCoords).r;
+
     if (length(Normal) < 0.001) {
         FragColor = vec4(0.0, 0.0, 0.0, 1.0);
         return;
@@ -66,13 +72,13 @@ void main() {
     for (int i = 0 ; i < NR_LIGHTS; i++) {
         switch(pointLights[i].LightType) {
             case LIGHT_POINT:
-                Result += calculateLightPoint(pointLights[i], Albedo, Roughness, Normal, FragPos, viewDir);
+                Result += calculateLightPoint(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, FragPos, viewDir);
                 break;
             case LIGHT_SUN:
-                Result += calculateLightSun(pointLights[i], Albedo, Roughness, Normal, viewDir);
+                Result += calculateLightSun(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, viewDir);
                 break;
             case LIGHT_SPOTLIGHT:
-                Result += calculateLightSpotlight(pointLights[i], Albedo, Roughness, Normal, FragPos, viewDir);
+                Result += calculateLightSpotlight(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, FragPos, viewDir);
                 break;
             default:
                 break;
@@ -82,7 +88,7 @@ void main() {
     FragColor = vec4(Result, 1.0);
 }
 
-vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir) {
+vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir) {
     if (light.LightType != LIGHT_POINT) return vec3(0.0);
     vec3 lightDir = normalize(light.Position - fragPos); 
 
@@ -92,7 +98,7 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     float NdotL = max(dot(normal, lightDir), 0.0);
     float NdotV = max(dot(normal, viewDir), 0.0);
 
-    vec3 diffuse = NdotL * (light.Colour * albedo) / 3.14159;
+    vec3 diffuse = isDielectric ? vec3(0.0) : NdotL * (light.Colour * albedo) / 3.14159;
 
     vec3 H = normalize(viewDir + lightDir);
     float NdotH = max(0.0, dot(normal, H));
@@ -100,10 +106,19 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     float specIntensity = pow(NdotH, specPower);
     float Normalization = (specPower + 2.0) / (2.0 * 3.14159);
 
-    vec3 F0 = vec3(0.04);
-    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+    vec3 specular;
 
-    vec3 specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
+    if (isDielectric) {
+        float F0 = pow((IOR - 1.0) / (IOR + 1.0), 2.0);
+        vec3 F = vec3(F0) + (1.0 - vec3(F0)) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization;
+    } else {
+        vec3 F0 = vec3(0.04);
+        vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
+    }
     
     diffuse *= attenuation;
     specular *= attenuation;
@@ -112,28 +127,40 @@ vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec
     return result;
 }
 
-vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 viewDir) {
+vec3 calculateLightSun(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 viewDir) {
     if (light.LightType != LIGHT_SUN) return vec3(0.0);
     vec3 lightDir = normalize(-light.Direction);
 
-    float diff = max(dot(normal, lightDir), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo.rgb) / 3.14159;
-    
+    float NdotL = max(dot(normal, lightDir), 0.0);
+    float NdotV = max(dot(normal, viewDir), 0.0);
+
+    vec3 diffuse = isDielectric ? vec3(0.0) : NdotL * (light.Colour * albedo) / 3.14159;
+
     vec3 H = normalize(viewDir + lightDir);
     float NdotH = max(0.0, dot(normal, H));
     float specPower = 1.0 / (roughness + 0.001);
     float specIntensity = pow(NdotH, specPower);
+    float Normalization = (specPower + 2.0) / (2.0 * 3.14159);
 
-    float NdotV = max(0.0, dot(normal, viewDir));
-    vec3 F0 = vec3(0.04);
-    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
+    vec3 specular;
+
+    if (isDielectric) {
+        float F0 = pow((IOR - 1.0) / (IOR + 1.0), 2.0);
+        vec3 F = vec3(F0) + (1.0 - vec3(F0)) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization;
+    } else {
+        vec3 F0 = vec3(0.04);
+        vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
+    }
 
     vec3 result = (diffuse + specular);
     return result;
 }
 
-vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, vec3 fragPos, vec3 viewDir) {
+vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir) {
     if (light.LightType != LIGHT_SPOTLIGHT) return vec3(0.0);
 
     vec3 surfToLight = normalize(light.Position - fragPos);
@@ -142,18 +169,30 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
     float dist = length(light.Position - fragPos);
     float attenuation = 1.0f / (light.Constant + light.Linear * dist + light.Quadratic * (dist*dist) );
 
-    float diff = max(dot(normal, surfToLight), 0.0);
-    vec3 diffuse = diff * (light.Colour * albedo) / 3.14159;
+    float NdotL = max(dot(normal, surfToLight), 0.0);
+    float NdotV = max(dot(normal, viewDir), 0.0);
+
+    vec3 diffuse = isDielectric ? vec3(0.0) : NdotL * (light.Colour * albedo) / 3.14159;
 
     vec3 H = normalize(viewDir + surfToLight);
     float NdotH = max(0.0, dot(normal, H));
     float specPower = 1.0 / (roughness + 0.001);
     float specIntensity = pow(NdotH, specPower);
+    float Normalization = (specPower + 2.0) / (2.0 * 3.14159);
 
-    float NdotV = max(0.0, dot(normal, viewDir));
-    vec3 F0 = vec3(0.04);
-    vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
-    vec3 specular = light.Colour * specIntensity * F * (1.0 - roughness);
+    vec3 specular;
+
+    if (isDielectric) {
+        float F0 = pow((IOR - 1.0) / (IOR + 1.0), 2.0);
+        vec3 F = vec3(F0) + (1.0 - vec3(F0)) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization;
+    } else {
+        vec3 F0 = vec3(0.04);
+        vec3 F = F0 + (1.0 - F0) * pow(1.0 - NdotV, 5.0);
+
+        specular = light.Colour * specIntensity * F * Normalization * (1.0 - roughness);
+    }
 
     //ambient *= attenuation;
     diffuse *= attenuation;

@@ -85,6 +85,9 @@ struct MaterialData {
 
     glm::vec3 fallbackAlbedo;
     float fallbackRoughness;
+
+    bool isDielectric;
+    float IOR;
 };
 
 struct MaterialKey {
@@ -92,6 +95,8 @@ struct MaterialKey {
     int roughnessIdx;
     glm::vec3 fallbackAlbedo;
     float fallbackRoughness;
+    bool isDielectric;
+    float IOR;
 
     bool operator<(const MaterialKey& other) const { // glm::vec3 does not have a comparison operator
         if (albedoIdx != other.albedoIdx) return albedoIdx < other.albedoIdx;
@@ -102,7 +107,11 @@ struct MaterialKey {
         if (fallbackAlbedo.y != other.fallbackAlbedo.y) return fallbackAlbedo.y < other.fallbackAlbedo.y;
         if (fallbackAlbedo.z != other.fallbackAlbedo.z) return fallbackAlbedo.z < other.fallbackAlbedo.z;
         
-        return fallbackRoughness < other.fallbackRoughness;
+        if (fallbackRoughness != other.fallbackRoughness) return fallbackRoughness < other.fallbackRoughness;
+
+        if (isDielectric != other.isDielectric) return isDielectric < other.isDielectric;
+        
+        return IOR < other.IOR;
     }
 };
 
@@ -130,7 +139,9 @@ class GBufferManager {
             int roughnessIdx = _Objects[i].roughnessTextureIdx;
             glm::vec3 fallbackAlbedo = _Objects[i].albedo;
             float fallbackRoughness = _Objects[i].roughness;
-            MaterialGroups [ MaterialKey {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness} ] .push_back(i);
+            bool isDielectric = _Objects[i].dielectric;
+            float IOR = _Objects[i].ior;
+            MaterialGroups [ MaterialKey {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness, isDielectric, IOR} ] .push_back(i);
         }
 
         std::vector<VertexData> vboData;
@@ -141,6 +152,8 @@ class GBufferManager {
             int roughnessIdx = pair.first.roughnessIdx;
             glm::vec3 fallbackAlbedo = pair.first.fallbackAlbedo;
             float fallbackRoughness = pair.first.fallbackRoughness;
+            bool isDielectric = pair.first.isDielectric;
+            float IOR = pair.first.IOR;
 
             const std::vector<int> &ObjectIndices = pair.second;
 
@@ -150,6 +163,8 @@ class GBufferManager {
             data.RoughnessIdx = roughnessIdx;
             data.fallbackAlbedo = fallbackAlbedo;
             data.fallbackRoughness = fallbackRoughness;
+            data.isDielectric = isDielectric;
+            data.IOR = IOR;
 
             for (int ObjectIdx : ObjectIndices) {
                 auto &x = _Objects[ObjectIdx];
@@ -183,6 +198,8 @@ class GBufferManager {
             _LinkedShader.setInt("roughnessTextureIdx", material.RoughnessIdx);
             _LinkedShader.setVec3("Albedo", material.fallbackAlbedo);
             _LinkedShader.setFloat("Roughness", material.fallbackRoughness);
+            _LinkedShader.setBool("dielectric", material.isDielectric);
+            _LinkedShader.setFloat("ior", material.IOR);
                 
             glDrawArrays(GL_TRIANGLES, material.StartData, material.DataCount);
         }
