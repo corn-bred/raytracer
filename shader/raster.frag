@@ -6,12 +6,14 @@ out vec4 FragColor;
 
 //G-buffers from deffered rendering
 
-uniform sampler2D gPosition;
-uniform sampler2D gNormal;
-uniform sampler2D gAlbedo;
-uniform sampler2D gRoughness;
-uniform sampler2D gIsDielectric;
-uniform sampler2D gIOR;
+uniform sampler2DArray gBuffers;
+
+#define gPositionLayer 0
+#define gNormalLayer 1
+#define gAlbedoLayer 2
+#define gRoughnessLayer 3
+#define gIsDielectricLayer 4
+#define gIORLayer 5
 
 uniform vec3 viewPos;
 
@@ -49,17 +51,17 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
 uniform LightUniversal pointLights[NR_LIGHTS];
 
 void main() {
-    vec3 FragPos = texture(gPosition, TexCoords).xyz;
+    vec3 FragPos = texture(gBuffers, vec3(TexCoords, gPositionLayer)).xyz;
 
-    vec3 Albedo = texture(gAlbedo, TexCoords).rgb;
+    vec3 Albedo = texture(gBuffers, vec3(TexCoords, gAlbedoLayer)).rgb;
 
-    vec3 Normal = texture(gNormal, TexCoords).rgb;
+    vec3 Normal = texture(gBuffers, vec3(TexCoords, gNormalLayer)).rgb;
 
-    float Roughness = texture(gRoughness, TexCoords).r;
+    float Roughness = texture(gBuffers, vec3(TexCoords, gRoughnessLayer)).r;
 
-    float isDielectric = texture(gIsDielectric, TexCoords).r;
+    float isDielectric = texture(gBuffers, vec3(TexCoords, gIsDielectricLayer)).r;
     
-    float IOR = texture(gIOR, TexCoords).r;
+    float IOR = texture(gBuffers, vec3(TexCoords, gIORLayer)).r;
 
     if (length(Normal) < 0.001) {
         FragColor = vec4(0.0, 0.0, 0.0, 1.0);
@@ -85,7 +87,7 @@ void main() {
         }
     }
 
-    FragColor = vec4(Result, 1.0);
+    FragColor = vec4(isDielectric, isDielectric, isDielectric, 1.0);
 }
 
 vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir) {

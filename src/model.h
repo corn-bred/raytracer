@@ -90,7 +90,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
-            float Scale = 0.7f;
+            float Scale = 2.0f;
             //cerr << "EBO creation\n";
 
             // indices
@@ -155,7 +155,7 @@ class Model {
                     mat->Get(AI_MATKEY_EMISSIVE_INTENSITY, EmissiveIntensity);
                     objectHandler.addTriangleEmission(tri.v0, tri.v1, tri.v2, glm::vec3(EmissiveColor.r, EmissiveColor.g, EmissiveColor.b) * EmissiveIntensity);
                 } else {
-                    objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(0.0), 0.0, 1, 0); //temp colour
+                    objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.0, -1, -1, 1.15); //temp colour
                 }
             }  
 

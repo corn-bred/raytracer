@@ -198,8 +198,8 @@ class GBufferManager {
             _LinkedShader.setInt("roughnessTextureIdx", material.RoughnessIdx);
             _LinkedShader.setVec3("Albedo", material.fallbackAlbedo);
             _LinkedShader.setFloat("Roughness", material.fallbackRoughness);
-            _LinkedShader.setBool("dielectric", material.isDielectric);
-            _LinkedShader.setFloat("ior", material.IOR);
+            _LinkedShader.setBool("isDielectric", material.isDielectric);
+            _LinkedShader.setFloat("IOR", material.IOR);
                 
             glDrawArrays(GL_TRIANGLES, material.StartData, material.DataCount);
         }
