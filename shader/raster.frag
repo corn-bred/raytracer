@@ -6,14 +6,10 @@ out vec4 FragColor;
 
 //G-buffers from deffered rendering
 
-uniform sampler2DArray gBuffers;
-
-#define gPositionLayer 0
-#define gNormalLayer 1
-#define gAlbedoLayer 2
-#define gRoughnessLayer 3
-#define gIsDielectricLayer 4
-#define gIORLayer 5
+uniform sampler2D gPosition;
+uniform sampler2D gNormal;
+uniform sampler2D gAlbedo;
+uniform sampler2D gRoughness;
 
 uniform vec3 viewPos;
 
@@ -51,17 +47,17 @@ vec3 calculateLightSpotlight(LightUniversal light, vec3 albedo, float roughness,
 uniform LightUniversal pointLights[NR_LIGHTS];
 
 void main() {
-    vec3 FragPos = texture(gBuffers, vec3(TexCoords, gPositionLayer)).xyz;
+    vec3 FragPos = texture(gPosition, TexCoords).xyz;
 
-    vec3 Albedo = texture(gBuffers, vec3(TexCoords, gAlbedoLayer)).rgb;
+    vec3 Albedo = texture(gAlbedo, TexCoords).rgb;
 
-    vec3 Normal = texture(gBuffers, vec3(TexCoords, gNormalLayer)).rgb;
+    vec3 Normal = texture(gNormal, TexCoords).rgb;
 
-    float Roughness = texture(gBuffers, vec3(TexCoords, gRoughnessLayer)).r;
+    float Roughness = texture(gRoughness, TexCoords).r;
 
-    float isDielectric = texture(gBuffers, vec3(TexCoords, gIsDielectricLayer)).r;
+    bool isDielectric = texture(gPosition, TexCoords).a > 0.5 ? true : false;
     
-    float IOR = texture(gBuffers, vec3(TexCoords, gIORLayer)).r;
+    float IOR = texture(gAlbedo, TexCoords).a;
 
     if (length(Normal) < 0.001) {
         FragColor = vec4(0.0, 0.0, 0.0, 1.0);
@@ -74,20 +70,20 @@ void main() {
     for (int i = 0 ; i < NR_LIGHTS; i++) {
         switch(pointLights[i].LightType) {
             case LIGHT_POINT:
-                Result += calculateLightPoint(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, FragPos, viewDir);
+                Result += calculateLightPoint(pointLights[i], Albedo, Roughness, Normal, isDielectric, IOR, FragPos, viewDir);
                 break;
             case LIGHT_SUN:
-                Result += calculateLightSun(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, viewDir);
+                Result += calculateLightSun(pointLights[i], Albedo, Roughness, Normal, isDielectric, IOR, viewDir);
                 break;
             case LIGHT_SPOTLIGHT:
-                Result += calculateLightSpotlight(pointLights[i], Albedo, Roughness, Normal, isDielectric > 0.5 ? true : false, IOR, FragPos, viewDir);
+                Result += calculateLightSpotlight(pointLights[i], Albedo, Roughness, Normal, isDielectric, IOR, FragPos, viewDir);
                 break;
             default:
                 break;
         }
     }
 
-    FragColor = vec4(isDielectric, isDielectric, isDielectric, 1.0);
+    FragColor = vec4(Result, 1.0);
 }
 
 vec3 calculateLightPoint(LightUniversal light, vec3 albedo, float roughness, vec3 normal, bool isDielectric, float IOR, vec3 fragPos, vec3 viewDir) {

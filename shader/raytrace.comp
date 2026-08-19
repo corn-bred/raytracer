@@ -13,7 +13,10 @@ uniform sampler2D TextureAccumulation;
 uniform int FrameIndex;
 uniform vec3 CameraPos;
 
-uniform sampler2DArray gBuffers;
+uniform sampler2D gPosition;
+uniform sampler2D gNormal;
+uniform sampler2D gAlbedo;
+uniform sampler2D gRoughness;
 
 #define gPositionLayer 0
 #define gNormalLayer 1
@@ -365,12 +368,12 @@ vec3 rayColour(int maxDepth) {
 
     float seed = glfwTime + PixelCoords.x * (3.96 + glfwTime) + PixelCoords.y * (5.9 + glfwTime * 2);
 
-    vec3 WorldPos = texelFetch(gBuffers, ivec3(PixelCoords, gPositionLayer), 0).rgb;
-    vec3 WorldNormal = texelFetch(gBuffers, ivec3(PixelCoords, gNormalLayer), 0).rgb;
-    vec3 Albedo = texelFetch(gBuffers, ivec3(PixelCoords, gAlbedoLayer), 0).rgb;
-    float Roughness = texelFetch(gBuffers, ivec3(PixelCoords, gRoughnessLayer), 0).r;
-    bool isDielectric = texelFetch(gBuffers, ivec3(PixelCoords, gIsDielectricLayer), 0).r > 0.5 ? true : false;
-    float IOR = texelFetch(gBuffers, ivec3(PixelCoords, gIORLayer), 0).r;
+    vec3 WorldPos = texelFetch(gPosition, PixelCoords, 0).rgb;
+    vec3 WorldNormal = texelFetch(gNormal, PixelCoords, 0).rgb;
+    vec3 Albedo = texelFetch(gAlbedo, PixelCoords, 0).rgb;
+    float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
+    bool isDielectric = texelFetch(gPosition, PixelCoords, 0).a > 0.5 ? true : false;
+    float IOR = texelFetch(gAlbedo, PixelCoords, 0).a;
     
     if (length(WorldNormal) < 0.001) {
         colour = vec3(0.0);
@@ -383,10 +386,9 @@ vec3 rayColour(int maxDepth) {
     r.Origin = WorldPos + normalize(WorldNormal) * 0.001; //float precision
 
     if (isDielectric) {
-        vec3 ViewDir = normalize(CameraPos - WorldPos); // From surface to camera
-        vec3 Incident = -ViewDir;
+        vec3 Incident = normalize(WorldPos - CameraPos);
 
-        bool facingFront = dot(Incident, WorldNormal) > 0.0;
+        bool facingFront = dot(Incident, WorldNormal) < 0.0;
 
         float ri = facingFront ? (1.0/IOR) : IOR;
 

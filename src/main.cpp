@@ -211,13 +211,39 @@ int main () {
     glGenFramebuffers(1, &gBufferFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
 
-    GLuint gBuffers, gDepth;//gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR;
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth, gIsDielectric, gIOR;
 
-    //  gBuffers
-    glGenTextures(1, &gBuffers);
-    glBindTexture(GL_TEXTURE_2D_ARRAY, gBuffers);
-    glTexStorage3D(GL_TEXTURE_2D_ARRAY, 1, GL_RGBA16F, WIDTH, HEIGHT, 6);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D_ARRAY, gBuffers, 0);
+    //  gPosition
+    glGenTextures(1, &gPosition);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
+
+    //  gNormal
+    glGenTextures(1, &gNormal);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, gNormal, 0);
+
+    //  gAlbedo
+    glGenTextures(1, &gAlbedo);
+    glBindTexture(GL_TEXTURE_2D, gAlbedo);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB8_ALPHA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
+
+    //  gRoughness
+    glGenTextures(1, &gRoughness);
+    glBindTexture(GL_TEXTURE_2D, gRoughness);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, gRoughness, 0);
 
     //  gDepth
     glGenRenderbuffers(1, &gDepth);
@@ -225,8 +251,20 @@ int main () {
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
-    GLuint attachments[1] = {GL_COLOR_ATTACHMENT0};
-    glDrawBuffers(1, attachments);
+    //  gIsDielectric
+    glGenTextures(1, &gIsDielectric);
+    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
+
+    //  gIOR
+    glGenTextures(1, &gIOR);
+    glBindTexture(GL_TEXTURE_2D, gIOR);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);
+
+    GLuint attachments[6] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5};
+    glDrawBuffers(6, attachments);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
@@ -391,9 +429,29 @@ int main () {
     //ShaderStorageBuffer EmissionData(uObjects.LightIndices.data(), uObjects.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
     RaytraceShader.bind();
 
-    RaytraceShader.setInt("gBuffers", 0);
+    RaytraceShader.setInt("gPosition", 0);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D_ARRAY, gBuffers);
+    glBindTexture(GL_TEXTURE_2D, gPosition);
+
+    RaytraceShader.setInt("gNormal", 1);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, gNormal);
+
+    RaytraceShader.setInt("gAlbedo", 2);
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, gAlbedo);
+
+    RaytraceShader.setInt("gRoughness", 3);
+    glActiveTexture(GL_TEXTURE3);
+    glBindTexture(GL_TEXTURE_2D, gRoughness);
+
+    RaytraceShader.setInt("gIsDielectric", 4);
+    glActiveTexture(GL_TEXTURE4);
+    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+
+    RaytraceShader.setInt("gIOR", 5);
+    glActiveTexture(GL_TEXTURE5);
+    glBindTexture(GL_TEXTURE_2D, gIOR);
 
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
@@ -470,11 +528,8 @@ int main () {
         gBufferShader.setMat3("normalMatrix", normalMatrix);
 
         gBufferHandler.bindTextures(model.GetTextureArrayID());
-        for (int i = 0; i < 6; i++) {
-            gBufferShader.setInt("u_LayerIndex", i);
-            glFramebufferTextureLayer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, gBuffers, 0, i);
-            gBufferHandler.draw();
-        }
+        
+        gBufferHandler.draw();
 
         glDisable(GL_DEPTH_TEST);
 
@@ -486,9 +541,29 @@ int main () {
         
         RasterShader.use();
 
-        RasterShader.setInt("gBuffers", 0);
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D_ARRAY, gBuffers);
+        glBindTexture(GL_TEXTURE_2D, gPosition);
+        RasterShader.setInt("gPosition", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, gNormal);
+        RasterShader.setInt("gNormal", 1);
+
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, gAlbedo);
+        RasterShader.setInt("gAlbedo", 2);
+
+        glActiveTexture(GL_TEXTURE3);
+        glBindTexture(GL_TEXTURE_2D, gRoughness);
+        RasterShader.setInt("gRoughness", 3);
+
+        RasterShader.setInt("gIsDielectric", 4);
+        glActiveTexture(GL_TEXTURE4);
+        glBindTexture(GL_TEXTURE_2D, gIsDielectric);
+
+        RasterShader.setInt("gIOR", 5);
+        glActiveTexture(GL_TEXTURE5);
+        glBindTexture(GL_TEXTURE_2D, gIOR);
 
         RasterShader.setVec3("viewPos", CameraMain.position);
 
