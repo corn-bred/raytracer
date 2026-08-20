@@ -211,7 +211,7 @@ int main () {
     glGenFramebuffers(1, &gBufferFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
 
-    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth, gIsDielectric, gIOR;
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gDepth;
 
     //  gPosition
     glGenTextures(1, &gPosition);
@@ -251,20 +251,8 @@ int main () {
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
-    //  gIsDielectric
-    glGenTextures(1, &gIsDielectric);
-    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
-
-    //  gIOR
-    glGenTextures(1, &gIOR);
-    glBindTexture(GL_TEXTURE_2D, gIOR);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);
-
-    GLuint attachments[6] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5};
-    glDrawBuffers(6, attachments);
+    GLuint attachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
+    glDrawBuffers(4, attachments);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
@@ -445,14 +433,6 @@ int main () {
     glActiveTexture(GL_TEXTURE3);
     glBindTexture(GL_TEXTURE_2D, gRoughness);
 
-    RaytraceShader.setInt("gIsDielectric", 4);
-    glActiveTexture(GL_TEXTURE4);
-    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-
-    RaytraceShader.setInt("gIOR", 5);
-    glActiveTexture(GL_TEXTURE5);
-    glBindTexture(GL_TEXTURE_2D, gIOR);
-
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
@@ -557,14 +537,6 @@ int main () {
         glBindTexture(GL_TEXTURE_2D, gRoughness);
         RasterShader.setInt("gRoughness", 3);
 
-        RasterShader.setInt("gIsDielectric", 4);
-        glActiveTexture(GL_TEXTURE4);
-        glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-
-        RasterShader.setInt("gIOR", 5);
-        glActiveTexture(GL_TEXTURE5);
-        glBindTexture(GL_TEXTURE_2D, gIOR);
-
         RasterShader.setVec3("viewPos", CameraMain.position);
 
         RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(3.0), 1.0f, 0.09f, 0.032f);
@@ -583,7 +555,7 @@ int main () {
         RaytraceShader.setInt("Height", HEIGHT);
         RaytraceShader.setFloat("glfwTime", CurrentFrame);
         RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 4);
+        RaytraceShader.setInt("MaximumDepth", 2);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
         RaytraceShader.setVec3("CameraPos", CameraMain.position);
 

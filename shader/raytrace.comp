@@ -252,6 +252,8 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
 
     //vec3 normal = normalize(cross(Edge1, Edge2)); // cross product em for their perpendicular line (only for flat shading)
 
+    rec.facingFront = dot(ray.Direction, normal) < 0.0;
+
     rec.Position = RayAt(ray, rec.t);
 
     //if (det < 0) normal *= -1;
@@ -374,9 +376,14 @@ vec3 rayColour(int maxDepth) {
     float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
     bool isDielectric = texelFetch(gPosition, PixelCoords, 0).a > 0.5 ? true : false;
     float IOR = texelFetch(gAlbedo, PixelCoords, 0).a;
+
+    vec3 Incident = normalize(WorldPos - CameraPos);
     
     if (length(WorldNormal) < 0.001) {
-        colour = vec3(0.0);
+        vec3 unitDir = normalize(Incident);
+        float a = 0.5 * (unitDir.y + 1.0);
+        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+        colour += throughput * sky;
         return colour;
     }
 
@@ -386,26 +393,18 @@ vec3 rayColour(int maxDepth) {
     r.Origin = WorldPos + normalize(WorldNormal) * 0.001; //float precision
 
     if (isDielectric) {
-        vec3 Incident = normalize(WorldPos - CameraPos);
-
-        bool facingFront = dot(Incident, WorldNormal) < 0.0;
+        bool facingFront = dot(Incident, Normal) < 0.0;
 
         float ri = facingFront ? (1.0/IOR) : IOR;
-
+            
         vec3 Refracted = refract(Incident, Normal, ri);
 
-        float CosTheta = max(dot(-Incident, Normal), 1.0);
-
-        float Fresnel = reflectance(CosTheta, ri);
+        float CosTheta = min(dot(-Incident, Normal), 1.0);
 
         if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
             r.Direction = reflect(Incident, Normal);
-
-            throughput *= Fresnel;
         } else {
             r.Direction = Refracted;
-            
-            throughput *= (1.0 - Fresnel);
         }
     } else {
         r.Direction = normalize(reflect(normalize(WorldPos - CameraPos), Normal));
@@ -440,7 +439,7 @@ vec3 rayColour(int maxDepth) {
 
             if (rec.isDielectric) { //for glass
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
-
+            
                 vec3 Refracted = refract(Incident, Normal, ri);
 
                 float CosTheta = min(dot(-Incident, Normal), 1.0);
@@ -458,11 +457,10 @@ vec3 rayColour(int maxDepth) {
             r.Direction = NextRayDir;
             r.Origin = rec.Position + r.Direction * 0.0001;
         } else {
-            /*vec3 unitDir = normalize(r.Direction);
+            vec3 unitDir = normalize(r.Direction);
             float a = 0.5 * (unitDir.y + 1.0);
             vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
-            colour *= sky;*/
-            colour = vec3(0.0);
+            colour *= sky;
             return colour;
         }
     }

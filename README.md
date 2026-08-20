@@ -16,6 +16,9 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 - Next Event Estimation (NEE)
 - Russian roulette
 
+Currently working on:
+Hybrid rendering
+
 Example:
 ![render 1](render1.png)
 Triangles in scene: 67919
