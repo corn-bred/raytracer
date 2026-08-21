@@ -345,7 +345,7 @@ int main () {
 
     BVH mainBVH(Objects);*/
 
-    Model model("assets/stanford-bunny2.obj");
+    Model model("assets/cube.obj");
 
     Triangle tempTri;
     
@@ -555,7 +555,7 @@ int main () {
         RaytraceShader.setInt("Height", HEIGHT);
         RaytraceShader.setFloat("glfwTime", CurrentFrame);
         RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 2);
+        RaytraceShader.setInt("MaximumDepth", 4);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
         RaytraceShader.setVec3("CameraPos", CameraMain.position);
 
