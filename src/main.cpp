@@ -555,7 +555,7 @@ int main () {
         RaytraceShader.setInt("Height", HEIGHT);
         RaytraceShader.setFloat("glfwTime", CurrentFrame);
         RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 4);
+        RaytraceShader.setInt("MaximumDepth", 3);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
         RaytraceShader.setVec3("CameraPos", CameraMain.position);
 
