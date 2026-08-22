@@ -27,6 +27,7 @@ uniform sampler2D gRoughness;
 
 const float infinity = 1.0 / 0.0;
 const float pi = 3.1415926535897932385;
+const float tau = 6.2831853071795864769;
 
 ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
 
@@ -69,12 +70,24 @@ vec2 randRangeVec2(float seed, float min, float max) {
 }
 
 vec3 randOnHemisphere(float seed, vec3 Normal) {
-    vec3 OnUnitSphere = randUnitVec3(seed);
-    if(dot(OnUnitSphere, Normal) > 0.0) {
-        return OnUnitSphere;
-    } else {
-        return -OnUnitSphere;
-    }
+    float Phi = rand(seed + 1.45) * tau; //azimuthal angle
+
+    //polar angle calculation with cosine weighting
+    float CosTheta = sqrt(rand(seed + 3.35));
+    float SinTheta = sqrt(1.0 - CosTheta * CosTheta);
+
+    //coordinate creation on local space (based on spherical coordinates method)
+    vec3 SamplePoint = vec3(SinTheta * cos(Phi), CosTheta, SinTheta * sin(Phi));
+
+    //local space to world space
+    vec3 up = (abs(Normal.z) < 0.999) ? vec3(0.0, 0.0, 1.0) : vec3(1.0, 0.0, 0.0); //float precision error
+    vec3 Tangent = normalize(cross(Normal, up));
+    vec3 Bitangent = normalize(cross(Normal, Tangent));
+
+    //conversion
+    vec3 WorldPoint = SamplePoint.x * Tangent + SamplePoint.y * Normal + SamplePoint.z * Bitangent;
+    
+    return WorldPoint;
 }
 
 float reflectance(float cosine, float ior) {
@@ -232,7 +245,7 @@ bool TriangleHit(inout Object object, Ray ray, float ray_tmin, float ray_tmax, i
     float u = dot(tVec, pVec) * invdet;
     float v = dot(ray.Direction, qVec) * invdet;
 
-    if (!((u >= 0 && u <= 1) && (v >= 0 && v <= 1) && (u + v) < 1)) return false;
+    if (!((u >= 0 && u <= 1) && (v >= 0 && v <= 1) && (u + v) <= 1)) return false;
 
     float t = dot(Edge2, qVec) * invdet;
 
@@ -281,8 +294,6 @@ layout(std430, binding = 2) readonly buffer ObjectData {
     Object Objects[];
 };
 
-int totaliteration;
-
 bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
     bool isHit = false;
     rec.t = 1e30;
@@ -294,7 +305,7 @@ bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
     int maxIterations = 1024; // safety limit
     int iterations = 0;
 
-    while(StackIndex > 0 && iterations < maxIterations) {
+    while(StackIndex > 0 && iterations < maxIterations && StackIndex < 64) {
         iterations++;
         //Get node
         int NodeIndex = Stack[--StackIndex];
@@ -342,7 +353,6 @@ bool TraverseBVH(Ray ray, out HitRecord rec, bool isShadowRay) {
         }
     }
 
-    iterations = totaliteration;
     return isHit;
 }
 
@@ -427,7 +437,7 @@ vec3 rayColour(int maxDepth) {
             vec3 Incident = normalize(r.Direction); //ray direction
 
             //normal of surface that was hit
-            Normal = mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness);
+            Normal = normalize(mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness));
 
             //colour
 
@@ -478,11 +488,6 @@ vec3 rayColour(int maxDepth) {
     }
 
     colour += throughput * rec.Albedo;
-    
-    if (!isDielectric) { //because its usually black for rendering pass
-        float StartCos = max(0.0, dot(WorldNormal, startDir));
-        colour *= Albedo * 2.0 * StartCos;
-    }
 
     return colour;
 }
