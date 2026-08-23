@@ -96,6 +96,8 @@ class BVH {
             outMax = glm::max(outMax, tri.v1.Position);
             outMax = glm::max(outMax, tri.v2.Position);
         }
+        outMin -= glm::vec3(0.001);
+        outMax += glm::vec3(0.001);
     }
 
     int ChooseSplitAxis(int start, int end) { //Chooses the axis to split the bounding box. Chooses via longest axis

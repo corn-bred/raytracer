@@ -392,33 +392,44 @@ vec3 rayColour(int maxDepth) {
     if (length(WorldNormal) < 0.001) {
         vec3 unitDir = normalize(Incident);
         float a = 0.5 * (unitDir.y + 1.0);
-        vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+        //vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+        vec3 sky = vec3(0.0);
+        
         colour += throughput * sky;
         return colour;
     }
 
-    vec3 Normal = normalize(mix(normalize(WorldNormal), randOnHemisphere(seed, WorldNormal), Roughness)); //Normal with roughness
-
     Ray r;
-    bool facingFront = dot(Incident, Normal) < 0.0;
+    bool facingFront = dot(Incident, WorldNormal) < 0.0;
     if (isDielectric) {
 
         float ri = facingFront ? (1.0/IOR) : IOR;
             
-        vec3 Refracted = refract(Incident, Normal, ri);
+        vec3 Refracted = refract(Incident, WorldNormal, ri);
 
-        float CosTheta = min(dot(-Incident, Normal), 1.0);
+        float CosTheta = min(dot(-Incident, WorldNormal), 1.0);
 
         if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-            r.Direction = reflect(Incident, Normal);
-            r.Origin = WorldPos + WorldNormal * 0.01 * (facingFront ? 1.0 : -1.0); //float precision
+            if (rand(seed + 10.325) < Roughness) {
+                r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
+                throughput *= Albedo;
+            } else {
+                r.Direction = reflect(Incident, WorldNormal);
+            }
+            r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         } else {
             r.Direction = Refracted;
-            r.Origin = WorldPos - WorldNormal * 0.01 * (facingFront ? 1.0 : -1.0); //float precision
+            r.Origin = WorldPos - WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         }
     } else {
-        r.Direction = normalize(reflect(normalize(WorldPos - CameraPos), Normal));
-        r.Origin = WorldPos + WorldNormal * 0.01 * (facingFront ? 1.0 : -1.0); //float precision
+        if (rand(seed + 10.325) < Roughness) {
+            r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
+            throughput *= Albedo;
+        } else {
+            r.Direction = reflect(Incident, WorldNormal);
+        }
+
+        r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
 
         if (dot(r.Direction, WorldNormal) <= 0.0) { //if direction goes inward back into the surface
             r.Direction = reflect(r.Direction, WorldNormal);
@@ -436,9 +447,6 @@ vec3 rayColour(int maxDepth) {
             vec3 NextRayDir = vec3(0.0);
             vec3 Incident = normalize(r.Direction); //ray direction
 
-            //normal of surface that was hit
-            Normal = normalize(mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness));
-
             //colour
 
             if (rec.isEmissive) {
@@ -453,21 +461,31 @@ vec3 rayColour(int maxDepth) {
 
             if (rec.isDielectric) { //for glass
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
-            
-                vec3 Refracted = refract(Incident, Normal, ri);
+                vec3 Refracted = refract(Incident, rec.Normal, ri);
 
-                float CosTheta = min(dot(-Incident, Normal), 1.0);
+                float CosTheta = min(dot(-Incident, rec.Normal), 1.0);
 
                 if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-                    NextRayDir = reflect(Incident, Normal);
-                    r.Origin = rec.Position + rec.Normal * 0.01 * (rec.facingFront ? 1.0 : -1.0);
+                    if (rand(seed + 10.325) < rec.Roughness) {
+                        NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
+                        throughput *= rec.Albedo;
+                    } else {
+                        NextRayDir = reflect(Incident, rec.Normal);
+                    }
+                    r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 } else {
                     NextRayDir = Refracted;
-                    r.Origin = rec.Position - rec.Normal * 0.01 * (rec.facingFront ? 1.0 : -1.0);
+                    r.Origin = rec.Position - rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 }
             } else { //for normal
-                NextRayDir = reflect(Incident, Normal);
-                r.Origin = rec.Position + rec.Normal * 0.01 * (rec.facingFront ? 1.0 : -1.0);
+                if (rand(seed + 10.325) < rec.Roughness) {
+                    NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
+                    throughput *= rec.Albedo;
+                } else {
+                    NextRayDir = reflect(Incident, rec.Normal);
+                }
+                
+                r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
 
                 if (dot(NextRayDir, rec.Normal) <= 0.0) { //if direction goes inward back into the surface
                     NextRayDir = reflect(NextRayDir, rec.Normal);
@@ -480,7 +498,8 @@ vec3 rayColour(int maxDepth) {
         } else {
             vec3 unitDir = normalize(r.Direction);
             float a = 0.5 * (unitDir.y + 1.0);
-            vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+            //vec3 sky = (1.0 - a) * vec3(1.0) + a * vec3(0.5, 0.7, 1.0);
+            vec3 sky = vec3(0.0);
             colour += throughput * sky;
 
             return colour;
