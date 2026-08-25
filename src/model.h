@@ -155,7 +155,7 @@ class Model {
                     mat->Get(AI_MATKEY_EMISSIVE_INTENSITY, EmissiveIntensity);
                     objectHandler.addTriangleEmission(tri.v0, tri.v1, tri.v2, glm::vec3(EmissiveColor.r, EmissiveColor.g, EmissiveColor.b) * EmissiveIntensity);
                 } else {
-                    objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.0, -1, -1, 1.0); //temp colour
+                    objectHandler.addTriangle(tri.v0, tri.v1, tri.v2, glm::vec3(1.0), 0.0, -1, -1, 1.15); //temp colour
                 }
             }  
 

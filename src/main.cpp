@@ -232,7 +232,7 @@ int main () {
     //  gAlbedo
     glGenTextures(1, &gAlbedo);
     glBindTexture(GL_TEXTURE_2D, gAlbedo);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_SRGB8_ALPHA8, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
@@ -555,7 +555,7 @@ int main () {
         RaytraceShader.setInt("Height", HEIGHT);
         RaytraceShader.setFloat("glfwTime", CurrentFrame);
         RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 3);
+        RaytraceShader.setInt("MaximumDepth", 4);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
         RaytraceShader.setVec3("CameraPos", CameraMain.position);
 
@@ -588,6 +588,8 @@ int main () {
         glfwSwapBuffers(window);
         
         FPSCounter++;
+
+        //_sleep(100);
     }
     glDeleteTextures(1, &RaytraceShaderAccumulationTexture);
     glfwTerminate();
