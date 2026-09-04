@@ -1,0 +1,3 @@
+C:/Users/maxwo/raytracer/build/CMakeFiles/Raytracing.dir
+C:/Users/maxwo/raytracer/build/CMakeFiles/edit_cache.dir
+C:/Users/maxwo/raytracer/build/CMakeFiles/rebuild_cache.dir

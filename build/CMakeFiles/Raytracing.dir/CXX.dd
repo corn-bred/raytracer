@@ -1,0 +1,19 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/Raytracing.dir/src/main.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/src/shaders.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_draw.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_widgets.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_tables.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_demo.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj: dyndep
+
+build CMakeFiles/Raytracing.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj: dyndep
+

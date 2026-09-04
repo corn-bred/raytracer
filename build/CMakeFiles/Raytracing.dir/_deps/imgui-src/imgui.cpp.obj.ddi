@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\Raytracing.dir\\_deps\\imgui-src\\imgui.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}
