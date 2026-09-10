@@ -1,10 +1,10 @@
-# 0 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 0 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 # 0 "<built-in>"
 # 0 "<command-line>"
-# 1 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
-# 134 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
-# 1 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 1
-# 63 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 134 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 1
+# 63 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
        
 
 
@@ -12,35 +12,35 @@
 
 
 
-# 1 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imconfig.h" 1
-# 15 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imconfig.h"
+# 1 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imconfig.h" 1
+# 15 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imconfig.h"
        
-# 71 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 79 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h" 1 3 4
-# 653 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/float.h" 1 3 4
-# 138 "C:/Users/maxwo/msys2/mingw64/include/float.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/crtdefs.h" 1 3 4
-# 10 "C:/Users/maxwo/msys2/mingw64/include/crtdefs.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 1 3 4
-# 10 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 1 3 4
-# 10 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw_mac.h" 1 3 4
-# 108 "C:/Users/maxwo/msys2/mingw64/include/_mingw_mac.h" 3 4
+# 71 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 79 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h" 1 3 4
+# 632 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h" 3 4
+# 1 "C:/msys64/ucrt64/include/float.h" 1 3 4
+# 138 "C:/msys64/ucrt64/include/float.h" 3 4
+# 1 "C:/msys64/ucrt64/include/crtdefs.h" 1 3 4
+# 10 "C:/msys64/ucrt64/include/crtdefs.h" 3 4
+# 1 "C:/msys64/ucrt64/include/corecrt.h" 1 3 4
+# 10 "C:/msys64/ucrt64/include/corecrt.h" 3 4
+# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3 4
+# 10 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 1 "C:/msys64/ucrt64/include/_mingw_mac.h" 1 3 4
+# 98 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
              
-# 117 "C:/Users/maxwo/msys2/mingw64/include/_mingw_mac.h" 3 4
+# 107 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
              
-# 326 "C:/Users/maxwo/msys2/mingw64/include/_mingw_mac.h" 3 4
+# 316 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
        
-# 405 "C:/Users/maxwo/msys2/mingw64/include/_mingw_mac.h" 3 4
+# 395 "C:/msys64/ucrt64/include/_mingw_mac.h" 3 4
        
-# 11 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 2 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw_secapi.h" 1 3 4
-# 44 "C:/Users/maxwo/msys2/mingw64/include/_mingw_secapi.h" 3 4
+# 11 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
+# 1 "C:/msys64/ucrt64/include/_mingw_secapi.h" 1 3 4
+# 44 "C:/msys64/ucrt64/include/_mingw_secapi.h" 3 4
 
-# 44 "C:/Users/maxwo/msys2/mingw64/include/_mingw_secapi.h" 3 4
+# 44 "C:/msys64/ucrt64/include/_mingw_secapi.h" 3 4
 extern "C++" {
 template <bool __test, typename __dsttype>
   struct __if_array;
@@ -49,12 +49,15 @@ template <typename __dsttype>
     typedef __dsttype __type;
 };
 }
-# 12 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 2 3 4
-# 306 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/vadefs.h" 1 3 4
-# 9 "C:/Users/maxwo/msys2/mingw64/include/vadefs.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 1 3 4
-# 10 "C:/Users/maxwo/msys2/mingw64/include/vadefs.h" 2 3 4
+# 12 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
+# 296 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 1 "C:/msys64/ucrt64/include/vadefs.h" 1 3 4
+# 9 "C:/msys64/ucrt64/include/vadefs.h" 3 4
+# 1 "C:/msys64/ucrt64/include/_mingw.h" 1 3 4
+# 675 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+# 1 "C:/msys64/ucrt64/include/sdks/_mingw_ddk.h" 1 3 4
+# 676 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
+# 10 "C:/msys64/ucrt64/include/vadefs.h" 2 3 4
 
 
 
@@ -77,21 +80,19 @@ extern "C" {
 
 
   typedef __gnuc_va_list va_list;
-# 99 "C:/Users/maxwo/msys2/mingw64/include/vadefs.h" 3 4
+# 99 "C:/msys64/ucrt64/include/vadefs.h" 3 4
 }
 
 
 
 #pragma pack(pop)
-# 307 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 2 3 4
-# 592 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
+# 297 "C:/msys64/ucrt64/include/_mingw.h" 2 3 4
+# 582 "C:/msys64/ucrt64/include/_mingw.h" 3 4
 extern "C" {
-# 604 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
+# 594 "C:/msys64/ucrt64/include/_mingw.h" 3 4
 void __attribute__((__cdecl__)) __debugbreak(void);
 extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __debugbreak(void)
 {
-
-
 
   __asm__ __volatile__("int {$}3":);
 
@@ -99,38 +100,32 @@ extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attri
 
 
 
+
+
 }
-# 625 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
-void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int _Code);
-extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int _Code)
+# 615 "C:/msys64/ucrt64/include/_mingw.h" 3 4
+void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code);
+extern __inline__ __attribute__((__always_inline__,__gnu_inline__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) __fastfail(unsigned int code)
 {
 
-
-
-
-  __asm__ __volatile__("int {$}0x29"::"c"(_Code));
-
-
-
-
-
-
+  __asm__ __volatile__("int {$}0x29"::"c"(code));
+# 629 "C:/msys64/ucrt64/include/_mingw.h" 3 4
   __builtin_unreachable();
 }
-# 665 "C:/Users/maxwo/msys2/mingw64/include/_mingw.h" 3 4
+# 655 "C:/msys64/ucrt64/include/_mingw.h" 3 4
 const char *__mingw_get_crt_info (void);
 
 
 }
-# 11 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 2 3 4
+# 11 "C:/msys64/ucrt64/include/corecrt.h" 2 3 4
 
 
 
 
 #pragma pack(push,_CRT_PACKING)
-# 35 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 35 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 __extension__ typedef unsigned long long size_t;
-# 45 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 45 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 __extension__ typedef long long ssize_t;
 
 
@@ -139,13 +134,13 @@ __extension__ typedef long long ssize_t;
 
 
 typedef size_t rsize_t;
-# 62 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 62 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 __extension__ typedef long long intptr_t;
-# 75 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 75 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 __extension__ typedef unsigned long long uintptr_t;
-# 88 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 88 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 __extension__ typedef long long ptrdiff_t;
-# 106 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 106 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 typedef unsigned short wint_t;
 typedef unsigned short wctype_t;
 
@@ -164,13 +159,9 @@ typedef long __time32_t;
 
 
 __extension__ typedef long long __time64_t;
-# 138 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 138 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 typedef __time64_t time_t;
-# 157 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
-__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _invalid_parameter_noinfo(void);
-__attribute__ ((__dllimport__)) __attribute__ ((__noreturn__)) void __attribute__((__cdecl__)) _invalid_parameter_noinfo_noreturn(void);
-__attribute__ ((__dllimport__)) __attribute__ ((__noreturn__)) void __attribute__((__cdecl__)) _invoke_watson(const wchar_t *expression, const wchar_t *function_name, const wchar_t *file_name, unsigned int line_number, long long unsigned int reserved);
-# 437 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 430 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 struct threadlocaleinfostruct;
 struct threadmbcinfostruct;
 typedef struct threadlocaleinfostruct *pthreadlocinfo;
@@ -195,40 +186,16 @@ typedef struct tagLC_ID {
 
 typedef struct threadlocaleinfostruct {
 
-
-
-
-
-  int refcount;
-  unsigned int lc_codepage;
-  unsigned int lc_collate_cp;
-  unsigned long lc_handle[6];
-  LC_ID lc_id[6];
-  struct {
-    char *locale;
-    wchar_t *wlocale;
-    int *refcount;
-    int *wrefcount;
-  } lc_category[6];
-  int lc_clike;
-  int mb_cur_max;
-  int *lconv_intl_refcount;
-  int *lconv_num_refcount;
-  int *lconv_mon_refcount;
-  struct lconv *lconv;
-  int *ctype1_refcount;
-  unsigned short *ctype1;
-  const unsigned short *pctype;
-  const unsigned char *pclmap;
-  const unsigned char *pcumap;
-  struct __lc_time_data *lc_time_curr;
-
+  const unsigned short *_locale_pctype;
+  int _locale_mb_cur_max;
+  unsigned int _locale_lc_codepage;
+# 482 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 } threadlocinfo;
-# 508 "C:/Users/maxwo/msys2/mingw64/include/corecrt.h" 3 4
+# 501 "C:/msys64/ucrt64/include/corecrt.h" 3 4
 #pragma pack(pop)
-# 11 "C:/Users/maxwo/msys2/mingw64/include/crtdefs.h" 2 3 4
-# 139 "C:/Users/maxwo/msys2/mingw64/include/float.h" 2 3 4
-# 266 "C:/Users/maxwo/msys2/mingw64/include/float.h" 3 4
+# 11 "C:/msys64/ucrt64/include/crtdefs.h" 2 3 4
+# 139 "C:/msys64/ucrt64/include/float.h" 2 3 4
+# 255 "C:/msys64/ucrt64/include/float.h" 3 4
 extern "C" {
 
 
@@ -240,12 +207,9 @@ __attribute__((dllimport)) errno_t __attribute__((__cdecl__)) _controlfp_s(unsig
 __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _control87 (unsigned int _NewValue, unsigned int _Mask);
 
 
-
-
-
 __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _clearfp (void);
 __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _statusfp (void);
-# 295 "C:/Users/maxwo/msys2/mingw64/include/float.h" 3 4
+# 281 "C:/msys64/ucrt64/include/float.h" 3 4
 void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _fpreset (void);
 
 void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fpreset (void);
@@ -253,7 +217,7 @@ void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fpreset (void);
 
 
 __attribute__ ((__dllimport__)) int * __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) __fpecode(void);
-# 311 "C:/Users/maxwo/msys2/mingw64/include/float.h" 3 4
+# 297 "C:/msys64/ucrt64/include/float.h" 3 4
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _chgsign (double _X);
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _copysign (double _Number,double _Sign);
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _logb (double);
@@ -270,18 +234,18 @@ extern long double __attribute__((__cdecl__)) _chgsignl (long double);
 
 
 }
-# 654 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h" 2 3 4
-# 80 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h" 1 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdarg.h" 1 3 4
-# 140 "C:/Users/maxwo/msys2/mingw64/include/stdarg.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw_stdarg.h" 1 3 4
-# 141 "C:/Users/maxwo/msys2/mingw64/include/stdarg.h" 2 3 4
-# 2 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h" 2 3 4
-# 81 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stddef.h" 1 3 4
-# 13 "C:/Users/maxwo/msys2/mingw64/include/stddef.h" 3 4
+# 633 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h" 2 3 4
+# 80 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h" 1 3 4
+# 1 "C:/msys64/ucrt64/include/stdarg.h" 1 3 4
+# 140 "C:/msys64/ucrt64/include/stdarg.h" 3 4
+# 1 "C:/msys64/ucrt64/include/_mingw_stdarg.h" 1 3 4
+# 141 "C:/msys64/ucrt64/include/stdarg.h" 2 3 4
+# 2 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h" 2 3 4
+# 81 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/ucrt64/include/stddef.h" 1 3 4
+# 13 "C:/msys64/ucrt64/include/stddef.h" 3 4
 extern "C" {
 
 
@@ -289,8 +253,8 @@ extern "C" {
 
   __attribute__ ((__dllimport__)) extern int *__attribute__((__cdecl__)) _errno(void);
 
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
+  errno_t __attribute__((__cdecl__)) _set_errno(int _Value);
+  errno_t __attribute__((__cdecl__)) _get_errno(int *_Value);
 
 
   __attribute__ ((__dllimport__)) extern unsigned long __attribute__((__cdecl__)) __threadid(void);
@@ -299,17 +263,17 @@ extern "C" {
 
 
 }
-# 424 "C:/Users/maxwo/msys2/mingw64/include/stddef.h" 3 4
+# 424 "C:/msys64/ucrt64/include/stddef.h" 3 4
 typedef struct {
   long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
   long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
 } max_align_t;
-# 2 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 82 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/include/string.h" 1 3
-# 21 "C:/Users/maxwo/msys2/mingw64/include/string.h" 3
+# 2 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 2 3 4
+# 82 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 1 "C:/msys64/ucrt64/include/string.h" 1 3
+# 21 "C:/msys64/ucrt64/include/string.h" 3
 extern "C" {
-# 45 "C:/Users/maxwo/msys2/mingw64/include/string.h" 3
+# 45 "C:/msys64/ucrt64/include/string.h" 3
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _memccpy(void *_Dst,const void *_Src,int _Val,size_t _MaxCount);
   void *__attribute__((__cdecl__)) memchr(const void *_Buf ,int _Val,size_t _MaxCount);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _memicmp(const void *_Buf1,const void *_Buf2,size_t _Size);
@@ -332,19 +296,12 @@ extern "C" {
   size_t __attribute__((__cdecl__)) strlen(const char *_Str);
   size_t __attribute__((__cdecl__)) strnlen(const char *_Str,size_t _MaxCount);
   void *__attribute__((__cdecl__)) memmove(void *_Dst,const void *_Src,size_t _Size) ;
-
-
-
-
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strdup(const char *_Src);
-
-
-
   char *__attribute__((__cdecl__)) strchr(const char *_Str,int _Val);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricmp(const char *_Str1,const char *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strcmpi(const char *_Str1,const char *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricmp_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) strcoll(const char *_Str1,const char *_Str2);
+  int __attribute__((__cdecl__)) strcoll(const char *_Str1,const char *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strcoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricoll(const char *_Str1,const char *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _stricoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
@@ -354,7 +311,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _strnicoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
   size_t __attribute__((__cdecl__)) strcspn(const char *_Str,const char *_Control);
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strerror(const char *_ErrMsg) ;
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) strerror(int) ;
+  char *__attribute__((__cdecl__)) strerror(int) ;
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strlwr(char *_String) ;
   char *strlwr_l(char *_String,_locale_t _Locale) ;
   char *__attribute__((__cdecl__)) strncat(char * __restrict__ _Dest,const char * __restrict__ _Source,size_t _Count) ;
@@ -369,40 +326,41 @@ extern "C" {
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strrev(char *_Str);
   size_t __attribute__((__cdecl__)) strspn(const char *_Str,const char *_Control);
   char *__attribute__((__cdecl__)) strstr(const char *_Str,const char *_SubStr);
-  __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) strtok(char * __restrict__ _Str,const char * __restrict__ _Delim) ;
+  char *__attribute__((__cdecl__)) strtok(char * __restrict__ _Str,const char * __restrict__ _Delim) ;
        
 
   char *strtok_r(char * __restrict__ _Str, const char * __restrict__ _Delim, char ** __restrict__ __last);
        
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _strupr(char *_String) ;
   __attribute__ ((__dllimport__)) char *_strupr_l(char *_String,_locale_t _Locale) ;
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) strxfrm(char * __restrict__ _Dst,const char * __restrict__ _Src,size_t _MaxCount);
+  size_t __attribute__((__cdecl__)) strxfrm(char * __restrict__ _Dst,const char * __restrict__ _Src,size_t _MaxCount);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _strxfrm_l(char * __restrict__ _Dst,const char * __restrict__ _Src,size_t _MaxCount,_locale_t _Locale);
 
 
-
-
-
-
   char *__attribute__((__cdecl__)) strdup(const char *_Src) ;
-
-
-
   int __attribute__((__cdecl__)) strcmpi(const char *_Str1,const char *_Str2) ;
   int __attribute__((__cdecl__)) stricmp(const char *_Str1,const char *_Str2) ;
   char *__attribute__((__cdecl__)) strlwr(char *_Str) ;
   int __attribute__((__cdecl__)) strnicmp(const char *_Str1,const char *_Str,size_t _MaxCount) ;
   int __attribute__((__cdecl__)) strncasecmp (const char *, const char *, size_t);
   int __attribute__((__cdecl__)) strcasecmp (const char *, const char *);
+
+
+
+
+
+
+
   char *__attribute__((__cdecl__)) strnset(char *_Str,int _Val,size_t _MaxCount) ;
   char *__attribute__((__cdecl__)) strrev(char *_Str) ;
   char *__attribute__((__cdecl__)) strset(char *_Str,int _Val) ;
   char *__attribute__((__cdecl__)) strupr(char *_Str) ;
-# 142 "C:/Users/maxwo/msys2/mingw64/include/string.h" 3
+
+
+
+
+
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wcsdup(const wchar_t *_Str);
-
-
-
   wchar_t *__attribute__((__cdecl__)) wcscat(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Source) ;
   wchar_t *__attribute__((__cdecl__)) wcschr(const wchar_t *_Str,wchar_t _Ch);
   int __attribute__((__cdecl__)) wcscmp(const wchar_t *_Str1,const wchar_t *_Str2);
@@ -418,8 +376,8 @@ extern "C" {
   wchar_t *__attribute__((__cdecl__)) wcsrchr(const wchar_t *_Str,wchar_t _Ch);
   size_t __attribute__((__cdecl__)) wcsspn(const wchar_t *_Str,const wchar_t *_Control);
   wchar_t *__attribute__((__cdecl__)) wcsstr(const wchar_t *_Str,const wchar_t *_SubStr);
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) wcstok(wchar_t * __restrict__ _Str,const wchar_t * __restrict__ _Delim,wchar_t ** __restrict__ _Ptr) ;
-  __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wcstok(wchar_t * __restrict__ _Str,const wchar_t * __restrict__ _Delim) ;
+  wchar_t *__attribute__((__cdecl__)) wcstok(wchar_t * __restrict__ _Str,const wchar_t * __restrict__ _Delim,wchar_t ** __restrict__ _Ptr) ;
+  wchar_t *__attribute__((__cdecl__)) _wcstok(wchar_t * __restrict__ _Str,const wchar_t * __restrict__ _Delim) ;
 
 
 
@@ -439,9 +397,9 @@ extern "C" {
   __attribute__ ((__dllimport__)) wchar_t *_wcslwr_l(wchar_t *_String,_locale_t _Locale) ;
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wcsupr(wchar_t *_String) ;
   __attribute__ ((__dllimport__)) wchar_t *_wcsupr_l(wchar_t *_String,_locale_t _Locale) ;
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) wcsxfrm(wchar_t * __restrict__ _Dst,const wchar_t * __restrict__ _Src,size_t _MaxCount);
+  size_t __attribute__((__cdecl__)) wcsxfrm(wchar_t * __restrict__ _Dst,const wchar_t * __restrict__ _Src,size_t _MaxCount);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcsxfrm_l(wchar_t * __restrict__ _Dst,const wchar_t * __restrict__ _Src,size_t _MaxCount,_locale_t _Locale);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) wcscoll(const wchar_t *_Str1,const wchar_t *_Str2);
+  int __attribute__((__cdecl__)) wcscoll(const wchar_t *_Str1,const wchar_t *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wcscoll_l(const wchar_t *_Str1,const wchar_t *_Str2,_locale_t _Locale);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wcsicoll(const wchar_t *_Str1,const wchar_t *_Str2);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wcsicoll_l(const wchar_t *_Str1,const wchar_t *_Str2,_locale_t _Locale);
@@ -451,14 +409,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wcsnicoll_l(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount,_locale_t _Locale);
 
 
-
-
-
-
   wchar_t *__attribute__((__cdecl__)) wcsdup(const wchar_t *_Str) ;
-
-
-
 
   int __attribute__((__cdecl__)) wcsicmp(const wchar_t *_Str1,const wchar_t *_Str2) ;
   int __attribute__((__cdecl__)) wcsnicmp(const wchar_t *_Str1,const wchar_t *_Str2,size_t _MaxCount) ;
@@ -475,11 +426,11 @@ extern "C" {
 }
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/sec_api/string_s.h" 1 3
-# 9 "C:/Users/maxwo/msys2/mingw64/include/sec_api/string_s.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/string.h" 1 3
-# 10 "C:/Users/maxwo/msys2/mingw64/include/sec_api/string_s.h" 2 3
-# 21 "C:/Users/maxwo/msys2/mingw64/include/sec_api/string_s.h" 3
+# 1 "C:/msys64/ucrt64/include/sec_api/string_s.h" 1 3
+# 9 "C:/msys64/ucrt64/include/sec_api/string_s.h" 3
+# 1 "C:/msys64/ucrt64/include/string.h" 1 3
+# 10 "C:/msys64/ucrt64/include/sec_api/string_s.h" 2 3
+# 21 "C:/msys64/ucrt64/include/sec_api/string_s.h" 3
 extern "C" {
 
 
@@ -563,23 +514,23 @@ extern "C" {
 
 
 }
-# 219 "C:/Users/maxwo/msys2/mingw64/include/string.h" 2 3
-# 83 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 97 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
-# 1 "C:/Users/maxwo/msys2/mingw64/include/assert.h" 1 3
-# 17 "C:/Users/maxwo/msys2/mingw64/include/assert.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 1 3
-# 36 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 1 3
-# 46 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 1 3
-# 37 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wvariadic-macros"
+# 198 "C:/msys64/ucrt64/include/string.h" 2 3
+# 83 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 97 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
+# 1 "C:/msys64/ucrt64/include/assert.h" 1 3
+# 17 "C:/msys64/ucrt64/include/assert.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 1 3
+# 36 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 1 3
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
+       
+# 40 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
 
-#pragma GCC diagnostic ignored "-Wc++11-extensions"
-#pragma GCC diagnostic ignored "-Wc++23-extensions"
-# 336 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 308 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 namespace std
 {
   typedef long long unsigned int size_t;
@@ -600,7 +551,7 @@ namespace std
   }
 #pragma GCC visibility pop
 }
-# 369 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 341 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 namespace std
 {
   inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
@@ -609,7 +560,7 @@ namespace __gnu_cxx
 {
   inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
 }
-# 573 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 534 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 namespace std
 {
 #pragma GCC visibility push(default)
@@ -633,12 +584,12 @@ namespace std
   }
 #pragma GCC visibility pop
 }
-# 617 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 573 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 namespace std
 {
 #pragma GCC visibility push(default)
 
-  extern "C++" __attribute__ ((__noreturn__)) __attribute__((__cold__))
+  extern "C++" __attribute__ ((__noreturn__))
   void
   __glibcxx_assert_fail
     (const char* __file, int __line, const char* __function,
@@ -646,44 +597,36 @@ namespace std
   noexcept;
 #pragma GCC visibility pop
 }
-# 727 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h" 1 3
-# 728 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
+# 601 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+namespace std
+{
+  __attribute__((__always_inline__,__visibility__("default")))
+  inline void
+  __glibcxx_assert_fail()
+  { }
+}
+# 680 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h" 1 3
+# 681 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/cpu_defines.h" 1 3
-# 731 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
-# 887 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cpu_defines.h" 1 3
+# 684 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
+# 825 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
 namespace __gnu_cxx
 {
   typedef __decltype(0.0bf16) __bfloat16_t;
 }
-# 949 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/pstl/pstl_config.h" 1 3
-# 950 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
-
-
-
-#pragma GCC diagnostic pop
-# 47 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 2 3
-# 80 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 1 3
-# 10 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wstdlib.h" 1 3
-# 12 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wstdlib.h" 3
+# 887 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/pstl/pstl_config.h" 1 3
+# 888 "C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h" 2 3
+# 42 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 2 3
+# 79 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
+# 1 "C:/msys64/ucrt64/include/stdlib.h" 1 3
+# 10 "C:/msys64/ucrt64/include/stdlib.h" 3
+# 1 "C:/msys64/ucrt64/include/corecrt_wstdlib.h" 1 3
+# 12 "C:/msys64/ucrt64/include/corecrt_wstdlib.h" 3
 extern "C" {
-
-
-
-
-
-
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _wdupenv_s(wchar_t **_Buffer,size_t *_BufferSizeInWords,const wchar_t *_VarName);
-
-
 
 
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _itow_s (int _Val,wchar_t *_DstBuf,size_t _SizeInWords,int _Radix);
@@ -698,6 +641,7 @@ extern "C" {
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _wgetenv_s(size_t *_ReturnSize,wchar_t *_DstBuf,size_t _DstSizeInWords,const wchar_t *_VarName);
   extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _wgetenv_s(size_t* _ReturnSize, wchar_t (&_DstBuf)[__size], const wchar_t* _VarName) { return _wgetenv_s(_ReturnSize, _DstBuf, __size, _VarName); } }
 
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _wdupenv_s(wchar_t **_Buffer,size_t *_BufferSizeInWords,const wchar_t *_VarName);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _i64tow_s(long long _Val,wchar_t *_DstBuf,size_t _SizeInWords,int _Radix);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _ui64tow_s(unsigned long long _Val,wchar_t *_DstBuf,size_t _SizeInWords,int _Radix);
 
@@ -714,34 +658,31 @@ extern "C" {
 
 
 }
-# 11 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 34 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 1 3 4
+# 11 "C:/msys64/ucrt64/include/stdlib.h" 2 3
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 1 3 4
+# 34 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 3 4
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h" 1 3 4
 
 
 
 
 
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 210 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/limits.h" 1 3 4
-# 211 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
-# 10 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h" 2 3 4
-#pragma GCC diagnostic pop
-# 35 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 2 3 4
-# 12 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 2 3
-# 26 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 1 3 4
+# 210 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 3 4
+# 1 "C:/msys64/ucrt64/include/limits.h" 1 3 4
+# 211 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 2 3 4
+# 8 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h" 2 3 4
+# 35 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 2 3 4
+# 12 "C:/msys64/ucrt64/include/stdlib.h" 2 3
+# 26 "C:/msys64/ucrt64/include/stdlib.h" 3
 #pragma pack(push,_CRT_PACKING)
 
 
 extern "C" {
-# 50 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 50 "C:/msys64/ucrt64/include/stdlib.h" 3
   typedef int (__attribute__((__cdecl__)) *_onexit_t)(void);
-# 60 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 60 "C:/msys64/ucrt64/include/stdlib.h" 3
   typedef struct _div_t {
     int quot;
     int rem;
@@ -786,9 +727,9 @@ extern "C" {
     unsigned char ld12[12];
   } _LDBL12;
 #pragma pack()
-# 113 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 113 "C:/msys64/ucrt64/include/stdlib.h" 3
 __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_func(void);
-# 135 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 135 "C:/msys64/ucrt64/include/stdlib.h" 3
   typedef void (__attribute__((__cdecl__)) *_purecall_handler)(void);
 
   __attribute__ ((__dllimport__)) _purecall_handler __attribute__((__cdecl__)) _set_purecall_handler(_purecall_handler _Handler);
@@ -797,7 +738,7 @@ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_fun
   typedef void (__attribute__((__cdecl__)) *_invalid_parameter_handler)(const wchar_t *,const wchar_t *,const wchar_t *,unsigned int,uintptr_t);
   __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _set_invalid_parameter_handler(_invalid_parameter_handler _Handler);
   __attribute__ ((__dllimport__)) _invalid_parameter_handler __attribute__((__cdecl__)) _get_invalid_parameter_handler(void);
-# 151 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 151 "C:/msys64/ucrt64/include/stdlib.h" 3
   __attribute__ ((__dllimport__)) unsigned long *__attribute__((__cdecl__)) __doserrno(void);
 
   errno_t __attribute__((__cdecl__)) _set_doserrno(unsigned long _Value);
@@ -818,16 +759,16 @@ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_fun
   errno_t __attribute__((__cdecl__)) _get_wpgmptr(wchar_t **_Value);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_fmode(int _Mode);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _get_fmode(int *_PMode);
-# 221 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 221 "C:/msys64/ucrt64/include/stdlib.h" 3
   __attribute__ ((__dllimport__)) char ***__attribute__((__cdecl__)) __p__environ(void);
   __attribute__ ((__dllimport__)) wchar_t ***__attribute__((__cdecl__)) __p__wenviron(void);
-# 234 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 234 "C:/msys64/ucrt64/include/stdlib.h" 3
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__osplatform(void);
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__osver(void);
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__winver(void);
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__winmajor(void);
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__winminor(void);
-# 256 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 256 "C:/msys64/ucrt64/include/stdlib.h" 3
   errno_t __attribute__((__cdecl__)) _get_osplatform(unsigned int *_Value);
   errno_t __attribute__((__cdecl__)) _get_osver(unsigned int *_Value);
   errno_t __attribute__((__cdecl__)) _get_winver(unsigned int *_Value);
@@ -849,7 +790,7 @@ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_fun
   void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
   void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
 
-
+  void __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) quick_exit(int _Code) __attribute__ ((__noreturn__));
 
 
 
@@ -885,7 +826,7 @@ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_fun
 
   int __attribute__((__cdecl__)) atexit(void (__attribute__((__cdecl__)) *)(void));
 
-
+  int __attribute__((__cdecl__)) at_quick_exit(void (__attribute__((__cdecl__)) *)(void));
 
 
 
@@ -917,24 +858,21 @@ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ___mb_cur_max_fun
   __extension__ __attribute__ ((__dllimport__)) unsigned long long __attribute__((__cdecl__)) _strtoui64_l(const char *_String,char **_EndPtr,int _Radix,_locale_t _Locale);
   ldiv_t __attribute__((__cdecl__)) ldiv(long _Numerator,long _Denominator);
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ltoa(long _Value,char *_Dest,int _Radix) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) mblen(const char *_Ch,size_t _MaxCount);
+  int __attribute__((__cdecl__)) mblen(const char *_Ch,size_t _MaxCount);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mblen_l(const char *_Ch,size_t _MaxCount,_locale_t _Locale);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen(const char *_Str);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrlen_l(const char *_Str,_locale_t _Locale);
-
-
-
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) mbtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen(const char *_Str,size_t _MaxCount);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstrnlen_l(const char *_Str,size_t _MaxCount,_locale_t _Locale);
+  int __attribute__((__cdecl__)) mbtowc(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _mbtowc_l(wchar_t * __restrict__ _DstCh,const char * __restrict__ _SrcCh,size_t _SrcSizeInBytes,_locale_t _Locale);
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) mbstowcs(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount);
+  size_t __attribute__((__cdecl__)) mbstowcs(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _mbstowcs_l(wchar_t * __restrict__ _Dest,const char * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale);
-  int __attribute__((__cdecl__)) mkstemp(char *_TemplateName);
-  char *__attribute__((__cdecl__)) mkdtemp(char *_TemplateName);
+  int __attribute__((__cdecl__)) mkstemp(char *template_name);
   int __attribute__((__cdecl__)) rand(void);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_error_mode(int _Mode);
   void __attribute__((__cdecl__)) srand(unsigned int _Seed);
-# 372 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 369 "C:/msys64/ucrt64/include/stdlib.h" 3
 inline __attribute__((__cdecl__))
 double __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtod(const char * __restrict__ _Str,char ** __restrict__ _EndPtr)
 {
@@ -981,11 +919,13 @@ float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char
   int __attribute__((__cdecl__)) system(const char *_Command);
 
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ultoa(unsigned long _Value,char *_Dest,int _Radix) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) wctomb(char *_MbCh,wchar_t _WCh) ;
+  int __attribute__((__cdecl__)) wctomb(char *_MbCh,wchar_t _WCh) ;
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wctomb_l(char *_MbCh,wchar_t _WCh,_locale_t _Locale) ;
-  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) wcstombs(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount) ;
+  size_t __attribute__((__cdecl__)) wcstombs(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount) ;
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _wcstombs_l(char * __restrict__ _Dest,const wchar_t * __restrict__ _Source,size_t _MaxCount,_locale_t _Locale) ;
-# 455 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+
+
+
   void *__attribute__((__cdecl__)) calloc(size_t _NumOfElements,size_t _SizeOfElements);
   void __attribute__((__cdecl__)) free(void *_Memory);
   void *__attribute__((__cdecl__)) malloc(size_t _Size);
@@ -995,11 +935,17 @@ float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_malloc(size_t _Size,size_t _Alignment,size_t _Offset);
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_realloc(void *_Memory,size_t _Size,size_t _Alignment);
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_realloc(void *_Memory,size_t _Size,size_t _Alignment,size_t _Offset);
+
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _recalloc(void *_Memory,size_t _Count,size_t _Size);
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment);
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _aligned_offset_recalloc(void *_Memory,size_t _Count,size_t _Size,size_t _Alignment,size_t _Offset);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _aligned_msize(void *_Memory,size_t _Alignment,size_t _Offset);
-# 494 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+
+
+
+
+
+
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _itow(int _Value,wchar_t *_Dest,int _Radix) ;
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ltow(long _Value,wchar_t *_Dest,int _Radix) ;
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _ultow(unsigned long _Value,wchar_t *_Dest,int _Radix) ;
@@ -1007,20 +953,9 @@ float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char
   double __attribute__((__cdecl__)) __mingw_wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
   float __attribute__((__cdecl__)) __mingw_wcstof(const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
   long double __attribute__((__cdecl__)) __mingw_wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
-
-
-  inline __attribute__((__cdecl__))
-  double __attribute__((__cdecl__)) wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr){
-    return __mingw_wcstod(_Str,_EndPtr);
-  }
-  inline __attribute__((__cdecl__))
-  float __attribute__((__cdecl__)) wcstof(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr){
-    return __mingw_wcstof(_Str,_EndPtr);
-  }
-
-
-
-
+# 461 "C:/msys64/ucrt64/include/stdlib.h" 3
+  double __attribute__((__cdecl__)) wcstod(const wchar_t * __restrict__ _Str,wchar_t ** __restrict__ _EndPtr);
+  float __attribute__((__cdecl__)) wcstof(const wchar_t * __restrict__ nptr, wchar_t ** __restrict__ endptr);
 
 
   long double __attribute__((__cdecl__)) wcstold(const wchar_t * __restrict__, wchar_t ** __restrict__);
@@ -1055,12 +990,10 @@ float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char
 
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putenv(const char *_EnvString);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wputenv(const wchar_t *_EnvString);
-# 557 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+
+
+
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fullpath(char *_FullPath,const char *_Path,size_t _SizeInBytes);
-
-
-
-
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
@@ -1070,7 +1003,7 @@ float __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) strtof(const char
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atodbl_l(_CRT_DOUBLE *_Result,char *_Str,_locale_t _Locale);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoldbl_l(_LDOUBLE *_Result,char *_Str,_locale_t _Locale);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _atoflt_l(_CRT_FLOAT *_Result,char *_Str,_locale_t _Locale);
-# 586 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 525 "C:/msys64/ucrt64/include/stdlib.h" 3
 unsigned long __attribute__((__cdecl__)) _lrotl(unsigned long,int);
 unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long,int);
 
@@ -1108,14 +1041,7 @@ unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long,int);
 
 
 
-
-
-
-
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wfullpath(wchar_t *_FullPath,const wchar_t *_Path,size_t _SizeInWords);
-
-
-
   __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _wmakepath(wchar_t *_ResultPath,const wchar_t *_Drive,const wchar_t *_Dir,const wchar_t *_Filename,const wchar_t *_Ext);
 
 
@@ -1129,7 +1055,7 @@ unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long,int);
 
   __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _seterrormode(int _Mode) __attribute__ ((__deprecated__));
   __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _sleep(unsigned long _Duration) __attribute__ ((__deprecated__));
-# 664 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 596 "C:/msys64/ucrt64/include/stdlib.h" 3
   char *__attribute__((__cdecl__)) ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
   char *__attribute__((__cdecl__)) fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
   char *__attribute__((__cdecl__)) gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
@@ -1170,34 +1096,26 @@ unsigned long __attribute__((__cdecl__)) _lrotr(unsigned long,int);
   __extension__ char *__attribute__((__cdecl__)) ulltoa (unsigned long long , char *, int);
   __extension__ wchar_t *__attribute__((__cdecl__)) lltow (long long, wchar_t *, int);
   __extension__ wchar_t *__attribute__((__cdecl__)) ulltow (unsigned long long, wchar_t *, int);
-# 718 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 3
+# 650 "C:/msys64/ucrt64/include/stdlib.h" 3
 }
 
 
 #pragma pack(pop)
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdlib_s.h" 1 3
-# 9 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdlib_s.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 1 3
-# 30 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 1 3
-# 31 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 2 3
-# 10 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdlib_s.h" 2 3
+# 1 "C:/msys64/ucrt64/include/sec_api/stdlib_s.h" 1 3
+# 9 "C:/msys64/ucrt64/include/sec_api/stdlib_s.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 1 3
+# 30 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 3
+# 1 "C:/msys64/ucrt64/include/stdlib.h" 1 3
+# 31 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 2 3
+# 10 "C:/msys64/ucrt64/include/sec_api/stdlib_s.h" 2 3
 
 
 extern "C" {
 
 
-
-
-
-
-  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _dupenv_s(char **_PBuffer,size_t *_PBufferSizeInBytes,const char *_VarName);
-
-
-
-
   __attribute__ ((__dllimport__)) void * __attribute__((__cdecl__)) bsearch_s(const void *_Key,const void *_Base,rsize_t _NumOfElements,rsize_t _SizeOfElements,int (__attribute__((__cdecl__)) * _PtFuncCompare)(void *, const void *, const void *), void *_Context);
+  __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _dupenv_s(char **_PBuffer,size_t *_PBufferSizeInBytes,const char *_VarName);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) getenv_s(size_t *_ReturnSize,char *_DstBuf,rsize_t _DstSize,const char *_VarName);
   extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) getenv_s(size_t * _ReturnSize, char (&_Dest)[__size], const char * _VarName) { return getenv_s(_ReturnSize, _Dest, __size, _VarName); } }
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _itoa_s(int _Value,char *_DstBuf,size_t _Size,int _Radix);
@@ -1240,14 +1158,14 @@ extern "C" {
 
 
 }
-# 724 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 1 3
-# 11 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 656 "C:/msys64/ucrt64/include/stdlib.h" 2 3
+# 1 "C:/msys64/ucrt64/include/malloc.h" 1 3
+# 11 "C:/msys64/ucrt64/include/malloc.h" 3
 #pragma pack(push,_CRT_PACKING)
 
 
 extern "C" {
-# 52 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 52 "C:/msys64/ucrt64/include/malloc.h" 3
   typedef struct _heapinfo {
     int *_pentry;
     size_t _size;
@@ -1257,27 +1175,25 @@ extern "C" {
 
 
   __attribute__ ((__dllimport__)) unsigned int *__attribute__((__cdecl__)) __p__amblksiz(void);
-# 129 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 84 "C:/msys64/ucrt64/include/malloc.h" 3
 void * __mingw_aligned_malloc (size_t _Size, size_t _Alignment);
 void __mingw_aligned_free (void *_Memory);
 void * __mingw_aligned_offset_realloc (void *_Memory, size_t _Size, size_t _Alignment, size_t _Offset);
-void * __mingw_aligned_offset_malloc (size_t, size_t, size_t);
 void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
-size_t __mingw_aligned_msize (void *memblock, size_t alignment, size_t offset);
 
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h" 1 3 4
-# 27 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 1 3 4
-# 28 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h" 2 3 4
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h" 1 3 4
+# 27 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h" 3 4
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 1 3 4
+# 28 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h" 2 3 4
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/errno.h" 1 3 4
-# 12 "C:/Users/maxwo/msys2/mingw64/include/errno.h" 3 4
+# 1 "C:/msys64/ucrt64/include/errno.h" 1 3 4
+# 12 "C:/msys64/ucrt64/include/errno.h" 3 4
 extern "C" {
-# 239 "C:/Users/maxwo/msys2/mingw64/include/errno.h" 3 4
+# 239 "C:/msys64/ucrt64/include/errno.h" 3 4
 }
-# 30 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h" 2 3 4
+# 30 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h" 2 3 4
 
 
 static __inline__ void *
@@ -1325,7 +1241,7 @@ _mm_free (void *__aligned_ptr)
   if (__aligned_ptr)
     free (((void **) __aligned_ptr)[-1]);
 }
-# 139 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 2 3
+# 92 "C:/msys64/ucrt64/include/malloc.h" 2 3
 
 
 
@@ -1335,15 +1251,14 @@ _mm_free (void *__aligned_ptr)
 
   __attribute__ ((__dllimport__)) unsigned long __attribute__((__cdecl__)) _set_malloc_crt_max_wait(unsigned long _NewValue);
 
-
-
-
-
-
-
   __attribute__ ((__dllimport__)) void *__attribute__((__cdecl__)) _expand(void *_Memory,size_t _NewSize);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _msize(void *_Memory);
-# 167 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+
+
+
+
+
+
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _get_sbh_threshold(void);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_sbh_threshold(size_t _NewValue);
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _set_amblksiz(size_t _Value);
@@ -1355,7 +1270,7 @@ _mm_free (void *__aligned_ptr)
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _heapwalk(_HEAPINFO *_EntryInfo);
   __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _heapused(size_t *_Used,size_t *_Commit);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _get_heap_handle(void);
-# 190 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 132 "C:/msys64/ucrt64/include/malloc.h" 3
   static __inline void *_MarkAllocaS(void *_Ptr,unsigned int _Marker) {
     if(_Ptr) {
       *((unsigned int*)_Ptr) = _Marker;
@@ -1363,7 +1278,7 @@ _mm_free (void *__aligned_ptr)
     }
     return _Ptr;
   }
-# 218 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 151 "C:/msys64/ucrt64/include/malloc.h" 3
   static __inline void __attribute__((__cdecl__)) _freea(void *_Memory) {
     unsigned int _Marker;
     if(_Memory) {
@@ -1379,22 +1294,19 @@ _mm_free (void *__aligned_ptr)
 
     }
   }
-# 261 "C:/Users/maxwo/msys2/mingw64/include/malloc.h" 3
+# 194 "C:/msys64/ucrt64/include/malloc.h" 3
 }
 
 
 #pragma pack(pop)
-# 725 "C:/Users/maxwo/msys2/mingw64/include/stdlib.h" 2 3
-# 84 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 2 3
+# 657 "C:/msys64/ucrt64/include/stdlib.h" 2 3
+# 80 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 2 3
 
-#pragma GCC diagnostic pop
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/std_abs.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/std_abs.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-#pragma GCC diagnostic ignored "-Wlong-long"
-# 52 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/std_abs.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 3
+# 46 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 3
 extern "C++"
 {
 namespace std
@@ -1411,7 +1323,7 @@ namespace std
 
   inline long long
   abs(long long __x) { return __builtin_llabs (__x); }
-# 76 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/std_abs.h" 3
+# 70 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 3
   inline constexpr double
   abs(double __x)
   { return __builtin_fabs(__x); }
@@ -1428,7 +1340,7 @@ namespace std
 
   __extension__ inline constexpr __int128
   abs(__int128 __x) { return __x >= 0 ? __x : -__x; }
-# 141 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/std_abs.h" 3
+# 135 "C:/msys64/ucrt64/include/c++/14.2.0/bits/std_abs.h" 3
   __extension__ inline constexpr
   __float128
   abs(__float128 __x)
@@ -1447,10 +1359,8 @@ namespace std
 
 }
 }
-
-#pragma GCC diagnostic pop
-# 88 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 2 3
-# 131 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
+# 82 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 2 3
+# 125 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
 extern "C++"
 {
 namespace std
@@ -1467,7 +1377,7 @@ namespace std
   using ::atexit;
 
 
-
+  using ::at_quick_exit;
 
 
   using ::atof;
@@ -1490,7 +1400,7 @@ namespace std
   using ::qsort;
 
 
-
+  using ::quick_exit;
 
 
   using ::rand;
@@ -1513,7 +1423,7 @@ namespace std
 
 
 }
-# 205 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
+# 199 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
 namespace __gnu_cxx
 {
 
@@ -1529,8 +1439,6 @@ namespace __gnu_cxx
 
 
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
   using ::llabs;
 
   inline lldiv_t
@@ -1538,8 +1446,7 @@ namespace __gnu_cxx
   { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
 
   using ::lldiv;
-#pragma GCC diagnostic pop
-# 240 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
+# 231 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
   using ::atoll;
   using ::strtoll;
   using ::strtoull;
@@ -1567,14 +1474,21 @@ namespace std
   using ::__gnu_cxx::strtoull;
   using ::__gnu_cxx::strtold;
 }
-# 284 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cstdlib" 3
+# 275 "C:/msys64/ucrt64/include/c++/14.2.0/cstdlib" 3
 }
-# 37 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 2 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 2 3
 
 using std::abort;
 using std::atexit;
 using std::exit;
-# 49 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 3
+
+
+  using std::at_quick_exit;
+
+
+  using std::quick_exit;
+
+
   using std::_Exit;
 
 
@@ -1611,7 +1525,7 @@ using std::system;
 
 using std::wcstombs;
 using std::wctomb;
-# 18 "C:/Users/maxwo/msys2/mingw64/include/assert.h" 2 3
+# 18 "C:/msys64/ucrt64/include/assert.h" 2 3
 
 
 
@@ -1619,12 +1533,12 @@ extern "C" {
 
 
 __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _wassert(const wchar_t *_Message,const wchar_t *_File,unsigned _Line);
-void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _assert (const char *_Message, const char *_File, unsigned _Line);
+__attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) __attribute__ ((__noreturn__)) _assert (const char *_Message, const char *_File, unsigned _Line);
 
 
 }
-# 98 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 2
-# 151 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 98 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 2
+# 151 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wpragmas"
 #pragma GCC diagnostic ignored "-Wfloat-equal"
@@ -1780,30 +1694,30 @@ struct ImVec2
     constexpr ImVec2() : x(0.0f), y(0.0f) { }
     constexpr ImVec2(float _x, float _y) : x(_x), y(_y) { }
     float& operator[] (size_t idx) { 
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                              (void) ((!!(
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                              idx == 0 || idx == 1
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                              )) || (_assert(
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                              "idx == 0 || idx == 1"
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",305),0))
-# 305 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",305),0))
+# 305 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                             ; return ((float*)(void*)(char*)this)[idx]; }
     float operator[] (size_t idx) const { 
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                              (void) ((!!(
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                              idx == 0 || idx == 1
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                              )) || (_assert(
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                              "idx == 0 || idx == 1"
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",306),0))
-# 306 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",306),0))
+# 306 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                             ; return ((const float*)(const void*)(const char*)this)[idx]; }
 
 
@@ -1821,27 +1735,27 @@ struct ImVec4
 
 };
 
-# 345 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 345 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 typedef ImU64 ImTextureID;
-# 371 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 371 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 
 struct ImTextureRef
 {
     ImTextureRef() { _TexData = 
-# 374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                         __null
-# 374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                             ; _TexID = ((ImTextureID)0); }
     ImTextureRef(ImTextureID tex_id) { _TexData = 
-# 375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                         __null
-# 375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                             ; _TexID = tex_id; }
 
     ImTextureRef(void* tex_id) { _TexData = 
-# 377 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 377 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                         __null
-# 377 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 377 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                             ; _TexID = (ImTextureID)(size_t)tex_id; }
 
 
@@ -1865,14 +1779,14 @@ namespace ImGui
 
 
     ImGuiContext* CreateContext(ImFontAtlas* shared_font_atlas = 
-# 399 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 399 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                           __null
-# 399 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 399 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                               );
     void DestroyContext(ImGuiContext* ctx = 
-# 400 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 400 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                               __null
-# 400 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 400 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                   );
     ImGuiContext* GetCurrentContext();
     void SetCurrentContext(ImGuiContext* ctx);
@@ -1888,34 +1802,34 @@ namespace ImGui
 
 
     void ShowDemoWindow(bool* p_open = 
-# 414 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 414 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                          __null
-# 414 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 414 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              );
     void ShowMetricsWindow(bool* p_open = 
-# 415 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 415 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                             __null
-# 415 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 415 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                 );
     void ShowDebugLogWindow(bool* p_open = 
-# 416 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 416 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                              __null
-# 416 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 416 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                  );
     void ShowIDStackToolWindow(bool* p_open = 
-# 417 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 417 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                 __null
-# 417 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 417 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                     );
     void ShowAboutWindow(bool* p_open = 
-# 418 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 418 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                           __null
-# 418 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 418 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                               );
     void ShowStyleEditor(ImGuiStyle* ref = 
-# 419 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 419 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                              __null
-# 419 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 419 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                  );
     bool ShowStyleSelector(const char* label);
     void ShowFontSelector(const char* label);
@@ -1924,28 +1838,28 @@ namespace ImGui
 
 
     void StyleColorsDark(ImGuiStyle* dst = 
-# 426 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 426 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                              __null
-# 426 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 426 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                  );
     void StyleColorsLight(ImGuiStyle* dst = 
-# 427 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 427 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                               __null
-# 427 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 427 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                   );
     void StyleColorsClassic(ImGuiStyle* dst = 
-# 428 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 428 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                 __null
-# 428 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 428 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                     );
-# 442 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 442 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool Begin(const char* name, bool* p_open = 
-# 442 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 442 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                   __null
-# 442 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 442 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                       , ImGuiWindowFlags flags = 0);
     void End();
-# 463 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 463 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool BeginChild(const char* str_id, const ImVec2& size = ImVec2(0, 0), ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0);
     bool BeginChild(ImGuiID id, const ImVec2& size = ImVec2(0, 0), ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0);
     void EndChild();
@@ -1969,13 +1883,13 @@ namespace ImGui
     void SetNextWindowPos(const ImVec2& pos, ImGuiCond cond = 0, const ImVec2& pivot = ImVec2(0, 0));
     void SetNextWindowSize(const ImVec2& size, ImGuiCond cond = 0);
     void SetNextWindowSizeConstraints(const ImVec2& size_min, const ImVec2& size_max, ImGuiSizeCallback custom_callback = 
-# 485 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 485 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                             __null
-# 485 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 485 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                 , void* custom_callback_data = 
-# 485 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 485 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                __null
-# 485 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 485 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                    );
     void SetNextWindowContentSize(const ImVec2& size);
     void SetNextWindowCollapsed(bool collapsed, ImGuiCond cond = 0);
@@ -2005,7 +1919,7 @@ namespace ImGui
     void SetScrollHereY(float center_y_ratio = 0.5f);
     void SetScrollFromPosX(float local_x, float center_x_ratio = 0.5f);
     void SetScrollFromPosY(float local_y, float center_y_ratio = 0.5f);
-# 531 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 531 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void PushFont(ImFont* font, float font_size_base_unscaled);
     void PopFont();
     ImFont* GetFont();
@@ -2039,7 +1953,7 @@ namespace ImGui
     ImU32 GetColorU32(const ImVec4& col);
     ImU32 GetColorU32(ImU32 col, float alpha_mul = 1.0f);
     const ImVec4& GetStyleColorVec4(ImGuiCol idx);
-# 575 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 575 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImVec2 GetCursorScreenPos();
     void SetCursorScreenPos(const ImVec2& pos);
     ImVec2 GetContentRegionAvail();
@@ -2066,7 +1980,7 @@ namespace ImGui
     float GetTextLineHeightWithSpacing();
     float GetFrameHeight();
     float GetFrameHeightWithSpacing();
-# 613 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 613 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void PushID(const char* str_id);
     void PushID(const char* str_id_begin, const char* str_id_end);
     void PushID(const void* ptr_id);
@@ -2080,9 +1994,9 @@ namespace ImGui
 
 
     void TextUnformatted(const char* text, const char* text_end = 
-# 625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                     __null
-# 625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                         );
     void Text(const char* fmt, ...) __attribute__((format(gnu_printf, 1, 1 +1)));
     void TextV(const char* fmt, va_list args) __attribute__((format(gnu_printf, 1, 0)));
@@ -2111,18 +2025,18 @@ namespace ImGui
     bool RadioButton(const char* label, bool active);
     bool RadioButton(const char* label, int* v, int v_button);
     void ProgressBar(float fraction, const ImVec2& size_arg = ImVec2(-1.17549435082228750796873653722224568e-38F
-# 652 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 652 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                , 0), const char* overlay = 
-# 652 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 652 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                            __null
-# 652 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 652 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                );
     void Bullet();
     bool TextLink(const char* label);
     bool TextLinkOpenURL(const char* label, const char* url = 
-# 655 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 655 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                 __null
-# 655 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 655 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                     );
 
 
@@ -2143,50 +2057,50 @@ namespace ImGui
     bool Combo(const char* label, int* current_item, const char* const items[], int items_count, int popup_max_height_in_items = -1);
     bool Combo(const char* label, int* current_item, const char* items_separated_by_zeros, int popup_max_height_in_items = -1);
     bool Combo(const char* label, int* current_item, const char* (*getter)(void* user_data, int idx), void* user_data, int items_count, int popup_max_height_in_items = -1);
-# 688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool DragFloat(const char* label, float* v, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0);
     bool DragFloat2(const char* label, float v[2], float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0);
     bool DragFloat3(const char* label, float v[3], float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0);
     bool DragFloat4(const char* label, float v[4], float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", ImGuiSliderFlags flags = 0);
     bool DragFloatRange2(const char* label, float* v_current_min, float* v_current_max, float v_speed = 1.0f, float v_min = 0.0f, float v_max = 0.0f, const char* format = "%.3f", const char* format_max = 
-# 692 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 692 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                                               __null
-# 692 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 692 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                                   , ImGuiSliderFlags flags = 0);
     bool DragInt(const char* label, int* v, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool DragInt2(const char* label, int v[2], float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool DragInt3(const char* label, int v[3], float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool DragInt4(const char* label, int v[4], float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool DragIntRange2(const char* label, int* v_current_min, int* v_current_max, float v_speed = 1.0f, int v_min = 0, int v_max = 0, const char* format = "%d", const char* format_max = 
-# 697 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 697 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                             __null
-# 697 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 697 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                 , ImGuiSliderFlags flags = 0);
     bool DragScalar(const char* label, ImGuiDataType data_type, void* p_data, float v_speed = 1.0f, const void* p_min = 
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                           __null
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                               , const void* p_max = 
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                     __null
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                         , const char* format = 
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                __null
-# 698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                    , ImGuiSliderFlags flags = 0);
     bool DragScalarN(const char* label, ImGuiDataType data_type, void* p_data, int components, float v_speed = 1.0f, const void* p_min = 
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                            __null
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                , const void* p_max = 
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                      __null
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                          , const char* format = 
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                                 __null
-# 699 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 699 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                     , ImGuiSliderFlags flags = 0);
 
 
@@ -2205,52 +2119,52 @@ namespace ImGui
     bool SliderInt3(const char* label, int v[3], int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool SliderInt4(const char* label, int v[4], int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool SliderScalar(const char* label, ImGuiDataType data_type, void* p_data, const void* p_min, const void* p_max, const char* format = 
-# 716 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 716 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                              __null
-# 716 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 716 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                  , ImGuiSliderFlags flags = 0);
     bool SliderScalarN(const char* label, ImGuiDataType data_type, void* p_data, int components, const void* p_min, const void* p_max, const char* format = 
-# 717 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 717 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                               __null
-# 717 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 717 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                   , ImGuiSliderFlags flags = 0);
     bool VSliderFloat(const char* label, const ImVec2& size, float* v, float v_min, float v_max, const char* format = "%.3f", ImGuiSliderFlags flags = 0);
     bool VSliderInt(const char* label, const ImVec2& size, int* v, int v_min, int v_max, const char* format = "%d", ImGuiSliderFlags flags = 0);
     bool VSliderScalar(const char* label, const ImVec2& size, ImGuiDataType data_type, void* p_data, const void* p_min, const void* p_max, const char* format = 
-# 720 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 720 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                   __null
-# 720 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 720 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                       , ImGuiSliderFlags flags = 0);
 
 
 
 
     bool InputText(const char* label, char* buf, size_t buf_size, ImGuiInputTextFlags flags = 0, ImGuiInputTextCallback callback = 
-# 725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                      __null
-# 725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                          , void* user_data = 
-# 725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                              __null
-# 725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                  );
     bool InputTextMultiline(const char* label, char* buf, size_t buf_size, const ImVec2& size = ImVec2(0, 0), ImGuiInputTextFlags flags = 0, ImGuiInputTextCallback callback = 
-# 726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                  __null
-# 726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                      , void* user_data = 
-# 726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                                          __null
-# 726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                              );
     bool InputTextWithHint(const char* label, const char* hint, char* buf, size_t buf_size, ImGuiInputTextFlags flags = 0, ImGuiInputTextCallback callback = 
-# 727 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 727 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                __null
-# 727 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 727 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                    , void* user_data = 
-# 727 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 727 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                        __null
-# 727 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 727 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                            );
     bool InputFloat(const char* label, float* v, float step = 0.0f, float step_fast = 0.0f, const char* format = "%.3f", ImGuiInputTextFlags flags = 0);
     bool InputFloat2(const char* label, float v[2], const char* format = "%.3f", ImGuiInputTextFlags flags = 0);
@@ -2262,30 +2176,30 @@ namespace ImGui
     bool InputInt4(const char* label, int v[4], ImGuiInputTextFlags flags = 0);
     bool InputDouble(const char* label, double* v, double step = 0.0, double step_fast = 0.0, const char* format = "%.6f", ImGuiInputTextFlags flags = 0);
     bool InputScalar(const char* label, ImGuiDataType data_type, void* p_data, const void* p_step = 
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                       __null
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                           , const void* p_step_fast = 
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                       __null
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                           , const char* format = 
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                  __null
-# 737 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 737 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                      , ImGuiInputTextFlags flags = 0);
     bool InputScalarN(const char* label, ImGuiDataType data_type, void* p_data, int components, const void* p_step = 
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                        __null
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                            , const void* p_step_fast = 
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                        __null
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                            , const char* format = 
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                   __null
-# 738 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 738 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                       , ImGuiInputTextFlags flags = 0);
 
 
@@ -2295,9 +2209,9 @@ namespace ImGui
     bool ColorEdit4(const char* label, float col[4], ImGuiColorEditFlags flags = 0);
     bool ColorPicker3(const char* label, float col[3], ImGuiColorEditFlags flags = 0);
     bool ColorPicker4(const char* label, float col[4], ImGuiColorEditFlags flags = 0, const float* ref_col = 
-# 746 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 746 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                __null
-# 746 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 746 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                    );
     bool ColorButton(const char* desc_id, const ImVec4& col, ImGuiColorEditFlags flags = 0, const ImVec2& size = ImVec2(0, 0));
 
@@ -2328,12 +2242,12 @@ namespace ImGui
 
     bool Selectable(const char* label, bool selected = false, ImGuiSelectableFlags flags = 0, const ImVec2& size = ImVec2(0, 0));
     bool Selectable(const char* label, bool* p_selected, ImGuiSelectableFlags flags = 0, const ImVec2& size = ImVec2(0, 0));
-# 784 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 784 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImGuiMultiSelectIO* BeginMultiSelect(ImGuiMultiSelectFlags flags, int selection_size = -1, int items_count = -1);
     ImGuiMultiSelectIO* EndMultiSelect();
     void SetNextItemSelectionUserData(ImGuiSelectionUserData selection_user_data);
     bool IsItemToggledSelection();
-# 796 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 796 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool BeginListBox(const char* label, const ImVec2& size = ImVec2(0, 0));
     void EndListBox();
     bool ListBox(const char* label, int* current_item, const char* const items[], int items_count, int height_in_items = -1);
@@ -2342,40 +2256,40 @@ namespace ImGui
 
 
     void PlotLines(const char* label, const float* values, int values_count, int values_offset = 0, const char* overlay_text = 
-# 803 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 803 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                  __null
-# 803 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 803 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                      , float scale_min = 3.40282346638528859811704183484516925e+38F
-# 803 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 803 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                 , float scale_max = 3.40282346638528859811704183484516925e+38F
-# 803 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 803 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                            , ImVec2 graph_size = ImVec2(0, 0), int stride = sizeof(float));
     void PlotLines(const char* label, float(*values_getter)(void* data, int idx), void* data, int values_count, int values_offset = 0, const char* overlay_text = 
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                     __null
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                         , float scale_min = 3.40282346638528859811704183484516925e+38F
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                    , float scale_max = 3.40282346638528859811704183484516925e+38F
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                                               , ImVec2 graph_size = ImVec2(0, 0));
     void PlotHistogram(const char* label, const float* values, int values_count, int values_offset = 0, const char* overlay_text = 
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                      __null
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                          , float scale_min = 3.40282346638528859811704183484516925e+38F
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                     , float scale_max = 3.40282346638528859811704183484516925e+38F
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                , ImVec2 graph_size = ImVec2(0, 0), int stride = sizeof(float));
     void PlotHistogram(const char* label, float (*values_getter)(void* data, int idx), void* data, int values_count, int values_offset = 0, const char* overlay_text = 
-# 806 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 806 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                          __null
-# 806 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 806 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                              , float scale_min = 3.40282346638528859811704183484516925e+38F
-# 806 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 806 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                         , float scale_max = 3.40282346638528859811704183484516925e+38F
-# 806 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 806 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                                                    , ImVec2 graph_size = ImVec2(0, 0));
 
 
@@ -2384,9 +2298,9 @@ namespace ImGui
     void Value(const char* prefix, int v);
     void Value(const char* prefix, unsigned int v);
     void Value(const char* prefix, float v, const char* float_format = 
-# 813 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 813 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                          __null
-# 813 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 813 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                              );
 
 
@@ -2401,9 +2315,9 @@ namespace ImGui
     bool BeginMenu(const char* label, bool enabled = true);
     void EndMenu();
     bool MenuItem(const char* label, const char* shortcut = 
-# 826 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 826 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                               __null
-# 826 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 826 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                   , bool selected = false, bool enabled = true);
     bool MenuItem(const char* label, const char* shortcut, bool* p_selected, bool enabled = true);
 
@@ -2423,38 +2337,38 @@ namespace ImGui
     bool BeginItemTooltip();
     void SetItemTooltip(const char* fmt, ...) __attribute__((format(gnu_printf, 1, 1 +1)));
     void SetItemTooltipV(const char* fmt, va_list args) __attribute__((format(gnu_printf, 1, 0)));
-# 856 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 856 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool BeginPopup(const char* str_id, ImGuiWindowFlags flags = 0);
     bool BeginPopupModal(const char* name, bool* p_open = 
-# 857 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 857 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                             __null
-# 857 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 857 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 , ImGuiWindowFlags flags = 0);
     void EndPopup();
-# 869 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 869 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool OpenPopup(const char* str_id, ImGuiPopupFlags popup_flags = 0);
     bool OpenPopup(ImGuiID id, ImGuiPopupFlags popup_flags = 0);
     bool OpenPopupOnItemClick(const char* str_id = 
-# 871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                      __null
-# 871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                          , ImGuiPopupFlags popup_flags = 0);
     void CloseCurrentPopup();
-# 883 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 883 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool BeginPopupContextItem(const char* str_id = 
-# 883 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 883 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                       __null
-# 883 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 883 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                           , ImGuiPopupFlags popup_flags = 0);
     bool BeginPopupContextWindow(const char* str_id = 
-# 884 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 884 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                         __null
-# 884 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 884 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                             , ImGuiPopupFlags popup_flags = 0);
     bool BeginPopupContextVoid(const char* str_id = 
-# 885 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 885 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                       __null
-# 885 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 885 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                           , ImGuiPopupFlags popup_flags = 0);
 
 
@@ -2462,13 +2376,13 @@ namespace ImGui
 
 
     bool IsPopupOpen(const char* str_id, ImGuiPopupFlags flags = 0);
-# 914 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 914 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool BeginTable(const char* str_id, int columns, ImGuiTableFlags flags = 0, const ImVec2& outer_size = ImVec2(0.0f, 0.0f), float inner_width = 0.0f);
     void EndTable();
     void TableNextRow(ImGuiTableRowFlags row_flags = 0, float min_row_height = 0.0f);
     bool TableNextColumn();
     bool TableSetColumnIndex(int column_n);
-# 929 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 929 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void TableSetupColumn(const char* label, ImGuiTableColumnFlags flags = 0, float init_width_or_weight = 0.0f, ImGuiID user_data = 0);
     void TableSetupScrollFreeze(int cols, int rows);
     void TableHeader(const char* label);
@@ -2494,9 +2408,9 @@ namespace ImGui
 
 
     void Columns(int count = 1, const char* id = 
-# 953 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 953 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                    __null
-# 953 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 953 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                        , bool borders = true);
     void NextColumn();
     int GetColumnIndex();
@@ -2511,27 +2425,27 @@ namespace ImGui
     bool BeginTabBar(const char* str_id, ImGuiTabBarFlags flags = 0);
     void EndTabBar();
     bool BeginTabItem(const char* label, bool* p_open = 
-# 966 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 966 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                           __null
-# 966 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 966 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                               , ImGuiTabItemFlags flags = 0);
     void EndTabItem();
     bool TabItemButton(const char* label, ImGuiTabItemFlags flags = 0);
     void SetTabItemClosed(const char* tab_or_docked_window_label);
-# 992 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 992 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImGuiID DockSpace(ImGuiID dockspace_id, const ImVec2& size = ImVec2(0, 0), ImGuiDockNodeFlags flags = 0, const ImGuiWindowClass* window_class = 
-# 992 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 992 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                    __null
-# 992 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 992 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                        );
     ImGuiID DockSpaceOverViewport(ImGuiID dockspace_id = 0, const ImGuiViewport* viewport = 
-# 993 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 993 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                            __null
-# 993 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 993 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                , ImGuiDockNodeFlags flags = 0, const ImGuiWindowClass* window_class = 
-# 993 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 993 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                       __null
-# 993 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 993 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                           );
     void SetNextWindowDockID(ImGuiID dock_id, ImGuiCond cond = 0);
     void SetNextWindowClass(const ImGuiWindowClass* window_class);
@@ -2542,9 +2456,9 @@ namespace ImGui
 
     void LogToTTY(int auto_open_depth = -1);
     void LogToFile(int auto_open_depth = -1, const char* filename = 
-# 1002 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1002 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                       __null
-# 1002 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1002 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                           );
     void LogToClipboard(int auto_open_depth = -1);
     void LogFinish();
@@ -2619,14 +2533,14 @@ namespace ImGui
 
 
     ImDrawList* GetBackgroundDrawList(ImGuiViewport* viewport = 
-# 1075 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1075 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                            __null
-# 1075 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1075 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                );
     ImDrawList* GetForegroundDrawList(ImGuiViewport* viewport = 
-# 1076 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1076 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                            __null
-# 1076 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1076 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                );
 
 
@@ -2641,9 +2555,9 @@ namespace ImGui
 
 
     ImVec2 CalcTextSize(const char* text, const char* text_end = 
-# 1089 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1089 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                  __null
-# 1089 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1089 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                      , bool hide_text_after_double_hash = false, float wrap_width = -1.0f);
 
 
@@ -2663,10 +2577,10 @@ namespace ImGui
     int GetKeyPressedAmount(ImGuiKey key, float repeat_delay, float rate);
     const char* GetKeyName(ImGuiKey key);
     void SetNextFrameWantCaptureKeyboard(bool want_capture_keyboard);
-# 1129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool Shortcut(ImGuiKeyChord key_chord, ImGuiInputFlags flags = 0);
     void SetNextItemShortcut(ImGuiKeyChord key_chord, ImGuiInputFlags flags = 0);
-# 1139 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1139 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool SetItemKeyOwner(ImGuiKey key);
 
 
@@ -2681,9 +2595,9 @@ namespace ImGui
     int GetMouseClickedCount(ImGuiMouseButton button);
     bool IsMouseHoveringRect(const ImVec2& r_min, const ImVec2& r_max, bool clip = true);
     bool IsMousePosValid(const ImVec2* mouse_pos = 
-# 1152 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1152 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                      __null
-# 1152 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1152 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                          );
     bool IsAnyMouseDown();
     ImVec2 GetMousePos();
@@ -2708,9 +2622,9 @@ namespace ImGui
     void LoadIniSettingsFromMemory(const char* ini_data, size_t ini_size=0);
     void SaveIniSettingsToDisk(const char* ini_filename);
     const char* SaveIniSettingsToMemory(size_t* out_ini_size = 
-# 1175 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1175 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                           __null
-# 1175 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1175 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                               );
 
 
@@ -2731,9 +2645,9 @@ namespace ImGui
 
 
     void SetAllocatorFunctions(ImGuiMemAllocFunc alloc_func, ImGuiMemFreeFunc free_func, void* user_data = 
-# 1194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                              __null
-# 1194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                  );
     void GetAllocatorFunctions(ImGuiMemAllocFunc* p_alloc_func, ImGuiMemFreeFunc* p_free_func, void** p_user_data);
     void* MemAlloc(size_t size);
@@ -2744,13 +2658,13 @@ namespace ImGui
 
     void UpdatePlatformWindows();
     void RenderPlatformWindowsDefault(void* platform_render_arg = 
-# 1203 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1203 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                     __null
-# 1203 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1203 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                         , void* renderer_render_arg = 
-# 1203 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 1203 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                       __null
-# 1203 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1203 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                           );
     void DestroyPlatformWindows();
     ImGuiViewport* FindViewportByID(ImGuiID viewport_id);
@@ -2805,7 +2719,7 @@ enum ImGuiWindowFlags_
 
 
 };
-# 1267 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1267 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImGuiChildFlags_
 {
     ImGuiChildFlags_None = 0,
@@ -2837,7 +2751,7 @@ enum ImGuiItemFlags_
     ImGuiItemFlags_AutoClosePopups = 1 << 4,
     ImGuiItemFlags_AllowDuplicateId = 1 << 5,
     ImGuiItemFlags_Disabled = 1 << 6,
-# 1308 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1308 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImGuiItemFlags_LiveEditOnInputText = 1 << 7,
     ImGuiItemFlags_LiveEditOnInputScalar = 1 << 8,
     ImGuiItemFlags_LiveEditOnInput = ImGuiItemFlags_LiveEditOnInputText | ImGuiItemFlags_LiveEditOnInputScalar,
@@ -2882,7 +2796,7 @@ enum ImGuiInputTextFlags_
     ImGuiInputTextFlags_CallbackCharFilter = 1 << 21,
     ImGuiInputTextFlags_CallbackResize = 1 << 22,
     ImGuiInputTextFlags_CallbackEdit = 1 << 23,
-# 1360 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1360 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImGuiInputTextFlags_WordWrap = 1 << 24,
 
 
@@ -3264,7 +3178,7 @@ enum ImGuiKey : int
 
     ImGuiKey_NamedKey_END,
     ImGuiKey_NamedKey_COUNT = ImGuiKey_NamedKey_END - ImGuiKey_NamedKey_BEGIN,
-# 1752 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1752 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImGuiMod_None = 0,
     ImGuiMod_Ctrl = 1 << 12,
     ImGuiMod_Shift = 1 << 13,
@@ -3426,7 +3340,7 @@ enum ImGuiCol_
     ImGuiCol_NavHighlight = ImGuiCol_NavCursor,
 
 };
-# 1922 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 1922 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImGuiStyleVar_
 {
 
@@ -3620,7 +3534,7 @@ enum ImGuiCond_
     ImGuiCond_FirstUseEver = 1 << 2,
     ImGuiCond_Appearing = 1 << 3,
 };
-# 2142 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2142 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImGuiTableFlags_
 {
 
@@ -3717,7 +3631,7 @@ enum ImGuiTableRowFlags_
     ImGuiTableRowFlags_None = 0,
     ImGuiTableRowFlags_Headers = 1 << 0,
 };
-# 2248 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2248 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImGuiTableBgTarget_
 {
     ImGuiTableBgTarget_None = 0,
@@ -3749,7 +3663,7 @@ struct ImGuiTableColumnSortSpecs
 
     ImGuiTableColumnSortSpecs() { memset((void*)this, 0, sizeof(*this)); }
 };
-# 2300 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2300 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImNewWrapper {};
 inline void* operator new(size_t, ImNewWrapper, void* ptr) { return ptr; }
 inline void operator delete(void*, ImNewWrapper, void*) {}
@@ -3758,7 +3672,7 @@ inline void operator delete(void*, ImNewWrapper, void*) {}
 
 
 template<typename T> void IM_DELETE(T* p) { if (p) { p->~T(); ImGui::MemFree(p); } }
-# 2320 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2320 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 
 template<typename T>
 struct ImVector
@@ -3774,22 +3688,22 @@ struct ImVector
 
 
     inline ImVector() { Size = Capacity = 0; Data = 
-# 2334 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2334 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                          __null
-# 2334 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2334 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                              ; }
     inline ImVector(const ImVector<T>& src) { Size = Capacity = 0; Data = 
-# 2335 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2335 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                          __null
-# 2335 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2335 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                              ; operator=(src); }
     inline ImVector<T>& operator=(const ImVector<T>& src) { clear(); resize(src.Size); if (Data && src.Data) memcpy(Data, src.Data, (size_t)Size * sizeof(T)); return *this; }
     inline ~ImVector() { if (Data) ImGui::MemFree(Data); }
 
     inline void clear() { if (Data) { Size = Capacity = 0; ImGui::MemFree(Data); Data = 
-# 2339 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2339 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                     __null
-# 2339 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2339 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                         ; } }
     inline void clear_delete() { for (int n = 0; n < Size; n++) IM_DELETE(Data[n]); clear(); }
     inline void clear_destruct() { for (int n = 0; n < Size; n++) Data[n].~T(); clear(); }
@@ -3800,30 +3714,30 @@ struct ImVector
     inline int max_size() const { return 0x7FFFFFFF / (int)sizeof(T); }
     inline int capacity() const { return Capacity; }
     inline T& operator[](int i) { 
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              i >= 0 && i < Size
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "i >= 0 && i < Size"
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2348),0))
-# 2348 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2348),0))
+# 2348 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                           ; return Data[i]; }
     inline const T& operator[](int i) const { 
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              i >= 0 && i < Size
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "i >= 0 && i < Size"
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2349),0))
-# 2349 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2349),0))
+# 2349 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                           ; return Data[i]; }
 
     inline T* begin() { return Data; }
@@ -3831,56 +3745,56 @@ struct ImVector
     inline T* end() { return Data + Size; }
     inline const T* end() const { return Data + Size; }
     inline T& front() { 
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              Size > 0
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "Size > 0"
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2355),0))
-# 2355 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2355),0))
+# 2355 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 ; return Data[0]; }
     inline const T& front() const { 
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              Size > 0
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "Size > 0"
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2356),0))
-# 2356 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2356),0))
+# 2356 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 ; return Data[0]; }
     inline T& back() { 
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              Size > 0
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "Size > 0"
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2357),0))
-# 2357 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2357),0))
+# 2357 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 ; return Data[Size - 1]; }
     inline const T& back() const { 
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              Size > 0
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "Size > 0"
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2358),0))
-# 2358 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2358),0))
+# 2358 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 ; return Data[Size - 1]; }
     inline void swap(ImVector<T>& rhs) { int rhs_size = rhs.Size; rhs.Size = Size; Size = rhs_size; int rhs_cap = rhs.Capacity; rhs.Capacity = Capacity; Capacity = rhs_cap; T* rhs_data = rhs.Data; rhs.Data = Data; Data = rhs_data; }
 
@@ -3888,17 +3802,17 @@ struct ImVector
     inline void resize(int new_size) { if (new_size > Capacity) reserve(_grow_capacity(new_size)); Size = new_size; }
     inline void resize(int new_size, const T& v) { if (new_size > Capacity) reserve(_grow_capacity(new_size)); if (new_size > Size) for (int n = Size; n < new_size; n++) memcpy(&Data[n], &v, sizeof(v)); Size = new_size; }
     inline void shrink(int new_size) { 
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              new_size <= Size
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "new_size <= Size"
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2364),0))
-# 2364 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2364),0))
+# 2364 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                         ; Size = new_size; }
     inline void reserve(int new_capacity) { if (new_capacity <= Capacity) return; T* new_data = (T*)ImGui::MemAlloc((size_t)new_capacity * sizeof(T)); if (Data) { memcpy(new_data, Data, (size_t)Size * sizeof(T)); ImGui::MemFree(Data); } Data = new_data; Capacity = new_capacity; }
     inline void reserve_discard(int new_capacity) { if (new_capacity <= Capacity) return; if (Data) ImGui::MemFree(Data); Data = (T*)ImGui::MemAlloc((size_t)new_capacity * sizeof(T)); Capacity = new_capacity; }
@@ -3906,70 +3820,70 @@ struct ImVector
 
     inline void push_back(const T& v) { if (Size == Capacity) reserve(_grow_capacity(Size + 1)); memcpy(&Data[Size], &v, sizeof(v)); Size++; }
     inline void pop_back() { 
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              Size > 0
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "Size > 0"
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2370),0))
-# 2370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2370),0))
+# 2370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                 ; Size--; }
     inline void push_front(const T& v) { if (Size == 0) push_back(v); else insert(Data, v); }
     inline T* erase(const T* it) { 
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              it >= Data && it < Data + Size
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "it >= Data && it < Data + Size"
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2372),0))
-# 2372 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2372),0))
+# 2372 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                       ; const ptrdiff_t off = it - Data; memmove(Data + off, Data + off + 1, ((size_t)Size - (size_t)off - 1) * sizeof(T)); Size--; return Data + off; }
     inline T* erase(const T* it, const T* it_last){ 
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              it >= Data && it < Data + Size && it_last >= it && it_last <= Data + Size
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "it >= Data && it < Data + Size && it_last >= it && it_last <= Data + Size"
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2373),0))
-# 2373 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2373),0))
+# 2373 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                  ; const ptrdiff_t count = it_last - it; const ptrdiff_t off = it - Data; memmove(Data + off, Data + off + count, ((size_t)Size - (size_t)off - (size_t)count) * sizeof(T)); Size -= (int)count; return Data + off; }
     inline T* erase_unsorted(const T* it) { 
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              it >= Data && it < Data + Size
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "it >= Data && it < Data + Size"
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2374),0))
-# 2374 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2374),0))
+# 2374 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                       ; const ptrdiff_t off = it - Data; if (it < Data + Size - 1) memcpy(Data + off, Data + Size - 1, sizeof(T)); Size--; return Data + off; }
     inline T* insert(const T* it, const T& v) { 
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              it >= Data && it <= Data + Size
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "it >= Data && it <= Data + Size"
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2375),0))
-# 2375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2375),0))
+# 2375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                        ; const ptrdiff_t off = it - Data; if (Size == Capacity) reserve(_grow_capacity(Size + 1)); if (off < (int)Size) memmove(Data + off + 1, Data + off, ((size_t)Size - (size_t)off) * sizeof(T)); memcpy(&Data[off], &v, sizeof(v)); Size++; return Data + off; }
     inline bool contains(const T& v) const { const T* data = Data; const T* data_end = Data + Size; while (data < data_end) if (*data++ == v) return true; return false; }
     inline T* find(const T& v) { T* data = Data; const T* data_end = Data + Size; while (data < data_end) if (*data == v) break; else ++data; return data; }
@@ -3978,21 +3892,21 @@ struct ImVector
     inline bool find_erase(const T& v) { const T* it = find(v); if (it < Data + Size) { erase(it); return true; } return false; }
     inline bool find_erase_unsorted(const T& v) { const T* it = find(v); if (it < Data + Size) { erase_unsorted(it); return true; } return false; }
     inline int index_from_ptr(const T* it) const { 
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              (void) ((!!(
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              it >= Data && it < Data + Size
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                              )) || (_assert(
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                              "it >= Data && it < Data + Size"
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                             ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2382),0))
-# 2382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                             ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2382),0))
+# 2382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                       ; const ptrdiff_t off = it - Data; return (int)off; }
 };
 
-# 2394 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2394 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiStyle
 {
 
@@ -4093,7 +4007,7 @@ struct ImGuiStyle
 
 
 };
-# 2509 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2509 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiKeyData
 {
     bool Down;
@@ -4182,7 +4096,7 @@ struct ImGuiIO
     float MouseDragThreshold;
     float KeyRepeatDelay;
     float KeyRepeatRate;
-# 2616 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2616 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool ConfigErrorRecovery;
     bool ConfigErrorRecoveryEnableAssert;
     bool ConfigErrorRecoveryEnableDebugLog;
@@ -4212,7 +4126,7 @@ struct ImGuiIO
 
 
     bool ConfigDebugIgnoreFocusLoss;
-# 2653 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2653 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     const char* BackendPlatformName;
     const char* BackendRendererName;
     void* BackendPlatformUserData;
@@ -4308,7 +4222,7 @@ struct ImGuiIO
     bool AppAcceptingEvents;
     ImWchar16 InputQueueSurrogate;
     ImVector<ImWchar> InputQueueCharacters;
-# 2760 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2760 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     float FontGlobalScale;
 
 
@@ -4322,7 +4236,7 @@ struct ImGuiIO
 
     ImGuiIO();
 };
-# 2787 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2787 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiInputTextCallbackData
 {
     ImGuiContext* Ctx;
@@ -4352,35 +4266,35 @@ struct ImGuiInputTextCallbackData
     ImGuiInputTextCallbackData();
     void DeleteChars(int pos, int bytes_count);
     void InsertChars(int pos, const char* text, const char* text_end = 
-# 2815 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2815 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                      __null
-# 2815 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2815 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                          );
     void SelectAll() { SelectionStart = 0; CursorPos = SelectionEnd = BufTextLen; }
     void SetSelection(int s, int e) { 
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                      (void) ((!!(
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      s >= 0 && s <= BufTextLen
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                      )) || (_assert(
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      "s >= 0 && s <= BufTextLen"
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                     ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2817),0))
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                     ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2817),0))
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                          ; 
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                                                            (void) ((!!(
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                            e >= 0 && e <= BufTextLen
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                                                            )) || (_assert(
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                            "e >= 0 && e <= BufTextLen"
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                                                           ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2817),0))
-# 2817 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                                                           ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2817),0))
+# 2817 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                ; SelectionStart = s; CursorPos = SelectionEnd = e; }
     void ClearSelection() { SelectionStart = SelectionEnd = BufTextLen; }
     bool HasSelection() const { return SelectionStart != SelectionEnd; }
@@ -4395,7 +4309,7 @@ struct ImGuiSizeCallbackData
     ImVec2 CurrentSize;
     ImVec2 DesiredSize;
 };
-# 2839 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2839 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiWindowClass
 {
     ImGuiID ClassId;
@@ -4429,15 +4343,15 @@ struct ImGuiPayload
 
     ImGuiPayload() { Clear(); }
     void Clear() { SourceId = SourceParentId = 0; Data = 
-# 2871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                            __null
-# 2871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                ; DataSize = 0; memset(DataType, 0, sizeof(DataType)); DataFrameCount = -1; Preview = Delivery = false; }
     bool IsDataType(const char* type) const { return DataFrameCount != -1 && strcmp(type, DataType) == 0; }
     bool IsPreview() const { return Preview; }
     bool IsDelivery() const { return Delivery; }
 };
-# 2891 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2891 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiOnceUponAFrame
 {
     ImGuiOnceUponAFrame() { RefFrame = -1; }
@@ -4451,9 +4365,9 @@ struct ImGuiTextFilter
     ImGuiTextFilter(const char* default_filter = "");
     bool Draw(const char* label = "Filter (inc,-exc)", float width = 0.0f);
     bool PassFilter(const char* text, const char* text_end = 
-# 2903 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2903 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                            __null
-# 2903 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2903 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                ) const;
     void Build();
     void Clear() { InputBuf[0] = 0; Build(); }
@@ -4466,9 +4380,9 @@ struct ImGuiTextFilter
         const char* e;
 
         ImGuiTextRange() { b = e = 
-# 2914 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2914 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                  __null
-# 2914 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2914 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                      ; }
         ImGuiTextRange(const char* _b, const char* _e) { b = _b; e = _e; }
         bool empty() const { return b == e; }
@@ -4488,17 +4402,17 @@ struct ImGuiTextBuffer
 
     ImGuiTextBuffer() { }
     inline char operator[](int i) const { 
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                  (void) ((!!(
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  Buf.Data != 
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                  __null)) || (_assert(
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  "Buf.Data != __null"
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                 ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",2932),0))
-# 2932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                 ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",2932),0))
+# 2932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                             ; return Buf.Data[i]; }
     const char* begin() const { return Buf.Data ? &Buf.front() : EmptyString; }
     const char* end() const { return Buf.Data ? &Buf.back() : EmptyString; }
@@ -4509,9 +4423,9 @@ struct ImGuiTextBuffer
     void reserve(int capacity) { Buf.reserve(capacity); }
     const char* c_str() const { return Buf.Data ? Buf.Data : EmptyString; }
     void append(const char* str, const char* str_end = 
-# 2941 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2941 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                      __null
-# 2941 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2941 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                          );
     void appendf(const char* fmt, ...) __attribute__((format(gnu_printf, 2, 2 +1)));
     void appendfv(const char* fmt, va_list args) __attribute__((format(gnu_printf, 2, 0)));
@@ -4526,7 +4440,7 @@ struct ImGuiStoragePair
     ImGuiStoragePair(ImGuiID _key, float _val) { key = _key; val_f = _val; }
     ImGuiStoragePair(ImGuiID _key, void* _val) { key = _key; val_p = _val; }
 };
-# 2964 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2964 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiStorage
 {
 
@@ -4553,9 +4467,9 @@ struct ImGuiStorage
     bool* GetBoolRef(ImGuiID key, bool default_val = false);
     float* GetFloatRef(ImGuiID key, float default_val = 0.0f);
     void** GetVoidPtrRef(ImGuiID key, void* default_val = 
-# 2989 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 2989 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                       __null
-# 2989 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 2989 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                           );
 
 
@@ -4574,7 +4488,7 @@ enum ImGuiListClipperFlags_
     ImGuiListClipperFlags_None = 0,
     ImGuiListClipperFlags_NoSetTableRowCounters = 1 << 0,
 };
-# 3028 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3028 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiListClipper
 {
     int DisplayStart;
@@ -4612,7 +4526,7 @@ struct ImGuiListClipper
 
 
 };
-# 3139 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3139 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImColor
 {
     ImVec4 Value;
@@ -4629,7 +4543,7 @@ struct ImColor
     inline void SetHSV(float h, float s, float v, float a = 1.0f){ ImGui::ColorConvertHSVtoRGB(h, s, v, Value.x, Value.y, Value.z); Value.w = a; }
     static ImColor HSV(float h, float s, float v, float a = 1.0f) { float r, g, b; ImGui::ColorConvertHSVtoRGB(h, s, v, r, g, b); return ImColor(r, g, b, a); }
 };
-# 3197 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3197 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImGuiMultiSelectFlags_
 {
     ImGuiMultiSelectFlags_None = 0,
@@ -4695,7 +4609,7 @@ struct ImGuiSelectionRequest
     ImGuiSelectionUserData RangeFirstItem;
     ImGuiSelectionUserData RangeLastItem;
 };
-# 3279 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3279 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiSelectionBasicStorage
 {
 
@@ -4729,9 +4643,9 @@ struct ImGuiSelectionExternalStorage
     ImGuiSelectionExternalStorage();
     void ApplyRequests(ImGuiMultiSelectIO* ms_io);
 };
-# 3327 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3327 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 typedef unsigned short ImDrawIdx;
-# 3338 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3338 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 typedef void (*ImDrawCallback)(const ImDrawList* parent_list, const ImDrawCmd* cmd);
 
 
@@ -4767,7 +4681,7 @@ struct ImDrawVert
     ImVec2 uv;
     ImU32 col;
 };
-# 3382 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3382 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImDrawCmdHeader
 {
     ImVec4 ClipRect;
@@ -4837,7 +4751,7 @@ enum ImDrawListFlags_
     ImDrawListFlags_AllowVtxOffset = 1 << 3,
     ImDrawListFlags_TextNoPixelSnap = 1 << 4,
 };
-# 3461 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3461 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImDrawList
 {
 
@@ -4872,7 +4786,7 @@ struct ImDrawList
     void PopTexture();
     inline ImVec2 GetClipRectMin() const { const ImVec4& cr = _ClipRectStack.back(); return ImVec2(cr.x, cr.y); }
     inline ImVec2 GetClipRectMax() const { const ImVec4& cr = _ClipRectStack.back(); return ImVec2(cr.z, cr.w); }
-# 3503 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3503 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void AddLine(const ImVec2& p1, const ImVec2& p2, ImU32 col, float thickness = 1.0f);
     void AddLineH(float min_x, float max_x, float y, ImU32 col, float thickness = 1.0f);
     void AddLineV(float x, float min_y, float max_y, ImU32 col, float thickness = 1.0f);
@@ -4890,18 +4804,18 @@ struct ImDrawList
     void AddEllipse(const ImVec2& center, const ImVec2& radius, ImU32 col, float rot = 0.0f, int num_segments = 0, float thickness = 1.0f);
     void AddEllipseFilled(const ImVec2& center, const ImVec2& radius, ImU32 col, float rot = 0.0f, int num_segments = 0);
     void AddText(const ImVec2& pos, ImU32 col, const char* text_begin, const char* text_end = 
-# 3519 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3519 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                         __null
-# 3519 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3519 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                             );
     void AddText(ImFont* font, float font_size, const ImVec2& pos, ImU32 col, const char* text_begin, const char* text_end = 
-# 3520 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3520 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                        __null
-# 3520 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3520 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                            , float wrap_width = 0.0f, const ImVec4* cpu_fine_clip_rect = 
-# 3520 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3520 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                          __null
-# 3520 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3520 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                              );
     void AddBezierCubic(const ImVec2& p1, const ImVec2& p2, const ImVec2& p3, const ImVec2& p4, ImU32 col, float thickness, int num_segments = 0);
     void AddBezierQuadratic(const ImVec2& p1, const ImVec2& p2, const ImVec2& p3, ImU32 col, float thickness, int num_segments = 0);
@@ -4936,11 +4850,11 @@ struct ImDrawList
     void PathBezierCubicCurveTo(const ImVec2& p2, const ImVec2& p3, const ImVec2& p4, int num_segments = 0);
     void PathBezierQuadraticCurveTo(const ImVec2& p2, const ImVec2& p3, int num_segments = 0);
     void PathRect(const ImVec2& rect_min, const ImVec2& rect_max, float rounding = 0.0f, ImDrawFlags flags = 0);
-# 3565 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3565 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void AddCallback(ImDrawCallback callback, void* userdata = 
-# 3565 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3565 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                          __null
-# 3565 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3565 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                              , size_t userdata_size = 0);
 
 
@@ -4976,7 +4890,7 @@ struct ImDrawList
     inline void PathStroke(ImU32 col, ImDrawFlags flags, float thickness) { PathStroke(col, thickness, flags); }
     inline void PushTextureID(ImTextureRef tex_ref) { PushTexture(tex_ref); }
     inline void PopTextureID() { PopTexture(); }
-# 3612 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3612 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void _SetDrawListSharedData(ImDrawListSharedData* data);
     void _ResetForNewFrame();
     void _ClearFreeMemory();
@@ -5018,7 +4932,7 @@ struct ImDrawData
     void DeIndexAllBuffers();
     void ScaleClipRects(const ImVec2& fb_scale);
 };
-# 3666 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3666 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 enum ImTextureFormat
 {
     ImTextureFormat_RGBA32,
@@ -5043,7 +4957,7 @@ struct ImTextureRect
     unsigned short x, y;
     unsigned short w, h;
 };
-# 3698 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3698 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImTextureData
 {
 
@@ -5072,30 +4986,30 @@ struct ImTextureData
     void Create(ImTextureFormat format, int w, int h);
     void DestroyPixels();
     void* GetPixels() { 
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                      (void) ((!!(
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      Pixels != 
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                      __null)) || (_assert(
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      "Pixels != __null"
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                     ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",3725),0))
-# 3725 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                     ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",3725),0))
+# 3725 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                               ; return Pixels; }
     void* GetPixelsAt(int x, int y) { 
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                      (void) ((!!(
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      Pixels != 
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                      __null)) || (_assert(
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                      "Pixels != __null"
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                     ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",3726),0))
-# 3726 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                     ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",3726),0))
+# 3726 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                               ; return Pixels + (x + y * Width) * BytesPerPixel; }
     int GetSizeInBytes() const { return Width * Height * BytesPerPixel; }
     int GetPitch() const { return Width * BytesPerPixel; }
@@ -5183,9 +5097,9 @@ struct ImFontGlyphRangesBuilder
     inline void SetBit(size_t n) { int off = (int)(n >> 5); ImU32 mask = 1u << (n & 31); UsedChars[off] |= mask; }
     inline void AddChar(ImWchar c) { SetBit(c); }
     void AddText(const char* text, const char* text_end = 
-# 3812 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3812 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                     __null
-# 3812 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3812 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                         );
     void AddRanges(const ImWchar* ranges);
     void BuildRanges(ImVector<ImWchar>* out_ranges);
@@ -5216,62 +5130,62 @@ enum ImFontAtlasFlags_
     ImFontAtlasFlags_NoMouseCursors = 1 << 1,
     ImFontAtlasFlags_NoBakedLines = 1 << 2,
 };
-# 3862 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3862 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImFontAtlas
 {
     ImFontAtlas();
     ~ImFontAtlas();
     ImFont* AddFont(const ImFontConfig* font_cfg);
     ImFont* AddFontDefault(const ImFontConfig* font_cfg = 
-# 3867 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3867 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                              __null
-# 3867 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3867 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                  );
     ImFont* AddFontDefaultVector(const ImFontConfig* font_cfg = 
-# 3868 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3868 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                    __null
-# 3868 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3868 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                        );
     ImFont* AddFontDefaultBitmap(const ImFontConfig* font_cfg = 
-# 3869 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3869 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                    __null
-# 3869 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3869 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                        );
     ImFont* AddFontFromFileTTF(const char* filename, float size_pixels = 0.0f, const ImFontConfig* font_cfg = 
-# 3870 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3870 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                  __null
-# 3870 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3870 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                      , const ImWchar* glyph_ranges = 
-# 3870 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3870 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                      __null
-# 3870 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3870 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                          );
     ImFont* AddFontFromMemoryTTF(void* font_data, int font_data_size, float size_pixels = 0.0f, const ImFontConfig* font_cfg = 
-# 3871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                   __null
-# 3871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                       , const ImWchar* glyph_ranges = 
-# 3871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                       __null
-# 3871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                           );
     ImFont* AddFontFromMemoryCompressedTTF(const void* compressed_font_data, int compressed_font_data_size, float size_pixels = 0.0f, const ImFontConfig* font_cfg = 
-# 3872 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3872 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                         __null
-# 3872 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3872 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                             , const ImWchar* glyph_ranges = 
-# 3872 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3872 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                                             __null
-# 3872 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3872 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                                 );
     ImFont* AddFontFromMemoryCompressedBase85TTF(const char* compressed_font_data_base85, float size_pixels = 0.0f, const ImFontConfig* font_cfg = 
-# 3873 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3873 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                       __null
-# 3873 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3873 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                           , const ImWchar* glyph_ranges = 
-# 3873 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3873 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                                           __null
-# 3873 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3873 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                               );
     void RemoveFont(ImFont* font);
     void CompactCache();
@@ -5285,43 +5199,43 @@ struct ImFontAtlas
     void ClearFonts();
     void ClearInputData();
     void ClearTexData();
-# 3896 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3896 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     bool Build();
     void GetTexDataAsAlpha8(unsigned char** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel = 
-# 3897 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3897 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                               __null
-# 3897 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3897 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                   );
     void GetTexDataAsRGBA32(unsigned char** out_pixels, int* out_width, int* out_height, int* out_bytes_per_pixel = 
-# 3898 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3898 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                               __null
-# 3898 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3898 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                   );
     void SetTexID(ImTextureID id) { 
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                  (void) ((!!(
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  TexRef._TexID == ((ImTextureID)0)
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                  )) || (_assert(
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  "TexRef._TexID == ((ImTextureID)0)"
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                 ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",3899),0))
-# 3899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                 ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",3899),0))
+# 3899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                 ; TexRef._TexData->TexID = id; }
     void SetTexID(ImTextureRef id) { 
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                                                  (void) ((!!(
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  TexRef._TexID == ((ImTextureID)0) && id._TexData == 
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                  __null)) || (_assert(
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                  "TexRef._TexID == ((ImTextureID)0) && id._TexData == __null"
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                                                 ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",3900),0))
-# 3900 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                                                 ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",3900),0))
+# 3900 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                        ; TexRef._TexData->TexID = id._TexID; }
     bool IsBuilt() const { return Fonts.Size > 0 && TexIsBuilt; }
 
@@ -5345,11 +5259,11 @@ struct ImFontAtlas
     const ImWchar* GetGlyphRangesCyrillic();
     const ImWchar* GetGlyphRangesThai();
     const ImWchar* GetGlyphRangesVietnamese();
-# 3946 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3946 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     ImFontAtlasRectId AddCustomRect(int width, int height, ImFontAtlasRect* out_r = 
-# 3946 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 3946 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                              __null
-# 3946 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 3946 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                  );
     void RemoveCustomRect(ImFontAtlasRectId id);
     bool GetCustomRect(ImFontAtlasRectId id, ImFontAtlasRect* out_r) const;
@@ -5406,9 +5320,9 @@ struct ImFontAtlas
     ImFontAtlasRect TempRect;
     inline ImFontAtlasRectId AddCustomRectRegular(int w, int h) { return AddCustomRect(w, h); }
     inline const ImFontAtlasRect* GetCustomRectByIndex(ImFontAtlasRectId id) { return GetCustomRect(id, &TempRect) ? &TempRect : 
-# 4001 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4001 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                                __null
-# 4001 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4001 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                    ; }
     inline void CalcCustomRectUV(const ImFontAtlasRect* r, ImVec2* out_uv_min, ImVec2* out_uv_max) const { *out_uv_min = r->uv0; *out_uv_max = r->uv1; }
     ImFontAtlasRectId AddCustomRectFontGlyph(ImFont* font, ImWchar codepoint, int w, int h, float advance_x, const ImVec2& offset = ImVec2(0, 0));
@@ -5499,9 +5413,9 @@ struct ImFont
     ~ImFont();
     bool IsGlyphInFont(ImWchar c);
     bool IsLoaded() const { return OwnerAtlas != 
-# 4090 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4090 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                       __null
-# 4090 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4090 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                           ; }
     const char* GetDebugName() const { return Sources.Size ? Sources[0]->Name : "<unknown>"; }
 
@@ -5510,19 +5424,19 @@ struct ImFont
 
     ImFontBaked* GetFontBaked(float font_size, float density = -1.0f);
     ImVec2 CalcTextSizeA(float size, float max_width, float wrap_width, const char* text_begin, const char* text_end = 
-# 4097 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4097 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                            __null
-# 4097 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4097 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                , const char** out_remaining = 
-# 4097 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4097 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                                               __null
-# 4097 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4097 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                   );
     const char* CalcWordWrapPosition(float size, const char* text, const char* text_end, float wrap_width);
     void RenderChar(ImDrawList* draw_list, float size, const ImVec2& pos, ImU32 col, ImWchar c, const ImVec4* cpu_fine_clip = 
-# 4099 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4099 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                                     __null
-# 4099 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4099 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                         );
     void RenderText(ImDrawList* draw_list, float size, const ImVec2& pos, ImU32 col, const ImVec4& clip_rect, const char* text_begin, const char* text_end, float wrap_width = 0.0f, ImDrawTextFlags flags = 0);
 
@@ -5539,21 +5453,21 @@ struct ImFont
 inline ImTextureID ImTextureRef::GetTexID() const
 {
     
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
    (void) ((!!(
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
    !(_TexData != 
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
    __null 
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
    && _TexID != ((ImTextureID)0))
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
    )) || (_assert(
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
    "!(_TexData != __null && _TexID != ((ImTextureID)0))"
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-   ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",4114),0))
-# 4114 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+   ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",4114),0))
+# 4114 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                   ;
     return _TexData ? _TexData->TexID : _TexID;
 }
@@ -5567,22 +5481,22 @@ inline ImTextureID ImDrawCmd::GetTexID() const
 
     ImTextureID tex_id = TexRef._TexData ? TexRef._TexData->TexID : TexRef._TexID;
     if (TexRef._TexData != 
-# 4126 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4126 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                           __null
-# 4126 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4126 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                               )
         
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
        (void) ((!!(
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
        tex_id != ((ImTextureID)0) && "ImDrawCmd is referring to ImTextureData that wasn't uploaded to graphics system. Backend must call ImTextureData::SetTexID() after handling ImTextureStatus_WantCreate request!"
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
        )) || (_assert(
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
        "tex_id != ((ImTextureID)0) && \"ImDrawCmd is referring to ImTextureData that wasn't uploaded to graphics system. Backend must call ImTextureData::SetTexID() after handling ImTextureStatus_WantCreate request!\""
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",4127),0))
-# 4127 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",4127),0))
+# 4127 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                                                                                                                     ;
     return tex_id;
 }
@@ -5612,7 +5526,7 @@ enum ImGuiViewportFlags_
     ImGuiViewportFlags_IsMinimized = 1 << 12,
     ImGuiViewportFlags_IsFocused = 1 << 13,
 };
-# 4164 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4164 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiViewport
 {
     ImGuiID ID;
@@ -5644,21 +5558,21 @@ struct ImGuiViewport
 
     ImGuiViewport() { memset((void*)this, 0, sizeof(*this)); }
     ~ImGuiViewport() { 
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
                          (void) ((!!(
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                          PlatformUserData == 
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                          __null 
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                          && RendererUserData == 
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                          __null)) || (_assert(
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                          "PlatformUserData == __null && RendererUserData == __null"
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3
-                         ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h",4194),0))
-# 4194 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3
+                         ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h",4194),0))
+# 4194 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                         ; }
 
 
@@ -5666,7 +5580,7 @@ struct ImGuiViewport
     ImVec2 GetWorkCenter() const { return ImVec2(WorkPos.x + WorkSize.x * 0.5f, WorkPos.y + WorkSize.y * 0.5f); }
     const char* GetDebugName() const;
 };
-# 4253 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4253 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 struct ImGuiPlatformIO
 {
     ImGuiPlatformIO();
@@ -5715,7 +5629,7 @@ struct ImGuiPlatformIO
     ImDrawCallback DrawCallback_ResetRenderState;
     ImDrawCallback DrawCallback_SetSamplerLinear;
     ImDrawCallback DrawCallback_SetSamplerNearest;
-# 4320 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4320 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
     void (*Platform_CreateWindow)(ImGuiViewport* vp);
     void (*Platform_DestroyWindow)(ImGuiViewport* vp);
     void (*Platform_ShowWindow)(ImGuiViewport* vp);
@@ -5778,9 +5692,9 @@ struct ImGuiPlatformMonitor
     float DpiScale;
     void* PlatformHandle;
     ImGuiPlatformMonitor() { MainPos = MainSize = WorkPos = WorkSize = ImVec2(0, 0); DpiScale = 1.0f; PlatformHandle = 
-# 4381 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h" 3 4
+# 4381 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h" 3 4
                                                                                                                                __null
-# 4381 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4381 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
                                                                                                                                    ; }
 };
 
@@ -5795,7 +5709,7 @@ struct ImGuiPlatformImeData
 
     ImGuiPlatformImeData() { memset((void*)this, 0, sizeof(*this)); }
 };
-# 4403 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4403 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 namespace ImGui
 {
 
@@ -5814,3346 +5728,156 @@ namespace ImGui
     ImVec2 GetContentRegionMax();
     ImVec2 GetWindowContentRegionMin();
     ImVec2 GetWindowContentRegionMax();
-# 4496 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4496 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 }
-# 4505 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4505 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 typedef ImFontAtlasRect ImFontAtlasCustomRect;
-# 4558 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.h"
+# 4558 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.h"
 #pragma GCC diagnostic pop
-# 135 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 135 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
 
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 1 3
-# 9 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 1 3
-# 12 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
+# 1 "C:/msys64/ucrt64/include/ctype.h" 1 3
+# 12 "C:/msys64/ucrt64/include/ctype.h" 3
 
-# 12 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
+# 12 "C:/msys64/ucrt64/include/ctype.h" 3
 extern "C" {
+# 25 "C:/msys64/ucrt64/include/ctype.h" 3
+  __attribute__ ((__dllimport__)) const unsigned short* __pctype_func(void);
+# 39 "C:/msys64/ucrt64/include/ctype.h" 3
+  extern const unsigned short ** __imp__wctype;
+
+
+
+  __attribute__ ((__dllimport__)) const wctype_t * __attribute__((__cdecl__)) __pwctype_func(void);
+# 52 "C:/msys64/ucrt64/include/ctype.h" 3
+  extern const unsigned char __newclmap[];
+  extern const unsigned char __newcumap[];
+  extern pthreadlocinfo __ptlocinfo;
+  extern pthreadmbcinfo __ptmbcinfo;
+  extern int __globallocalestatus;
+  extern int __locale_changed;
+  extern struct threadlocaleinfostruct __initiallocinfo;
+  extern _locale_tstruct __initiallocalestructinfo;
+  pthreadlocinfo __attribute__((__cdecl__)) __updatetlocinfo(void);
+  pthreadmbcinfo __attribute__((__cdecl__)) __updatetmbcinfo(void);
+# 80 "C:/msys64/ucrt64/include/ctype.h" 3
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isctype(int _C,int _Type);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isctype_l(int _C,int _Type,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isalpha(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isalpha_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isupper(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isupper_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) islower(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _islower_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isdigit(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isdigit_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isxdigit(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isxdigit_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isspace(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isspace_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ispunct(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _ispunct_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isalnum(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isalnum_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isprint(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isprint_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isgraph(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isgraph_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iscntrl(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iscntrl_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) toupper(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) tolower(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _tolower(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _tolower_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _toupper(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _toupper_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __isascii(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __toascii(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iscsymf(int _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iscsym(int _C);
+
+
+int __attribute__((__cdecl__)) isblank(int _C);
 
 
 
 
 
 
+  int __attribute__((__cdecl__)) iswalpha(wint_t _C);
+  int __attribute__((__cdecl__)) iswupper(wint_t _C);
+  int __attribute__((__cdecl__)) iswlower(wint_t _C);
+  int __attribute__((__cdecl__)) iswdigit(wint_t _C);
+  int __attribute__((__cdecl__)) iswxdigit(wint_t _C);
+  int __attribute__((__cdecl__)) iswspace(wint_t _C);
+  int __attribute__((__cdecl__)) iswpunct(wint_t _C);
+  int __attribute__((__cdecl__)) iswalnum(wint_t _C);
+  int __attribute__((__cdecl__)) iswprint(wint_t _C);
+  int __attribute__((__cdecl__)) iswgraph(wint_t _C);
+  int __attribute__((__cdecl__)) iswcntrl(wint_t _C);
+  int __attribute__((__cdecl__)) iswascii(wint_t _C);
 
-__attribute__ ((__dllimport__)) const unsigned short* __attribute__((__cdecl__)) __pctype_func(void);
-__attribute__ ((__dllimport__)) const wctype_t * __attribute__((__cdecl__)) __pwctype_func(void);
-# 38 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
-extern __attribute__ ((__dllimport__)) const unsigned short *_wctype;
-# 59 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswctype(wint_t _C,wctype_t _Type);
+  int __attribute__((__cdecl__)) isleadbyte(int _C);
 
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswalnum(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswalpha(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswblank(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswcntrl(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswdigit(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswgraph(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswlower(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswprint(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswpunct(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswspace(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswupper(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswxdigit(wint_t _C);
+  wint_t __attribute__((__cdecl__)) towupper(wint_t _C);
+  wint_t __attribute__((__cdecl__)) towlower(wint_t _C);
+  int __attribute__((__cdecl__)) iswctype(wint_t _C,wctype_t _Type);
 
-__attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) towlower(wint_t _C);
-__attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) towupper(wint_t _C);
-# 100 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswctype_l(wint_t _C,wctype_t _Type,_locale_t _Locale);
 
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswalnum_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswalpha_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswblank_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswcntrl_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswdigit_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswgraph_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswlower_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswprint_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswpunct_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswspace_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswupper_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswxdigit_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswalpha_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswupper_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswlower_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswdigit_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswxdigit_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswspace_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswpunct_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswalnum_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswprint_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswgraph_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswcntrl_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _towupper_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _towlower_l(wint_t _C,_locale_t _Locale);
 
-__attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _towlower_l(wint_t _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _towupper_l(wint_t _C,_locale_t _Locale);
-# 138 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iswcsym(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iswcsymf(wint_t _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iswascii(wint_t _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isleadbyte_l(int _C,_locale_t _Locale);
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswctype_l(wint_t _C,wctype_t _Type,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iswcsymf(wint_t _C);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iswcsym(wint_t _C);
 
 
 
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) is_wctype(wint_t _C,wctype_t _Type);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isleadbyte(int _C);
-# 175 "C:/Users/maxwo/msys2/mingw64/include/corecrt_wctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isleadbyte_l(int _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswcsymf_l(wint_t _C,_locale_t _Locale);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iswcsym_l(wint_t _C,_locale_t _Locale);
+
+
+  int __attribute__((__cdecl__)) is_wctype(wint_t _C,wctype_t _Type);
 
 
 
-
+int __attribute__((__cdecl__)) iswblank(wint_t _C);
+# 269 "C:/msys64/ucrt64/include/ctype.h" 3
 }
-# 10 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 2 3
-
-
-extern "C" {
-# 31 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isalnum(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isalpha(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isblank(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iscntrl(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isdigit(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isgraph(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) islower(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isprint(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) ispunct(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isspace(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isupper(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isxdigit(int _C);
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) tolower(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) toupper(int _C);
-# 59 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isalnum_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isalpha_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isblank_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _iscntrl_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isdigit_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isgraph_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _islower_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isprint_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _ispunct_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isspace_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isupper_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isxdigit_l(int _C,_locale_t _Locale);
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _tolower_l(int _C,_locale_t _Locale);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _toupper_l(int _C,_locale_t _Locale);
-# 103 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __isascii(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __toascii(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _tolower(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _toupper(int _C);
-# 120 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) isascii(int _C) ;
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) toascii(int _C) ;
-
-
-
-
-
-
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isctype(int _C,int _Type);
-
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iscsym(int _C);
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __iscsymf(int _C);
-# 144 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iscsym(int _C) ;
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) iscsymf(int _C) ;
-# 177 "C:/Users/maxwo/msys2/mingw64/include/ctype.h" 3
-__attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _isctype_l(int _C,int _Type,_locale_t _Locale);
-
-
-
-}
-# 139 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h" 1 3 4
-# 140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/math.h" 1 3
-# 36 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/math.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 1 3
-# 46 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/requires_hosted.h" 1 3
-# 47 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
-
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 1 3
-# 40 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 41 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 2 3
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 1 3
-# 66 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 67 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 2 3
-
-extern "C++"
-{
-namespace std
-{
-
-
-  template<typename _Tp>
-    class reference_wrapper;
-# 91 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp, _Tp __v>
-    struct integral_constant
-    {
-      static constexpr _Tp value = __v;
-      using value_type = _Tp;
-      using type = integral_constant<_Tp, __v>;
-      constexpr operator value_type() const noexcept { return value; }
-
-
-      constexpr value_type operator()() const noexcept { return value; }
-
-    };
-# 111 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<bool __v>
-    using __bool_constant = integral_constant<bool, __v>;
-
-
-
-  using true_type = __bool_constant<true>;
-
-
-  using false_type = __bool_constant<false>;
-
-
-
-
-  template<bool __v>
-    using bool_constant = __bool_constant<__v>;
-
-
-
-
-
-
-  template<bool, typename _Tp = void>
-    struct enable_if
-    { };
-
-
-  template<typename _Tp>
-    struct enable_if<true, _Tp>
-    { using type = _Tp; };
-
-
-  template<bool _Cond, typename _Tp = void>
-    using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
-
-  template<bool>
-    struct __conditional
-    {
-      template<typename _Tp, typename>
- using type = _Tp;
-    };
-
-  template<>
-    struct __conditional<false>
-    {
-      template<typename, typename _Up>
- using type = _Up;
-    };
-
-
-  template<bool _Cond, typename _If, typename _Else>
-    using __conditional_t
-      = typename __conditional<_Cond>::template type<_If, _Else>;
-
-
-  template <typename _Type>
-    struct __type_identity
-    { using type = _Type; };
-
-  template<typename _Tp>
-    using __type_identity_t = typename __type_identity<_Tp>::type;
-
-  namespace __detail
-  {
-
-    template<typename _Tp, typename...>
-      using __first_t = _Tp;
-
-
-    template<typename... _Bn>
-      auto __or_fn(int) -> __first_t<false_type,
-         __enable_if_t<!bool(_Bn::value)>...>;
-
-    template<typename... _Bn>
-      auto __or_fn(...) -> true_type;
-
-    template<typename... _Bn>
-      auto __and_fn(int) -> __first_t<true_type,
-          __enable_if_t<bool(_Bn::value)>...>;
-
-    template<typename... _Bn>
-      auto __and_fn(...) -> false_type;
-  }
-
-
-
-
-  template<typename... _Bn>
-    struct __or_
-    : decltype(__detail::__or_fn<_Bn...>(0))
-    { };
-
-  template<typename... _Bn>
-    struct __and_
-    : decltype(__detail::__and_fn<_Bn...>(0))
-    { };
-
-  template<typename _Pp>
-    struct __not_
-    : __bool_constant<!bool(_Pp::value)>
-    { };
-
-
-
-
-
-  template<typename... _Bn>
-    inline constexpr bool __or_v = __or_<_Bn...>::value;
-  template<typename... _Bn>
-    inline constexpr bool __and_v = __and_<_Bn...>::value;
-
-  namespace __detail
-  {
-    template<typename , typename _B1, typename... _Bn>
-      struct __disjunction_impl
-      { using type = _B1; };
-
-    template<typename _B1, typename _B2, typename... _Bn>
-      struct __disjunction_impl<__enable_if_t<!bool(_B1::value)>, _B1, _B2, _Bn...>
-      { using type = typename __disjunction_impl<void, _B2, _Bn...>::type; };
-
-    template<typename , typename _B1, typename... _Bn>
-      struct __conjunction_impl
-      { using type = _B1; };
-
-    template<typename _B1, typename _B2, typename... _Bn>
-      struct __conjunction_impl<__enable_if_t<bool(_B1::value)>, _B1, _B2, _Bn...>
-      { using type = typename __conjunction_impl<void, _B2, _Bn...>::type; };
-  }
-
-
-  template<typename... _Bn>
-    struct conjunction
-    : __detail::__conjunction_impl<void, _Bn...>::type
-    { };
-
-  template<>
-    struct conjunction<>
-    : true_type
-    { };
-
-  template<typename... _Bn>
-    struct disjunction
-    : __detail::__disjunction_impl<void, _Bn...>::type
-    { };
-
-  template<>
-    struct disjunction<>
-    : false_type
-    { };
-
-  template<typename _Pp>
-    struct negation
-    : __not_<_Pp>::type
-    { };
-
-
-
-
-  template<typename... _Bn>
-    inline constexpr bool conjunction_v = conjunction<_Bn...>::value;
-
-  template<typename... _Bn>
-    inline constexpr bool disjunction_v = disjunction<_Bn...>::value;
-
-  template<typename _Pp>
-    inline constexpr bool negation_v = negation<_Pp>::value;
-
-
-
-
-
-  template<typename>
-    struct is_reference;
-  template<typename>
-    struct is_function;
-  template<typename>
-    struct is_void;
-  template<typename>
-    struct remove_cv;
-  template<typename>
-    struct is_const;
-
-
-  template<typename>
-    struct __is_array_unknown_bounds;
-
-
-
-
-  template <typename _Tp, size_t = sizeof(_Tp)>
-    constexpr true_type __is_complete_or_unbounded(__type_identity<_Tp>)
-    { return {}; }
-
-  template <typename _TypeIdentity,
-      typename _NestedType = typename _TypeIdentity::type>
-    constexpr typename __or_<
-      is_reference<_NestedType>,
-      is_function<_NestedType>,
-      is_void<_NestedType>,
-      __is_array_unknown_bounds<_NestedType>
-    >::type __is_complete_or_unbounded(_TypeIdentity)
-    { return {}; }
-
-
-  template<typename _Tp>
-    using __remove_cv_t = typename remove_cv<_Tp>::type;
-
-
-
-
-
-  template<typename _Tp>
-    struct is_void
-    : public false_type { };
-
-  template<>
-    struct is_void<void>
-    : public true_type { };
-
-  template<>
-    struct is_void<const void>
-    : public true_type { };
-
-  template<>
-    struct is_void<volatile void>
-    : public true_type { };
-
-  template<>
-    struct is_void<const volatile void>
-    : public true_type { };
-
-
-  template<typename>
-    struct __is_integral_helper
-    : public false_type { };
-
-  template<>
-    struct __is_integral_helper<bool>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<char>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<signed char>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<unsigned char>
-    : public true_type { };
-
-
-
-
-  template<>
-    struct __is_integral_helper<wchar_t>
-    : public true_type { };
-
-
-  template<>
-    struct __is_integral_helper<char8_t>
-    : public true_type { };
-
-
-  template<>
-    struct __is_integral_helper<char16_t>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<char32_t>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<short>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<unsigned short>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<int>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<unsigned int>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<long>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<unsigned long>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<long long>
-    : public true_type { };
-
-  template<>
-    struct __is_integral_helper<unsigned long long>
-    : public true_type { };
-
-
-
-
-  __extension__
-  template<>
-    struct __is_integral_helper<__int128>
-    : public true_type { };
-
-  __extension__
-  template<>
-    struct __is_integral_helper<unsigned __int128>
-    : public true_type { };
-# 465 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_integral
-    : public __is_integral_helper<__remove_cv_t<_Tp>>::type
-    { };
-
-
-  template<typename>
-    struct __is_floating_point_helper
-    : public false_type { };
-
-  template<>
-    struct __is_floating_point_helper<float>
-    : public true_type { };
-
-  template<>
-    struct __is_floating_point_helper<double>
-    : public true_type { };
-
-  template<>
-    struct __is_floating_point_helper<long double>
-    : public true_type { };
-# 518 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<>
-    struct __is_floating_point_helper<__float128>
-    : public true_type { };
-
-
-
-
-  template<typename _Tp>
-    struct is_floating_point
-    : public __is_floating_point_helper<__remove_cv_t<_Tp>>::type
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_array
-    : public __bool_constant<__is_array(_Tp)>
-    { };
-# 552 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_pointer
-    : public __bool_constant<__is_pointer(_Tp)>
-    { };
-# 579 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename>
-    struct is_lvalue_reference
-    : public false_type { };
-
-  template<typename _Tp>
-    struct is_lvalue_reference<_Tp&>
-    : public true_type { };
-
-
-  template<typename>
-    struct is_rvalue_reference
-    : public false_type { };
-
-  template<typename _Tp>
-    struct is_rvalue_reference<_Tp&&>
-    : public true_type { };
-
-
-
-  template<typename _Tp>
-    struct is_member_object_pointer
-    : public __bool_constant<__is_member_object_pointer(_Tp)>
-    { };
-# 620 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_member_function_pointer
-    : public __bool_constant<__is_member_function_pointer(_Tp)>
-    { };
-# 641 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_enum
-    : public __bool_constant<__is_enum(_Tp)>
-    { };
-
-
-  template<typename _Tp>
-    struct is_union
-    : public __bool_constant<__is_union(_Tp)>
-    { };
-
-
-  template<typename _Tp>
-    struct is_class
-    : public __bool_constant<__is_class(_Tp)>
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_function
-    : public __bool_constant<__is_function(_Tp)>
-    { };
-# 680 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_null_pointer
-    : public false_type { };
-
-  template<>
-    struct is_null_pointer<std::nullptr_t>
-    : public true_type { };
-
-  template<>
-    struct is_null_pointer<const std::nullptr_t>
-    : public true_type { };
-
-  template<>
-    struct is_null_pointer<volatile std::nullptr_t>
-    : public true_type { };
-
-  template<>
-    struct is_null_pointer<const volatile std::nullptr_t>
-    : public true_type { };
-
-
-
-  template<typename _Tp>
-    struct __is_nullptr_t
-    : public is_null_pointer<_Tp>
-    { } __attribute__ ((__deprecated__ ("use '" "std::is_null_pointer" "' instead")));
-
-
-
-
-
-
-  template<typename _Tp>
-    struct is_reference
-    : public __bool_constant<__is_reference(_Tp)>
-    { };
-# 734 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_arithmetic
-    : public __or_<is_integral<_Tp>, is_floating_point<_Tp>>::type
-    { };
-
-
-  template<typename _Tp>
-    struct is_fundamental
-    : public __or_<is_arithmetic<_Tp>, is_void<_Tp>,
-     is_null_pointer<_Tp>>::type
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_object
-    : public __bool_constant<__is_object(_Tp)>
-    { };
-# 760 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename>
-    struct is_member_pointer;
-
-
-  template<typename _Tp>
-    struct is_scalar
-    : public __or_<is_arithmetic<_Tp>, is_enum<_Tp>, is_pointer<_Tp>,
-                   is_member_pointer<_Tp>, is_null_pointer<_Tp>>::type
-    { };
-
-
-  template<typename _Tp>
-    struct is_compound
-    : public __bool_constant<!is_fundamental<_Tp>::value> { };
-
-
-
-  template<typename _Tp>
-    struct is_member_pointer
-    : public __bool_constant<__is_member_pointer(_Tp)>
-    { };
-# 798 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename, typename>
-    struct is_same;
-
-
-  template<typename _Tp, typename... _Types>
-    using __is_one_of = __or_<is_same<_Tp, _Types>...>;
-
-
-  __extension__
-  template<typename _Tp>
-    using __is_signed_integer = __is_one_of<__remove_cv_t<_Tp>,
-   signed char, signed short, signed int, signed long,
-   signed long long
-
-   , signed __int128
-# 823 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-   >;
-
-
-  __extension__
-  template<typename _Tp>
-    using __is_unsigned_integer = __is_one_of<__remove_cv_t<_Tp>,
-   unsigned char, unsigned short, unsigned int, unsigned long,
-   unsigned long long
-
-   , unsigned __int128
-# 843 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-   >;
-
-
-  template<typename _Tp>
-    using __is_standard_integer
-      = __or_<__is_signed_integer<_Tp>, __is_unsigned_integer<_Tp>>;
-
-
-  template<typename...> using __void_t = void;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct is_const
-    : public __bool_constant<__is_const(_Tp)>
-    { };
-# 874 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_volatile
-    : public __bool_constant<__is_volatile(_Tp)>
-    { };
-# 895 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct
-   
-    is_trivial
-    : public __bool_constant<__is_trivial(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_copyable
-    : public __bool_constant<__is_trivially_copyable(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_standard_layout
-    : public __bool_constant<__is_standard_layout(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-
-
-
-  template<typename _Tp>
-    struct
-    __attribute__ ((__deprecated__ ("use '" "is_standard_layout && is_trivial" "' instead")))
-    is_pod
-    : public __bool_constant<__is_pod(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-
-
-  template<typename _Tp>
-    struct
-    [[__deprecated__]]
-    is_literal_type
-    : public __bool_constant<__is_literal_type(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_empty
-    : public __bool_constant<__is_empty(_Tp)>
-    { };
-
-
-  template<typename _Tp>
-    struct is_polymorphic
-    : public __bool_constant<__is_polymorphic(_Tp)>
-    { };
-
-
-
-
-  template<typename _Tp>
-    struct is_final
-    : public __bool_constant<__is_final(_Tp)>
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_abstract
-    : public __bool_constant<__is_abstract(_Tp)>
-    { };
-
-
-  template<typename _Tp,
-    bool = is_arithmetic<_Tp>::value>
-    struct __is_signed_helper
-    : public false_type { };
-
-  template<typename _Tp>
-    struct __is_signed_helper<_Tp, true>
-    : public __bool_constant<_Tp(-1) < _Tp(0)>
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_signed
-    : public __is_signed_helper<_Tp>::type
-    { };
-
-
-  template<typename _Tp>
-    struct is_unsigned
-    : public __and_<is_arithmetic<_Tp>, __not_<is_signed<_Tp>>>::type
-    { };
-
-
-  template<typename _Tp, typename _Up = _Tp&&>
-    _Up
-    __declval(int);
-
-  template<typename _Tp>
-    _Tp
-    __declval(long);
-
-
-  template<typename _Tp>
-    auto declval() noexcept -> decltype(__declval<_Tp>(0));
-
-  template<typename>
-    struct remove_all_extents;
-
-
-  template<typename _Tp>
-    struct __is_array_known_bounds
-    : public false_type
-    { };
-
-  template<typename _Tp, size_t _Size>
-    struct __is_array_known_bounds<_Tp[_Size]>
-    : public true_type
-    { };
-
-  template<typename _Tp>
-    struct __is_array_unknown_bounds
-    : public false_type
-    { };
-
-  template<typename _Tp>
-    struct __is_array_unknown_bounds<_Tp[]>
-    : public true_type
-    { };
-# 1047 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  struct __do_is_destructible_impl
-  {
-    template<typename _Tp, typename = decltype(declval<_Tp&>().~_Tp())>
-      static true_type __test(int);
-
-    template<typename>
-      static false_type __test(...);
-  };
-
-  template<typename _Tp>
-    struct __is_destructible_impl
-    : public __do_is_destructible_impl
-    {
-      using type = decltype(__test<_Tp>(0));
-    };
-
-  template<typename _Tp,
-           bool = __or_<is_void<_Tp>,
-                        __is_array_unknown_bounds<_Tp>,
-                        is_function<_Tp>>::value,
-           bool = __or_<is_reference<_Tp>, is_scalar<_Tp>>::value>
-    struct __is_destructible_safe;
-
-  template<typename _Tp>
-    struct __is_destructible_safe<_Tp, false, false>
-    : public __is_destructible_impl<typename
-               remove_all_extents<_Tp>::type>::type
-    { };
-
-  template<typename _Tp>
-    struct __is_destructible_safe<_Tp, true, false>
-    : public false_type { };
-
-  template<typename _Tp>
-    struct __is_destructible_safe<_Tp, false, true>
-    : public true_type { };
-
-
-
-  template<typename _Tp>
-    struct is_destructible
-    : public __is_destructible_safe<_Tp>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-
-
-
-
-  struct __do_is_nt_destructible_impl
-  {
-    template<typename _Tp>
-      static __bool_constant<noexcept(declval<_Tp&>().~_Tp())>
-      __test(int);
-
-    template<typename>
-      static false_type __test(...);
-  };
-
-  template<typename _Tp>
-    struct __is_nt_destructible_impl
-    : public __do_is_nt_destructible_impl
-    {
-      using type = decltype(__test<_Tp>(0));
-    };
-
-  template<typename _Tp,
-           bool = __or_<is_void<_Tp>,
-                        __is_array_unknown_bounds<_Tp>,
-                        is_function<_Tp>>::value,
-           bool = __or_<is_reference<_Tp>, is_scalar<_Tp>>::value>
-    struct __is_nt_destructible_safe;
-
-  template<typename _Tp>
-    struct __is_nt_destructible_safe<_Tp, false, false>
-    : public __is_nt_destructible_impl<typename
-               remove_all_extents<_Tp>::type>::type
-    { };
-
-  template<typename _Tp>
-    struct __is_nt_destructible_safe<_Tp, true, false>
-    : public false_type { };
-
-  template<typename _Tp>
-    struct __is_nt_destructible_safe<_Tp, false, true>
-    : public true_type { };
-
-
-
-  template<typename _Tp>
-    struct is_nothrow_destructible
-    : public __is_nt_destructible_safe<_Tp>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename... _Args>
-    using __is_constructible_impl
-      = __bool_constant<__is_constructible(_Tp, _Args...)>;
-
-
-
-  template<typename _Tp, typename... _Args>
-    struct is_constructible
-      : public __is_constructible_impl<_Tp, _Args...>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_default_constructible
-    : public __is_constructible_impl<_Tp>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp>
-    using __add_lval_ref_t = __add_lvalue_reference(_Tp);
-# 1191 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_copy_constructible
-    : public __is_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp>
-    using __add_rval_ref_t = __add_rvalue_reference(_Tp);
-# 1218 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_move_constructible
-    : public __is_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename... _Args>
-    using __is_nothrow_constructible_impl
-      = __bool_constant<__is_nothrow_constructible(_Tp, _Args...)>;
-
-
-
-  template<typename _Tp, typename... _Args>
-    struct is_nothrow_constructible
-    : public __is_nothrow_constructible_impl<_Tp, _Args...>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_default_constructible
-    : public __is_nothrow_constructible_impl<_Tp>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_copy_constructible
-    : public __is_nothrow_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_move_constructible
-    : public __is_nothrow_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename _Up>
-    using __is_assignable_impl = __bool_constant<__is_assignable(_Tp, _Up)>;
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_assignable
-    : public __is_assignable_impl<_Tp, _Up>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_copy_assignable
-    : public __is_assignable_impl<__add_lval_ref_t<_Tp>,
-      __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_move_assignable
-    : public __is_assignable_impl<__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename _Up>
-    using __is_nothrow_assignable_impl
-      = __bool_constant<__is_nothrow_assignable(_Tp, _Up)>;
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_nothrow_assignable
-    : public __is_nothrow_assignable_impl<_Tp, _Up>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_copy_assignable
-    : public __is_nothrow_assignable_impl<__add_lval_ref_t<_Tp>,
-       __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_move_assignable
-    : public __is_nothrow_assignable_impl<__add_lval_ref_t<_Tp>,
-       __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename... _Args>
-    using __is_trivially_constructible_impl
-      = __bool_constant<__is_trivially_constructible(_Tp, _Args...)>;
-
-
-
-  template<typename _Tp, typename... _Args>
-    struct is_trivially_constructible
-    : public __is_trivially_constructible_impl<_Tp, _Args...>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_default_constructible
-    : public __is_trivially_constructible_impl<_Tp>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    constexpr bool __is_implicitly_default_constructible_v
-      = requires (void(&__f)(_Tp)) { __f({}); };
-
-  template<typename _Tp>
-    struct __is_implicitly_default_constructible
-    : __bool_constant<__is_implicitly_default_constructible_v<_Tp>>
-    { };
-# 1402 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_trivially_copy_constructible
-    : public __is_trivially_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_move_constructible
-    : public __is_trivially_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename _Up>
-    using __is_trivially_assignable_impl
-      = __bool_constant<__is_trivially_assignable(_Tp, _Up)>;
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_trivially_assignable
-    : public __is_trivially_assignable_impl<_Tp, _Up>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_copy_assignable
-    : public __is_trivially_assignable_impl<__add_lval_ref_t<_Tp>,
-         __add_lval_ref_t<const _Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_move_assignable
-    : public __is_trivially_assignable_impl<__add_lval_ref_t<_Tp>,
-         __add_rval_ref_t<_Tp>>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_trivially_destructible
-    : public __and_<__is_destructible_safe<_Tp>,
-      __bool_constant<__has_trivial_destructor(_Tp)>>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp>
-    struct has_virtual_destructor
-    : public __bool_constant<__has_virtual_destructor(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-
-
-  template<typename _Tp>
-    struct alignment_of
-    : public integral_constant<std::size_t, alignof(_Tp)>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-
-  template<typename _Tp>
-    struct rank
-    : public integral_constant<std::size_t, __array_rank(_Tp)> { };
-# 1507 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename, unsigned _Uint = 0>
-    struct extent
-    : public integral_constant<size_t, 0> { };
-
-  template<typename _Tp, size_t _Size>
-    struct extent<_Tp[_Size], 0>
-    : public integral_constant<size_t, _Size> { };
-
-  template<typename _Tp, unsigned _Uint, size_t _Size>
-    struct extent<_Tp[_Size], _Uint>
-    : public extent<_Tp, _Uint - 1>::type { };
-
-  template<typename _Tp>
-    struct extent<_Tp[], 0>
-    : public integral_constant<size_t, 0> { };
-
-  template<typename _Tp, unsigned _Uint>
-    struct extent<_Tp[], _Uint>
-    : public extent<_Tp, _Uint - 1>::type { };
-
-
-
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_same
-    : public __bool_constant<__is_same(_Tp, _Up)>
-    { };
-# 1549 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Base, typename _Derived>
-    struct is_base_of
-    : public __bool_constant<__is_base_of(_Base, _Derived)>
-    { };
-# 1564 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _From, typename _To>
-    struct is_convertible
-    : public __bool_constant<__is_convertible(_From, _To)>
-    { };
-# 1607 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _ToElementType, typename _FromElementType>
-    using __is_array_convertible
-      = is_convertible<_FromElementType(*)[], _ToElementType(*)[]>;
-
-
-
-
-
-  template<typename _From, typename _To>
-    inline constexpr bool is_nothrow_convertible_v
-      = __is_nothrow_convertible(_From, _To);
-
-
-  template<typename _From, typename _To>
-    struct is_nothrow_convertible
-    : public bool_constant<is_nothrow_convertible_v<_From, _To>>
-    { };
-# 1667 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++14-extensions"
-  template<typename _Tp, typename... _Args>
-    struct __is_nothrow_new_constructible_impl
-    : __bool_constant<
- noexcept(::new(std::declval<void*>()) _Tp(std::declval<_Args>()...))
-      >
-    { };
-
-  template<typename _Tp, typename... _Args>
-    inline constexpr bool __is_nothrow_new_constructible
-      = __and_<is_constructible<_Tp, _Args...>,
-        __is_nothrow_new_constructible_impl<_Tp, _Args...>>::value;
-#pragma GCC diagnostic pop
-
-
-
-
-  template<typename _Tp>
-    struct remove_const
-    { using type = _Tp; };
-
-  template<typename _Tp>
-    struct remove_const<_Tp const>
-    { using type = _Tp; };
-
-
-  template<typename _Tp>
-    struct remove_volatile
-    { using type = _Tp; };
-
-  template<typename _Tp>
-    struct remove_volatile<_Tp volatile>
-    { using type = _Tp; };
-
-
-
-  template<typename _Tp>
-    struct remove_cv
-    { using type = __remove_cv(_Tp); };
-# 1726 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct add_const
-    { using type = _Tp const; };
-
-
-  template<typename _Tp>
-    struct add_volatile
-    { using type = _Tp volatile; };
-
-
-  template<typename _Tp>
-    struct add_cv
-    { using type = _Tp const volatile; };
-
-
-
-  template<typename _Tp>
-    using remove_const_t = typename remove_const<_Tp>::type;
-
-
-  template<typename _Tp>
-    using remove_volatile_t = typename remove_volatile<_Tp>::type;
-
-
-  template<typename _Tp>
-    using remove_cv_t = typename remove_cv<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_const_t = typename add_const<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_volatile_t = typename add_volatile<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_cv_t = typename add_cv<_Tp>::type;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct remove_reference
-    { using type = __remove_reference(_Tp); };
-# 1788 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct add_lvalue_reference
-    { using type = __add_lval_ref_t<_Tp>; };
-
-
-  template<typename _Tp>
-    struct add_rvalue_reference
-    { using type = __add_rval_ref_t<_Tp>; };
-
-
-
-  template<typename _Tp>
-    using remove_reference_t = typename remove_reference<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_lvalue_reference_t = typename add_lvalue_reference<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_rvalue_reference_t = typename add_rvalue_reference<_Tp>::type;
-
-
-
-
-
-
-
-  template<typename _Unqualified, bool _IsConst, bool _IsVol>
-    struct __cv_selector;
-
-  template<typename _Unqualified>
-    struct __cv_selector<_Unqualified, false, false>
-    { using __type = _Unqualified; };
-
-  template<typename _Unqualified>
-    struct __cv_selector<_Unqualified, false, true>
-    { using __type = volatile _Unqualified; };
-
-  template<typename _Unqualified>
-    struct __cv_selector<_Unqualified, true, false>
-    { using __type = const _Unqualified; };
-
-  template<typename _Unqualified>
-    struct __cv_selector<_Unqualified, true, true>
-    { using __type = const volatile _Unqualified; };
-
-  template<typename _Qualified, typename _Unqualified,
-    bool _IsConst = is_const<_Qualified>::value,
-    bool _IsVol = is_volatile<_Qualified>::value>
-    class __match_cv_qualifiers
-    {
-      using __match = __cv_selector<_Unqualified, _IsConst, _IsVol>;
-
-    public:
-      using __type = typename __match::__type;
-    };
-
-
-  template<typename _Tp>
-    struct __make_unsigned
-    { using __type = _Tp; };
-
-  template<>
-    struct __make_unsigned<char>
-    { using __type = unsigned char; };
-
-  template<>
-    struct __make_unsigned<signed char>
-    { using __type = unsigned char; };
-
-  template<>
-    struct __make_unsigned<short>
-    { using __type = unsigned short; };
-
-  template<>
-    struct __make_unsigned<int>
-    { using __type = unsigned int; };
-
-  template<>
-    struct __make_unsigned<long>
-    { using __type = unsigned long; };
-
-  template<>
-    struct __make_unsigned<long long>
-    { using __type = unsigned long long; };
-
-
-  __extension__
-  template<>
-    struct __make_unsigned<__int128>
-    { using __type = unsigned __int128; };
-# 1901 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp,
-    bool _IsInt = is_integral<_Tp>::value,
-    bool _IsEnum = __is_enum(_Tp)>
-    class __make_unsigned_selector;
-
-  template<typename _Tp>
-    class __make_unsigned_selector<_Tp, true, false>
-    {
-      using __unsigned_type
- = typename __make_unsigned<__remove_cv_t<_Tp>>::__type;
-
-    public:
-      using __type
- = typename __match_cv_qualifiers<_Tp, __unsigned_type>::__type;
-    };
-
-  class __make_unsigned_selector_base
-  {
-  protected:
-    template<typename...> struct _List { };
-
-    template<typename _Tp, typename... _Up>
-      struct _List<_Tp, _Up...> : _List<_Up...>
-      { static constexpr size_t __size = sizeof(_Tp); };
-
-    template<size_t _Sz, typename _Tp, bool = (_Sz <= _Tp::__size)>
-      struct __select;
-
-    template<size_t _Sz, typename _Uint, typename... _UInts>
-      struct __select<_Sz, _List<_Uint, _UInts...>, true>
-      { using __type = _Uint; };
-
-    template<size_t _Sz, typename _Uint, typename... _UInts>
-      struct __select<_Sz, _List<_Uint, _UInts...>, false>
-      : __select<_Sz, _List<_UInts...>>
-      { };
-  };
-
-
-  template<typename _Tp>
-    class __make_unsigned_selector<_Tp, false, true>
-    : __make_unsigned_selector_base
-    {
-
-      using _UInts = _List<unsigned char, unsigned short, unsigned int,
-      unsigned long, unsigned long long>;
-
-      using __unsigned_type = typename __select<sizeof(_Tp), _UInts>::__type;
-
-    public:
-      using __type
- = typename __match_cv_qualifiers<_Tp, __unsigned_type>::__type;
-    };
-
-
-
-
-
-  template<>
-    struct __make_unsigned<wchar_t>
-    {
-      using __type
- = typename __make_unsigned_selector<wchar_t, false, true>::__type;
-    };
-
-
-  template<>
-    struct __make_unsigned<char8_t>
-    {
-      using __type
- = typename __make_unsigned_selector<char8_t, false, true>::__type;
-    };
-
-
-  template<>
-    struct __make_unsigned<char16_t>
-    {
-      using __type
- = typename __make_unsigned_selector<char16_t, false, true>::__type;
-    };
-
-  template<>
-    struct __make_unsigned<char32_t>
-    {
-      using __type
- = typename __make_unsigned_selector<char32_t, false, true>::__type;
-    };
-
-
-
-
-
-
-  template<typename _Tp>
-    struct make_unsigned
-    { using type = typename __make_unsigned_selector<_Tp>::__type; };
-
-
-  template<> struct make_unsigned<bool>;
-  template<> struct make_unsigned<bool const>;
-  template<> struct make_unsigned<bool volatile>;
-  template<> struct make_unsigned<bool const volatile>;
-
-
-
-
-  template<typename _Tp>
-    struct __make_signed
-    { using __type = _Tp; };
-
-  template<>
-    struct __make_signed<char>
-    { using __type = signed char; };
-
-  template<>
-    struct __make_signed<unsigned char>
-    { using __type = signed char; };
-
-  template<>
-    struct __make_signed<unsigned short>
-    { using __type = signed short; };
-
-  template<>
-    struct __make_signed<unsigned int>
-    { using __type = signed int; };
-
-  template<>
-    struct __make_signed<unsigned long>
-    { using __type = signed long; };
-
-  template<>
-    struct __make_signed<unsigned long long>
-    { using __type = signed long long; };
-
-
-  __extension__
-  template<>
-    struct __make_signed<unsigned __int128>
-    { using __type = __int128; };
-# 2061 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp,
-    bool _IsInt = is_integral<_Tp>::value,
-    bool _IsEnum = __is_enum(_Tp)>
-    class __make_signed_selector;
-
-  template<typename _Tp>
-    class __make_signed_selector<_Tp, true, false>
-    {
-      using __signed_type
- = typename __make_signed<__remove_cv_t<_Tp>>::__type;
-
-    public:
-      using __type
- = typename __match_cv_qualifiers<_Tp, __signed_type>::__type;
-    };
-
-
-  template<typename _Tp>
-    class __make_signed_selector<_Tp, false, true>
-    {
-      using __unsigned_type = typename __make_unsigned_selector<_Tp>::__type;
-
-    public:
-      using __type = typename __make_signed_selector<__unsigned_type>::__type;
-    };
-
-
-
-
-
-  template<>
-    struct __make_signed<wchar_t>
-    {
-      using __type
- = typename __make_signed_selector<wchar_t, false, true>::__type;
-    };
-
-
-  template<>
-    struct __make_signed<char8_t>
-    {
-      using __type
- = typename __make_signed_selector<char8_t, false, true>::__type;
-    };
-
-
-  template<>
-    struct __make_signed<char16_t>
-    {
-      using __type
- = typename __make_signed_selector<char16_t, false, true>::__type;
-    };
-
-  template<>
-    struct __make_signed<char32_t>
-    {
-      using __type
- = typename __make_signed_selector<char32_t, false, true>::__type;
-    };
-
-
-
-
-
-
-  template<typename _Tp>
-    struct make_signed
-    { using type = typename __make_signed_selector<_Tp>::__type; };
-
-
-  template<> struct make_signed<bool>;
-  template<> struct make_signed<bool const>;
-  template<> struct make_signed<bool volatile>;
-  template<> struct make_signed<bool const volatile>;
-
-
-
-  template<typename _Tp>
-    using make_signed_t = typename make_signed<_Tp>::type;
-
-
-  template<typename _Tp>
-    using make_unsigned_t = typename make_unsigned<_Tp>::type;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct remove_extent
-    { using type = __remove_extent(_Tp); };
-# 2169 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct remove_all_extents
-    { using type = __remove_all_extents(_Tp); };
-# 2188 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    using remove_extent_t = typename remove_extent<_Tp>::type;
-
-
-  template<typename _Tp>
-    using remove_all_extents_t = typename remove_all_extents<_Tp>::type;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct remove_pointer
-    { using type = __remove_pointer(_Tp); };
-# 2220 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct add_pointer
-    { using type = __add_pointer(_Tp); };
-# 2248 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    using remove_pointer_t = typename remove_pointer<_Tp>::type;
-
-
-  template<typename _Tp>
-    using add_pointer_t = typename add_pointer<_Tp>::type;
-
-
-
-
-
-  struct __attribute__((__aligned__)) __aligned_storage_max_align_t
-  { };
-
-  constexpr size_t
-  __aligned_storage_default_alignment([[__maybe_unused__]] size_t __len)
-  {
-# 2279 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-    return alignof(__aligned_storage_max_align_t);
-
-  }
-# 2315 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<size_t _Len,
-    size_t _Align = __aligned_storage_default_alignment(_Len)>
-    struct
-   
-    aligned_storage
-    {
-      struct type
-      {
- alignas(_Align) unsigned char __data[_Len];
-      };
-    };
-
-  template <typename... _Types>
-    struct __strictest_alignment
-    {
-      static const size_t _S_alignment = 0;
-      static const size_t _S_size = 0;
-    };
-
-  template <typename _Tp, typename... _Types>
-    struct __strictest_alignment<_Tp, _Types...>
-    {
-      static const size_t _S_alignment =
-        alignof(_Tp) > __strictest_alignment<_Types...>::_S_alignment
- ? alignof(_Tp) : __strictest_alignment<_Types...>::_S_alignment;
-      static const size_t _S_size =
-        sizeof(_Tp) > __strictest_alignment<_Types...>::_S_size
- ? sizeof(_Tp) : __strictest_alignment<_Types...>::_S_size;
-    };
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-# 2360 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template <size_t _Len, typename... _Types>
-    struct
-   
-    aligned_union
-    {
-    private:
-      static_assert(sizeof...(_Types) != 0, "At least one type is required");
-
-      using __strictest = __strictest_alignment<_Types...>;
-      static const size_t _S_len = _Len > __strictest::_S_size
- ? _Len : __strictest::_S_size;
-    public:
-
-      static const size_t alignment_value = __strictest::_S_alignment;
-
-      using type = typename aligned_storage<_S_len, alignment_value>::type;
-    };
-
-  template <size_t _Len, typename... _Types>
-    const size_t aligned_union<_Len, _Types...>::alignment_value;
-#pragma GCC diagnostic pop
-
-
-
-
-  template<typename _Tp>
-    struct decay
-    { using type = __decay(_Tp); };
-# 2425 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct __strip_reference_wrapper
-    {
-      using __type = _Tp;
-    };
-
-  template<typename _Tp>
-    struct __strip_reference_wrapper<reference_wrapper<_Tp> >
-    {
-      using __type = _Tp&;
-    };
-
-
-  template<typename _Tp>
-    using __decay_t = typename decay<_Tp>::type;
-
-  template<typename _Tp>
-    using __decay_and_strip = __strip_reference_wrapper<__decay_t<_Tp>>;
-
-
-
-
-
-  template<typename... _Cond>
-    using _Require = __enable_if_t<__and_<_Cond...>::value>;
-
-
-  template<typename _Tp>
-    using __remove_cvref_t
-     = typename remove_cv<typename remove_reference<_Tp>::type>::type;
-
-
-
-
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    struct conditional
-    { using type = _Iftrue; };
-
-
-  template<typename _Iftrue, typename _Iffalse>
-    struct conditional<false, _Iftrue, _Iffalse>
-    { using type = _Iffalse; };
-
-
-  template<typename... _Tp>
-    struct common_type;
-# 2481 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct __success_type
-    { using type = _Tp; };
-
-  struct __failure_type
-  { };
-
-  struct __do_common_type_impl
-  {
-    template<typename _Tp, typename _Up>
-      using __cond_t
- = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
-
-
-
-    template<typename _Tp, typename _Up>
-      static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
-      _S_test(int);
-
-
-
-
-    template<typename _Tp, typename _Up>
-      static __success_type<__remove_cvref_t<__cond_t<const _Tp&, const _Up&>>>
-      _S_test_2(int);
-
-
-    template<typename, typename>
-      static __failure_type
-      _S_test_2(...);
-
-    template<typename _Tp, typename _Up>
-      static decltype(_S_test_2<_Tp, _Up>(0))
-      _S_test(...);
-  };
-
-
-  template<>
-    struct common_type<>
-    { };
-
-
-  template<typename _Tp0>
-    struct common_type<_Tp0>
-    : public common_type<_Tp0, _Tp0>
-    { };
-
-
-  template<typename _Tp1, typename _Tp2,
-    typename _Dp1 = __decay_t<_Tp1>, typename _Dp2 = __decay_t<_Tp2>>
-    struct __common_type_impl
-    {
-
-
-      using type = common_type<_Dp1, _Dp2>;
-    };
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_type_impl<_Tp1, _Tp2, _Tp1, _Tp2>
-    : private __do_common_type_impl
-    {
-
-
-      using type = decltype(_S_test<_Tp1, _Tp2>(0));
-    };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct common_type<_Tp1, _Tp2>
-    : public __common_type_impl<_Tp1, _Tp2>::type
-    { };
-
-  template<typename...>
-    struct __common_type_pack
-    { };
-
-  template<typename, typename, typename = void>
-    struct __common_type_fold;
-
-
-  template<typename _Tp1, typename _Tp2, typename... _Rp>
-    struct common_type<_Tp1, _Tp2, _Rp...>
-    : public __common_type_fold<common_type<_Tp1, _Tp2>,
-    __common_type_pack<_Rp...>>
-    { };
-
-
-
-
-  template<typename _CTp, typename... _Rp>
-    struct __common_type_fold<_CTp, __common_type_pack<_Rp...>,
-         __void_t<typename _CTp::type>>
-    : public common_type<typename _CTp::type, _Rp...>
-    { };
-
-
-  template<typename _CTp, typename _Rp>
-    struct __common_type_fold<_CTp, _Rp, void>
-    { };
-
-  template<typename _Tp, bool = __is_enum(_Tp)>
-    struct __underlying_type_impl
-    {
-      using type = __underlying_type(_Tp);
-    };
-
-  template<typename _Tp>
-    struct __underlying_type_impl<_Tp, false>
-    { };
-
-
-
-  template<typename _Tp>
-    struct underlying_type
-    : public __underlying_type_impl<_Tp>
-    { };
-
-
-  template<typename _Tp>
-    struct __declval_protector
-    {
-      static const bool __stop = false;
-    };
-
-
-
-
-
-
-  template<typename _Tp>
-    auto declval() noexcept -> decltype(__declval<_Tp>(0))
-    {
-      static_assert(__declval_protector<_Tp>::__stop,
-      "declval() must not be used!");
-      return __declval<_Tp>(0);
-    }
-
-
-  template<typename _Signature>
-    struct result_of;
-
-
-
-
-  struct __invoke_memfun_ref { };
-  struct __invoke_memfun_deref { };
-  struct __invoke_memobj_ref { };
-  struct __invoke_memobj_deref { };
-  struct __invoke_other { };
-
-
-  template<typename _Tp, typename _Tag>
-    struct __result_of_success : __success_type<_Tp>
-    { using __invoke_type = _Tag; };
-
-
-  struct __result_of_memfun_ref_impl
-  {
-    template<typename _Fp, typename _Tp1, typename... _Args>
-      static __result_of_success<decltype(
-      (std::declval<_Tp1>().*std::declval<_Fp>())(std::declval<_Args>()...)
-      ), __invoke_memfun_ref> _S_test(int);
-
-    template<typename...>
-      static __failure_type _S_test(...);
-  };
-
-  template<typename _MemPtr, typename _Arg, typename... _Args>
-    struct __result_of_memfun_ref
-    : private __result_of_memfun_ref_impl
-    {
-      using type = decltype(_S_test<_MemPtr, _Arg, _Args...>(0));
-    };
-
-
-  struct __result_of_memfun_deref_impl
-  {
-    template<typename _Fp, typename _Tp1, typename... _Args>
-      static __result_of_success<decltype(
-      ((*std::declval<_Tp1>()).*std::declval<_Fp>())(std::declval<_Args>()...)
-      ), __invoke_memfun_deref> _S_test(int);
-
-    template<typename...>
-      static __failure_type _S_test(...);
-  };
-
-  template<typename _MemPtr, typename _Arg, typename... _Args>
-    struct __result_of_memfun_deref
-    : private __result_of_memfun_deref_impl
-    {
-      using type = decltype(_S_test<_MemPtr, _Arg, _Args...>(0));
-    };
-
-
-  struct __result_of_memobj_ref_impl
-  {
-    template<typename _Fp, typename _Tp1>
-      static __result_of_success<decltype(
-      std::declval<_Tp1>().*std::declval<_Fp>()
-      ), __invoke_memobj_ref> _S_test(int);
-
-    template<typename, typename>
-      static __failure_type _S_test(...);
-  };
-
-  template<typename _MemPtr, typename _Arg>
-    struct __result_of_memobj_ref
-    : private __result_of_memobj_ref_impl
-    {
-      using type = decltype(_S_test<_MemPtr, _Arg>(0));
-    };
-
-
-  struct __result_of_memobj_deref_impl
-  {
-    template<typename _Fp, typename _Tp1>
-      static __result_of_success<decltype(
-      (*std::declval<_Tp1>()).*std::declval<_Fp>()
-      ), __invoke_memobj_deref> _S_test(int);
-
-    template<typename, typename>
-      static __failure_type _S_test(...);
-  };
-
-  template<typename _MemPtr, typename _Arg>
-    struct __result_of_memobj_deref
-    : private __result_of_memobj_deref_impl
-    {
-      using type = decltype(_S_test<_MemPtr, _Arg>(0));
-    };
-
-  template<typename _MemPtr, typename _Arg>
-    struct __result_of_memobj;
-
-  template<typename _Res, typename _Class, typename _Arg>
-    struct __result_of_memobj<_Res _Class::*, _Arg>
-    {
-      using _Argval = __remove_cvref_t<_Arg>;
-      using _MemPtr = _Res _Class::*;
-      using type = typename __conditional_t<__or_<is_same<_Argval, _Class>,
-        is_base_of<_Class, _Argval>>::value,
-        __result_of_memobj_ref<_MemPtr, _Arg>,
-        __result_of_memobj_deref<_MemPtr, _Arg>
-      >::type;
-    };
-
-  template<typename _MemPtr, typename _Arg, typename... _Args>
-    struct __result_of_memfun;
-
-  template<typename _Res, typename _Class, typename _Arg, typename... _Args>
-    struct __result_of_memfun<_Res _Class::*, _Arg, _Args...>
-    {
-      using _Argval = typename remove_reference<_Arg>::type;
-      using _MemPtr = _Res _Class::*;
-      using type = typename __conditional_t<is_base_of<_Class, _Argval>::value,
-        __result_of_memfun_ref<_MemPtr, _Arg, _Args...>,
-        __result_of_memfun_deref<_MemPtr, _Arg, _Args...>
-      >::type;
-    };
-
-
-
-
-
-
-  template<typename _Tp, typename _Up = __remove_cvref_t<_Tp>>
-    struct __inv_unwrap
-    {
-      using type = _Tp;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __inv_unwrap<_Tp, reference_wrapper<_Up>>
-    {
-      using type = _Up&;
-    };
-
-  template<bool, bool, typename _Functor, typename... _ArgTypes>
-    struct __result_of_impl
-    {
-      using type = __failure_type;
-    };
-
-  template<typename _MemPtr, typename _Arg>
-    struct __result_of_impl<true, false, _MemPtr, _Arg>
-    : public __result_of_memobj<__decay_t<_MemPtr>,
-    typename __inv_unwrap<_Arg>::type>
-    { };
-
-  template<typename _MemPtr, typename _Arg, typename... _Args>
-    struct __result_of_impl<false, true, _MemPtr, _Arg, _Args...>
-    : public __result_of_memfun<__decay_t<_MemPtr>,
-    typename __inv_unwrap<_Arg>::type, _Args...>
-    { };
-
-
-  struct __result_of_other_impl
-  {
-    template<typename _Fn, typename... _Args>
-      static __result_of_success<decltype(
-      std::declval<_Fn>()(std::declval<_Args>()...)
-      ), __invoke_other> _S_test(int);
-
-    template<typename...>
-      static __failure_type _S_test(...);
-  };
-
-  template<typename _Functor, typename... _ArgTypes>
-    struct __result_of_impl<false, false, _Functor, _ArgTypes...>
-    : private __result_of_other_impl
-    {
-      using type = decltype(_S_test<_Functor, _ArgTypes...>(0));
-    };
-
-
-  template<typename _Functor, typename... _ArgTypes>
-    struct __invoke_result
-    : public __result_of_impl<
-        is_member_object_pointer<
-          typename remove_reference<_Functor>::type
-        >::value,
-        is_member_function_pointer<
-          typename remove_reference<_Functor>::type
-        >::value,
- _Functor, _ArgTypes...
-      >::type
-    { };
-
-
-  template<typename _Fn, typename... _Args>
-    using __invoke_result_t = typename __invoke_result<_Fn, _Args...>::type;
-
-
-  template<typename _Functor, typename... _ArgTypes>
-    struct result_of<_Functor(_ArgTypes...)>
-    : public __invoke_result<_Functor, _ArgTypes...>
-    { } __attribute__ ((__deprecated__ ("use '" "std::invoke_result" "' instead")));
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
-  template<size_t _Len,
-    size_t _Align = __aligned_storage_default_alignment(_Len)>
-    using aligned_storage_t = typename aligned_storage<_Len, _Align>::type;
-
-  template <size_t _Len, typename... _Types>
-    using aligned_union_t = typename aligned_union<_Len, _Types...>::type;
-#pragma GCC diagnostic pop
-
-
-  template<typename _Tp>
-    using decay_t = typename decay<_Tp>::type;
-
-
-  template<bool _Cond, typename _Tp = void>
-    using enable_if_t = typename enable_if<_Cond, _Tp>::type;
-
-
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    using conditional_t = typename conditional<_Cond, _Iftrue, _Iffalse>::type;
-
-
-  template<typename... _Tp>
-    using common_type_t = typename common_type<_Tp...>::type;
-
-
-  template<typename _Tp>
-    using underlying_type_t = typename underlying_type<_Tp>::type;
-
-
-  template<typename _Tp>
-    using result_of_t = typename result_of<_Tp>::type;
-
-
-
-
-  template<typename...> using void_t = void;
-# 2868 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Def, template<typename...> class _Op, typename... _Args>
-    struct __detected_or
-    {
-      using type = _Def;
-      using __is_detected = false_type;
-    };
-
-
-  template<typename _Def, template<typename...> class _Op, typename... _Args>
-    requires requires { typename _Op<_Args...>; }
-    struct __detected_or<_Def, _Op, _Args...>
-    {
-      using type = _Op<_Args...>;
-      using __is_detected = true_type;
-    };
-# 2908 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Default, template<typename...> class _Op,
-    typename... _Args>
-    using __detected_or_t
-      = typename __detected_or<_Default, _Op, _Args...>::type;
-# 2927 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template <typename _Tp>
-    struct __is_swappable;
-
-  template <typename _Tp>
-    struct __is_nothrow_swappable;
-
-  template<typename>
-    struct __is_tuple_like_impl : false_type
-    { };
-
-
-  template<typename _Tp>
-    struct __is_tuple_like
-    : public __is_tuple_like_impl<__remove_cvref_t<_Tp>>::type
-    { };
-
-
-  template<typename _Tp>
-    constexpr
-    inline
-    _Require<__not_<__is_tuple_like<_Tp>>,
-      is_move_constructible<_Tp>,
-      is_move_assignable<_Tp>>
-    swap(_Tp&, _Tp&)
-    noexcept(__and_<is_nothrow_move_constructible<_Tp>,
-             is_nothrow_move_assignable<_Tp>>::value);
-
-  template<typename _Tp, size_t _Nm>
-    constexpr
-    inline
-    __enable_if_t<__is_swappable<_Tp>::value>
-    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
-    noexcept(__is_nothrow_swappable<_Tp>::value);
-
-
-  namespace __swappable_details {
-    using std::swap;
-
-    struct __do_is_swappable_impl
-    {
-      template<typename _Tp, typename
-               = decltype(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))>
-        static true_type __test(int);
-
-      template<typename>
-        static false_type __test(...);
-    };
-
-    struct __do_is_nothrow_swappable_impl
-    {
-      template<typename _Tp>
-        static __bool_constant<
-          noexcept(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))
-        > __test(int);
-
-      template<typename>
-        static false_type __test(...);
-    };
-
-  }
-
-  template<typename _Tp>
-    struct __is_swappable_impl
-    : public __swappable_details::__do_is_swappable_impl
-    {
-      using type = decltype(__test<_Tp>(0));
-    };
-
-  template<typename _Tp>
-    struct __is_nothrow_swappable_impl
-    : public __swappable_details::__do_is_nothrow_swappable_impl
-    {
-      using type = decltype(__test<_Tp>(0));
-    };
-
-  template<typename _Tp>
-    struct __is_swappable
-    : public __is_swappable_impl<_Tp>::type
-    { };
-
-  template<typename _Tp>
-    struct __is_nothrow_swappable
-    : public __is_nothrow_swappable_impl<_Tp>::type
-    { };
-
-
-
-
-
-
-  template<typename _Tp>
-    struct is_swappable
-    : public __is_swappable_impl<_Tp>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp>
-    struct is_nothrow_swappable
-    : public __is_nothrow_swappable_impl<_Tp>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp>
-    inline constexpr bool is_swappable_v =
-      is_swappable<_Tp>::value;
-
-
-  template<typename _Tp>
-    inline constexpr bool is_nothrow_swappable_v =
-      is_nothrow_swappable<_Tp>::value;
-
-
-
-  namespace __swappable_with_details {
-    using std::swap;
-
-    struct __do_is_swappable_with_impl
-    {
-      template<typename _Tp, typename _Up, typename
-               = decltype(swap(std::declval<_Tp>(), std::declval<_Up>())),
-               typename
-               = decltype(swap(std::declval<_Up>(), std::declval<_Tp>()))>
-        static true_type __test(int);
-
-      template<typename, typename>
-        static false_type __test(...);
-    };
-
-    struct __do_is_nothrow_swappable_with_impl
-    {
-      template<typename _Tp, typename _Up>
-        static __bool_constant<
-          noexcept(swap(std::declval<_Tp>(), std::declval<_Up>()))
-          &&
-          noexcept(swap(std::declval<_Up>(), std::declval<_Tp>()))
-        > __test(int);
-
-      template<typename, typename>
-        static false_type __test(...);
-    };
-
-  }
-
-  template<typename _Tp, typename _Up>
-    struct __is_swappable_with_impl
-    : public __swappable_with_details::__do_is_swappable_with_impl
-    {
-      using type = decltype(__test<_Tp, _Up>(0));
-    };
-
-
-  template<typename _Tp>
-    struct __is_swappable_with_impl<_Tp&, _Tp&>
-    : public __swappable_details::__do_is_swappable_impl
-    {
-      using type = decltype(__test<_Tp&>(0));
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __is_nothrow_swappable_with_impl
-    : public __swappable_with_details::__do_is_nothrow_swappable_with_impl
-    {
-      using type = decltype(__test<_Tp, _Up>(0));
-    };
-
-
-  template<typename _Tp>
-    struct __is_nothrow_swappable_with_impl<_Tp&, _Tp&>
-    : public __swappable_details::__do_is_nothrow_swappable_impl
-    {
-      using type = decltype(__test<_Tp&>(0));
-    };
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_swappable_with
-    : public __is_swappable_with_impl<_Tp, _Up>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "first template argument must be a complete class or an unbounded array");
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Up>{}),
- "second template argument must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Tp, typename _Up>
-    struct is_nothrow_swappable_with
-    : public __is_nothrow_swappable_with_impl<_Tp, _Up>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "first template argument must be a complete class or an unbounded array");
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Up>{}),
- "second template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp, typename _Up>
-    inline constexpr bool is_swappable_with_v =
-      is_swappable_with<_Tp, _Up>::value;
-
-
-  template<typename _Tp, typename _Up>
-    inline constexpr bool is_nothrow_swappable_with_v =
-      is_nothrow_swappable_with<_Tp, _Up>::value;
-# 3149 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Result, typename _Ret,
-    bool = is_void<_Ret>::value, typename = void>
-    struct __is_invocable_impl
-    : false_type
-    {
-      using __nothrow_conv = false_type;
-    };
-
-
-  template<typename _Result, typename _Ret>
-    struct __is_invocable_impl<_Result, _Ret,
-                                true,
-          __void_t<typename _Result::type>>
-    : true_type
-    {
-      using __nothrow_conv = true_type;
-    };
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wctor-dtor-privacy"
-
-  template<typename _Result, typename _Ret>
-    struct __is_invocable_impl<_Result, _Ret,
-                                false,
-          __void_t<typename _Result::type>>
-    {
-    private:
-
-      using _Res_t = typename _Result::type;
-
-
-
-      static _Res_t _S_get() noexcept;
-
-
-      template<typename _Tp>
- static void _S_conv(__type_identity_t<_Tp>) noexcept;
-
-
-      template<typename _Tp,
-        bool _Nothrow = noexcept(_S_conv<_Tp>(_S_get())),
-        typename = decltype(_S_conv<_Tp>(_S_get())),
-
-        bool _Dangle = __reference_converts_from_temporary(_Tp, _Res_t)
-
-
-
-       >
- static __bool_constant<_Nothrow && !_Dangle>
- _S_test(int);
-
-      template<typename _Tp, bool = false>
- static false_type
- _S_test(...);
-
-    public:
-
-      using type = decltype(_S_test<_Ret, true>(1));
-
-
-      using __nothrow_conv = decltype(_S_test<_Ret>(1));
-    };
-#pragma GCC diagnostic pop
-
-  template<typename _Fn, typename... _ArgTypes>
-    struct __is_invocable
-    : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>::type
-    { };
-
-  template<typename _Fn, typename _Tp, typename... _Args>
-    constexpr bool __call_is_nt(__invoke_memfun_ref)
-    {
-      using _Up = typename __inv_unwrap<_Tp>::type;
-      return noexcept((std::declval<_Up>().*std::declval<_Fn>())(
-     std::declval<_Args>()...));
-    }
-
-  template<typename _Fn, typename _Tp, typename... _Args>
-    constexpr bool __call_is_nt(__invoke_memfun_deref)
-    {
-      return noexcept(((*std::declval<_Tp>()).*std::declval<_Fn>())(
-     std::declval<_Args>()...));
-    }
-
-  template<typename _Fn, typename _Tp>
-    constexpr bool __call_is_nt(__invoke_memobj_ref)
-    {
-      using _Up = typename __inv_unwrap<_Tp>::type;
-      return noexcept(std::declval<_Up>().*std::declval<_Fn>());
-    }
-
-  template<typename _Fn, typename _Tp>
-    constexpr bool __call_is_nt(__invoke_memobj_deref)
-    {
-      return noexcept((*std::declval<_Tp>()).*std::declval<_Fn>());
-    }
-
-  template<typename _Fn, typename... _Args>
-    constexpr bool __call_is_nt(__invoke_other)
-    {
-      return noexcept(std::declval<_Fn>()(std::declval<_Args>()...));
-    }
-
-  template<typename _Result, typename _Fn, typename... _Args>
-    struct __call_is_nothrow
-    : __bool_constant<
- std::__call_is_nt<_Fn, _Args...>(typename _Result::__invoke_type{})
-      >
-    { };
-
-  template<typename _Fn, typename... _Args>
-    using __call_is_nothrow_
-      = __call_is_nothrow<__invoke_result<_Fn, _Args...>, _Fn, _Args...>;
-
-
-  template<typename _Fn, typename... _Args>
-    struct __is_nothrow_invocable
-    : __and_<__is_invocable<_Fn, _Args...>,
-             __call_is_nothrow_<_Fn, _Args...>>::type
-    { };
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wctor-dtor-privacy"
-  struct __nonesuchbase {};
-  struct __nonesuch : private __nonesuchbase {
-    ~__nonesuch() = delete;
-    __nonesuch(__nonesuch const&) = delete;
-    void operator=(__nonesuch const&) = delete;
-  };
-#pragma GCC diagnostic pop
-
-
-
-
-  template<typename _Functor, typename... _ArgTypes>
-    struct invoke_result
-    : public __invoke_result<_Functor, _ArgTypes...>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Functor>{}),
- "_Functor must be a complete class or an unbounded array");
-      static_assert((std::__is_complete_or_unbounded(
- __type_identity<_ArgTypes>{}) && ...),
- "each argument type must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Fn, typename... _Args>
-    using invoke_result_t = typename invoke_result<_Fn, _Args...>::type;
-
-
-  template<typename _Fn, typename... _ArgTypes>
-    struct is_invocable
-
-    : public __bool_constant<__is_invocable(_Fn, _ArgTypes...)>
-
-
-
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
- "_Fn must be a complete class or an unbounded array");
-      static_assert((std::__is_complete_or_unbounded(
- __type_identity<_ArgTypes>{}) && ...),
- "each argument type must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Ret, typename _Fn, typename... _ArgTypes>
-    struct is_invocable_r
-    : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, _Ret>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
- "_Fn must be a complete class or an unbounded array");
-      static_assert((std::__is_complete_or_unbounded(
- __type_identity<_ArgTypes>{}) && ...),
- "each argument type must be a complete class or an unbounded array");
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Ret>{}),
- "_Ret must be a complete class or an unbounded array");
-    };
-
-
-  template<typename _Fn, typename... _ArgTypes>
-    struct is_nothrow_invocable
-
-    : public __bool_constant<__is_nothrow_invocable(_Fn, _ArgTypes...)>
-
-
-
-
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
- "_Fn must be a complete class or an unbounded array");
-      static_assert((std::__is_complete_or_unbounded(
- __type_identity<_ArgTypes>{}) && ...),
- "each argument type must be a complete class or an unbounded array");
-    };
-
-
-
-
-
-  template<typename _Result, typename _Ret>
-    using __is_nt_invocable_impl
-      = typename __is_invocable_impl<_Result, _Ret>::__nothrow_conv;
-
-
-
-  template<typename _Ret, typename _Fn, typename... _ArgTypes>
-    struct is_nothrow_invocable_r
-    : __and_<__is_nt_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, _Ret>,
-             __call_is_nothrow_<_Fn, _ArgTypes...>>::type
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
- "_Fn must be a complete class or an unbounded array");
-      static_assert((std::__is_complete_or_unbounded(
- __type_identity<_ArgTypes>{}) && ...),
- "each argument type must be a complete class or an unbounded array");
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Ret>{}),
- "_Ret must be a complete class or an unbounded array");
-    };
-# 3385 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_void_v = is_void<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_null_pointer_v = is_null_pointer<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_integral_v = is_integral<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_floating_point_v = is_floating_point<_Tp>::value;
-
-
-template <typename _Tp>
-  inline constexpr bool is_array_v = __is_array(_Tp);
-# 3407 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_pointer_v = __is_pointer(_Tp);
-# 3422 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_lvalue_reference_v = false;
-template <typename _Tp>
-  inline constexpr bool is_lvalue_reference_v<_Tp&> = true;
-template <typename _Tp>
-  inline constexpr bool is_rvalue_reference_v = false;
-template <typename _Tp>
-  inline constexpr bool is_rvalue_reference_v<_Tp&&> = true;
-
-
-template <typename _Tp>
-  inline constexpr bool is_member_object_pointer_v =
-    __is_member_object_pointer(_Tp);
-
-
-
-
-
-
-
-template <typename _Tp>
-  inline constexpr bool is_member_function_pointer_v =
-    __is_member_function_pointer(_Tp);
-
-
-
-
-
-
-template <typename _Tp>
-  inline constexpr bool is_enum_v = __is_enum(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_union_v = __is_union(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_class_v = __is_class(_Tp);
-
-
-
-template <typename _Tp>
-  inline constexpr bool is_reference_v = __is_reference(_Tp);
-# 3471 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_arithmetic_v = is_arithmetic<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_fundamental_v = is_fundamental<_Tp>::value;
-
-
-template <typename _Tp>
-  inline constexpr bool is_object_v = __is_object(_Tp);
-
-
-
-
-
-template <typename _Tp>
-  inline constexpr bool is_scalar_v = is_scalar<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_compound_v = !is_fundamental_v<_Tp>;
-
-
-template <typename _Tp>
-  inline constexpr bool is_member_pointer_v = __is_member_pointer(_Tp);
-
-
-
-
-
-
-template <typename _Tp>
-  inline constexpr bool is_const_v = __is_const(_Tp);
-# 3508 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_function_v = __is_function(_Tp);
-# 3520 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp>
-  inline constexpr bool is_volatile_v = __is_volatile(_Tp);
-
-
-
-
-
-
-
-template <typename _Tp>
- 
-  inline constexpr bool is_trivial_v = __is_trivial(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_trivially_copyable_v = __is_trivially_copyable(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_standard_layout_v = __is_standard_layout(_Tp);
-template <typename _Tp>
-  __attribute__ ((__deprecated__ ("use '" "is_standard_layout_v && is_trivial_v" "' instead")))
-  inline constexpr bool is_pod_v = __is_pod(_Tp);
-template <typename _Tp>
-  [[__deprecated__]]
-  inline constexpr bool is_literal_type_v = __is_literal_type(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_empty_v = __is_empty(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_polymorphic_v = __is_polymorphic(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_abstract_v = __is_abstract(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_final_v = __is_final(_Tp);
-
-template <typename _Tp>
-  inline constexpr bool is_signed_v = is_signed<_Tp>::value;
-template <typename _Tp>
-  inline constexpr bool is_unsigned_v = is_unsigned<_Tp>::value;
-
-template <typename _Tp, typename... _Args>
-  inline constexpr bool is_constructible_v = __is_constructible(_Tp, _Args...);
-template <typename _Tp>
-  inline constexpr bool is_default_constructible_v = __is_constructible(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_copy_constructible_v
-    = __is_constructible(_Tp, __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_move_constructible_v
-    = __is_constructible(_Tp, __add_rval_ref_t<_Tp>);
-
-template <typename _Tp, typename _Up>
-  inline constexpr bool is_assignable_v = __is_assignable(_Tp, _Up);
-template <typename _Tp>
-  inline constexpr bool is_copy_assignable_v
-    = __is_assignable(__add_lval_ref_t<_Tp>, __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_move_assignable_v
-    = __is_assignable(__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>);
-
-template <typename _Tp>
-  inline constexpr bool is_destructible_v = is_destructible<_Tp>::value;
-
-template <typename _Tp, typename... _Args>
-  inline constexpr bool is_trivially_constructible_v
-    = __is_trivially_constructible(_Tp, _Args...);
-template <typename _Tp>
-  inline constexpr bool is_trivially_default_constructible_v
-    = __is_trivially_constructible(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_trivially_copy_constructible_v
-    = __is_trivially_constructible(_Tp, __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_trivially_move_constructible_v
-    = __is_trivially_constructible(_Tp, __add_rval_ref_t<_Tp>);
-
-template <typename _Tp, typename _Up>
-  inline constexpr bool is_trivially_assignable_v
-    = __is_trivially_assignable(_Tp, _Up);
-template <typename _Tp>
-  inline constexpr bool is_trivially_copy_assignable_v
-    = __is_trivially_assignable(__add_lval_ref_t<_Tp>,
-    __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_trivially_move_assignable_v
-    = __is_trivially_assignable(__add_lval_ref_t<_Tp>,
-    __add_rval_ref_t<_Tp>);
-
-
-template <typename _Tp>
-  inline constexpr bool is_trivially_destructible_v = false;
-
-template <typename _Tp>
-  requires (!is_reference_v<_Tp>) && requires (_Tp& __t) { __t.~_Tp(); }
-  inline constexpr bool is_trivially_destructible_v<_Tp>
-    = __has_trivial_destructor(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_trivially_destructible_v<_Tp&> = true;
-template <typename _Tp>
-  inline constexpr bool is_trivially_destructible_v<_Tp&&> = true;
-template <typename _Tp, size_t _Nm>
-  inline constexpr bool is_trivially_destructible_v<_Tp[_Nm]>
-    = is_trivially_destructible_v<_Tp>;
-
-
-
-
-
-
-template <typename _Tp, typename... _Args>
-  inline constexpr bool is_nothrow_constructible_v
-    = __is_nothrow_constructible(_Tp, _Args...);
-template <typename _Tp>
-  inline constexpr bool is_nothrow_default_constructible_v
-    = __is_nothrow_constructible(_Tp);
-template <typename _Tp>
-  inline constexpr bool is_nothrow_copy_constructible_v
-    = __is_nothrow_constructible(_Tp, __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_nothrow_move_constructible_v
-    = __is_nothrow_constructible(_Tp, __add_rval_ref_t<_Tp>);
-
-template <typename _Tp, typename _Up>
-  inline constexpr bool is_nothrow_assignable_v
-    = __is_nothrow_assignable(_Tp, _Up);
-template <typename _Tp>
-  inline constexpr bool is_nothrow_copy_assignable_v
-    = __is_nothrow_assignable(__add_lval_ref_t<_Tp>,
-         __add_lval_ref_t<const _Tp>);
-template <typename _Tp>
-  inline constexpr bool is_nothrow_move_assignable_v
-    = __is_nothrow_assignable(__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>);
-
-template <typename _Tp>
-  inline constexpr bool is_nothrow_destructible_v =
-    is_nothrow_destructible<_Tp>::value;
-
-template <typename _Tp>
-  inline constexpr bool has_virtual_destructor_v
-    = __has_virtual_destructor(_Tp);
-
-template <typename _Tp>
-  inline constexpr size_t alignment_of_v = alignment_of<_Tp>::value;
-
-
-
-template <typename _Tp>
-  inline constexpr size_t rank_v = __array_rank(_Tp);
-# 3673 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-template <typename _Tp, unsigned _Idx = 0>
-  inline constexpr size_t extent_v = 0;
-template <typename _Tp, size_t _Size>
-  inline constexpr size_t extent_v<_Tp[_Size], 0> = _Size;
-template <typename _Tp, unsigned _Idx, size_t _Size>
-  inline constexpr size_t extent_v<_Tp[_Size], _Idx> = extent_v<_Tp, _Idx - 1>;
-template <typename _Tp>
-  inline constexpr size_t extent_v<_Tp[], 0> = 0;
-template <typename _Tp, unsigned _Idx>
-  inline constexpr size_t extent_v<_Tp[], _Idx> = extent_v<_Tp, _Idx - 1>;
-
-
-template <typename _Tp, typename _Up>
-  inline constexpr bool is_same_v = __is_same(_Tp, _Up);
-
-
-
-
-
-
-template <typename _Base, typename _Derived>
-  inline constexpr bool is_base_of_v = __is_base_of(_Base, _Derived);
-
-
-
-
-
-template <typename _From, typename _To>
-  inline constexpr bool is_convertible_v = __is_convertible(_From, _To);
-
-
-
-
-template<typename _Fn, typename... _Args>
-  inline constexpr bool is_invocable_v = is_invocable<_Fn, _Args...>::value;
-template<typename _Fn, typename... _Args>
-  inline constexpr bool is_nothrow_invocable_v
-    = is_nothrow_invocable<_Fn, _Args...>::value;
-template<typename _Ret, typename _Fn, typename... _Args>
-  inline constexpr bool is_invocable_r_v
-    = is_invocable_r<_Ret, _Fn, _Args...>::value;
-template<typename _Ret, typename _Fn, typename... _Args>
-  inline constexpr bool is_nothrow_invocable_r_v
-    = is_nothrow_invocable_r<_Ret, _Fn, _Args...>::value;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct has_unique_object_representations
-    : bool_constant<__has_unique_object_representations(
-      remove_cv_t<remove_all_extents_t<_Tp>>
-      )>
-    {
-      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
- "template argument must be a complete class or an unbounded array");
-    };
-
-
-
-  template<typename _Tp>
-    inline constexpr bool has_unique_object_representations_v
-      = has_unique_object_representations<_Tp>::value;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct is_aggregate
-    : bool_constant<__is_aggregate(remove_cv_t<_Tp>)>
-    { };
-
-
-
-
-
-
-  template<typename _Tp>
-    inline constexpr bool is_aggregate_v = __is_aggregate(remove_cv_t<_Tp>);
-# 3765 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct remove_cvref
-    { using type = __remove_cvref(_Tp); };
-# 3782 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    using remove_cvref_t = typename remove_cvref<_Tp>::type;
-# 3792 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct type_identity { using type = _Tp; };
-
-  template<typename _Tp>
-    using type_identity_t = typename type_identity<_Tp>::type;
-# 3805 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct unwrap_reference { using type = _Tp; };
-
-  template<typename _Tp>
-    struct unwrap_reference<reference_wrapper<_Tp>> { using type = _Tp&; };
-
-  template<typename _Tp>
-    using unwrap_reference_t = typename unwrap_reference<_Tp>::type;
-
-
-
-
-
-
-  template<typename _Tp>
-    struct unwrap_ref_decay { using type = unwrap_reference_t<decay_t<_Tp>>; };
-
-  template<typename _Tp>
-    using unwrap_ref_decay_t = typename unwrap_ref_decay<_Tp>::type;
-# 3832 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    inline constexpr bool is_bounded_array_v = __is_bounded_array(_Tp);
-# 3846 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    inline constexpr bool is_unbounded_array_v = __is_unbounded_array(_Tp);
-# 3858 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp>
-    struct is_bounded_array
-    : public bool_constant<is_bounded_array_v<_Tp>>
-    { };
-
-
-
-  template<typename _Tp>
-    struct is_unbounded_array
-    : public bool_constant<is_unbounded_array_v<_Tp>>
-    { };
-
-
-
-
-
-  template<typename _Tp, typename _Up>
-    struct is_layout_compatible
-    : bool_constant<__is_layout_compatible(_Tp, _Up)>
-    { };
-
-
-
-  template<typename _Tp, typename _Up>
-    constexpr bool is_layout_compatible_v
-      = __is_layout_compatible(_Tp, _Up);
-
-
-
-
-
-
-
-  template<typename _S1, typename _S2, typename _M1, typename _M2>
-    constexpr bool
-    is_corresponding_member(_M1 _S1::*__m1, _M2 _S2::*__m2) noexcept
-    { return __builtin_is_corresponding_member(__m1, __m2); }
-
-
-
-
-
-
-
-  template<typename _Base, typename _Derived>
-    struct is_pointer_interconvertible_base_of
-    : bool_constant<__is_pointer_interconvertible_base_of(_Base, _Derived)>
-    { };
-
-
-
-  template<typename _Base, typename _Derived>
-    constexpr bool is_pointer_interconvertible_base_of_v
-      = __is_pointer_interconvertible_base_of(_Base, _Derived);
-# 3921 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  template<typename _Tp, typename _Mem>
-    constexpr bool
-    is_pointer_interconvertible_with_class(_Mem _Tp::*__mp) noexcept
-    { return __builtin_is_pointer_interconvertible_with_class(__mp); }
-# 4005 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/type_traits" 3
-  constexpr inline bool
-  is_constant_evaluated() noexcept
-  {
-
-
-
-    return __builtin_is_constant_evaluated();
-
-  }
-
-
-
-
-  template<typename _From, typename _To>
-    using __copy_cv = typename __match_cv_qualifiers<_From, _To>::__type;
-
-  template<typename _Xp, typename _Yp>
-    using __cond_res
-      = decltype(false ? declval<_Xp(&)()>()() : declval<_Yp(&)()>()());
-
-  template<typename _Ap, typename _Bp, typename = void>
-    struct __common_ref_impl
-    { };
-
-
-  template<typename _Ap, typename _Bp>
-    using __common_ref = typename __common_ref_impl<_Ap, _Bp>::type;
-
-
-  template<typename _Xp, typename _Yp>
-    using __condres_cvref
-      = __cond_res<__copy_cv<_Xp, _Yp>&, __copy_cv<_Yp, _Xp>&>;
-
-
-  template<typename _Xp, typename _Yp>
-    struct __common_ref_impl<_Xp&, _Yp&, __void_t<__condres_cvref<_Xp, _Yp>>>
-    : enable_if<is_reference_v<__condres_cvref<_Xp, _Yp>>,
-  __condres_cvref<_Xp, _Yp>>
-    { };
-
-
-  template<typename _Xp, typename _Yp>
-    using __common_ref_C = remove_reference_t<__common_ref<_Xp&, _Yp&>>&&;
-
-
-  template<typename _Xp, typename _Yp>
-    struct __common_ref_impl<_Xp&&, _Yp&&,
-      _Require<is_convertible<_Xp&&, __common_ref_C<_Xp, _Yp>>,
-        is_convertible<_Yp&&, __common_ref_C<_Xp, _Yp>>>>
-    { using type = __common_ref_C<_Xp, _Yp>; };
-
-
-  template<typename _Xp, typename _Yp>
-    using __common_ref_D = __common_ref<const _Xp&, _Yp&>;
-
-
-  template<typename _Xp, typename _Yp>
-    struct __common_ref_impl<_Xp&&, _Yp&,
-      _Require<is_convertible<_Xp&&, __common_ref_D<_Xp, _Yp>>>>
-    { using type = __common_ref_D<_Xp, _Yp>; };
-
-
-  template<typename _Xp, typename _Yp>
-    struct __common_ref_impl<_Xp&, _Yp&&>
-    : __common_ref_impl<_Yp&&, _Xp&>
-    { };
-
-
-  template<typename _Tp, typename _Up,
-    template<typename> class _TQual, template<typename> class _UQual>
-    struct basic_common_reference
-    { };
-
-
-  template<typename _Tp>
-    struct __xref
-    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>; };
-
-  template<typename _Tp>
-    struct __xref<_Tp&>
-    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>&; };
-
-  template<typename _Tp>
-    struct __xref<_Tp&&>
-    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>&&; };
-
-  template<typename _Tp1, typename _Tp2>
-    using __basic_common_ref
-      = typename basic_common_reference<remove_cvref_t<_Tp1>,
-     remove_cvref_t<_Tp2>,
-     __xref<_Tp1>::template __type,
-     __xref<_Tp2>::template __type>::type;
-
-
-  template<typename... _Tp>
-    struct common_reference;
-
-  template<typename... _Tp>
-    using common_reference_t = typename common_reference<_Tp...>::type;
-
-
-  template<>
-    struct common_reference<>
-    { };
-
-
-  template<typename _Tp0>
-    struct common_reference<_Tp0>
-    { using type = _Tp0; };
-
-
-  template<typename _Tp1, typename _Tp2, int _Bullet = 1, typename = void>
-    struct __common_reference_impl
-    : __common_reference_impl<_Tp1, _Tp2, _Bullet + 1>
-    { };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct common_reference<_Tp1, _Tp2>
-    : __common_reference_impl<_Tp1, _Tp2>
-    { };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1&, _Tp2&, 1,
-       void_t<__common_ref<_Tp1&, _Tp2&>>>
-    { using type = __common_ref<_Tp1&, _Tp2&>; };
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1&&, _Tp2&&, 1,
-       void_t<__common_ref<_Tp1&&, _Tp2&&>>>
-    { using type = __common_ref<_Tp1&&, _Tp2&&>; };
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1&, _Tp2&&, 1,
-       void_t<__common_ref<_Tp1&, _Tp2&&>>>
-    { using type = __common_ref<_Tp1&, _Tp2&&>; };
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1&&, _Tp2&, 1,
-       void_t<__common_ref<_Tp1&&, _Tp2&>>>
-    { using type = __common_ref<_Tp1&&, _Tp2&>; };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1, _Tp2, 2,
-       void_t<__basic_common_ref<_Tp1, _Tp2>>>
-    { using type = __basic_common_ref<_Tp1, _Tp2>; };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1, _Tp2, 3,
-       void_t<__cond_res<_Tp1, _Tp2>>>
-    { using type = __cond_res<_Tp1, _Tp2>; };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1, _Tp2, 4,
-       void_t<common_type_t<_Tp1, _Tp2>>>
-    { using type = common_type_t<_Tp1, _Tp2>; };
-
-
-  template<typename _Tp1, typename _Tp2>
-    struct __common_reference_impl<_Tp1, _Tp2, 5, void>
-    { };
-
-
-  template<typename _Tp1, typename _Tp2, typename... _Rest>
-    struct common_reference<_Tp1, _Tp2, _Rest...>
-    : __common_type_fold<common_reference<_Tp1, _Tp2>,
-    __common_type_pack<_Rest...>>
-    { };
-
-
-  template<typename _Tp1, typename _Tp2, typename... _Rest>
-    struct __common_type_fold<common_reference<_Tp1, _Tp2>,
-         __common_type_pack<_Rest...>,
-         void_t<common_reference_t<_Tp1, _Tp2>>>
-    : public common_reference<common_reference_t<_Tp1, _Tp2>, _Rest...>
-    { };
-
-
-
-
-
-
-
-}
-}
-# 43 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 2 3
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
-# 76 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 139 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h" 1 3 4
+# 140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/math.h" 1 3
+# 36 "C:/msys64/ucrt64/include/c++/14.2.0/math.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 1 3
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
+       
+# 40 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/requires_hosted.h" 1 3
+# 42 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
+
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 1 3
+# 35 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
+       
+# 36 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
+# 67 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
 extern "C++" {
 
 namespace std
@@ -9196,6 +5920,21 @@ namespace std
     };
 
 
+  template<typename _Tp>
+    struct __is_void
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_void<void>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
 
 
   template<typename _Tp>
@@ -9204,6 +5943,8 @@ namespace std
       enum { __value = 0 };
       typedef __false_type __type;
     };
+
+
 
 
 
@@ -9324,9 +6065,9 @@ namespace std
       enum { __value = 1 };
       typedef __true_type __type;
     };
-# 264 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 272 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
 __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; typedef __true_type __type; }; __extension__ template<> struct __is_integer<unsigned __int128> { enum { __value = 1 }; typedef __true_type __type; };
-# 281 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 289 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
   template<typename _Tp>
     struct __is_floating
     {
@@ -9355,10 +6096,35 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
       enum { __value = 1 };
       typedef __true_type __type;
     };
-# 358 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 366 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
+  template<typename _Tp>
+    struct __is_pointer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __is_pointer<_Tp*>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
   template<typename _Tp>
     struct __is_arithmetic
     : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_scalar
+    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
     { };
 
 
@@ -9435,6 +6201,8 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
     };
 
 
+  template<typename> struct iterator_traits;
+
 
   template<typename _Tp>
     struct __is_nonvolatile_trivially_copyable
@@ -9458,52 +6226,21 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
       enum { __value = 0 };
     };
 
-
   template<typename _Tp>
     struct __memcpyable<_Tp*, _Tp*>
     : __is_nonvolatile_trivially_copyable<_Tp>
     { };
-
 
   template<typename _Tp>
     struct __memcpyable<_Tp*, const _Tp*>
     : __is_nonvolatile_trivially_copyable<_Tp>
     { };
 
-  template<typename _Tp> struct __memcpyable_integer;
 
 
 
 
-  template<typename _Tp, typename _Up>
-    struct __memcpyable<_Tp*, _Up*>
-    {
-      enum {
- __value = __memcpyable_integer<_Tp>::__width != 0
-      && ((int)__memcpyable_integer<_Tp>::__width
-     == (int)__memcpyable_integer<_Up>::__width)
-      };
-    };
 
-
-  template<typename _Tp, typename _Up>
-    struct __memcpyable<_Tp*, const _Up*>
-    : __memcpyable<_Tp*, _Up*>
-    { };
-
-  template<typename _Tp>
-    struct __memcpyable_integer
-    {
-      enum {
- __width = __is_integer<_Tp>::__value ? (sizeof(_Tp) * 8) : 0
-      };
-    };
-
-
-  template<typename _Tp>
-    struct __memcpyable_integer<volatile _Tp>
-    { enum { __width = 0 }; };
-# 592 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
   template<typename _Iter1, typename _Iter2>
     struct __memcmpable
     {
@@ -9563,7 +6300,7 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
     {
       static const bool __value = false;
     };
-# 661 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/cpp_type_traits.h" 3
+# 579 "C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h" 3
   template<>
     struct __is_memcmp_ordered_with<std::byte, std::byte, true>
     { static constexpr bool __value = true; };
@@ -9575,15 +6312,6 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
   template<typename _Up, bool _SameSize>
     struct __is_memcmp_ordered_with<std::byte, _Up, _SameSize>
     { static constexpr bool __value = false; };
-
-
-
-  template<typename _ValT, typename _Tp>
-    constexpr bool __can_use_memchr_for_find
-
-      = __is_byte<_ValT>::__value
-
-   && (is_same_v<_Tp, _ValT> || is_integral_v<_Tp>);
 
 
 
@@ -9607,13 +6335,14 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
 
 }
 }
+# 45 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h" 1 3
+# 32 "C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h" 3
+       
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h" 3
 
-#pragma GCC diagnostic pop
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/type_traits.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
+
+
 
 extern "C++" {
 
@@ -9770,7 +6499,7 @@ namespace __gnu_cxx
   template<>
     struct __promote<float>
     { typedef float __type; };
-# 230 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
+# 225 "C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h" 3
   template<typename... _Tp>
     using __promoted_t = decltype((typename __promote<_Tp>::__type(0) + ...));
 
@@ -9784,21 +6513,16 @@ namespace __gnu_cxx
 
   template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
     using __promote_4 = __promote<__promoted_t<_Tp, _Up, _Vp, _Wp>>;
-# 274 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/type_traits.h" 3
+# 269 "C:/msys64/ucrt64/include/c++/14.2.0/ext/type_traits.h" 3
 
 }
 }
+# 46 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
 
-#pragma GCC diagnostic pop
-# 51 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/math.h" 1 3
-# 10 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 1 "C:/msys64/ucrt64/include/math.h" 1 3
+# 10 "C:/msys64/ucrt64/include/math.h" 3
        
-# 11 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 11 "C:/msys64/ucrt64/include/math.h" 3
 
 
 
@@ -9806,7 +6530,7 @@ namespace __gnu_cxx
 struct _exception;
 
 #pragma pack(push,_CRT_PACKING)
-# 75 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 75 "C:/msys64/ucrt64/include/math.h" 3
 extern "C++" {
 template <typename type1, typename type2> struct __mingw_types_compatible_p {
   static const bool result = false;
@@ -9824,7 +6548,7 @@ template <typename type1> struct __mingw_types_compatible_p<type1, const type1> 
   static const bool result = true;
 };
 }
-# 109 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 109 "C:/msys64/ucrt64/include/math.h" 3
 extern "C" {
 
 
@@ -9861,7 +6585,7 @@ extern "C" {
 
 
   extern double * __imp__HUGE;
-# 156 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 156 "C:/msys64/ucrt64/include/math.h" 3
   struct _exception {
     int type;
     const char *name;
@@ -9874,7 +6598,9 @@ extern "C" {
          double rslt);
   void __mingw_setusermatherr (int (__attribute__((__cdecl__)) *)(struct _exception *));
   __attribute__ ((__dllimport__)) void __setusermatherr(int (__attribute__((__cdecl__)) *)(struct _exception *));
-# 182 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+
+
+
   double __attribute__((__cdecl__)) sin(double _X);
   double __attribute__((__cdecl__)) cos(double _X);
   double __attribute__((__cdecl__)) tan(double _X);
@@ -9897,7 +6623,7 @@ extern "C" {
   extern float __attribute__((__cdecl__)) fabsf (float x);
   extern long double __attribute__((__cdecl__)) fabsl (long double);
   extern double __attribute__((__cdecl__)) fabs (double _X);
-# 242 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 231 "C:/msys64/ucrt64/include/math.h" 3
   double __attribute__((__cdecl__)) ldexp(double _X,int _Y);
   double __attribute__((__cdecl__)) frexp(double _X,int *_Y);
   double __attribute__((__cdecl__)) modf(double _X,double *_Y);
@@ -9906,7 +6632,7 @@ extern "C" {
   void __attribute__((__cdecl__)) sincos (double __x, double *p_sin, double *p_cos);
   void __attribute__((__cdecl__)) sincosl (long double __x, long double *p_sin, long double *p_cos);
   void __attribute__((__cdecl__)) sincosf (float __x, float *p_sin, float *p_cos);
-# 267 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 256 "C:/msys64/ucrt64/include/math.h" 3
   struct _complex {
     double x;
     double y;
@@ -9924,7 +6650,7 @@ extern "C" {
 
 
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _matherr (struct _exception *);
-# 308 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 297 "C:/msys64/ucrt64/include/math.h" 3
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) j0 (double) ;
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) j1 (double) ;
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) jn (int, double) ;
@@ -9935,25 +6661,25 @@ __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) yn (int, doubl
 
 
 __attribute__ ((__dllimport__)) double __attribute__((__cdecl__)) chgsign (double);
-# 326 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 315 "C:/msys64/ucrt64/include/math.h" 3
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) finite (double);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) fpclass (double);
-# 370 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 359 "C:/msys64/ucrt64/include/math.h" 3
 typedef float float_t;
 typedef double double_t;
-# 405 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 394 "C:/msys64/ucrt64/include/math.h" 3
   extern int __attribute__((__cdecl__)) __fpclassifyl (long double);
   extern int __attribute__((__cdecl__)) __fpclassifyf (float);
   extern int __attribute__((__cdecl__)) __fpclassify (double);
-# 518 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 507 "C:/msys64/ucrt64/include/math.h" 3
   extern int __attribute__((__cdecl__)) __isnan (double);
   extern int __attribute__((__cdecl__)) __isnanf (float);
   extern int __attribute__((__cdecl__)) __isnanl (long double);
-# 605 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 594 "C:/msys64/ucrt64/include/math.h" 3
   extern int __attribute__((__cdecl__)) __signbit (double);
   extern int __attribute__((__cdecl__)) __signbitf (float);
   extern int __attribute__((__cdecl__)) __signbitl (long double);
-# 662 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 651 "C:/msys64/ucrt64/include/math.h" 3
   extern float __attribute__((__cdecl__)) sinf(float _X);
   extern long double __attribute__((__cdecl__)) sinl(long double);
 
@@ -9992,7 +6718,9 @@ typedef double double_t;
 
 
   extern long double __attribute__((__cdecl__)) tanhl(long double);
-# 741 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+
+
+
   extern double __attribute__((__cdecl__)) acosh (double);
   extern float __attribute__((__cdecl__)) acoshf (float);
   extern long double __attribute__((__cdecl__)) acoshl (long double);
@@ -10069,8 +6797,7 @@ typedef double double_t;
   extern double __attribute__((__cdecl__)) logb (double);
   extern float __attribute__((__cdecl__)) logbf (float);
   extern long double __attribute__((__cdecl__)) logbl (long double);
-
-
+# 854 "C:/msys64/ucrt64/include/math.h" 3
   extern float __attribute__((__cdecl__)) modff (float, float*);
   extern long double __attribute__((__cdecl__)) modfl (long double, long double*);
 
@@ -10157,9 +6884,7 @@ extern long __attribute__((__cdecl__)) lrintl (long double);
 __extension__ long long __attribute__((__cdecl__)) llrint (double);
 __extension__ long long __attribute__((__cdecl__)) llrintf (float);
 __extension__ long long __attribute__((__cdecl__)) llrintl (long double);
-
-
-
+# 1021 "C:/msys64/ucrt64/include/math.h" 3
   extern double __attribute__((__cdecl__)) round (double);
   extern float __attribute__((__cdecl__)) roundf (float);
   extern long double __attribute__((__cdecl__)) roundl (long double);
@@ -10196,11 +6921,11 @@ __extension__ long long __attribute__((__cdecl__)) llrintl (long double);
   extern double __attribute__((__cdecl__)) copysign (double, double);
   extern float __attribute__((__cdecl__)) copysignf (float, float);
   extern long double __attribute__((__cdecl__)) copysignl (long double, long double);
-# 965 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 1078 "C:/msys64/ucrt64/include/math.h" 3
   extern double __attribute__((__cdecl__)) nan(const char *tagp);
   extern float __attribute__((__cdecl__)) nanf(const char *tagp);
   extern long double __attribute__((__cdecl__)) nanl(const char *tagp);
-# 976 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 1089 "C:/msys64/ucrt64/include/math.h" 3
   extern double __attribute__((__cdecl__)) nextafter (double, double);
   extern float __attribute__((__cdecl__)) nextafterf (float, float);
   extern long double __attribute__((__cdecl__)) nextafterl (long double, long double);
@@ -10236,7 +6961,7 @@ __extension__ long long __attribute__((__cdecl__)) llrintl (long double);
   extern double __attribute__((__cdecl__)) fma (double, double, double);
   extern float __attribute__((__cdecl__)) fmaf (float, float, float);
   extern long double __attribute__((__cdecl__)) fmal (long double, long double, long double);
-# 1059 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 1172 "C:/msys64/ucrt64/include/math.h" 3
    __attribute__ ((__dllimport__)) float __attribute__((__cdecl__)) _copysignf (float _Number,float _Sign);
    __attribute__ ((__dllimport__)) float __attribute__((__cdecl__)) _chgsignf (float _X);
    __attribute__ ((__dllimport__)) float __attribute__((__cdecl__)) _logbf(float _X);
@@ -10248,24 +6973,21 @@ __extension__ long long __attribute__((__cdecl__)) llrintl (long double);
 
 
    extern long double __attribute__((__cdecl__)) _chgsignl (long double);
-# 1454 "C:/Users/maxwo/msys2/mingw64/include/math.h" 3
+# 1567 "C:/msys64/ucrt64/include/math.h" 3
 }
 
 
 
 
 #pragma pack(pop)
-# 56 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
-
-#pragma GCC diagnostic pop
-
-
-
-
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 64 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
-# 90 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
+# 56 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 57 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
+# 83 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
 extern "C++"
 {
 namespace std
@@ -10565,7 +7287,7 @@ namespace std
   inline constexpr long double
   pow(long double __x, long double __y)
   { return __builtin_powl(__x, __y); }
-# 407 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 400 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   using ::sin;
 
 
@@ -10660,7 +7382,7 @@ namespace std
                                     double>::__type
     tanh(_Tp __x)
     { return __builtin_tanh(__x); }
-# 1060 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 1053 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   template<typename _Tp, typename _Up>
     inline constexpr
     typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
@@ -10687,7 +7409,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
       return pow(__type(__x), __type(__y));
     }
-# 1107 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 1100 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   constexpr int
   fpclassify(float __x)
   { return __builtin_fpclassify(0x0100, (0x0100 | 0x0400), 0x0400,
@@ -10987,7 +7709,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
       return __builtin_isunordered(__type(__x), __type(__y));
     }
-# 1827 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 1820 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   using ::acosf;
 
 
@@ -11139,7 +7861,7 @@ namespace std
 
 
   using ::tanhl;
-# 2092 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 2085 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   using ::double_t;
   using ::float_t;
 
@@ -11828,7 +8550,7 @@ namespace std
                                               double>::__type
     trunc(_Tp __x)
     { return __builtin_trunc(__x); }
-# 3689 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 3674 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   template<typename _Tp, typename _Up>
     constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
     copysign(_Tp __x, _Up __y)
@@ -11941,7 +8663,7 @@ namespace std
       using __type = __gnu_cxx::__promoted_t<_Tp, _Up, _Vp>;
       return std::__hypot3<__type>(__x, __y, __z);
     }
-# 3838 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 3823 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
   template<typename _Fp>
     constexpr _Fp
     __lerp(_Fp __a, _Fp __b, _Fp __t) noexcept
@@ -11979,26 +8701,29 @@ namespace std
       using __type = __gnu_cxx::__promoted_t<_Tp, _Up, _Vp>;
       return std::__lerp<__type>(__x, __y, __z);
     }
-# 3909 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 3
+# 3894 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 3
 
 }
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 1 3
-# 37 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 38 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 1 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 38 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
 
 
 
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 1 3
-# 60 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/functexcept.h" 1 3
-# 40 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/exception_defines.h" 1 3
-# 41 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/functexcept.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 1 3
+# 60 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/functexcept.h" 1 3
+# 40 "C:/msys64/ucrt64/include/c++/14.2.0/bits/functexcept.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/exception_defines.h" 1 3
+# 41 "C:/msys64/ucrt64/include/c++/14.2.0/bits/functexcept.h" 2 3
 
 namespace std
 {
@@ -12073,18 +8798,24 @@ namespace std
 
   void
   __throw_bad_function_call() __attribute__((__noreturn__,__cold__));
-# 140 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/functexcept.h" 3
+# 140 "C:/msys64/ucrt64/include/c++/14.2.0/bits/functexcept.h" 3
 
 }
-# 61 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
+# 61 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 1 3
+# 32 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
+       
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
+
+
+
+
 namespace __gnu_cxx
 {
 
-# 52 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 50 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
   template<typename _Tp>
     struct __is_integer_nonstrict
     : public std::__is_integer<_Tp>
@@ -12127,10 +8858,10 @@ namespace __gnu_cxx
 
   template<typename _Value>
     const int __numeric_traits_integer<_Value>::__digits;
-# 139 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 137 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
   template<typename _Tp>
     using __int_traits = __numeric_traits_integer<_Tp>;
-# 159 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 157 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
   template<typename _Value>
     struct __numeric_traits_floating
     {
@@ -12179,14 +8910,3271 @@ namespace __gnu_cxx
     struct __numeric_traits<long double>
     : public __numeric_traits_floating<long double>
     { };
-# 240 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/ext/numeric_traits.h" 3
+# 238 "C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h" 3
 
 }
-# 64 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 1 3
-# 61 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 1 3
-# 40 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 64 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 1 3
+# 60 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 1 3
+# 32 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+       
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+# 63 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 64 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 2 3
+
+namespace std
+{
+
+
+  template<typename _Tp>
+    class reference_wrapper;
+# 86 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp, _Tp __v>
+    struct integral_constant
+    {
+      static constexpr _Tp value = __v;
+      using value_type = _Tp;
+      using type = integral_constant<_Tp, __v>;
+      constexpr operator value_type() const noexcept { return value; }
+
+
+      constexpr value_type operator()() const noexcept { return value; }
+
+    };
+# 106 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<bool __v>
+    using __bool_constant = integral_constant<bool, __v>;
+
+
+
+  using true_type = __bool_constant<true>;
+
+
+  using false_type = __bool_constant<false>;
+
+
+
+
+  template<bool __v>
+    using bool_constant = __bool_constant<__v>;
+
+
+
+
+
+
+  template<bool, typename _Tp = void>
+    struct enable_if
+    { };
+
+
+  template<typename _Tp>
+    struct enable_if<true, _Tp>
+    { using type = _Tp; };
+
+
+  template<bool _Cond, typename _Tp = void>
+    using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
+
+  template<bool>
+    struct __conditional
+    {
+      template<typename _Tp, typename>
+ using type = _Tp;
+    };
+
+  template<>
+    struct __conditional<false>
+    {
+      template<typename, typename _Up>
+ using type = _Up;
+    };
+
+
+  template<bool _Cond, typename _If, typename _Else>
+    using __conditional_t
+      = typename __conditional<_Cond>::template type<_If, _Else>;
+
+
+  template <typename _Type>
+    struct __type_identity
+    { using type = _Type; };
+
+  template<typename _Tp>
+    using __type_identity_t = typename __type_identity<_Tp>::type;
+
+  namespace __detail
+  {
+
+    template<typename _Tp, typename...>
+      using __first_t = _Tp;
+
+
+    template<typename... _Bn>
+      auto __or_fn(int) -> __first_t<false_type,
+         __enable_if_t<!bool(_Bn::value)>...>;
+
+    template<typename... _Bn>
+      auto __or_fn(...) -> true_type;
+
+    template<typename... _Bn>
+      auto __and_fn(int) -> __first_t<true_type,
+          __enable_if_t<bool(_Bn::value)>...>;
+
+    template<typename... _Bn>
+      auto __and_fn(...) -> false_type;
+  }
+
+
+
+
+  template<typename... _Bn>
+    struct __or_
+    : decltype(__detail::__or_fn<_Bn...>(0))
+    { };
+
+  template<typename... _Bn>
+    struct __and_
+    : decltype(__detail::__and_fn<_Bn...>(0))
+    { };
+
+  template<typename _Pp>
+    struct __not_
+    : __bool_constant<!bool(_Pp::value)>
+    { };
+
+
+
+
+
+  template<typename... _Bn>
+    inline constexpr bool __or_v = __or_<_Bn...>::value;
+  template<typename... _Bn>
+    inline constexpr bool __and_v = __and_<_Bn...>::value;
+
+  namespace __detail
+  {
+    template<typename , typename _B1, typename... _Bn>
+      struct __disjunction_impl
+      { using type = _B1; };
+
+    template<typename _B1, typename _B2, typename... _Bn>
+      struct __disjunction_impl<__enable_if_t<!bool(_B1::value)>, _B1, _B2, _Bn...>
+      { using type = typename __disjunction_impl<void, _B2, _Bn...>::type; };
+
+    template<typename , typename _B1, typename... _Bn>
+      struct __conjunction_impl
+      { using type = _B1; };
+
+    template<typename _B1, typename _B2, typename... _Bn>
+      struct __conjunction_impl<__enable_if_t<bool(_B1::value)>, _B1, _B2, _Bn...>
+      { using type = typename __conjunction_impl<void, _B2, _Bn...>::type; };
+  }
+
+
+  template<typename... _Bn>
+    struct conjunction
+    : __detail::__conjunction_impl<void, _Bn...>::type
+    { };
+
+  template<>
+    struct conjunction<>
+    : true_type
+    { };
+
+  template<typename... _Bn>
+    struct disjunction
+    : __detail::__disjunction_impl<void, _Bn...>::type
+    { };
+
+  template<>
+    struct disjunction<>
+    : false_type
+    { };
+
+  template<typename _Pp>
+    struct negation
+    : __not_<_Pp>::type
+    { };
+
+
+
+
+  template<typename... _Bn>
+    inline constexpr bool conjunction_v = conjunction<_Bn...>::value;
+
+  template<typename... _Bn>
+    inline constexpr bool disjunction_v = disjunction<_Bn...>::value;
+
+  template<typename _Pp>
+    inline constexpr bool negation_v = negation<_Pp>::value;
+
+
+
+
+
+  template<typename>
+    struct is_reference;
+  template<typename>
+    struct is_function;
+  template<typename>
+    struct is_void;
+  template<typename>
+    struct remove_cv;
+  template<typename>
+    struct is_const;
+
+
+  template<typename>
+    struct __is_array_unknown_bounds;
+
+
+
+
+  template <typename _Tp, size_t = sizeof(_Tp)>
+    constexpr true_type __is_complete_or_unbounded(__type_identity<_Tp>)
+    { return {}; }
+
+  template <typename _TypeIdentity,
+      typename _NestedType = typename _TypeIdentity::type>
+    constexpr typename __or_<
+      is_reference<_NestedType>,
+      is_function<_NestedType>,
+      is_void<_NestedType>,
+      __is_array_unknown_bounds<_NestedType>
+    >::type __is_complete_or_unbounded(_TypeIdentity)
+    { return {}; }
+
+
+  template<typename _Tp>
+    using __remove_cv_t = typename remove_cv<_Tp>::type;
+
+
+
+
+
+  template<typename _Tp>
+    struct is_void
+    : public false_type { };
+
+  template<>
+    struct is_void<void>
+    : public true_type { };
+
+  template<>
+    struct is_void<const void>
+    : public true_type { };
+
+  template<>
+    struct is_void<volatile void>
+    : public true_type { };
+
+  template<>
+    struct is_void<const volatile void>
+    : public true_type { };
+
+
+  template<typename>
+    struct __is_integral_helper
+    : public false_type { };
+
+  template<>
+    struct __is_integral_helper<bool>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<char>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<signed char>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<unsigned char>
+    : public true_type { };
+
+
+
+
+  template<>
+    struct __is_integral_helper<wchar_t>
+    : public true_type { };
+
+
+  template<>
+    struct __is_integral_helper<char8_t>
+    : public true_type { };
+
+
+  template<>
+    struct __is_integral_helper<char16_t>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<char32_t>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<short>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<unsigned short>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<int>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<unsigned int>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<long>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<unsigned long>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<long long>
+    : public true_type { };
+
+  template<>
+    struct __is_integral_helper<unsigned long long>
+    : public true_type { };
+
+
+
+
+  __extension__
+  template<>
+    struct __is_integral_helper<__int128>
+    : public true_type { };
+
+  __extension__
+  template<>
+    struct __is_integral_helper<unsigned __int128>
+    : public true_type { };
+# 460 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_integral
+    : public __is_integral_helper<__remove_cv_t<_Tp>>::type
+    { };
+
+
+  template<typename>
+    struct __is_floating_point_helper
+    : public false_type { };
+
+  template<>
+    struct __is_floating_point_helper<float>
+    : public true_type { };
+
+  template<>
+    struct __is_floating_point_helper<double>
+    : public true_type { };
+
+  template<>
+    struct __is_floating_point_helper<long double>
+    : public true_type { };
+# 513 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<>
+    struct __is_floating_point_helper<__float128>
+    : public true_type { };
+
+
+
+
+  template<typename _Tp>
+    struct is_floating_point
+    : public __is_floating_point_helper<__remove_cv_t<_Tp>>::type
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_array
+    : public __bool_constant<__is_array(_Tp)>
+    { };
+# 545 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename>
+    struct __is_pointer_helper
+    : public false_type { };
+
+  template<typename _Tp>
+    struct __is_pointer_helper<_Tp*>
+    : public true_type { };
+
+
+  template<typename _Tp>
+    struct is_pointer
+    : public __is_pointer_helper<__remove_cv_t<_Tp>>::type
+    { };
+
+
+  template<typename>
+    struct is_lvalue_reference
+    : public false_type { };
+
+  template<typename _Tp>
+    struct is_lvalue_reference<_Tp&>
+    : public true_type { };
+
+
+  template<typename>
+    struct is_rvalue_reference
+    : public false_type { };
+
+  template<typename _Tp>
+    struct is_rvalue_reference<_Tp&&>
+    : public true_type { };
+
+
+
+  template<typename _Tp>
+    struct is_member_object_pointer
+    : public __bool_constant<__is_member_object_pointer(_Tp)>
+    { };
+# 601 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_member_function_pointer
+    : public __bool_constant<__is_member_function_pointer(_Tp)>
+    { };
+# 622 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_enum
+    : public __bool_constant<__is_enum(_Tp)>
+    { };
+
+
+  template<typename _Tp>
+    struct is_union
+    : public __bool_constant<__is_union(_Tp)>
+    { };
+
+
+  template<typename _Tp>
+    struct is_class
+    : public __bool_constant<__is_class(_Tp)>
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_function
+    : public __bool_constant<__is_function(_Tp)>
+    { };
+# 661 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_null_pointer
+    : public false_type { };
+
+  template<>
+    struct is_null_pointer<std::nullptr_t>
+    : public true_type { };
+
+  template<>
+    struct is_null_pointer<const std::nullptr_t>
+    : public true_type { };
+
+  template<>
+    struct is_null_pointer<volatile std::nullptr_t>
+    : public true_type { };
+
+  template<>
+    struct is_null_pointer<const volatile std::nullptr_t>
+    : public true_type { };
+
+
+
+  template<typename _Tp>
+    struct __is_nullptr_t
+    : public is_null_pointer<_Tp>
+    { } __attribute__ ((__deprecated__ ("use '" "std::is_null_pointer" "' instead")));
+
+
+
+
+
+
+  template<typename _Tp>
+    struct is_reference
+    : public __bool_constant<__is_reference(_Tp)>
+    { };
+# 715 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_arithmetic
+    : public __or_<is_integral<_Tp>, is_floating_point<_Tp>>::type
+    { };
+
+
+  template<typename _Tp>
+    struct is_fundamental
+    : public __or_<is_arithmetic<_Tp>, is_void<_Tp>,
+     is_null_pointer<_Tp>>::type
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_object
+    : public __bool_constant<__is_object(_Tp)>
+    { };
+# 741 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename>
+    struct is_member_pointer;
+
+
+  template<typename _Tp>
+    struct is_scalar
+    : public __or_<is_arithmetic<_Tp>, is_enum<_Tp>, is_pointer<_Tp>,
+                   is_member_pointer<_Tp>, is_null_pointer<_Tp>>::type
+    { };
+
+
+  template<typename _Tp>
+    struct is_compound
+    : public __bool_constant<!is_fundamental<_Tp>::value> { };
+
+
+
+  template<typename _Tp>
+    struct is_member_pointer
+    : public __bool_constant<__is_member_pointer(_Tp)>
+    { };
+# 779 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename, typename>
+    struct is_same;
+
+
+  template<typename _Tp, typename... _Types>
+    using __is_one_of = __or_<is_same<_Tp, _Types>...>;
+
+
+  __extension__
+  template<typename _Tp>
+    using __is_signed_integer = __is_one_of<__remove_cv_t<_Tp>,
+   signed char, signed short, signed int, signed long,
+   signed long long
+
+   , signed __int128
+# 804 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+   >;
+
+
+  __extension__
+  template<typename _Tp>
+    using __is_unsigned_integer = __is_one_of<__remove_cv_t<_Tp>,
+   unsigned char, unsigned short, unsigned int, unsigned long,
+   unsigned long long
+
+   , unsigned __int128
+# 824 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+   >;
+
+
+  template<typename _Tp>
+    using __is_standard_integer
+      = __or_<__is_signed_integer<_Tp>, __is_unsigned_integer<_Tp>>;
+
+
+  template<typename...> using __void_t = void;
+
+
+
+
+
+  template<typename>
+    struct is_const
+    : public false_type { };
+
+  template<typename _Tp>
+    struct is_const<_Tp const>
+    : public true_type { };
+
+
+  template<typename>
+    struct is_volatile
+    : public false_type { };
+
+  template<typename _Tp>
+    struct is_volatile<_Tp volatile>
+    : public true_type { };
+
+
+  template<typename _Tp>
+    struct is_trivial
+    : public __bool_constant<__is_trivial(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_copyable
+    : public __bool_constant<__is_trivially_copyable(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_standard_layout
+    : public __bool_constant<__is_standard_layout(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+
+
+
+  template<typename _Tp>
+    struct
+    __attribute__ ((__deprecated__ ("use '" "is_standard_layout && is_trivial" "' instead")))
+    is_pod
+    : public __bool_constant<__is_pod(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+
+
+  template<typename _Tp>
+    struct
+    [[__deprecated__]]
+    is_literal_type
+    : public __bool_constant<__is_literal_type(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_empty
+    : public __bool_constant<__is_empty(_Tp)>
+    { };
+
+
+  template<typename _Tp>
+    struct is_polymorphic
+    : public __bool_constant<__is_polymorphic(_Tp)>
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct is_final
+    : public __bool_constant<__is_final(_Tp)>
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_abstract
+    : public __bool_constant<__is_abstract(_Tp)>
+    { };
+
+
+  template<typename _Tp,
+    bool = is_arithmetic<_Tp>::value>
+    struct __is_signed_helper
+    : public false_type { };
+
+  template<typename _Tp>
+    struct __is_signed_helper<_Tp, true>
+    : public __bool_constant<_Tp(-1) < _Tp(0)>
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_signed
+    : public __is_signed_helper<_Tp>::type
+    { };
+
+
+  template<typename _Tp>
+    struct is_unsigned
+    : public __and_<is_arithmetic<_Tp>, __not_<is_signed<_Tp>>>::type
+    { };
+
+
+  template<typename _Tp, typename _Up = _Tp&&>
+    _Up
+    __declval(int);
+
+  template<typename _Tp>
+    _Tp
+    __declval(long);
+
+
+  template<typename _Tp>
+    auto declval() noexcept -> decltype(__declval<_Tp>(0));
+
+  template<typename>
+    struct remove_all_extents;
+
+
+  template<typename _Tp>
+    struct __is_array_known_bounds
+    : public false_type
+    { };
+
+  template<typename _Tp, size_t _Size>
+    struct __is_array_known_bounds<_Tp[_Size]>
+    : public true_type
+    { };
+
+  template<typename _Tp>
+    struct __is_array_unknown_bounds
+    : public false_type
+    { };
+
+  template<typename _Tp>
+    struct __is_array_unknown_bounds<_Tp[]>
+    : public true_type
+    { };
+# 1006 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  struct __do_is_destructible_impl
+  {
+    template<typename _Tp, typename = decltype(declval<_Tp&>().~_Tp())>
+      static true_type __test(int);
+
+    template<typename>
+      static false_type __test(...);
+  };
+
+  template<typename _Tp>
+    struct __is_destructible_impl
+    : public __do_is_destructible_impl
+    {
+      using type = decltype(__test<_Tp>(0));
+    };
+
+  template<typename _Tp,
+           bool = __or_<is_void<_Tp>,
+                        __is_array_unknown_bounds<_Tp>,
+                        is_function<_Tp>>::value,
+           bool = __or_<is_reference<_Tp>, is_scalar<_Tp>>::value>
+    struct __is_destructible_safe;
+
+  template<typename _Tp>
+    struct __is_destructible_safe<_Tp, false, false>
+    : public __is_destructible_impl<typename
+               remove_all_extents<_Tp>::type>::type
+    { };
+
+  template<typename _Tp>
+    struct __is_destructible_safe<_Tp, true, false>
+    : public false_type { };
+
+  template<typename _Tp>
+    struct __is_destructible_safe<_Tp, false, true>
+    : public true_type { };
+
+
+
+  template<typename _Tp>
+    struct is_destructible
+    : public __is_destructible_safe<_Tp>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+
+
+
+
+  struct __do_is_nt_destructible_impl
+  {
+    template<typename _Tp>
+      static __bool_constant<noexcept(declval<_Tp&>().~_Tp())>
+      __test(int);
+
+    template<typename>
+      static false_type __test(...);
+  };
+
+  template<typename _Tp>
+    struct __is_nt_destructible_impl
+    : public __do_is_nt_destructible_impl
+    {
+      using type = decltype(__test<_Tp>(0));
+    };
+
+  template<typename _Tp,
+           bool = __or_<is_void<_Tp>,
+                        __is_array_unknown_bounds<_Tp>,
+                        is_function<_Tp>>::value,
+           bool = __or_<is_reference<_Tp>, is_scalar<_Tp>>::value>
+    struct __is_nt_destructible_safe;
+
+  template<typename _Tp>
+    struct __is_nt_destructible_safe<_Tp, false, false>
+    : public __is_nt_destructible_impl<typename
+               remove_all_extents<_Tp>::type>::type
+    { };
+
+  template<typename _Tp>
+    struct __is_nt_destructible_safe<_Tp, true, false>
+    : public false_type { };
+
+  template<typename _Tp>
+    struct __is_nt_destructible_safe<_Tp, false, true>
+    : public true_type { };
+
+
+
+  template<typename _Tp>
+    struct is_nothrow_destructible
+    : public __is_nt_destructible_safe<_Tp>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename... _Args>
+    using __is_constructible_impl
+      = __bool_constant<__is_constructible(_Tp, _Args...)>;
+
+
+
+  template<typename _Tp, typename... _Args>
+    struct is_constructible
+      : public __is_constructible_impl<_Tp, _Args...>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_default_constructible
+    : public __is_constructible_impl<_Tp>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename = void>
+    struct __add_lvalue_reference_helper
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct __add_lvalue_reference_helper<_Tp, __void_t<_Tp&>>
+    { using type = _Tp&; };
+
+  template<typename _Tp>
+    using __add_lval_ref_t = typename __add_lvalue_reference_helper<_Tp>::type;
+
+
+
+  template<typename _Tp>
+    struct is_copy_constructible
+    : public __is_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename = void>
+    struct __add_rvalue_reference_helper
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct __add_rvalue_reference_helper<_Tp, __void_t<_Tp&&>>
+    { using type = _Tp&&; };
+
+  template<typename _Tp>
+    using __add_rval_ref_t = typename __add_rvalue_reference_helper<_Tp>::type;
+
+
+
+  template<typename _Tp>
+    struct is_move_constructible
+    : public __is_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename... _Args>
+    using __is_nothrow_constructible_impl
+      = __bool_constant<__is_nothrow_constructible(_Tp, _Args...)>;
+
+
+
+  template<typename _Tp, typename... _Args>
+    struct is_nothrow_constructible
+    : public __is_nothrow_constructible_impl<_Tp, _Args...>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_default_constructible
+    : public __is_nothrow_constructible_impl<_Tp>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_copy_constructible
+    : public __is_nothrow_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_move_constructible
+    : public __is_nothrow_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename _Up>
+    using __is_assignable_impl = __bool_constant<__is_assignable(_Tp, _Up)>;
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_assignable
+    : public __is_assignable_impl<_Tp, _Up>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_copy_assignable
+    : public __is_assignable_impl<__add_lval_ref_t<_Tp>,
+      __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_move_assignable
+    : public __is_assignable_impl<__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename _Up>
+    using __is_nothrow_assignable_impl
+      = __bool_constant<__is_nothrow_assignable(_Tp, _Up)>;
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_nothrow_assignable
+    : public __is_nothrow_assignable_impl<_Tp, _Up>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_copy_assignable
+    : public __is_nothrow_assignable_impl<__add_lval_ref_t<_Tp>,
+       __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_move_assignable
+    : public __is_nothrow_assignable_impl<__add_lval_ref_t<_Tp>,
+       __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename... _Args>
+    using __is_trivially_constructible_impl
+      = __bool_constant<__is_trivially_constructible(_Tp, _Args...)>;
+
+
+
+  template<typename _Tp, typename... _Args>
+    struct is_trivially_constructible
+    : public __is_trivially_constructible_impl<_Tp, _Args...>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_default_constructible
+    : public __is_trivially_constructible_impl<_Tp>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    constexpr bool __is_implicitly_default_constructible_v
+      = requires (void(&__f)(_Tp)) { __f({}); };
+
+  template<typename _Tp>
+    struct __is_implicitly_default_constructible
+    : __bool_constant<__is_implicitly_default_constructible_v<_Tp>>
+    { };
+# 1351 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct is_trivially_copy_constructible
+    : public __is_trivially_constructible_impl<_Tp, __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_move_constructible
+    : public __is_trivially_constructible_impl<_Tp, __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename _Up>
+    using __is_trivially_assignable_impl
+      = __bool_constant<__is_trivially_assignable(_Tp, _Up)>;
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_trivially_assignable
+    : public __is_trivially_assignable_impl<_Tp, _Up>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_copy_assignable
+    : public __is_trivially_assignable_impl<__add_lval_ref_t<_Tp>,
+         __add_lval_ref_t<const _Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_move_assignable
+    : public __is_trivially_assignable_impl<__add_lval_ref_t<_Tp>,
+         __add_rval_ref_t<_Tp>>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_trivially_destructible
+    : public __and_<__is_destructible_safe<_Tp>,
+      __bool_constant<__has_trivial_destructor(_Tp)>>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+  template<typename _Tp>
+    struct has_virtual_destructor
+    : public __bool_constant<__has_virtual_destructor(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+
+
+  template<typename _Tp>
+    struct alignment_of
+    : public integral_constant<std::size_t, alignof(_Tp)>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename>
+    struct rank
+    : public integral_constant<std::size_t, 0> { };
+
+  template<typename _Tp, std::size_t _Size>
+    struct rank<_Tp[_Size]>
+    : public integral_constant<std::size_t, 1 + rank<_Tp>::value> { };
+
+  template<typename _Tp>
+    struct rank<_Tp[]>
+    : public integral_constant<std::size_t, 1 + rank<_Tp>::value> { };
+
+
+  template<typename, unsigned _Uint = 0>
+    struct extent
+    : public integral_constant<size_t, 0> { };
+
+  template<typename _Tp, size_t _Size>
+    struct extent<_Tp[_Size], 0>
+    : public integral_constant<size_t, _Size> { };
+
+  template<typename _Tp, unsigned _Uint, size_t _Size>
+    struct extent<_Tp[_Size], _Uint>
+    : public extent<_Tp, _Uint - 1>::type { };
+
+  template<typename _Tp>
+    struct extent<_Tp[], 0>
+    : public integral_constant<size_t, 0> { };
+
+  template<typename _Tp, unsigned _Uint>
+    struct extent<_Tp[], _Uint>
+    : public extent<_Tp, _Uint - 1>::type { };
+
+
+
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_same
+    : public __bool_constant<__is_same(_Tp, _Up)>
+    { };
+# 1491 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Base, typename _Derived>
+    struct is_base_of
+    : public __bool_constant<__is_base_of(_Base, _Derived)>
+    { };
+
+
+  template<typename _From, typename _To>
+    struct is_convertible
+    : public __bool_constant<__is_convertible(_From, _To)>
+    { };
+# 1540 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _ToElementType, typename _FromElementType>
+    using __is_array_convertible
+      = is_convertible<_FromElementType(*)[], _ToElementType(*)[]>;
+
+
+
+
+
+  template<typename _From, typename _To>
+    inline constexpr bool is_nothrow_convertible_v
+      = __is_nothrow_convertible(_From, _To);
+
+
+  template<typename _From, typename _To>
+    struct is_nothrow_convertible
+    : public bool_constant<is_nothrow_convertible_v<_From, _To>>
+    { };
+# 1603 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct remove_const
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct remove_const<_Tp const>
+    { using type = _Tp; };
+
+
+  template<typename _Tp>
+    struct remove_volatile
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct remove_volatile<_Tp volatile>
+    { using type = _Tp; };
+
+
+
+  template<typename _Tp>
+    struct remove_cv
+    { using type = __remove_cv(_Tp); };
+# 1644 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct add_const
+    { using type = _Tp const; };
+
+
+  template<typename _Tp>
+    struct add_volatile
+    { using type = _Tp volatile; };
+
+
+  template<typename _Tp>
+    struct add_cv
+    { using type = _Tp const volatile; };
+
+
+
+  template<typename _Tp>
+    using remove_const_t = typename remove_const<_Tp>::type;
+
+
+  template<typename _Tp>
+    using remove_volatile_t = typename remove_volatile<_Tp>::type;
+
+
+  template<typename _Tp>
+    using remove_cv_t = typename remove_cv<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_const_t = typename add_const<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_volatile_t = typename add_volatile<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_cv_t = typename add_cv<_Tp>::type;
+
+
+
+
+
+
+  template<typename _Tp>
+    struct remove_reference
+    { using type = __remove_reference(_Tp); };
+# 1706 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct add_lvalue_reference
+    { using type = __add_lval_ref_t<_Tp>; };
+
+
+  template<typename _Tp>
+    struct add_rvalue_reference
+    { using type = __add_rval_ref_t<_Tp>; };
+
+
+
+  template<typename _Tp>
+    using remove_reference_t = typename remove_reference<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_lvalue_reference_t = typename add_lvalue_reference<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_rvalue_reference_t = typename add_rvalue_reference<_Tp>::type;
+
+
+
+
+
+
+
+  template<typename _Unqualified, bool _IsConst, bool _IsVol>
+    struct __cv_selector;
+
+  template<typename _Unqualified>
+    struct __cv_selector<_Unqualified, false, false>
+    { using __type = _Unqualified; };
+
+  template<typename _Unqualified>
+    struct __cv_selector<_Unqualified, false, true>
+    { using __type = volatile _Unqualified; };
+
+  template<typename _Unqualified>
+    struct __cv_selector<_Unqualified, true, false>
+    { using __type = const _Unqualified; };
+
+  template<typename _Unqualified>
+    struct __cv_selector<_Unqualified, true, true>
+    { using __type = const volatile _Unqualified; };
+
+  template<typename _Qualified, typename _Unqualified,
+    bool _IsConst = is_const<_Qualified>::value,
+    bool _IsVol = is_volatile<_Qualified>::value>
+    class __match_cv_qualifiers
+    {
+      using __match = __cv_selector<_Unqualified, _IsConst, _IsVol>;
+
+    public:
+      using __type = typename __match::__type;
+    };
+
+
+  template<typename _Tp>
+    struct __make_unsigned
+    { using __type = _Tp; };
+
+  template<>
+    struct __make_unsigned<char>
+    { using __type = unsigned char; };
+
+  template<>
+    struct __make_unsigned<signed char>
+    { using __type = unsigned char; };
+
+  template<>
+    struct __make_unsigned<short>
+    { using __type = unsigned short; };
+
+  template<>
+    struct __make_unsigned<int>
+    { using __type = unsigned int; };
+
+  template<>
+    struct __make_unsigned<long>
+    { using __type = unsigned long; };
+
+  template<>
+    struct __make_unsigned<long long>
+    { using __type = unsigned long long; };
+
+
+  __extension__
+  template<>
+    struct __make_unsigned<__int128>
+    { using __type = unsigned __int128; };
+# 1819 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp,
+    bool _IsInt = is_integral<_Tp>::value,
+    bool _IsEnum = __is_enum(_Tp)>
+    class __make_unsigned_selector;
+
+  template<typename _Tp>
+    class __make_unsigned_selector<_Tp, true, false>
+    {
+      using __unsigned_type
+ = typename __make_unsigned<__remove_cv_t<_Tp>>::__type;
+
+    public:
+      using __type
+ = typename __match_cv_qualifiers<_Tp, __unsigned_type>::__type;
+    };
+
+  class __make_unsigned_selector_base
+  {
+  protected:
+    template<typename...> struct _List { };
+
+    template<typename _Tp, typename... _Up>
+      struct _List<_Tp, _Up...> : _List<_Up...>
+      { static constexpr size_t __size = sizeof(_Tp); };
+
+    template<size_t _Sz, typename _Tp, bool = (_Sz <= _Tp::__size)>
+      struct __select;
+
+    template<size_t _Sz, typename _Uint, typename... _UInts>
+      struct __select<_Sz, _List<_Uint, _UInts...>, true>
+      { using __type = _Uint; };
+
+    template<size_t _Sz, typename _Uint, typename... _UInts>
+      struct __select<_Sz, _List<_Uint, _UInts...>, false>
+      : __select<_Sz, _List<_UInts...>>
+      { };
+  };
+
+
+  template<typename _Tp>
+    class __make_unsigned_selector<_Tp, false, true>
+    : __make_unsigned_selector_base
+    {
+
+      using _UInts = _List<unsigned char, unsigned short, unsigned int,
+      unsigned long, unsigned long long>;
+
+      using __unsigned_type = typename __select<sizeof(_Tp), _UInts>::__type;
+
+    public:
+      using __type
+ = typename __match_cv_qualifiers<_Tp, __unsigned_type>::__type;
+    };
+
+
+
+
+
+  template<>
+    struct __make_unsigned<wchar_t>
+    {
+      using __type
+ = typename __make_unsigned_selector<wchar_t, false, true>::__type;
+    };
+
+
+  template<>
+    struct __make_unsigned<char8_t>
+    {
+      using __type
+ = typename __make_unsigned_selector<char8_t, false, true>::__type;
+    };
+
+
+  template<>
+    struct __make_unsigned<char16_t>
+    {
+      using __type
+ = typename __make_unsigned_selector<char16_t, false, true>::__type;
+    };
+
+  template<>
+    struct __make_unsigned<char32_t>
+    {
+      using __type
+ = typename __make_unsigned_selector<char32_t, false, true>::__type;
+    };
+
+
+
+
+
+
+  template<typename _Tp>
+    struct make_unsigned
+    { using type = typename __make_unsigned_selector<_Tp>::__type; };
+
+
+  template<> struct make_unsigned<bool>;
+  template<> struct make_unsigned<bool const>;
+  template<> struct make_unsigned<bool volatile>;
+  template<> struct make_unsigned<bool const volatile>;
+
+
+
+
+  template<typename _Tp>
+    struct __make_signed
+    { using __type = _Tp; };
+
+  template<>
+    struct __make_signed<char>
+    { using __type = signed char; };
+
+  template<>
+    struct __make_signed<unsigned char>
+    { using __type = signed char; };
+
+  template<>
+    struct __make_signed<unsigned short>
+    { using __type = signed short; };
+
+  template<>
+    struct __make_signed<unsigned int>
+    { using __type = signed int; };
+
+  template<>
+    struct __make_signed<unsigned long>
+    { using __type = signed long; };
+
+  template<>
+    struct __make_signed<unsigned long long>
+    { using __type = signed long long; };
+
+
+  __extension__
+  template<>
+    struct __make_signed<unsigned __int128>
+    { using __type = __int128; };
+# 1979 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp,
+    bool _IsInt = is_integral<_Tp>::value,
+    bool _IsEnum = __is_enum(_Tp)>
+    class __make_signed_selector;
+
+  template<typename _Tp>
+    class __make_signed_selector<_Tp, true, false>
+    {
+      using __signed_type
+ = typename __make_signed<__remove_cv_t<_Tp>>::__type;
+
+    public:
+      using __type
+ = typename __match_cv_qualifiers<_Tp, __signed_type>::__type;
+    };
+
+
+  template<typename _Tp>
+    class __make_signed_selector<_Tp, false, true>
+    {
+      using __unsigned_type = typename __make_unsigned_selector<_Tp>::__type;
+
+    public:
+      using __type = typename __make_signed_selector<__unsigned_type>::__type;
+    };
+
+
+
+
+
+  template<>
+    struct __make_signed<wchar_t>
+    {
+      using __type
+ = typename __make_signed_selector<wchar_t, false, true>::__type;
+    };
+
+
+  template<>
+    struct __make_signed<char8_t>
+    {
+      using __type
+ = typename __make_signed_selector<char8_t, false, true>::__type;
+    };
+
+
+  template<>
+    struct __make_signed<char16_t>
+    {
+      using __type
+ = typename __make_signed_selector<char16_t, false, true>::__type;
+    };
+
+  template<>
+    struct __make_signed<char32_t>
+    {
+      using __type
+ = typename __make_signed_selector<char32_t, false, true>::__type;
+    };
+
+
+
+
+
+
+  template<typename _Tp>
+    struct make_signed
+    { using type = typename __make_signed_selector<_Tp>::__type; };
+
+
+  template<> struct make_signed<bool>;
+  template<> struct make_signed<bool const>;
+  template<> struct make_signed<bool volatile>;
+  template<> struct make_signed<bool const volatile>;
+
+
+
+  template<typename _Tp>
+    using make_signed_t = typename make_signed<_Tp>::type;
+
+
+  template<typename _Tp>
+    using make_unsigned_t = typename make_unsigned<_Tp>::type;
+
+
+
+
+
+  template<typename _Tp>
+    struct remove_extent
+    { using type = _Tp; };
+
+  template<typename _Tp, std::size_t _Size>
+    struct remove_extent<_Tp[_Size]>
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct remove_extent<_Tp[]>
+    { using type = _Tp; };
+
+
+  template<typename _Tp>
+    struct remove_all_extents
+    { using type = _Tp; };
+
+  template<typename _Tp, std::size_t _Size>
+    struct remove_all_extents<_Tp[_Size]>
+    { using type = typename remove_all_extents<_Tp>::type; };
+
+  template<typename _Tp>
+    struct remove_all_extents<_Tp[]>
+    { using type = typename remove_all_extents<_Tp>::type; };
+
+
+
+  template<typename _Tp>
+    using remove_extent_t = typename remove_extent<_Tp>::type;
+
+
+  template<typename _Tp>
+    using remove_all_extents_t = typename remove_all_extents<_Tp>::type;
+
+
+
+
+
+
+  template<typename _Tp>
+    struct remove_pointer
+    { using type = __remove_pointer(_Tp); };
+# 2124 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp, typename = void>
+    struct __add_pointer_helper
+    { using type = _Tp; };
+
+  template<typename _Tp>
+    struct __add_pointer_helper<_Tp, __void_t<_Tp*>>
+    { using type = _Tp*; };
+
+
+  template<typename _Tp>
+    struct add_pointer
+    : public __add_pointer_helper<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct add_pointer<_Tp&>
+    { using type = _Tp*; };
+
+  template<typename _Tp>
+    struct add_pointer<_Tp&&>
+    { using type = _Tp*; };
+
+
+
+  template<typename _Tp>
+    using remove_pointer_t = typename remove_pointer<_Tp>::type;
+
+
+  template<typename _Tp>
+    using add_pointer_t = typename add_pointer<_Tp>::type;
+
+
+  template<std::size_t _Len>
+    struct __aligned_storage_msa
+    {
+      union __type
+      {
+ unsigned char __data[_Len];
+ struct __attribute__((__aligned__)) { } __align;
+      };
+    };
+# 2179 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<std::size_t _Len, std::size_t _Align =
+    __alignof__(typename __aligned_storage_msa<_Len>::__type)>
+    struct
+   
+    aligned_storage
+    {
+      union type
+      {
+ unsigned char __data[_Len];
+ struct __attribute__((__aligned__((_Align)))) { } __align;
+      };
+    };
+
+  template <typename... _Types>
+    struct __strictest_alignment
+    {
+      static const size_t _S_alignment = 0;
+      static const size_t _S_size = 0;
+    };
+
+  template <typename _Tp, typename... _Types>
+    struct __strictest_alignment<_Tp, _Types...>
+    {
+      static const size_t _S_alignment =
+        alignof(_Tp) > __strictest_alignment<_Types...>::_S_alignment
+ ? alignof(_Tp) : __strictest_alignment<_Types...>::_S_alignment;
+      static const size_t _S_size =
+        sizeof(_Tp) > __strictest_alignment<_Types...>::_S_size
+ ? sizeof(_Tp) : __strictest_alignment<_Types...>::_S_size;
+    };
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+# 2225 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template <size_t _Len, typename... _Types>
+    struct
+   
+    aligned_union
+    {
+    private:
+      static_assert(sizeof...(_Types) != 0, "At least one type is required");
+
+      using __strictest = __strictest_alignment<_Types...>;
+      static const size_t _S_len = _Len > __strictest::_S_size
+ ? _Len : __strictest::_S_size;
+    public:
+
+      static const size_t alignment_value = __strictest::_S_alignment;
+
+      using type = typename aligned_storage<_S_len, alignment_value>::type;
+    };
+
+  template <size_t _Len, typename... _Types>
+    const size_t aligned_union<_Len, _Types...>::alignment_value;
+#pragma GCC diagnostic pop
+
+
+
+
+
+  template<typename _Up>
+    struct __decay_selector
+    : __conditional_t<is_const<const _Up>::value,
+        remove_cv<_Up>,
+        add_pointer<_Up>>
+    { };
+
+  template<typename _Up, size_t _Nm>
+    struct __decay_selector<_Up[_Nm]>
+    { using type = _Up*; };
+
+  template<typename _Up>
+    struct __decay_selector<_Up[]>
+    { using type = _Up*; };
+
+
+
+
+  template<typename _Tp>
+    struct decay
+    { using type = typename __decay_selector<_Tp>::type; };
+
+  template<typename _Tp>
+    struct decay<_Tp&>
+    { using type = typename __decay_selector<_Tp>::type; };
+
+  template<typename _Tp>
+    struct decay<_Tp&&>
+    { using type = typename __decay_selector<_Tp>::type; };
+
+
+
+
+  template<typename _Tp>
+    struct __strip_reference_wrapper
+    {
+      using __type = _Tp;
+    };
+
+  template<typename _Tp>
+    struct __strip_reference_wrapper<reference_wrapper<_Tp> >
+    {
+      using __type = _Tp&;
+    };
+
+
+  template<typename _Tp>
+    using __decay_t = typename decay<_Tp>::type;
+
+  template<typename _Tp>
+    using __decay_and_strip = __strip_reference_wrapper<__decay_t<_Tp>>;
+
+
+
+
+
+  template<typename... _Cond>
+    using _Require = __enable_if_t<__and_<_Cond...>::value>;
+
+
+  template<typename _Tp>
+    using __remove_cvref_t
+     = typename remove_cv<typename remove_reference<_Tp>::type>::type;
+
+
+
+
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct conditional
+    { using type = _Iftrue; };
+
+
+  template<typename _Iftrue, typename _Iffalse>
+    struct conditional<false, _Iftrue, _Iffalse>
+    { using type = _Iffalse; };
+
+
+  template<typename... _Tp>
+    struct common_type;
+# 2340 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct __success_type
+    { using type = _Tp; };
+
+  struct __failure_type
+  { };
+
+  struct __do_common_type_impl
+  {
+    template<typename _Tp, typename _Up>
+      using __cond_t
+ = decltype(true ? std::declval<_Tp>() : std::declval<_Up>());
+
+
+
+    template<typename _Tp, typename _Up>
+      static __success_type<__decay_t<__cond_t<_Tp, _Up>>>
+      _S_test(int);
+
+
+
+
+    template<typename _Tp, typename _Up>
+      static __success_type<__remove_cvref_t<__cond_t<const _Tp&, const _Up&>>>
+      _S_test_2(int);
+
+
+    template<typename, typename>
+      static __failure_type
+      _S_test_2(...);
+
+    template<typename _Tp, typename _Up>
+      static decltype(_S_test_2<_Tp, _Up>(0))
+      _S_test(...);
+  };
+
+
+  template<>
+    struct common_type<>
+    { };
+
+
+  template<typename _Tp0>
+    struct common_type<_Tp0>
+    : public common_type<_Tp0, _Tp0>
+    { };
+
+
+  template<typename _Tp1, typename _Tp2,
+    typename _Dp1 = __decay_t<_Tp1>, typename _Dp2 = __decay_t<_Tp2>>
+    struct __common_type_impl
+    {
+
+
+      using type = common_type<_Dp1, _Dp2>;
+    };
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_type_impl<_Tp1, _Tp2, _Tp1, _Tp2>
+    : private __do_common_type_impl
+    {
+
+
+      using type = decltype(_S_test<_Tp1, _Tp2>(0));
+    };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct common_type<_Tp1, _Tp2>
+    : public __common_type_impl<_Tp1, _Tp2>::type
+    { };
+
+  template<typename...>
+    struct __common_type_pack
+    { };
+
+  template<typename, typename, typename = void>
+    struct __common_type_fold;
+
+
+  template<typename _Tp1, typename _Tp2, typename... _Rp>
+    struct common_type<_Tp1, _Tp2, _Rp...>
+    : public __common_type_fold<common_type<_Tp1, _Tp2>,
+    __common_type_pack<_Rp...>>
+    { };
+
+
+
+
+  template<typename _CTp, typename... _Rp>
+    struct __common_type_fold<_CTp, __common_type_pack<_Rp...>,
+         __void_t<typename _CTp::type>>
+    : public common_type<typename _CTp::type, _Rp...>
+    { };
+
+
+  template<typename _CTp, typename _Rp>
+    struct __common_type_fold<_CTp, _Rp, void>
+    { };
+
+  template<typename _Tp, bool = __is_enum(_Tp)>
+    struct __underlying_type_impl
+    {
+      using type = __underlying_type(_Tp);
+    };
+
+  template<typename _Tp>
+    struct __underlying_type_impl<_Tp, false>
+    { };
+
+
+
+  template<typename _Tp>
+    struct underlying_type
+    : public __underlying_type_impl<_Tp>
+    { };
+
+
+  template<typename _Tp>
+    struct __declval_protector
+    {
+      static const bool __stop = false;
+    };
+
+
+
+
+
+
+  template<typename _Tp>
+    auto declval() noexcept -> decltype(__declval<_Tp>(0))
+    {
+      static_assert(__declval_protector<_Tp>::__stop,
+      "declval() must not be used!");
+      return __declval<_Tp>(0);
+    }
+
+
+  template<typename _Signature>
+    struct result_of;
+
+
+
+
+  struct __invoke_memfun_ref { };
+  struct __invoke_memfun_deref { };
+  struct __invoke_memobj_ref { };
+  struct __invoke_memobj_deref { };
+  struct __invoke_other { };
+
+
+  template<typename _Tp, typename _Tag>
+    struct __result_of_success : __success_type<_Tp>
+    { using __invoke_type = _Tag; };
+
+
+  struct __result_of_memfun_ref_impl
+  {
+    template<typename _Fp, typename _Tp1, typename... _Args>
+      static __result_of_success<decltype(
+      (std::declval<_Tp1>().*std::declval<_Fp>())(std::declval<_Args>()...)
+      ), __invoke_memfun_ref> _S_test(int);
+
+    template<typename...>
+      static __failure_type _S_test(...);
+  };
+
+  template<typename _MemPtr, typename _Arg, typename... _Args>
+    struct __result_of_memfun_ref
+    : private __result_of_memfun_ref_impl
+    {
+      using type = decltype(_S_test<_MemPtr, _Arg, _Args...>(0));
+    };
+
+
+  struct __result_of_memfun_deref_impl
+  {
+    template<typename _Fp, typename _Tp1, typename... _Args>
+      static __result_of_success<decltype(
+      ((*std::declval<_Tp1>()).*std::declval<_Fp>())(std::declval<_Args>()...)
+      ), __invoke_memfun_deref> _S_test(int);
+
+    template<typename...>
+      static __failure_type _S_test(...);
+  };
+
+  template<typename _MemPtr, typename _Arg, typename... _Args>
+    struct __result_of_memfun_deref
+    : private __result_of_memfun_deref_impl
+    {
+      using type = decltype(_S_test<_MemPtr, _Arg, _Args...>(0));
+    };
+
+
+  struct __result_of_memobj_ref_impl
+  {
+    template<typename _Fp, typename _Tp1>
+      static __result_of_success<decltype(
+      std::declval<_Tp1>().*std::declval<_Fp>()
+      ), __invoke_memobj_ref> _S_test(int);
+
+    template<typename, typename>
+      static __failure_type _S_test(...);
+  };
+
+  template<typename _MemPtr, typename _Arg>
+    struct __result_of_memobj_ref
+    : private __result_of_memobj_ref_impl
+    {
+      using type = decltype(_S_test<_MemPtr, _Arg>(0));
+    };
+
+
+  struct __result_of_memobj_deref_impl
+  {
+    template<typename _Fp, typename _Tp1>
+      static __result_of_success<decltype(
+      (*std::declval<_Tp1>()).*std::declval<_Fp>()
+      ), __invoke_memobj_deref> _S_test(int);
+
+    template<typename, typename>
+      static __failure_type _S_test(...);
+  };
+
+  template<typename _MemPtr, typename _Arg>
+    struct __result_of_memobj_deref
+    : private __result_of_memobj_deref_impl
+    {
+      using type = decltype(_S_test<_MemPtr, _Arg>(0));
+    };
+
+  template<typename _MemPtr, typename _Arg>
+    struct __result_of_memobj;
+
+  template<typename _Res, typename _Class, typename _Arg>
+    struct __result_of_memobj<_Res _Class::*, _Arg>
+    {
+      using _Argval = __remove_cvref_t<_Arg>;
+      using _MemPtr = _Res _Class::*;
+      using type = typename __conditional_t<__or_<is_same<_Argval, _Class>,
+        is_base_of<_Class, _Argval>>::value,
+        __result_of_memobj_ref<_MemPtr, _Arg>,
+        __result_of_memobj_deref<_MemPtr, _Arg>
+      >::type;
+    };
+
+  template<typename _MemPtr, typename _Arg, typename... _Args>
+    struct __result_of_memfun;
+
+  template<typename _Res, typename _Class, typename _Arg, typename... _Args>
+    struct __result_of_memfun<_Res _Class::*, _Arg, _Args...>
+    {
+      using _Argval = typename remove_reference<_Arg>::type;
+      using _MemPtr = _Res _Class::*;
+      using type = typename __conditional_t<is_base_of<_Class, _Argval>::value,
+        __result_of_memfun_ref<_MemPtr, _Arg, _Args...>,
+        __result_of_memfun_deref<_MemPtr, _Arg, _Args...>
+      >::type;
+    };
+
+
+
+
+
+
+  template<typename _Tp, typename _Up = __remove_cvref_t<_Tp>>
+    struct __inv_unwrap
+    {
+      using type = _Tp;
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __inv_unwrap<_Tp, reference_wrapper<_Up>>
+    {
+      using type = _Up&;
+    };
+
+  template<bool, bool, typename _Functor, typename... _ArgTypes>
+    struct __result_of_impl
+    {
+      using type = __failure_type;
+    };
+
+  template<typename _MemPtr, typename _Arg>
+    struct __result_of_impl<true, false, _MemPtr, _Arg>
+    : public __result_of_memobj<__decay_t<_MemPtr>,
+    typename __inv_unwrap<_Arg>::type>
+    { };
+
+  template<typename _MemPtr, typename _Arg, typename... _Args>
+    struct __result_of_impl<false, true, _MemPtr, _Arg, _Args...>
+    : public __result_of_memfun<__decay_t<_MemPtr>,
+    typename __inv_unwrap<_Arg>::type, _Args...>
+    { };
+
+
+  struct __result_of_other_impl
+  {
+    template<typename _Fn, typename... _Args>
+      static __result_of_success<decltype(
+      std::declval<_Fn>()(std::declval<_Args>()...)
+      ), __invoke_other> _S_test(int);
+
+    template<typename...>
+      static __failure_type _S_test(...);
+  };
+
+  template<typename _Functor, typename... _ArgTypes>
+    struct __result_of_impl<false, false, _Functor, _ArgTypes...>
+    : private __result_of_other_impl
+    {
+      using type = decltype(_S_test<_Functor, _ArgTypes...>(0));
+    };
+
+
+  template<typename _Functor, typename... _ArgTypes>
+    struct __invoke_result
+    : public __result_of_impl<
+        is_member_object_pointer<
+          typename remove_reference<_Functor>::type
+        >::value,
+        is_member_function_pointer<
+          typename remove_reference<_Functor>::type
+        >::value,
+ _Functor, _ArgTypes...
+      >::type
+    { };
+
+
+  template<typename _Fn, typename... _Args>
+    using __invoke_result_t = typename __invoke_result<_Fn, _Args...>::type;
+
+
+  template<typename _Functor, typename... _ArgTypes>
+    struct result_of<_Functor(_ArgTypes...)>
+    : public __invoke_result<_Functor, _ArgTypes...>
+    { } __attribute__ ((__deprecated__ ("use '" "std::invoke_result" "' instead")));
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+  template<size_t _Len, size_t _Align =
+     __alignof__(typename __aligned_storage_msa<_Len>::__type)>
+    using aligned_storage_t = typename aligned_storage<_Len, _Align>::type;
+
+  template <size_t _Len, typename... _Types>
+    using aligned_union_t = typename aligned_union<_Len, _Types...>::type;
+#pragma GCC diagnostic pop
+
+
+  template<typename _Tp>
+    using decay_t = typename decay<_Tp>::type;
+
+
+  template<bool _Cond, typename _Tp = void>
+    using enable_if_t = typename enable_if<_Cond, _Tp>::type;
+
+
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    using conditional_t = typename conditional<_Cond, _Iftrue, _Iffalse>::type;
+
+
+  template<typename... _Tp>
+    using common_type_t = typename common_type<_Tp...>::type;
+
+
+  template<typename _Tp>
+    using underlying_type_t = typename underlying_type<_Tp>::type;
+
+
+  template<typename _Tp>
+    using result_of_t = typename result_of<_Tp>::type;
+
+
+
+
+  template<typename...> using void_t = void;
+# 2727 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Def, template<typename...> class _Op, typename... _Args>
+    struct __detected_or
+    {
+      using type = _Def;
+      using __is_detected = false_type;
+    };
+
+
+  template<typename _Def, template<typename...> class _Op, typename... _Args>
+    requires requires { typename _Op<_Args...>; }
+    struct __detected_or<_Def, _Op, _Args...>
+    {
+      using type = _Op<_Args...>;
+      using __is_detected = true_type;
+    };
+# 2767 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Default, template<typename...> class _Op,
+    typename... _Args>
+    using __detected_or_t
+      = typename __detected_or<_Default, _Op, _Args...>::type;
+# 2786 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template <typename _Tp>
+    struct __is_swappable;
+
+  template <typename _Tp>
+    struct __is_nothrow_swappable;
+
+  template<typename>
+    struct __is_tuple_like_impl : false_type
+    { };
+
+
+  template<typename _Tp>
+    struct __is_tuple_like
+    : public __is_tuple_like_impl<__remove_cvref_t<_Tp>>::type
+    { };
+
+
+  template<typename _Tp>
+    constexpr
+    inline
+    _Require<__not_<__is_tuple_like<_Tp>>,
+      is_move_constructible<_Tp>,
+      is_move_assignable<_Tp>>
+    swap(_Tp&, _Tp&)
+    noexcept(__and_<is_nothrow_move_constructible<_Tp>,
+             is_nothrow_move_assignable<_Tp>>::value);
+
+  template<typename _Tp, size_t _Nm>
+    constexpr
+    inline
+    __enable_if_t<__is_swappable<_Tp>::value>
+    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+    noexcept(__is_nothrow_swappable<_Tp>::value);
+
+
+  namespace __swappable_details {
+    using std::swap;
+
+    struct __do_is_swappable_impl
+    {
+      template<typename _Tp, typename
+               = decltype(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))>
+        static true_type __test(int);
+
+      template<typename>
+        static false_type __test(...);
+    };
+
+    struct __do_is_nothrow_swappable_impl
+    {
+      template<typename _Tp>
+        static __bool_constant<
+          noexcept(swap(std::declval<_Tp&>(), std::declval<_Tp&>()))
+        > __test(int);
+
+      template<typename>
+        static false_type __test(...);
+    };
+
+  }
+
+  template<typename _Tp>
+    struct __is_swappable_impl
+    : public __swappable_details::__do_is_swappable_impl
+    {
+      using type = decltype(__test<_Tp>(0));
+    };
+
+  template<typename _Tp>
+    struct __is_nothrow_swappable_impl
+    : public __swappable_details::__do_is_nothrow_swappable_impl
+    {
+      using type = decltype(__test<_Tp>(0));
+    };
+
+  template<typename _Tp>
+    struct __is_swappable
+    : public __is_swappable_impl<_Tp>::type
+    { };
+
+  template<typename _Tp>
+    struct __is_nothrow_swappable
+    : public __is_nothrow_swappable_impl<_Tp>::type
+    { };
+
+
+
+
+
+
+  template<typename _Tp>
+    struct is_swappable
+    : public __is_swappable_impl<_Tp>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp>
+    struct is_nothrow_swappable
+    : public __is_nothrow_swappable_impl<_Tp>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+  template<typename _Tp>
+    inline constexpr bool is_swappable_v =
+      is_swappable<_Tp>::value;
+
+
+  template<typename _Tp>
+    inline constexpr bool is_nothrow_swappable_v =
+      is_nothrow_swappable<_Tp>::value;
+
+
+
+  namespace __swappable_with_details {
+    using std::swap;
+
+    struct __do_is_swappable_with_impl
+    {
+      template<typename _Tp, typename _Up, typename
+               = decltype(swap(std::declval<_Tp>(), std::declval<_Up>())),
+               typename
+               = decltype(swap(std::declval<_Up>(), std::declval<_Tp>()))>
+        static true_type __test(int);
+
+      template<typename, typename>
+        static false_type __test(...);
+    };
+
+    struct __do_is_nothrow_swappable_with_impl
+    {
+      template<typename _Tp, typename _Up>
+        static __bool_constant<
+          noexcept(swap(std::declval<_Tp>(), std::declval<_Up>()))
+          &&
+          noexcept(swap(std::declval<_Up>(), std::declval<_Tp>()))
+        > __test(int);
+
+      template<typename, typename>
+        static false_type __test(...);
+    };
+
+  }
+
+  template<typename _Tp, typename _Up>
+    struct __is_swappable_with_impl
+    : public __swappable_with_details::__do_is_swappable_with_impl
+    {
+      using type = decltype(__test<_Tp, _Up>(0));
+    };
+
+
+  template<typename _Tp>
+    struct __is_swappable_with_impl<_Tp&, _Tp&>
+    : public __swappable_details::__do_is_swappable_impl
+    {
+      using type = decltype(__test<_Tp&>(0));
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __is_nothrow_swappable_with_impl
+    : public __swappable_with_details::__do_is_nothrow_swappable_with_impl
+    {
+      using type = decltype(__test<_Tp, _Up>(0));
+    };
+
+
+  template<typename _Tp>
+    struct __is_nothrow_swappable_with_impl<_Tp&, _Tp&>
+    : public __swappable_details::__do_is_nothrow_swappable_impl
+    {
+      using type = decltype(__test<_Tp&>(0));
+    };
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_swappable_with
+    : public __is_swappable_with_impl<_Tp, _Up>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "first template argument must be a complete class or an unbounded array");
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Up>{}),
+ "second template argument must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Tp, typename _Up>
+    struct is_nothrow_swappable_with
+    : public __is_nothrow_swappable_with_impl<_Tp, _Up>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "first template argument must be a complete class or an unbounded array");
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Up>{}),
+ "second template argument must be a complete class or an unbounded array");
+    };
+
+
+
+  template<typename _Tp, typename _Up>
+    inline constexpr bool is_swappable_with_v =
+      is_swappable_with<_Tp, _Up>::value;
+
+
+  template<typename _Tp, typename _Up>
+    inline constexpr bool is_nothrow_swappable_with_v =
+      is_nothrow_swappable_with<_Tp, _Up>::value;
+# 3008 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Result, typename _Ret,
+    bool = is_void<_Ret>::value, typename = void>
+    struct __is_invocable_impl
+    : false_type
+    {
+      using __nothrow_conv = false_type;
+    };
+
+
+  template<typename _Result, typename _Ret>
+    struct __is_invocable_impl<_Result, _Ret,
+                                true,
+          __void_t<typename _Result::type>>
+    : true_type
+    {
+      using __nothrow_conv = true_type;
+    };
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wctor-dtor-privacy"
+
+  template<typename _Result, typename _Ret>
+    struct __is_invocable_impl<_Result, _Ret,
+                                false,
+          __void_t<typename _Result::type>>
+    {
+    private:
+
+      using _Res_t = typename _Result::type;
+
+
+
+      static _Res_t _S_get() noexcept;
+
+
+      template<typename _Tp>
+ static void _S_conv(__type_identity_t<_Tp>) noexcept;
+
+
+      template<typename _Tp,
+        bool _Nothrow = noexcept(_S_conv<_Tp>(_S_get())),
+        typename = decltype(_S_conv<_Tp>(_S_get())),
+
+        bool _Dangle = __reference_converts_from_temporary(_Tp, _Res_t)
+
+
+
+       >
+ static __bool_constant<_Nothrow && !_Dangle>
+ _S_test(int);
+
+      template<typename _Tp, bool = false>
+ static false_type
+ _S_test(...);
+
+    public:
+
+      using type = decltype(_S_test<_Ret, true>(1));
+
+
+      using __nothrow_conv = decltype(_S_test<_Ret>(1));
+    };
+#pragma GCC diagnostic pop
+
+  template<typename _Fn, typename... _ArgTypes>
+    struct __is_invocable
+    : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>::type
+    { };
+
+  template<typename _Fn, typename _Tp, typename... _Args>
+    constexpr bool __call_is_nt(__invoke_memfun_ref)
+    {
+      using _Up = typename __inv_unwrap<_Tp>::type;
+      return noexcept((std::declval<_Up>().*std::declval<_Fn>())(
+     std::declval<_Args>()...));
+    }
+
+  template<typename _Fn, typename _Tp, typename... _Args>
+    constexpr bool __call_is_nt(__invoke_memfun_deref)
+    {
+      return noexcept(((*std::declval<_Tp>()).*std::declval<_Fn>())(
+     std::declval<_Args>()...));
+    }
+
+  template<typename _Fn, typename _Tp>
+    constexpr bool __call_is_nt(__invoke_memobj_ref)
+    {
+      using _Up = typename __inv_unwrap<_Tp>::type;
+      return noexcept(std::declval<_Up>().*std::declval<_Fn>());
+    }
+
+  template<typename _Fn, typename _Tp>
+    constexpr bool __call_is_nt(__invoke_memobj_deref)
+    {
+      return noexcept((*std::declval<_Tp>()).*std::declval<_Fn>());
+    }
+
+  template<typename _Fn, typename... _Args>
+    constexpr bool __call_is_nt(__invoke_other)
+    {
+      return noexcept(std::declval<_Fn>()(std::declval<_Args>()...));
+    }
+
+  template<typename _Result, typename _Fn, typename... _Args>
+    struct __call_is_nothrow
+    : __bool_constant<
+ std::__call_is_nt<_Fn, _Args...>(typename _Result::__invoke_type{})
+      >
+    { };
+
+  template<typename _Fn, typename... _Args>
+    using __call_is_nothrow_
+      = __call_is_nothrow<__invoke_result<_Fn, _Args...>, _Fn, _Args...>;
+
+
+  template<typename _Fn, typename... _Args>
+    struct __is_nothrow_invocable
+    : __and_<__is_invocable<_Fn, _Args...>,
+             __call_is_nothrow_<_Fn, _Args...>>::type
+    { };
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wctor-dtor-privacy"
+  struct __nonesuchbase {};
+  struct __nonesuch : private __nonesuchbase {
+    ~__nonesuch() = delete;
+    __nonesuch(__nonesuch const&) = delete;
+    void operator=(__nonesuch const&) = delete;
+  };
+#pragma GCC diagnostic pop
+
+
+
+
+  template<typename _Functor, typename... _ArgTypes>
+    struct invoke_result
+    : public __invoke_result<_Functor, _ArgTypes...>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Functor>{}),
+ "_Functor must be a complete class or an unbounded array");
+      static_assert((std::__is_complete_or_unbounded(
+ __type_identity<_ArgTypes>{}) && ...),
+ "each argument type must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Fn, typename... _Args>
+    using invoke_result_t = typename invoke_result<_Fn, _Args...>::type;
+
+
+  template<typename _Fn, typename... _ArgTypes>
+    struct is_invocable
+    : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
+ "_Fn must be a complete class or an unbounded array");
+      static_assert((std::__is_complete_or_unbounded(
+ __type_identity<_ArgTypes>{}) && ...),
+ "each argument type must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Ret, typename _Fn, typename... _ArgTypes>
+    struct is_invocable_r
+    : __is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, _Ret>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
+ "_Fn must be a complete class or an unbounded array");
+      static_assert((std::__is_complete_or_unbounded(
+ __type_identity<_ArgTypes>{}) && ...),
+ "each argument type must be a complete class or an unbounded array");
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Ret>{}),
+ "_Ret must be a complete class or an unbounded array");
+    };
+
+
+  template<typename _Fn, typename... _ArgTypes>
+    struct is_nothrow_invocable
+    : __and_<__is_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, void>,
+      __call_is_nothrow_<_Fn, _ArgTypes...>>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
+ "_Fn must be a complete class or an unbounded array");
+      static_assert((std::__is_complete_or_unbounded(
+ __type_identity<_ArgTypes>{}) && ...),
+ "each argument type must be a complete class or an unbounded array");
+    };
+
+
+
+
+
+  template<typename _Result, typename _Ret>
+    using __is_nt_invocable_impl
+      = typename __is_invocable_impl<_Result, _Ret>::__nothrow_conv;
+
+
+
+  template<typename _Ret, typename _Fn, typename... _ArgTypes>
+    struct is_nothrow_invocable_r
+    : __and_<__is_nt_invocable_impl<__invoke_result<_Fn, _ArgTypes...>, _Ret>,
+             __call_is_nothrow_<_Fn, _ArgTypes...>>::type
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Fn>{}),
+ "_Fn must be a complete class or an unbounded array");
+      static_assert((std::__is_complete_or_unbounded(
+ __type_identity<_ArgTypes>{}) && ...),
+ "each argument type must be a complete class or an unbounded array");
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Ret>{}),
+ "_Ret must be a complete class or an unbounded array");
+    };
+# 3236 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+template <typename _Tp>
+  inline constexpr bool is_void_v = is_void<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_null_pointer_v = is_null_pointer<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_integral_v = is_integral<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_floating_point_v = is_floating_point<_Tp>::value;
+
+
+template <typename _Tp>
+  inline constexpr bool is_array_v = __is_array(_Tp);
+# 3257 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+template <typename _Tp>
+  inline constexpr bool is_pointer_v = is_pointer<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_lvalue_reference_v = false;
+template <typename _Tp>
+  inline constexpr bool is_lvalue_reference_v<_Tp&> = true;
+template <typename _Tp>
+  inline constexpr bool is_rvalue_reference_v = false;
+template <typename _Tp>
+  inline constexpr bool is_rvalue_reference_v<_Tp&&> = true;
+
+
+template <typename _Tp>
+  inline constexpr bool is_member_object_pointer_v =
+    __is_member_object_pointer(_Tp);
+
+
+
+
+
+
+
+template <typename _Tp>
+  inline constexpr bool is_member_function_pointer_v =
+    __is_member_function_pointer(_Tp);
+
+
+
+
+
+
+template <typename _Tp>
+  inline constexpr bool is_enum_v = __is_enum(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_union_v = __is_union(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_class_v = __is_class(_Tp);
+
+
+
+template <typename _Tp>
+  inline constexpr bool is_reference_v = __is_reference(_Tp);
+# 3308 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+template <typename _Tp>
+  inline constexpr bool is_arithmetic_v = is_arithmetic<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_fundamental_v = is_fundamental<_Tp>::value;
+
+
+template <typename _Tp>
+  inline constexpr bool is_object_v = __is_object(_Tp);
+
+
+
+
+
+template <typename _Tp>
+  inline constexpr bool is_scalar_v = is_scalar<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_compound_v = !is_fundamental_v<_Tp>;
+
+
+template <typename _Tp>
+  inline constexpr bool is_member_pointer_v = __is_member_pointer(_Tp);
+
+
+
+
+
+template <typename _Tp>
+  inline constexpr bool is_const_v = false;
+template <typename _Tp>
+  inline constexpr bool is_const_v<const _Tp> = true;
+
+
+template <typename _Tp>
+  inline constexpr bool is_function_v = __is_function(_Tp);
+# 3351 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+template <typename _Tp>
+  inline constexpr bool is_volatile_v = false;
+template <typename _Tp>
+  inline constexpr bool is_volatile_v<volatile _Tp> = true;
+
+template <typename _Tp>
+  inline constexpr bool is_trivial_v = __is_trivial(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_trivially_copyable_v = __is_trivially_copyable(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_standard_layout_v = __is_standard_layout(_Tp);
+template <typename _Tp>
+  __attribute__ ((__deprecated__ ("use '" "is_standard_layout_v && is_trivial_v" "' instead")))
+  inline constexpr bool is_pod_v = __is_pod(_Tp);
+template <typename _Tp>
+  [[__deprecated__]]
+  inline constexpr bool is_literal_type_v = __is_literal_type(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_empty_v = __is_empty(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_polymorphic_v = __is_polymorphic(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_abstract_v = __is_abstract(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_final_v = __is_final(_Tp);
+
+template <typename _Tp>
+  inline constexpr bool is_signed_v = is_signed<_Tp>::value;
+template <typename _Tp>
+  inline constexpr bool is_unsigned_v = is_unsigned<_Tp>::value;
+
+template <typename _Tp, typename... _Args>
+  inline constexpr bool is_constructible_v = __is_constructible(_Tp, _Args...);
+template <typename _Tp>
+  inline constexpr bool is_default_constructible_v = __is_constructible(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_copy_constructible_v
+    = __is_constructible(_Tp, __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_move_constructible_v
+    = __is_constructible(_Tp, __add_rval_ref_t<_Tp>);
+
+template <typename _Tp, typename _Up>
+  inline constexpr bool is_assignable_v = __is_assignable(_Tp, _Up);
+template <typename _Tp>
+  inline constexpr bool is_copy_assignable_v
+    = __is_assignable(__add_lval_ref_t<_Tp>, __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_move_assignable_v
+    = __is_assignable(__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>);
+
+template <typename _Tp>
+  inline constexpr bool is_destructible_v = is_destructible<_Tp>::value;
+
+template <typename _Tp, typename... _Args>
+  inline constexpr bool is_trivially_constructible_v
+    = __is_trivially_constructible(_Tp, _Args...);
+template <typename _Tp>
+  inline constexpr bool is_trivially_default_constructible_v
+    = __is_trivially_constructible(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_trivially_copy_constructible_v
+    = __is_trivially_constructible(_Tp, __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_trivially_move_constructible_v
+    = __is_trivially_constructible(_Tp, __add_rval_ref_t<_Tp>);
+
+template <typename _Tp, typename _Up>
+  inline constexpr bool is_trivially_assignable_v
+    = __is_trivially_assignable(_Tp, _Up);
+template <typename _Tp>
+  inline constexpr bool is_trivially_copy_assignable_v
+    = __is_trivially_assignable(__add_lval_ref_t<_Tp>,
+    __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_trivially_move_assignable_v
+    = __is_trivially_assignable(__add_lval_ref_t<_Tp>,
+    __add_rval_ref_t<_Tp>);
+
+
+template <typename _Tp>
+  inline constexpr bool is_trivially_destructible_v = false;
+
+template <typename _Tp>
+  requires (!is_reference_v<_Tp>) && requires (_Tp& __t) { __t.~_Tp(); }
+  inline constexpr bool is_trivially_destructible_v<_Tp>
+    = __has_trivial_destructor(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_trivially_destructible_v<_Tp&> = true;
+template <typename _Tp>
+  inline constexpr bool is_trivially_destructible_v<_Tp&&> = true;
+template <typename _Tp, size_t _Nm>
+  inline constexpr bool is_trivially_destructible_v<_Tp[_Nm]>
+    = is_trivially_destructible_v<_Tp>;
+
+
+
+
+
+
+template <typename _Tp, typename... _Args>
+  inline constexpr bool is_nothrow_constructible_v
+    = __is_nothrow_constructible(_Tp, _Args...);
+template <typename _Tp>
+  inline constexpr bool is_nothrow_default_constructible_v
+    = __is_nothrow_constructible(_Tp);
+template <typename _Tp>
+  inline constexpr bool is_nothrow_copy_constructible_v
+    = __is_nothrow_constructible(_Tp, __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_nothrow_move_constructible_v
+    = __is_nothrow_constructible(_Tp, __add_rval_ref_t<_Tp>);
+
+template <typename _Tp, typename _Up>
+  inline constexpr bool is_nothrow_assignable_v
+    = __is_nothrow_assignable(_Tp, _Up);
+template <typename _Tp>
+  inline constexpr bool is_nothrow_copy_assignable_v
+    = __is_nothrow_assignable(__add_lval_ref_t<_Tp>,
+         __add_lval_ref_t<const _Tp>);
+template <typename _Tp>
+  inline constexpr bool is_nothrow_move_assignable_v
+    = __is_nothrow_assignable(__add_lval_ref_t<_Tp>, __add_rval_ref_t<_Tp>);
+
+template <typename _Tp>
+  inline constexpr bool is_nothrow_destructible_v =
+    is_nothrow_destructible<_Tp>::value;
+
+template <typename _Tp>
+  inline constexpr bool has_virtual_destructor_v
+    = __has_virtual_destructor(_Tp);
+
+template <typename _Tp>
+  inline constexpr size_t alignment_of_v = alignment_of<_Tp>::value;
+
+template <typename _Tp>
+  inline constexpr size_t rank_v = 0;
+template <typename _Tp, size_t _Size>
+  inline constexpr size_t rank_v<_Tp[_Size]> = 1 + rank_v<_Tp>;
+template <typename _Tp>
+  inline constexpr size_t rank_v<_Tp[]> = 1 + rank_v<_Tp>;
+
+template <typename _Tp, unsigned _Idx = 0>
+  inline constexpr size_t extent_v = 0;
+template <typename _Tp, size_t _Size>
+  inline constexpr size_t extent_v<_Tp[_Size], 0> = _Size;
+template <typename _Tp, unsigned _Idx, size_t _Size>
+  inline constexpr size_t extent_v<_Tp[_Size], _Idx> = extent_v<_Tp, _Idx - 1>;
+template <typename _Tp>
+  inline constexpr size_t extent_v<_Tp[], 0> = 0;
+template <typename _Tp, unsigned _Idx>
+  inline constexpr size_t extent_v<_Tp[], _Idx> = extent_v<_Tp, _Idx - 1>;
+
+
+template <typename _Tp, typename _Up>
+  inline constexpr bool is_same_v = __is_same(_Tp, _Up);
+
+
+
+
+
+
+template <typename _Base, typename _Derived>
+  inline constexpr bool is_base_of_v = __is_base_of(_Base, _Derived);
+
+template <typename _From, typename _To>
+  inline constexpr bool is_convertible_v = __is_convertible(_From, _To);
+
+
+
+
+template<typename _Fn, typename... _Args>
+  inline constexpr bool is_invocable_v = is_invocable<_Fn, _Args...>::value;
+template<typename _Fn, typename... _Args>
+  inline constexpr bool is_nothrow_invocable_v
+    = is_nothrow_invocable<_Fn, _Args...>::value;
+template<typename _Ret, typename _Fn, typename... _Args>
+  inline constexpr bool is_invocable_r_v
+    = is_invocable_r<_Ret, _Fn, _Args...>::value;
+template<typename _Ret, typename _Fn, typename... _Args>
+  inline constexpr bool is_nothrow_invocable_r_v
+    = is_nothrow_invocable_r<_Ret, _Fn, _Args...>::value;
+
+
+
+
+
+
+  template<typename _Tp>
+    struct has_unique_object_representations
+    : bool_constant<__has_unique_object_representations(
+      remove_cv_t<remove_all_extents_t<_Tp>>
+      )>
+    {
+      static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
+ "template argument must be a complete class or an unbounded array");
+    };
+
+
+
+  template<typename _Tp>
+    inline constexpr bool has_unique_object_representations_v
+      = has_unique_object_representations<_Tp>::value;
+
+
+
+
+
+
+  template<typename _Tp>
+    struct is_aggregate
+    : bool_constant<__is_aggregate(remove_cv_t<_Tp>)>
+    { };
+
+
+
+
+
+
+  template<typename _Tp>
+    inline constexpr bool is_aggregate_v = __is_aggregate(remove_cv_t<_Tp>);
+# 3581 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct remove_cvref
+    { using type = __remove_cvref(_Tp); };
+# 3598 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    using remove_cvref_t = typename remove_cvref<_Tp>::type;
+# 3608 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct type_identity { using type = _Tp; };
+
+  template<typename _Tp>
+    using type_identity_t = typename type_identity<_Tp>::type;
+# 3621 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    struct unwrap_reference { using type = _Tp; };
+
+  template<typename _Tp>
+    struct unwrap_reference<reference_wrapper<_Tp>> { using type = _Tp&; };
+
+  template<typename _Tp>
+    using unwrap_reference_t = typename unwrap_reference<_Tp>::type;
+
+
+
+
+
+
+  template<typename _Tp>
+    struct unwrap_ref_decay { using type = unwrap_reference_t<decay_t<_Tp>>; };
+
+  template<typename _Tp>
+    using unwrap_ref_decay_t = typename unwrap_ref_decay<_Tp>::type;
+# 3648 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    inline constexpr bool is_bounded_array_v = __is_bounded_array(_Tp);
+# 3661 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp>
+    inline constexpr bool is_unbounded_array_v = false;
+
+  template<typename _Tp>
+    inline constexpr bool is_unbounded_array_v<_Tp[]> = true;
+
+
+
+  template<typename _Tp>
+    struct is_bounded_array
+    : public bool_constant<is_bounded_array_v<_Tp>>
+    { };
+
+
+
+  template<typename _Tp>
+    struct is_unbounded_array
+    : public bool_constant<is_unbounded_array_v<_Tp>>
+    { };
+
+
+
+
+
+  template<typename _Tp, typename _Up>
+    struct is_layout_compatible
+    : bool_constant<__is_layout_compatible(_Tp, _Up)>
+    { };
+
+
+
+  template<typename _Tp, typename _Up>
+    constexpr bool is_layout_compatible_v
+      = __is_layout_compatible(_Tp, _Up);
+
+
+
+
+
+
+
+  template<typename _S1, typename _S2, typename _M1, typename _M2>
+    constexpr bool
+    is_corresponding_member(_M1 _S1::*__m1, _M2 _S2::*__m2) noexcept
+    { return __builtin_is_corresponding_member(__m1, __m2); }
+
+
+
+
+
+
+
+  template<typename _Base, typename _Derived>
+    struct is_pointer_interconvertible_base_of
+    : bool_constant<__is_pointer_interconvertible_base_of(_Base, _Derived)>
+    { };
+
+
+
+  template<typename _Base, typename _Derived>
+    constexpr bool is_pointer_interconvertible_base_of_v
+      = __is_pointer_interconvertible_base_of(_Base, _Derived);
+# 3732 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  template<typename _Tp, typename _Mem>
+    constexpr bool
+    is_pointer_interconvertible_with_class(_Mem _Tp::*__mp) noexcept
+    { return __builtin_is_pointer_interconvertible_with_class(__mp); }
+# 3816 "C:/msys64/ucrt64/include/c++/14.2.0/type_traits" 3
+  constexpr inline bool
+  is_constant_evaluated() noexcept
+  {
+
+
+
+    return __builtin_is_constant_evaluated();
+
+  }
+
+
+
+
+  template<typename _From, typename _To>
+    using __copy_cv = typename __match_cv_qualifiers<_From, _To>::__type;
+
+  template<typename _Xp, typename _Yp>
+    using __cond_res
+      = decltype(false ? declval<_Xp(&)()>()() : declval<_Yp(&)()>()());
+
+  template<typename _Ap, typename _Bp, typename = void>
+    struct __common_ref_impl
+    { };
+
+
+  template<typename _Ap, typename _Bp>
+    using __common_ref = typename __common_ref_impl<_Ap, _Bp>::type;
+
+
+  template<typename _Xp, typename _Yp>
+    using __condres_cvref
+      = __cond_res<__copy_cv<_Xp, _Yp>&, __copy_cv<_Yp, _Xp>&>;
+
+
+  template<typename _Xp, typename _Yp>
+    struct __common_ref_impl<_Xp&, _Yp&, __void_t<__condres_cvref<_Xp, _Yp>>>
+    : enable_if<is_reference_v<__condres_cvref<_Xp, _Yp>>,
+  __condres_cvref<_Xp, _Yp>>
+    { };
+
+
+  template<typename _Xp, typename _Yp>
+    using __common_ref_C = remove_reference_t<__common_ref<_Xp&, _Yp&>>&&;
+
+
+  template<typename _Xp, typename _Yp>
+    struct __common_ref_impl<_Xp&&, _Yp&&,
+      _Require<is_convertible<_Xp&&, __common_ref_C<_Xp, _Yp>>,
+        is_convertible<_Yp&&, __common_ref_C<_Xp, _Yp>>>>
+    { using type = __common_ref_C<_Xp, _Yp>; };
+
+
+  template<typename _Xp, typename _Yp>
+    using __common_ref_D = __common_ref<const _Xp&, _Yp&>;
+
+
+  template<typename _Xp, typename _Yp>
+    struct __common_ref_impl<_Xp&&, _Yp&,
+      _Require<is_convertible<_Xp&&, __common_ref_D<_Xp, _Yp>>>>
+    { using type = __common_ref_D<_Xp, _Yp>; };
+
+
+  template<typename _Xp, typename _Yp>
+    struct __common_ref_impl<_Xp&, _Yp&&>
+    : __common_ref_impl<_Yp&&, _Xp&>
+    { };
+
+
+  template<typename _Tp, typename _Up,
+    template<typename> class _TQual, template<typename> class _UQual>
+    struct basic_common_reference
+    { };
+
+
+  template<typename _Tp>
+    struct __xref
+    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>; };
+
+  template<typename _Tp>
+    struct __xref<_Tp&>
+    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>&; };
+
+  template<typename _Tp>
+    struct __xref<_Tp&&>
+    { template<typename _Up> using __type = __copy_cv<_Tp, _Up>&&; };
+
+  template<typename _Tp1, typename _Tp2>
+    using __basic_common_ref
+      = typename basic_common_reference<remove_cvref_t<_Tp1>,
+     remove_cvref_t<_Tp2>,
+     __xref<_Tp1>::template __type,
+     __xref<_Tp2>::template __type>::type;
+
+
+  template<typename... _Tp>
+    struct common_reference;
+
+  template<typename... _Tp>
+    using common_reference_t = typename common_reference<_Tp...>::type;
+
+
+  template<>
+    struct common_reference<>
+    { };
+
+
+  template<typename _Tp0>
+    struct common_reference<_Tp0>
+    { using type = _Tp0; };
+
+
+  template<typename _Tp1, typename _Tp2, int _Bullet = 1, typename = void>
+    struct __common_reference_impl
+    : __common_reference_impl<_Tp1, _Tp2, _Bullet + 1>
+    { };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct common_reference<_Tp1, _Tp2>
+    : __common_reference_impl<_Tp1, _Tp2>
+    { };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1&, _Tp2&, 1,
+       void_t<__common_ref<_Tp1&, _Tp2&>>>
+    { using type = __common_ref<_Tp1&, _Tp2&>; };
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1&&, _Tp2&&, 1,
+       void_t<__common_ref<_Tp1&&, _Tp2&&>>>
+    { using type = __common_ref<_Tp1&&, _Tp2&&>; };
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1&, _Tp2&&, 1,
+       void_t<__common_ref<_Tp1&, _Tp2&&>>>
+    { using type = __common_ref<_Tp1&, _Tp2&&>; };
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1&&, _Tp2&, 1,
+       void_t<__common_ref<_Tp1&&, _Tp2&>>>
+    { using type = __common_ref<_Tp1&&, _Tp2&>; };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1, _Tp2, 2,
+       void_t<__basic_common_ref<_Tp1, _Tp2>>>
+    { using type = __basic_common_ref<_Tp1, _Tp2>; };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1, _Tp2, 3,
+       void_t<__cond_res<_Tp1, _Tp2>>>
+    { using type = __cond_res<_Tp1, _Tp2>; };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1, _Tp2, 4,
+       void_t<common_type_t<_Tp1, _Tp2>>>
+    { using type = common_type_t<_Tp1, _Tp2>; };
+
+
+  template<typename _Tp1, typename _Tp2>
+    struct __common_reference_impl<_Tp1, _Tp2, 5, void>
+    { };
+
+
+  template<typename _Tp1, typename _Tp2, typename... _Rest>
+    struct common_reference<_Tp1, _Tp2, _Rest...>
+    : __common_type_fold<common_reference<_Tp1, _Tp2>,
+    __common_type_pack<_Rest...>>
+    { };
+
+
+  template<typename _Tp1, typename _Tp2, typename... _Rest>
+    struct __common_type_fold<common_reference<_Tp1, _Tp2>,
+         __common_type_pack<_Rest...>,
+         void_t<common_reference_t<_Tp1, _Tp2>>>
+    : public common_reference<common_reference_t<_Tp1, _Tp2>, _Rest...>
+    { };
+
+
+
+
+
+
+
+}
+# 61 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 1 3
+# 40 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
 namespace std
 {
 
@@ -12197,19 +12185,24 @@ namespace std
 
 
   template<typename _Tp>
-    __attribute__((__always_inline__))
     inline constexpr _Tp*
     __addressof(_Tp& __r) noexcept
     { return __builtin_addressof(__r); }
-# 69 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 67 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
   template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
+    [[__nodiscard__]]
     constexpr _Tp&&
     forward(typename std::remove_reference<_Tp>::type& __t) noexcept
     { return static_cast<_Tp&&>(__t); }
-# 82 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+
+
+
+
+
+
+
   template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
+    [[__nodiscard__]]
     constexpr _Tp&&
     forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
     {
@@ -12217,9 +12210,9 @@ namespace std
    "std::forward must not be used to convert an rvalue to an lvalue");
       return static_cast<_Tp&&>(__t);
     }
-# 135 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 123 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
   template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
+    [[__nodiscard__]]
     constexpr typename std::remove_reference<_Tp>::type&&
     move(_Tp&& __t) noexcept
     { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
@@ -12229,16 +12222,16 @@ namespace std
     struct __move_if_noexcept_cond
     : public __and_<__not_<is_nothrow_move_constructible<_Tp>>,
                     is_copy_constructible<_Tp>>::type { };
-# 156 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 143 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
   template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
+    [[__nodiscard__]]
     constexpr
     __conditional_t<__move_if_noexcept_cond<_Tp>::value, const _Tp&, _Tp&&>
     move_if_noexcept(_Tp& __x) noexcept
     { return std::move(__x); }
-# 173 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 159 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
   template<typename _Tp>
-    [[__nodiscard__,__gnu__::__always_inline__]]
+    [[__nodiscard__]]
     inline constexpr _Tp*
     addressof(_Tp& __r) noexcept
     { return std::__addressof(__r); }
@@ -12258,7 +12251,7 @@ namespace std
       __obj = std::forward<_Up>(__new_val);
       return __old_val;
     }
-# 217 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/move.h" 3
+# 203 "C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h" 3
   template<typename _Tp>
     constexpr
     inline
@@ -12303,9 +12296,17 @@ namespace std
 
 
 }
-# 62 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 1 3
-# 45 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
+# 62 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 1 3
+# 36 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 3
+       
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 3
+
+
+
+
+
+
 namespace std
 {
 
@@ -12389,7 +12390,7 @@ namespace std
  }
       return __n;
     }
-# 136 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
+# 134 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 3
   template<size_t __i, typename _Tp>
     using tuple_element_t = typename tuple_element<__i, _Tp>::type;
 
@@ -12402,7 +12403,7 @@ namespace std
   template<size_t _Num>
     struct _Build_index_tuple
     {
-# 156 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
+# 154 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 3
       using __type = _Index_tuple<__integer_pack(_Num)...>;
 
     };
@@ -12472,6 +12473,9 @@ namespace std
   template<typename _Tp>
     inline constexpr bool __is_in_place_type_v<in_place_type_t<_Tp>> = true;
 
+  template<typename _Tp>
+    using __is_in_place_type = bool_constant<__is_in_place_type_v<_Tp>>;
+
   template<typename>
     inline constexpr bool __is_in_place_index_v = false;
 
@@ -12484,7 +12488,7 @@ namespace std
   template<size_t _Np, typename... _Types>
     struct _Nth_type
     { using type = __type_pack_element<_Np, _Types...>; };
-# 275 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
+# 276 "C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h" 3
   namespace ranges::__detail
   {
     template<typename _Range>
@@ -12493,34 +12497,36 @@ namespace std
 
 
 
-
-  struct _Swallow_assign
-  {
-    template<class _Tp>
-      constexpr const _Swallow_assign&
-      operator=(const _Tp&) const noexcept
-      { return *this; }
-  };
-# 309 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
-  inline constexpr _Swallow_assign ignore{};
-# 319 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/utility.h" 3
-
 }
-# 63 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 2 3
+# 63 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 2 3
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 1 3
-# 38 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
+
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 2 3
 
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/concepts" 1 3
-# 38 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/concepts" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/concepts" 2 3
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/concepts" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/concepts" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/concepts" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/concepts" 3
+
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/concepts" 2 3
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/concepts" 3
 namespace std
 {
 
@@ -12860,11 +12866,7 @@ namespace std
 
 
 }
-# 43 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 2 3
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-#pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
+# 41 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 2 3
 
 namespace std
 {
@@ -13509,14 +13511,14 @@ namespace std
  _Dbldbl,
  _Bfloat16,
       };
-# 705 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
+# 699 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
       template<typename _Tp>
  static consteval _Fp_fmt
  _S_fp_fmt() noexcept
  {
 
    using enum _Fp_fmt;
-# 725 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
+# 719 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
    if constexpr (__is_same(_Tp, long double))
      return (-16381) == -16381 ? _X86_80bit : _M68k_80bit;
 
@@ -13569,7 +13571,7 @@ namespace std
    { _M_lo = __lo; }
 
    constexpr bool operator==(const _Int&) const = default;
-# 787 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
+# 781 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
    constexpr _Int&
    operator^=(const _Int& __rhs) noexcept
    {
@@ -13630,7 +13632,7 @@ namespace std
        using enum _Fp_fmt;
 
        constexpr auto __fmt = _S_fp_fmt<_Tp>();
-       if constexpr (__fmt == _X86_80bit)
+       if constexpr (__fmt == _X86_80bit || __fmt == _M68k_80bit)
   {
     if constexpr (sizeof(_Tp) == 3 * sizeof(int32_t))
       {
@@ -13642,11 +13644,6 @@ namespace std
         auto __ival = __builtin_bit_cast(_Int<int64_t>, __val);
         return _Int<int16_t>(__ival._M_hi, __ival._M_lo);
       }
-  }
-       else if constexpr (__fmt == _M68k_80bit)
-  {
-    auto __ival = __builtin_bit_cast(_Int<int32_t>, __val);
-    return _Int<int16_t>(__ival._M_hi >> 16, __ival._M_lo);
   }
        else if constexpr (sizeof(_Tp) == 2 * sizeof(int64_t))
   {
@@ -13666,7 +13663,7 @@ namespace std
  static constexpr strong_ordering
  _S_fp_cmp(_Tp __x, _Tp __y) noexcept
  {
-# 896 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
+# 885 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
    auto __ix = _S_fp_bits(__x);
    auto __iy = _S_fp_bits(__y);
 
@@ -13718,7 +13715,7 @@ namespace std
   }
        else
   {
-# 963 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/compare" 3
+# 952 "C:/msys64/ucrt64/include/c++/14.2.0/compare" 3
   }
        return _S_compl(__ix) <=> _S_compl(__iy);
      }
@@ -14022,15 +14019,13 @@ namespace std
 
 
 }
-
-#pragma GCC diagnostic pop
-# 66 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 2 3
+# 66 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 2 3
 
 
 namespace std
 {
 
-# 79 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 79 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   struct piecewise_construct_t { explicit piecewise_construct_t() = default; };
 
 
@@ -14055,9 +14050,6 @@ namespace std
 
   template<size_t...>
     struct _Index_tuple;
-
-  template<typename _Tp>
-    class complex;
 
   template<size_t _Int, class _Tp1, class _Tp2>
     constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
@@ -14106,7 +14098,7 @@ namespace std
   template<size_t _Int, typename _Tp, size_t _Nm>
     constexpr const _Tp&&
     get(const array<_Tp, _Nm>&&) noexcept;
-# 278 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 260 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _U1, typename _U2> class __pair_base
   {
 
@@ -14117,7 +14109,7 @@ namespace std
 
 
   };
-# 301 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 283 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2>
     struct pair
     : public __pair_base<_T1, _T2>
@@ -14146,7 +14138,7 @@ namespace std
  swap(first, __p.first);
  swap(second, __p.second);
       }
-# 349 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 331 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
     private:
       template<typename... _Args1, size_t... _Indexes1,
         typename... _Args2, size_t... _Indexes2>
@@ -14163,8 +14155,6 @@ namespace std
       explicit(__not_<__and_<__is_implicitly_default_constructible<_T1>,
         __is_implicitly_default_constructible<_T2>>>())
       pair()
-      noexcept(is_nothrow_default_constructible_v<_T1>
-  && is_nothrow_default_constructible_v<_T2>)
       requires is_default_constructible_v<_T1>
         && is_default_constructible_v<_T2>
       : first(), second()
@@ -14214,7 +14204,7 @@ namespace std
 
 
  }
-# 444 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 424 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
     public:
 
 
@@ -14277,7 +14267,7 @@ namespace std
  requires (_S_constructible<_U1, _U2>()) && (_S_dangles<_U1, _U2>())
  constexpr explicit(!_S_convertible<_U1, _U2>())
  pair(pair<_U1, _U2>&&) = delete;
-# 557 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 537 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   private:
 
       template<typename _U1, typename _U2>
@@ -14306,7 +14296,7 @@ namespace std
      return is_nothrow_assignable_v<_T2&, _U2>;
    return false;
  }
-# 605 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 585 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   public:
 
       pair& operator=(const pair&) = delete;
@@ -14356,7 +14346,7 @@ namespace std
    second = std::forward<_U2>(__p.second);
    return *this;
  }
-# 1015 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 995 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
     };
 
 
@@ -14371,17 +14361,11 @@ namespace std
 
 
   template<typename _T1, typename _T2, typename _U1, typename _U2>
-    [[nodiscard]]
-    constexpr bool
+    inline constexpr bool
     operator==(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
-    requires requires {
-      { __x.first == __y.first } -> __detail::__boolean_testable;
-      { __x.second == __y.second } -> __detail::__boolean_testable;
-    }
     { return __x.first == __y.first && __x.second == __y.second; }
-# 1045 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1020 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2, typename _U1, typename _U2>
-    [[nodiscard]]
     constexpr common_comparison_category_t<__detail::__synth3way_t<_T1, _U1>,
         __detail::__synth3way_t<_T2, _U2>>
     operator<=>(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
@@ -14390,7 +14374,7 @@ namespace std
  return __c;
       return __detail::__synth3way(__x.second, __y.second);
     }
-# 1112 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1080 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2>
     constexpr inline
 
@@ -14403,12 +14387,12 @@ namespace std
     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
     noexcept(noexcept(__x.swap(__y)))
     { __x.swap(__y); }
-# 1135 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1103 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2>
     typename enable_if<!__and_<__is_swappable<_T1>,
           __is_swappable<_T2>>::value>::type
     swap(pair<_T1, _T2>&, pair<_T1, _T2>&) = delete;
-# 1161 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1129 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2>
     constexpr pair<typename __decay_and_strip<_T1>::__type,
                    typename __decay_and_strip<_T2>::__type>
@@ -14419,7 +14403,7 @@ namespace std
       typedef pair<__ds_type1, __ds_type2> __pair_type;
       return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
     }
-# 1184 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1152 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
   template<typename _T1, typename _T2>
     struct __is_tuple_like_impl<pair<_T1, _T2>> : true_type
     { };
@@ -14441,23 +14425,22 @@ namespace std
     { typedef _Tp2 type; };
 
 
+
+  template<size_t __i, typename... _Types>
+    struct tuple_element<__i, tuple<_Types...>>;
+
+
   template<typename _Tp1, typename _Tp2>
     inline constexpr size_t tuple_size_v<pair<_Tp1, _Tp2>> = 2;
 
   template<typename _Tp1, typename _Tp2>
     inline constexpr size_t tuple_size_v<const pair<_Tp1, _Tp2>> = 2;
 
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++14-extensions"
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
   template<typename _Tp>
     inline constexpr bool __is_pair = false;
 
   template<typename _Tp, typename _Up>
     inline constexpr bool __is_pair<pair<_Tp, _Up>> = true;
-#pragma GCC diagnostic pop
 
 
 
@@ -14578,16 +14561,24 @@ namespace std
     constexpr const _Tp&&
     get(const pair<_Up, _Tp>&& __p) noexcept
     { return std::move(__p.second); }
-# 1365 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_pair.h" 3
+# 1332 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h" 3
 
 }
-# 65 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 1 3
-# 73 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ptr_traits.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ptr_traits.h" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 1 3
+# 62 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
+       
+# 63 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
+# 71 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 3
+
+
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/ptr_traits.h" 1 3
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/bits/ptr_traits.h" 3
 namespace __gnu_debug { struct _Safe_iterator_base; }
 
 
@@ -14751,44 +14742,59 @@ namespace std
 
   template<typename _Ptr, typename _Tp>
     using __ptr_rebind = typename pointer_traits<_Ptr>::template rebind<_Tp>;
-# 229 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ptr_traits.h" 3
+
   template<typename _Tp>
-    [[__gnu__::__always_inline__]]
     constexpr _Tp*
-    to_address(_Tp* __ptr) noexcept
+    __to_address(_Tp* __ptr) noexcept
     {
-      static_assert(!is_function_v<_Tp>, "std::to_address argument "
-      "must not be a function pointer");
+      static_assert(!std::is_function<_Tp>::value, "not a function pointer");
       return __ptr;
     }
-# 246 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ptr_traits.h" 3
+
+
+
+
+
+
+
+  template<typename _Ptr>
+    constexpr auto
+    __to_address(const _Ptr& __ptr) noexcept
+    -> decltype(std::pointer_traits<_Ptr>::to_address(__ptr))
+    { return std::pointer_traits<_Ptr>::to_address(__ptr); }
+
+  template<typename _Ptr, typename... _None>
+    constexpr auto
+    __to_address(const _Ptr& __ptr, _None...) noexcept
+    {
+      if constexpr (is_base_of_v<__gnu_debug::_Safe_iterator_base, _Ptr>)
+ return std::__to_address(__ptr.base().operator->());
+      else
+ return std::__to_address(__ptr.operator->());
+    }
+
+
+
+
+
+
+
+  template<typename _Tp>
+    constexpr _Tp*
+    to_address(_Tp* __ptr) noexcept
+    { return std::__to_address(__ptr); }
+# 251 "C:/msys64/ucrt64/include/c++/14.2.0/bits/ptr_traits.h" 3
   template<typename _Ptr>
     constexpr auto
     to_address(const _Ptr& __ptr) noexcept
-    {
-      if constexpr (requires { pointer_traits<_Ptr>::to_address(__ptr); })
- return pointer_traits<_Ptr>::to_address(__ptr);
-      else if constexpr (is_base_of_v<__gnu_debug::_Safe_iterator_base, _Ptr>)
- return std::to_address(__ptr.base().operator->());
-      else
- return std::to_address(__ptr.operator->());
-    }
-
-
-
-  template<typename _Ptr>
-    [[__gnu__::__always_inline__]]
-    constexpr auto
-    __to_address(const _Ptr& __ptr) noexcept
-    { return std::to_address(__ptr); }
-
+    { return std::__to_address(__ptr); }
 
 
 
 }
-# 40 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ranges_cmp.h" 1 3
-# 37 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/ranges_cmp.h" 3
+# 38 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/ranges_cmp.h" 1 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/bits/ranges_cmp.h" 3
 namespace std
 {
 
@@ -14854,7 +14860,7 @@ namespace ranges
       requires equality_comparable_with<_Tp, _Up>
       constexpr bool
       operator()(_Tp&& __t, _Up&& __u) const
-      noexcept(noexcept(std::declval<_Tp>() == std::declval<_Up>()))
+      noexcept(noexcept(std::declval<_Up>() == std::declval<_Tp>()))
       { return !equal_to{}(std::forward<_Tp>(__t), std::forward<_Up>(__u)); }
 
     using is_transparent = __is_transparent;
@@ -14930,15 +14936,12 @@ namespace ranges
 
 
 }
-# 41 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 2 3
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 2 3
 
 namespace std
 {
 
-# 63 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 3
+# 58 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 3
   struct default_sentinel_t { };
 
 
@@ -14982,49 +14985,32 @@ namespace std
   namespace ranges
   {
 
-
     namespace __imove
     {
       void iter_move() = delete;
 
-
-
       template<typename _Tp>
  concept __adl_imove
    = (std::__detail::__class_or_enum<remove_reference_t<_Tp>>)
-       && requires(_Tp&& __t) { iter_move(static_cast<_Tp&&>(__t)); };
+   && requires(_Tp&& __t) { iter_move(static_cast<_Tp&&>(__t)); };
 
       struct _IterMove
       {
       private:
-
-
- template<typename _Tp>
-   using __iter_ref_t = decltype(*std::declval<_Tp>());
-
  template<typename _Tp>
    struct __result
-   { using type = __iter_ref_t<_Tp>; };
-
+   { using type = iter_reference_t<_Tp>; };
 
  template<typename _Tp>
    requires __adl_imove<_Tp>
    struct __result<_Tp>
    { using type = decltype(iter_move(std::declval<_Tp>())); };
 
-
  template<typename _Tp>
    requires (!__adl_imove<_Tp>)
-     && is_lvalue_reference_v<__iter_ref_t<_Tp>>
+   && is_lvalue_reference_v<iter_reference_t<_Tp>>
    struct __result<_Tp>
-   {
-
-
-
-
-     using type
-       = decltype(std::declval<remove_reference_t<__iter_ref_t<_Tp>>>());
-   };
+   { using type = remove_reference_t<iter_reference_t<_Tp>>&&; };
 
  template<typename _Tp>
    static constexpr bool
@@ -15038,11 +15024,10 @@ namespace std
 
       public:
 
- template<typename _Tp>
+ template<std::__detail::__dereferenceable _Tp>
    using __type = typename __result<_Tp>::type;
 
- template<typename _Tp>
-   requires __adl_imove<_Tp> || requires { typename __iter_ref_t<_Tp>; }
+ template<std::__detail::__dereferenceable _Tp>
    [[nodiscard]]
    constexpr __type<_Tp>
    operator()(_Tp&& __e) const
@@ -15050,10 +15035,10 @@ namespace std
    {
      if constexpr (__adl_imove<_Tp>)
        return iter_move(static_cast<_Tp&&>(__e));
-     else if constexpr (is_lvalue_reference_v<__iter_ref_t<_Tp>>)
-       return std::move(*static_cast<_Tp&&>(__e));
+     else if constexpr (is_lvalue_reference_v<iter_reference_t<_Tp>>)
+       return static_cast<__type<_Tp>>(*__e);
      else
-       return *static_cast<_Tp&&>(__e);
+       return *__e;
    }
       };
     }
@@ -15063,7 +15048,6 @@ namespace std
       inline constexpr __imove::_IterMove iter_move{};
     }
   }
-
 
   template<__detail::__dereferenceable _Tp>
     requires __detail::__can_reference<ranges::__imove::_IterMove::__type<_Tp&>>
@@ -15092,7 +15076,7 @@ namespace std
       using difference_type
  = make_signed_t<decltype(std::declval<_Tp>() - std::declval<_Tp>())>;
     };
-# 228 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 3
+# 204 "C:/msys64/ucrt64/include/c++/14.2.0/bits/iterator_concepts.h" 3
   namespace __detail
   {
 
@@ -15220,12 +15204,10 @@ namespace std
      typename incrementable_traits<_Iter>::difference_type>;
  };
 
-
-
     template<typename _Iter>
       concept __cpp17_fwd_iterator = __cpp17_input_iterator<_Iter>
  && constructible_from<_Iter>
- && is_reference_v<iter_reference_t<_Iter>>
+ && is_lvalue_reference_v<iter_reference_t<_Iter>>
  && same_as<remove_cvref_t<iter_reference_t<_Iter>>,
      typename indirectly_readable_traits<_Iter>::value_type>
  && requires(_Iter __it)
@@ -15446,21 +15428,9 @@ namespace std
     concept indirectly_readable
       = __detail::__indirectly_readable_impl<remove_cvref_t<_In>>;
 
-  namespace __detail
-  {
-    template<typename _Tp>
-      struct __indirect_value
-      { using type = iter_value_t<_Tp>&; };
-
-
-  }
-
-  template<typename _Tp>
-    using __indirect_value_t = typename __detail::__indirect_value<_Tp>::type;
-
   template<indirectly_readable _Tp>
     using iter_common_reference_t
-      = common_reference_t<iter_reference_t<_Tp>, __indirect_value_t<_Tp>>;
+      = common_reference_t<iter_reference_t<_Tp>, iter_value_t<_Tp>&>;
 
 
   template<typename _Out, typename _Tp>
@@ -15616,51 +15586,60 @@ namespace std
 
   template<typename _Fn, typename _Iter>
     concept indirectly_unary_invocable = indirectly_readable<_Iter>
-      && copy_constructible<_Fn> && invocable<_Fn&, __indirect_value_t<_Iter>>
+      && copy_constructible<_Fn> && invocable<_Fn&, iter_value_t<_Iter>&>
       && invocable<_Fn&, iter_reference_t<_Iter>>
-      && common_reference_with<invoke_result_t<_Fn&, __indirect_value_t<_Iter>>,
+      && invocable<_Fn&, iter_common_reference_t<_Iter>>
+      && common_reference_with<invoke_result_t<_Fn&, iter_value_t<_Iter>&>,
           invoke_result_t<_Fn&, iter_reference_t<_Iter>>>;
 
   template<typename _Fn, typename _Iter>
     concept indirectly_regular_unary_invocable = indirectly_readable<_Iter>
       && copy_constructible<_Fn>
-      && regular_invocable<_Fn&, __indirect_value_t<_Iter>>
+      && regular_invocable<_Fn&, iter_value_t<_Iter>&>
       && regular_invocable<_Fn&, iter_reference_t<_Iter>>
-      && common_reference_with<invoke_result_t<_Fn&, __indirect_value_t<_Iter>>,
+      && regular_invocable<_Fn&, iter_common_reference_t<_Iter>>
+      && common_reference_with<invoke_result_t<_Fn&, iter_value_t<_Iter>&>,
           invoke_result_t<_Fn&, iter_reference_t<_Iter>>>;
 
   template<typename _Fn, typename _Iter>
     concept indirect_unary_predicate = indirectly_readable<_Iter>
-      && copy_constructible<_Fn> && predicate<_Fn&, __indirect_value_t<_Iter>>
-      && predicate<_Fn&, iter_reference_t<_Iter>>;
+      && copy_constructible<_Fn> && predicate<_Fn&, iter_value_t<_Iter>&>
+      && predicate<_Fn&, iter_reference_t<_Iter>>
+      && predicate<_Fn&, iter_common_reference_t<_Iter>>;
 
   template<typename _Fn, typename _I1, typename _I2>
     concept indirect_binary_predicate
       = indirectly_readable<_I1> && indirectly_readable<_I2>
       && copy_constructible<_Fn>
-      && predicate<_Fn&, __indirect_value_t<_I1>, __indirect_value_t<_I2>>
-      && predicate<_Fn&, __indirect_value_t<_I1>, iter_reference_t<_I2>>
-      && predicate<_Fn&, iter_reference_t<_I1>, __indirect_value_t<_I2>>
-      && predicate<_Fn&, iter_reference_t<_I1>, iter_reference_t<_I2>>;
+      && predicate<_Fn&, iter_value_t<_I1>&, iter_value_t<_I2>&>
+      && predicate<_Fn&, iter_value_t<_I1>&, iter_reference_t<_I2>>
+      && predicate<_Fn&, iter_reference_t<_I1>, iter_value_t<_I2>&>
+      && predicate<_Fn&, iter_reference_t<_I1>, iter_reference_t<_I2>>
+      && predicate<_Fn&, iter_common_reference_t<_I1>,
+     iter_common_reference_t<_I2>>;
 
   template<typename _Fn, typename _I1, typename _I2 = _I1>
     concept indirect_equivalence_relation
       = indirectly_readable<_I1> && indirectly_readable<_I2>
       && copy_constructible<_Fn>
-      && equivalence_relation<_Fn&, __indirect_value_t<_I1>, __indirect_value_t<_I2>>
-      && equivalence_relation<_Fn&, __indirect_value_t<_I1>, iter_reference_t<_I2>>
-      && equivalence_relation<_Fn&, iter_reference_t<_I1>, __indirect_value_t<_I2>>
+      && equivalence_relation<_Fn&, iter_value_t<_I1>&, iter_value_t<_I2>&>
+      && equivalence_relation<_Fn&, iter_value_t<_I1>&, iter_reference_t<_I2>>
+      && equivalence_relation<_Fn&, iter_reference_t<_I1>, iter_value_t<_I2>&>
       && equivalence_relation<_Fn&, iter_reference_t<_I1>,
-         iter_reference_t<_I2>>;
+         iter_reference_t<_I2>>
+      && equivalence_relation<_Fn&, iter_common_reference_t<_I1>,
+         iter_common_reference_t<_I2>>;
 
   template<typename _Fn, typename _I1, typename _I2 = _I1>
     concept indirect_strict_weak_order
       = indirectly_readable<_I1> && indirectly_readable<_I2>
       && copy_constructible<_Fn>
-      && strict_weak_order<_Fn&, __indirect_value_t<_I1>, __indirect_value_t<_I2>>
-      && strict_weak_order<_Fn&, __indirect_value_t<_I1>, iter_reference_t<_I2>>
-      && strict_weak_order<_Fn&, iter_reference_t<_I1>, __indirect_value_t<_I2>>
-      && strict_weak_order<_Fn&, iter_reference_t<_I1>, iter_reference_t<_I2>>;
+      && strict_weak_order<_Fn&, iter_value_t<_I1>&, iter_value_t<_I2>&>
+      && strict_weak_order<_Fn&, iter_value_t<_I1>&, iter_reference_t<_I2>>
+      && strict_weak_order<_Fn&, iter_reference_t<_I1>, iter_value_t<_I2>&>
+      && strict_weak_order<_Fn&, iter_reference_t<_I1>, iter_reference_t<_I2>>
+      && strict_weak_order<_Fn&, iter_common_reference_t<_I1>,
+      iter_common_reference_t<_I2>>;
 
   template<typename _Fn, typename... _Is>
     requires (indirectly_readable<_Is> && ...)
@@ -15676,11 +15655,6 @@ namespace std
  {
    using value_type = remove_cvref_t<indirect_result_t<_Proj&, _Iter>>;
    indirect_result_t<_Proj&, _Iter> operator*() const;
-
-
-
-   using __projected_Iter = _Iter;
-   using __projected_Proj = _Proj;
  };
       };
 
@@ -15692,9 +15666,6 @@ namespace std
    using value_type = remove_cvref_t<indirect_result_t<_Proj&, _Iter>>;
    using difference_type = iter_difference_t<_Iter>;
    indirect_result_t<_Proj&, _Iter> operator*() const;
-
-   using __projected_Iter = _Iter;
-   using __projected_Proj = _Proj;
  };
       };
   }
@@ -15705,16 +15676,9 @@ namespace std
     using projected = typename __detail::__projected<_Iter, _Proj>::__type;
 
 
-  template<typename _Tp>
-    requires same_as<_Tp, projected<typename _Tp::__projected_Iter,
-        typename _Tp::__projected_Proj>>
-    struct __detail::__indirect_value<_Tp>
-    {
-      using _Iter = typename _Tp::__projected_Iter;
-      using _Proj = typename _Tp::__projected_Proj;
-      using type = invoke_result_t<_Proj&, __indirect_value_t<_Iter>>;
-    };
-# 861 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/iterator_concepts.h" 3
+
+
+
   template<typename _In, typename _Out>
     concept indirectly_movable = indirectly_readable<_In>
       && indirectly_writable<_Out, iter_rvalue_reference_t<_In>>;
@@ -15744,13 +15708,10 @@ namespace std
 namespace ranges
 {
 
-
   namespace __iswap
   {
     template<typename _It1, typename _It2>
       void iter_swap(_It1, _It2) = delete;
-
-
 
     template<typename _Tp, typename _Up>
       concept __adl_iswap
@@ -15932,14 +15893,13 @@ namespace ranges
 
 
 }
-#pragma GCC diagnostic pop
-# 74 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 2 3
+# 72 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 2 3
 
 
 namespace std
 {
 
-# 95 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 93 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   struct input_iterator_tag { };
 
 
@@ -15959,7 +15919,7 @@ namespace std
 
 
   struct contiguous_iterator_tag : public random_access_iterator_tag { };
-# 127 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 125 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   template<typename _Category, typename _Tp, typename _Distance = ptrdiff_t,
            typename _Pointer = _Tp*, typename _Reference = _Tp&>
     struct [[__deprecated__]] iterator
@@ -15975,7 +15935,7 @@ namespace std
 
       typedef _Reference reference;
     };
-# 151 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 149 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   template<typename _Iterator>
     struct iterator_traits;
 
@@ -15984,11 +15944,11 @@ namespace std
 
   template<typename _Iterator, typename = __void_t<>>
     struct __iterator_traits { };
-# 178 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 176 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   template<typename _Iterator>
     struct iterator_traits
     : public __iterator_traits<_Iterator> { };
-# 196 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 194 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   template<typename _Tp>
 
     requires is_object_v<_Tp>
@@ -16002,7 +15962,7 @@ namespace std
       using pointer = _Tp*;
       using reference = _Tp&;
     };
-# 237 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_types.h" 3
+# 235 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_types.h" 3
   template<typename _Iter>
     __attribute__((__always_inline__))
     inline constexpr
@@ -16022,12 +15982,6 @@ namespace std
       __enable_if_t<is_convertible<__iter_category_t<_InIter>,
        input_iterator_tag>::value>;
 
-
-  template<typename _InIter>
-    concept __has_input_iter_cat
-      = is_convertible_v<__iter_category_t<_InIter>, input_iterator_tag>;
-
-
   template<typename _It,
     typename _Cat = __iter_category_t<_It>>
     struct __is_random_access_iter
@@ -16045,18 +15999,19 @@ namespace std
 
 
 }
-# 66 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 1 3
-# 66 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/concept_check.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/concept_check.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wvariadic-macros"
-# 86 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/concept_check.h" 3
-#pragma GCC diagnostic pop
-# 67 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/debug/assertions.h" 1 3
-# 68 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 2 3
+# 66 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 1 3
+# 62 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 3
+       
+# 63 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 3
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/concept_check.h" 1 3
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/bits/concept_check.h" 3
+       
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/bits/concept_check.h" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/debug/assertions.h" 1 3
+# 66 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 2 3
 
 
 namespace std
@@ -16120,7 +16075,7 @@ namespace std
   template<typename _OutputIterator>
     void
     __distance(_OutputIterator, _OutputIterator, output_iterator_tag) = delete;
-# 146 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 3
+# 144 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 3
   template<typename _InputIterator>
     [[__nodiscard__]] __attribute__((__always_inline__))
     inline constexpr
@@ -16138,7 +16093,7 @@ namespace std
     {
 
      
-      do { if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h", 163, __PRETTY_FUNCTION__, "__n >= 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail(); } while (false);
       while (__n--)
  ++__i;
     }
@@ -16180,7 +16135,7 @@ namespace std
   template<typename _OutputIterator, typename _Distance>
     void
     __advance(_OutputIterator&, _Distance, output_iterator_tag) = delete;
-# 219 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h" 3
+# 217 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h" 3
   template<typename _InputIterator, typename _Distance>
     __attribute__((__always_inline__))
     inline constexpr void
@@ -16222,18 +16177,27 @@ namespace std
 
 
 }
-# 67 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 1 3
-# 75 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 1 3
-# 43 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/exception.h" 1 3
-# 40 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/exception.h" 3
+# 67 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 1 3
+# 75 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/new" 1 3
+# 38 "C:/msys64/ucrt64/include/c++/14.2.0/new" 3
+       
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/new" 3
+
+
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/exception.h" 1 3
+# 34 "C:/msys64/ucrt64/include/c++/14.2.0/bits/exception.h" 3
+       
+# 35 "C:/msys64/ucrt64/include/c++/14.2.0/bits/exception.h" 3
+
+
+
 extern "C++" {
 
 namespace std
 {
-# 61 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/exception.h" 3
+# 59 "C:/msys64/ucrt64/include/c++/14.2.0/bits/exception.h" 3
   class exception
   {
   public:
@@ -16257,17 +16221,16 @@ namespace std
 }
 
 }
-# 44 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 2 3
+# 42 "C:/msys64/ucrt64/include/c++/14.2.0/new" 2 3
 
 
 
 
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 2 3
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++11-extensions"
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/new" 2 3
 
 #pragma GCC visibility push(default)
 
@@ -16340,86 +16303,66 @@ namespace std
   new_handler get_new_handler() noexcept;
 
 }
-# 137 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 3
+# 131 "C:/msys64/ucrt64/include/c++/14.2.0/new" 3
 [[__nodiscard__]] void* operator new(std::size_t)
- 
-  __attribute__((__externally_visible__, __malloc__));
+  __attribute__((__externally_visible__));
 [[__nodiscard__]] void* operator new[](std::size_t)
- 
-  __attribute__((__externally_visible__, __malloc__));
+  __attribute__((__externally_visible__));
 void operator delete(void*) noexcept
   __attribute__((__externally_visible__));
 void operator delete[](void*) noexcept
   __attribute__((__externally_visible__));
 
-void operator delete(void*, std::size_t)
-  noexcept
+void operator delete(void*, std::size_t) noexcept
   __attribute__((__externally_visible__));
-void operator delete[](void*, std::size_t)
-  noexcept
+void operator delete[](void*, std::size_t) noexcept
   __attribute__((__externally_visible__));
 
-[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&)
-  noexcept
+[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&) noexcept
   __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&)
-  noexcept
+[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&) noexcept
   __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-void operator delete(void*, const std::nothrow_t&)
-  noexcept
+void operator delete(void*, const std::nothrow_t&) noexcept
   __attribute__((__externally_visible__));
-void operator delete[](void*, const std::nothrow_t&)
-  noexcept
+void operator delete[](void*, const std::nothrow_t&) noexcept
   __attribute__((__externally_visible__));
 
 [[__nodiscard__]] void* operator new(std::size_t, std::align_val_t)
- 
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
 [[__nodiscard__]] void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
 void operator delete(void*, std::align_val_t)
   noexcept __attribute__((__externally_visible__));
 void operator delete(void*, std::align_val_t, const std::nothrow_t&)
- 
   noexcept __attribute__((__externally_visible__));
 [[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t)
- 
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
 [[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __alloc_align__ (2), __malloc__));
+  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
 void operator delete[](void*, std::align_val_t)
   noexcept __attribute__((__externally_visible__));
 void operator delete[](void*, std::align_val_t, const std::nothrow_t&)
- 
   noexcept __attribute__((__externally_visible__));
 
 void operator delete(void*, std::size_t, std::align_val_t)
   noexcept __attribute__((__externally_visible__));
 void operator delete[](void*, std::size_t, std::align_val_t)
   noexcept __attribute__((__externally_visible__));
-# 205 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/new" 3
-[[__nodiscard__]] inline
-void* operator new(std::size_t, void* __p)
-  noexcept
+
+
+
+
+[[__nodiscard__]] inline void* operator new(std::size_t, void* __p) noexcept
 { return __p; }
-[[__nodiscard__]] inline
-void* operator new[](std::size_t, void* __p)
-  noexcept
+[[__nodiscard__]] inline void* operator new[](std::size_t, void* __p) noexcept
 { return __p; }
 
 
-
-
-inline void operator delete (void*, void*)
-  noexcept
-{ }
-inline void operator delete[](void*, void*)
-  noexcept
-{ }
+inline void operator delete (void*, void*) noexcept { }
+inline void operator delete[](void*, void*) noexcept { }
 
 }
+
 
 namespace std
 {
@@ -16428,28 +16371,33 @@ namespace std
   template<typename _Tp>
     [[nodiscard]] constexpr _Tp*
     launder(_Tp* __p) noexcept
-    {
-      if constexpr (__is_same(const volatile _Tp, const volatile void))
- static_assert(!__is_same(const volatile _Tp, const volatile void),
-        "std::launder argument must not be a void pointer");
+    { return __builtin_launder(__p); }
 
-      else if constexpr (__is_function(_Tp))
- static_assert(!__is_function(_Tp),
-        "std::launder argument must not be a function pointer");
 
-      else
- return __builtin_launder(__p);
-      return nullptr;
-    }
+
+
+  template<typename _Ret, typename... _Args , bool _NE>
+    void launder(_Ret (*)(_Args...) noexcept (_NE)) = delete;
+  template<typename _Ret, typename... _Args , bool _NE>
+    void launder(_Ret (*)(_Args......) noexcept (_NE)) = delete;
+
+  void launder(void*) = delete;
+  void launder(const void*) = delete;
+  void launder(volatile void*) = delete;
+  void launder(const volatile void*) = delete;
 
 
 
   inline constexpr size_t hardware_destructive_interference_size = 64;
   inline constexpr size_t hardware_constructive_interference_size = 64;
 
+}
 
 
 
+
+namespace std
+{
 
 
   struct destroying_delete_t
@@ -16458,16 +16406,15 @@ namespace std
   };
 
   inline constexpr destroying_delete_t destroying_delete{};
-
 }
 
+
 #pragma GCC visibility pop
-#pragma GCC diagnostic pop
-# 76 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 2 3
+# 76 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 2 3
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 1 3
-# 73 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h" 1 3
+# 73 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h" 3
 namespace std
 {
 
@@ -16488,26 +16435,12 @@ namespace std
 
 
   template<typename _Tp, typename... _Args>
-    requires (!is_unbounded_array_v<_Tp>)
-      && requires { ::new((void*)0) _Tp(std::declval<_Args>()...); }
-    constexpr _Tp*
+    constexpr auto
     construct_at(_Tp* __location, _Args&&... __args)
     noexcept(noexcept(::new((void*)0) _Tp(std::declval<_Args>()...)))
-    {
-      void* __loc = __location;
-
-
-      if constexpr (is_array_v<_Tp>)
- {
-   static_assert(sizeof...(_Args) == 0, "std::construct_at for array "
-         "types must not use any arguments to initialize the "
-         "array");
-   return ::new(__loc) _Tp[1]();
- }
-      else
- return ::new(__loc) _Tp(std::forward<_Args>(__args)...);
-    }
-# 120 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 3
+    -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
+    { return ::new((void*)__location) _Tp(std::forward<_Args>(__args)...); }
+# 106 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h" 3
   template<typename _Tp, typename... _Args>
     constexpr
     inline void
@@ -16521,14 +16454,13 @@ namespace std
    return;
  }
 
-      ::new(static_cast<void*>(__p)) _Tp(std::forward<_Args>(__args)...);
+      ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
     }
-# 146 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 3
+# 132 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h" 3
   template<typename _T1>
-   
     inline void
     _Construct_novalue(_T1* __p)
-    { ::new(static_cast<void*>(__p)) _T1; }
+    { ::new((void*)__p) _T1; }
 
   template<typename _ForwardIterator>
     constexpr void
@@ -16548,9 +16480,31 @@ namespace std
 
     }
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
-# 200 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 3
+  template<bool>
+    struct _Destroy_aux
+    {
+      template<typename _ForwardIterator>
+ static constexpr void
+ __destroy(_ForwardIterator __first, _ForwardIterator __last)
+ {
+   for (; __first != __last; ++__first)
+     std::_Destroy(std::__addressof(*__first));
+ }
+    };
+
+  template<>
+    struct _Destroy_aux<true>
+    {
+      template<typename _ForwardIterator>
+        static void
+        __destroy(_ForwardIterator, _ForwardIterator) { }
+    };
+
+
+
+
+
+
   template<typename _ForwardIterator>
     constexpr inline void
     _Destroy(_ForwardIterator __first, _ForwardIterator __last)
@@ -16561,20 +16515,45 @@ namespace std
 
       static_assert(is_destructible<_Value_type>::value,
       "value type is destructible");
-      if constexpr (!__has_trivial_destructor(_Value_type))
- for (; __first != __last; ++__first)
-   std::_Destroy(std::__addressof(*__first));
-
-      else if (std::__is_constant_evaluated())
- for (; __first != __last; ++__first)
-   std::destroy_at(std::__addressof(*__first));
 
 
+      if (std::__is_constant_evaluated())
+ return std::_Destroy_aux<false>::__destroy(__first, __last);
 
-
-
+      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+ __destroy(__first, __last);
     }
-# 256 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_construct.h" 3
+
+  template<bool>
+    struct _Destroy_n_aux
+    {
+      template<typename _ForwardIterator, typename _Size>
+ static constexpr _ForwardIterator
+ __destroy_n(_ForwardIterator __first, _Size __count)
+ {
+   for (; __count > 0; (void)++__first, --__count)
+     std::_Destroy(std::__addressof(*__first));
+   return __first;
+ }
+    };
+
+  template<>
+    struct _Destroy_n_aux<true>
+    {
+      template<typename _ForwardIterator, typename _Size>
+        static _ForwardIterator
+        __destroy_n(_ForwardIterator __first, _Size __count)
+ {
+   std::advance(__first, __count);
+   return __first;
+ }
+    };
+
+
+
+
+
+
   template<typename _ForwardIterator, typename _Size>
     constexpr inline _ForwardIterator
     _Destroy_n(_ForwardIterator __first, _Size __count)
@@ -16585,23 +16564,14 @@ namespace std
 
       static_assert(is_destructible<_Value_type>::value,
       "value type is destructible");
-      if constexpr (!__has_trivial_destructor(_Value_type))
- for (; __count > 0; (void)++__first, --__count)
-   std::_Destroy(std::__addressof(*__first));
-
-      else if (std::__is_constant_evaluated())
- for (; __count > 0; (void)++__first, --__count)
-   std::destroy_at(std::__addressof(*__first));
-
-      else
- std::advance(__first, __count);
-      return __first;
 
 
+      if (std::__is_constant_evaluated())
+ return std::_Destroy_n_aux<false>::__destroy_n(__first, __count);
 
-
+      return std::_Destroy_n_aux<__has_trivial_destructor(_Value_type)>::
+ __destroy_n(__first, __count);
     }
-#pragma GCC diagnostic pop
 
 
   template <typename _ForwardIterator>
@@ -16621,7 +16591,7 @@ namespace std
 
 
 }
-# 79 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 2 3
+# 79 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 2 3
 
 
 
@@ -16631,7 +16601,13 @@ namespace std
 namespace std
 {
 
-# 96 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+
+
+
+
+
+
+
   namespace __detail
   {
 
@@ -16643,10 +16619,9 @@ namespace std
 
 
 
-
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-# 130 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 128 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Iterator>
     class reverse_iterator
     : public iterator<typename iterator_traits<_Iterator>::iterator_category,
@@ -16688,7 +16663,7 @@ namespace std
       using value_type = iter_value_t<_Iterator>;
       using difference_type = iter_difference_t<_Iterator>;
       using reference = iter_reference_t<_Iterator>;
-# 180 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 178 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       constexpr
       reverse_iterator()
       noexcept(noexcept(_Iterator()))
@@ -16755,7 +16730,7 @@ namespace std
       base() const
       noexcept(noexcept(_Iterator(current)))
       { return current; }
-# 257 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 255 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       [[__nodiscard__]]
       constexpr reference
       operator*() const
@@ -16927,7 +16902,7 @@ namespace std
  _S_to_pointer(_Tp __t)
         { return __t.operator->(); }
     };
-# 526 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 524 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR>
     [[nodiscard]]
     constexpr bool
@@ -17001,7 +16976,7 @@ namespace std
     operator<=>(const reverse_iterator<_Iterator>& __x,
   const reverse_iterator<_Iterator>& __y)
     { return __y.base() <=> __x.base(); }
-# 617 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 615 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR>
     [[__nodiscard__]]
     inline constexpr auto
@@ -17045,10 +17020,24 @@ namespace std
 
 
   template<typename _Iterator>
+    constexpr
+    auto
+    __niter_base(reverse_iterator<_Iterator> __it)
+    -> decltype(__make_reverse_iterator(__niter_base(__it.base())))
+    { return __make_reverse_iterator(__niter_base(__it.base())); }
+
+  template<typename _Iterator>
     struct __is_move_iterator<reverse_iterator<_Iterator> >
       : __is_move_iterator<_Iterator>
     { };
-# 676 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+
+  template<typename _Iterator>
+    constexpr
+    auto
+    __miter_base(reverse_iterator<_Iterator> __it)
+    -> decltype(__make_reverse_iterator(__miter_base(__it.base())))
+    { return __make_reverse_iterator(__miter_base(__it.base())); }
+# 688 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     class back_insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -17067,7 +17056,7 @@ namespace std
       explicit constexpr
       back_insert_iterator(_Container& __x)
       : container(std::__addressof(__x)) { }
-# 714 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 726 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       constexpr
       back_insert_iterator&
       operator=(const typename _Container::value_type& __value)
@@ -17103,13 +17092,13 @@ namespace std
       operator++(int)
       { return *this; }
     };
-# 761 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 773 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     [[__nodiscard__]] constexpr
     inline back_insert_iterator<_Container>
     back_inserter(_Container& __x)
     { return back_insert_iterator<_Container>(__x); }
-# 777 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 789 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     class front_insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -17128,7 +17117,7 @@ namespace std
       explicit constexpr
       front_insert_iterator(_Container& __x)
       : container(std::__addressof(__x)) { }
-# 815 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 827 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       constexpr
       front_insert_iterator&
       operator=(const typename _Container::value_type& __value)
@@ -17164,13 +17153,13 @@ namespace std
       operator++(int)
       { return *this; }
     };
-# 862 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 874 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     [[__nodiscard__]] constexpr
     inline front_insert_iterator<_Container>
     front_inserter(_Container& __x)
     { return front_insert_iterator<_Container>(__x); }
-# 882 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 894 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     class insert_iterator
     : public iterator<output_iterator_tag, void, void, void, void>
@@ -17199,7 +17188,7 @@ namespace std
       constexpr
       insert_iterator(_Container& __x, _Iter __i)
       : container(std::__addressof(__x)), iter(__i) {}
-# 943 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 955 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       constexpr
       insert_iterator&
       operator=(const typename _Container::value_type& __value)
@@ -17239,20 +17228,20 @@ namespace std
     };
 
 #pragma GCC diagnostic pop
-# 996 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1008 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Container>
     [[nodiscard]]
     constexpr insert_iterator<_Container>
     inserter(_Container& __x, std::__detail::__range_iter_t<_Container> __i)
     { return insert_iterator<_Container>(__x, __i); }
-# 1011 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1023 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
 
 }
 
 namespace __gnu_cxx
 {
 
-# 1025 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1037 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Iterator, typename _Container>
     class __normal_iterator
     {
@@ -17262,9 +17251,9 @@ namespace __gnu_cxx
       typedef std::iterator_traits<_Iterator> __traits_type;
 
 
-
-
-
+      template<typename _Iter>
+ using __convertible_from
+   = std::__enable_if_t<std::is_convertible<_Iter, _Iterator>::value>;
 
 
     public:
@@ -17279,45 +17268,33 @@ namespace __gnu_cxx
       using iterator_concept = std::__detail::__iter_concept<_Iterator>;
 
 
-      __attribute__((__always_inline__))
-      constexpr
-      __normal_iterator() noexcept
-      : _M_current() { }
+      constexpr __normal_iterator() noexcept
+      : _M_current(_Iterator()) { }
 
-      __attribute__((__always_inline__))
       explicit constexpr
       __normal_iterator(const _Iterator& __i) noexcept
       : _M_current(__i) { }
 
 
 
-
-      template<typename _Iter> requires std::is_convertible_v<_Iter, _Iterator>
-
-
-
- [[__gnu__::__always_inline__]]
+      template<typename _Iter, typename = __convertible_from<_Iter>>
  constexpr
  __normal_iterator(const __normal_iterator<_Iter, _Container>& __i)
  noexcept
-# 1082 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1085 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
         : _M_current(__i.base()) { }
 
 
-
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       reference
       operator*() const noexcept
       { return *_M_current; }
 
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       pointer
       operator->() const noexcept
       { return _M_current; }
 
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator&
       operator++() noexcept
@@ -17326,15 +17303,12 @@ namespace __gnu_cxx
  return *this;
       }
 
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator
       operator++(int) noexcept
       { return __normal_iterator(_M_current++); }
 
 
-
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator&
       operator--() noexcept
@@ -17343,53 +17317,45 @@ namespace __gnu_cxx
  return *this;
       }
 
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator
       operator--(int) noexcept
       { return __normal_iterator(_M_current--); }
 
 
-
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       reference
       operator[](difference_type __n) const noexcept
       { return _M_current[__n]; }
 
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator&
       operator+=(difference_type __n) noexcept
       { _M_current += __n; return *this; }
 
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       __normal_iterator
       operator+(difference_type __n) const noexcept
       { return __normal_iterator(_M_current + __n); }
 
-      __attribute__((__always_inline__))
       constexpr
       __normal_iterator&
       operator-=(difference_type __n) noexcept
       { _M_current -= __n; return *this; }
 
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       __normal_iterator
       operator-(difference_type __n) const noexcept
       { return __normal_iterator(_M_current - __n); }
 
-      [[__nodiscard__]] __attribute__((__always_inline__))
       constexpr
       const _Iterator&
       base() const noexcept
       { return _M_current; }
     };
-# 1178 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1166 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR, typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
+    [[nodiscard]]
     constexpr bool
     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
         const __normal_iterator<_IteratorR, _Container>& __rhs)
@@ -17400,7 +17366,7 @@ namespace __gnu_cxx
     { return __lhs.base() == __rhs.base(); }
 
   template<typename _IteratorL, typename _IteratorR, typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
+    [[nodiscard]]
     constexpr std::__detail::__synth3way_t<_IteratorR, _IteratorL>
     operator<=>(const __normal_iterator<_IteratorL, _Container>& __lhs,
   const __normal_iterator<_IteratorR, _Container>& __rhs)
@@ -17408,7 +17374,7 @@ namespace __gnu_cxx
     { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
 
   template<typename _Iterator, typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
+    [[nodiscard]]
     constexpr bool
     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
         const __normal_iterator<_Iterator, _Container>& __rhs)
@@ -17419,18 +17385,18 @@ namespace __gnu_cxx
     { return __lhs.base() == __rhs.base(); }
 
   template<typename _Iterator, typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
+    [[nodiscard]]
     constexpr std::__detail::__synth3way_t<_Iterator>
     operator<=>(const __normal_iterator<_Iterator, _Container>& __lhs,
   const __normal_iterator<_Iterator, _Container>& __rhs)
     noexcept(noexcept(std::__detail::__synth3way(__lhs.base(), __rhs.base())))
     { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
-# 1319 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1307 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR, typename _Container>
 
 
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    constexpr auto
+    [[__nodiscard__]] constexpr
+    inline auto
     operator-(const __normal_iterator<_IteratorL, _Container>& __lhs,
        const __normal_iterator<_IteratorR, _Container>& __rhs) noexcept
     -> decltype(__lhs.base() - __rhs.base())
@@ -17442,7 +17408,7 @@ namespace __gnu_cxx
     { return __lhs.base() - __rhs.base(); }
 
   template<typename _Iterator, typename _Container>
-    [[__nodiscard__]] __attribute__((__always_inline__)) constexpr
+    [[__nodiscard__]] constexpr
     inline typename __normal_iterator<_Iterator, _Container>::difference_type
     operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
        const __normal_iterator<_Iterator, _Container>& __rhs)
@@ -17450,7 +17416,7 @@ namespace __gnu_cxx
     { return __lhs.base() - __rhs.base(); }
 
   template<typename _Iterator, typename _Container>
-    [[__nodiscard__]] __attribute__((__always_inline__)) constexpr
+    [[__nodiscard__]] constexpr
     inline __normal_iterator<_Iterator, _Container>
     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
        __n, const __normal_iterator<_Iterator, _Container>& __i)
@@ -17463,7 +17429,14 @@ namespace __gnu_cxx
 namespace std
 {
 
-# 1365 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+
+  template<typename _Iterator, typename _Container>
+    constexpr
+    _Iterator
+    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
+    { return __it.base(); }
+# 1371 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<semiregular _Sent>
     class move_sentinel
     {
@@ -17507,6 +17480,7 @@ namespace std
 
   namespace __detail
   {
+
     template<typename _Iterator>
       struct __move_iter_cat
       { };
@@ -17519,8 +17493,9 @@ namespace std
    = __clamp_iter_cat<__iter_category_t<_Iterator>,
         random_access_iterator_tag>;
       };
+
   }
-# 1434 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1439 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Iterator>
     class move_iterator
 
@@ -17571,7 +17546,7 @@ namespace std
       using difference_type = iter_difference_t<_Iterator>;
       using pointer = _Iterator;
       using reference = iter_rvalue_reference_t<_Iterator>;
-# 1498 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1503 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
       constexpr
       move_iterator()
       : _M_current() { }
@@ -17751,7 +17726,7 @@ namespace std
     operator<=>(const move_iterator<_IteratorL>& __x,
   const move_iterator<_IteratorR>& __y)
     { return __x.base() <=> __y.base(); }
-# 1686 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1691 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR>
     [[__nodiscard__]]
     inline constexpr bool
@@ -17800,7 +17775,6 @@ namespace std
     inline constexpr bool
     operator==(const move_iterator<_Iterator>& __x,
         const move_iterator<_Iterator>& __y)
-
     { return __x.base() == __y.base(); }
 
 
@@ -17810,7 +17784,7 @@ namespace std
     operator<=>(const move_iterator<_Iterator>& __x,
   const move_iterator<_Iterator>& __y)
     { return __x.base() <=> __y.base(); }
-# 1782 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
+# 1786 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _IteratorL, typename _IteratorR>
     [[__nodiscard__]]
     inline constexpr auto
@@ -17824,9 +17798,6 @@ namespace std
     inline constexpr move_iterator<_Iterator>
     operator+(typename move_iterator<_Iterator>::difference_type __n,
        const move_iterator<_Iterator>& __x)
-
-    requires requires { { __x.base() + __n } -> same_as<_Iterator>; }
-
     { return __x + __n; }
 
   template<typename _Iterator>
@@ -17839,8 +17810,7 @@ namespace std
     = __conditional_t<__move_if_noexcept_cond
       <typename iterator_traits<_Iterator>::value_type>::value,
   _Iterator, move_iterator<_Iterator>>>
-    [[__nodiscard__]]
-    constexpr _ReturnType
+    inline constexpr _ReturnType
     __make_move_if_noexcept_iterator(_Iterator __i)
     { return _ReturnType(__i); }
 
@@ -17849,23 +17819,9 @@ namespace std
   template<typename _Tp, typename _ReturnType
     = __conditional_t<__move_if_noexcept_cond<_Tp>::value,
         const _Tp*, move_iterator<_Tp*>>>
-    [[__nodiscard__]]
-    constexpr _ReturnType
+    inline constexpr _ReturnType
     __make_move_if_noexcept_iterator(_Tp* __i)
     { return _ReturnType(__i); }
-
-  template<typename _Iterator>
-    struct __is_move_iterator<move_iterator<_Iterator> >
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 1843 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
-  template<typename _Iterator1, typename _Iterator2>
-    requires (!sized_sentinel_for<_Iterator1, _Iterator2>)
-    inline constexpr bool
-    disable_sized_sentinel_for<move_iterator<_Iterator1>,
-          move_iterator<_Iterator2>> = true;
 
 
 
@@ -17884,7 +17840,6 @@ namespace std
    && constructible_from<iter_value_t<_It>, iter_reference_t<_It>>
    && move_constructible<iter_value_t<_It>>;
   }
-
 
 
   template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
@@ -17966,7 +17921,7 @@ namespace std
       noexcept(_S_noexcept<const _It2&, const _Sent2&>())
       : _M_valueless(), _M_index(__x._M_index)
       {
- do { if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 1948, __PRETTY_FUNCTION__, "__x._M_has_value()"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
  if (_M_index == 0)
    {
      if constexpr (is_trivially_default_constructible_v<_It>)
@@ -18076,7 +18031,7 @@ namespace std
         && is_nothrow_assignable_v<_It&, const _It2&>
         && is_nothrow_assignable_v<_Sent&, const _Sent2&>)
       {
- do { if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2058, __PRETTY_FUNCTION__, "__x._M_has_value()"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
  _M_assign(__x);
  return *this;
       }
@@ -18103,7 +18058,7 @@ namespace std
     constexpr decltype(auto)
     operator*()
     {
-      do { if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2085, __PRETTY_FUNCTION__, "_M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       return *_M_it;
     }
 
@@ -18111,7 +18066,7 @@ namespace std
     constexpr decltype(auto)
     operator*() const requires __detail::__dereferenceable<const _It>
     {
-      do { if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2093, __PRETTY_FUNCTION__, "_M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       return *_M_it;
     }
 
@@ -18119,7 +18074,7 @@ namespace std
     constexpr auto
     operator->() const requires __detail::__common_iter_has_arrow<_It>
     {
-      do { if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2101, __PRETTY_FUNCTION__, "_M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       if constexpr (is_pointer_v<_It> || requires { _M_it.operator->(); })
  return _M_it;
       else if constexpr (is_reference_v<iter_reference_t<_It>>)
@@ -18134,7 +18089,7 @@ namespace std
     constexpr common_iterator&
     operator++()
     {
-      do { if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2116, __PRETTY_FUNCTION__, "_M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       ++_M_it;
       return *this;
     }
@@ -18142,7 +18097,7 @@ namespace std
     constexpr decltype(auto)
     operator++(int)
     {
-      do { if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2124, __PRETTY_FUNCTION__, "_M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       if constexpr (forward_iterator<_It>)
  {
    common_iterator __tmp = *this;
@@ -18175,8 +18130,8 @@ namespace std
    case 0b0100:
      return __x._M_sent == __y._M_it;
    default:
-     do { if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2157, __PRETTY_FUNCTION__, "__x._M_has_value()"); } while (false);
-     do { if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2158, __PRETTY_FUNCTION__, "__y._M_has_value()"); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
      __builtin_unreachable();
    }
       }
@@ -18198,8 +18153,8 @@ namespace std
    case 0b0100:
      return __x._M_sent == __y._M_it;
    default:
-     do { if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2180, __PRETTY_FUNCTION__, "__x._M_has_value()"); } while (false);
-     do { if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2181, __PRETTY_FUNCTION__, "__y._M_has_value()"); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
      __builtin_unreachable();
    }
       }
@@ -18221,8 +18176,8 @@ namespace std
    case 0b0100:
      return __x._M_sent - __y._M_it;
    default:
-     do { if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2203, __PRETTY_FUNCTION__, "__x._M_has_value()"); } while (false);
-     do { if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2204, __PRETTY_FUNCTION__, "__y._M_has_value()"); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
      __builtin_unreachable();
    }
       }
@@ -18233,7 +18188,7 @@ namespace std
     noexcept(noexcept(ranges::iter_move(std::declval<const _It&>())))
     requires input_iterator<_It>
     {
-      do { if (__builtin_expect(!bool(__i._M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2215, __PRETTY_FUNCTION__, "__i._M_index == 0"); } while (false);
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
       return ranges::iter_move(__i._M_it);
     }
 
@@ -18244,8 +18199,8 @@ namespace std
       noexcept(noexcept(ranges::iter_swap(std::declval<const _It&>(),
        std::declval<const _It2&>())))
       {
- do { if (__builtin_expect(!bool(__x._M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2226, __PRETTY_FUNCTION__, "__x._M_index == 0"); } while (false);
- do { if (__builtin_expect(!bool(__y._M_index == 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2227, __PRETTY_FUNCTION__, "__y._M_index == 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
  return ranges::iter_swap(__x._M_it, __y._M_it);
       }
 
@@ -18344,7 +18299,6 @@ namespace std
 
 
 
-
   namespace __detail
   {
     template<typename _It>
@@ -18375,7 +18329,6 @@ namespace std
   }
 
 
-
   template<input_or_output_iterator _It>
     class counted_iterator
       : public __detail::__counted_iter_value_type<_It>,
@@ -18394,7 +18347,7 @@ namespace std
       constexpr
       counted_iterator(_It __i, iter_difference_t<_It> __n)
       : _M_current(std::move(__i)), _M_length(__n)
-      { do { if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2376, __PRETTY_FUNCTION__, "__n >= 0"); } while (false); }
+      { do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail(); } while (false); }
 
       template<typename _It2>
  requires convertible_to<const _It2&, _It>
@@ -18433,7 +18386,7 @@ namespace std
       operator*()
       noexcept(noexcept(*_M_current))
       {
- do { if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2415, __PRETTY_FUNCTION__, "_M_length > 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
  return *_M_current;
       }
 
@@ -18443,7 +18396,7 @@ namespace std
       noexcept(noexcept(*_M_current))
       requires __detail::__dereferenceable<const _It>
       {
- do { if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2425, __PRETTY_FUNCTION__, "_M_length > 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
  return *_M_current;
       }
 
@@ -18456,7 +18409,7 @@ namespace std
       constexpr counted_iterator&
       operator++()
       {
- do { if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2438, __PRETTY_FUNCTION__, "_M_length > 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
  ++_M_current;
  --_M_length;
  return *this;
@@ -18465,7 +18418,7 @@ namespace std
       constexpr decltype(auto)
       operator++(int)
       {
- do { if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2447, __PRETTY_FUNCTION__, "_M_length > 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
  --_M_length;
  try
    {
@@ -18516,7 +18469,7 @@ namespace std
       operator+=(iter_difference_t<_It> __n)
       requires random_access_iterator<_It>
       {
- do { if (__builtin_expect(!bool(__n <= _M_length), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2498, __PRETTY_FUNCTION__, "__n <= _M_length"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
  _M_current += __n;
  _M_length -= __n;
  return *this;
@@ -18549,7 +18502,7 @@ namespace std
       operator-=(iter_difference_t<_It> __n)
       requires random_access_iterator<_It>
       {
- do { if (__builtin_expect(!bool(-__n <= _M_length), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2531, __PRETTY_FUNCTION__, "-__n <= _M_length"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(-__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
  _M_current -= __n;
  _M_length += __n;
  return *this;
@@ -18561,7 +18514,7 @@ namespace std
       noexcept(noexcept(_M_current[__n]))
       requires random_access_iterator<_It>
       {
- do { if (__builtin_expect(!bool(__n < _M_length), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2543, __PRETTY_FUNCTION__, "__n < _M_length"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n < _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
  return _M_current[__n];
       }
 
@@ -18590,7 +18543,7 @@ namespace std
       noexcept(noexcept(ranges::iter_move(__i._M_current)))
       requires input_iterator<_It>
       {
- do { if (__builtin_expect(!bool(__i._M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2572, __PRETTY_FUNCTION__, "__i._M_length > 0"); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
  return ranges::iter_move(__i._M_current);
       }
 
@@ -18600,7 +18553,7 @@ namespace std
     const counted_iterator<_It2>& __y)
  noexcept(noexcept(ranges::iter_swap(__x._M_current, __y._M_current)))
  {
-   do { if (__builtin_expect(!bool(__x._M_length > 0 && __y._M_length > 0), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h", 2582, __PRETTY_FUNCTION__, "__x._M_length > 0 && __y._M_length > 0"); } while (false);
+   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_length > 0 && __y._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
    ranges::iter_swap(__x._M_current, __y._M_current);
  }
 
@@ -18619,102 +18572,28 @@ namespace std
           add_pointer_t<iter_reference_t<_It>>,
           void>;
     };
-# 2980 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
-
-}
-
-namespace __gnu_debug
-{
-  template<typename _Iterator, typename _Sequence, typename _Category>
-    class _Safe_iterator;
-}
-
-namespace std
-{
-
-
-
-
-
-  template<typename _Iterator, typename _Container>
-    [[__nodiscard__]] __attribute__((__always_inline__))
-    constexpr
-    inline _Iterator
-    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
-    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
-    { return __it.base(); }
-
-
-  template<typename _Iterator>
-    [[__nodiscard__]] __attribute__((__always_inline__))
-    constexpr
-    inline _Iterator
-    __niter_base(_Iterator __it)
-    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
-    { return __it; }
-# 3027 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_iterator.h" 3
-  template<typename _Ite, typename _Seq>
-    constexpr
-    decltype(std::__niter_base(std::declval<_Ite>()))
-    __niter_base(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq,
-   std::random_access_iterator_tag>&)
-    noexcept(std::is_nothrow_copy_constructible<_Ite>::value);
-
-
-
+# 2952 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _Iterator>
     constexpr
-    inline auto
-    __niter_base(reverse_iterator<_Iterator> __it)
-    -> decltype(__make_reverse_iterator(__niter_base(__it.base())))
-    { return __make_reverse_iterator(__niter_base(__it.base())); }
-
-  template<typename _Iterator>
-    constexpr
-    inline auto
+    auto
     __niter_base(move_iterator<_Iterator> __it)
     -> decltype(make_move_iterator(__niter_base(__it.base())))
     { return make_move_iterator(__niter_base(__it.base())); }
 
   template<typename _Iterator>
-    constexpr
-    inline auto
-    __miter_base(reverse_iterator<_Iterator> __it)
-    -> decltype(__make_reverse_iterator(__miter_base(__it.base())))
-    { return __make_reverse_iterator(__miter_base(__it.base())); }
+    struct __is_move_iterator<move_iterator<_Iterator> >
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
 
   template<typename _Iterator>
     constexpr
-    inline auto
+    auto
     __miter_base(move_iterator<_Iterator> __it)
     -> decltype(__miter_base(__it.base()))
     { return __miter_base(__it.base()); }
-
-
-
-
-
-
-  template<typename _From, typename _To>
-    [[__nodiscard__]]
-    constexpr
-    inline _From
-    __niter_wrap(_From __from, _To __res)
-    { return __from + (std::__niter_base(__res) - std::__niter_base(__from)); }
-
-
-  template<typename _Iterator>
-    [[__nodiscard__]] __attribute__((__always_inline__))
-    constexpr
-    inline _Iterator
-    __niter_wrap(const _Iterator&, _Iterator __res)
-    { return __res; }
-
-
-
-
-
-
+# 2984 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h" 3
   template<typename _InputIterator>
     using __iter_key_t = remove_const_t<
 
@@ -18741,10 +18620,10 @@ namespace std
 
 
 }
-# 68 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
+# 68 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/debug/debug.h" 1 3
-# 48 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/debug/debug.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/debug/debug.h" 1 3
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/debug/debug.h" 3
 namespace std
 {
   namespace __debug { }
@@ -18760,10 +18639,10 @@ namespace __gnu_debug
   template<typename _Ite, typename _Seq, typename _Cat>
     struct _Safe_iterator;
 }
-# 70 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
+# 70 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/predefined_ops.h" 1 3
-# 35 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/predefined_ops.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h" 1 3
+# 35 "C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h" 3
 namespace __gnu_cxx
 {
 namespace __ops
@@ -19135,20 +19014,26 @@ namespace __ops
 
 }
 }
-# 72 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
+# 72 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
 
 
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 1 3
-# 63 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/version.h" 1 3
-# 64 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 1 3
+# 32 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
+       
+# 33 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
+# 61 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+       
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/version.h" 3
+# 62 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 2 3
 
 namespace std
 {
 
-# 87 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+# 85 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
   template<typename _To, typename _From>
     [[nodiscard]]
     constexpr _To
@@ -19160,7 +19045,7 @@ namespace std
     {
       return __builtin_bit_cast(_To, __from);
     }
-# 157 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+# 155 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
   template<typename _Tp>
     constexpr _Tp
     __rotl(_Tp __x, int __s) noexcept
@@ -19212,9 +19097,43 @@ namespace std
       using __gnu_cxx::__int_traits;
       constexpr auto _Nd = __int_traits<_Tp>::__digits;
 
+      if (__x == 0)
+        return _Nd;
 
-      return __builtin_clzg(__x, _Nd);
-# 249 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ {
+   constexpr int __diff = _Nd_u - _Nd;
+   return __builtin_clz(__x) - __diff;
+ }
+      else if constexpr (_Nd <= _Nd_ul)
+ {
+   constexpr int __diff = _Nd_ul - _Nd;
+   return __builtin_clzl(__x) - __diff;
+ }
+      else if constexpr (_Nd <= _Nd_ull)
+ {
+   constexpr int __diff = _Nd_ull - _Nd;
+   return __builtin_clzll(__x) - __diff;
+ }
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   unsigned long long __high = __x >> _Nd_ull;
+   if (__high != 0)
+     {
+       constexpr int __diff = (2 * _Nd_ull) - _Nd;
+       return __builtin_clzll(__high) - __diff;
+     }
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   return (_Nd - _Nd_ull) + __builtin_clzll(__low);
+ }
     }
 
   template<typename _Tp>
@@ -19231,9 +19150,31 @@ namespace std
       using __gnu_cxx::__int_traits;
       constexpr auto _Nd = __int_traits<_Tp>::__digits;
 
+      if (__x == 0)
+        return _Nd;
 
-      return __builtin_ctzg(__x, _Nd);
-# 294 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ return __builtin_ctz(__x);
+      else if constexpr (_Nd <= _Nd_ul)
+ return __builtin_ctzl(__x);
+      else if constexpr (_Nd <= _Nd_ull)
+ return __builtin_ctzll(__x);
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   if (__low != 0)
+     return __builtin_ctzll(__low);
+   unsigned long long __high = __x >> _Nd_ull;
+   return __builtin_ctzll(__high) + _Nd_ull;
+ }
     }
 
   template<typename _Tp>
@@ -19247,9 +19188,29 @@ namespace std
     constexpr int
     __popcount(_Tp __x) noexcept
     {
+      using __gnu_cxx::__int_traits;
+      constexpr auto _Nd = __int_traits<_Tp>::__digits;
 
-      return __builtin_popcountg(__x);
-# 334 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ return __builtin_popcount(__x);
+      else if constexpr (_Nd <= _Nd_ul)
+ return __builtin_popcountl(__x);
+      else if constexpr (_Nd <= _Nd_ull)
+ return __builtin_popcountll(__x);
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   unsigned long long __high = __x >> _Nd_ull;
+   return __builtin_popcountll(__low) + __builtin_popcountll(__high);
+ }
     }
 
   template<typename _Tp>
@@ -19272,7 +19233,7 @@ namespace std
 
       if (!std::__is_constant_evaluated())
  {
-   do { if (__builtin_expect(!bool(__shift_exponent != __int_traits<_Tp>::__digits), false)) std::__glibcxx_assert_fail("C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit", 356, __PRETTY_FUNCTION__, "__shift_exponent != __int_traits<_Tp>::__digits"); } while (false);
+   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__shift_exponent != __int_traits<_Tp>::__digits), false)) std::__glibcxx_assert_fail(); } while (false);
  }
 
       using __promoted_type = decltype(__x << 1);
@@ -19391,7 +19352,7 @@ namespace std
     constexpr int
     bit_width(_Tp __x) noexcept
     { return std::__bit_width(__x); }
-# 486 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bit" 3
+# 472 "C:/msys64/ucrt64/include/c++/14.2.0/bit" 3
   enum class endian
   {
     little = 1234,
@@ -19404,8 +19365,7 @@ namespace std
 
 
 }
-# 77 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 2 3
-
+# 77 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 2 3
 
 
 
@@ -19439,7 +19399,7 @@ namespace std
 
  return __builtin_memcmp(__first1, __first2, sizeof(_Tp) * __num);
     }
-# 153 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 152 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     constexpr
     inline void
@@ -19449,11 +19409,11 @@ namespace std
      
 
      
-# 186 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 185 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
       swap(*__a, *__b);
 
     }
-# 202 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 201 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     constexpr
     _ForwardIterator2
@@ -19471,7 +19431,7 @@ namespace std
  std::iter_swap(__first1, __first2);
       return __first2;
     }
-# 231 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 230 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _Tp>
     [[__nodiscard__]] constexpr
     inline const _Tp&
@@ -19484,7 +19444,7 @@ namespace std
  return __b;
       return __a;
     }
-# 255 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 254 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _Tp>
     [[__nodiscard__]] constexpr
     inline const _Tp&
@@ -19497,7 +19457,7 @@ namespace std
  return __b;
       return __a;
     }
-# 279 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 278 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _Tp, typename _Compare>
     [[__nodiscard__]] constexpr
     inline const _Tp&
@@ -19508,7 +19468,7 @@ namespace std
  return __b;
       return __a;
     }
-# 301 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 300 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _Tp, typename _Compare>
     [[__nodiscard__]] constexpr
     inline const _Tp&
@@ -19519,6 +19479,143 @@ namespace std
  return __b;
       return __a;
     }
+
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __niter_base(_Iterator __it)
+    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
+    { return __it; }
+# 332 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
+  template<typename _Ite, typename _Seq>
+    constexpr
+    decltype(std::__niter_base(std::declval<_Ite>()))
+    __niter_base(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq,
+   std::random_access_iterator_tag>&)
+    noexcept(std::is_nothrow_copy_constructible<_Ite>::value);
+
+
+
+
+
+  template<typename _From, typename _To>
+    constexpr
+    inline _From
+    __niter_wrap(_From __from, _To __res)
+    { return __from + (std::__niter_base(__res) - std::__niter_base(__from)); }
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __niter_wrap(const _Iterator&, _Iterator __res)
+    { return __res; }
+
+
+
+
+
+
+
+  template<bool _IsMove, bool _IsSimple, typename _Category>
+    struct __copy_move
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   for (; __first != __last; ++__result, (void)++__first)
+     *__result = *__first;
+   return __result;
+ }
+    };
+
+
+  template<typename _Category>
+    struct __copy_move<true, false, _Category>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   for (; __first != __last; ++__result, (void)++__first)
+     *__result = std::move(*__first);
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move<false, false, random_access_iterator_tag>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   typedef typename iterator_traits<_II>::difference_type _Distance;
+   for(_Distance __n = __last - __first; __n > 0; --__n)
+     {
+       *__result = *__first;
+       ++__first;
+       ++__result;
+     }
+   return __result;
+ }
+
+      template<typename _Tp, typename _Up>
+ static void
+ __assign_one(_Tp* __to, _Up* __from)
+ { *__to = *__from; }
+    };
+
+
+  template<>
+    struct __copy_move<true, false, random_access_iterator_tag>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   typedef typename iterator_traits<_II>::difference_type _Distance;
+   for(_Distance __n = __last - __first; __n > 0; --__n)
+     {
+       *__result = std::move(*__first);
+       ++__first;
+       ++__result;
+     }
+   return __result;
+ }
+
+      template<typename _Tp, typename _Up>
+ static void
+ __assign_one(_Tp* __to, _Up* __from)
+ { *__to = std::move(*__from); }
+    };
+
+
+  template<bool _IsMove>
+    struct __copy_move<_IsMove, true, random_access_iterator_tag>
+    {
+      template<typename _Tp, typename _Up>
+ constexpr
+ static _Up*
+ __copy_m(_Tp* __first, _Tp* __last, _Up* __result)
+ {
+   const ptrdiff_t _Num = __last - __first;
+   if (__builtin_expect(_Num > 1, true))
+     __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+   else if (_Num == 1)
+     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
+       __assign_one(__result, __first);
+   return __result + _Num;
+ }
+    };
 
 
 
@@ -19569,87 +19666,20 @@ namespace std
  std::_Deque_iterator<_CharT, _CharT&, _CharT*>);
 
 
-
-  template<typename _OutIter, typename _InIter, typename _Sent = _InIter>
-    concept __memcpyable_iterators
-      = contiguous_iterator<_OutIter> && contiguous_iterator<_InIter>
-   && sized_sentinel_for<_Sent, _InIter>
-   && requires (_OutIter __o, _InIter __i) {
-     requires !!__memcpyable<decltype(std::to_address(__o)),
-        decltype(std::to_address(__i))>::__value;
-   };
-# 395 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
-  template<bool _IsMove, typename _OutIter, typename _InIter>
-    __attribute__((__always_inline__)) constexpr
-    inline void
-    __assign_one(_OutIter& __out, _InIter& __in)
-    {
-
-      if constexpr (_IsMove)
- *__out = std::move(*__in);
-      else
-
- *__out = *__in;
-    }
-
-  template<bool _IsMove, typename _InIter, typename _Sent, typename _OutIter>
+  template<bool _IsMove, typename _II, typename _OI>
     constexpr
-    inline _OutIter
-    __copy_move_a2(_InIter __first, _Sent __last, _OutIter __result)
+    inline _OI
+    __copy_move_a2(_II __first, _II __last, _OI __result)
     {
-      typedef __decltype(*__first) _InRef;
-      typedef __decltype(*__result) _OutRef;
-      if constexpr (!__is_trivially_assignable(_OutRef, _InRef))
- { }
-      else if (std::__is_constant_evaluated())
- { }
-      else if constexpr (__memcpyable<_OutIter, _InIter>::__value)
- {
-   ptrdiff_t __n = std::distance(__first, __last);
-   if (__builtin_expect(__n > 1, true))
-     {
-       __builtin_memmove(__result,
-    __first,
-    __n * sizeof(*__first));
-       __result += __n;
-     }
-   else if (__n == 1)
-     {
-       std::__assign_one<_IsMove>(__result, __first);
-       ++__result;
-     }
-   return __result;
- }
+      typedef typename iterator_traits<_II>::iterator_category _Category;
 
-      else if constexpr (__memcpyable_iterators<_OutIter, _InIter, _Sent>)
- {
-   if (auto __n = __last - __first; __n > 1) [[likely]]
-     {
-       void* __dest = std::to_address(__result);
-       const void* __src = std::to_address(__first);
-       size_t __nbytes = __n * sizeof(iter_value_t<_InIter>);
+      if (std::is_constant_evaluated())
+ return std::__copy_move<_IsMove, false, _Category>::
+   __copy_m(__first, __last, __result);
 
-
-       (void) std::to_address(__result += __n);
-       (void) std::to_address(__first += __n);
-       __builtin_memmove(__dest, __src, __nbytes);
-     }
-   else if (__n == 1)
-     {
-       std::__assign_one<_IsMove>(__result, __first);
-       ++__result;
-     }
-   return __result;
- }
-
-
-      for (; __first != __last; ++__result, (void)++__first)
- std::__assign_one<_IsMove>(__result, __first);
-      return __result;
+      return std::__copy_move<_IsMove, __memcpyable<_OI, _II>::__value,
+         _Category>::__copy_m(__first, __last, __result);
     }
-#pragma GCC diagnostic pop
 
   template<bool _IsMove,
     typename _Tp, typename _Ref, typename _Ptr, typename _OI>
@@ -19672,14 +19702,12 @@ namespace std
     __copy_move_a1(_II, _II, std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
 
   template<bool _IsMove, typename _II, typename _OI>
-    __attribute__((__always_inline__))
     constexpr
     inline _OI
     __copy_move_a1(_II __first, _II __last, _OI __result)
     { return std::__copy_move_a2<_IsMove>(__first, __last, __result); }
 
   template<bool _IsMove, typename _II, typename _OI>
-    __attribute__((__always_inline__))
     constexpr
     inline _OI
     __copy_move_a(_II __first, _II __last, _OI __result)
@@ -19714,57 +19742,12 @@ namespace std
     const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
     const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
   template<typename _InputIterator, typename _Size, typename _OutputIterator>
     constexpr
     _OutputIterator
     __copy_n_a(_InputIterator __first, _Size __n, _OutputIterator __result,
         bool)
     {
-      typedef __decltype(*__first) _InRef;
-      typedef __decltype(*__result) _OutRef;
-      if constexpr (!__is_trivially_assignable(_OutRef, _InRef))
- { }
-
-      else if (std::is_constant_evaluated())
- { }
-
-      else if constexpr (__memcpyable<_OutputIterator,
-            _InputIterator>::__value)
- {
-   if (__builtin_expect(__n > 1, true))
-     {
-       __builtin_memmove(__result,
-    __first,
-    __n * sizeof(*__first));
-       __result += __n;
-     }
-   else if (__n == 1)
-     *__result++ = *__first;
-   return __result;
- }
-
-      else if constexpr (__memcpyable_iterators<_OutputIterator,
-      _InputIterator>)
- {
-   if (__n > 1) [[likely]]
-     {
-       void* __dest = std::to_address(__result);
-       const void* __src = std::to_address(__first);
-       size_t __nbytes = __n * sizeof(iter_value_t<_InputIterator>);
-
-
-       (void) std::to_address(__result += __n);
-       (void) std::to_address(__first += __n);
-       __builtin_memmove(__dest, __src, __nbytes);
-     }
-   else if (__n == 1)
-     *__result++ = *__first;
-   return __result;
- }
-
-
       if (__n > 0)
  {
    while (true)
@@ -19779,7 +19762,6 @@ namespace std
  }
       return __result;
     }
-#pragma GCC diagnostic pop
 
 
   template<typename _CharT, typename _Size>
@@ -19795,7 +19777,7 @@ namespace std
     __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >, _Size,
         std::_Deque_iterator<_CharT, _CharT&, _CharT*>,
         bool);
-# 630 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 639 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II, typename _OI>
     constexpr
     inline _OI
@@ -19810,7 +19792,7 @@ namespace std
       return std::__copy_move_a<__is_move_iterator<_II>::__value>
       (std::__miter_base(__first), std::__miter_base(__last), __result);
     }
-# 663 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 672 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II, typename _OI>
     constexpr
     inline _OI
@@ -19831,73 +19813,107 @@ namespace std
 
 
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
+  template<bool _IsMove, bool _IsSimple, typename _Category>
+    struct __copy_move_backward
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   while (__first != __last)
+     *--__result = *--__last;
+   return __result;
+ }
+    };
+
+
+  template<typename _Category>
+    struct __copy_move_backward<true, false, _Category>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   while (__first != __last)
+     *--__result = std::move(*--__last);
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move_backward<false, false, random_access_iterator_tag>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   typename iterator_traits<_BI1>::difference_type
+     __n = __last - __first;
+   for (; __n > 0; --__n)
+     *--__result = *--__last;
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move_backward<true, false, random_access_iterator_tag>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   typename iterator_traits<_BI1>::difference_type
+     __n = __last - __first;
+   for (; __n > 0; --__n)
+     *--__result = std::move(*--__last);
+   return __result;
+ }
+    };
+
+
+  template<bool _IsMove>
+    struct __copy_move_backward<_IsMove, true, random_access_iterator_tag>
+    {
+      template<typename _Tp, typename _Up>
+ constexpr
+ static _Up*
+ __copy_move_b(_Tp* __first, _Tp* __last, _Up* __result)
+ {
+   const ptrdiff_t _Num = __last - __first;
+   if (__builtin_expect(_Num > 1, true))
+     __builtin_memmove(__result - _Num, __first, sizeof(_Tp) * _Num);
+   else if (_Num == 1)
+     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
+       __assign_one(__result - 1, __first);
+   return __result - _Num;
+ }
+    };
+
   template<bool _IsMove, typename _BI1, typename _BI2>
     constexpr
     inline _BI2
     __copy_move_backward_a2(_BI1 __first, _BI1 __last, _BI2 __result)
     {
-      typedef __decltype(*__first) _InRef;
-      typedef __decltype(*__result) _OutRef;
-      if constexpr (!__is_trivially_assignable(_OutRef, _InRef))
-       { }
+      typedef typename iterator_traits<_BI1>::iterator_category _Category;
 
-      else if (std::is_constant_evaluated())
-       { }
+      if (std::is_constant_evaluated())
+ return std::__copy_move_backward<_IsMove, false, _Category>::
+   __copy_move_b(__first, __last, __result);
 
-      else if constexpr (__memcpyable<_BI2, _BI1>::__value)
- {
-   ptrdiff_t __n = std::distance(__first, __last);
-   std::advance(__result, -__n);
-   if (__builtin_expect(__n > 1, true))
-     {
-       __builtin_memmove(__result,
-    __first,
-    __n * sizeof(*__first));
-     }
-   else if (__n == 1)
-     std::__assign_one<_IsMove>(__result, __first);
-   return __result;
- }
-
-      else if constexpr (__memcpyable_iterators<_BI2, _BI1>)
- {
-   if (auto __n = __last - __first; __n > 1) [[likely]]
-     {
-       const void* __src = std::to_address(__first);
-
-
-       (void) std::to_address(__result -= __n);
-       (void) std::to_address(__first += __n);
-       void* __dest = std::to_address(__result);
-       size_t __nbytes = __n * sizeof(iter_value_t<_BI1>);
-       __builtin_memmove(__dest, __src, __nbytes);
-     }
-   else if (__n == 1)
-     {
-       --__result;
-       std::__assign_one<_IsMove>(__result, __first);
-     }
-   return __result;
- }
-
-
-      while (__first != __last)
- {
-   --__last;
-   --__result;
-   std::__assign_one<_IsMove>(__result, __last);
- }
-      return __result;
+      return std::__copy_move_backward<_IsMove,
+           __memcpyable<_BI2, _BI1>::__value,
+           _Category>::__copy_move_b(__first,
+         __last,
+         __result);
     }
-#pragma GCC diagnostic pop
-
-
-
 
   template<bool _IsMove, typename _BI1, typename _BI2>
-    __attribute__((__always_inline__))
     constexpr
     inline _BI2
     __copy_move_backward_a1(_BI1 __first, _BI1 __last, _BI2 __result)
@@ -19926,7 +19942,6 @@ namespace std
        std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
 
   template<bool _IsMove, typename _II, typename _OI>
-    __attribute__((__always_inline__))
     constexpr
     inline _OI
     __copy_move_backward_a(_II __first, _II __last, _OI __result)
@@ -19962,9 +19977,8 @@ namespace std
   const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
   const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
   const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
-# 833 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 875 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _BI1, typename _BI2>
-    __attribute__((__always_inline__))
     constexpr
     inline _BI2
     copy_backward(_BI1 __first, _BI1 __last, _BI2 __result)
@@ -19979,9 +19993,8 @@ namespace std
       return std::__copy_move_backward_a<__is_move_iterator<_BI1>::__value>
       (std::__miter_base(__first), std::__miter_base(__last), __result);
     }
-# 869 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 910 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _BI1, typename _BI2>
-    __attribute__((__always_inline__))
     constexpr
     inline _BI2
     move_backward(_BI1 __first, _BI1 __last, _BI2 __result)
@@ -20003,70 +20016,50 @@ namespace std
 
 
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
   template<typename _ForwardIterator, typename _Tp>
     constexpr
-    inline void
+    inline typename
+    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
     __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
        const _Tp& __value)
     {
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
-
-
-
-
-      const bool __load_outside_loop =
-
-
-     __is_trivially_constructible(_Tp, const _Tp&)
-     && __is_trivially_assignable(__decltype(*__first), const _Tp&)
-
-
-
-
-     && sizeof(_Tp) <= sizeof(long long);
-#pragma GCC diagnostic pop
-
-
-
-      typedef typename __gnu_cxx::__conditional_type<__load_outside_loop,
-           const _Tp,
-           const _Tp&>::__type _Up;
-      _Up __val(__value);
       for (; __first != __last; ++__first)
- *__first = __val;
+ *__first = __value;
     }
-#pragma GCC diagnostic pop
 
-
-  template<typename _Up, typename _Tp>
+  template<typename _ForwardIterator, typename _Tp>
     constexpr
     inline typename
-    __gnu_cxx::__enable_if<__is_byte<_Up>::__value
-        && (__are_same<_Up, _Tp>::__value
-       || __memcpyable_integer<_Tp>::__width),
-      void>::__type
-    __fill_a1(_Up* __first, _Up* __last, const _Tp& __x)
+    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, void>::__type
+    __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
+       const _Tp& __value)
     {
+      const _Tp __tmp = __value;
+      for (; __first != __last; ++__first)
+ *__first = __tmp;
+    }
 
 
-      const _Up __val = __x;
+  template<typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<__is_byte<_Tp>::__value, void>::__type
+    __fill_a1(_Tp* __first, _Tp* __last, const _Tp& __c)
+    {
+      const _Tp __tmp = __c;
 
       if (std::is_constant_evaluated())
  {
    for (; __first != __last; ++__first)
-     *__first = __val;
+     *__first = __tmp;
    return;
  }
 
       if (const size_t __len = __last - __first)
- __builtin_memset(__first, static_cast<unsigned char>(__val), __len);
+ __builtin_memset(__first, static_cast<unsigned char>(__tmp), __len);
     }
 
   template<typename _Ite, typename _Cont, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline void
     __fill_a1(::__gnu_cxx::__normal_iterator<_Ite, _Cont> __first,
@@ -20086,7 +20079,6 @@ namespace std
      const bool&);
 
   template<typename _FIte, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline void
     __fill_a(_FIte __first, _FIte __last, const _Tp& __value)
@@ -20098,9 +20090,8 @@ namespace std
     __fill_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
       const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
       const _Tp&);
-# 1000 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1019 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline void
     fill(_ForwardIterator __first, _ForwardIterator __last, const _Tp& __value)
@@ -20113,8 +20104,6 @@ namespace std
       std::__fill_a(__first, __last, __value);
     }
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wlong-long"
 
   inline constexpr int
   __size_to_integer(int __n) { return __n; }
@@ -20134,7 +20123,7 @@ namespace std
   __size_to_integer(__int128 __n) { return __n; }
   __extension__ inline constexpr unsigned __int128
   __size_to_integer(unsigned __int128 __n) { return __n; }
-# 1055 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1071 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   inline constexpr long long
   __size_to_integer(float __n) { return (long long)__n; }
   inline constexpr long long
@@ -20145,39 +20134,29 @@ namespace std
   __extension__ inline constexpr long long
   __size_to_integer(__float128 __n) { return (long long)__n; }
 
-#pragma GCC diagnostic pop
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
-#pragma GCC diagnostic ignored "-Wlong-long"
   template<typename _OutputIterator, typename _Size, typename _Tp>
     constexpr
-    inline _OutputIterator
+    inline typename
+    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
     __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
     {
-
-      const bool __load_outside_loop =
-
-
-     __is_trivially_constructible(_Tp, const _Tp&)
-     && __is_trivially_assignable(__decltype(*__first), const _Tp&)
-
-
-
-
-     && sizeof(_Tp) <= sizeof(long long);
-
-
-
-      typedef typename __gnu_cxx::__conditional_type<__load_outside_loop,
-           const _Tp,
-           const _Tp&>::__type _Up;
-      _Up __val(__value);
       for (; __n > 0; --__n, (void) ++__first)
- *__first = __val;
+ *__first = __value;
       return __first;
     }
-#pragma GCC diagnostic pop
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, _OutputIterator>::__type
+    __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
+    {
+      const _Tp __tmp = __value;
+      for (; __n > 0; --__n, (void) ++__first)
+ *__first = __tmp;
+      return __first;
+    }
 
   template<typename _Ite, typename _Seq, typename _Cat, typename _Size,
     typename _Tp>
@@ -20188,7 +20167,6 @@ namespace std
         std::input_iterator_tag);
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
@@ -20201,7 +20179,6 @@ namespace std
     }
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
@@ -20214,7 +20191,6 @@ namespace std
     }
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
@@ -20231,9 +20207,8 @@ namespace std
       std::__fill_a(__first, __first + __n, __value);
       return __first + __n;
     }
-# 1169 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1172 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _OI, typename _Size, typename _Tp>
-    __attribute__((__always_inline__))
     constexpr
     inline _OI
     fill_n(_OI __first, _Size __n, const _Tp& __value)
@@ -20301,19 +20276,12 @@ namespace std
     {
       typedef typename iterator_traits<_II1>::value_type _ValueType1;
       const bool __simple = ((__is_integer<_ValueType1>::__value
-
-    || __is_pointer(_ValueType1)
-
-
-
-    || is_same_v<_ValueType1, byte>
-
-        ) && __memcmpable<_II1, _II2>::__value);
+         || __is_pointer<_ValueType1>::__value)
+        && __memcmpable<_II1, _II2>::__value);
       return std::__equal<__simple>::equal(__first1, __last1, __first2);
     }
 
   template<typename _II1, typename _II2>
-    __attribute__((__always_inline__))
     constexpr
     inline bool
     __equal_aux(_II1 __first1, _II1 __last1, _II2 __first2)
@@ -20472,10 +20440,10 @@ namespace std
     {
       typedef typename iterator_traits<_II1>::value_type _ValueType1;
       typedef typename iterator_traits<_II2>::value_type _ValueType2;
-
       const bool __simple =
  (__is_memcmp_ordered_with<_ValueType1, _ValueType2>::__value
-  && __is_pointer(_II1) && __is_pointer(_II2)
+  && __is_pointer<_II1>::__value
+  && __is_pointer<_II2>::__value
 
 
 
@@ -20484,9 +20452,6 @@ namespace std
   && !is_volatile_v<remove_reference_t<iter_reference_t<_II2>>>
 
   );
-
-
-
 
       return std::__lexicographical_compare<__simple>::__lc(__first1, __last1,
            __first2, __last2);
@@ -20583,7 +20548,7 @@ namespace std
  }
       return __first;
     }
-# 1532 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1524 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
     [[__nodiscard__]] constexpr
     inline _ForwardIterator
@@ -20608,11 +20573,11 @@ namespace std
     {
 
       return std::__bit_width(make_unsigned_t<_Tp>(__n)) - 1;
-# 1568 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1557 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
     }
 
 
-# 1584 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1573 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20628,7 +20593,7 @@ namespace std
 
       return std::__equal_aux(__first1, __last1, __first2);
     }
-# 1615 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1604 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20647,9 +20612,6 @@ namespace std
     }
 
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wc++17-extensions"
-
 
   template<typename _II1, typename _II2>
     constexpr
@@ -20660,20 +20622,20 @@ namespace std
       using _Cat1 = typename iterator_traits<_II1>::iterator_category;
       using _Cat2 = typename iterator_traits<_II2>::iterator_category;
       using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-      if constexpr (_RAIters::value)
+      if (_RAIters())
  {
-   if ((__last1 - __first1) != (__last2 - __first2))
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 != __d2)
      return false;
    return std::equal(__first1, __last1, __first2);
  }
-      else
- {
-   for (; __first1 != __last1 && __first2 != __last2;
-        ++__first1, (void)++__first2)
-     if (!(*__first1 == *__first2))
-       return false;
-   return __first1 == __last1 && __first2 == __last2;
- }
+
+      for (; __first1 != __last1 && __first2 != __last2;
+   ++__first1, (void)++__first2)
+ if (!(*__first1 == *__first2))
+   return false;
+      return __first1 == __last1 && __first2 == __last2;
     }
 
 
@@ -20687,24 +20649,23 @@ namespace std
       using _Cat1 = typename iterator_traits<_II1>::iterator_category;
       using _Cat2 = typename iterator_traits<_II2>::iterator_category;
       using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-      if constexpr (_RAIters::value)
+      if (_RAIters())
  {
-   if ((__last1 - __first1) != (__last2 - __first2))
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 != __d2)
      return false;
    return std::equal(__first1, __last1, __first2,
            __binary_pred);
  }
-      else
- {
-   for (; __first1 != __last1 && __first2 != __last2;
-        ++__first1, (void)++__first2)
-     if (!bool(__binary_pred(*__first1, *__first2)))
-       return false;
-   return __first1 == __last1 && __first2 == __last2;
- }
+
+      for (; __first1 != __last1 && __first2 != __last2;
+   ++__first1, (void)++__first2)
+ if (!bool(__binary_pred(*__first1, *__first2)))
+   return false;
+      return __first1 == __last1 && __first2 == __last2;
     }
-#pragma GCC diagnostic pop
-# 1706 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1691 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20721,7 +20682,7 @@ namespace std
 
       return std::__equal4(__first1, __last1, __first2, __last2);
     }
-# 1739 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1724 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20737,7 +20698,7 @@ namespace std
       return std::__equal4(__first1, __last1, __first2, __last2,
           __binary_pred);
     }
-# 1771 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1756 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20759,7 +20720,7 @@ namespace std
       return std::__lexicographical_compare_aux(__first1, __last1,
       __first2, __last2);
     }
-# 1806 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1791 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2, typename _Compare>
     [[__nodiscard__]] constexpr
     inline bool
@@ -20802,7 +20763,7 @@ namespace std
  return _Res{__y, __c};
       return _Res{__x, __c};
     }
-# 1860 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1845 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _InputIter1, typename _InputIter2, typename _Comp>
     [[nodiscard]] constexpr auto
     lexicographical_compare_three_way(_InputIter1 __first1,
@@ -20878,7 +20839,7 @@ namespace std
  }
       return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
     }
-# 1949 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1934 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
     [[__nodiscard__]] constexpr
     inline pair<_InputIterator1, _InputIterator2>
@@ -20896,7 +20857,7 @@ namespace std
       return std::__mismatch(__first1, __last1, __first2,
         __gnu_cxx::__ops::__iter_equal_to_iter());
     }
-# 1983 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 1968 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
     [[__nodiscard__]] constexpr
@@ -20930,7 +20891,7 @@ namespace std
  }
       return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
     }
-# 2031 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 2016 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
     [[__nodiscard__]] constexpr
     inline pair<_InputIterator1, _InputIterator2>
@@ -20949,7 +20910,7 @@ namespace std
       return std::__mismatch(__first1, __last1, __first2, __last2,
         __gnu_cxx::__ops::__iter_equal_to_iter());
     }
-# 2067 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 2052 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
     [[__nodiscard__]] constexpr
@@ -20972,15 +20933,76 @@ namespace std
 
 
 
+  template<typename _InputIterator, typename _Predicate>
+    constexpr
+    inline _InputIterator
+    __find_if(_InputIterator __first, _InputIterator __last,
+       _Predicate __pred, input_iterator_tag)
+    {
+      while (__first != __last && !__pred(__first))
+ ++__first;
+      return __first;
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Predicate>
+    constexpr
+    _RandomAccessIterator
+    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Predicate __pred, random_access_iterator_tag)
+    {
+      typename iterator_traits<_RandomAccessIterator>::difference_type
+ __trip_count = (__last - __first) >> 2;
+
+      for (; __trip_count > 0; --__trip_count)
+ {
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+ }
+
+      switch (__last - __first)
+ {
+ case 3:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 2:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 1:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 0:
+ default:
+   return __last;
+ }
+    }
+
   template<typename _Iterator, typename _Predicate>
     constexpr
     inline _Iterator
     __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
     {
-#pragma GCC unroll 4
-      while (__first != __last && !__pred(__first))
- ++__first;
-      return __first;
+      return __find_if(__first, __last, __pred,
+         std::__iterator_category(__first));
     }
 
   template<typename _InputIterator, typename _Predicate>
@@ -21100,7 +21122,7 @@ namespace std
  }
       return true;
     }
-# 2230 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 2276 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
     constexpr
     inline bool
@@ -21121,7 +21143,7 @@ namespace std
 
 
 
-# 2272 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/stl_algobase.h" 3
+# 2318 "C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2,
     typename _BinaryPredicate>
     constexpr
@@ -21146,14 +21168,12 @@ namespace std
 
 
 }
-# 44 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 1 3
-# 44 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-#pragma GCC diagnostic ignored "-Wlong-long"
-#pragma GCC diagnostic ignored "-Wc++23-extensions"
-# 165 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 44 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 1 3
+# 40 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
+       
+# 41 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
+# 158 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
 namespace std
 {
 
@@ -21187,7 +21207,7 @@ namespace std
 
     denorm_present = 1
   };
-# 209 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 202 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   struct __numeric_limits_base
   {
 
@@ -21266,7 +21286,7 @@ namespace std
 
 
     static constexpr bool is_bounded = false;
-# 295 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 288 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
     static constexpr bool is_modulo = false;
 
 
@@ -21281,7 +21301,7 @@ namespace std
     static constexpr float_round_style round_style =
           round_toward_zero;
   };
-# 318 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 311 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   template<typename _Tp>
     struct numeric_limits : public __numeric_limits_base
     {
@@ -21345,7 +21365,7 @@ namespace std
   template<typename _Tp>
     struct numeric_limits<const volatile _Tp>
     : public numeric_limits<_Tp> { };
-# 390 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 383 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   template<>
     struct numeric_limits<bool>
     {
@@ -22442,9 +22462,9 @@ namespace std
       static constexpr float_round_style round_style
        = round_toward_zero;
     };
-# 1644 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 1637 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   __extension__ template<> struct numeric_limits<__int128> { static constexpr bool is_specialized = true; static constexpr __int128 min() noexcept { return (((__int128)(-1) < 0) ? -(((__int128)(-1) < 0) ? (((((__int128)1 << ((128 - ((__int128)(-1) < 0)) - 1)) - 1) << 1) + 1) : ~(__int128)0) - 1 : (__int128)0); } static constexpr __int128 max() noexcept { return (((__int128)(-1) < 0) ? (((((__int128)1 << ((128 - ((__int128)(-1) < 0)) - 1)) - 1) << 1) + 1) : ~(__int128)0); } static constexpr int digits = 128 - 1; static constexpr int digits10 = (128 - 1) * 643L / 2136; static constexpr bool is_signed = true; static constexpr bool is_integer = true; static constexpr bool is_exact = true; static constexpr int radix = 2; static constexpr __int128 epsilon() noexcept { return 0; } static constexpr __int128 round_error() noexcept { return 0; } static constexpr __int128 lowest() noexcept { return min(); } static constexpr int max_digits10 = 0; static constexpr int min_exponent = 0; static constexpr int min_exponent10 = 0; static constexpr int max_exponent = 0; static constexpr int max_exponent10 = 0; static constexpr bool has_infinity = false; static constexpr bool has_quiet_NaN = false; static constexpr bool has_signaling_NaN = false; static constexpr float_denorm_style has_denorm = denorm_absent; static constexpr bool has_denorm_loss = false; static constexpr __int128 infinity() noexcept { return static_cast<__int128>(0); } static constexpr __int128 quiet_NaN() noexcept { return static_cast<__int128>(0); } static constexpr __int128 signaling_NaN() noexcept { return static_cast<__int128>(0); } static constexpr __int128 denorm_min() noexcept { return static_cast<__int128>(0); } static constexpr bool is_iec559 = false; static constexpr bool is_bounded = true; static constexpr bool is_modulo = false; static constexpr bool traps = true; static constexpr bool tinyness_before = false; static constexpr float_round_style round_style = round_toward_zero; }; __extension__ template<> struct numeric_limits<unsigned __int128> { static constexpr bool is_specialized = true; static constexpr unsigned __int128 min() noexcept { return 0; } static constexpr unsigned __int128 max() noexcept { return (((unsigned __int128)(-1) < 0) ? (((((unsigned __int128)1 << ((128 - ((unsigned __int128)(-1) < 0)) - 1)) - 1) << 1) + 1) : ~(unsigned __int128)0); } static constexpr unsigned __int128 lowest() noexcept { return min(); } static constexpr int max_digits10 = 0; static constexpr int digits = 128; static constexpr int digits10 = 128 * 643L / 2136; static constexpr bool is_signed = false; static constexpr bool is_integer = true; static constexpr bool is_exact = true; static constexpr int radix = 2; static constexpr unsigned __int128 epsilon() noexcept { return 0; } static constexpr unsigned __int128 round_error() noexcept { return 0; } static constexpr int min_exponent = 0; static constexpr int min_exponent10 = 0; static constexpr int max_exponent = 0; static constexpr int max_exponent10 = 0; static constexpr bool has_infinity = false; static constexpr bool has_quiet_NaN = false; static constexpr bool has_signaling_NaN = false; static constexpr float_denorm_style has_denorm = denorm_absent; static constexpr bool has_denorm_loss = false; static constexpr unsigned __int128 infinity() noexcept { return static_cast<unsigned __int128>(0); } static constexpr unsigned __int128 quiet_NaN() noexcept { return static_cast<unsigned __int128>(0); } static constexpr unsigned __int128 signaling_NaN() noexcept { return static_cast<unsigned __int128>(0); } static constexpr unsigned __int128 denorm_min() noexcept { return static_cast<unsigned __int128>(0); } static constexpr bool is_iec559 = false; static constexpr bool is_bounded = true; static constexpr bool is_modulo = true; static constexpr bool traps = true; static constexpr bool tinyness_before = false; static constexpr float_round_style round_style = round_toward_zero; };
-# 1676 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 1669 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   template<>
     struct numeric_limits<float>
     {
@@ -22664,7 +22684,7 @@ namespace std
       static constexpr float_round_style round_style =
             round_to_nearest;
     };
-# 1996 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 1989 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
 __extension__ template<> struct numeric_limits<_Float32> { static constexpr bool is_specialized = true; static constexpr _Float32 min() noexcept { return 1.17549435082228750796873653722224568e-38F32; } static constexpr _Float32 max() noexcept { return 3.40282346638528859811704183484516925e+38F32; } static constexpr _Float32 lowest() noexcept { return -3.40282346638528859811704183484516925e+38F32; } static constexpr int digits = 24; static constexpr int digits10 = 6; static constexpr int max_digits10 = (2 + (24) * 643L / 2136); static constexpr bool is_signed = true; static constexpr bool is_integer = false; static constexpr bool is_exact = false; static constexpr int radix = 2; static constexpr _Float32 epsilon() noexcept { return 1.19209289550781250000000000000000000e-7F32; } static constexpr _Float32 round_error() noexcept { return 0.5F32; } static constexpr int min_exponent = (-125); static constexpr int min_exponent10 = (-37); static constexpr int max_exponent = 128; static constexpr int max_exponent10 = 38; static constexpr bool has_infinity = 1; static constexpr bool has_quiet_NaN = 1; static constexpr bool has_signaling_NaN = has_quiet_NaN; static constexpr float_denorm_style has_denorm = bool(1) ? denorm_present : denorm_absent; static constexpr bool has_denorm_loss = false; static constexpr _Float32 infinity() noexcept { return __builtin_huge_valf32(); } static constexpr _Float32 quiet_NaN() noexcept { return __builtin_nanf32(""); } static constexpr _Float32 signaling_NaN() noexcept { return __builtin_nansf32(""); } static constexpr _Float32 denorm_min() noexcept { return 1.40129846432481707092372958328991613e-45F32; } static constexpr bool is_iec559 = has_infinity && has_quiet_NaN && has_denorm == denorm_present; static constexpr bool is_bounded = true; static constexpr bool is_modulo = false; static constexpr bool traps = false; static constexpr bool tinyness_before = false; static constexpr float_round_style round_style = round_to_nearest; };
 
 
@@ -22672,7 +22692,7 @@ __extension__ template<> struct numeric_limits<_Float64> { static constexpr bool
 
 
 __extension__ template<> struct numeric_limits<_Float128> { static constexpr bool is_specialized = true; static constexpr _Float128 min() noexcept { return 3.36210314311209350626267781732175260e-4932F128; } static constexpr _Float128 max() noexcept { return 1.18973149535723176508575932662800702e+4932F128; } static constexpr _Float128 lowest() noexcept { return -1.18973149535723176508575932662800702e+4932F128; } static constexpr int digits = 113; static constexpr int digits10 = 33; static constexpr int max_digits10 = (2 + (113) * 643L / 2136); static constexpr bool is_signed = true; static constexpr bool is_integer = false; static constexpr bool is_exact = false; static constexpr int radix = 2; static constexpr _Float128 epsilon() noexcept { return 1.92592994438723585305597794258492732e-34F128; } static constexpr _Float128 round_error() noexcept { return 0.5F128; } static constexpr int min_exponent = (-16381); static constexpr int min_exponent10 = (-4931); static constexpr int max_exponent = 16384; static constexpr int max_exponent10 = 4932; static constexpr bool has_infinity = 1; static constexpr bool has_quiet_NaN = 1; static constexpr bool has_signaling_NaN = has_quiet_NaN; static constexpr float_denorm_style has_denorm = bool(1) ? denorm_present : denorm_absent; static constexpr bool has_denorm_loss = false; static constexpr _Float128 infinity() noexcept { return __builtin_huge_valf128(); } static constexpr _Float128 quiet_NaN() noexcept { return __builtin_nanf128(""); } static constexpr _Float128 signaling_NaN() noexcept { return __builtin_nansf128(""); } static constexpr _Float128 denorm_min() noexcept { return 6.47517511943802511092443895822764655e-4966F128; } static constexpr bool is_iec559 = has_infinity && has_quiet_NaN && has_denorm == denorm_present; static constexpr bool is_bounded = true; static constexpr bool is_modulo = false; static constexpr bool traps = false; static constexpr bool tinyness_before = false; static constexpr float_round_style round_style = round_to_nearest; };
-# 2094 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 2087 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
   __extension__
   template<>
     struct numeric_limits<__float128>
@@ -22781,26 +22801,24 @@ __extension__ template<> struct numeric_limits<_Float128> { static constexpr boo
       static constexpr bool tinyness_before = false;
       static constexpr float_round_style round_style
  = round_to_nearest;
-# 2225 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
+# 2218 "C:/msys64/ucrt64/include/c++/14.2.0/limits" 3
     };
 
 
 
 
 }
-# 2239 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/limits" 3
-#pragma GCC diagnostic pop
-# 45 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
+# 45 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
 
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 1 3
-# 49 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/special_function_util.h" 1 3
-# 39 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/special_function_util.h" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 1 3
+# 49 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/special_function_util.h" 1 3
+# 39 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/special_function_util.h" 3
 namespace std
 {
 
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/special_function_util.h" 3
+# 50 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/special_function_util.h" 3
   namespace __detail
   {
 
@@ -22857,11 +22875,11 @@ namespace std
         static _Tp __euler() throw()
         { return static_cast<_Tp>(2.7182818284590452353602874713526625L); }
       };
-# 114 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/special_function_util.h" 3
+# 114 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/special_function_util.h" 3
     template<typename _Tp>
     inline bool __isnan(_Tp __x)
     { return std::isnan(__x); }
-# 133 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/special_function_util.h" 3
+# 133 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/special_function_util.h" 3
   }
 
 
@@ -22869,15 +22887,15 @@ namespace std
 
 
 }
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 2 3
+# 50 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 2 3
 
 namespace std
 {
 
-# 65 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
   namespace __detail
   {
-# 76 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 76 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template <typename _Tp>
     _Tp
     __bernoulli_series(unsigned int __n)
@@ -22933,12 +22951,12 @@ namespace std
 
       return __fact * __sum;
     }
-# 139 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 139 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     inline _Tp
     __bernoulli(int __n)
     { return __bernoulli_series<_Tp>(__n); }
-# 153 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 153 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __log_gamma_bernoulli(_Tp __x)
@@ -22958,7 +22976,7 @@ namespace std
 
       return __lg;
     }
-# 181 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 181 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __log_gamma_lanczos(_Tp __x)
@@ -22992,7 +23010,7 @@ namespace std
 
       return __result;
     }
-# 225 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 225 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __log_gamma(_Tp __x)
@@ -23011,7 +23029,7 @@ namespace std
                      - __log_gamma_lanczos(_Tp(1) - __x);
         }
     }
-# 252 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 252 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __log_gamma_sign(_Tp __x)
@@ -23030,7 +23048,7 @@ namespace std
             return _Tp(0);
         }
     }
-# 283 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 283 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __log_bincoef(unsigned int __n, unsigned int __k)
@@ -23049,7 +23067,7 @@ namespace std
 
 
     }
-# 314 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 314 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __bincoef(unsigned int __n, unsigned int __k)
@@ -23065,12 +23083,12 @@ namespace std
       else
         return std::exp(__log_coeff);
     }
-# 337 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 337 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     inline _Tp
     __gamma(_Tp __x)
     { return std::exp(__log_gamma(__x)); }
-# 356 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 356 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __psi_series(_Tp __x)
@@ -23086,7 +23104,7 @@ namespace std
         }
       return __sum;
     }
-# 386 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 386 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __psi_asymp(_Tp __x)
@@ -23105,7 +23123,7 @@ namespace std
         }
       return __sum;
     }
-# 417 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 417 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __psi(_Tp __x)
@@ -23125,7 +23143,7 @@ namespace std
       else
         return __psi_series(__x);
     }
-# 446 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/gamma.tcc" 3
+# 446 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/gamma.tcc" 3
     template<typename _Tp>
     _Tp
     __psi(unsigned int __n, _Tp __x)
@@ -23157,16 +23175,16 @@ namespace std
 
 
 }
-# 48 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 1 3
-# 55 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 48 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 1 3
+# 55 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
 namespace std
 {
 
-# 71 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 71 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
   namespace __detail
   {
-# 98 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 98 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     void
     __gamma_temme(_Tp __mu,
@@ -23189,7 +23207,7 @@ namespace std
 
       return;
     }
-# 136 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 136 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     void
     __bessel_jn(_Tp __nu, _Tp __x,
@@ -23397,7 +23415,7 @@ namespace std
 
       return;
     }
-# 361 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 361 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     void
     __cyl_bessel_jn_asymp(_Tp __nu, _Tp __x, _Tp & __Jnu, _Tp & __Nnu)
@@ -23452,7 +23470,7 @@ namespace std
 
       return;
     }
-# 444 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 444 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     _Tp
     __cyl_bessel_ij_series(_Tp __nu, _Tp __x, _Tp __sgn,
@@ -23483,7 +23501,7 @@ namespace std
 
       return __fact * __Jn;
     }
-# 490 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 490 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template<typename _Tp>
     _Tp
     __cyl_bessel_j(_Tp __nu, _Tp __x)
@@ -23508,7 +23526,7 @@ namespace std
           return __J_nu;
         }
     }
-# 532 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 532 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template<typename _Tp>
     _Tp
     __cyl_neumann_n(_Tp __nu, _Tp __x)
@@ -23531,7 +23549,7 @@ namespace std
           return __N_nu;
         }
     }
-# 569 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 569 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     void
     __sph_bessel_jn(unsigned int __n, _Tp __x,
@@ -23552,7 +23570,7 @@ namespace std
 
       return;
     }
-# 604 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 604 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     _Tp
     __sph_bessel(unsigned int __n, _Tp __x)
@@ -23576,7 +23594,7 @@ namespace std
           return __j_n;
         }
     }
-# 642 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/bessel_function.tcc" 3
+# 642 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/bessel_function.tcc" 3
     template <typename _Tp>
     _Tp
     __sph_neumann(unsigned int __n, _Tp __x)
@@ -23603,16 +23621,16 @@ namespace std
 
 
 }
-# 49 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 1 3
-# 49 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 49 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 1 3
+# 49 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
 namespace std
 {
 
-# 65 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
   namespace __detail
   {
-# 79 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 79 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
     template<typename _Tp>
     _Tp
     __beta_gamma(_Tp __x, _Tp __y)
@@ -23632,10 +23650,10 @@ namespace std
                 / ::std::tgamma(__x + __y);
           __bet *= ::std::tgamma(__x);
         }
-# 111 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 111 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
       return __bet;
     }
-# 127 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 127 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
     template<typename _Tp>
     _Tp
     __beta_lgamma(_Tp __x, _Tp __y)
@@ -23652,7 +23670,7 @@ namespace std
       __bet = std::exp(__bet);
       return __bet;
     }
-# 158 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 158 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
     template<typename _Tp>
     _Tp
     __beta_product(_Tp __x, _Tp __y)
@@ -23670,7 +23688,7 @@ namespace std
 
       return __bet;
     }
-# 189 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/beta_function.tcc" 3
+# 189 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/beta_function.tcc" 3
     template<typename _Tp>
     inline _Tp
     __beta(_Tp __x, _Tp __y)
@@ -23688,16 +23706,16 @@ namespace std
 
 
 }
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 1 3
-# 45 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 50 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 1 3
+# 45 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
 namespace std
 {
 
-# 59 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 59 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
   namespace __detail
   {
-# 76 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 76 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_rf(_Tp __x, _Tp __y, _Tp __z)
@@ -23757,7 +23775,7 @@ namespace std
           return __s / std::sqrt(__mu);
         }
     }
-# 153 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 153 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __comp_ellint_1_series(_Tp __k)
@@ -23779,7 +23797,7 @@ namespace std
 
       return __numeric_constants<_Tp>::__pi_2() * __sum;
     }
-# 191 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 191 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __comp_ellint_1(_Tp __k)
@@ -23792,7 +23810,7 @@ namespace std
       else
         return __ellint_rf(_Tp(0), _Tp(1) - __k * __k, _Tp(1));
     }
-# 219 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 219 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_1(_Tp __k, _Tp __phi)
@@ -23823,7 +23841,7 @@ namespace std
             return __F + _Tp(2) * __n * __comp_ellint_1(__k);
         }
     }
-# 266 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 266 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __comp_ellint_2_series(_Tp __k)
@@ -23847,7 +23865,7 @@ namespace std
 
       return __numeric_constants<_Tp>::__pi_2() * (_Tp(1) - __sum);
     }
-# 314 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 314 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_rd(_Tp __x, _Tp __y, _Tp __z)
@@ -23919,7 +23937,7 @@ namespace std
                                         / (__mu * std::sqrt(__mu));
         }
     }
-# 399 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 399 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __comp_ellint_2(_Tp __k)
@@ -23939,7 +23957,7 @@ namespace std
                - __kk * __ellint_rd(_Tp(0), _Tp(1) - __kk, _Tp(1)) / _Tp(3);
         }
     }
-# 433 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 433 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_2(_Tp __k, _Tp __phi)
@@ -23976,7 +23994,7 @@ namespace std
             return __E + _Tp(2) * __n * __comp_ellint_2(__k);
         }
     }
-# 492 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 492 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_rc(_Tp __x, _Tp __y)
@@ -24022,7 +24040,7 @@ namespace std
           return (_Tp(1) + __s) / std::sqrt(__mu);
         }
     }
-# 561 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 561 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_rj(_Tp __x, _Tp __y, _Tp __z, _Tp __p)
@@ -24105,7 +24123,7 @@ namespace std
                                              / (__mu * std::sqrt(__mu));
         }
     }
-# 661 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 661 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __comp_ellint_3(_Tp __k, _Tp __nu)
@@ -24127,7 +24145,7 @@ namespace std
                / _Tp(3);
         }
     }
-# 701 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/ell_integral.tcc" 3
+# 701 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/ell_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __ellint_3(_Tp __k, _Tp __nu, _Tp __phi)
@@ -24171,17 +24189,17 @@ namespace std
 
 
 }
-# 51 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 1 3
-# 50 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 51 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 1 3
+# 50 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
 namespace std
 {
 
-# 64 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 64 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
   namespace __detail
   {
     template<typename _Tp> _Tp __expint_E1(_Tp);
-# 81 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 81 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_E1_series(_Tp __x)
@@ -24205,7 +24223,7 @@ namespace std
       return - __esum - __osum
              - __numeric_constants<_Tp>::__gamma_e() - std::log(__x);
     }
-# 118 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 118 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_E1_asymp(_Tp __x)
@@ -24228,7 +24246,7 @@ namespace std
 
       return std::exp(- __x) * (__esum + __osum) / __x;
     }
-# 155 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 155 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_En_series(unsigned int __n, _Tp __x)
@@ -24260,7 +24278,7 @@ namespace std
       std::__throw_runtime_error(("Series summation failed " "in __expint_En_series.")
                                                               );
     }
-# 201 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 201 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_En_cont_frac(unsigned int __n, _Tp __x)
@@ -24290,7 +24308,7 @@ namespace std
       std::__throw_runtime_error(("Continued fraction failed " "in __expint_En_cont_frac.")
                                                                  );
     }
-# 246 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 246 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_En_recursion(unsigned int __n, _Tp __x)
@@ -24322,7 +24340,7 @@ namespace std
 
       return __En;
     }
-# 290 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 290 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_Ei_series(_Tp __x)
@@ -24340,7 +24358,7 @@ namespace std
 
       return __numeric_constants<_Tp>::__gamma_e() + __sum + std::log(__x);
     }
-# 321 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 321 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_Ei_asymp(_Tp __x)
@@ -24361,7 +24379,7 @@ namespace std
 
       return std::exp(__x) * __sum / __x;
     }
-# 354 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 354 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_Ei(_Tp __x)
@@ -24373,7 +24391,7 @@ namespace std
       else
         return __expint_Ei_asymp(__x);
     }
-# 378 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 378 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_E1(_Tp __x)
@@ -24387,7 +24405,7 @@ namespace std
       else
         return __expint_E1_asymp(__x);
     }
-# 408 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 408 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_asymp(unsigned int __n, _Tp __x)
@@ -24405,7 +24423,7 @@ namespace std
 
       return std::exp(-__x) * __sum / __x;
     }
-# 442 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 442 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint_large_n(unsigned int __n, _Tp __x)
@@ -24425,7 +24443,7 @@ namespace std
 
       return std::exp(-__x) * __sum / __xpn;
     }
-# 476 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 476 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     _Tp
     __expint(unsigned int __n, _Tp __x)
@@ -24453,7 +24471,7 @@ namespace std
           return __En;
         }
     }
-# 516 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/exp_integral.tcc" 3
+# 516 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/exp_integral.tcc" 3
     template<typename _Tp>
     inline _Tp
     __expint(_Tp __x)
@@ -24470,16 +24488,16 @@ namespace std
 
 
 }
-# 52 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 1 3
-# 44 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 52 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 1 3
+# 44 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
 namespace std
 {
 
-# 60 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 60 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
   namespace __detail
   {
-# 83 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 83 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __conf_hyperg_series(_Tp __a, _Tp __c, _Tp __x)
@@ -24506,7 +24524,7 @@ namespace std
 
       return __Fac;
     }
-# 120 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 120 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __conf_hyperg_luke(_Tp __a, _Tp __c, _Tp __xin)
@@ -24601,7 +24619,7 @@ namespace std
 
       return __F;
     }
-# 227 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 227 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __conf_hyperg(_Tp __a, _Tp __c, _Tp __x)
@@ -24624,7 +24642,7 @@ namespace std
       else
         return __conf_hyperg_series(__a, __c, __x);
     }
-# 271 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 271 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __hyperg_series(_Tp __a, _Tp __b, _Tp __c, _Tp __x)
@@ -24760,7 +24778,7 @@ namespace std
 
       return __F;
     }
-# 438 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 438 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __hyperg_reflect(_Tp __a, _Tp __b, _Tp __c, _Tp __x)
@@ -25032,7 +25050,7 @@ namespace std
           return __F;
         }
     }
-# 728 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/hypergeometric.tcc" 3
+# 728 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/hypergeometric.tcc" 3
     template<typename _Tp>
     _Tp
     __hyperg(_Tp __a, _Tp __b, _Tp __c, _Tp __x)
@@ -25089,16 +25107,16 @@ namespace std
 
 
 }
-# 53 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 1 3
-# 49 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 3
+# 53 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 1 3
+# 49 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 3
 namespace std
 {
 
-# 65 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 3
   namespace __detail
   {
-# 80 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 3
+# 80 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 3
     template<typename _Tp>
     _Tp
     __poly_legendre_p(unsigned int __l, _Tp __x)
@@ -25134,7 +25152,7 @@ namespace std
           return __p_l;
         }
     }
-# 136 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 3
+# 136 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 3
     template<typename _Tp>
     _Tp
     __assoc_legendre_p(unsigned int __l, unsigned int __m, _Tp __x,
@@ -25183,7 +25201,7 @@ namespace std
           return __p_lm;
         }
     }
-# 214 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/legendre_function.tcc" 3
+# 214 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/legendre_function.tcc" 3
     template <typename _Tp>
     _Tp
     __sph_legendre(unsigned int __l, unsigned int __m, _Tp __theta)
@@ -25273,16 +25291,16 @@ namespace std
 
 
 }
-# 54 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 1 3
-# 51 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 54 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 1 3
+# 51 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
 namespace std
 {
 
-# 65 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 65 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
   namespace __detail
   {
-# 83 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 83 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
     template <typename _Tp>
     void
     __bessel_ik(_Tp __nu, _Tp __x,
@@ -25451,7 +25469,7 @@ namespace std
 
       return;
     }
-# 267 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 267 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
     template<typename _Tp>
     _Tp
     __cyl_bessel_i(_Tp __nu, _Tp __x)
@@ -25470,7 +25488,7 @@ namespace std
           return __I_nu;
         }
     }
-# 303 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 303 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
     template<typename _Tp>
     _Tp
     __cyl_bessel_k(_Tp __nu, _Tp __x)
@@ -25487,7 +25505,7 @@ namespace std
           return __K_nu;
         }
     }
-# 337 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 337 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
     template <typename _Tp>
     void
     __sph_bessel_ik(unsigned int __n, _Tp __x,
@@ -25508,7 +25526,7 @@ namespace std
 
       return;
     }
-# 373 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/modified_bessel_func.tcc" 3
+# 373 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/modified_bessel_func.tcc" 3
     template <typename _Tp>
     void
     __airy(_Tp __x, _Tp & __Ai, _Tp & __Bi, _Tp & __Aip, _Tp & __Bip)
@@ -25586,16 +25604,16 @@ namespace std
 
 
 }
-# 55 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_hermite.tcc" 1 3
-# 42 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_hermite.tcc" 3
+# 55 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc" 1 3
+# 42 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc" 3
 namespace std
 {
 
-# 56 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_hermite.tcc" 3
+# 56 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc" 3
   namespace __detail
   {
-# 72 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_hermite.tcc" 3
+# 72 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc" 3
     template<typename _Tp>
     _Tp
     __poly_hermite_recursion(unsigned int __n, _Tp __x)
@@ -25622,7 +25640,7 @@ namespace std
 
       return __H_n;
     }
-# 114 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_hermite.tcc" 3
+# 114 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_hermite.tcc" 3
     template<typename _Tp>
     inline _Tp
     __poly_hermite(unsigned int __n, _Tp __x)
@@ -25639,16 +25657,16 @@ namespace std
 
 
 }
-# 56 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 1 3
-# 44 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 56 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 1 3
+# 44 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
 namespace std
 {
 
-# 60 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 60 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
   namespace __detail
   {
-# 75 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 75 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tpa, typename _Tp>
     _Tp
     __poly_laguerre_large_n(unsigned __n, _Tpa __alpha1, _Tp __x)
@@ -25685,7 +25703,7 @@ namespace std
 
       return std::exp(__lnpre) * __ser;
     }
-# 129 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 129 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tpa, typename _Tp>
     _Tp
     __poly_laguerre_hyperg(unsigned int __n, _Tpa __alpha1, _Tp __x)
@@ -25711,7 +25729,7 @@ namespace std
 
       return __sum;
     }
-# 185 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 185 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tpa, typename _Tp>
     _Tp
     __poly_laguerre_recursion(unsigned int __n, _Tpa __alpha1, _Tp __x)
@@ -25741,7 +25759,7 @@ namespace std
 
       return __l_n;
     }
-# 244 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 244 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tpa, typename _Tp>
     _Tp
     __poly_laguerre(unsigned int __n, _Tpa __alpha1, _Tp __x)
@@ -25772,12 +25790,12 @@ namespace std
       else
         return __poly_laguerre_hyperg(__n, __alpha1, __x);
     }
-# 296 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 296 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tp>
     inline _Tp
     __assoc_laguerre(unsigned int __n, unsigned int __m, _Tp __x)
     { return __poly_laguerre<unsigned int, _Tp>(__n, __m, __x); }
-# 316 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/poly_laguerre.tcc" 3
+# 316 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc" 3
     template<typename _Tp>
     inline _Tp
     __laguerre(unsigned int __n, _Tp __x)
@@ -25790,16 +25808,16 @@ namespace std
 
 
 }
-# 57 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 1 3
-# 47 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 57 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 1 3
+# 47 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
 namespace std
 {
 
-# 63 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 63 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
   namespace __detail
   {
-# 78 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 78 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __riemann_zeta_sum(_Tp __s)
@@ -25822,7 +25840,7 @@ namespace std
 
       return __zeta;
     }
-# 115 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 115 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __riemann_zeta_alt(_Tp __s)
@@ -25841,7 +25859,7 @@ namespace std
 
       return __zeta;
     }
-# 157 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 157 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __riemann_zeta_glob(_Tp __s)
@@ -25918,7 +25936,7 @@ namespace std
 
       return __zeta;
     }
-# 252 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 252 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __riemann_zeta_product(_Tp __s)
@@ -25944,7 +25962,7 @@ namespace std
 
       return __zeta;
     }
-# 293 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 293 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __riemann_zeta(_Tp __s)
@@ -25994,7 +26012,7 @@ namespace std
       else
         return __riemann_zeta_product(__s);
     }
-# 365 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 365 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     _Tp
     __hurwitz_zeta_glob(_Tp __a, _Tp __s)
@@ -26045,7 +26063,7 @@ namespace std
 
       return __zeta;
     }
-# 430 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/tr1/riemann_zeta.tcc" 3
+# 430 "C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc" 3
     template<typename _Tp>
     inline _Tp
     __hurwitz_zeta(_Tp __a, _Tp __s)
@@ -26058,12 +26076,12 @@ namespace std
 
 
 }
-# 58 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 2 3
+# 58 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 2 3
 
 namespace std
 {
 
-# 203 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 203 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   assoc_laguerref(unsigned int __n, unsigned int __m, float __x)
   { return __detail::__assoc_laguerre<float>(__n, __m, __x); }
@@ -26077,7 +26095,7 @@ namespace std
   inline long double
   assoc_laguerrel(unsigned int __n, unsigned int __m, long double __x)
   { return __detail::__assoc_laguerre<long double>(__n, __m, __x); }
-# 248 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 248 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     assoc_laguerre(unsigned int __n, unsigned int __m, _Tp __x)
@@ -26085,7 +26103,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__assoc_laguerre<__type>(__n, __m, __x);
     }
-# 264 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 264 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   assoc_legendref(unsigned int __l, unsigned int __m, float __x)
   { return __detail::__assoc_legendre_p<float>(__l, __m, __x); }
@@ -26098,7 +26116,7 @@ namespace std
   inline long double
   assoc_legendrel(unsigned int __l, unsigned int __m, long double __x)
   { return __detail::__assoc_legendre_p<long double>(__l, __m, __x); }
-# 294 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 294 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     assoc_legendre(unsigned int __l, unsigned int __m, _Tp __x)
@@ -26106,7 +26124,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__assoc_legendre_p<__type>(__l, __m, __x);
     }
-# 309 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 309 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   betaf(float __a, float __b)
   { return __detail::__beta<float>(__a, __b); }
@@ -26120,7 +26138,7 @@ namespace std
   inline long double
   betal(long double __a, long double __b)
   { return __detail::__beta<long double>(__a, __b); }
-# 339 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 339 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpa, typename _Tpb>
     inline typename __gnu_cxx::__promote_2<_Tpa, _Tpb>::__type
     beta(_Tpa __a, _Tpb __b)
@@ -26128,7 +26146,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tpa, _Tpb>::__type __type;
       return __detail::__beta<__type>(__a, __b);
     }
-# 355 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 355 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   comp_ellint_1f(float __k)
   { return __detail::__comp_ellint_1<float>(__k); }
@@ -26142,7 +26160,7 @@ namespace std
   inline long double
   comp_ellint_1l(long double __k)
   { return __detail::__comp_ellint_1<long double>(__k); }
-# 387 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 387 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     comp_ellint_1(_Tp __k)
@@ -26150,7 +26168,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__comp_ellint_1<__type>(__k);
     }
-# 403 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 403 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   comp_ellint_2f(float __k)
   { return __detail::__comp_ellint_2<float>(__k); }
@@ -26164,7 +26182,7 @@ namespace std
   inline long double
   comp_ellint_2l(long double __k)
   { return __detail::__comp_ellint_2<long double>(__k); }
-# 434 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 434 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     comp_ellint_2(_Tp __k)
@@ -26172,7 +26190,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__comp_ellint_2<__type>(__k);
     }
-# 450 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 450 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   comp_ellint_3f(float __k, float __nu)
   { return __detail::__comp_ellint_3<float>(__k, __nu); }
@@ -26186,7 +26204,7 @@ namespace std
   inline long double
   comp_ellint_3l(long double __k, long double __nu)
   { return __detail::__comp_ellint_3<long double>(__k, __nu); }
-# 485 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 485 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp, typename _Tpn>
     inline typename __gnu_cxx::__promote_2<_Tp, _Tpn>::__type
     comp_ellint_3(_Tp __k, _Tpn __nu)
@@ -26194,7 +26212,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tp, _Tpn>::__type __type;
       return __detail::__comp_ellint_3<__type>(__k, __nu);
     }
-# 501 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 501 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   cyl_bessel_if(float __nu, float __x)
   { return __detail::__cyl_bessel_i<float>(__nu, __x); }
@@ -26208,7 +26226,7 @@ namespace std
   inline long double
   cyl_bessel_il(long double __nu, long double __x)
   { return __detail::__cyl_bessel_i<long double>(__nu, __x); }
-# 531 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 531 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpnu, typename _Tp>
     inline typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type
     cyl_bessel_i(_Tpnu __nu, _Tp __x)
@@ -26216,7 +26234,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type __type;
       return __detail::__cyl_bessel_i<__type>(__nu, __x);
     }
-# 547 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 547 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   cyl_bessel_jf(float __nu, float __x)
   { return __detail::__cyl_bessel_j<float>(__nu, __x); }
@@ -26230,7 +26248,7 @@ namespace std
   inline long double
   cyl_bessel_jl(long double __nu, long double __x)
   { return __detail::__cyl_bessel_j<long double>(__nu, __x); }
-# 577 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 577 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpnu, typename _Tp>
     inline typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type
     cyl_bessel_j(_Tpnu __nu, _Tp __x)
@@ -26238,7 +26256,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type __type;
       return __detail::__cyl_bessel_j<__type>(__nu, __x);
     }
-# 593 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 593 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   cyl_bessel_kf(float __nu, float __x)
   { return __detail::__cyl_bessel_k<float>(__nu, __x); }
@@ -26252,7 +26270,7 @@ namespace std
   inline long double
   cyl_bessel_kl(long double __nu, long double __x)
   { return __detail::__cyl_bessel_k<long double>(__nu, __x); }
-# 629 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 629 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpnu, typename _Tp>
     inline typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type
     cyl_bessel_k(_Tpnu __nu, _Tp __x)
@@ -26260,7 +26278,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type __type;
       return __detail::__cyl_bessel_k<__type>(__nu, __x);
     }
-# 645 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 645 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   cyl_neumannf(float __nu, float __x)
   { return __detail::__cyl_neumann_n<float>(__nu, __x); }
@@ -26274,7 +26292,7 @@ namespace std
   inline long double
   cyl_neumannl(long double __nu, long double __x)
   { return __detail::__cyl_neumann_n<long double>(__nu, __x); }
-# 677 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 677 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpnu, typename _Tp>
     inline typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type
     cyl_neumann(_Tpnu __nu, _Tp __x)
@@ -26282,7 +26300,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tpnu, _Tp>::__type __type;
       return __detail::__cyl_neumann_n<__type>(__nu, __x);
     }
-# 693 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 693 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   ellint_1f(float __k, float __phi)
   { return __detail::__ellint_1<float>(__k, __phi); }
@@ -26296,7 +26314,7 @@ namespace std
   inline long double
   ellint_1l(long double __k, long double __phi)
   { return __detail::__ellint_1<long double>(__k, __phi); }
-# 725 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 725 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp, typename _Tpp>
     inline typename __gnu_cxx::__promote_2<_Tp, _Tpp>::__type
     ellint_1(_Tp __k, _Tpp __phi)
@@ -26304,7 +26322,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tp, _Tpp>::__type __type;
       return __detail::__ellint_1<__type>(__k, __phi);
     }
-# 741 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 741 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   ellint_2f(float __k, float __phi)
   { return __detail::__ellint_2<float>(__k, __phi); }
@@ -26318,7 +26336,7 @@ namespace std
   inline long double
   ellint_2l(long double __k, long double __phi)
   { return __detail::__ellint_2<long double>(__k, __phi); }
-# 773 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 773 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp, typename _Tpp>
     inline typename __gnu_cxx::__promote_2<_Tp, _Tpp>::__type
     ellint_2(_Tp __k, _Tpp __phi)
@@ -26326,7 +26344,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_2<_Tp, _Tpp>::__type __type;
       return __detail::__ellint_2<__type>(__k, __phi);
     }
-# 789 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 789 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   ellint_3f(float __k, float __nu, float __phi)
   { return __detail::__ellint_3<float>(__k, __nu, __phi); }
@@ -26340,7 +26358,7 @@ namespace std
   inline long double
   ellint_3l(long double __k, long double __nu, long double __phi)
   { return __detail::__ellint_3<long double>(__k, __nu, __phi); }
-# 826 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 826 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp, typename _Tpn, typename _Tpp>
     inline typename __gnu_cxx::__promote_3<_Tp, _Tpn, _Tpp>::__type
     ellint_3(_Tp __k, _Tpn __nu, _Tpp __phi)
@@ -26348,7 +26366,7 @@ namespace std
       typedef typename __gnu_cxx::__promote_3<_Tp, _Tpn, _Tpp>::__type __type;
       return __detail::__ellint_3<__type>(__k, __nu, __phi);
     }
-# 841 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 841 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   expintf(float __x)
   { return __detail::__expint<float>(__x); }
@@ -26362,7 +26380,7 @@ namespace std
   inline long double
   expintl(long double __x)
   { return __detail::__expint<long double>(__x); }
-# 866 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 866 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     expint(_Tp __x)
@@ -26370,7 +26388,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__expint<__type>(__x);
     }
-# 882 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 882 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   hermitef(unsigned int __n, float __x)
   { return __detail::__poly_hermite<float>(__n, __x); }
@@ -26384,7 +26402,7 @@ namespace std
   inline long double
   hermitel(unsigned int __n, long double __x)
   { return __detail::__poly_hermite<long double>(__n, __x); }
-# 914 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 914 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     hermite(unsigned int __n, _Tp __x)
@@ -26392,7 +26410,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__poly_hermite<__type>(__n, __x);
     }
-# 930 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 930 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   laguerref(unsigned int __n, float __x)
   { return __detail::__laguerre<float>(__n, __x); }
@@ -26406,7 +26424,7 @@ namespace std
   inline long double
   laguerrel(unsigned int __n, long double __x)
   { return __detail::__laguerre<long double>(__n, __x); }
-# 958 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 958 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     laguerre(unsigned int __n, _Tp __x)
@@ -26414,7 +26432,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__laguerre<__type>(__n, __x);
     }
-# 974 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 974 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   legendref(unsigned int __l, float __x)
   { return __detail::__poly_legendre_p<float>(__l, __x); }
@@ -26428,7 +26446,7 @@ namespace std
   inline long double
   legendrel(unsigned int __l, long double __x)
   { return __detail::__poly_legendre_p<long double>(__l, __x); }
-# 1003 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1003 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     legendre(unsigned int __l, _Tp __x)
@@ -26436,7 +26454,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__poly_legendre_p<__type>(__l, __x);
     }
-# 1019 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1019 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   riemann_zetaf(float __s)
   { return __detail::__riemann_zeta<float>(__s); }
@@ -26450,7 +26468,7 @@ namespace std
   inline long double
   riemann_zetal(long double __s)
   { return __detail::__riemann_zeta<long double>(__s); }
-# 1054 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1054 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     riemann_zeta(_Tp __s)
@@ -26458,7 +26476,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__riemann_zeta<__type>(__s);
     }
-# 1070 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1070 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   sph_besself(unsigned int __n, float __x)
   { return __detail::__sph_bessel<float>(__n, __x); }
@@ -26472,7 +26490,7 @@ namespace std
   inline long double
   sph_bessell(unsigned int __n, long double __x)
   { return __detail::__sph_bessel<long double>(__n, __x); }
-# 1098 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1098 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     sph_bessel(unsigned int __n, _Tp __x)
@@ -26480,15 +26498,15 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__sph_bessel<__type>(__n, __x);
     }
-# 1114 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1114 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   sph_legendref(unsigned int __l, unsigned int __m, float __theta)
   { return __detail::__sph_legendre<float>(__l, __m, __theta); }
-# 1125 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1125 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline long double
   sph_legendrel(unsigned int __l, unsigned int __m, long double __theta)
   { return __detail::__sph_legendre<long double>(__l, __m, __theta); }
-# 1145 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1145 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     sph_legendre(unsigned int __l, unsigned int __m, _Tp __theta)
@@ -26496,7 +26514,7 @@ namespace std
       typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
       return __detail::__sph_legendre<__type>(__l, __m, __theta);
     }
-# 1161 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1161 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   sph_neumannf(unsigned int __n, float __x)
   { return __detail::__sph_neumann<float>(__n, __x); }
@@ -26510,7 +26528,7 @@ namespace std
   inline long double
   sph_neumannl(unsigned int __n, long double __x)
   { return __detail::__sph_neumann<long double>(__n, __x); }
-# 1189 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1189 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tp>
     inline typename __gnu_cxx::__promote<_Tp>::__type
     sph_neumann(unsigned int __n, _Tp __x)
@@ -26528,7 +26546,7 @@ namespace std
 namespace __gnu_cxx
 {
 
-# 1216 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1216 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   airy_aif(float __x)
   {
@@ -26595,15 +26613,15 @@ namespace __gnu_cxx
       std::__detail::__airy<__type>(__x, __Ai, __Bi, __Aip, __Bip);
       return __Bi;
     }
-# 1292 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1292 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   conf_hypergf(float __a, float __c, float __x)
   { return std::__detail::__conf_hyperg<float>(__a, __c, __x); }
-# 1303 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1303 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline long double
   conf_hypergl(long double __a, long double __c, long double __x)
   { return std::__detail::__conf_hyperg<long double>(__a, __c, __x); }
-# 1323 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1323 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpa, typename _Tpc, typename _Tp>
     inline typename __gnu_cxx::__promote_3<_Tpa, _Tpc, _Tp>::__type
     conf_hyperg(_Tpa __a, _Tpc __c, _Tp __x)
@@ -26611,15 +26629,15 @@ namespace __gnu_cxx
       typedef typename __gnu_cxx::__promote_3<_Tpa, _Tpc, _Tp>::__type __type;
       return std::__detail::__conf_hyperg<__type>(__a, __c, __x);
     }
-# 1340 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1340 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline float
   hypergf(float __a, float __b, float __c, float __x)
   { return std::__detail::__hyperg<float>(__a, __b, __c, __x); }
-# 1351 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1351 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   inline long double
   hypergl(long double __a, long double __b, long double __c, long double __x)
   { return std::__detail::__hyperg<long double>(__a, __b, __c, __x); }
-# 1372 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/bits/specfun.h" 3
+# 1372 "C:/msys64/ucrt64/include/c++/14.2.0/bits/specfun.h" 3
   template<typename _Tpa, typename _Tpb, typename _Tpc, typename _Tp>
     inline typename __gnu_cxx::__promote_4<_Tpa, _Tpb, _Tpc, _Tp>::__type
     hyperg(_Tpa __a, _Tpb __b, _Tpc __c, _Tp __x)
@@ -26632,11 +26650,11 @@ namespace __gnu_cxx
 
 
 }
-# 3914 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/cmath" 2 3
+# 3899 "C:/msys64/ucrt64/include/c++/14.2.0/cmath" 2 3
 
 
 }
-# 37 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/math.h" 2 3
+# 37 "C:/msys64/ucrt64/include/c++/14.2.0/math.h" 2 3
 
 using std::abs;
 using std::acos;
@@ -26712,21 +26730,13 @@ using std::scalbln;
 using std::scalbn;
 using std::tgamma;
 using std::trunc;
-# 183 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/math.h" 3
+# 183 "C:/msys64/ucrt64/include/c++/14.2.0/math.h" 3
 using std::lerp;
-# 141 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 1 3
-# 9 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/corecrt_stdio_config.h" 1 3
-# 13 "C:/Users/maxwo/msys2/mingw64/include/corecrt_stdio_config.h" 3
-extern "C" {
-
-
-unsigned long long* __attribute__((__cdecl__)) __local_stdio_printf_options(void);
-unsigned long long* __attribute__((__cdecl__)) __local_stdio_scanf_options(void);
-# 39 "C:/Users/maxwo/msys2/mingw64/include/corecrt_stdio_config.h" 3
-}
-# 10 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 2 3
+# 141 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 1 "C:/msys64/ucrt64/include/stdio.h" 1 3
+# 9 "C:/msys64/ucrt64/include/stdio.h" 3
+# 1 "C:/msys64/ucrt64/include/corecrt_stdio_config.h" 1 3
+# 10 "C:/msys64/ucrt64/include/stdio.h" 2 3
 
 #pragma pack(push,_CRT_PACKING)
 
@@ -26741,24 +26751,15 @@ unsigned long long* __attribute__((__cdecl__)) __local_stdio_scanf_options(void)
 
 
 extern "C" {
-# 33 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 33 "C:/msys64/ucrt64/include/stdio.h" 3
   struct _iobuf {
 
-
-
-    char *_ptr;
-    int _cnt;
-    char *_base;
-    int _flag;
-    int _file;
-    int _charbuf;
-    int _bufsiz;
-    char *_tmpfname;
-
+    void *_Placeholder;
+# 46 "C:/msys64/ucrt64/include/stdio.h" 3
   };
   typedef struct _iobuf FILE;
-# 99 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/_mingw_off_t.h" 1 3
+# 99 "C:/msys64/ucrt64/include/stdio.h" 3
+# 1 "C:/msys64/ucrt64/include/_mingw_off_t.h" 1 3
 
 
 
@@ -26774,16 +26775,16 @@ extern "C" {
   __extension__ typedef long long _off64_t;
 
   __extension__ typedef long long off64_t;
-# 26 "C:/Users/maxwo/msys2/mingw64/include/_mingw_off_t.h" 3
+# 26 "C:/msys64/ucrt64/include/_mingw_off_t.h" 3
 typedef off32_t off_t;
-# 100 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 2 3
+# 100 "C:/msys64/ucrt64/include/stdio.h" 2 3
 
 __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) __acrt_iob_func(unsigned index);
 
   __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) __iob_func(void);
-# 112 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 112 "C:/msys64/ucrt64/include/stdio.h" 3
   __extension__ typedef long long fpos_t;
-# 156 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 156 "C:/msys64/ucrt64/include/stdio.h" 3
 extern
   __attribute__((__format__(__gnu_scanf__, 2,3))) __attribute__ ((__nonnull__ (2)))
   int __attribute__((__cdecl__)) __mingw_sscanf(const char * __restrict__ _Src,const char * __restrict__ _Format,...);
@@ -26837,63 +26838,39 @@ extern
 
 extern
   __attribute__((__format__(__ms_scanf__, 2,3))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_sscanf(const char * __restrict__ _Src,const char * __restrict__ _Format,...)
-  ;
-extern
-  __attribute__((__format__(__ms_scanf__, 2,0))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vsscanf(const char * __restrict__ _Str,const char * __restrict__ _Format,va_list argp)
-  __asm__("vsscanf");
+  int __attribute__((__cdecl__)) __ms_sscanf(const char * __restrict__ _Src,const char * __restrict__ _Format,...);
 extern
   __attribute__((__format__(__ms_scanf__, 1,2))) __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_scanf(const char * __restrict__ _Format,...)
-  ;
-extern
-  __attribute__((__format__(__ms_scanf__, 1,0))) __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_vscanf(const char * __restrict__ _Format,va_list argp)
-  __asm__("vscanf");
+  int __attribute__((__cdecl__)) __ms_scanf(const char * __restrict__ _Format,...);
 extern
   __attribute__((__format__(__ms_scanf__, 2,3))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_fscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,...)
-  ;
-extern
-  __attribute__((__format__(__ms_scanf__, 2,0))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vfscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,va_list argp)
-  __asm__("vfscanf");
+  int __attribute__((__cdecl__)) __ms_fscanf(FILE * __restrict__ _File,const char * __restrict__ _Format,...);
 
 extern
   __attribute__((__format__(__ms_printf__, 1,2))) __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_printf(const char * __restrict__ , ... )
-  __attribute__ ((__nothrow__));
+  int __attribute__((__cdecl__)) __ms_printf(const char * __restrict__ , ... ) __attribute__ ((__nothrow__));
 extern
   __attribute__((__format__(__ms_printf__, 1,0))) __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_vprintf (const char * __restrict__ , va_list)
-  __attribute__ ((__nothrow__));
+  int __attribute__((__cdecl__)) __ms_vprintf (const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
 extern
   __attribute__((__format__(__ms_printf__, 2,3))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_fprintf (FILE * __restrict__ , const char * __restrict__ , ...)
-  __attribute__ ((__nothrow__));
+  int __attribute__((__cdecl__)) __ms_fprintf (FILE * __restrict__ , const char * __restrict__ , ...) __attribute__ ((__nothrow__));
 extern
   __attribute__((__format__(__ms_printf__, 2,0))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vfprintf (FILE * __restrict__ , const char * __restrict__ , va_list)
-  __attribute__ ((__nothrow__))
-;
+  int __attribute__((__cdecl__)) __ms_vfprintf (FILE * __restrict__ , const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
 extern
   __attribute__((__format__(__ms_printf__, 2,3))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_sprintf (char * __restrict__ , const char * __restrict__ , ...)
-  __attribute__ ((__nothrow__));
+  int __attribute__((__cdecl__)) __ms_sprintf (char * __restrict__ , const char * __restrict__ , ...) __attribute__ ((__nothrow__));
 extern
   __attribute__((__format__(__ms_printf__, 2,0))) __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vsprintf (char * __restrict__ , const char * __restrict__ , va_list)
-  __attribute__ ((__nothrow__));
-extern
-  __attribute__((__format__(__ms_printf__, 3,4))) __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_snprintf (char * __restrict__ , size_t , const char * __restrict__ , ...)
-  __attribute__ ((__nothrow__));
-extern
-  __attribute__((__format__(__ms_printf__, 3,0))) __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_vsnprintf (char * __restrict__ , size_t , const char * __restrict__ , va_list)
-  __attribute__ ((__nothrow__));
-# 305 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+  int __attribute__((__cdecl__)) __ms_vsprintf (char * __restrict__ , const char * __restrict__ , va_list) __attribute__ ((__nothrow__));
+
+
+  int __attribute__((__cdecl__)) __stdio_common_vsprintf(unsigned long long options, char *str, size_t len, const char *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vfprintf(unsigned long long options, FILE *file, const char *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vsscanf(unsigned long long options, const char *input, size_t length, const char *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vfscanf(unsigned long long options, FILE *file, const char *format, _locale_t locale, va_list valist);
+# 275 "C:/msys64/ucrt64/include/stdio.h" 3
 extern "C++" {
 
 
@@ -26945,7 +26922,7 @@ __asm__("__mingw_printf");
 __attribute__((__format__(__gnu_printf__,2,3))) __attribute__ ((__nonnull__ (2)))
 int sprintf (char *__stream, const char *__format, ...)
 __asm__("__mingw_sprintf");
-# 374 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 344 "C:/msys64/ucrt64/include/stdio.h" 3
 __attribute__((__format__(__gnu_printf__,2,0))) __attribute__ ((__nonnull__ (2)))
 int vfprintf (FILE *__stream, const char *__format, __builtin_va_list __local_argv)
 __asm__("__mingw_vfprintf");
@@ -26958,7 +26935,7 @@ inline __attribute__((__cdecl__))
 __attribute__((__format__(__gnu_printf__,2,0))) __attribute__ ((__nonnull__ (2)))
 int vsprintf (char *__stream, const char *__format, __builtin_va_list __local_argv)
 {
-# 394 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 364 "C:/msys64/ucrt64/include/stdio.h" 3
   return __mingw_vsprintf( __stream, __format, __local_argv );
 }
 
@@ -26966,7 +26943,7 @@ int vsprintf (char *__stream, const char *__format, __builtin_va_list __local_ar
 __attribute__((__format__(__gnu_printf__,3,4))) __attribute__ ((__nonnull__ (3)))
 int snprintf (char *__stream, size_t __n, const char *__format, ...)
 __asm__("__mingw_snprintf");
-# 414 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 384 "C:/msys64/ucrt64/include/stdio.h" 3
 inline __attribute__((__cdecl__))
 __attribute__((__format__(__gnu_printf__,3,0))) __attribute__ ((__nonnull__ (3)))
 int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_list __local_argv)
@@ -26976,9 +26953,9 @@ int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_li
 
   return __mingw_vsnprintf( __stream, __n, __format, __local_argv );
 }
-# 431 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 401 "C:/msys64/ucrt64/include/stdio.h" 3
 }
-# 535 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 517 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _filbuf(FILE *_File);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _flsbuf(int _Ch,FILE *_File);
 
@@ -27006,52 +26983,44 @@ int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_li
 
 
 
-
-
-
-
   __attribute__ ((__dllimport__)) char *__attribute__((__cdecl__)) _tempnam(const char *_DirName,const char *_FilePrefix);
-
-
-
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _flushall(void);
   FILE *__attribute__((__cdecl__)) fopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode) ;
-  FILE *__attribute__((__cdecl__)) fopen64(const char * __restrict__ filename,const char * __restrict__ mode);
+  FILE *fopen64(const char * __restrict__ filename,const char * __restrict__ mode);
   int __attribute__((__cdecl__)) fputc(int _Ch,FILE *_File);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fputchar(int _Ch);
   int __attribute__((__cdecl__)) fputs(const char * __restrict__ _Str,FILE * __restrict__ _File);
   size_t __attribute__((__cdecl__)) fread(void * __restrict__ _DstBuf,size_t _ElementSize,size_t _Count,FILE * __restrict__ _File);
   FILE *__attribute__((__cdecl__)) freopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode,FILE * __restrict__ _File) ;
-  FILE *__attribute__((__cdecl__)) freopen64(const char * __restrict__ _Filename,const char * __restrict__ _Mode,FILE * __restrict__ _File);
   int __attribute__((__cdecl__)) fsetpos(FILE *_File,const fpos_t *_Pos);
   int __attribute__((__cdecl__)) fsetpos64(FILE *_File,const fpos_t *_Pos);
   int __attribute__((__cdecl__)) fseek(FILE *_File,long _Offset,int _Origin);
   long __attribute__((__cdecl__)) ftell(FILE *_File);
 
+
+
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fseeki64(FILE *_File,long long _Offset,int _Origin);
   __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _ftelli64(FILE *_File);
 
-
-
-  int __attribute__((__cdecl__)) fseeko(FILE *_File, _off_t _Offset, int _Origin);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) fseeko64(FILE *_File, _off64_t _Offset, int _Origin);
-
-
-
-  _off_t __attribute__((__cdecl__)) ftello(FILE *_File);
-
-  __attribute__ ((__dllimport__)) _off64_t __attribute__((__cdecl__)) ftello64(FILE *_File);
-
+  inline __attribute__((__cdecl__)) int fseeko(FILE *_File, _off_t _Offset, int _Origin) {
+    return fseek(_File, _Offset, _Origin);
+  }
+  inline __attribute__((__cdecl__)) int fseeko64(FILE *_File, _off64_t _Offset, int _Origin) {
+    return _fseeki64(_File, _Offset, _Origin);
+  }
+  inline __attribute__((__cdecl__)) _off_t ftello(FILE *_File) {
+    return ftell(_File);
+  }
+  inline __attribute__((__cdecl__)) _off64_t ftello64(FILE *_File) {
+    return _ftelli64(_File);
+  }
+# 597 "C:/msys64/ucrt64/include/stdio.h" 3
   size_t __attribute__((__cdecl__)) fwrite(const void * __restrict__ _Str,size_t _Size,size_t _Count,FILE * __restrict__ _File);
   int __attribute__((__cdecl__)) getc(FILE *_File);
   int __attribute__((__cdecl__)) getchar(void);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _getmaxstdio(void);
   char *__attribute__((__cdecl__)) gets(char *_Buffer)
-
-    __attribute__((__warning__("Using gets() is always unsafe - use fgets() instead")))
-
-;
+    __attribute__((__warning__("Using gets() is always unsafe - use fgets() instead")));
   int __attribute__((__cdecl__)) _getw(FILE *_File);
 
 
@@ -27086,37 +27055,31 @@ int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_li
   __attribute__ ((__dllimport__)) unsigned int __attribute__((__cdecl__)) _get_output_format(void);
   int __attribute__((__cdecl__)) setvbuf(FILE * __restrict__ _File,char * __restrict__ _Buf,int _Mode,size_t _Size);
 
-
-
-
-
-
-
   __attribute__ ((__pure__))
-  __attribute__((__format__(__ms_printf__, 1,2))) __attribute__ ((__nonnull__ (1)))
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scprintf(const char * __restrict__ _Format,...);
-  __attribute__((__format__(__ms_scanf__, 3,4))) __attribute__ ((__nonnull__ (3)))
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snscanf(const char * __restrict__ _Src,size_t _MaxCount,const char * __restrict__ _Format,...) ;
+  __attribute__((__format__ (__gnu_printf__, 1, 2))) __attribute__ ((__nonnull__ (1)))
+  int __attribute__((__cdecl__)) _scprintf(const char * __restrict__ _Format,...);
+  __attribute__((__format__ (__gnu_scanf__, 3, 4))) __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) _snscanf(const char * __restrict__ _Src,size_t _MaxCount,const char * __restrict__ _Format,...) ;
+
+
+
+
+
+
 
   __attribute__ ((__pure__))
   __attribute__((__format__(__ms_printf__, 1,0))) __attribute__ ((__nonnull__ (1)))
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscprintf(const char * __restrict__ _Format,va_list _ArgList);
   FILE *__attribute__((__cdecl__)) tmpfile(void) ;
-  FILE *__attribute__((__cdecl__)) tmpfile64(void);
   char *__attribute__((__cdecl__)) tmpnam(char *_Buffer);
   int __attribute__((__cdecl__)) ungetc(int _Ch,FILE *_File);
 
 
-
-
-
-
-
-  __attribute__((__format__(__ms_printf__, 3,4))) __attribute__ ((__nonnull__ (3)))
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,...) ;
-  __attribute__((__format__(__ms_printf__, 3,0))) __attribute__ ((__nonnull__ (3)))
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,va_list _Args) ;
-# 886 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+  __attribute__((__format__ (__gnu_printf__, 3, 0))) __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) _vsnprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,va_list _Args) ;
+  __attribute__((__format__ (__gnu_printf__, 3, 4))) __attribute__ ((__nonnull__ (3)))
+  int __attribute__((__cdecl__)) _snprintf(char * __restrict__ _Dest,size_t _Count,const char * __restrict__ _Format,...) ;
+# 887 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _set_printf_count_output(int _Value);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _get_printf_count_output(void);
 
@@ -27154,50 +27117,37 @@ int vsnprintf (char *__stream, size_t __n, const char *__format, __builtin_va_li
   int __attribute__((__cdecl__)) __mingw_vswprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ ,va_list);
 
                                                     __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_swscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,...)
-  ;
-                                                    __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vswscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,va_list)
-  __asm__("vswscanf");
+  int __attribute__((__cdecl__)) __ms_swscanf(const wchar_t * __restrict__ _Src,const wchar_t * __restrict__ _Format,...);
                                                     __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_wscanf(const wchar_t * __restrict__ _Format,...)
-  ;
-                                                    __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_vwscanf(const wchar_t * __restrict__ _Format, va_list)
-  __asm__("vwscanf");
+  int __attribute__((__cdecl__)) __ms_wscanf(const wchar_t * __restrict__ _Format,...);
                                                     __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...)
-  ;
-                                                    __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vfwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list)
-  __asm__("vfwscanf");
+  int __attribute__((__cdecl__)) __ms_fwscanf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
 
                                                      __attribute__ ((__nonnull__ (2)))
   int __attribute__((__cdecl__)) __ms_fwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,...);
-
-
                                                      __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_wprintf(const wchar_t * __restrict__ _Format,...)
-  ;
+  int __attribute__((__cdecl__)) __ms_wprintf(const wchar_t * __restrict__ _Format,...);
                                                     __attribute__ ((__nonnull__ (2)))
-  int __attribute__((__cdecl__)) __ms_vfwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList)
-  ;
+  int __attribute__((__cdecl__)) __ms_vfwprintf(FILE * __restrict__ _File,const wchar_t * __restrict__ _Format,va_list _ArgList);
                                                     __attribute__ ((__nonnull__ (1)))
-  int __attribute__((__cdecl__)) __ms_vwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList)
-  ;
+  int __attribute__((__cdecl__)) __ms_vwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
                                                      __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_swprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , ...)
-  ;
+  int __attribute__((__cdecl__)) __ms_swprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , ...);
                                                      __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_vswprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ ,va_list)
-  ;
-                                                     __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_snwprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , ...)
-  ;
-                                                     __attribute__ ((__nonnull__ (3)))
-  int __attribute__((__cdecl__)) __ms_vsnwprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list)
-  ;
-# 979 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+  int __attribute__((__cdecl__)) __ms_vswprintf(wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ ,va_list);
+
+
+  int __attribute__((__cdecl__)) __stdio_common_vswprintf(unsigned long long options, wchar_t *str, size_t len, const wchar_t *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vfwprintf(unsigned long long options, FILE *file, const wchar_t *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vswscanf(unsigned long long options, const wchar_t *input, size_t length, const wchar_t *format, _locale_t locale, va_list valist);
+  int __attribute__((__cdecl__)) __stdio_common_vfwscanf(unsigned long long options, FILE *file, const wchar_t *format, _locale_t locale, va_list valist);
+
+
+
+
+
+
+
                                                      __attribute__ ((__nonnull__ (2)))
 int swscanf(const wchar_t *__source, const wchar_t *__format, ...)
 __asm__("__mingw_swscanf");
@@ -27245,7 +27195,7 @@ __asm__("__mingw_vwprintf");
                                                       __attribute__ ((__nonnull__ (3)))
 int swprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, ...)
 __asm__("__mingw_swprintf");
-# 1039 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1015 "C:/msys64/ucrt64/include/stdio.h" 3
 inline __attribute__((__cdecl__))
                                                       __attribute__ ((__nonnull__ (3)))
 int vswprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, __builtin_va_list __local_argv)
@@ -27261,7 +27211,7 @@ int vswprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, __builtin
                                                       __attribute__ ((__nonnull__ (3)))
 int snwprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, ...)
 __asm__("__mingw_snwprintf");
-# 1067 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1043 "C:/msys64/ucrt64/include/stdio.h" 3
 inline __attribute__((__cdecl__))
                                                       __attribute__ ((__nonnull__ (3)))
 int vsnwprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, __builtin_va_list __local_argv)
@@ -27271,7 +27221,7 @@ int vsnwprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, __builti
 
   return __mingw_vsnwprintf( __stream, __n, __format, __local_argv );
 }
-# 1116 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1167 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
 
 
@@ -27289,35 +27239,67 @@ int vsnwprintf (wchar_t *__stream, size_t __n, const wchar_t *__format, __builti
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _getws(wchar_t *_String) ;
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putws(const wchar_t *_Str);
 
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scwprintf(const wchar_t * __restrict__ _Format,...);
 
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf_c(wchar_t * __restrict__ _DstBuf,size_t _SizeInWords,const wchar_t * __restrict__ _Format,va_list _ArgList);
+  inline __attribute__((__cdecl__))
+  int __attribute__((__cdecl__)) _scwprintf(const wchar_t * __restrict__ _Format,...)
+  {
+    __builtin_va_list __ap;
+    int __ret;
+    __builtin_va_start(__ap, _Format);
+    __ret = __stdio_common_vswprintf((0x0004ULL | 0x0020ULL) | 0x0002ULL, __null, 0, _Format, __null, __ap);
+    __builtin_va_end(__ap);
+    return __ret;
+  }
+  int __attribute__((__cdecl__)) _snwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,...) ;
+  int __attribute__((__cdecl__)) _vsnwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,va_list _Args) ;
+# 1254 "C:/msys64/ucrt64/include/stdio.h" 3
+  inline __attribute__((__cdecl__))
+  int __attribute__((__cdecl__)) _swprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,...)
+  {
+    __builtin_va_list __ap;
+    int __ret;
+    __builtin_va_start(__ap, _Format);
+    __ret = __stdio_common_vswprintf((0x0004ULL | 0x0020ULL), _Dest, (size_t)-1, _Format, __null, __ap);
+    __builtin_va_end(__ap);
+    return __ret;
+  }
+  inline __attribute__((__cdecl__))
+  int __attribute__((__cdecl__)) _vswprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,va_list _Args)
+  {
+    return __stdio_common_vswprintf((0x0004ULL | 0x0020ULL), _Dest, (size_t)-1, _Format, __null, _Args);
+  }
 
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,...) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnwprintf(wchar_t * __restrict__ _Dest,size_t _Count,const wchar_t * __restrict__ _Format,va_list _Args) ;
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,va_list _Args);
-
-
-# 1 "C:/Users/maxwo/msys2/mingw64/include/swprintf.inl" 1 3
-# 12 "C:/Users/maxwo/msys2/mingw64/include/swprintf.inl" 3
+  inline __attribute__((__cdecl__))
+  int __attribute__((__cdecl__)) _vscwprintf(const wchar_t * __restrict__ _Format, va_list _ArgList)
+  {
+      int _Result = __stdio_common_vswprintf((0x0004ULL | 0x0020ULL) | 0x0002ULL, __null, 0, _Format, __null, _ArgList);
+      return _Result < 0 ? -1 : _Result;
+  }
+# 1302 "C:/msys64/ucrt64/include/stdio.h" 3
+# 1 "C:/msys64/ucrt64/include/swprintf.inl" 1 3
+# 14 "C:/msys64/ucrt64/include/swprintf.inl" 3
 extern "C++" {
 
+inline __attribute__((__cdecl__))
                                                       __attribute__ ((__nonnull__ (2)))
-int vswprintf (wchar_t *__stream, const wchar_t *__format, __builtin_va_list __local_argv) __asm__("_vswprintf");
+int vswprintf (wchar_t *__stream, const wchar_t *__format, __builtin_va_list __local_argv)
+{
+  return _vswprintf( __stream, __format, __local_argv );
+}
 
+inline __attribute__((__cdecl__))
                                                       __attribute__ ((__nonnull__ (2)))
-int swprintf (wchar_t *__stream, const wchar_t *__format, ...) __asm__("_swprintf");
+int swprintf (wchar_t *__stream, const wchar_t *__format, ...)
+{
+# 37 "C:/msys64/ucrt64/include/swprintf.inl" 3
+  return _swprintf( __stream, __format, __builtin_va_arg_pack() );
 
 }
-# 1146 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 2 3
-# 1159 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+
+}
+# 1303 "C:/msys64/ucrt64/include/stdio.h" 2 3
+# 1312 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
-
-
-
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwscanf(const wchar_t * __restrict__ _Src,size_t _MaxCount,const wchar_t * __restrict__ _Format,...);
   __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfdopen(int _FileHandle ,const wchar_t *_Mode);
   __attribute__ ((__dllimport__)) FILE *__attribute__((__cdecl__)) _wfopen(const wchar_t * __restrict__ _Filename,const wchar_t *__restrict__ _Mode) ;
@@ -27334,23 +27316,35 @@ int swprintf (wchar_t *__stream, const wchar_t *__format, ...) __asm__("_swprint
 
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wremove(const wchar_t *_Filename);
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _wtmpnam(wchar_t *_Buffer);
-# 1206 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fgetwc_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _fputwc_nolock(wchar_t _Ch,FILE *_File);
+  __attribute__ ((__dllimport__)) wint_t __attribute__((__cdecl__)) _ungetwc_nolock(wint_t _Ch,FILE *_File);
+# 1357 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fgetc_nolock(FILE *_File);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fputc_nolock(int _Char, FILE *_File);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _getc_nolock(FILE *_File);
   __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _putc_nolock(int _Char, FILE *_File);
-
-
-
-
-
+# 1372 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _lock_file(FILE *_File);
   __attribute__ ((__dllimport__)) void __attribute__((__cdecl__)) _unlock_file(FILE *_File);
-# 1237 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fclose_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fflush_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _fread_nolock(void * __restrict__ _DstBuf,size_t _ElementSize,size_t _Count,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fseek_nolock(FILE *_File,long _Offset,int _Origin);
+  __attribute__ ((__dllimport__)) long __attribute__((__cdecl__)) _ftell_nolock(FILE *_File);
+  __extension__ __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fseeki64_nolock(FILE *_File,long long _Offset,int _Origin);
+  __extension__ __attribute__ ((__dllimport__)) long long __attribute__((__cdecl__)) _ftelli64_nolock(FILE *_File);
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _fwrite_nolock(const void * __restrict__ _DstBuf,size_t _Size,size_t _Count,FILE * __restrict__ _File);
+  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _ungetc_nolock(int _Ch,FILE *_File);
+
+
+
+
+
+
   char *__attribute__((__cdecl__)) tempnam(const char *_Directory,const char *_FilePrefix) ;
-
-
-
   int __attribute__((__cdecl__)) fcloseall(void) ;
   FILE *__attribute__((__cdecl__)) fdopen(int _FileHandle,const char *_Format) ;
   int __attribute__((__cdecl__)) fgetchar(void) ;
@@ -27360,11 +27354,11 @@ int swprintf (wchar_t *__stream, const wchar_t *__format, ...) __asm__("_swprint
   int __attribute__((__cdecl__)) getw(FILE *_File) ;
   int __attribute__((__cdecl__)) putw(int _Ch,FILE *_File) ;
   int __attribute__((__cdecl__)) rmtmp(void) ;
-# 1266 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1416 "C:/msys64/ucrt64/include/stdio.h" 3
 int __attribute__((__cdecl__)) __mingw_str_wide_utf8 (const wchar_t * const wptr, char **mbptr, size_t * buflen);
-# 1280 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1430 "C:/msys64/ucrt64/include/stdio.h" 3
 int __attribute__((__cdecl__)) __mingw_str_utf8_wide (const char *const mbptr, wchar_t ** wptr, size_t * buflen);
-# 1289 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1439 "C:/msys64/ucrt64/include/stdio.h" 3
 void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
 
 
@@ -27380,7 +27374,7 @@ void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnve(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvp(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _wspawnvpe(int _Mode,const wchar_t *_Filename,const wchar_t *const *_ArgList,const wchar_t *const *_Env);
-# 1320 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 3
+# 1470 "C:/msys64/ucrt64/include/stdio.h" 3
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnv(int _Mode,const char *_Filename,const char *const *_ArgList);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnve(int _Mode,const char *_Filename,const char *const *_ArgList,const char *const *_Env);
   __attribute__ ((__dllimport__)) intptr_t __attribute__((__cdecl__)) _spawnvp(int _Mode,const char *_Filename,const char *const *_ArgList);
@@ -27399,11 +27393,11 @@ void __attribute__((__cdecl__)) __mingw_str_free(void *ptr);
 
 #pragma pack(pop)
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 1 3
-# 9 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 1 3
-# 10 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 2 3
-# 21 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 3
+# 1 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 1 3
+# 9 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 3
+# 1 "C:/msys64/ucrt64/include/stdio.h" 1 3
+# 10 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 2 3
+# 21 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 3
 extern "C" {
 
 
@@ -27415,75 +27409,489 @@ extern "C" {
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) clearerr_s(FILE *_File);
 
   size_t __attribute__((__cdecl__)) fread_s(void *_DstBuf,size_t _DstSize,size_t _ElementSize,size_t _Count,FILE *_File);
-# 515 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 3
-  int __attribute__((__cdecl__)) fprintf_s(FILE *_File,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fscanf_s_l(FILE *_File,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) fscanf_s(FILE *_File, const char *_Format, ...);
-  int __attribute__((__cdecl__)) printf_s(const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scanf_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scanf_s_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) scanf_s(const char *_Format, ...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf_c(char *_DstBuf,size_t _MaxCount,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf_c(char *_DstBuf,size_t _MaxCount,const char *_Format,va_list _ArgList);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fscanf_l(FILE *_File,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sscanf_l(const char *_Src,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sscanf_s_l(const char *_Src,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) sscanf_s(const char *_Src,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snscanf_s(const char *_Src,size_t _MaxCount,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snscanf_l(const char *_Src,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snscanf_s_l(const char *_Src,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  int __attribute__((__cdecl__)) vfprintf_s(FILE *_File,const char *_Format,va_list _ArgList);
-  int __attribute__((__cdecl__)) vprintf_s(const char *_Format,va_list _ArgList);
-
-  int __attribute__((__cdecl__)) vsnprintf_s(char *_DstBuf,size_t _DstSize,size_t _MaxCount,const char *_Format,va_list _ArgList);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf_s(char *_DstBuf,size_t _DstSize,size_t _MaxCount,const char *_Format,va_list _ArgList);
-
-  __attribute__((dllimport)) int __attribute__((__cdecl__)) vsprintf_s(char *_DstBuf,size_t _Size,const char *_Format,va_list _ArgList);
-
-  __attribute__((dllimport)) int __attribute__((__cdecl__)) sprintf_s(char *_DstBuf,size_t _DstSize,const char *_Format,...);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf_s(char *_DstBuf,size_t _DstSize,size_t _MaxCount,const char *_Format,...);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fprintf_p(FILE *_File,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _printf_p(const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sprintf_p(char *_Dst,size_t _MaxCount,const char *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfprintf_p(FILE *_File,const char *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vprintf_p(const char *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsprintf_p(char *_Dst,size_t _MaxCount,const char *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scprintf_p(const char *_Format,...);
-  __attribute__((dllimport)) int __attribute__((__cdecl__)) _vscprintf_p(const char *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _printf_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _printf_p_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vprintf_l(const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vprintf_p_l(const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fprintf_l(FILE *_File,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fprintf_p_l(FILE *_File,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfprintf_l(FILE *_File,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfprintf_p_l(FILE *_File,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sprintf_l(char *_DstBuf,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sprintf_p_l(char *_DstBuf,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsprintf_l(char *_DstBuf,const char *_Format,_locale_t,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsprintf_p_l(char *_DstBuf,size_t _MaxCount,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scprintf_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scprintf_p_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscprintf_l(const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscprintf_p_l(const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _printf_s_l(const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vprintf_s_l(const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fprintf_s_l(FILE *_File,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfprintf_s_l(FILE *_File,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _sprintf_s_l(char *_DstBuf,size_t _DstSize,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsprintf_s_l(char *_DstBuf,size_t _DstSize,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf_s_l(char *_DstBuf,size_t _DstSize,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf_s_l(char *_DstBuf,size_t _DstSize,size_t _MaxCount,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf_l(char *_DstBuf,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snprintf_c_l(char *_DstBuf,size_t _MaxCount,const char *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf_l(char *_DstBuf,size_t _MaxCount,const char *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnprintf_c_l(char *_DstBuf,size_t _MaxCount,const char *,_locale_t _Locale,va_list _ArgList);
 
 
+  int __attribute__((__cdecl__)) __stdio_common_vsprintf_s(unsigned long long _Options, char *_Str, size_t _Len, const char *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vsprintf_p(unsigned long long _Options, char *_Str, size_t _Len, const char *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vsnprintf_s(unsigned long long _Options, char *_Str, size_t _Len, size_t _MaxCount, const char *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vfprintf_s(unsigned long long _Options, FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vfprintf_p(unsigned long long _Options, FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList);
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfscanf_s_l(FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfscanf(0x0001ULL, _File, _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vfscanf_s(FILE *_File, const char *_Format, va_list _ArgList)
+  {
+    return _vfscanf_s_l(_File, _Format, __null, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vscanf_s_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfscanf_s_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vscanf_s(const char *_Format, va_list _ArgList)
+  {
+    return _vfscanf_s_l((__acrt_iob_func(0)), _Format, __null, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fscanf_s_l(FILE *_File, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfscanf_s_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) fscanf_s(FILE *_File, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfscanf_s_l(_File, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _scanf_s_l(const char *_Format, _locale_t _Locale ,...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfscanf_s_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) scanf_s(const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfscanf_s_l((__acrt_iob_func(0)), _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfscanf_l(FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfscanf(0, _File, _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vscanf_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfscanf_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fscanf_l(FILE *_File, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfscanf_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _scanf_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfscanf_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsscanf_s_l(const char *_Src, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsscanf(0x0001ULL, _Src, (size_t)-1, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vsscanf_s(const char *_Src, const char *_Format, va_list _ArgList)
+  {
+    return _vsscanf_s_l(_Src, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sscanf_s_l(const char *_Src, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsscanf_s_l(_Src, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) sscanf_s(const char *_Src, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsscanf_s_l(_Src, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsscanf_l(const char *_Src, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsscanf(0, _Src, (size_t)-1, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sscanf_l(const char *_Src, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsscanf_l(_Src, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snscanf_s_l(const char *_Src, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = __stdio_common_vsscanf(0x0001ULL, _Src, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snscanf_s(const char *_Src, size_t _MaxCount, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = __stdio_common_vsscanf(0x0001ULL, _Src, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snscanf_l(const char *_Src, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = __stdio_common_vsscanf(0, _Src, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfprintf_s_l(FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfprintf_s((0x0004ULL | 0x0020ULL), _File, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vfprintf_s(FILE *_File, const char *_Format, va_list _ArgList)
+  {
+    return _vfprintf_s_l(_File, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vprintf_s_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfprintf_s_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vprintf_s(const char *_Format, va_list _ArgList)
+  {
+    return _vfprintf_s_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fprintf_s_l(FILE *_File, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfprintf_s_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _printf_s_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfprintf_s_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) fprintf_s(FILE *_File, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfprintf_s_l(_File, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) printf_s(const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfprintf_s_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnprintf_c_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf((0x0004ULL | 0x0020ULL), _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnprintf_c(char *_DstBuf, size_t _MaxCount, const char *_Format, va_list _ArgList)
+  {
+    return _vsnprintf_c_l(_DstBuf, _MaxCount, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snprintf_c_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsnprintf_c_l(_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snprintf_c(char *_DstBuf, size_t _MaxCount, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsnprintf_c_l(_DstBuf, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnprintf_s_l(char *_DstBuf, size_t _DstSize, size_t _MaxCount, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsnprintf_s((0x0004ULL | 0x0020ULL), _DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vsnprintf_s(char *_DstBuf, size_t _DstSize, size_t _MaxCount, const char *_Format, va_list _ArgList)
+  {
+    return _vsnprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnprintf_s(char *_DstBuf, size_t _DstSize, size_t _MaxCount, const char *_Format, va_list _ArgList)
+  {
+    return _vsnprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snprintf_s_l(char *_DstBuf, size_t _DstSize, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsnprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snprintf_s(char *_DstBuf, size_t _DstSize, size_t _MaxCount, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsnprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsprintf_s_l(char *_DstBuf, size_t _DstSize, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf_s((0x0004ULL | 0x0020ULL), _DstBuf, _DstSize, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vsprintf_s(char *_DstBuf, size_t _Size, const char *_Format, va_list _ArgList)
+  {
+    return _vsprintf_s_l(_DstBuf, _Size, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sprintf_s_l(char *_DstBuf, size_t _DstSize, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsprintf_s_l(_DstBuf, _DstSize, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) sprintf_s(char *_DstBuf, size_t _DstSize, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsprintf_s_l(_DstBuf, _DstSize, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfprintf_p_l(FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfprintf_p((0x0004ULL | 0x0020ULL), _File, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfprintf_p(FILE *_File, const char *_Format, va_list _ArgList)
+  {
+    return _vfprintf_p_l(_File, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vprintf_p_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfprintf_p_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vprintf_p(const char *_Format, va_list _ArgList)
+  {
+    return _vfprintf_p_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fprintf_p_l(FILE *_File, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = __stdio_common_vfprintf_p((0x0004ULL | 0x0020ULL), _File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fprintf_p(FILE *_File, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfprintf_p_l(_File, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _printf_p_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfprintf_p_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _printf_p(const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfprintf_p_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsprintf_p_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf_p((0x0004ULL | 0x0020ULL), _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsprintf_p(char *_Dst, size_t _MaxCount, const char *_Format, va_list _ArgList)
+  {
+    return _vsprintf_p_l(_Dst, _MaxCount, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sprintf_p_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsprintf_p_l(_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sprintf_p(char *_Dst, size_t _MaxCount, const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsprintf_p_l(_Dst, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vscprintf_p_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf_p(0x0002ULL, __null, 0, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vscprintf_p(const char *_Format, va_list _ArgList)
+  {
+    return _vscprintf_p_l(_Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _scprintf_p_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vscprintf_p_l(_Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _scprintf_p(const char *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vscprintf_p_l(_Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfprintf_l(FILE *_File, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfprintf((0x0004ULL | 0x0020ULL), _File, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vprintf_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfprintf_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fprintf_l(FILE *_File, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfprintf_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _printf_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfprintf_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnprintf_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf(0x0001ULL, _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snprintf_l(char *_DstBuf, size_t _MaxCount, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsnprintf_l(_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsprintf_l(char *_DstBuf, const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vsnprintf_l(_DstBuf, (size_t)-1, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _sprintf_l(char *_DstBuf, const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsprintf_l(_DstBuf, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vscprintf_l(const char *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsprintf(0x0002ULL, __null, 0, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _scprintf_l(const char *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vscprintf_l(_Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+# 583 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 3
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) vsnprintf_s(char (&_DstBuf)[__size], size_t _MaxCount, const char* _Format, va_list _ArgList) { return vsnprintf_s(_DstBuf,__size,_MaxCount,_Format,_ArgList); } }
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) _vsnprintf_s(char (&_DstBuf)[__size], size_t _MaxCount, const char* _Format, va_list _ArgList) { return _vsnprintf_s(_DstBuf,__size,_MaxCount,_Format,_ArgList); } }
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) vsprintf_s(char (&_DstBuf)[__size], const char* _Format, va_list _ArgList) { return vsprintf_s(_DstBuf,__size,_Format,_ArgList); } }
@@ -27506,39 +27914,231 @@ extern "C" {
 
   __attribute__ ((__dllimport__)) wchar_t *__attribute__((__cdecl__)) _getws_s(wchar_t *_Str,size_t _SizeInWords);
   extern "C++" { template <size_t __size> inline wchar_t* __attribute__((__cdecl__)) _getws_s(wchar_t (&_DstBuf)[__size]) { return _getws_s(_DstBuf,__size); } }
-# 830 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 3
-  int __attribute__((__cdecl__)) fwprintf_s(FILE *_File,const wchar_t *_Format,...);
-  int __attribute__((__cdecl__)) wprintf_s(const wchar_t *_Format,...);
-  int __attribute__((__cdecl__)) vfwprintf_s(FILE *_File,const wchar_t *_Format,va_list _ArgList);
-  int __attribute__((__cdecl__)) vwprintf_s(const wchar_t *_Format,va_list _ArgList);
-
-  int __attribute__((__cdecl__)) vswprintf_s(wchar_t *_Dst,size_t _SizeInWords,const wchar_t *_Format,va_list _ArgList);
-
-  int __attribute__((__cdecl__)) swprintf_s(wchar_t *_Dst,size_t _SizeInWords,const wchar_t *_Format,...);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnwprintf_s(wchar_t *_DstBuf,size_t _DstSizeInWords,size_t _MaxCount,const wchar_t *_Format,va_list _ArgList);
-
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwprintf_s(wchar_t *_DstBuf,size_t _DstSizeInWords,size_t _MaxCount,const wchar_t *_Format,...);
 
 
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wprintf_s_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vwprintf_s_l(const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwprintf_s_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfwprintf_s_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_s_l(wchar_t *_DstBuf,size_t _DstSize,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf_s_l(wchar_t *_DstBuf,size_t _DstSize,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwprintf_s_l(wchar_t *_DstBuf,size_t _DstSize,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnwprintf_s_l(wchar_t *_DstBuf,size_t _DstSize,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwscanf_s_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) fwscanf_s(FILE *_File, const wchar_t *_Format, ...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swscanf_s_l(const wchar_t *_Src,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) swscanf_s(const wchar_t *_Src,const wchar_t *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwscanf_s(const wchar_t *_Src,size_t _MaxCount,const wchar_t *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwscanf_s_l(const wchar_t *_Src,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wscanf_s_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) wscanf_s(const wchar_t *_Format, ...);
+  int __attribute__((__cdecl__)) __stdio_common_vswprintf_s(unsigned long long _Options, wchar_t *_Str, size_t _Len, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vsnwprintf_s(unsigned long long _Options, wchar_t *_Str, size_t _Len, size_t _MaxCount, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList);
+  int __attribute__((__cdecl__)) __stdio_common_vfwprintf_s(unsigned long long _Options, FILE *_File, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList);
 
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfwscanf_s_l(FILE *_File, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfwscanf(0x0002ULL | 0x0001ULL, _File, _Format, _Locale, _ArgList);
+  }
 
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vfwscanf_s(FILE* _File, const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vfwscanf_s_l(_File, _Format, __null, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vwscanf_s_l(const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfwscanf_s_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vwscanf_s(const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vfwscanf_s_l((__acrt_iob_func(0)), _Format, __null, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fwscanf_s_l(FILE *_File, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfwscanf_s_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) fwscanf_s(FILE *_File, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfwscanf_s_l(_File, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _wscanf_s_l(const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfwscanf_s_l((__acrt_iob_func(0)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) wscanf_s(const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfwscanf_s_l((__acrt_iob_func(0)), _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vswscanf_s_l(const wchar_t *_Src, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vswscanf(0x0002ULL | 0x0001ULL, _Src, (size_t)-1, _Format, _Locale, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vswscanf_s(const wchar_t *_Src, const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vswscanf_s_l(_Src, _Format, __null, _ArgList);
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _swscanf_s_l(const wchar_t *_Src, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vswscanf_s_l(_Src, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) swscanf_s(const wchar_t *_Src, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vswscanf_s_l(_Src, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnwscanf_s_l(const wchar_t *_Src, size_t _MaxCount, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vswscanf(0x0002ULL | 0x0001ULL, _Src, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snwscanf_s_l(const wchar_t *_Src, size_t _MaxCount, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsnwscanf_s_l(_Src, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snwscanf_s(const wchar_t *_Src, size_t _MaxCount, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsnwscanf_s_l(_Src, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vfwprintf_s_l(FILE *_File, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vfwprintf_s((0x0004ULL | 0x0020ULL), _File, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vwprintf_s_l(const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return _vfwprintf_s_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vfwprintf_s(FILE *_File, const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vfwprintf_s_l(_File, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vwprintf_s(const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vfwprintf_s_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _fwprintf_s_l(FILE *_File, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfwprintf_s_l(_File, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _wprintf_s_l(const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vfwprintf_s_l((__acrt_iob_func(1)), _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) fwprintf_s(FILE *_File, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfwprintf_s_l(_File, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) wprintf_s(const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vfwprintf_s_l((__acrt_iob_func(1)), _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vswprintf_s_l(wchar_t *_DstBuf, size_t _DstSize, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vswprintf_s((0x0004ULL | 0x0020ULL), _DstBuf, _DstSize, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) vswprintf_s(wchar_t *_DstBuf, size_t _DstSize, const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vswprintf_s_l(_DstBuf, _DstSize, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _swprintf_s_l(wchar_t *_DstBuf, size_t _DstSize, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vswprintf_s_l(_DstBuf, _DstSize, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) swprintf_s(wchar_t *_DstBuf, size_t _DstSize, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vswprintf_s_l(_DstBuf, _DstSize, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnwprintf_s_l(wchar_t *_DstBuf, size_t _DstSize, size_t _MaxCount, const wchar_t *_Format, _locale_t _Locale, va_list _ArgList)
+  {
+    return __stdio_common_vsnwprintf_s((0x0004ULL | 0x0020ULL), _DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _vsnwprintf_s(wchar_t *_DstBuf, size_t _DstSize, size_t _MaxCount, const wchar_t *_Format, va_list _ArgList)
+  {
+    return _vsnwprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, __null, _ArgList);
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snwprintf_s_l(wchar_t *_DstBuf, size_t _DstSize, size_t _MaxCount, const wchar_t *_Format, _locale_t _Locale, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Locale);
+    _Ret = _vsnwprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+  inline __attribute__((__cdecl__)) int __attribute__((__cdecl__)) _snwprintf_s(wchar_t *_DstBuf, size_t _DstSize, size_t _MaxCount, const wchar_t *_Format, ...)
+  {
+    __builtin_va_list _ArgList;
+    int _Ret;
+    __builtin_va_start(_ArgList, _Format);
+    _Ret = _vsnwprintf_s_l(_DstBuf, _DstSize, _MaxCount, _Format, __null, _ArgList);
+    __builtin_va_end(_ArgList);
+    return _Ret;
+  }
+# 862 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 3
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) vswprintf_s(wchar_t (&_Dst)[__size], const wchar_t* _Format, va_list _ArgList) { return vswprintf_s(_Dst,__size,_Format,_ArgList); } }
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) swprintf_s(wchar_t (&_Dst)[__size], const wchar_t* _Format, ...) { va_list __vaargs; __builtin_va_start(__vaargs,_Format); int __retval = vswprintf_s(_Dst,__size,_Format,__vaargs); __builtin_va_end(__vaargs); return __retval; } }
   extern "C++" { template <size_t __size> inline int __attribute__((__cdecl__)) _vsnwprintf_s(wchar_t (&_DstBuf)[__size], size_t _MaxCount, const wchar_t* _Format, va_list _ArgList) { return _vsnwprintf_s(_DstBuf,__size,_MaxCount,_Format,_ArgList); } }
@@ -27549,56 +28149,24 @@ extern "C" {
 
   __attribute__ ((__dllimport__)) errno_t __attribute__((__cdecl__)) _wtmpnam_s(wchar_t *_DstBuf,size_t _SizeInWords);
   extern "C++" { template <size_t __size> inline errno_t __attribute__((__cdecl__)) _wtmpnam_s(wchar_t (&_DstBuf)[__size]) { return _wtmpnam_s(_DstBuf,__size); } }
+# 912 "C:/msys64/ucrt64/include/sec_api/stdio_s.h" 3
+  __attribute__ ((__dllimport__)) size_t __attribute__((__cdecl__)) _fread_nolock_s(void *_DstBuf,size_t _DstSize,size_t _ElementSize,size_t _Count,FILE *_File);
 
 
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwprintf_p(FILE *_File,const wchar_t *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wprintf_p(const wchar_t *_Format,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfwprintf_p(FILE *_File,const wchar_t *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vwprintf_p(const wchar_t *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_p(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,...);
-  __attribute__((dllimport)) int __attribute__((__cdecl__)) _vswprintf_p(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scwprintf_p(const wchar_t *_Format,...);
-  __attribute__((dllimport)) int __attribute__((__cdecl__)) _vscwprintf_p(const wchar_t *_Format,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wprintf_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wprintf_p_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vwprintf_l(const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vwprintf_p_l(const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwprintf_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwprintf_p_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfwprintf_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vfwprintf_p_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_c_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swprintf_p_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf_c_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vswprintf_p_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scwprintf_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _scwprintf_p_l(const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscwprintf_p_l(const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwprintf_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vsnwprintf_l(wchar_t *_DstBuf,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __swprintf_l(wchar_t *_Dest,const wchar_t *_Format,_locale_t _Plocinfo,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) __vswprintf_l(wchar_t *_Dest,const wchar_t *_Format,_locale_t _Plocinfo,va_list _Args);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _vscwprintf_l(const wchar_t *_Format,_locale_t _Locale,va_list _ArgList);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _fwscanf_l(FILE *_File,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _swscanf_l(const wchar_t *_Src,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _snwscanf_l(const wchar_t *_Src,size_t _MaxCount,const wchar_t *_Format,_locale_t _Locale,...);
-  __attribute__ ((__dllimport__)) int __attribute__((__cdecl__)) _wscanf_l(const wchar_t *_Format,_locale_t _Locale,...);
-# 916 "C:/Users/maxwo/msys2/mingw64/include/sec_api/stdio_s.h" 3
+
 }
-# 1339 "C:/Users/maxwo/msys2/mingw64/include/stdio.h" 2 3
-# 142 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/include/c++/15.2.0/stdlib.h" 1 3
-# 143 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 1 3 4
-# 9 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 3 4
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpedantic"
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stdint.h" 1 3 4
-# 32 "C:/Users/maxwo/msys2/mingw64/include/stdint.h" 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stddef.h" 1 3 4
-# 2 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 33 "C:/Users/maxwo/msys2/mingw64/include/stdint.h" 2 3 4
+# 1489 "C:/msys64/ucrt64/include/stdio.h" 2 3
+# 142 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 1 "C:/msys64/ucrt64/include/c++/14.2.0/stdlib.h" 1 3
+# 143 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h" 1 3 4
+# 9 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h" 3 4
+# 1 "C:/msys64/ucrt64/include/stdint.h" 1 3 4
+# 32 "C:/msys64/ucrt64/include/stdint.h" 3 4
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/ucrt64/include/stddef.h" 1 3 4
+# 2 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 2 3 4
+# 33 "C:/msys64/ucrt64/include/stdint.h" 2 3 4
 
 
 typedef signed char int8_t;
@@ -27636,16 +28204,15 @@ __extension__ typedef unsigned long long uint_fast64_t;
 
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
-# 12 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h" 2 3 4
-#pragma GCC diagnostic pop
-# 144 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 10 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h" 2 3 4
+# 144 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
 
-# 1 "C:/Users/maxwo/msys2/mingw64/include/inttypes.h" 1 3
-# 14 "C:/Users/maxwo/msys2/mingw64/include/inttypes.h" 3
-# 1 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 1 3 4
-# 1 "C:/Users/maxwo/msys2/mingw64/include/stddef.h" 1 3 4
-# 2 "C:/Users/maxwo/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h" 2 3 4
-# 15 "C:/Users/maxwo/msys2/mingw64/include/inttypes.h" 2 3
+# 1 "C:/msys64/ucrt64/include/inttypes.h" 1 3
+# 14 "C:/msys64/ucrt64/include/inttypes.h" 3
+# 1 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 1 3 4
+# 1 "C:/msys64/ucrt64/include/stddef.h" 1 3 4
+# 2 "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h" 2 3 4
+# 15 "C:/msys64/ucrt64/include/inttypes.h" 2 3
 
 
 extern "C" {
@@ -27655,7 +28222,7 @@ typedef struct {
  intmax_t quot;
  intmax_t rem;
  } imaxdiv_t;
-# 327 "C:/Users/maxwo/msys2/mingw64/include/inttypes.h" 3
+# 327 "C:/msys64/ucrt64/include/inttypes.h" 3
 intmax_t __attribute__((__cdecl__)) imaxabs (intmax_t j);
 
 
@@ -27677,8 +28244,8 @@ uintmax_t __attribute__((__cdecl__)) wcstoumax (const wchar_t* __restrict__ nptr
 
 
 }
-# 146 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
-# 178 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 146 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 2
+# 178 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 #pragma GCC diagnostic ignored "-Wpragmas"
 #pragma GCC diagnostic ignored "-Wfloat-equal"
 #pragma GCC diagnostic ignored "-Wint-to-pointer-cast"
@@ -27689,7 +28256,7 @@ uintmax_t __attribute__((__cdecl__)) wcstoumax (const wchar_t* __restrict__ nptr
 #pragma GCC diagnostic ignored "-Wmisleading-indentation"
 #pragma GCC diagnostic ignored "-Wstrict-overflow"
 #pragma GCC diagnostic ignored "-Wcast-qual"
-# 239 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 239 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 struct ImGuiDemoWindowData;
 static void ShowExampleAppMainMenuBar();
 static void ShowExampleAppAssetsBrowser(bool* p_open);
@@ -27802,9 +28369,9 @@ struct ImGuiDemoWindowData
     bool LiveEditOverride = false;
     ImGuiItemFlags LiveEditFlags = ImGuiItemFlags_LiveEditOnInputText;
     ExampleTreeNode* DemoTree = 
-# 350 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 350 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                __null
-# 350 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 350 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                    ;
 
     ~ImGuiDemoWindowData() { if (DemoTree) ExampleTree_DestroyNode(DemoTree); }
@@ -27818,21 +28385,21 @@ void ImGui::ShowDemoWindow(bool* p_open)
 
 
     
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
    (void) ((!!(
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
    ImGui::GetCurrentContext() != 
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
    __null 
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
    && "Missing Dear ImGui context. Refer to examples app!"
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
    )) || (_assert(
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
    "ImGui::GetCurrentContext() != __null && \"Missing Dear ImGui context. Refer to examples app!\""
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-   ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",362),0))
-# 362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+   ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",362),0))
+# 362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                         ;
 
 
@@ -27898,9 +28465,9 @@ void ImGui::ShowDemoWindow(bool* p_open)
     if (no_docking) window_flags |= ImGuiWindowFlags_NoDocking;
     if (unsaved_document) window_flags |= ImGuiWindowFlags_UnsavedDocument;
     if (no_close) p_open = 
-# 426 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 426 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                     __null
-# 426 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 426 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                         ;
 
 
@@ -28230,88 +28797,88 @@ static void DemoWindowMenuBar(ImGuiDemoWindowData* demo_data)
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 753, "Menu/Examples"); } while (0);
             ImGui::MenuItem("Main menu bar", 
-# 754 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 754 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                             __null
-# 754 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 754 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                 , &demo_data->ShowMainMenuBar);
 
             ImGui::SeparatorText("Mini apps");
             ImGui::MenuItem("Assets Browser", 
-# 757 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 757 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __null
-# 757 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 757 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                  , &demo_data->ShowAppAssetsBrowser);
             ImGui::MenuItem("Console", 
-# 758 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 758 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                       __null
-# 758 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 758 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                           , &demo_data->ShowAppConsole);
             ImGui::MenuItem("Custom rendering", 
-# 759 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 759 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 759 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 759 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , &demo_data->ShowAppCustomRendering);
             ImGui::MenuItem("Documents", 
-# 760 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 760 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                         __null
-# 760 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 760 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                             , &demo_data->ShowAppDocuments);
             ImGui::MenuItem("Dockspace", 
-# 761 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 761 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                         __null
-# 761 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 761 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                             , &demo_data->ShowAppDockSpace);
             ImGui::MenuItem("Image Viewer", 
-# 762 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 762 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                            __null
-# 762 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 762 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                , &demo_data->ShowAppImageViewer);
             ImGui::MenuItem("Log", 
-# 763 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 763 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                   __null
-# 763 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 763 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                       , &demo_data->ShowAppLog);
             ImGui::MenuItem("Property editor", 
-# 764 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 764 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                               __null
-# 764 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 764 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                   , &demo_data->ShowAppPropertyEditor);
             ImGui::MenuItem("Simple layout", 
-# 765 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 765 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                             __null
-# 765 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 765 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                 , &demo_data->ShowAppLayout);
             ImGui::MenuItem("Simple overlay", 
-# 766 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 766 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __null
-# 766 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 766 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                  , &demo_data->ShowAppSimpleOverlay);
 
             ImGui::SeparatorText("Concepts");
             ImGui::MenuItem("Auto-resizing window", 
-# 769 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 769 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                    __null
-# 769 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 769 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                        , &demo_data->ShowAppAutoResize);
             ImGui::MenuItem("Constrained-resizing window", 
-# 770 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 770 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                           __null
-# 770 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 770 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                               , &demo_data->ShowAppConstrainedResize);
             ImGui::MenuItem("Fullscreen window", 
-# 771 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 771 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                 __null
-# 771 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 771 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                     , &demo_data->ShowAppFullscreen);
             ImGui::MenuItem("Long text display", 
-# 772 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 772 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                 __null
-# 772 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 772 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                     , &demo_data->ShowAppLongText);
             ImGui::MenuItem("Manipulating window titles", 
-# 773 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 773 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                          __null
-# 773 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 773 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                              , &demo_data->ShowAppWindowTitles);
 
             ImGui::EndMenu();
@@ -28327,9 +28894,9 @@ static void DemoWindowMenuBar(ImGuiDemoWindowData* demo_data)
 
 
             ImGui::MenuItem("Metrics/Debugger", 
-# 787 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 787 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 787 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 787 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , &demo_data->ShowMetrics, has_debug_tools);
             if (ImGui::BeginMenu("Debug Options"))
             {
@@ -28341,33 +28908,33 @@ static void DemoWindowMenuBar(ImGuiDemoWindowData* demo_data)
                 ImGui::EndMenu();
             }
             ImGui::MenuItem("Debug Log", 
-# 797 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 797 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                         __null
-# 797 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 797 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                             , &demo_data->ShowDebugLog, has_debug_tools);
             ImGui::MenuItem("ID Stack Tool", 
-# 798 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 798 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                             __null
-# 798 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 798 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                 , &demo_data->ShowIDStackTool, has_debug_tools);
             bool is_debugger_present = io.ConfigDebugIsDebuggerPresent;
             if (ImGui::MenuItem("Item Picker", 
-# 800 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 800 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                               __null
-# 800 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 800 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                   , false, has_debug_tools))
                 ImGui::DebugStartItemPicker();
             if (!is_debugger_present)
                 ImGui::SetItemTooltip("Requires io.ConfigDebugIsDebuggerPresent=true to be set.\n\nWe otherwise disable some extra features to avoid casual users crashing the application.");
             ImGui::MenuItem("Style Editor", 
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                            __null
-# 804 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 804 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                , &demo_data->ShowStyleEditor);
             ImGui::MenuItem("About Dear ImGui", 
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 805 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 805 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , &demo_data->ShowAbout);
 
             ImGui::EndMenu();
@@ -28388,9 +28955,9 @@ struct ExampleTreeNode
     char Name[28] = "";
     int UID = 0;
     ExampleTreeNode* Parent = 
-# 824 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 824 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                         __null
-# 824 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 824 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                             ;
     ImVector<ExampleTreeNode*> Childs;
     int IndexInParent = 0;
@@ -28416,56 +28983,56 @@ struct ExampleMemberInfo
 static const ExampleMemberInfo ExampleTreeNodeMemberInfos[]
 {
     { "MyName", ImGuiDataType_String, 1, 
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __builtin_offsetof (
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              ExampleTreeNode
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              , 
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              Name
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              ) 
-# 848 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 848 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                              },
     { "MyBool", ImGuiDataType_Bool, 1, 
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __builtin_offsetof (
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              ExampleTreeNode
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              , 
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              DataMyBool
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              ) 
-# 849 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 849 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                    },
     { "MyInt", ImGuiDataType_S32, 1, 
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __builtin_offsetof (
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              ExampleTreeNode
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              , 
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              DataMyInt
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              ) 
-# 850 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 850 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                   },
     { "MyVec2", ImGuiDataType_Float, 2, 
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __builtin_offsetof (
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              ExampleTreeNode
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              , 
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              DataMyVec2
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              ) 
-# 851 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 851 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                    },
 };
 
@@ -28505,9 +29072,9 @@ static ExampleTreeNode* ExampleTree_CreateDemoTree()
     char name_buf[NAME_MAX_LEN];
     int uid = 0;
     ExampleTreeNode* node_L0 = ExampleTree_CreateNode("<ROOT>", ++uid, 
-# 889 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 889 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                       __null
-# 889 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 889 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                           );
     for (int idx_L0 = 0; idx_L0 < ROOT_ITEMS_COUNT; idx_L0++)
     {
@@ -28563,17 +29130,17 @@ static void ExampleImageViewer_DrawCanvas(ExampleImageViewerData* data, ImVec2 c
     ImGuiPlatformIO& platform_io = ImGui::GetPlatformIO();
     ImDrawList* draw_list = ImGui::GetWindowDrawList();
     
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
    (void) ((!!(
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
    canvas_size.x >= 0.0f && canvas_size.y >= 0.0f
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
    )) || (_assert(
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
    "canvas_size.x >= 0.0f && canvas_size.y >= 0.0f"
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-   ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",943),0))
-# 943 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+   ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",943),0))
+# 943 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             ;
 
 
@@ -28606,16 +29173,16 @@ static void ExampleImageViewer_DrawCanvas(ExampleImageViewerData* data, ImVec2 c
     draw_list->PushClipRect(canvas_min, canvas_max, true);
     draw_list->AddRectFilled(image_min, image_max, data->ImageBgColor);
     if (platform_io.DrawCallback_SetSamplerNearest != 
-# 974 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 974 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                      __null
-# 974 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 974 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                          )
         draw_list->AddCallback(platform_io.DrawCallback_SetSamplerNearest);
     draw_list->AddImage(image_tex_ref, image_min, image_max);
     if (platform_io.DrawCallback_SetSamplerLinear != 
-# 977 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 977 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                     __null
-# 977 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 977 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                         )
         draw_list->AddCallback(ImGui::GetPlatformIO().DrawCallback_SetSamplerLinear);
 
@@ -29061,9 +29628,9 @@ static void DemoWindowWidgetsColorAndPickers()
         if (display_mode == 3) flags |= ImGuiColorEditFlags_DisplayHSV;
         if (display_mode == 4) flags |= ImGuiColorEditFlags_DisplayHex;
         ImGui::ColorPicker4("MyColor##4", (float*)&color, flags, ref_color ? &ref_color_v.x : 
-# 1421 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1421 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                              __null
-# 1421 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1421 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                  );
 
         ImGui::Text("Set defaults in code:");
@@ -29169,7 +29736,7 @@ static void DemoWindowWidgetsComboBoxes()
             }
             ImGui::SetNextItemShortcut(ImGuiMod_Ctrl | ImGuiKey_F);
             filter.Draw("##Filter", -1.17549435082228750796873653722224568e-38F
-# 1525 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1525 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                            );
 
             for (int n = 0; n < ((int)(sizeof(items) / sizeof(*(items)))); n++)
@@ -29213,64 +29780,64 @@ static void DemoWindowWidgetsDataTypes()
     if (ImGui::TreeNode("Data Types"))
     {
         do { ImGui::DemoMarker("imgui_demo.cpp", 1567, "Widgets/Data Types"); } while (0);
-# 1590 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1590 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         const char s8_zero = 0, s8_one = 1, s8_fifty = 50, s8_min = -128, s8_max = 127;
         const ImU8 u8_zero = 0, u8_one = 1, u8_fifty = 50, u8_min = 0, u8_max = 255;
         const short s16_zero = 0, s16_one = 1, s16_fifty = 50, s16_min = -32768, s16_max = 32767;
         const ImU16 u16_zero = 0, u16_one = 1, u16_fifty = 50, u16_min = 0, u16_max = 65535;
         const ImS32 s32_zero = 0, s32_one = 1, s32_fifty = 50, s32_min = 
-# 1594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                               (-0x7fffffff - 1)
-# 1594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                      /2, s32_max = 0x7fffffff
-# 1594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             /2, s32_hi_a = 0x7fffffff
-# 1594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                      /2 - 100, s32_hi_b = 0x7fffffff
-# 1594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                                     /2;
         const ImU32 u32_zero = 0, u32_one = 1, u32_fifty = 50, u32_min = 0, u32_max = 
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                      (0x7fffffff * 2U + 1U)
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                              /2, u32_hi_a = 
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                               (0x7fffffff * 2U + 1U)
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                       /2 - 100, u32_hi_b = 
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                                              (0x7fffffff * 2U + 1U)
-# 1595 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1595 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                                      /2;
         const ImS64 s64_zero = 0, s64_one = 1, s64_fifty = 50, s64_min = 
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                               (-9223372036854775807ll - 1)
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                        /2, s64_max = 
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                      9223372036854775807ll
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                               /2, s64_hi_a = 
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                               9223372036854775807ll
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                        /2 - 100, s64_hi_b = 
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                                              9223372036854775807ll
-# 1596 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1596 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                                       /2;
         const ImU64 u64_zero = 0, u64_one = 1, u64_fifty = 50, u64_min = 0, u64_max = 
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                      0xffffffffffffffffull
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                /2, u64_hi_a = 
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                               0xffffffffffffffffull
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                         /2 - 100, u64_hi_b = 
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                                              0xffffffffffffffffull
-# 1597 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1597 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                                        /2;
         const float f32_zero = 0.f, f32_one = 1.f, f32_lo_a = -10000000000.0f, f32_hi_a = +10000000000.0f;
         const double f64_zero = 0., f64_one = 1., f64_lo_a = -1000000000000000.0, f64_hi_a = +1000000000000000.0;
@@ -29296,92 +29863,92 @@ static void DemoWindowWidgetsDataTypes()
             "As with every widget in dear imgui, we never modify values unless there is a user interaction.\n"
             "You can override the clamping limits by using Ctrl+Click to input a value.");
         ImGui::DragScalar("drag s8", ImGuiDataType_S8, &s8_v, drag_speed, drag_clamp ? &s8_zero : 
-# 1621 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1621 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1621 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1621 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &s8_fifty : 
-# 1621 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1621 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1621 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1621 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   );
         ImGui::DragScalar("drag u8", ImGuiDataType_U8, &u8_v, drag_speed, drag_clamp ? &u8_zero : 
-# 1622 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1622 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1622 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1622 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &u8_fifty : 
-# 1622 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1622 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1622 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1622 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   , "%u ms");
         ImGui::DragScalar("drag s16", ImGuiDataType_S16, &s16_v, drag_speed, drag_clamp ? &s16_zero : 
-# 1623 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1623 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1623 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1623 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &s16_fifty : 
-# 1623 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1623 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1623 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1623 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   );
         ImGui::DragScalar("drag u16", ImGuiDataType_U16, &u16_v, drag_speed, drag_clamp ? &u16_zero : 
-# 1624 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1624 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1624 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1624 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &u16_fifty : 
-# 1624 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1624 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1624 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1624 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   , "%u ms");
         ImGui::DragScalar("drag s32", ImGuiDataType_S32, &s32_v, drag_speed, drag_clamp ? &s32_zero : 
-# 1625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &s32_fifty : 
-# 1625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1625 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1625 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   );
         ImGui::DragScalar("drag s32 hex", ImGuiDataType_S32, &s32_v, drag_speed, drag_clamp ? &s32_zero : 
-# 1626 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1626 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1626 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1626 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &s32_fifty : 
-# 1626 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1626 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1626 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1626 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   , "0x%08X");
         ImGui::DragScalar("drag u32", ImGuiDataType_U32, &u32_v, drag_speed, drag_clamp ? &u32_zero : 
-# 1627 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1627 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1627 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1627 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &u32_fifty : 
-# 1627 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1627 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1627 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1627 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   , "%u ms");
         ImGui::DragScalar("drag s64", ImGuiDataType_S64, &s64_v, drag_speed, drag_clamp ? &s64_zero : 
-# 1628 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1628 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1628 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1628 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &s64_fifty : 
-# 1628 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1628 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1628 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1628 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   );
         ImGui::DragScalar("drag u64", ImGuiDataType_U64, &u64_v, drag_speed, drag_clamp ? &u64_zero : 
-# 1629 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1629 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1629 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1629 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , drag_clamp ? &u64_fifty : 
-# 1629 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1629 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                                                               __null
-# 1629 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1629 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                   );
         ImGui::DragScalar("drag float", ImGuiDataType_Float, &f32_v, 0.005f, &f32_zero, &f32_one, "%f");
         ImGui::DragScalar("drag float log", ImGuiDataType_Float, &f32_v, 0.005f, &f32_zero, &f32_one, "%f", ImGuiSliderFlags_Logarithmic);
         ImGui::DragScalar("drag double", ImGuiDataType_Double, &f64_v, 0.0005f, &f64_zero, 
-# 1632 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1632 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                              __null
-# 1632 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1632 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                  , "%.10f grams");
         ImGui::DragScalar("drag double log",ImGuiDataType_Double, &f64_v, 0.0005f, &f64_zero, &f64_one, "0 < %.10f < 1", ImGuiSliderFlags_Logarithmic);
 
@@ -29399,34 +29966,34 @@ static void DemoWindowWidgetsDataTypes()
         ImGui::SliderScalar("slider u32 high", ImGuiDataType_U32, &u32_v, &u32_hi_a, &u32_hi_b, "%u");
         ImGui::SliderScalar("slider u32 full", ImGuiDataType_U32, &u32_v, &u32_min, &u32_max, "%u");
         ImGui::SliderScalar("slider s64 low", ImGuiDataType_S64, &s64_v, &s64_zero, &s64_fifty,"%" 
-# 1648 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1648 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "lld"
-# 1648 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1648 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                  );
         ImGui::SliderScalar("slider s64 high", ImGuiDataType_S64, &s64_v, &s64_hi_a, &s64_hi_b, "%" 
-# 1649 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1649 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "lld"
-# 1649 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1649 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                  );
         ImGui::SliderScalar("slider s64 full", ImGuiDataType_S64, &s64_v, &s64_min, &s64_max, "%" 
-# 1650 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1650 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "lld"
-# 1650 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1650 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                  );
         ImGui::SliderScalar("slider u64 low", ImGuiDataType_U64, &u64_v, &u64_zero, &u64_fifty,"%" 
-# 1651 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1651 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "llu" 
-# 1651 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1651 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   " ms");
         ImGui::SliderScalar("slider u64 high", ImGuiDataType_U64, &u64_v, &u64_hi_a, &u64_hi_b, "%" 
-# 1652 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1652 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "llu" 
-# 1652 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1652 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   " ms");
         ImGui::SliderScalar("slider u64 full", ImGuiDataType_U64, &u64_v, &u64_min, &u64_max, "%" 
-# 1653 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1653 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                            "llu" 
-# 1653 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1653 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   " ms");
         ImGui::SliderScalar("slider float low", ImGuiDataType_Float, &f32_v, &f32_zero, &f32_one);
         ImGui::SliderScalar("slider float low log", ImGuiDataType_Float, &f32_v, &f32_zero, &f32_one, "%.10f", ImGuiSliderFlags_Logarithmic);
@@ -29441,14 +30008,14 @@ static void DemoWindowWidgetsDataTypes()
         ImGui::SliderScalar("slider s32 reverse", ImGuiDataType_S32, &s32_v, &s32_fifty, &s32_zero, "%d");
         ImGui::SliderScalar("slider u32 reverse", ImGuiDataType_U32, &u32_v, &u32_fifty, &u32_zero, "%u");
         ImGui::SliderScalar("slider s64 reverse", ImGuiDataType_S64, &s64_v, &s64_fifty, &s64_zero, "%" 
-# 1666 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1666 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                           "lld"
-# 1666 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1666 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                 );
         ImGui::SliderScalar("slider u64 reverse", ImGuiDataType_U64, &u64_v, &u64_fifty, &u64_zero, "%" 
-# 1667 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1667 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                           "llu" 
-# 1667 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1667 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                  " ms");
 
         do { ImGui::DemoMarker("imgui_demo.cpp", 1669, "Widgets/Data Types/Inputs"); } while (0);
@@ -29460,128 +30027,128 @@ static void DemoWindowWidgetsDataTypes()
         ImGui::CheckboxFlags("ImGuiInputTextFlags_ParseEmptyRefVal", &flags, ImGuiInputTextFlags_ParseEmptyRefVal);
         ImGui::CheckboxFlags("ImGuiInputTextFlags_DisplayEmptyRefVal", &flags, ImGuiInputTextFlags_DisplayEmptyRefVal);
         ImGui::InputScalar("input s8", ImGuiDataType_S8, &s8_v, inputs_step ? &s8_one : 
-# 1677 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1677 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1677 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1677 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1677 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1677 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1677 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1677 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%d", flags);
         ImGui::InputScalar("input u8", ImGuiDataType_U8, &u8_v, inputs_step ? &u8_one : 
-# 1678 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1678 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1678 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1678 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1678 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1678 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1678 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1678 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%u", flags);
         ImGui::InputScalar("input s16", ImGuiDataType_S16, &s16_v, inputs_step ? &s16_one : 
-# 1679 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1679 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1679 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1679 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1679 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1679 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1679 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1679 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%d", flags);
         ImGui::InputScalar("input u16", ImGuiDataType_U16, &u16_v, inputs_step ? &u16_one : 
-# 1680 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1680 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1680 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1680 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1680 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1680 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1680 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1680 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%u", flags);
         ImGui::InputScalar("input s32", ImGuiDataType_S32, &s32_v, inputs_step ? &s32_one : 
-# 1681 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1681 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1681 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1681 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1681 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1681 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1681 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1681 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%d", flags);
         ImGui::InputScalar("input s32 hex", ImGuiDataType_S32, &s32_v, inputs_step ? &s32_one : 
-# 1682 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1682 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1682 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1682 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1682 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1682 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1682 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1682 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%04X", flags);
         ImGui::InputScalar("input u32", ImGuiDataType_U32, &u32_v, inputs_step ? &u32_one : 
-# 1683 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1683 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1683 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1683 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1683 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1683 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1683 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1683 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%u", flags);
         ImGui::InputScalar("input u32 hex", ImGuiDataType_U32, &u32_v, inputs_step ? &u32_one : 
-# 1684 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1684 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1684 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1684 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1684 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1684 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1684 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1684 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , "%08X", flags);
         ImGui::InputScalar("input s64", ImGuiDataType_S64, &s64_v, inputs_step ? &s64_one : 
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , 
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1685 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1685 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , flags);
         ImGui::InputScalar("input u64", ImGuiDataType_U64, &u64_v, inputs_step ? &u64_one : 
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , 
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1686 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1686 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , flags);
         ImGui::InputScalar("input float", ImGuiDataType_Float, &f32_v, inputs_step ? &f32_one : 
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , 
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1687 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1687 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , flags);
         ImGui::InputScalar("input double", ImGuiDataType_Double, &f64_v, inputs_step ? &f64_one : 
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                   __null
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                       , 
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                         __null
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                             , 
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 1688 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1688 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , flags);
 
         ImGui::TreePop();
@@ -29671,17 +30238,17 @@ static void DemoWindowWidgetsDragAndDrop()
                     if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("DND_DEMO_CELL"))
                     {
                         
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                        (void) ((!!(
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                        payload->DataSize == sizeof(int)
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                        )) || (_assert(
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                        "payload->DataSize == sizeof(int)"
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",1776),0))
-# 1776 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",1776),0))
+# 1776 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   ;
                         int payload_n = *(const int*)payload->Data;
                         if (mode == Mode_Copy)
@@ -29808,15 +30375,15 @@ static void DemoWindowWidgetsDragsAndSliders()
         ImGui::Text("Underlying float value: %f", drag_f);
         ImGui::DragFloat("DragFloat (0 -> 1)", &drag_f, 0.005f, 0.0f, 1.0f, "%.3f", flags);
         ImGui::DragFloat("DragFloat (0 -> +inf)", &drag_f, 0.005f, 0.0f, 3.40282346638528859811704183484516925e+38F
-# 1901 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1901 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                , "%.3f", flags);
         ImGui::DragFloat("DragFloat (-inf -> 1)", &drag_f, 0.005f, -3.40282346638528859811704183484516925e+38F
-# 1902 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1902 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                           , 1.0f, "%.3f", flags);
         ImGui::DragFloat("DragFloat (-inf -> +inf)", &drag_f, 0.005f, -3.40282346638528859811704183484516925e+38F
-# 1903 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1903 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                              , +3.40282346638528859811704183484516925e+38F
-# 1903 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1903 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                        , "%.3f", flags);
 
 
@@ -29867,7 +30434,7 @@ static void DemoWindowWidgetsImages()
             "Below we are displaying the font texture (which is the only texture we have access to in this demo). "
             "Use the 'ImTextureID' type as storage to pass pointers or identifier to your own texture data. "
             "Hover the texture for a zoomed view!");
-# 1970 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 1970 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         ImFontAtlas* atlas = io.Fonts;
         ImTextureRef my_tex_id = atlas->TexRef;
         float my_tex_w = (float)atlas->TexData->Width;
@@ -29928,7 +30495,7 @@ static void DemoWindowWidgetsListBoxes()
     if (ImGui::TreeNode("List Boxes"))
     {
         do { ImGui::DemoMarker("imgui_demo.cpp", 2029, "Widgets/List Boxes"); } while (0);
-# 2038 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2038 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         const char* items[] = { "AAAA", "BBBB", "CCCC", "DDDD", "EEEE", "FFFF", "GGGG", "HHHH", "IIII", "JJJJ", "KKKK", "LLLLLLL", "MMMM", "OOOOOOO" };
         static int item_selected_idx = 0;
 
@@ -29958,7 +30525,7 @@ static void DemoWindowWidgetsListBoxes()
 
         ImGui::Text("Full-width:");
         if (ImGui::BeginListBox("##listbox 2", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 2066 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2066 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                              , 5 * ImGui::GetTextLineHeightWithSpacing())))
         {
             for (int n = 0; n < ((int)(sizeof(items) / sizeof(*(items)))); n++)
@@ -30036,72 +30603,72 @@ static void DemoWindowWidgetsMultiComponents()
         ImGui::InputFloat2("input float2", vec4f);
         ImGui::InputInt2("input int2", vec4i);
         ImGui::DragFloat2("drag float2", vec4f, 0.01f, 0.0f, 1.0f, 
-# 2142 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2142 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                   __null
-# 2142 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2142 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                       , flags);
         ImGui::DragInt2("drag int2", vec4i, 1, 0, 255, 
-# 2143 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2143 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                       __null
-# 2143 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2143 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           , flags);
         ImGui::SliderFloat2("slider float2", vec4f, 0.0f, 1.0f, 
-# 2144 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2144 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 2144 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2144 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    , flags);
         ImGui::SliderInt2("slider int2", vec4i, 0, 255, 
-# 2145 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2145 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                        __null
-# 2145 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2145 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            , flags);
 
         ImGui::SeparatorText("3-wide");
         ImGui::InputFloat3("input float3", vec4f);
         ImGui::InputInt3("input int3", vec4i);
         ImGui::DragFloat3("drag float3", vec4f, 0.01f, 0.0f, 1.0f, 
-# 2150 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2150 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                   __null
-# 2150 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2150 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                       , flags);
         ImGui::DragInt3("drag int3", vec4i, 1, 0, 255, 
-# 2151 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2151 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                       __null
-# 2151 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2151 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           , flags);
         ImGui::SliderFloat3("slider float3", vec4f, 0.0f, 1.0f, 
-# 2152 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2152 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 2152 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2152 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    , flags);
         ImGui::SliderInt3("slider int3", vec4i, 0, 255, 
-# 2153 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2153 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                        __null
-# 2153 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2153 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            , flags);
 
         ImGui::SeparatorText("4-wide");
         ImGui::InputFloat4("input float4", vec4f);
         ImGui::InputInt4("input int4", vec4i);
         ImGui::DragFloat4("drag float4", vec4f, 0.01f, 0.0f, 1.0f, 
-# 2158 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2158 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                   __null
-# 2158 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2158 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                       , flags);
         ImGui::DragInt4("drag int4", vec4i, 1, 0, 255, 
-# 2159 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2159 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                       __null
-# 2159 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2159 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           , flags);
         ImGui::SliderFloat4("slider float4", vec4f, 0.0f, 1.0f, 
-# 2160 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2160 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 2160 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2160 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    , flags);
         ImGui::SliderInt4("slider int4", vec4i, 0, 255, 
-# 2161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                        __null
-# 2161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            , flags);
 
         ImGui::SeparatorText("Ranges");
@@ -30138,9 +30705,9 @@ static void DemoWindowWidgetsPlotting()
         static float arr[] = { 0.6f, 0.1f, 1.0f, 0.5f, 0.92f, 0.1f, 0.2f };
         ImGui::PlotLines("Frame Times", arr, ((int)(sizeof(arr) / sizeof(*(arr)))));
         ImGui::PlotHistogram("Histogram", arr, ((int)(sizeof(arr) / sizeof(*(arr)))), 0, 
-# 2196 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2196 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                   __null
-# 2196 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2196 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                       , 0.0f, 1.0f, ImVec2(0, 80.0f));
 
 
@@ -30189,22 +30756,22 @@ static void DemoWindowWidgetsPlotting()
         ImGui::SliderInt("Sample count", &display_count, 1, 400);
         float (*func)(void*, int) = (func_type == 0) ? Funcs::Sin : Funcs::Saw;
         ImGui::PlotLines("Lines##2", func, 
-# 2243 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2243 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                           __null
-# 2243 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2243 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                               , display_count, 0, 
-# 2243 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2243 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                   __null
-# 2243 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2243 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                       , -1.0f, 1.0f, ImVec2(0, 80));
         ImGui::PlotHistogram("Histogram##2", func, 
-# 2244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                   __null
-# 2244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                       , display_count, 0, 
-# 2244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                           __null
-# 2244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                               , -1.0f, 1.0f, ImVec2(0, 80));
 
         ImGui::TreePop();
@@ -30602,9 +31169,9 @@ static void DemoWindowWidgetsSelectables()
 
             const float time = (float)ImGui::GetTime();
             const bool winning_state = memchr(selected, 0, sizeof(selected)) == 
-# 2640 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 2640 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                __null
-# 2640 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2640 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                    ;
             if (winning_state)
                 ImGui::PushStyleVar(ImGuiStyleVar_SelectableTextAlign, ImVec2(0.5f + 0.5f * cosf(time * 2.0f), 0.5f + 0.5f * sinf(time * 3.0f)));
@@ -30660,7 +31227,7 @@ static void DemoWindowWidgetsSelectables()
         ImGui::TreePop();
     }
 }
-# 2703 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2703 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 static const char* ExampleNames[] =
 {
     "Artichoke", "Arugula", "Asparagus", "Avocado", "Bamboo Shoots", "Bean Sprouts", "Beans", "Beet", "Belgian Endive", "Bell Pepper",
@@ -30741,17 +31308,17 @@ struct ExampleDualListBox
     void MoveAll(int src, int dst)
     {
         
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        (src == 0 && dst == 1) || (src == 1 && dst == 0)
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "(src == 0 && dst == 1) || (src == 1 && dst == 0)"
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",2782),0))
-# 2782 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",2782),0))
+# 2782 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   ;
         for (ImGuiID item_id : Items[src])
             Items[dst].push_back(item_id);
@@ -30825,12 +31392,12 @@ struct ExampleDualListBox
                 {
 
                     ImGui::SetNextWindowSizeConstraints(ImVec2(0.0f, ImGui::GetFrameHeightWithSpacing() * 4), ImVec2(3.40282346638528859811704183484516925e+38F
-# 2854 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2854 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                            , 3.40282346638528859811704183484516925e+38F
-# 2854 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2854 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                     ));
                     child_visible = ImGui::BeginChild("0", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 2855 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2855 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                          , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY);
                     child_height_0 = ImGui::GetWindowSize().y;
                 }
@@ -30838,7 +31405,7 @@ struct ExampleDualListBox
                 {
 
                     child_visible = ImGui::BeginChild("1", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 2861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                          , child_height_0), ImGuiChildFlags_FrameStyle);
                 }
                 if (child_visible)
@@ -30890,7 +31457,7 @@ struct ExampleDualListBox
                 MoveAll(request_move_all, request_move_all ^ 1);
             if (request_move_selected != -1)
                 MoveSelected(request_move_selected, request_move_selected ^ 1);
-# 2923 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2923 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             ImGui::EndTable();
         }
     }
@@ -30965,7 +31532,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
 
 
             if (ImGui::BeginChild("##Basket", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 2996 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 2996 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY))
             {
                 ImGuiMultiSelectFlags flags = ImGuiMultiSelectFlags_ClearOnEscape | ImGuiMultiSelectFlags_BoxSelect1d;
@@ -31001,7 +31568,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             const int ITEMS_COUNT = 10000;
             ImGui::Text("Selection: %d/%d", selection.Size, ITEMS_COUNT);
             if (ImGui::BeginChild("##Basket", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 3030 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3030 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY))
             {
                 ImGuiMultiSelectFlags flags = ImGuiMultiSelectFlags_ClearOnEscape | ImGuiMultiSelectFlags_BoxSelect1d;
@@ -31030,7 +31597,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             ImGui::EndChild();
             ImGui::TreePop();
         }
-# 3066 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3066 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         if (ImGui::TreeNode("Multi-Select (with deletion)"))
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 3068, "Widgets/Selection State/Multi-Select (with deletion)"); } while (0);
@@ -31060,7 +31627,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             ImGui::SetNextWindowContentSize(ImVec2(0.0f, items.Size * items_height));
 
             if (ImGui::BeginChild("##Basket", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 3094 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3094 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY))
             {
                 ImGuiMultiSelectFlags flags = ImGuiMultiSelectFlags_ClearOnEscape | ImGuiMultiSelectFlags_BoxSelect1d;
@@ -31173,7 +31740,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             ImGui::CheckboxFlags("ImGuiMultiSelectFlags_BoxSelect2d", &flags, ImGuiMultiSelectFlags_BoxSelect2d);
 
             if (ImGui::BeginChild("##Basket", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 3205 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3205 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             , ImGui::GetFontSize() * 20), ImGuiChildFlags_Borders | ImGuiChildFlags_ResizeY))
             {
                 ImGuiMultiSelectIO* ms_io = ImGui::BeginMultiSelect(flags, -1, ((int)(sizeof(items) / sizeof(*(items)))));
@@ -31248,7 +31815,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             ImGui::Text("(also access from 'Examples->Assets Browser' in menu)");
             ImGui::TreePop();
         }
-# 3290 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3290 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         if (ImGui::TreeNode("Multi-Select (trees)"))
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 3292, "Widgets/Selection State/Multi-Select (trees)"); } while (0);
@@ -31320,9 +31887,9 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
                             ExampleTreeNode* first_node = (ExampleTreeNode*)(intptr_t)req.RangeFirstItem;
                             ExampleTreeNode* last_node = (ExampleTreeNode*)(intptr_t)req.RangeLastItem;
                             for (ExampleTreeNode* node = first_node; node != 
-# 3360 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3360 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                             __null
-# 3360 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3360 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                 ; node = TreeGetNextNodeInVisibleOrder(node, last_node))
                                 selection->SetItemSelected((ImGuiID)node->UID, req.Selected);
                         }
@@ -31332,28 +31899,28 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
                 static void TreeSetAllInOpenNodes(ExampleTreeNode* node, ImGuiSelectionBasicStorage* selection, bool selected)
                 {
                     if (node->Parent != 
-# 3368 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3368 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                        __null
-# 3368 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3368 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                            )
                         selection->SetItemSelected((ImGuiID)node->UID, selected);
                     if (node->Parent == 
-# 3370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                        __null 
-# 3370 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3370 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                             || ImGui::TreeNodeGetOpen((ImGuiID)node->UID))
                         for (ExampleTreeNode* child : node->Childs)
                             TreeSetAllInOpenNodes(child, selection, selected);
                 }
-# 3383 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3383 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                 static ExampleTreeNode* TreeGetNextNodeInVisibleOrder(ExampleTreeNode* curr_node, ExampleTreeNode* last_node)
                 {
 
                     if (curr_node == last_node)
                         return 
-# 3387 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3387 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                               __null
-# 3387 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3387 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                   ;
 
 
@@ -31362,9 +31929,9 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
 
 
                     while (curr_node->Parent != 
-# 3394 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3394 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 3394 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3394 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    )
                     {
                         if (curr_node->IndexInParent + 1 < curr_node->Parent->Childs.Size)
@@ -31372,9 +31939,9 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
                         curr_node = curr_node->Parent;
                     }
                     return 
-# 3400 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3400 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                           __null
-# 3400 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3400 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                               ;
                 }
 
@@ -31382,15 +31949,15 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
 
             static ImGuiSelectionBasicStorage selection;
             if (demo_data->DemoTree == 
-# 3406 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3406 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                       __null
-# 3406 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3406 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                           )
                 demo_data->DemoTree = ExampleTree_CreateDemoTree();
             ImGui::Text("Selection size: %d", selection.Size);
 
             if (ImGui::BeginChild("##Tree", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 3410 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3410 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY))
             {
                 ExampleTreeNode* tree = demo_data->DemoTree;
@@ -31406,7 +31973,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
 
             ImGui::TreePop();
         }
-# 3433 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3433 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         if (ImGui::TreeNode("Multi-Select (advanced)"))
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 3435, "Widgets/Selection State/Multi-Select (advanced)"); } while (0);
@@ -31473,7 +32040,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
             const float items_height = (widget_type == WidgetType_TreeNode) ? ImGui::GetTextLineHeight() : ImGui::GetTextLineHeightWithSpacing();
             ImGui::SetNextWindowContentSize(ImVec2(0.0f, items.Size * items_height));
             if (ImGui::BeginChild("##Basket", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 3498 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3498 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                             , ImGui::GetFontSize() * 20), ImGuiChildFlags_FrameStyle | ImGuiChildFlags_ResizeY))
             {
                 ImVec2 color_button_sz(ImGui::GetFontSize(), ImGui::GetFontSize());
@@ -31562,16 +32129,16 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
 
 
                             if (ImGui::GetDragDropPayload() == 
-# 3585 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3585 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                               __null
-# 3585 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3585 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   )
                             {
                                 ImVector<int> payload_items;
                                 void* it = 
-# 3588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                           __null
-# 3588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                               ;
                                 ImGuiID id = 0;
                                 if (!item_is_selected)
@@ -31614,7 +32181,7 @@ static void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData* demo_d
                         {
                             ImGui::TableNextColumn();
                             ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 3629 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3629 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            );
                             ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
                             ImGui::InputText("##NoLabel", (char*)(void*)item_category, strlen(item_category), ImGuiInputTextFlags_ReadOnly);
@@ -31841,9 +32408,9 @@ static void DemoWindowWidgetsText()
             ImGui::SliderFloat("custom_size", &custom_size, 10.0f, 100.0f, "%.0f");
             ImGui::Text("ImGui::PushFont(nullptr, custom_size);");
             ImGui::PushFont(
-# 3854 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3854 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                            __null
-# 3854 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3854 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                , custom_size);
             ImGui::Text("FontSize = %.2f (== %.2f * global_scale)", ImGui::GetFontSize(), custom_size);
             ImGui::PopFont();
@@ -31853,9 +32420,9 @@ static void DemoWindowWidgetsText()
             ImGui::SliderFloat("custom_scale", &custom_scale, 0.5f, 4.0f, "%.2f");
             ImGui::Text("ImGui::PushFont(nullptr, style.FontSizeBase * custom_scale);");
             ImGui::PushFont(
-# 3862 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3862 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                            __null
-# 3862 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3862 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                , style.FontSizeBase * custom_scale);
             ImGui::Text("FontSize = %.2f (== style.FontSizeBase * %.2f * global_scale)", ImGui::GetFontSize(), custom_scale);
             ImGui::PopFont();
@@ -31864,9 +32431,9 @@ static void DemoWindowWidgetsText()
             for (float scaling = 0.5f; scaling <= 4.0f; scaling += 0.5f)
             {
                 ImGui::PushFont(
-# 3869 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 3869 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                __null
-# 3869 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3869 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                    , style.FontSizeBase * scaling);
                 ImGui::Text("FontSize = %.2f (== style.FontSizeBase * %.2f * global_scale)", ImGui::GetFontSize(), scaling);
                 ImGui::PopFont();
@@ -31912,7 +32479,7 @@ static void DemoWindowWidgetsText()
         if (ImGui::TreeNode("UTF-8 Text"))
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 3913, "Widgets/Text/UTF-8 Text"); } while (0);
-# 3924 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 3924 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             ImGui::TextWrapped(
                 "CJK text will only appear if the font was loaded with the appropriate CJK character ranges. "
                 "Call io.Fonts->AddFontFromFileTTF() manually to load extra character ranges. "
@@ -31994,7 +32561,7 @@ static void DemoWindowWidgetsTextInput()
             ImGui::SameLine(); HelpMarker("When _AllowTabInput is set, passing through the widget with Tabbing doesn't automatically activate it, in order to also cycling through subsequent widgets.");
             ImGui::CheckboxFlags("ImGuiInputTextFlags_CtrlEnterForNewLine", &flags, ImGuiInputTextFlags_CtrlEnterForNewLine);
             ImGui::InputTextMultiline("##source", text, ((int)(sizeof(text) / sizeof(*(text)))), ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4004 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4004 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                         , ImGui::GetTextLineHeight() * 16), flags);
             ImGui::TreePop();
         }
@@ -32121,17 +32688,17 @@ static void DemoWindowWidgetsTextInput()
                     {
                         ImVector<char>* my_str = (ImVector<char>*)data->UserData;
                         
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                        (void) ((!!(
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                        my_str->begin() == data->Buf
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                        )) || (_assert(
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                        "my_str->begin() == data->Buf"
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",4129),0))
-# 4129 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",4129),0))
+# 4129 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                               ;
                         my_str->resize(data->BufSize);
                         data->Buf = my_str->begin();
@@ -32144,17 +32711,17 @@ static void DemoWindowWidgetsTextInput()
                 static bool MyInputTextMultiline(const char* label, ImVector<char>* my_str, const ImVec2& size = ImVec2(0, 0), ImGuiInputTextFlags flags = 0)
                 {
                     
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                    (void) ((!!(
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                    (flags & ImGuiInputTextFlags_CallbackResize) == 0
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                    )) || (_assert(
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                    "(flags & ImGuiInputTextFlags_CallbackResize) == 0"
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                   ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",4140),0))
-# 4140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                   ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",4140),0))
+# 4140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                ;
                     return ImGui::InputTextMultiline(label, my_str->begin(), (size_t)my_str->size(), size, flags | ImGuiInputTextFlags_CallbackResize, Funcs::MyResizeCallback, (void*)my_str);
                 }
@@ -32170,7 +32737,7 @@ static void DemoWindowWidgetsTextInput()
             if (my_str.empty())
                 my_str.push_back(0);
             Funcs::MyInputTextMultiline("##MyStr", &my_str, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4154 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4154 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                           , ImGui::GetTextLineHeight() * 16), flags);
             ImGui::Text("Data: %p\nSize: %d\nCapacity: %d", (void*)my_str.begin(), my_str.size(), my_str.capacity());
             ImGui::TreePop();
@@ -32214,13 +32781,13 @@ static void DemoWindowWidgetsTooltips()
         do { ImGui::DemoMarker("imgui_demo.cpp", 4194, "Widgets/Tooltips"); } while (0);
 
         ImGui::SeparatorText("General");
-# 4205 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4205 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         HelpMarker(
             "Tooltip are typically created by using a IsItemHovered() + SetTooltip() sequence.\n\n"
             "We provide a helper SetItemTooltip() function to perform the two with standards flags.");
 
         ImVec2 sz = ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4209 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4209 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                   , 0.0f);
 
         ImGui::Button("Basic", sz);
@@ -32454,9 +33021,9 @@ static void DemoWindowWidgetsTreeNodes()
                     if (use_drag_and_drop && ImGui::BeginDragDropSource())
                     {
                         ImGui::SetDragDropPayload("MY_TREENODE_PAYLOAD_TYPE", 
-# 4441 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 4441 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                              __null
-# 4441 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4441 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                  , 0);
                         ImGui::Text("This is a drag and drop source");
                         ImGui::EndDragDropSource();
@@ -32485,9 +33052,9 @@ static void DemoWindowWidgetsTreeNodes()
                     if (use_drag_and_drop && ImGui::BeginDragDropSource())
                     {
                         ImGui::SetDragDropPayload("MY_TREENODE_PAYLOAD_TYPE", 
-# 4468 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 4468 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                              __null
-# 4468 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4468 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                  , 0);
                         ImGui::Text("This is a drag and drop source");
                         ImGui::EndDragDropSource();
@@ -32696,7 +33263,7 @@ static void DemoWindowLayout()
                     sprintf(buf, "%03d", i);
                     ImGui::TableNextColumn();
                     ImGui::Button(buf, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4675 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4675 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                      , 0.0f));
                 }
                 ImGui::EndTable();
@@ -32714,7 +33281,7 @@ static void DemoWindowLayout()
 
             ImGui::PushStyleColor(ImGuiCol_ChildBg, ImGui::GetStyleColorVec4(ImGuiCol_FrameBg));
             if (ImGui::BeginChild("ResizableChild", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4691 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4691 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   , ImGui::GetTextLineHeightWithSpacing() * 8), ImGuiChildFlags_Borders | ImGuiChildFlags_ResizeY))
                 for (int n = 0; n < 10; n++)
                     ImGui::Text("Line %04d", n);
@@ -32733,10 +33300,10 @@ static void DemoWindowLayout()
             ImGui::DragInt("Max Height (in Lines)", &max_height_in_lines, 0.2f);
 
             ImGui::SetNextWindowSizeConstraints(ImVec2(0.0f, ImGui::GetTextLineHeightWithSpacing() * 1), ImVec2(3.40282346638528859811704183484516925e+38F
-# 4708 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4708 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                       , ImGui::GetTextLineHeightWithSpacing() * max_height_in_lines));
             if (ImGui::BeginChild("ConstrainedChild", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 4709 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4709 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                     , 0.0f), ImGuiChildFlags_Borders | ImGuiChildFlags_AutoResizeY))
                 for (int n = 0; n < draw_lines; n++)
                     ImGui::Text("Line %04d", n);
@@ -32744,7 +33311,7 @@ static void DemoWindowLayout()
         }
 
         ImGui::SeparatorText("Misc/Advanced");
-# 4724 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4724 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         {
             static int offset_x = 0;
             static bool override_bg_color = true;
@@ -32857,7 +33424,7 @@ static void DemoWindowLayout()
         ImGui::Text("SetNextItemWidth/PushItemWidth(-FLT_MIN)");
         ImGui::SameLine(); HelpMarker("Align to right edge");
         ImGui::PushItemWidth(-1.17549435082228750796873653722224568e-38F
-# 4835 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4835 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                     );
         ImGui::DragFloat("##float6a", &f);
         if (show_indented_items)
@@ -32991,9 +33558,9 @@ static void DemoWindowLayout()
         ImVec2 size = ImGui::GetItemRectSize();
         const float values[5] = { 0.5f, 0.20f, 0.80f, 0.60f, 0.25f };
         ImGui::PlotHistogram("##values", values, ((int)(sizeof(values) / sizeof(*(values)))), 0, 
-# 4967 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 4967 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                        __null
-# 4967 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 4967 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                            , 0.0f, 1.0f, size);
 
         ImGui::Button("ACTION", ImVec2((size.x - ImGui::GetStyle().ItemSpacing.x) * 0.5f, size.y));
@@ -33163,13 +33730,13 @@ static void DemoWindowLayout()
         ImGui::Checkbox("Track", &enable_track);
 
         bool scroll_to_off = ImGui::DragFloat("##off", &scroll_to_off_px, 1.00f, 0, 3.40282346638528859811704183484516925e+38F
-# 5135 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5135 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                           , "+%.0f px");
         ImGui::SameLine();
         scroll_to_off |= ImGui::Button("Scroll Offset");
 
         bool scroll_to_pos = ImGui::DragFloat("##pos", &scroll_to_pos_px, 1.00f, -10, 3.40282346638528859811704183484516925e+38F
-# 5139 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5139 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                             , "X/Y = %.0f px");
         ImGui::SameLine();
         scroll_to_pos |= ImGui::Button("Scroll To Pos");
@@ -33495,9 +34062,9 @@ static void DemoWindowLayout()
                 ImVec4 clip_rect(p0.x, p0.y, p1.x, p1.y);
                 draw_list->AddRectFilled(p0, p1, (((ImU32)(255)<<24) | ((ImU32)(120)<<16) | ((ImU32)(90)<<8) | ((ImU32)(90)<<0)));
                 draw_list->AddText(ImGui::GetFont(), ImGui::GetFontSize(), text_pos, (((ImU32)(255)<<24) | ((ImU32)(255)<<16) | ((ImU32)(255)<<8) | ((ImU32)(255)<<0)), text_str, 
-# 5463 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 5463 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                                                               __null
-# 5463 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5463 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   , 0.0f, &clip_rect);
                 break;
             }
@@ -33546,7 +34113,7 @@ static void DemoWindowPopups()
 {
     if (!ImGui::CollapsingHeader("Popups & Modal windows"))
         return;
-# 5530 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5530 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     if (ImGui::TreeNode("Popups"))
     {
         do { ImGui::DemoMarker("imgui_demo.cpp", 5532, "Popups/Popups"); } while (0);
@@ -33644,7 +34211,7 @@ static void DemoWindowPopups()
     {
         do { ImGui::DemoMarker("imgui_demo.cpp", 5625, "Popups/Context menus"); } while (0);
         HelpMarker("\"Context\" functions are simple helpers to associate a Popup to a given Item or Window identifier.");
-# 5640 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5640 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         {
             const char* names[5] = { "Label1", "Label2", "Label3", "Label4", "Label5" };
             static int selected = -1;
@@ -33676,7 +34243,7 @@ static void DemoWindowPopups()
                 if (ImGui::Selectable("Set to zero")) value = 0.0f;
                 if (ImGui::Selectable("Set to PI")) value = 3.1415f;
                 ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 5670 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5670 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                );
                 ImGui::DragFloat("##Value", &value, 0.1f, 0.0f, 0.0f);
                 ImGui::EndPopup();
@@ -33730,9 +34297,9 @@ static void DemoWindowPopups()
         ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
 
         if (ImGui::BeginPopupModal("Delete?", 
-# 5722 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 5722 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                              __null
-# 5722 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5722 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                  , ImGuiWindowFlags_AlwaysAutoResize))
         {
             ImGui::Text("All those beautiful files will be deleted.\nThis operation cannot be undone!");
@@ -33756,9 +34323,9 @@ static void DemoWindowPopups()
         if (ImGui::Button("Stacked modals.."))
             ImGui::OpenPopup("Stacked 1");
         if (ImGui::BeginPopupModal("Stacked 1", 
-# 5744 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 5744 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 5744 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5744 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , ImGuiWindowFlags_MenuBar))
         {
             if (ImGui::BeginMenuBar())
@@ -33841,7 +34408,7 @@ struct MyItem
     int ID;
     const char* Name;
     int Quantity;
-# 5834 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5834 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     static const ImGuiTableSortSpecs* s_current_sort_specs;
 
     static void SortWithSortSpecs(ImGuiTableSortSpecs* sort_specs, MyItem* items, int items_count)
@@ -33850,9 +34417,9 @@ struct MyItem
         if (items_count > 1)
             qsort(items, (size_t)items_count, sizeof(items[0]), MyItem::CompareWithSortSpecs);
         s_current_sort_specs = 
-# 5841 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 5841 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                               __null
-# 5841 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5841 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                   ;
     }
 
@@ -33874,17 +34441,17 @@ struct MyItem
             case MyItemColumnID_Quantity: delta = (a->Quantity - b->Quantity); break;
             case MyItemColumnID_Description: delta = (strcmp(a->Name, b->Name)); break;
             default: 
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                     (void) ((!!(
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                     0
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                     )) || (_assert(
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                     "0"
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                    ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",5861),0))
-# 5861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                    ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",5861),0))
+# 5861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                 ; break;
             }
             if (delta > 0)
@@ -33900,9 +34467,9 @@ struct MyItem
     }
 };
 const ImGuiTableSortSpecs* MyItem::s_current_sort_specs = 
-# 5875 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 5875 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                          __null
-# 5875 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 5875 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                              ;
 }
 
@@ -34026,7 +34593,7 @@ static void DemoWindowTables()
     ImGui::Separator();
     if (disable_indent)
         ImGui::PushStyleVar(ImGuiStyleVar_IndentSpacing, 0.0f);
-# 6010 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6010 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     if (open_action != -1)
         ImGui::SetNextItemOpen(open_action != 0);
     if (ImGui::TreeNode("Basic"))
@@ -34154,7 +34721,7 @@ static void DemoWindowTables()
                         ImGui::TextUnformatted(buf);
                     else if (contents_type == CT_FillButton)
                         ImGui::Button(buf, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 6136 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6136 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                          , 0.0f));
                 }
             }
@@ -34395,7 +34962,7 @@ static void DemoWindowTables()
                         char buf[32];
                         sprintf(buf, "Hello %d,%d", column, row);
                         ImGui::Button(buf, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 6375 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6375 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                          , 0.0f));
                     }
 
@@ -34437,7 +35004,7 @@ static void DemoWindowTables()
                 if (init)
                     strcpy(text_bufs[cell], "edit me");
                 ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 6415 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6415 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                );
                 ImGui::PushID(cell);
                 ImGui::InputText("##cell", text_bufs[cell], ((int)(sizeof(text_bufs[cell]) / sizeof(*(text_bufs[cell])))));
@@ -34553,10 +35120,10 @@ static void DemoWindowTables()
                 case CT_ShowWidth: ImGui::Text("W: %.1f", ImGui::GetContentRegionAvail().x); break;
                 case CT_Button: ImGui::Button(label); break;
                 case CT_FillButton: ImGui::Button(label, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 6529 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6529 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                        , 0.0f)); break;
                 case CT_InputText: ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 6530 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6530 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    ); ImGui::InputText("##", text_buf, ((int)(sizeof(text_buf) / sizeof(*(text_buf))))); break;
                 }
                 ImGui::PopID();
@@ -34632,15 +35199,15 @@ static void DemoWindowTables()
         ImGui::CheckboxFlags("ImGuiTableFlags_ScrollY", &flags, ImGuiTableFlags_ScrollY);
         ImGui::SetNextItemWidth(ImGui::GetFrameHeight());
         ImGui::DragInt("freeze_cols", &freeze_cols, 0.2f, 0, 9, 
-# 6604 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 6604 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 6604 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6604 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    , ImGuiSliderFlags_NoInput);
         ImGui::SetNextItemWidth(ImGui::GetFrameHeight());
         ImGui::DragInt("freeze_rows", &freeze_rows, 0.2f, 0, 9, 
-# 6606 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 6606 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 6606 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6606 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    , ImGuiSliderFlags_NoInput);
         PopStyleCompact();
 
@@ -34695,7 +35262,7 @@ static void DemoWindowTables()
         ImGui::PushItemWidth(TEXT_BASE_WIDTH * 30);
         ImGui::CheckboxFlags("ImGuiTableFlags_ScrollX", &flags2, ImGuiTableFlags_ScrollX);
         ImGui::DragFloat("inner_width", &inner_width, 1.0f, 0.0f, 3.40282346638528859811704183484516925e+38F
-# 6659 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 6659 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                         , "%.1f");
         ImGui::PopItemWidth();
         ImGui::PopID();
@@ -35052,43 +35619,43 @@ static void DemoWindowTables()
         ImGui::Combo("row bg target", (int*)&row_bg_target, "RowBg0\0RowBg1\0"); ImGui::SameLine(); HelpMarker("Target RowBg0 to override the alternating odd/even colors,\nTarget RowBg1 to blend with them.");
         ImGui::Combo("cell bg type", (int*)&cell_bg_type, "None\0Blue\0"); ImGui::SameLine(); HelpMarker("We are colorizing cells to B1->C2 here.");
         
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        row_bg_type >= 0 && row_bg_type <= 2
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "row_bg_type >= 0 && row_bg_type <= 2"
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7014),0))
-# 7014 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7014),0))
+# 7014 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                       ;
         
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        row_bg_target >= 0 && row_bg_target <= 1
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "row_bg_target >= 0 && row_bg_target <= 1"
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7015),0))
-# 7015 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7015),0))
+# 7015 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           ;
         
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        cell_bg_type >= 0 && cell_bg_type <= 1
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "cell_bg_type >= 0 && cell_bg_type <= 1"
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7016),0))
-# 7016 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",7016),0))
+# 7016 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                         ;
         PopStyleCompact();
 
@@ -35244,7 +35811,7 @@ static void DemoWindowTables()
                     ImGui::PushItemWidth(-ImGui::GetContentRegionAvail().x * 0.5f);
                     ImGui::TableSetColumnIndex(2);
                     ImGui::PushItemWidth(-1.17549435082228750796873653722224568e-38F
-# 7170 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7170 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                 );
                 }
 
@@ -35715,17 +36282,17 @@ static void DemoWindowTables()
                 ImGui::SameLine();
                 ImGui::SetNextItemWidth(ImGui::GetFrameHeight());
                 ImGui::DragInt("freeze_cols", &freeze_cols, 0.2f, 0, 9, 
-# 7639 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 7639 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                        __null
-# 7639 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7639 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                            , ImGuiSliderFlags_NoInput);
                 ImGui::CheckboxFlags("ImGuiTableFlags_ScrollY", &flags, ImGuiTableFlags_ScrollY);
                 ImGui::SameLine();
                 ImGui::SetNextItemWidth(ImGui::GetFrameHeight());
                 ImGui::DragInt("freeze_rows", &freeze_rows, 0.2f, 0, 9, 
-# 7643 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 7643 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                        __null
-# 7643 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7643 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                            , ImGuiSliderFlags_NoInput);
                 ImGui::TreePop();
             }
@@ -35765,11 +36332,11 @@ static void DemoWindowTables()
 
 
                 ImGui::DragFloat("inner_width (when ScrollX active)", &inner_width_with_scroll, 1.0f, 0.0f, 3.40282346638528859811704183484516925e+38F
-# 7681 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7681 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   );
 
                 ImGui::DragFloat("row_min_height", &row_min_height, 1.0f, 0.0f, 3.40282346638528859811704183484516925e+38F
-# 7683 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7683 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       );
                 ImGui::SameLine(); HelpMarker("Specify height of the Selectable item.");
 
@@ -35806,9 +36373,9 @@ static void DemoWindowTables()
         const int parent_draw_list_draw_cmd_count = parent_draw_list->CmdBuffer.Size;
         ImVec2 table_scroll_cur, table_scroll_max;
         const ImDrawList* table_draw_list = 
-# 7718 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 7718 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                            __null
-# 7718 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7718 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                ;
 
 
@@ -35882,7 +36449,7 @@ static void DemoWindowTables()
                         ImGui::SmallButton(label);
                     else if (contents_type == CT_FillButton)
                         ImGui::Button(label, ImVec2(-1.17549435082228750796873653722224568e-38F
-# 7790 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7790 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            , 0.0f));
                     else if (contents_type == CT_Selectable || contents_type == CT_SelectableSpanRow)
                     {
@@ -36039,9 +36606,9 @@ static void DemoWindowColumns()
         ImGui::SameLine();
         ImGui::Checkbox("vertical", &v_borders);
         ImGui::Columns(columns_count, 
-# 7945 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 7945 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                      __null
-# 7945 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7945 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                          , v_borders);
         for (int i = 0; i < columns_count * lines_count; i++)
         {
@@ -36054,7 +36621,7 @@ static void DemoWindowColumns()
             ImGui::Text("Offset %.2f", ImGui::GetColumnOffset());
             ImGui::Text("Long text that is likely to clip");
             ImGui::Button("Button", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 7956 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 7956 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                   , 0.0f));
             ImGui::PopID();
             ImGui::NextColumn();
@@ -36270,7 +36837,7 @@ static void DemoWindowInputs()
             }
             ImGui::TreePop();
         }
-# 8182 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8182 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         if (ImGui::TreeNode("Shortcuts"))
         {
             do { ImGui::DemoMarker("imgui_demo.cpp", 8184, "Inputs & Focus/Shortcuts"); } while (0);
@@ -36316,7 +36883,7 @@ static void DemoWindowInputs()
             ImGui::PushStyleColor(ImGuiCol_ChildBg, ImVec4(1.0f, 0.0f, 1.0f, 0.1f));
 
             ImGui::BeginChild("WindowA", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 8226 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8226 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                        , line_height * 14), true);
             ImGui::Text("Press Ctrl+A and see who receives it!");
             ImGui::Separator();
@@ -36324,9 +36891,9 @@ static void DemoWindowInputs()
 
             ImGui::Text("(in WindowA)");
             ImGui::Text("IsWindowFocused: %d, Shortcut: %s", ImGui::IsWindowFocused(), ImGui::Shortcut(key_chord, flags) ? "PRESSED" : "...");
-# 8244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             ImGui::BeginChild("ChildD", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 8244 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8244 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                       , line_height * 4), true);
             ImGui::Text("(in ChildD: not using same Shortcut)");
             ImGui::Text("IsWindowFocused: %d", ImGui::IsWindowFocused());
@@ -36334,7 +36901,7 @@ static void DemoWindowInputs()
 
 
             ImGui::BeginChild("ChildE", ImVec2(-1.17549435082228750796873653722224568e-38F
-# 8250 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8250 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                       , line_height * 4), true);
             ImGui::Text("(in ChildE: using same Shortcut)");
             ImGui::Text("IsWindowFocused: %d, Shortcut: %s", ImGui::IsWindowFocused(), ImGui::Shortcut(key_chord, flags) ? "PRESSED" : "...");
@@ -36364,17 +36931,17 @@ static void DemoWindowInputs()
             do { ImGui::DemoMarker("imgui_demo.cpp", 8276, "Inputs & Focus/Mouse Cursors"); } while (0);
             const char* mouse_cursors_names[] = { "Arrow", "TextInput", "ResizeAll", "ResizeNS", "ResizeEW", "ResizeNESW", "ResizeNWSE", "Hand", "Wait", "Progress", "NotAllowed" };
             
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
            (void) ((!!(
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
            ((int)(sizeof(mouse_cursors_names) / sizeof(*(mouse_cursors_names)))) == ImGuiMouseCursor_COUNT
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
            )) || (_assert(
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
            "((int)(sizeof(mouse_cursors_names) / sizeof(*(mouse_cursors_names)))) == ImGuiMouseCursor_COUNT"
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-           ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",8278),0))
-# 8278 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+           ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",8278),0))
+# 8278 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                ;
 
             ImGuiMouseCursor current = ImGui::GetMouseCursor();
@@ -36543,43 +37110,43 @@ void ImGui::ShowAboutWindow(bool* p_open)
         ImGui::Separator();
         ImGui::Text("sizeof(size_t): %d, sizeof(ImDrawIdx): %d, sizeof(ImDrawVert): %d", (int)sizeof(size_t), (int)sizeof(ImDrawIdx), (int)sizeof(ImDrawVert));
         ImGui::Text("define: __cplusplus=%d", (int)202002L);
-# 8483 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8483 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         ImGui::Text("define: _WIN32");
 
 
         ImGui::Text("define: _WIN64");
-# 8501 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8501 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         ImGui::Text("define: __MINGW32__");
 
 
         ImGui::Text("define: __MINGW64__");
 
 
-        ImGui::Text("define: __GNUC__=%d", (int)15);
-# 8521 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+        ImGui::Text("define: __GNUC__=%d", (int)14);
+# 8521 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         ImGui::Text("define: IMGUI_HAS_VIEWPORT");
 
 
         ImGui::Text("define: IMGUI_HAS_DOCK");
-# 8533 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8533 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
         int assert_runs_expression = 0;
         
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        ++assert_runs_expression
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "++assert_runs_expression"
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",8534),0))
-# 8534 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",8534),0))
+# 8534 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                           ;
         int assert_expand_len = (int)strlen(
-# 8535 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                                           "((void) ((!!(true)) || (_assert(\"true\",\"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp\",8535),0)))"
-# 8535 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8535 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                                           "((void) ((!!(true)) || (_assert(\"true\",\"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp\",8535),0)))"
+# 8535 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                           );
         bool assert_maybe_disabled = (!assert_runs_expression || assert_expand_len <= 16);
         ImGui::Text("IM_ASSERT: runs expression: %s. expand size: %s%s",
@@ -36653,7 +37220,7 @@ void ImGui::ShowAboutWindow(bool* p_open)
     }
     ImGui::End();
 }
-# 8617 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8617 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 bool ImGui::ShowStyleSelector(const char* label)
 {
 
@@ -36704,16 +37271,16 @@ void ImGui::ShowStyleEditor(ImGuiStyle* ref)
 
     static bool init = true;
     if (init && ref == 
-# 8666 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 8666 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                       __null
-# 8666 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8666 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                           )
         ref_saved_style = style;
     init = false;
     if (ref == 
-# 8669 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 8669 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
               __null
-# 8669 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8669 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                   )
         ref = &ref_saved_style;
 
@@ -36917,9 +37484,9 @@ void ImGui::ShowStyleEditor(ImGuiStyle* ref)
                 "Right-click to open edit options menu.");
 
             SetNextWindowSizeConstraints(ImVec2(0.0f, GetTextLineHeightWithSpacing() * 10), ImVec2(3.40282346638528859811704183484516925e+38F
-# 8871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                          , 3.40282346638528859811704183484516925e+38F
-# 8871 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8871 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                   ));
             BeginChild("##colors", ImVec2(0, 0), ImGuiChildFlags_Borders | ImGuiChildFlags_NavFlattened, ImGuiWindowFlags_AlwaysVerticalScrollbar | ImGuiWindowFlags_AlwaysHorizontalScrollbar);
             PushItemWidth(GetFontSize() * -12);
@@ -36959,7 +37526,7 @@ void ImGui::ShowStyleEditor(ImGuiStyle* ref)
             ImGuiIO& io = GetIO();
             ImFontAtlas* atlas = io.Fonts;
             ShowFontAtlas(atlas);
-# 8930 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 8930 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             EndTabItem();
         }
 
@@ -37078,7 +37645,7 @@ void ImGui::ShowUserGuide()
     BulletText("L1/R1: Tweak Slower/Faster, Focus Previous/Next (in Windowing Mode).");
     Unindent();
 }
-# 9060 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9060 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 static void ShowExampleAppMainMenuBar()
 {
     if (ImGui::BeginMainMenuBar())
@@ -37110,9 +37677,9 @@ static void ShowExampleMenuFile()
 {
     do { ImGui::DemoMarker("imgui_demo.cpp", 9089, "Examples/Menu"); } while (0);
     ImGui::MenuItem("(demo menu)", 
-# 9090 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9090 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                   __null
-# 9090 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9090 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                       , false, false);
     if (ImGui::MenuItem("New")) {}
     if (ImGui::MenuItem("Open", "Ctrl+O")) {}
@@ -37185,23 +37752,23 @@ static void ShowExampleMenuFile()
     if (ImGui::BeginMenu("Disabled", false))
     {
         
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        (void) ((!!(
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        0
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
        )) || (_assert(
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        "0"
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-       ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9161),0))
-# 9161 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+       ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9161),0))
+# 9161 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                    ;
     }
     if (ImGui::MenuItem("Checked", 
-# 9163 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9163 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                   __null
-# 9163 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9163 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                       , true)) {}
     ImGui::Separator();
     if (ImGui::MenuItem("Quit", "Alt+F4")) {}
@@ -37250,29 +37817,29 @@ struct ExampleAppConsole
     static int Stricmp(const char* s1, const char* s2) { int d; while ((d = toupper(*s2) - toupper(*s1)) == 0 && *s1) { s1++; s2++; } return d; }
     static int Strnicmp(const char* s1, const char* s2, int n) { int d = 0; while (n > 0 && (d = toupper(*s2) - toupper(*s1)) == 0 && *s1) { s1++; s2++; n--; } return d; }
     static char* Strdup(const char* s) { 
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                   (void) ((!!(
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   s
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                   )) || (_assert(
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   "s"
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                                                                  ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9210),0))
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                                                                  ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9210),0))
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                               ; size_t len = strlen(s) + 1; void* buf = ImGui::MemAlloc(len); 
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                                                               (void) ((!!(
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                               buf
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                                                                                                                                               )) || (_assert(
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                               "buf"
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                                                                                                                                              ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9210),0))
-# 9210 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                                                                                                                                              ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9210),0))
+# 9210 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                                                                             ; return (char*)memcpy(buf, (const void*)s, len); }
     static void Strtrimblanks(char* s) { char* str_end = s + strlen(s); while (str_end > s && str_end[-1] == ' ') str_end--; *str_end = 0; }
 
@@ -37289,28 +37856,28 @@ struct ExampleAppConsole
         char buf[1024];
         va_list args;
         
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        __builtin_va_start(
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        args
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        ,
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        fmt
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        )
-# 9225 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9225 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                           ;
         vsnprintf(buf, ((int)(sizeof(buf) / sizeof(*(buf)))), fmt, args);
         buf[((int)(sizeof(buf) / sizeof(*(buf))))-1] = 0;
         
-# 9228 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9228 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        __builtin_va_end(
-# 9228 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9228 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        args
-# 9228 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9228 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        )
-# 9228 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9228 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                    ;
         Items.push_back(Strdup(buf));
     }
@@ -37378,7 +37945,7 @@ struct ExampleAppConsole
                 if (ImGui::Selectable("Clear")) ClearLog();
                 ImGui::EndPopup();
             }
-# 9320 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9320 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4, 1));
             if (copy_to_clipboard)
                 ImGui::LogToClipboard();
@@ -37612,7 +38179,7 @@ static void ShowExampleAppImageViewer(bool* p_open)
     }
     ImGui::End();
 }
-# 9562 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9562 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 struct ExampleAppLog
 {
     ImGuiTextBuffer Buf;
@@ -37638,27 +38205,27 @@ struct ExampleAppLog
         int old_size = Buf.size();
         va_list args;
         
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        __builtin_va_start(
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        args
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        ,
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        fmt
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        )
-# 9586 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9586 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                           ;
         Buf.appendfv(fmt, args);
         
-# 9588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        __builtin_va_end(
-# 9588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
        args
-# 9588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
        )
-# 9588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                    ;
         for (int new_size = Buf.size(); old_size < new_size; old_size++)
             if (Buf[old_size] == '\n')
@@ -37666,9 +38233,9 @@ struct ExampleAppLog
     }
 
     void Draw(const char* title, bool* p_open = 
-# 9594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                   __null
-# 9594 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9594 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                       )
     {
         if (!ImGui::Begin(title, p_open))
@@ -37722,7 +38289,7 @@ struct ExampleAppLog
             }
             else
             {
-# 9660 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9660 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                 ImGuiListClipper clipper;
                 clipper.Begin(LineOffsets.Size);
                 while (clipper.Step())
@@ -37844,14 +38411,14 @@ static void ShowExampleAppLayout(bool* p_open)
     }
     ImGui::End();
 }
-# 9791 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9791 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 struct ExampleAppPropertyEditor
 {
     ImGuiTextFilter Filter;
     ExampleTreeNode* SelectedNode = 
-# 9794 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9794 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                       __null
-# 9794 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9794 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                           ;
     bool UseClipper = false;
 
@@ -37869,7 +38436,7 @@ struct ExampleAppPropertyEditor
             ImGui::SameLine();
             ImGui::Text("(%d root nodes)", root_node->Childs.Size);
             ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 9810 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9810 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                            );
             ImGui::SetNextItemShortcut(ImGuiMod_Ctrl | ImGuiKey_F, ImGuiInputFlags_Tooltip);
             if (ImGui::InputTextWithHint("##Filter", "incl,-excl", Filter.InputBuf, ((int)(sizeof(Filter.InputBuf) / sizeof(*(Filter.InputBuf)))), ImGuiInputTextFlags_EscapeClearsAll))
@@ -37921,17 +38488,17 @@ struct ExampleAppPropertyEditor
                         case ImGuiDataType_Bool:
                         {
                             
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                            (void) ((!!(
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                            field_desc.DataCount == 1
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
                            )) || (_assert(
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                            "field_desc.DataCount == 1"
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
-                           ,"C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9860),0))
-# 9860 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3
+                           ,"D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp",9860),0))
+# 9860 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                ;
                             ImGui::Checkbox("##Editor", (bool*)field_ptr);
                             break;
@@ -37939,14 +38506,14 @@ struct ExampleAppPropertyEditor
                         case ImGuiDataType_S32:
                         {
                             int v_min = 
-# 9866 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9866 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                        (-0x7fffffff - 1)
-# 9866 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9866 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                               , v_max = 0x7fffffff
-# 9866 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9866 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                ;
                             ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 9867 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9867 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            );
                             ImGui::DragScalarN("##Editor", field_desc.DataType, field_ptr, field_desc.DataCount, 1.0f, &v_min, &v_max);
                             break;
@@ -37955,7 +38522,7 @@ struct ExampleAppPropertyEditor
                         {
                             float v_min = 0.0f, v_max = 1.0f;
                             ImGui::SetNextItemWidth(-1.17549435082228750796873653722224568e-38F
-# 9874 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9874 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                            );
                             ImGui::SliderScalarN("##Editor", field_desc.DataType, field_ptr, field_desc.DataCount, &v_min, &v_max);
                             break;
@@ -37982,9 +38549,9 @@ struct ExampleAppPropertyEditor
     inline bool IsNodePassingFilter(ExampleTreeNode* node)
     {
         return node->Parent->Parent != 
-# 9899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                       __null 
-# 9899 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9899 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                            || Filter.PassFilter(node->Name);
     }
 
@@ -38001,19 +38568,19 @@ struct ExampleAppPropertyEditor
                 ImGui::TreePop();
             }
     }
-# 9926 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9926 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     void DrawClippedTree(ExampleTreeNode* root_node)
     {
         ExampleTreeNode* node = root_node->Childs[0];
         ImGuiListClipper clipper;
         clipper.Begin(0x7fffffff
-# 9930 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9930 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                             );
         while (clipper.Step())
             while (clipper.UserIndex < clipper.DisplayEnd && node != 
-# 9932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                     __null
-# 9932 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9932 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                         )
                 node = DrawClippedTreeNodeAndAdvanceToNext(&clipper, node);
 
@@ -38022,9 +38589,9 @@ struct ExampleAppPropertyEditor
 
 
         while (node != 
-# 9939 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9939 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                       __null
-# 9939 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9939 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                           )
             node = DrawClippedTreeNodeAndAdvanceToNext(&clipper, node);
 
@@ -38056,26 +38623,26 @@ struct ExampleAppPropertyEditor
 
 
         while (node != 
-# 9969 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9969 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                       __null
-# 9969 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9969 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                           )
         {
             if (node->IndexInParent + 1 < node->Parent->Childs.Size)
                 return node->Parent->Childs[node->IndexInParent + 1];
             node = node->Parent;
             if (node->Parent == 
-# 9974 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9974 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                __null
-# 9974 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9974 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                    )
                 break;
             ImGui::TreePop();
         }
         return 
-# 9978 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 9978 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
               __null
-# 9978 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 9978 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                   ;
     }
 
@@ -38123,9 +38690,9 @@ static void ShowExampleAppPropertyEditor(bool* p_open, ImGuiDemoWindowData* demo
     do { ImGui::DemoMarker("imgui_demo.cpp", 10022, "Examples/Property Editor"); } while (0);
     static ExampleAppPropertyEditor property_editor;
     if (demo_data->DemoTree == 
-# 10024 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10024 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                               __null
-# 10024 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10024 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                   )
         demo_data->DemoTree = ExampleTree_CreateDemoTree();
     property_editor.Draw(demo_data->DemoTree);
@@ -38274,34 +38841,34 @@ static void ShowExampleAppConstrainedResize(bool* p_open)
     float fixed_step = 100.0f;
     if (type == 0) ImGui::SetNextWindowSizeConstraints(ImVec2(100, 100), ImVec2(500, 500));
     if (type == 1) ImGui::SetNextWindowSizeConstraints(ImVec2(100, 100), ImVec2(3.40282346638528859811704183484516925e+38F
-# 10171 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10171 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       , 3.40282346638528859811704183484516925e+38F
-# 10171 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10171 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                ));
     if (type == 2) ImGui::SetNextWindowSizeConstraints(ImVec2(-1, 0), ImVec2(-1, 3.40282346638528859811704183484516925e+38F
-# 10172 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10172 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                           ));
     if (type == 3) ImGui::SetNextWindowSizeConstraints(ImVec2(0, -1), ImVec2(3.40282346638528859811704183484516925e+38F
-# 10173 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10173 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       , -1));
     if (type == 4) ImGui::SetNextWindowSizeConstraints(ImVec2(400, -1), ImVec2(500, -1));
     if (type == 5) ImGui::SetNextWindowSizeConstraints(ImVec2(-1, 400), ImVec2(-1, 3.40282346638528859811704183484516925e+38F
-# 10175 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10175 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                           ));
     if (type == 6) ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(3.40282346638528859811704183484516925e+38F
-# 10176 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10176 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       , 3.40282346638528859811704183484516925e+38F
-# 10176 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10176 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                ), CustomConstraints::AspectRatio, (void*)&aspect_ratio);
     if (type == 7) ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(3.40282346638528859811704183484516925e+38F
-# 10177 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10177 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       , 3.40282346638528859811704183484516925e+38F
-# 10177 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10177 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                ), CustomConstraints::Square);
     if (type == 8) ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(3.40282346638528859811704183484516925e+38F
-# 10178 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10178 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                       , 3.40282346638528859811704183484516925e+38F
-# 10178 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10178 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                                                ), CustomConstraints::Step, (void*)&fixed_step);
 
 
@@ -38389,34 +38956,34 @@ static void ShowExampleAppSimpleOverlay(bool* p_open)
         if (ImGui::BeginPopupContextWindow())
         {
             if (ImGui::MenuItem("Custom", 
-# 10264 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10264 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10264 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10264 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == -1)) location = -1;
             if (ImGui::MenuItem("Center", 
-# 10265 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10265 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10265 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10265 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == -2)) location = -2;
             if (ImGui::MenuItem("Top-left", 
-# 10266 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10266 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10266 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10266 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == 0)) location = 0;
             if (ImGui::MenuItem("Top-right", 
-# 10267 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10267 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10267 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10267 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == 1)) location = 1;
             if (ImGui::MenuItem("Bottom-left", 
-# 10268 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10268 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10268 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10268 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == 2)) location = 2;
             if (ImGui::MenuItem("Bottom-right", 
-# 10269 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10269 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 10269 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10269 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , location == 3)) location = 3;
             if (p_open && ImGui::MenuItem("Close")) *p_open = false;
             ImGui::EndPopup();
@@ -38461,7 +39028,7 @@ static void ShowExampleAppFullscreen(bool* p_open)
     }
     ImGui::End();
 }
-# 10321 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10321 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 static void ShowExampleAppWindowTitles(bool*)
 {
     const ImGuiViewport* viewport = ImGui::GetMainViewport();
@@ -38664,7 +39231,7 @@ static void ShowExampleAppCustomRendering(bool* p_open)
             ImGui::Checkbox("Enable grid", &opt_enable_grid);
             ImGui::Checkbox("Enable context menu", &opt_enable_context_menu);
             ImGui::Text("Mouse Left: drag to add lines,\nMouse Right: drag to scroll, click for context menu.");
-# 10536 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10536 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
             ImVec2 canvas_p0 = ImGui::GetCursorScreenPos();
             ImVec2 canvas_sz = ImGui::GetContentRegionAvail();
             if (canvas_sz.x < 50.0f) canvas_sz.x = 50.0f;
@@ -38717,14 +39284,14 @@ static void ShowExampleAppCustomRendering(bool* p_open)
                     points.resize(points.size() - 2);
                 adding_line = false;
                 if (ImGui::MenuItem("Remove one", 
-# 10587 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10587 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                  __null
-# 10587 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10587 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                      , false, points.Size > 0)) { points.resize(points.size() - 2); }
                 if (ImGui::MenuItem("Remove all", 
-# 10588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                  __null
-# 10588 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10588 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                      , false, points.Size > 0)) { points.clear(); }
                 ImGui::EndPopup();
             }
@@ -38819,7 +39386,7 @@ struct ImGuiDemoDockspaceArgs
     bool KeepWindowPadding = false;
     ImGuiDockNodeFlags DockSpaceFlags = ImGuiDockNodeFlags_None;
 };
-# 10696 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10696 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 static void ShowExampleAppDockSpaceAdvanced(ImGuiDemoDockspaceArgs* args, bool* p_open)
 {
     ImGuiDockNodeFlags dockspace_flags = args->DockSpaceFlags;
@@ -38871,7 +39438,7 @@ static void ShowExampleAppDockSpaceAdvanced(ImGuiDemoDockspaceArgs* args, bool* 
 
 static void ShowExampleAppDockSpaceBasic(ImGuiDockNodeFlags flags)
 {
-# 10756 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10756 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     ImGui::DockSpaceOverViewport(0, nullptr, flags);
 }
 
@@ -38978,9 +39545,9 @@ struct ExampleAppDocuments
     ImVector<MyDocument> Documents;
     ImVector<MyDocument*> CloseQueue;
     MyDocument* RenamingDoc = 
-# 10861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                          __null
-# 10861 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10861 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                              ;
     bool RenamingStarted = false;
 
@@ -39050,7 +39617,7 @@ struct ExampleAppDocuments
             CloseQueue.push_back(doc);
         ImGui::EndPopup();
     }
-# 10939 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10939 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     void NotifyOfDocumentsClosedElsewhere()
     {
         for (MyDocument& doc : Documents)
@@ -39076,7 +39643,7 @@ void ShowExampleAppDocuments(bool* p_open)
     static Target opt_target = Target_Tab;
     static bool opt_reorderable = true;
     static ImGuiTabBarFlags opt_fitting_flags = ImGuiTabBarFlags_FittingPolicyDefault_;
-# 10972 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10972 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     bool window_contents_visible = ImGui::Begin("Example: Documents", p_open, ImGuiWindowFlags_MenuBar);
     if (!window_contents_visible && opt_target != Target_DockSpaceAndWindow)
     {
@@ -39102,9 +39669,9 @@ void ShowExampleAppDocuments(bool* p_open)
                 ImGui::EndMenu();
             }
             if (ImGui::MenuItem("Close All Documents", 
-# 10996 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 10996 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                       __null
-# 10996 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 10996 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                           , false, open_count > 0))
                 for (MyDocument& doc : app.Documents)
                     app.CloseQueue.push_back(&doc);
@@ -39135,7 +39702,7 @@ void ShowExampleAppDocuments(bool* p_open)
     if (opt_target == Target_DockSpaceAndWindow) { ImGui::SameLine(); redock_all = ImGui::Button("Redock all"); }
 
     ImGui::Separator();
-# 11038 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11038 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
     if (opt_target == Target_Tab)
     {
         ImGuiTabBarFlags tab_bar_flags = (opt_fitting_flags) | (opt_reorderable ? ImGuiTabBarFlags_Reorderable : 0);
@@ -39229,9 +39796,9 @@ void ShowExampleAppDocuments(bool* p_open)
 
 
     if (app.RenamingDoc != 
-# 11130 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11130 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                           __null
-# 11130 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11130 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                               )
     {
         if (app.RenamingStarted)
@@ -39243,9 +39810,9 @@ void ShowExampleAppDocuments(bool* p_open)
             {
                 ImGui::CloseCurrentPopup();
                 app.RenamingDoc = 
-# 11140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                  __null
-# 11140 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11140 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                      ;
             }
             if (app.RenamingStarted)
@@ -39255,9 +39822,9 @@ void ShowExampleAppDocuments(bool* p_open)
         else
         {
             app.RenamingDoc = 
-# 11148 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11148 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                              __null
-# 11148 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11148 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                  ;
         }
         app.RenamingStarted = false;
@@ -39283,15 +39850,15 @@ void ShowExampleAppDocuments(bool* p_open)
             if (!ImGui::IsPopupOpen("Save?"))
                 ImGui::OpenPopup("Save?");
             if (ImGui::BeginPopupModal("Save?", 
-# 11172 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11172 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                __null
-# 11172 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11172 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                    , ImGuiWindowFlags_AlwaysAutoResize))
             {
                 ImGui::Text("Save change to the following items?");
                 float item_height = ImGui::GetTextLineHeightWithSpacing();
                 if (ImGui::BeginChild(ImGui::GetID("frame"), ImVec2(-1.17549435082228750796873653722224568e-38F
-# 11176 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11176 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                            , 6.25f * item_height), ImGuiChildFlags_FrameStyle))
                     for (MyDocument* doc : app.CloseQueue)
                         if (doc->Dirty)
@@ -39353,9 +39920,9 @@ struct ExampleAsset
         if (items_count > 1)
             qsort(items, (size_t)items_count, sizeof(items[0]), ExampleAsset::CompareWithSortSpecs);
         s_current_sort_specs = 
-# 11236 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11236 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                               __null
-# 11236 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11236 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                   ;
     }
 
@@ -39381,9 +39948,9 @@ struct ExampleAsset
     }
 };
 const ImGuiTableSortSpecs* ExampleAsset::s_current_sort_specs = 
-# 11260 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11260 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                __null
-# 11260 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11260 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                    ;
 
 struct ExampleAssetsBrowser
@@ -39487,13 +40054,13 @@ struct ExampleAssetsBrowser
                     ClearItems();
                 ImGui::Separator();
                 if (ImGui::MenuItem("Close", 
-# 11362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                             __null
-# 11362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                 , false, p_open != 
-# 11362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                                    __null
-# 11362 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11362 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                        ))
                     *p_open = false;
                 ImGui::EndMenu();
@@ -39652,16 +40219,16 @@ struct ExampleAssetsBrowser
 
 
                             if (ImGui::GetDragDropPayload() == 
-# 11519 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11519 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                                               __null
-# 11519 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11519 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                                                   )
                             {
                                 ImVector<ImGuiID> payload_items;
                                 void* it = 
-# 11522 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
+# 11522 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp" 3 4
                                           __null
-# 11522 "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+# 11522 "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
                                               ;
                                 ImGuiID id = 0;
                                 if (!item_is_selected)

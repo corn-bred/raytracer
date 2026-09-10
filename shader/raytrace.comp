@@ -411,6 +411,10 @@ vec3 rayColour(int maxDepth) {
 
     Ray r;
     bool facingFront = dot(Incident, WorldNormal) < 0.0;
+
+    vec3 PerturbedNormal = normalize(mix(normalize(WorldNormal), randOnHemisphere(seed + 6.35, WorldNormal), Roughness * Roughness));
+    r.Direction = reflect(Incident, PerturbedNormal);
+
     if (isDielectric) {
 
         float ri = facingFront ? (1.0/IOR) : IOR;
@@ -420,24 +424,14 @@ vec3 rayColour(int maxDepth) {
         float CosTheta = min(dot(-Incident, WorldNormal), 1.0);
 
         if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-            if (rand(seed + 10.325) < Roughness) {
-                r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
-                throughput *= Albedo;
-            } else {
-                r.Direction = reflect(Incident, WorldNormal);
-            }
+            r.Direction = reflect(Incident, PerturbedNormal);
             r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         } else {
             r.Direction = Refracted;
             r.Origin = WorldPos - WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         }
     } else {
-        if (rand(seed + 10.325) < Roughness) {
-            r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
-            throughput *= Albedo;
-        } else {
-            r.Direction = reflect(Incident, WorldNormal);
-        }
+        r.Direction = reflect(Incident, PerturbedNormal);
 
         r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
 
@@ -469,6 +463,9 @@ vec3 rayColour(int maxDepth) {
 
             //Direction calculation
 
+            PerturbedNormal = normalize(mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness * rec.Roughness));
+            NextRayDir = reflect(Incident, PerturbedNormal);
+
             if (rec.isDielectric) { //for glass
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
                 vec3 Refracted = refract(Incident, rec.Normal, ri);
@@ -476,24 +473,14 @@ vec3 rayColour(int maxDepth) {
                 float CosTheta = min(dot(-Incident, rec.Normal), 1.0);
 
                 if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-                    if (rand(seed + 10.325) < rec.Roughness) {
-                        NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
-                        throughput *= rec.Albedo;
-                    } else {
-                        NextRayDir = reflect(Incident, rec.Normal);
-                    }
+                    NextRayDir = reflect(Incident, PerturbedNormal);
                     r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 } else {
                     NextRayDir = Refracted;
                     r.Origin = rec.Position - rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 }
             } else { //for normal
-                if (rand(seed + 10.325) < rec.Roughness) {
-                    NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
-                    throughput *= rec.Albedo;
-                } else {
-                    NextRayDir = reflect(Incident, rec.Normal);
-                }
+                NextRayDir = reflect(Incident, PerturbedNormal);
                 
                 r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
 

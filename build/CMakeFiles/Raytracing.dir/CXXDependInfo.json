@@ -6,67 +6,67 @@
 	"config" : "",
 	"cxx-modules" : {},
 	"database-info" : null,
-	"dir-cur-bld" : "C:/Users/maxwo/raytracer/build",
-	"dir-cur-src" : "C:/Users/maxwo/raytracer",
-	"dir-top-bld" : "C:/Users/maxwo/raytracer/build",
-	"dir-top-src" : "C:/Users/maxwo/raytracer",
+	"dir-cur-bld" : "D:/Work/Comp Projects/raytracer/build",
+	"dir-cur-src" : "D:/Work/Comp Projects/raytracer",
+	"dir-top-bld" : "D:/Work/Comp Projects/raytracer/build",
+	"dir-top-src" : "D:/Work/Comp Projects/raytracer",
 	"exports" : [],
 	"forward-modules-from-target-dirs" : [],
 	"include-dirs" : 
 	[
-		"C:\\Users\\maxwo\\raytracer\\include",
+		"D:\\Work\\Comp Projects\\raytracer\\include",
 		"_deps\\imgui-src",
 		"_deps\\imgui-src\\backend"
 	],
 	"language" : "CXX",
 	"linked-target-dirs" : [],
-	"module-dir" : "C:/Users/maxwo/raytracer/build/CMakeFiles/Raytracing.dir",
+	"module-dir" : "D:/Work/Comp Projects/raytracer/build/CMakeFiles/Raytracing.dir",
 	"sources" : 
 	{
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_demo.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_demo.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_draw.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_draw.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_draw.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_tables.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_tables.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_tables.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/_deps/imgui-src/imgui_widgets.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/build/_deps/imgui-src/imgui_widgets.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/build/_deps/imgui-src/imgui_widgets.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/src/main.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/src/main.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/src/main.cpp"
 		},
 		"CMakeFiles/Raytracing.dir/src/shaders.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/maxwo/raytracer/src/shaders.cpp"
+			"source" : "D:/Work/Comp Projects/raytracer/src/shaders.cpp"
 		}
 	}
 }

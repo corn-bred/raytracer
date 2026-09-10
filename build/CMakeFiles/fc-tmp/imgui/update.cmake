@@ -4,6 +4,6 @@ message(VERBOSE "Executing update step for imgui")
 
 block(SCOPE_FOR VARIABLES)
 
-include("C:/Users/maxwo/raytracer/build/CMakeFiles/fc-tmp/imgui/imgui-gitupdate.cmake")
+include("D:/Work/Comp Projects/raytracer/build/CMakeFiles/fc-tmp/imgui/imgui-gitupdate.cmake")
 
 endblock()

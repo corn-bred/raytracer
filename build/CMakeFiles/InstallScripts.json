@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/maxwo/raytracer/build/cmake_install.cmake"
+		"D:/Work/Comp Projects/raytracer/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
