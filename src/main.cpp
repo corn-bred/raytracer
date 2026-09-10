@@ -345,7 +345,7 @@ int main () {
 
     BVH mainBVH(Objects);*/
 
-    Model model("assets/cube.obj");
+    Model model("assets/backpack2.obj");
 
     Triangle tempTri;
     

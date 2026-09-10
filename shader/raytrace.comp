@@ -80,24 +80,12 @@ void BuildOrthonormalBasis(vec3 Normal, out vec3 Tangent, out vec3 Bitangent) {
 }
 
 vec3 randOnHemisphere(float seed, vec3 Normal) {
-    float Phi = rand(seed + 1.45) * tau; //azimuthal angle
-
-    //polar angle calculation with cosine weighting
-    float CosTheta = sqrt(rand(seed + 3.35));
-    float SinTheta = sqrt(1.0 - CosTheta * CosTheta);
-
-    //coordinate creation on local space (based on spherical coordinates method)
-    vec3 SamplePoint = vec3(SinTheta * cos(Phi), CosTheta, SinTheta * sin(Phi));
-
-    //local space to world space
-    vec3 Tangent;
-    vec3 Bitangent;
-    BuildOrthonormalBasis(Normal, Tangent, Bitangent);
-
-    //conversion
-    vec3 WorldPoint = SamplePoint.x * normalize(Tangent) + SamplePoint.y * normalize(Normal) + SamplePoint.z * normalize(Bitangent);
-    
-    return WorldPoint;
+    vec3 OnUnitSphere = randUnitVec3(seed);
+    if(dot(OnUnitSphere, Normal) > 0.0) {
+        return OnUnitSphere;
+    } else {
+        return -OnUnitSphere;
+    }
 }
 
 float reflectance(float cosine, float ior) {
@@ -411,10 +399,6 @@ vec3 rayColour(int maxDepth) {
 
     Ray r;
     bool facingFront = dot(Incident, WorldNormal) < 0.0;
-
-    vec3 PerturbedNormal = normalize(mix(normalize(WorldNormal), randOnHemisphere(seed + 6.35, WorldNormal), Roughness * Roughness));
-    //r.Direction = reflect(Incident, PerturbedNormal);
-
     if (isDielectric) {
 
         float ri = facingFront ? (1.0/IOR) : IOR;
@@ -424,14 +408,24 @@ vec3 rayColour(int maxDepth) {
         float CosTheta = min(dot(-Incident, WorldNormal), 1.0);
 
         if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-            r.Direction = reflect(Incident, PerturbedNormal);
+            if (rand(seed + 10.325) < Roughness) {
+                r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
+                throughput *= Albedo;
+            } else {
+                r.Direction = reflect(Incident, WorldNormal);
+            }
             r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         } else {
             r.Direction = Refracted;
             r.Origin = WorldPos - WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         }
     } else {
-        r.Direction = reflect(Incident, PerturbedNormal);
+        if (rand(seed + 10.325) < Roughness) {
+            r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
+            throughput *= Albedo;
+        } else {
+            r.Direction = reflect(Incident, WorldNormal);
+        }
 
         r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
 
@@ -463,9 +457,6 @@ vec3 rayColour(int maxDepth) {
 
             //Direction calculation
 
-            PerturbedNormal = normalize(mix(normalize(rec.Normal), randOnHemisphere(seed + 6.35, rec.Normal), rec.Roughness * rec.Roughness));
-            NextRayDir = reflect(Incident, PerturbedNormal);
-
             if (rec.isDielectric) { //for glass
                 float ri = rec.facingFront ? (1.0/rec.ior) : rec.ior;
                 vec3 Refracted = refract(Incident, rec.Normal, ri);
@@ -473,14 +464,24 @@ vec3 rayColour(int maxDepth) {
                 float CosTheta = min(dot(-Incident, rec.Normal), 1.0);
 
                 if (Refracted == vec3(0.0) || reflectance(CosTheta, ri) > rand(seed + 3.92)) {
-                    NextRayDir = reflect(Incident, PerturbedNormal);
+                    if (rand(seed + 10.325) < rec.Roughness) {
+                        NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
+                        throughput *= rec.Albedo;
+                    } else {
+                        NextRayDir = reflect(Incident, rec.Normal);
+                    }
                     r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 } else {
                     NextRayDir = Refracted;
                     r.Origin = rec.Position - rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 }
             } else { //for normal
-                NextRayDir = reflect(Incident, PerturbedNormal);
+                if (rand(seed + 10.325) < rec.Roughness) {
+                    NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
+                    throughput *= rec.Albedo;
+                } else {
+                    NextRayDir = reflect(Incident, rec.Normal);
+                }
                 
                 r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
 
