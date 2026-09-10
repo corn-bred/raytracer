@@ -413,7 +413,7 @@ vec3 rayColour(int maxDepth) {
     bool facingFront = dot(Incident, WorldNormal) < 0.0;
 
     vec3 PerturbedNormal = normalize(mix(normalize(WorldNormal), randOnHemisphere(seed + 6.35, WorldNormal), Roughness * Roughness));
-    r.Direction = reflect(Incident, PerturbedNormal);
+    //r.Direction = reflect(Incident, PerturbedNormal);
 
     if (isDielectric) {
 
