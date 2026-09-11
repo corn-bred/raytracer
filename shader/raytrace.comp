@@ -88,6 +88,24 @@ vec3 randOnHemisphere(float seed, vec3 Normal) {
     }
 }
 
+vec3 sampleGGX(float seed, vec3 Normal, float roughness) {
+    float alpha = roughness * roughness; // common remap: perceptual roughness -> alpha
+
+    float r1 = rand(seed);
+    float r2 = rand(seed + 1.0);
+
+    float phi = tau * r1;
+    float cosTheta = sqrt((1.0 - r2) / (1.0 + (alpha * alpha - 1.0) * r2));
+    float sinTheta = sqrt(1.0 - cosTheta * cosTheta);
+
+    vec3 H_local = vec3(sinTheta * cos(phi), cosTheta, sinTheta * sin(phi));
+
+    vec3 Tangent, Bitangent;
+    BuildOrthonormalBasis(Normal, Tangent, Bitangent);
+
+    return normalize(H_local.x * Tangent + H_local.y * Normal + H_local.z * Bitangent);
+}
+
 float reflectance(float cosine, float ior) {
     float r0 = (1 - ior) / (1 + ior);
     r0 = pow(r0, 2);
@@ -412,7 +430,8 @@ vec3 rayColour(int maxDepth) {
                 r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
                 throughput *= Albedo;
             } else {
-                r.Direction = reflect(Incident, WorldNormal);
+                vec3 H = sampleGGX(seed + 6.35, WorldNormal, Roughness);
+                r.Direction = reflect(Incident, H);
             }
             r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         } else {
@@ -424,7 +443,8 @@ vec3 rayColour(int maxDepth) {
             r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
             throughput *= Albedo;
         } else {
-            r.Direction = reflect(Incident, WorldNormal);
+            vec3 H = sampleGGX(seed + 6.35, WorldNormal, Roughness);
+            r.Direction = reflect(Incident, H);
         }
 
         r.Origin = WorldPos + WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
@@ -468,7 +488,8 @@ vec3 rayColour(int maxDepth) {
                         NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
                         throughput *= rec.Albedo;
                     } else {
-                        NextRayDir = reflect(Incident, rec.Normal);
+                        vec3 H = sampleGGX(seed + 6.35, rec.Normal, rec.Roughness);
+                        NextRayDir = reflect(Incident, H);
                     }
                     r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 } else {
@@ -480,7 +501,8 @@ vec3 rayColour(int maxDepth) {
                     NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
                     throughput *= rec.Albedo;
                 } else {
-                    NextRayDir = reflect(Incident, rec.Normal);
+                    vec3 H = sampleGGX(seed + 6.35, rec.Normal, rec.Roughness);
+                    NextRayDir = reflect(Incident, H);
                 }
                 
                 r.Origin = rec.Position + rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
