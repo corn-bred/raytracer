@@ -28,7 +28,7 @@ GPU: NVIDIA GTX 1070
 
 Demo:
 
-![Hybrid Renderer Demo](https://youtu.be/MupE6MsuAt4?si=JA_ki7kZQXO8kNF-)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MupE6MsuAt4?si=FbKOpIfCeIYuDxWG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## How to build
 Requirements: CMake version 4.0 or higher & Ninja
