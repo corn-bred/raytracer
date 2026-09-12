@@ -21,14 +21,16 @@ Pass 4: Combines both passes and gamma correction adjustment
 
 Basically finished except some visual bugs
 
-Example:
-![render 1](render1.png)
-Triangles in scene: 67919
-GPU: NVIDIA GTX 1070
-
 Demo:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MupE6MsuAt4?si=FbKOpIfCeIYuDxWG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Video Title](https://img.youtube.com/vi/MupE6MsuAt4/0.jpg)](https://www.youtube.com/watch?v=MupE6MsuAt4)
+
+Triangles in scene: 67919
+
+Specs:
+CPU: AMD Ryzen 5 4500 6-Core Processor
+GPU: NVIDIA GTX 1070
+32 GB RAM
 
 ## How to build
 Requirements: CMake version 4.0 or higher & Ninja
