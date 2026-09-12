@@ -1,4 +1,3 @@
-# Raytracer
 A standard hybrid renderer with progressive pathtracing.
 
 For school, but I just took it as an excuse to make an awesome project. Following "Raytracing in One Weekend", but interpreted (in my own code) into C++ and OpenGL.
