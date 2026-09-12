@@ -26,6 +26,10 @@ Example:
 Triangles in scene: 67919
 GPU: NVIDIA GTX 1070
 
+Demo:
+
+![Hybrid Renderer Demo](https://youtu.be/MupE6MsuAt4?si=JA_ki7kZQXO8kNF-)
+
 ## How to build
 Requirements: CMake version 4.0 or higher & Ninja
 ### Non-statically-linked build command:
