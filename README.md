@@ -1,5 +1,5 @@
 # Raytracer
-A standard progressive raytracer.
+A standard hybrid renderer with progressive pathtracing.
 
 For school, but I just took it as an excuse to make an awesome project. Following "Raytracing in One Weekend", but interpreted (in my own code) into C++ and OpenGL.
 
@@ -13,18 +13,24 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 - Lambertians
 - UV albedo & roughness textures
 - Smooth shading
-- Next Event Estimation (NEE)
-- Russian roulette
 
-Currently working on:
-Hybrid rendering
+Pass 1: Makes G-buffers to pass to Passes 2 & 3
+Pass 2: Rasterizer pass (Direct light)
+Pass 3: Pathtracer pass (Indirect light)
+Pass 4: Combines both passes and gamma correction adjustment
+
+Basically finished except some visual bugs
 
 Example:
 ![render 1](render1.png)
 Triangles in scene: 67919
-GPU: NVIDIA GTX 1050
+GPU: NVIDIA GTX 1070
 
-Non-statically-linked build command:
-`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -I include -L lib -lglfw3dll -lassimp -lz`
-Statically-linked build command:
-`g++ src/main.cpp src/glad.c src/shaders.cpp -o bin/main.exe -L "lib" -I "include" -static -static-libgcc -static-libstdc++ -lglfw3 -lopengl32 -lgdi32 -lassimp -lz`
+## How to build
+Requirements: CMake version 4.0 or higher & Ninja
+### Non-statically-linked build command:
+Run `.\buildexe.bat`
+This will build and create an executable in `bin`.
+Run `.\bin\Raytracing.exe` in the origin folder (`raytracer\`)
+### Statically-linked build command:
+Add `-static` as a flag for `buildexe.bat`, so `.\buildexe.bat -static`

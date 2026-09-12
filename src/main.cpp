@@ -343,7 +343,21 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    BVH mainBVH(Objects);*/
+    int steps = 4;
+    for (int i = 0; i < steps; i++) {
+        float offset = (-2.5 + (5.0 / (float(steps)) / 4.0)) + float(i) * (5.0 / float(steps));
+        cout << offset << endl;
+        tempTri.v0.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v1.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v2.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,0.5);
+        tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
+        uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), float(i) / float(steps));
+        tempTri.v0.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v1.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,0.5); tempTri.v2.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,0.5);
+        tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
+        uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), float(i) / float(steps));
+    }
+
+    BVH mainBVH(Objects);
+
+    GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
     Model model("assets/backpack2.obj");
 
@@ -438,7 +452,7 @@ int main () {
     ObjectData.bindToShader(2);
     
     RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
-    //ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
+    //RaytraceShader.setInt("EmissorSize", uObjects.LightIndices.size());
     
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -567,13 +581,13 @@ int main () {
         glBindTexture(GL_TEXTURE_2D, gNormal);
         RaytraceShader.setInt("gNormal", 1);
 
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, gAlbedo);
-        RaytraceShader.setInt("gAlbedo", 3);
-
         glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, gAlbedo);
+        RaytraceShader.setInt("gAlbedo", 2);
+
+        glActiveTexture(GL_TEXTURE3);
         glBindTexture(GL_TEXTURE_2D, gRoughness);
-        RaytraceShader.setInt("gRoughness", 2);
+        RaytraceShader.setInt("gRoughness", 3);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 

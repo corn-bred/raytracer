@@ -89,7 +89,7 @@ vec3 randOnHemisphere(float seed, vec3 Normal) {
 }
 
 vec3 sampleGGX(float seed, vec3 Normal, float roughness) {
-    float alpha = roughness * roughness; // common remap: perceptual roughness -> alpha
+    float alpha = roughness * roughness;
 
     float r1 = rand(seed);
     float r2 = rand(seed + 1.0);
