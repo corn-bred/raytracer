@@ -38,4 +38,4 @@ Run `.\buildexe.bat`
 This will build and create an executable in `bin`.
 Run `.\bin\Raytracing.exe` in the origin folder (`raytracer\`)
 ### Statically-linked build command:
-Add `-static` as a flag for `buildexe.bat`, so `.\buildexe.bat -static`
+Add `--static` as a flag for `buildexe.bat`, so `.\buildexe.bat --static`
