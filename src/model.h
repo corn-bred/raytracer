@@ -90,7 +90,7 @@ class Model {
         }  
 
         void processMesh(aiMesh *mesh, const aiScene *scene) {
-            float Scale = 0.0f;
+            float Scale = 2.0f;
             //cerr << "EBO creation\n";
 
             // indices

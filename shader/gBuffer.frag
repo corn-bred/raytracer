@@ -10,6 +10,7 @@ layout (location = 2) out vec4 gAlbedo;
 layout (location = 3) out float gRoughness;
 layout (location = 4) out float gIsDielectric;
 layout (location = 5) out float gIOR;
+layout (location = 6) out float gIsEmissor;
 
 uniform int albedoTextureIdx;
 uniform int roughnessTextureIdx;
@@ -19,6 +20,8 @@ uniform float Roughness;
 
 uniform bool isDielectric;
 uniform float IOR;
+
+uniform bool isEmissor;
 
 uniform sampler2DArray MeshTextures;
 
@@ -39,4 +42,6 @@ void main() {
 
     gIsDielectric = isDielectric ? 1.0 : 0.0;
     gIOR = IOR;
+
+    gIsEmissor = isEmissor ? 1.0 : 0.0;
 }

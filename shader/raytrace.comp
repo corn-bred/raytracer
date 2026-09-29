@@ -19,6 +19,7 @@ uniform sampler2D gAlbedo;
 uniform sampler2D gRoughness;
 uniform sampler2D gIsDielectric;
 uniform sampler2D gIOR;
+uniform sampler2D gIsEmissor;
 
 const float infinity = 1.0 / 0.0;
 const float pi = 3.1415926535897932385;
@@ -397,6 +398,8 @@ vec3 rayColour(int maxDepth) {
     float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
     bool isDielectric = texelFetch(gIsDielectric, PixelCoords, 0).r > 0.5 ? true : false;
     float IOR = texelFetch(gIOR, PixelCoords, 0).r;
+    bool isEmissor = texelFetch(gIsEmissor, PixelCoords, 0).r > 0.5 ? true : false;
+    if (isEmissor) return Albedo;
 
     vec3 Incident = normalize(WorldPos - CameraPos);
     
@@ -492,6 +495,9 @@ vec3 rayColour(int maxDepth) {
                     r.Origin = rec.Position - rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 }
             } else { //for normal
+
+                i = max(MaximumDepth - 1, 0); //exit early for non-dielectric objects
+
                 if (rand(seed + 10.325) < rec.Roughness) {
                     NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
                     throughput *= rec.Albedo;

@@ -88,6 +88,8 @@ struct MaterialData {
 
     bool isDielectric;
     float IOR;
+
+    bool isEmissor;
 };
 
 struct MaterialKey {
@@ -97,6 +99,7 @@ struct MaterialKey {
     float fallbackRoughness;
     bool isDielectric;
     float IOR;
+    bool isEmissor;
 
     bool operator<(const MaterialKey& other) const { // glm::vec3 does not have a comparison operator
         if (albedoIdx != other.albedoIdx) return albedoIdx < other.albedoIdx;
@@ -111,7 +114,9 @@ struct MaterialKey {
 
         if (isDielectric != other.isDielectric) return isDielectric < other.isDielectric;
         
-        return IOR < other.IOR;
+        if (IOR != other.IOR) return IOR < other.IOR;
+        
+        return isEmissor < other.isEmissor; 
     }
 };
 
@@ -141,7 +146,8 @@ class GBufferManager {
             float fallbackRoughness = _Objects[i].roughness;
             bool isDielectric = _Objects[i].dielectric;
             float IOR = _Objects[i].ior;
-            MaterialGroups [ MaterialKey {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness, isDielectric, IOR} ] .push_back(i);
+            bool isEmissor = _Objects[i].emissive;
+            MaterialGroups [ MaterialKey {albedoIdx, roughnessIdx, fallbackAlbedo, fallbackRoughness, isDielectric, IOR, isEmissor} ] .push_back(i);
         }
 
         std::vector<VertexData> vboData;
@@ -154,6 +160,7 @@ class GBufferManager {
             float fallbackRoughness = pair.first.fallbackRoughness;
             bool isDielectric = pair.first.isDielectric;
             float IOR = pair.first.IOR;
+            bool isEmissor = pair.first.isEmissor;
 
             const std::vector<int> &ObjectIndices = pair.second;
 
@@ -165,6 +172,7 @@ class GBufferManager {
             data.fallbackRoughness = fallbackRoughness;
             data.isDielectric = isDielectric;
             data.IOR = IOR;
+            data.isEmissor = isEmissor;
 
             for (int ObjectIdx : ObjectIndices) {
                 auto &x = _Objects[ObjectIdx];
@@ -200,6 +208,7 @@ class GBufferManager {
             _LinkedShader.setFloat("Roughness", material.fallbackRoughness);
             _LinkedShader.setBool("isDielectric", material.isDielectric);
             _LinkedShader.setFloat("IOR", material.IOR);
+            _LinkedShader.setBool("isEmissor", material.isEmissor);
                 
             glDrawArrays(GL_TRIANGLES, material.StartData, material.DataCount);
         }

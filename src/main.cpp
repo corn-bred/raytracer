@@ -47,7 +47,7 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 1200;
+unsigned int WIDTH = 600;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
@@ -211,7 +211,7 @@ int main () {
     glGenFramebuffers(1, &gBufferFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
 
-    GLuint gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR, gDepth;
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR, gIsEmissor, gDepth;
 
     //  gPosition
     glGenTextures(1, &gPosition);
@@ -261,7 +261,16 @@ int main () {
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);    
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);  
+    
+    //  gIsEmissor
+
+    glGenTextures(1, &gIsEmissor);
+    glBindTexture(GL_TEXTURE_2D, gIsEmissor);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT6, GL_TEXTURE_2D, gIsEmissor, 0);
 
     //  gDepth
     glGenRenderbuffers(1, &gDepth);
@@ -269,8 +278,8 @@ int main () {
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
-    GLuint attachments[6] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5};
-    glDrawBuffers(6, attachments);
+    GLuint attachments[7] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6};
+    glDrawBuffers(7, attachments);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
@@ -473,6 +482,10 @@ int main () {
     glBindTexture(GL_TEXTURE_2D, gIOR);
     RaytraceShader.setInt("gIOR", 5);
 
+    glActiveTexture(GL_TEXTURE6);
+    glBindTexture(GL_TEXTURE_2D, gIsEmissor);
+    RaytraceShader.setInt("gIsEmissor", 6);
+
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
@@ -585,6 +598,10 @@ int main () {
         glBindTexture(GL_TEXTURE_2D, gIOR);
         RasterShader.setInt("gIOR", 5);
 
+        glActiveTexture(GL_TEXTURE6);
+        glBindTexture(GL_TEXTURE_2D, gIsEmissor);
+        RasterShader.setInt("gIsEmissor", 6);
+
         RasterShader.setVec3("viewPos", CameraMain.position);
 
         RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(3.0), 1.0f, 0.09f, 0.032f);
@@ -603,7 +620,7 @@ int main () {
         RaytraceShader.setInt("Height", HEIGHT);
         RaytraceShader.setFloat("glfwTime", CurrentFrame);
         RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 1);
+        RaytraceShader.setInt("MaximumDepth", 4);
         RaytraceShader.setInt("FrameIndex", FrameIndex);
         RaytraceShader.setVec3("CameraPos", CameraMain.position);
 
@@ -630,6 +647,10 @@ int main () {
         glActiveTexture(GL_TEXTURE5);
         glBindTexture(GL_TEXTURE_2D, gIOR);
         RaytraceShader.setInt("gIOR", 5);
+
+        glActiveTexture(GL_TEXTURE6);
+        glBindTexture(GL_TEXTURE_2D, gIsEmissor);
+        RaytraceShader.setInt("gIsEmissor", 6);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 

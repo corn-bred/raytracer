@@ -12,6 +12,7 @@ uniform sampler2D gAlbedo;
 uniform sampler2D gRoughness;
 uniform sampler2D gIsDielectric;
 uniform sampler2D gIOR;
+uniform sampler2D gIsEmissor;
 
 uniform vec3 viewPos;
 
@@ -57,9 +58,16 @@ void main() {
 
     float Roughness = texture(gRoughness, TexCoords).r;
 
-    bool isDielectric = texture(gPosition, TexCoords).a > 0.5 ? true : false;
+    bool isDielectric = texture(gIsDielectric, TexCoords).r > 0.5 ? true : false;
     
-    float IOR = texture(gAlbedo, TexCoords).a;
+    float IOR = texture(gIOR, TexCoords).r;
+
+    bool isEmissor = texture(gIsEmissor, TexCoords).r > 0.5 ? true : false;
+
+    if (isEmissor) {
+        FragColor = vec4(Albedo, 1.0);
+        return;
+    }
 
     if (length(Normal) < 0.001) {
         FragColor = vec4(0.0, 0.0, 0.0, 1.0);
