@@ -10,6 +10,8 @@ uniform sampler2D gPosition;
 uniform sampler2D gNormal;
 uniform sampler2D gAlbedo;
 uniform sampler2D gRoughness;
+uniform sampler2D gIsDielectric;
+uniform sampler2D gIOR;
 
 uniform vec3 viewPos;
 

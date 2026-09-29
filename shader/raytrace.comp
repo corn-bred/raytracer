@@ -17,13 +17,8 @@ uniform sampler2D gPosition;
 uniform sampler2D gNormal;
 uniform sampler2D gAlbedo;
 uniform sampler2D gRoughness;
-
-#define gPositionLayer 0
-#define gNormalLayer 1
-#define gAlbedoLayer 2
-#define gRoughnessLayer 3
-#define gIsDielectricLayer 4
-#define gIORLayer 5
+uniform sampler2D gIsDielectric;
+uniform sampler2D gIOR;
 
 const float infinity = 1.0 / 0.0;
 const float pi = 3.1415926535897932385;
@@ -400,8 +395,8 @@ vec3 rayColour(int maxDepth) {
     vec3 WorldNormal = texelFetch(gNormal, PixelCoords, 0).rgb;
     vec3 Albedo = texelFetch(gAlbedo, PixelCoords, 0).rgb;
     float Roughness = texelFetch(gRoughness, PixelCoords, 0).r; 
-    bool isDielectric = texelFetch(gPosition, PixelCoords, 0).a > 0.5 ? true : false;
-    float IOR = texelFetch(gAlbedo, PixelCoords, 0).a;
+    bool isDielectric = texelFetch(gIsDielectric, PixelCoords, 0).r > 0.5 ? true : false;
+    float IOR = texelFetch(gIOR, PixelCoords, 0).r;
 
     vec3 Incident = normalize(WorldPos - CameraPos);
     
