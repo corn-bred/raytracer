@@ -386,7 +386,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/cube.obj");
+    Model model("assets/stanford-bunny2.obj");
 
     Triangle tempTri;
     
@@ -492,7 +492,7 @@ int main () {
     
     RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
     //RaytraceShader.setInt("EmissorSize", uObjects.LightIndices.size());
-    
+
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);

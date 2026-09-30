@@ -11,6 +11,7 @@ layout (location = 3) out float gRoughness;
 layout (location = 4) out float gIsDielectric;
 layout (location = 5) out float gIOR;
 layout (location = 6) out float gIsEmissor;
+layout (location = 7) out vec4 gMotion;
 
 uniform int albedoTextureIdx;
 uniform int roughnessTextureIdx;

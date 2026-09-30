@@ -437,6 +437,7 @@ vec3 rayColour(int maxDepth) {
             r.Origin = WorldPos - WorldNormal * 0.001 * (facingFront ? 1.0 : -1.0); //float precision
         }
     } else {
+
         if (rand(seed + 10.325) < Roughness) {
             r.Direction = randOnHemisphere(seed + 6.35, WorldNormal);
             throughput *= Albedo;
@@ -456,7 +457,7 @@ vec3 rayColour(int maxDepth) {
 
     HitRecord rec;
 
-    for (int i = 0; i < maxDepth; i++) {
+    for (int i = isDielectric ? 0 : maxDepth - 1; i < maxDepth; i++) {
         seed = glfwTime + PixelCoords.x * (3.96 + glfwTime) + PixelCoords.y * (5.9 + glfwTime * 2) + i * (2.47 + glfwTime * 3);
 
         if(TraverseBVH(r, rec, false)) {
@@ -495,8 +496,8 @@ vec3 rayColour(int maxDepth) {
                     r.Origin = rec.Position - rec.Normal * 0.001 * (rec.facingFront ? 1.0 : -1.0);
                 }
             } else { //for normal
-
-                i = max(MaximumDepth - 1, 0); //exit early for non-dielectric objects
+                
+                i = max(maxDepth - 2, i); //exit early for non-dielectric objects
 
                 if (rand(seed + 10.325) < rec.Roughness) {
                     NextRayDir = randOnHemisphere(seed + 6.35, rec.Normal);
