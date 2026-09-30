@@ -47,7 +47,7 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 600;
+unsigned int WIDTH = 1200;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
@@ -386,7 +386,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/stanford-bunny2.obj");
+    Model model("assets/stanford-dragon2.obj");
 
     Triangle tempTri;
     

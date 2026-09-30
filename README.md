@@ -26,6 +26,10 @@ Demo:
 
 Triangles in scene: 67919
 
+Another example image:
+ 
+![example img](image.png)
+
 Specs:
 CPU: AMD Ryzen 5 4500 6-Core Processor
 GPU: NVIDIA GTX 1070
