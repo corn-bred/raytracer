@@ -211,7 +211,7 @@ int main () {
     glGenFramebuffers(1, &gBufferFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
 
-    GLuint gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR, gIsEmissor, gDepth;
+    GLuint gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR, gIsEmissor, gMotion, gDepth;
 
     //  gPosition
     glGenTextures(1, &gPosition);
@@ -246,7 +246,6 @@ int main () {
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, gRoughness, 0);
 
     //  gIsDielectric
-
     glGenTextures(1, &gIsDielectric);
     glBindTexture(GL_TEXTURE_2D, gIsDielectric);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
@@ -254,8 +253,7 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
 
-    //  gIOR
-
+    //  gIO
     glGenTextures(1, &gIOR);
     glBindTexture(GL_TEXTURE_2D, gIOR);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
@@ -264,7 +262,6 @@ int main () {
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);  
     
     //  gIsEmissor
-
     glGenTextures(1, &gIsEmissor);
     glBindTexture(GL_TEXTURE_2D, gIsEmissor);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
@@ -272,14 +269,22 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT6, GL_TEXTURE_2D, gIsEmissor, 0);
 
+    //  gMotion
+    glGenTextures(1, &gMotion);
+    glBindTexture(GL_TEXTURE_2D, gMotion);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RG16F, WIDTH, HEIGHT, 0, GL_RG, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT7, GL_TEXTURE_2D, gMotion, 0);
+
     //  gDepth
     glGenRenderbuffers(1, &gDepth);
     glBindRenderbuffer(GL_RENDERBUFFER, gDepth);
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
 
-    GLuint attachments[7] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6};
-    glDrawBuffers(7, attachments);
+    GLuint attachments[8] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6, GL_COLOR_ATTACHMENT7};
+    glDrawBuffers(8, attachments);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
@@ -386,7 +391,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/stanford-dragon2.obj");
+    Model model("assets/stanford-bunny2.obj");
 
     Triangle tempTri;
     
@@ -493,6 +498,8 @@ int main () {
     RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
     //RaytraceShader.setInt("EmissorSize", uObjects.LightIndices.size());
 
+    glm::mat4 prevView(glm::mat4(1.0)), prevProjection(glm::mat4(1.0));
+
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);
@@ -556,6 +563,9 @@ int main () {
         gBufferShader.setMat4("model", matmodel);
         gBufferShader.setMat4("view", view);
         gBufferShader.setMat4("projection", projection);
+        gBufferShader.setMat4("prevView", prevView);
+        gBufferShader.setMat4("prevProjection", prevProjection);
+        gBufferShader.setVec2("Resolution", glm::vec2(WIDTH, HEIGHT));
 
         glm::mat3 normalMatrix = glm::mat3(glm::transpose(glm::inverse(matmodel)));
         gBufferShader.setMat3("normalMatrix", normalMatrix);
@@ -565,6 +575,9 @@ int main () {
         gBufferHandler.draw();
 
         glDisable(GL_DEPTH_TEST);
+
+        prevView = view;
+        prevProjection = projection;
 
         //Pass 2
 
@@ -665,11 +678,11 @@ int main () {
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, RasterOutput);
+        glBindTexture(GL_TEXTURE_2D, gMotion);
         ShaderSample.setInt("Raster", 0);
 
         glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+        //glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
         ShaderSample.setInt("Raytrace", 1);
 
         ShaderSample.setInt("OutputType", static_cast<int>(OutputType));

@@ -23,7 +23,7 @@ float linearToGamma(float LinearComponent)
 }
 
 void main () {
-    vec3 RasterData = texture(Raster, TexCoords).rgb;
+    vec3 RasterData = vec3(texture(Raster, TexCoords).rg, 0.0);
     vec3 RaytraceData = texture(Raytrace, TexCoords).rgb;
     vec3 Result;
 

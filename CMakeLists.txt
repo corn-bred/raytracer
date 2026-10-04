@@ -20,11 +20,13 @@ target_include_directories( ${PROJECT_NAME} PRIVATE
 target_link_directories( ${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
+find_package(assimp CONFIG REQUIRED)
+
 target_link_libraries( ${PROJECT_NAME} PRIVATE 
     glfw3 
     opengl32 
     gdi32 
-    assimp
+    assimp::assimp
     z
 )
 
