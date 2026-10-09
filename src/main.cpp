@@ -253,7 +253,7 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
 
-    //  gIO
+    //  gIOR
     glGenTextures(1, &gIOR);
     glBindTexture(GL_TEXTURE_2D, gIOR);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
@@ -278,14 +278,14 @@ int main () {
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT7, GL_TEXTURE_2D, gMotion, 0);
 
     //  gDepth
-    glGenRenderbuffers(1, &gDepth);
-    glBindRenderbuffer(GL_RENDERBUFFER, gDepth);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, gDepth);
+    glGenTextures(1, &gDepth);
+    glBindTexture(GL_TEXTURE_2D, gDepth);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, WIDTH, HEIGHT, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, gDepth, 0);
 
-    GLuint attachments[8] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6, GL_COLOR_ATTACHMENT7};
-    glDrawBuffers(8, attachments);
-
+    GLuint gBufferAttachments[8] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6, GL_COLOR_ATTACHMENT7};
+    glDrawBuffers(8, gBufferAttachments);
+    
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "G-Buffer FBO is incomplete" << endl;
         return 1;
@@ -294,6 +294,88 @@ int main () {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     Shader gBufferShader("shader/gBuffer.vert", "shader/gBuffer.frag");
+
+    // PASS 1.5: PRIOR FRAME TEXTURE CREATION
+
+    GLuint prevBufferFBO;
+
+    glGenFramebuffers(1, &prevBufferFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, prevBufferFBO);
+
+    /*
+    check this out
+        Our history buffers include
+        temporally integrated color and color moment data along with the
+        prior frame’s depths, normals, and mesh IDs. 
+    you better listen to the paper
+    in total, 5 textures + 1 required renderbuffer
+    */
+    
+    GLuint 
+        prevIntegratedColour, //integrated color is the final texture after temporal accumulation, then sent as a history texture output in the soon to come SVGF buffer
+        prevFirstMoment, //color moment is all textures accumulated, but without accumulation
+        prevSecondMoment, //first moment but squared
+        prevDepth, //previous depth
+        prevNormal, //previous normal
+        prevFBODepth; //required for fbo to be complete
+    
+    //  prevIntegratedColour
+    glGenTextures(1, &prevIntegratedColour);
+    glBindTexture(GL_TEXTURE_2D, prevIntegratedColour);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    //this will be taken as an output for the denoiser after temporal accumulation
+
+    //  prevFirstMoment
+    glGenTextures(1, &prevFirstMoment);
+    glBindTexture(GL_TEXTURE_2D, prevFirstMoment);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, prevFirstMoment, 0);
+
+    //  prevSecondMoment
+    glGenTextures(1, &prevSecondMoment);
+    glBindTexture(GL_TEXTURE_2D, prevSecondMoment);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, prevSecondMoment, 0);
+
+    //  prevDepth
+    glGenTextures(1, &prevDepth);
+    glBindTexture(GL_TEXTURE_2D, prevDepth);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, WIDTH, HEIGHT, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, prevDepth, 0);
+
+    //  prevNormal
+    glGenTextures(1, &prevNormal);
+    glBindTexture(GL_TEXTURE_2D, prevNormal);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, prevNormal, 0);
+
+    //  prevFBODepth
+    glGenRenderbuffers(1, &prevFBODepth);
+    glBindRenderbuffer(GL_RENDERBUFFER, prevFBODepth);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, prevFBODepth);
+
+    GLuint gBufferAttachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
+    glDrawBuffers(4, gBufferAttachments);
+    
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+        cerr << "Prior frame data FBO is incomplete" << endl;
+        return 1;
+    }
 
     // PASS 2: RASTERIZATION & DIRECT LIGHT
 
@@ -678,11 +760,11 @@ int main () {
         ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gMotion);
+        glBindTexture(GL_TEXTURE_2D, RasterOutput);
         ShaderSample.setInt("Raster", 0);
 
         glActiveTexture(GL_TEXTURE1);
-        //glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+        glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
         ShaderSample.setInt("Raytrace", 1);
 
         ShaderSample.setInt("OutputType", static_cast<int>(OutputType));
@@ -698,6 +780,7 @@ int main () {
         //_sleep(100);
     }
     glDeleteTextures(1, &RaytraceShaderAccumulationTexture);
+    glDeleteTextures(1, &gAlbedo);
     glfwTerminate();
     return 0;
 }
