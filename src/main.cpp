@@ -313,7 +313,7 @@ int main () {
     
     GLuint 
         prevIntegratedColour, //integrated color is the final texture after temporal accumulation, then sent as a history texture output in the soon to come SVGF buffer
-        prevFirstMoment, //color moment is all textures accumulated, but without accumulation
+        prevFirstMoment, //color moment is all textures accumulated, but without temporal accumulation
         prevSecondMoment, //first moment but squared
         prevDepth, //previous depth
         prevNormal, //previous normal
@@ -369,13 +369,15 @@ int main () {
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, prevFBODepth);
 
-    GLuint gBufferAttachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
-    glDrawBuffers(4, gBufferAttachments);
+    GLuint prevBufferAttachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
+    glDrawBuffers(4, prevBufferAttachments);
     
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         cerr << "Prior frame data FBO is incomplete" << endl;
         return 1;
     }
+
+    Shader prevBufferShader("prevBuffer.vert", "prevBuffer.frag");
 
     // PASS 2: RASTERIZATION & DIRECT LIGHT
 
