@@ -6,7 +6,7 @@ Shader::Shader(const char* vertexFilePath, const char* fragmentFilePath) {
 
     vertFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     fragFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-
+    std::cout << "trying to open: \"" << vertexFilePath << "\" & \"" << fragmentFilePath << "\"\n";
     try {
         vertFile.open(vertexFilePath);
         fragFile.open(fragmentFilePath);

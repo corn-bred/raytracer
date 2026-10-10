@@ -12,8 +12,9 @@ layout (location = 3) out vec4 prevNormal;
 in vec2 TexCoords;
 
 void main() {
-    prevFirstMoment = texture(DisplayOutput, TexCoords);
-    prevSecondMoment = pow(texture(DisplayOutput, TexCoords), 2);
-    prevDepth = texture(gDepth, TexCoords);
+    vec4 Output = texture(DisplayOutput, TexCoords);
+    prevFirstMoment = Output;
+    prevSecondMoment = pow(Output, vec4(2.0));
+    prevDepth = texture(gDepth, TexCoords).r;
     prevNormal = texture(gNormal, TexCoords);
 }

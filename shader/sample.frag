@@ -2,6 +2,7 @@
 
 out vec4 FragColor;
 
+
 uniform sampler2D Raster;
 uniform sampler2D Raytrace;
 in vec2 TexCoords;

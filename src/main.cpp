@@ -346,7 +346,7 @@ int main () {
     //  prevDepth
     glGenTextures(1, &prevDepth);
     glBindTexture(GL_TEXTURE_2D, prevDepth);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, WIDTH, HEIGHT, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_INT, NULL);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, prevDepth, 0);
 
     //  prevNormal
@@ -373,7 +373,7 @@ int main () {
 
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    Shader prevBufferShader("prevBuffer.vert", "prevBuffer.frag");
+    Shader prevBufferShader("shader/prevBuffer.vert", "shader/prevBuffer.frag");
 
     // PASS 2: RASTERIZATION & DIRECT LIGHT
 
