@@ -2,6 +2,7 @@
 
 out vec4 FragColor;
 
+layout(location = 0) out vec4 DisplayOutput;
 
 uniform sampler2D Raster;
 uniform sampler2D Raytrace;
@@ -52,5 +53,5 @@ void main () {
     }
 
     Result = vec3(linearToGamma(Result.r), linearToGamma(Result.g), linearToGamma(Result.b));
-    FragColor = vec4(Result, 1.0);
+    DisplayOutput = vec4(Result, 1.0);
 }

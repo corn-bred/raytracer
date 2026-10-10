@@ -184,24 +184,6 @@ int main () {
         return 1;
     }
 
-    GLuint RaytraceShaderAccumulationTexture;
-    glGenTextures(1, &RaytraceShaderAccumulationTexture);
-
-    glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-    Shader ShaderSample("shader/sample.vert", "shader/sample.frag");
-
-    VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
-    BufferQuad.addAttribute(0, 2, GL_FLOAT, 4, 0);
-    BufferQuad.addAttribute(1, 2, GL_FLOAT, 4, 2);
-
     //  Framebuffer setup
 
     // PASS 1: G-BUFFER
@@ -401,9 +383,56 @@ int main () {
     Shader RasterShader("shader/raster.vert", "shader/raster.frag");
     RasterLightArray RasterLightHandler(RasterShader, "pointLights");
 
-    // temporary standalone compute pass
+    // PASS 3: RAYTRACING & INDIRECT LIGHT
+
+    GLuint RaytraceShaderAccumulationTexture;
+    glGenTextures(1, &RaytraceShaderAccumulationTexture);
+
+    glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     ComputeShader RaytraceShader("shader/raytrace.comp");
+
+    // PASS 4: ACCUMULATION PASS
+
+    GLuint AccumFBO;
+    glGenFramebuffers(1, &AccumFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
+
+    GLuint DisplayOutput;
+
+    glGenTextures(1, &DisplayOutput);
+    glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, DisplayOutput, 0);
+
+    GLenum AccumBufferAttachments[1] = {GL_COLOR_ATTACHMENT0};
+    glDrawBuffers(1, AccumBufferAttachments);
+
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+        cerr << "Accumulation FBO is incomplete: Error code 0x" << hex << glCheckFramebufferStatus(GL_FRAMEBUFFER) << endl;
+        return 1;
+    }
+    
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    Shader AccumShader("shader/accumulation.vert", "shader/accumulation.frag");
+
+    // FINAL PASS: DISPLAY PASS
+
+    Shader OutputShader("shader/output.vert", "shader/output.frag");
+
+    VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
+    BufferQuad.addAttribute(0, 2, GL_FLOAT, 4, 0);
+    BufferQuad.addAttribute(1, 2, GL_FLOAT, 4, 2);
 
     //CORNELL BOX
 
@@ -749,23 +778,39 @@ int main () {
 
         RaytraceShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
 
-        //drawing to screen
+        //Pass 4
 
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
         glClearColor(0.0, 0.0, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);  
 
-        ShaderSample.use();
+        AccumShader.use();
 
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, RasterOutput);
-        ShaderSample.setInt("Raster", 0);
+        AccumShader.setInt("Raster", 0);
 
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
-        ShaderSample.setInt("Raytrace", 1);
+        AccumShader.setInt("Raytrace", 1);
 
-        ShaderSample.setInt("OutputType", static_cast<int>(OutputType));
+        AccumShader.setInt("OutputType", static_cast<int>(OutputType));
+
+        BufferQuad.bind();
+
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+
+        //output to screen
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        OutputShader.use();
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+        OutputShader.setInt("DisplayOutput", 0);
 
         BufferQuad.bind();
 
