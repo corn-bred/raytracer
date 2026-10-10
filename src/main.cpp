@@ -661,6 +661,28 @@ int main () {
         
         glm::mat4 view = CameraMain.calculateView();
 
+        //updating previous texture data for denoising (pre-pass pass??)
+
+        glBindFramebuffer(GL_FRAMEBUFFER, prevBufferFBO);
+
+        prevBufferShader.use();
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, gNormal);
+        prevBufferShader.setInt("gNormal", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, gDepth);
+        prevBufferShader.setInt("gDepth", 1);
+
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+        prevBufferShader.setInt("DisplayOutput", 2);
+
+        BufferQuad.bind();
+
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+
         //Pass 1
 
         glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
@@ -800,7 +822,7 @@ int main () {
 
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
-        //output to screen
+        //Final pass
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glClearColor(0.0, 0.0, 0.0, 1.0);
