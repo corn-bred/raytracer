@@ -1,0 +1,48 @@
+#version 430 core
+
+layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
+
+layout(rgba32f, binding = 0) uniform image2D PostDenoisingOutput;
+
+uniform sampler2D gDepth;
+uniform sampler2D gNormal;
+uniform sampler2D gMotion;
+uniform sampler2D IntegratedColour;
+uniform sampler2D prevFirstMoment;
+uniform sampler2D prevSecondMoment;
+uniform sampler2D prevDepth;
+uniform sampler2D prevNormal;
+
+uniform int Width;
+uniform int Height;
+
+const vec3 HumanLightSens = vec3(0.2126, 0.7152, 0.0722);
+const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
+
+void main() {
+    // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah))
+    int N = 0;
+    float L[9] = {0.0};
+
+    for (int x = -1; x <= 1; x++) {
+        for(int y = -1; y <= 1; y++) {
+            ivec2 WriteCoords = PixelCoords + ivec2(x, y);
+            if ((WriteCoords.x >= 0 && WriteCoords.x < Width) && (WriteCoords.y >= 0 && WriteCoords.y < Height)) {
+                L[N] = dot(HumanLightSens, texelFetch(IntegratedColour, WriteCoords, 0).rgb);
+                N++;
+            }
+        }
+    }
+
+    float l = 0.0;
+    for (int i = 0; i < N; i++) {
+        l += L[i];
+    }
+    l /= N;
+
+    float v = 0.0;
+    for (int i = 0; i < N; i++) {
+        v += pow(L[i] - l, 2.0);
+    }
+    v /= N;
+}

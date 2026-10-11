@@ -407,16 +407,16 @@ int main () {
     glGenFramebuffers(1, &AccumFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
 
-    GLuint DisplayOutput;
+    GLuint IntegratedColour;
 
-    glGenTextures(1, &DisplayOutput);
-    glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+    glGenTextures(1, &IntegratedColour);
+    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, DisplayOutput, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, IntegratedColour, 0);
 
     GLenum AccumBufferAttachments[1] = {GL_COLOR_ATTACHMENT0};
     glDrawBuffers(1, AccumBufferAttachments);
@@ -429,6 +429,22 @@ int main () {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     Shader AccumShader("shader/accumulation.vert", "shader/accumulation.frag");
+
+    // PASS 5: DENOISING (using Spatiotemporal Variance-Guided Filtering)
+
+    ComputeShader SVGFShader("shader/svgf.comp");
+
+    GLuint PostDenoisingOutput;
+
+    glGenTextures(1, &PostDenoisingOutput);
+    glBindTexture(GL_TEXTURE_2D, PostDenoisingOutput);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glBindTexture(GL_TEXTURE_2D, 0);
 
     // FINAL PASS: DISPLAY PASS
 
@@ -504,7 +520,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/stanford-bunny2.obj");
+    Model model("assets/cube.obj");
 
     Triangle tempTri;
     
@@ -680,8 +696,8 @@ int main () {
         prevBufferShader.setInt("gDepth", 1);
 
         glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
-        prevBufferShader.setInt("DisplayOutput", 2);
+        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        prevBufferShader.setInt("IntegratedColour", 2);
 
         BufferQuad.bind();
 
@@ -835,8 +851,8 @@ int main () {
         OutputShader.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
-        OutputShader.setInt("DisplayOutput", 0);
+        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        OutputShader.setInt("IntegratedColour", 0);
 
         BufferQuad.bind();
 
