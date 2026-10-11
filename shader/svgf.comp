@@ -19,30 +19,52 @@ uniform int Height;
 const vec3 HumanLightSens = vec3(0.2126, 0.7152, 0.0722);
 const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
 
-void main() {
-    // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah))
-    int N = 0;
-    float L[9] = {0.0};
+float FindWeight(float centreLuminance, float neighbouringLuminance) {
+    return 0.0; //undefined for now, do it later
+}
 
-    for (int x = -1; x <= 1; x++) {
-        for(int y = -1; y <= 1; y++) {
+void main() {
+    // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
+    int LuminanceValuesLength = 0;
+    float LuminanceValues[49] = {0.0};
+    int LuminanceValuesCentrePixel = 0;
+
+    for (int x = -3; x <= 3; x++) {
+        for(int y = -3; y <= 3; y++) {
             ivec2 WriteCoords = PixelCoords + ivec2(x, y);
+
+            if (x == 0 && y == 0) LuminanceValuesCentrePixel = LuminanceValuesLength;
+            
             if ((WriteCoords.x >= 0 && WriteCoords.x < Width) && (WriteCoords.y >= 0 && WriteCoords.y < Height)) {
-                L[N] = dot(HumanLightSens, texelFetch(IntegratedColour, WriteCoords, 0).rgb);
-                N++;
+                LuminanceValues[LuminanceValuesLength] = dot(HumanLightSens, texelFetch(IntegratedColour, WriteCoords, 0).rgb);
+                LuminanceValuesLength++;
             }
         }
     }
 
-    float l = 0.0;
-    for (int i = 0; i < N; i++) {
-        l += L[i];
+    float Variance = 0.0;
+    
+    float varianceTopVal = 0.0;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        varianceTopVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]) * pow(LuminanceValues[i] - LuminanceValues[LuminanceValuesCentrePixel], 2.0);
     }
-    l /= N;
+    float varianceBottomVal = 0.0;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        varianceBottomVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]);
+    }
 
-    float v = 0.0;
-    for (int i = 0; i < N; i++) {
-        v += pow(L[i] - l, 2.0);
+    Variance = varianceTopVal / max(varianceBottomVal, 1e-8); //no divide by 0
+
+    //fallback, work on later
+    /*float LuminanceAverage = 0.0;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        LuminanceAverage += LuminanceValues[i];
     }
-    v /= N;
+    LuminanceAverage /= LuminanceValuesLength;
+
+    float Variance = 0.0;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        Variance += pow(LuminanceValues[i] - LuminanceAverage, 2.0);
+    }
+    Variance /= LuminanceValuesLength;*/
 }
