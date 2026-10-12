@@ -468,7 +468,7 @@ int main () {
 
     // PASS 5: DENOISING (using Spatiotemporal Variance-Guided Filtering)
 
-    //ComputeShader SVGFShader("shader/svgf.comp");
+    ComputeShader SVGFShader("shader/svgf.comp");
 
     GLuint PostDenoisingOutput;
 
@@ -894,6 +894,52 @@ int main () {
 
         MomentsShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
 
+        //Pass 5
+
+        SVGFShader.bind();
+
+        glBindImageTexture(0, PostDenoisingOutput, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+        
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, gDepth);
+        SVGFShader.setInt("gDepth", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, gNormal);
+        SVGFShader.setInt("gNormal", 1);
+
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, gMotion);
+        SVGFShader.setInt("gMotion", 2);
+
+        glActiveTexture(GL_TEXTURE3);
+        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        SVGFShader.setInt("IntegratedColour", 3);
+
+        glActiveTexture(GL_TEXTURE4);
+        glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
+        SVGFShader.setInt("AccumulatedFirstMoment", 4);
+
+        glActiveTexture(GL_TEXTURE5);
+        glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
+        SVGFShader.setInt("AccumulatedSecondMoment", 5);
+
+        glActiveTexture(GL_TEXTURE6);
+        glBindTexture(GL_TEXTURE_2D, prevDepth);
+        SVGFShader.setInt("prevDepth", 6);
+
+        glActiveTexture(GL_TEXTURE7);
+        glBindTexture(GL_TEXTURE_2D, prevNormal);
+        SVGFShader.setInt("prevNormal", 7);
+
+        SVGFShader.setInt("FrameIndex", FrameIndex);
+
+        SVGFShader.setInt("Width", WIDTH);
+        SVGFShader.setInt("Height", HEIGHT);
+
+        SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
+        
+
         //Final pass
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -903,7 +949,7 @@ int main () {
         OutputShader.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+        glBindTexture(GL_TEXTURE_2D, PostDenoisingOutput);
         OutputShader.setInt("DisplayOutput", 0);
 
         BufferQuad.bind();

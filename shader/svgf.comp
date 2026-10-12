@@ -3,10 +3,6 @@
 layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D PostDenoisingOutput;
-layout(rgba32f, binding = 0) uniform image2D AccumulatedFirstMoment;
-layout(rgba32f, binding = 0) uniform image2D AccumulatedSecondMoment;
-
-uniform int FrameIndex;
 
 uniform sampler2D gDepth;
 uniform sampler2D gNormal;
@@ -19,6 +15,7 @@ uniform sampler2D prevSecondMoment;
 uniform sampler2D prevDepth;
 uniform sampler2D prevNormal;
 
+uniform int FrameIndex;
 uniform int Width;
 uniform int Height;
 
@@ -31,7 +28,11 @@ float Luminance(ivec2 point) {
 }
 
 float AverageLuminance(ivec2 point) { //ADD MOTION TO HERE
-    return Luminance(point) * (1.0 / float(FrameIndex)) + texelFetch(prevFirstMoment, point, 0) * (1.0 - (1.0 / float(FrameIndex)));
+    return texelFetch(AccumulatedFirstMoment, point, 0).r;
+}
+
+float LuminanceVariance(ivec2 point) { //ADD MOTION TO HERE
+    return max(texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0), 0);
 }
 
 float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
@@ -51,22 +52,29 @@ float w_z(ivec2 centre, ivec2 neighbouring) { //depth similarity, defined in equ
 }
 
 float w_n(ivec2 centre, ivec2 neighbouring) { //normal similarity, defined in equation 4
-    return max( 0, dot( texelFetch(gNormal, centre, 0).xyz, texelFetch(gNormal, neighbouring, 0).xyz ) );
+    return max( 0, dot( normalize(texelFetch(gNormal, centre, 0).xyz), normalize(texelFetch(gNormal, neighbouring, 0).xyz) ) );
 }
 
 float w_l(ivec2 centre, ivec2 neighbouring) { //luminance similarity, defined in equation 5
     float topVal = abs(AverageLuminance(centre) - AverageLuminance(neighbouring));
-    float bottomVal = sigma_l * sqrt(min());
+    float bottomVal = sigma_l * sqrt( min(LuminanceVariance(centre), LuminanceVariance(neighbouring)) ) + epsilon;
+    return exp(-(topVal / bottomVal));
 }
 
 float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
-    return w_n(centre, neighbouring) * w_z(centre, neighbouring);
+    return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring);
 }
 
 void main() {
     // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
     int LuminanceValuesLength = 0;
-    float LuminanceValues[49] = {0.0};
+    float LuminanceValues[49] = float[49](0.0);
+
+    ivec2 LuminanceCoords[49];
+    for (int i = 0; i < 49; i++) {
+        LuminanceCoords[i] = ivec2(0.0);
+    }
+
     int LuminanceValuesCentrePixel = 0;
 
     for (int x = -3; x <= 3; x++) {
@@ -77,6 +85,7 @@ void main() {
             
             if ((WriteCoords.x >= 0 && WriteCoords.x < Width) && (WriteCoords.y >= 0 && WriteCoords.y < Height)) {
                 LuminanceValues[LuminanceValuesLength] = Luminance(WriteCoords);
+                LuminanceCoords[LuminanceValuesLength] = WriteCoords;
                 LuminanceValuesLength++;
             }
         }
@@ -86,15 +95,19 @@ void main() {
     
     float varianceTopVal = 0.0;
     for (int i = 0; i < LuminanceValuesLength; i++) {
-        varianceTopVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]) * pow(LuminanceValues[i] - LuminanceValues[LuminanceValuesCentrePixel], 2.0);
+        varianceTopVal += FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]) * pow(LuminanceValues[i] - LuminanceValues[LuminanceValuesCentrePixel], 2.0);
     }
 
     float varianceBottomVal = 0.0;
     for (int i = 0; i < LuminanceValuesLength; i++) {
-        varianceBottomVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]);
+        varianceBottomVal += FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]);
     }
 
     Variance = varianceTopVal / max(varianceBottomVal, epsilon); //no divide by 0
+
+    hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
+
+    imageStore(PostDenoisingOutput, PixelCoords, vec4(vec3(Variance), 1.0));
 
     //fallback, work on later
     /*float LuminanceAverage = 0.0;
