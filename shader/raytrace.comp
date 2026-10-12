@@ -3,6 +3,7 @@
 layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D ImageOut;
+layout(rgba32f, binding = 1) uniform image2D IntegratedColour;
 
 uniform float glfwTime;
 uniform int Width;
@@ -552,4 +553,5 @@ void main () {
         AccumulatedColour = NewSample;
     }
     imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
+    imageStore(IntegratedColour, PixelCoords, vec4(PixelColour, 1.0));
 }

@@ -3,11 +3,17 @@
 layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D PostDenoisingOutput;
+layout(rgba32f, binding = 0) uniform image2D AccumulatedFirstMoment;
+layout(rgba32f, binding = 0) uniform image2D AccumulatedSecondMoment;
+
+uniform int FrameIndex;
 
 uniform sampler2D gDepth;
 uniform sampler2D gNormal;
 uniform sampler2D gMotion;
 uniform sampler2D IntegratedColour;
+uniform sampler2D AccumulatedFirstMoment;
+uniform sampler2D AccumulatedSecondMoment;
 uniform sampler2D prevFirstMoment;
 uniform sampler2D prevSecondMoment;
 uniform sampler2D prevDepth;
@@ -18,9 +24,43 @@ uniform int Height;
 
 const vec3 HumanLightSens = vec3(0.2126, 0.7152, 0.0722);
 const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
+const float epsilon = 1e-8;
 
-float FindWeight(float centreLuminance, float neighbouringLuminance) {
-    return 0.0; //undefined for now, do it later
+float Luminance(ivec2 point) {
+    return dot(HumanLightSens, texelFetch(IntegratedColour, point, 0).rgb);
+}
+
+float AverageLuminance(ivec2 point) { //ADD MOTION TO HERE
+    return Luminance(point) * (1.0 / float(FrameIndex)) + texelFetch(prevFirstMoment, point, 0) * (1.0 - (1.0 / float(FrameIndex)));
+}
+
+float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
+
+vec2 nablaW(ivec2 point) { //describes the average change in depth
+    float HorizontalChange = (texelFetch(gDepth, point + ivec2(1, 0), 0).r - texelFetch(gDepth, point + ivec2(-1, 0), 0).r) * 0.5;
+    float VerticalChange = (texelFetch(gDepth, point + ivec2(0, 1), 0).r - texelFetch(gDepth, point + ivec2(0, -1), 0).r) * 0.5;
+    return vec2(HorizontalChange, VerticalChange);
+}
+
+//all w_ functions return a float 0-1, from 1 being agreeing to 0 being not agreeing at all
+
+float w_z(ivec2 centre, ivec2 neighbouring) { //depth similarity, defined in equation 3
+    float topVal = abs(texelFetch(gDepth, centre, 0).r - texelFetch(gDepth, neighbouring, 0).r);
+    float bottomVal = sigma_z * abs( dot( nablaW(centre), vec2(centre - neighbouring) ) ) + epsilon;
+    return exp(-(topVal / bottomVal));
+}
+
+float w_n(ivec2 centre, ivec2 neighbouring) { //normal similarity, defined in equation 4
+    return max( 0, dot( texelFetch(gNormal, centre, 0).xyz, texelFetch(gNormal, neighbouring, 0).xyz ) );
+}
+
+float w_l(ivec2 centre, ivec2 neighbouring) { //luminance similarity, defined in equation 5
+    float topVal = abs(AverageLuminance(centre) - AverageLuminance(neighbouring));
+    float bottomVal = sigma_l * sqrt(min());
+}
+
+float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
+    return w_n(centre, neighbouring) * w_z(centre, neighbouring);
 }
 
 void main() {
@@ -36,7 +76,7 @@ void main() {
             if (x == 0 && y == 0) LuminanceValuesCentrePixel = LuminanceValuesLength;
             
             if ((WriteCoords.x >= 0 && WriteCoords.x < Width) && (WriteCoords.y >= 0 && WriteCoords.y < Height)) {
-                LuminanceValues[LuminanceValuesLength] = dot(HumanLightSens, texelFetch(IntegratedColour, WriteCoords, 0).rgb);
+                LuminanceValues[LuminanceValuesLength] = Luminance(WriteCoords);
                 LuminanceValuesLength++;
             }
         }
@@ -48,12 +88,13 @@ void main() {
     for (int i = 0; i < LuminanceValuesLength; i++) {
         varianceTopVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]) * pow(LuminanceValues[i] - LuminanceValues[LuminanceValuesCentrePixel], 2.0);
     }
+
     float varianceBottomVal = 0.0;
     for (int i = 0; i < LuminanceValuesLength; i++) {
         varianceBottomVal += FindWeight(LuminanceValues[LuminanceValuesCentrePixel], LuminanceValues[i]);
     }
 
-    Variance = varianceTopVal / max(varianceBottomVal, 1e-8); //no divide by 0
+    Variance = varianceTopVal / max(varianceBottomVal, epsilon); //no divide by 0
 
     //fallback, work on later
     /*float LuminanceAverage = 0.0;

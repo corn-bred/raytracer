@@ -1,0 +1,24 @@
+#version 430 core
+
+layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
+
+layout(r32f, binding = 0) uniform image2D AccumulatedFirstMoment;
+layout(r32f, binding = 1) uniform image2D AccumulatedSecondMoment;
+
+uniform sampler2D IntegratedColour;
+uniform int FrameIndex;
+
+const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
+
+void main () {
+    float Luminance = dot(vec3(0.2126, 0.7152, 0.0722), texelFetch(IntegratedColour, PixelCoords, 0).rgb);
+
+    float FirstMoment = Luminance;
+    float SecondMoment = pow(Luminance, 2.0);
+
+    float NewFirstMomentColour = imageLoad(AccumulatedFirstMoment, PixelCoords).r * (1.0 - (1.0 / FrameIndex)) + FirstMoment * (1.0 / FrameIndex);
+    float NewSecondMomentColour = imageLoad(AccumulatedSecondMoment, PixelCoords).r * (1.0 - (1.0 / FrameIndex)) + SecondMoment * (1.0 / FrameIndex);
+
+    imageStore(AccumulatedFirstMoment, PixelCoords, vec4(NewFirstMomentColour, 0.0, 0.0, 1.0));
+    imageStore(AccumulatedSecondMoment, PixelCoords, vec4(NewSecondMomentColour, 0.0, 0.0, 1.0));
+}

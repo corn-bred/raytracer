@@ -399,6 +399,16 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
+    GLuint IntegratedColour;
+    glGenTextures(1, &IntegratedColour);
+
+    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
     ComputeShader RaytraceShader("shader/raytrace.comp");
 
     // PASS 4: ACCUMULATION PASS
@@ -407,16 +417,16 @@ int main () {
     glGenFramebuffers(1, &AccumFBO);
     glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
 
-    GLuint IntegratedColour;
+    GLuint DisplayOutput;
 
-    glGenTextures(1, &IntegratedColour);
-    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+    glGenTextures(1, &DisplayOutput);
+    glBindTexture(GL_TEXTURE_2D, DisplayOutput);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, IntegratedColour, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, DisplayOutput, 0);
 
     GLenum AccumBufferAttachments[1] = {GL_COLOR_ATTACHMENT0};
     glDrawBuffers(1, AccumBufferAttachments);
@@ -430,9 +440,35 @@ int main () {
 
     Shader AccumShader("shader/accumulation.vert", "shader/accumulation.frag");
 
+    // PASS 4.5: MOMENT ACCUMULATION
+    
+    ComputeShader MomentsShader("shader/moments.comp");
+
+    GLuint AccumulatedFirstMoment, AccumulatedSecondMoment;
+
+    glGenTextures(1, &AccumulatedFirstMoment);
+    glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glGenTextures(1, &AccumulatedSecondMoment);
+    glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
     // PASS 5: DENOISING (using Spatiotemporal Variance-Guided Filtering)
 
-    ComputeShader SVGFShader("shader/svgf.comp");
+    //ComputeShader SVGFShader("shader/svgf.comp");
 
     GLuint PostDenoisingOutput;
 
@@ -779,6 +815,7 @@ int main () {
         RaytraceShader.bind();
 
         glBindImageTexture(0, RaytraceShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+        glBindImageTexture(1, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         RaytraceShader.setInt("Width", WIDTH);
         RaytraceShader.setInt("Height", HEIGHT);
@@ -842,6 +879,21 @@ int main () {
 
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
+        //Pass 4.5
+
+        MomentsShader.bind();
+        
+        glBindImageTexture(0, AccumulatedFirstMoment, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+        glBindImageTexture(1, AccumulatedSecondMoment, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        MomentsShader.setInt("IntegratedColour", 0);
+
+        MomentsShader.setInt("FrameIndex", FrameIndex);
+
+        MomentsShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
+
         //Final pass
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -851,8 +903,8 @@ int main () {
         OutputShader.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
-        OutputShader.setInt("IntegratedColour", 0);
+        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+        OutputShader.setInt("DisplayOutput", 0);
 
         BufferQuad.bind();
 
