@@ -488,6 +488,24 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
+    GLuint VarianceA, VarianceB; //one will be reading, one will be for writing
+
+    glGenTextures(1, &VarianceA);
+    glBindTexture(GL_TEXTURE_2D, VarianceA);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glGenTextures(1, &VarianceB);
+    glBindTexture(GL_TEXTURE_2D, VarianceB);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
     glBindTexture(GL_TEXTURE_2D, 0);
 
     // FINAL PASS: DISPLAY PASS
@@ -905,6 +923,7 @@ int main () {
         //Pass 5
 
         GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
+        GLuint InputVariance(0), OutputVariance(VarianceB);
 
         SVGFShader.bind();
 
@@ -941,21 +960,29 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 3;
+        int iterationNum = 5;
         for (int iteration = 0; iteration < iterationNum; iteration++) {
 
             SVGFShader.setInt("Iteration", iteration);
 
             glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+            glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
             glActiveTexture(GL_TEXTURE3);
             glBindTexture(GL_TEXTURE_2D, InputAtrous);
             SVGFShader.setInt("IntegratedColour", 3);
 
+            glActiveTexture(GL_TEXTURE8);
+            glBindTexture(GL_TEXTURE_2D, InputVariance);
+            SVGFShader.setInt("prevIterationVariance", 8);
+
             SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
 
             InputAtrous = OutputAtrous;
             OutputAtrous = (OutputAtrous == AtrousA)? AtrousB : AtrousA;
+
+            InputVariance = OutputVariance;
+            OutputVariance = (OutputVariance == VarianceA)? VarianceB : VarianceA;
         }        
 
         //Final pass
@@ -967,7 +994,7 @@ int main () {
         OutputShader.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, OutputAtrous);
+        glBindTexture(GL_TEXTURE_2D, InputAtrous);
         OutputShader.setInt("DisplayOutput", 0);
 
         BufferQuad.bind();

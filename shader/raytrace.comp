@@ -553,5 +553,5 @@ void main () {
         AccumulatedColour = NewSample;
     }
     imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
-    imageStore(IntegratedColour, PixelCoords, vec4(PixelColour, 1.0));
+    imageStore(IntegratedColour, PixelCoords, vec4(AccumulatedColour, 1.0));
 }
