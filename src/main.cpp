@@ -470,10 +470,18 @@ int main () {
 
     ComputeShader SVGFShader("shader/svgf.comp");
 
-    GLuint PostDenoisingOutput;
+    GLuint AtrousA, AtrousB; //one will be reading, one will be for writing
 
-    glGenTextures(1, &PostDenoisingOutput);
-    glBindTexture(GL_TEXTURE_2D, PostDenoisingOutput);
+    glGenTextures(1, &AtrousA);
+    glBindTexture(GL_TEXTURE_2D, AtrousA);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glGenTextures(1, &AtrousB);
+    glBindTexture(GL_TEXTURE_2D, AtrousB);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -896,10 +904,10 @@ int main () {
 
         //Pass 5
 
+        GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
+
         SVGFShader.bind();
 
-        glBindImageTexture(0, PostDenoisingOutput, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-        
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, gDepth);
         SVGFShader.setInt("gDepth", 0);
@@ -911,10 +919,6 @@ int main () {
         glActiveTexture(GL_TEXTURE2);
         glBindTexture(GL_TEXTURE_2D, gMotion);
         SVGFShader.setInt("gMotion", 2);
-
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
-        SVGFShader.setInt("IntegratedColour", 3);
 
         glActiveTexture(GL_TEXTURE4);
         glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
@@ -937,8 +941,22 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
-        
+        int iterationNum = 3;
+        for (int iteration = 0; iteration < iterationNum; iteration++) {
+
+            SVGFShader.setInt("Iteration", iteration);
+
+            glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+
+            glActiveTexture(GL_TEXTURE3);
+            glBindTexture(GL_TEXTURE_2D, InputAtrous);
+            SVGFShader.setInt("IntegratedColour", 3);
+
+            SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
+
+            InputAtrous = OutputAtrous;
+            OutputAtrous = (OutputAtrous == AtrousA)? AtrousB : AtrousA;
+        }        
 
         //Final pass
 
@@ -949,7 +967,7 @@ int main () {
         OutputShader.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, PostDenoisingOutput);
+        glBindTexture(GL_TEXTURE_2D, OutputAtrous);
         OutputShader.setInt("DisplayOutput", 0);
 
         BufferQuad.bind();
