@@ -3,6 +3,7 @@
 layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D PostDenoisingOutput;
+layout(r32f, binding = 1) uniform image2D VarianceOutput;
 
 uniform sampler2D gDepth;
 uniform sampler2D gNormal;
@@ -14,10 +15,12 @@ uniform sampler2D prevFirstMoment;
 uniform sampler2D prevSecondMoment;
 uniform sampler2D prevDepth;
 uniform sampler2D prevNormal;
+uniform sampler2D prevIterationVariance;
 
 uniform int FrameIndex;
 uniform int Width;
 uniform int Height;
+uniform int Iterations;
 
 const vec3 HumanLightSens = vec3(0.2126, 0.7152, 0.0722);
 const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
@@ -65,6 +68,12 @@ float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
     return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring);
 }
 
+float hKernel2D(ivec2 offset) {
+    float hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
+    if ((abs(offset.x) > 2) || (abs(offset.y) > 2)) return 0;
+    return hKernel[offset.x + 2] * hKernel[offset.y + 2];
+}
+
 void main() {
     // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
     int LuminanceValuesLength = 0;
@@ -76,10 +85,11 @@ void main() {
     }
 
     int LuminanceValuesCentrePixel = 0;
+    int StepSize = pow(2, Iterations);
 
     for (int x = -3; x <= 3; x++) {
         for(int y = -3; y <= 3; y++) {
-            ivec2 WriteCoords = PixelCoords + ivec2(x, y);
+            ivec2 WriteCoords = PixelCoords + ivec2(x * StepSize, y * StepSize);
 
             if (x == 0 && y == 0) LuminanceValuesCentrePixel = LuminanceValuesLength;
             
@@ -105,9 +115,23 @@ void main() {
 
     Variance = varianceTopVal / max(varianceBottomVal, epsilon); //no divide by 0
 
-    hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
+    imageStore(VarianceOutput, PixelCoords, vec4(Variance, 0.0, 0.0, 1.0));
 
-    imageStore(PostDenoisingOutput, PixelCoords, vec4(vec3(Variance), 1.0));
+    vec3 Output;
+
+    vec3 outputTopVal;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        outputTopVal += vec3(hKernel2D( (LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i])) * texelFetch(IntegratedColour, LuminanceCoords[i], 0).rgb;
+    }
+
+    vec3 outputBottomVal;
+    for (int i = 0; i < LuminanceValuesLength; i++) {
+        outputBottomVal += vec3(hKernel2D( (LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]));
+    }
+
+    Output = outputTopVal / outputBottomVal * Variance;
+
+    imageStore(PostDenoisingOutput, PixelCoords, vec4(vec3(Output), 1.0));
 
     //fallback, work on later
     /*float LuminanceAverage = 0.0;
