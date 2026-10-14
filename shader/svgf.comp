@@ -38,12 +38,31 @@ float LuminanceVariance(ivec2 point) { //ADD MOTION TO HERE
     return max(texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0), 0);
 }
 
-float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
+const float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
+float Variance = 0.0;
 
 vec2 nablaW(ivec2 point) { //describes the average change in depth
     float HorizontalChange = (texelFetch(gDepth, point + ivec2(1, 0), 0).r - texelFetch(gDepth, point + ivec2(-1, 0), 0).r) * 0.5;
     float VerticalChange = (texelFetch(gDepth, point + ivec2(0, 1), 0).r - texelFetch(gDepth, point + ivec2(0, -1), 0).r) * 0.5;
     return vec2(HorizontalChange, VerticalChange);
+}
+float hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
+float hKernel2D(ivec2 offset) {
+    if ((abs(offset.x) > 2) || (abs(offset.y) > 2)) return 0;
+    return hKernel[offset.x + 2] * hKernel[offset.y + 2];
+}
+
+float gaussKernel[3][3] = {{0.0625, 0.125, 0.0625}, {0.125, 0.25, 0.125}, {0.0625, 0.125, 0.0625}};
+float GaussianVariance(ivec2 pixel) { //fix
+    float Output = 0.0;
+    if (Iterations == 1) {
+        for (int x = -1; x <= 1; x++) {
+            for (int y = -1; y <= 1; y++) {
+                Output += LuminanceVariance(pixel + ivec2(x, y));
+            }
+        }
+    }
+    return Output;
 }
 
 //all w_ functions return a float 0-1, from 1 being agreeing to 0 being not agreeing at all
@@ -55,23 +74,18 @@ float w_z(ivec2 centre, ivec2 neighbouring) { //depth similarity, defined in equ
 }
 
 float w_n(ivec2 centre, ivec2 neighbouring) { //normal similarity, defined in equation 4
-    return max( 0, dot( normalize(texelFetch(gNormal, centre, 0).xyz), normalize(texelFetch(gNormal, neighbouring, 0).xyz) ) );
+    return pow(max( 0.0, dot( normalize(texelFetch(gNormal, centre, 0).xyz), normalize(texelFetch(gNormal, neighbouring, 0).xyz) ) ), sigma_n);
 }
 
 float w_l(ivec2 centre, ivec2 neighbouring) { //luminance similarity, defined in equation 5
+    //this is incorrect, fix later
     float topVal = abs(AverageLuminance(centre) - AverageLuminance(neighbouring));
-    float bottomVal = sigma_l * sqrt( min(LuminanceVariance(centre), LuminanceVariance(neighbouring)) ) + epsilon;
+    float bottomVal = sigma_l * sqrt(GaussianVariance(centre)) + epsilon;
     return exp(-(topVal / bottomVal));
 }
 
 float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
     return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring);
-}
-
-float hKernel2D(ivec2 offset) {
-    float hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
-    if ((abs(offset.x) > 2) || (abs(offset.y) > 2)) return 0;
-    return hKernel[offset.x + 2] * hKernel[offset.y + 2];
 }
 
 void main() {
@@ -105,7 +119,7 @@ void main() {
         }
     }
 
-    float Variance = 0.0;
+    //Variance calculation
     
     if (Iterations == 0) {
         float varianceTopVal = 0.0;
@@ -153,15 +167,5 @@ void main() {
     imageStore(PostDenoisingOutput, PixelCoords, vec4(vec3(Output), 1.0));
 
     //fallback, work on later
-    /*float LuminanceAverage = 0.0;
-    for (int i = 0; i < LuminanceValuesLength; i++) {
-        LuminanceAverage += LuminanceValues[i];
-    }
-    LuminanceAverage /= LuminanceValuesLength;
-
-    float Variance = 0.0;
-    for (int i = 0; i < LuminanceValuesLength; i++) {
-        Variance += pow(LuminanceValues[i] - LuminanceAverage, 2.0);
-    }
-    Variance /= LuminanceValuesLength;*/
+    /**/
 }
