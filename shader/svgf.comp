@@ -35,7 +35,7 @@ float AverageLuminance(ivec2 point) { //ADD MOTION TO HERE
 }
 
 float LuminanceVariance(ivec2 point) { //ADD MOTION TO HERE
-    return max(texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0), 0);
+    return texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0);
 }
 
 const float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
@@ -46,9 +46,10 @@ vec2 nablaW(ivec2 point) { //describes the average change in depth
     float VerticalChange = (texelFetch(gDepth, point + ivec2(0, 1), 0).r - texelFetch(gDepth, point + ivec2(0, -1), 0).r) * 0.5;
     return vec2(HorizontalChange, VerticalChange);
 }
+
 float hKernel[5] = {0.0625, 0.25, 0.375, 0.25, 0.0625};
 float hKernel2D(ivec2 offset) {
-    if ((abs(offset.x) > 2) || (abs(offset.y) > 2)) return 0;
+    if ((abs(offset.x) > 2) || (abs(offset.y) > 2)) return 0.0;
     return hKernel[offset.x + 2] * hKernel[offset.y + 2];
 }
 
@@ -136,12 +137,12 @@ void main() {
     } else {
         float varianceTopVal = 0.0;
         for (int i = 0; i < LuminanceValuesLength; i++) {
-            varianceTopVal = pow(hKernel2D(LuminanceCoords[i]), 2.0) * pow(FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0) * texelFetch(prevIterationVariance, PixelCoords, 0).r;
+            varianceTopVal = pow(hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ), 2.0) * pow(FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0) * texelFetch(prevIterationVariance, LuminanceCoords[i], 0).r;
         }
 
         float varianceBottomVal = 0.0;
         for (int i = 0; i < LuminanceValuesLength; i++) {
-            varianceBottomVal += hKernel2D(LuminanceCoords[i]) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]);
+            varianceBottomVal += hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]);
         }
         varianceBottomVal = pow(varianceBottomVal, 2.0);
 
@@ -151,18 +152,15 @@ void main() {
 
     vec3 Output;
 
-    vec3 outputTopVal;
+    vec3 outputTopVal = vec3(0.0);
+    vec3 outputBottomVal = vec3(0.0);
     for (int i = 0; i < LuminanceValuesLength; i++) {
-        float Multipliers = (hKernel2D( (LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]));
-        outputTopVal += vec3(Multipliers) * texelFetch(IntegratedColour, LuminanceCoords[i], 0).rgb;
+        vec3 weight = vec3(hKernel2D( (LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]));
+        outputTopVal += texelFetch(IntegratedColour, LuminanceCoords[i], 0).rgb * weight;
+        outputBottomVal += weight;
     }
 
-    float outputBottomVal;
-    for (int i = 0; i < LuminanceValuesLength; i++) {
-        outputBottomVal += (hKernel2D( (LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]));
-    }
-
-    Output = outputTopVal / vec3(max(outputBottomVal, epsilon));
+    Output = outputTopVal / max(outputBottomVal, vec3(epsilon));
 
     imageStore(PostDenoisingOutput, PixelCoords, vec4(vec3(Output), 1.0));
 
