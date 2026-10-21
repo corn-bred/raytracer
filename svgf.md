@@ -39,4 +39,21 @@ Previous depth of each pixel. This is given as an input to compare between the i
 5. Mesh ID
 The previous mesh ID of each pixel. This is given as an input to compare between the input and output to see if TAA can be applied.
 ### Temporal Accumulation
-The filter first temporally accumulates the colour texture and the moment textures. In figure 3, the textures I'm referring to are the Moments History and the Colour History textures. 
+The filter first temporally accumulates the colour texture and the moment textures. In figure 3, the textures I'm referring to are the Moments History and the Colour History textures. After integration, the moment textures get outputted back into the previous frame data. The integrated colour texture does not.
+
+The equation for accumulation is an exponential moving average. The equation is as follows:
+
+$$C'_i = \alpha \cdot C_i + (1 - \alpha) \cdot C'_{i-1}$$
+
+Where $\alpha$ is the control of the temporal fade, $C'_i$ is the integrated colour at the current frame $i$, and $C_i$ being the current frame data colour at frame $i$. The paper states $\alpha = 0.2$ works best.
+#### Tapping
+I don't fully understand how this works yet, so don't follow my word.
+
+Each pixel tests a 2x2 region around it (I don't know which pixels it is) and tests the depth, normals, and mesh IDs from the previous frame. This test is for a dissoclussion, where a pixel which has been occluded by another pixel and now has been unoccluded from camera movement. This is so the filter doesn't blur a completely different pixel from another one.
+### Variance estimation
+What SVGF uses is luminance variance estimation inside one of its weight factors. This affects the a-trous wavelet filter. 
+
+We will represent the first and second non-accumulated moments as $\mu_1$ and $\mu_2$, and the accumulated moments will be $\mu'_1$ and $\mu'_2$.
+
+Calculation of temporal variance, which is represented as $\sigma'^2_i$ is very simple, and the equation is as follows:
+$$\sigma'^2_i = \mu'_{2_i} - \mu'^2_{1_i}$$
