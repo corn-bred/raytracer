@@ -71,9 +71,11 @@ $$w_i(p, q) = w_z \cdot w_n \cdot w_l$$
 $w_z$, $w_n$, and $w_l$ will be talked about later on.
 
 A-trous filtering is used in the main equation that finds the output colour of the iteration. The equation is defined as followed:
+
 $$\hat{c}_{i+1}(p) = \frac
 {\sum_{q\in\Omega} h(q) \cdot w(p, q) \cdot \hat{c}_i(q)}
 {\sum_{q\in\Omega} h(q) \cdot w(p, q)}$$
+
 Where $\hat{c}_i(p)$ is the iteration colour, $\hat{c}_{i+1}(p)$ is the next iteration's colour, $\Omega$ being the gathered filter footprint which changes on the iteration (I think), and $h$ being a kernel which is defined as ${h = ( \frac{1}{16} , \frac{1}{4}, \frac{3}{8}, \frac{1}{4}, \frac{1}{16})}$. $p$ is the centre pixel and $q$ is a neighbouring pixel.
 #### Tuning the Function
 I don't understand this yet or why it's used, so I won't say anything for now.
