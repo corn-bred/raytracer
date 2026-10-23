@@ -82,7 +82,7 @@ I don't understand this yet or why it's used, so I won't say anything for now.
 #### Edge stopping function definitions
 We will use 3 weight functions which use depth, normal, and luminance respective to the order $w_i(p, q)$ was defined in.
 
-We will use 3 parameters which will tune the final output of the weight. These will be constant and set by the programmer, only to be used for debugging and looking for the best output. These functions are $\sigma_z$, $\sigma_n$, and $\sigma_l$.
+We will use 3 parameters which will tune the final output of the weight. These will be constant and set by the programmer, only to be used for debugging and looking for the best output. These functions are $\sigma_z$, $\sigma_n$, and $\sigma_l$. These parameters are $\sigma_z = 1$, $\sigma_n = 128$, and $\sigma_l = 4$.
 ##### Depth Weight
 The function is defined as:
 
@@ -102,4 +102,4 @@ The function is defined as:
 
 $$w_l = \mathrm{exp}(-\frac{|l_i(p) - l_i(q)|}{\sigma_l \sqrt{g_{\mathrm{3x3}}(\mathrm{Var}(l_i(p))) + \epsilon}})$$
 
-Where $l_i(p)$ is the luminance of a point, $Var(l_i(p))$ is the luminance variance of a point, and $g_{\mathrm{3x3}}$ blurs it.
+Where $l_i(p)$ is the luminance of a point, $Var(l_i(p))$ is the luminance variance of a point, and $g_{\mathrm{3x3}}$ blurs it. $\epsilon$ is, again, used to ensure division by 0 will not happen.
