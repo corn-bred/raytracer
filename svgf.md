@@ -78,7 +78,17 @@ $$\hat{c}_{i+1}(p) = \frac
 
 Where $\hat{c}_i(p)$ is the iteration colour, $\hat{c}_{i+1}(p)$ is the next iteration's colour, $\Omega$ being the gathered filter footprint which changes on the iteration (I think), and $h$ being a kernel which is defined as ${h = ( \frac{1}{16} , \frac{1}{4}, \frac{3}{8}, \frac{1}{4}, \frac{1}{16})}$. $p$ is the centre pixel and $q$ is a neighbouring pixel.
 #### Tuning the Function
-I don't understand this yet or why it's used, so I won't say anything for now.
+What tuning the function means is essentially outputting the variance for the next iteration to use, so therefore it's tuning it. However, what it's outputting is not the luminance variance. What it's talking about is the **propagated variance**.
+
+Propagated variance calculation is similar to how the final colour of the iteration is calculated. The equation is defined as followed:
+
+$$\mathrm{Var}(\hat{c}_{i+1}(p)) = \frac
+{\sum_{q\in\Omega} h(q)^2 \cdot w(p, q)^2 \cdot \mathrm{Var}(\hat{c}_i(q))}
+{(\sum_{q\in\Omega} h(q) \cdot w(p, q))^2}$$
+
+Where $\mathrm{Var}(\hat{c}_i(p))$ is the propagated variance of an output colour at point $p$.
+
+Propagated variance is calculated for the next iteration because of a few reasons. First of all, it optimizes luminance variance calculation ($\sigma'^2_i = \mu'_{2_i} - \mu'^2_{1_i}$), and it's much more correct than the luminance variance estimate.
 #### Edge stopping function definitions
 We will use 3 weight functions which use depth, normal, and luminance respective to the order $w_i(p, q)$ was defined in.
 
