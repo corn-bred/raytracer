@@ -57,12 +57,20 @@ We will represent the first and second non-accumulated moments as $\mu_1$ and $\
 
 Calculation of temporal variance, which is represented as $\sigma'^2_i$ is very simple, and the equation is as follows:
 $$\sigma'^2_i = \mu'_{2_i} - \mu'^2_{1_i}$$
+This will also be represented as the function: $\mathrm{Var}(\hat{c}(p))$.
 #### Insufficient Data for Variance Estimation
 I also don't fully understand how this works.
 
-When a pixel gets disoccluded, it doesn't have enough moment data to make a good luminance variance estimation. To solve this, we use a different spatial approach to finding the luminance, which uses a 7x7 bilateral filter and uses depth and normals. **I don't know how they use these to calculate variance**
+When a pixel gets disoccluded, it doesn't have enough moment data to make a good luminance variance estimation. To solve this, we use a different spatial approach to finding the luminance, which uses a 7x7 bilateral filter.
 
 How we can choose this estimate versus the more accurate and faster equation is by checking if a pixel has been temporally accumulated for at least 4 frames. If not, use this fallback.
+
+What the paper is implicitly telling you to do is to spatially weighted average a 7x7 pixel grid around you. The weight will be calculated by the edge-avoiding function. I will call this function $\mathrm{Var}_{\mathrm{spatial}}(p)$. Therefore, the equation for a pixel should be the following:
+
+$$\mathrm{Var}_{\mathrm{spatial}}(p) = \frac{\sum_{q\in N_{7x7}}w(p,q) \cdot \mathrm{Var}(\hat{c}(q))}{\sum_{q\in N_{7x7}}w(p,q)}$$
+
+Which is just how a weighted average is implemented.
+
 ### Edge-Avoiding A-Trous Wavelet Transform
 One of the main ideas in this filter is that it goes through multiple variations, with $2^i$ spacing for certain kernels (that's just a-trous filtering), where $i$ is the iteration number.
 
