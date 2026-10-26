@@ -142,9 +142,8 @@ void main() {
 
         float varianceBottomVal = 0.0;
         for (int i = 0; i < LuminanceValuesLength; i++) {
-            varianceBottomVal += hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]);
+            varianceBottomVal += pow(hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0);
         }
-        varianceBottomVal = pow(varianceBottomVal, 2.0);
 
         Variance = varianceTopVal / max(varianceBottomVal, epsilon);
     }

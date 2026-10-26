@@ -47,7 +47,7 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 300;
+unsigned int WIDTH = 1200;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
@@ -696,12 +696,12 @@ int main () {
         processInput(window, CameraMain);
         FrameIndex++;
 
-        if (FrameIndex == 1) {
+        /*if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
             glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
             glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
             glBindTexture(GL_TEXTURE_2D, 0);
-        }
+        }*/
 
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;

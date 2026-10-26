@@ -545,11 +545,12 @@ void main () {
 
     vec3 NewSample = PixelColour;
 
-    float TotalSamples = float(FrameIndex + 1);
-    vec3 AccumulatedColour = (PreviousSample * float(FrameIndex) + NewSample) / TotalSamples;
+    float alpha = 0.2;
 
-    if (FrameIndex == 1) {
+    vec3 AccumulatedColour = alpha * NewSample + (1.0 - alpha) * PreviousSample;
+
+    /*if (FrameIndex == 1) {
         AccumulatedColour = NewSample;
-    }
+    }*/
     imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
 }

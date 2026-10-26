@@ -25,8 +25,10 @@ void main () {
     float FirstMoment = Luminance;
     float SecondMoment = pow(Luminance, 2.0);
 
-    float NewFirstMomentColour = imageLoad(AccumulatedFirstMoment, PixelCoords).r * (1.0 - (1.0 / FrameIndex)) + FirstMoment * (1.0 / FrameIndex);
-    float NewSecondMomentColour = imageLoad(AccumulatedSecondMoment, PixelCoords).r * (1.0 - (1.0 / FrameIndex)) + SecondMoment * (1.0 / FrameIndex);
+    float alpha = 0.2;
+
+    float NewFirstMomentColour = alpha * FirstMoment + (1.0 - alpha) * imageLoad(AccumulatedFirstMoment, PixelCoords).r;
+    float NewSecondMomentColour = alpha * SecondMoment + (1.0 - alpha) * imageLoad(AccumulatedSecondMoment, PixelCoords).r;
 
     imageStore(AccumulatedFirstMoment, PixelCoords, vec4(NewFirstMomentColour, 0.0, 0.0, 1.0));
     imageStore(AccumulatedSecondMoment, PixelCoords, vec4(NewSecondMomentColour, 0.0, 0.0, 1.0));
