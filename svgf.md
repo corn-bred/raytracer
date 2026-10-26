@@ -49,7 +49,31 @@ Where $\alpha$ is the control of the temporal fade, $C'_i$ is the integrated col
 #### Disocclusion Event Handling
 I don't fully understand how this works yet, so don't follow my word.
 
-Each pixel tests a 2x2 region around it (I don't know which pixels it is) and tests the depth, normals, and mesh IDs from the previous frame. This test is for a dissoclussion, where a pixel which has been occluded by another pixel and now has been unoccluded from camera movement. This is so the filter doesn't blur a completely different pixel from another one.
+Each pixel tests a 2x2 region around it (I don't know which pixels it is) and tests the depth, normals, and mesh IDs from the previous frame. This test is for a dissoclussion, where a pixel which has been occluded by another pixel and now has been unoccluded from camera movement. This is so the filter doesn't blur a completely different pixel from another one. They check the depth, normal, and mesh ID versus the prior frames' corresponding data. How they do it is by testing different thresholds of each test. In the case where a test fails, it will be considered a recently disoccluded pixel.
+
+The thresholds will be represented as $\tau_n$ and $\tau_z$. Also, whenever handling a prior frame pixel, I will be representing the new 2D vector motion update pixel as $p_{i-1}$.
+
+##### Normal test
+
+The test is defined as the following:
+
+$$n_i(p) \cdot n_{i-1}(p_{i-1}) > \tau_n$$
+
+Where $\tau_n$ can be from 1 to -1.
+
+##### Depth test
+
+The test is defined as the following:
+
+$$|z_i(p) - z_{i-1}(p_{i-1})| < \tau_z$$
+
+Where $\tau_z$ can be from 0 to 1.
+
+##### Mesh ID test
+
+The test doesn't have a boolean equation, and it just checks if the current pixel's mesh ID equals to the prior mesh ID pixel.
+
+If all of these tests pass, it is allowed to use the regular luminance variance equation. If it doesn't, it advances to a 3x3 tap filter **which I didn't learn about yet**.
 ### Variance Estimation
 What SVGF uses is luminance variance estimation inside one of its weight factors. This affects the a-trous wavelet filter. 
 
