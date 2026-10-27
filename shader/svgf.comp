@@ -61,11 +61,9 @@ float hKernel2D(ivec2 offset) {
 float gaussKernel[3][3] = {{0.0625, 0.125, 0.0625}, {0.125, 0.25, 0.125}, {0.0625, 0.125, 0.0625}};
 float GaussianVariance(ivec2 pixel) { //fix
     float Output = 0.0;
-    if (Iterations == 1) {
-        for (int x = -1; x <= 1; x++) {
-            for (int y = -1; y <= 1; y++) {
-                Output += LuminanceVariance(pixel + ivec2(x, y));
-            }
+    for (int x = -1; x <= 1; x++) {
+        for (int y = -1; y <= 1; y++) {
+            Output += LuminanceVariance(pixel + ivec2(x, y));
         }
     }
     return Output;
@@ -146,13 +144,14 @@ void main() {
     } else {
         float varianceTopVal = 0.0;
         for (int i = 0; i < LuminanceValuesLength; i++) {
-            varianceTopVal = pow(hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ), 2.0) * pow(FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0) * texelFetch(prevIterationVariance, LuminanceCoords[i], 0).r;
+            varianceTopVal += pow(hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ), 2.0) * pow(FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0) * texelFetch(prevIterationVariance, LuminanceCoords[i], 0).r;
         }
 
         float varianceBottomVal = 0.0;
         for (int i = 0; i < LuminanceValuesLength; i++) {
-            varianceBottomVal += pow(hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]), 2.0);
+            varianceBottomVal += hKernel2D((LuminanceCoords[i] - LuminanceCoords[LuminanceValuesCentrePixel]) / StepSize ) * FindWeight(LuminanceCoords[LuminanceValuesCentrePixel], LuminanceCoords[i]);
         }
+        varianceBottomVal = pow(varianceBottomVal, 2.0);
 
         Variance = varianceTopVal / max(varianceBottomVal, epsilon);
     }
