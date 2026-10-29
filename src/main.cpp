@@ -47,7 +47,7 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 300;
+unsigned int WIDTH = 600;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
@@ -492,7 +492,7 @@ int main () {
 
     glGenTextures(1, &VarianceA);
     glBindTexture(GL_TEXTURE_2D, VarianceA);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -500,7 +500,7 @@ int main () {
 
     glGenTextures(1, &VarianceB);
     glBindTexture(GL_TEXTURE_2D, VarianceB);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -582,7 +582,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/cube.obj");
+    Model model("assets/backpack2.obj");
 
     Triangle tempTri;
     
@@ -960,13 +960,13 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 6;
+        int iterationNum = 5;
         for (int iteration = 0; iteration < iterationNum; iteration++) {
 
-            SVGFShader.setInt("Iteration", iteration);
+            SVGFShader.setInt("Iterations", iteration);
 
             glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-            glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+            glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
 
             glActiveTexture(GL_TEXTURE3);
             glBindTexture(GL_TEXTURE_2D, InputAtrous);
