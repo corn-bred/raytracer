@@ -96,6 +96,34 @@ vec3 Weights(ivec2 centre, ivec2 neighbouring) {
     return vec3(w_n(centre, neighbouring), w_z(centre, neighbouring), w_l(centre, neighbouring));
 }
 
+ivec2 FindPriorFramePix(ivec2 pixel) {
+    vec2 MotionVec = texelFetch(gMotion, pixel, 0).xy;
+    ivec2 MotionVecPixCoord = ivec2(float(MotionVec.x) * float(Width), -(float(MotionVec.y) * float(Height)));
+    ivec2 PriorPixCoord = pixel - MotionVecPixCoord;
+    return PriorPixCoord;
+}
+
+bool tap_n(ivec2 pixel, float threshold) {
+    vec3 CurrNormal = texelFetch(gNormal, pixel, 0).xyz;
+    vec3 PriorNormal = texelFetch(prevNormal, FindPriorFramePix(pixel), 0).xyz;
+    return (dot(CurrNormal, PriorNormal) > threshold);
+}
+
+bool tap_d(ivec2 pixel, float threshold) {
+    float CurrDepth = texelFetch(gDepth, pixel, 0).x;
+    float PriorDepth = texelFetch(prevDepth, FindPriorFramePix(pixel), 0).x;
+    return (abs(CurrDepth - PriorDepth) < threshold);
+}
+
+bool TapTest(ivec2 centre) {
+    ivec2 taps[4] = {centre + ivec2(1, 1), centre + ivec2(1, 1), centre + ivec2(1, 1), centre + ivec2(1, 1)};
+    for (int i = 0; i < 4; i++) {
+        if (taps[i].x < 0 || taps[i].x >= Width || taps[i].y < 0 || taps[i].y >= Height) continue;
+
+        if (!(tap_n(taps[i]) && tap_d(taps[i]))) return false;
+    }
+}
+
 void main() {
     // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
     int LuminanceValuesLength = 0;
