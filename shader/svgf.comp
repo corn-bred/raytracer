@@ -120,8 +120,9 @@ bool TapTest(ivec2 centre) {
     for (int i = 0; i < 4; i++) {
         if (taps[i].x < 0 || taps[i].x >= Width || taps[i].y < 0 || taps[i].y >= Height) continue;
 
-        if (!(tap_n(taps[i]) && tap_d(taps[i]))) return false;
+        if (!(tap_n(taps[i], 0.9) && tap_d(taps[i], 0.03))) return false;
     }
+    return true;
 }
 
 void main() {
@@ -199,6 +200,9 @@ void main() {
     }
 
     Output = outputTopVal / max(outputBottomVal, vec3(epsilon));
-
-    imageStore(NextIterationOutput, PixelCoords, vec4(vec3(Output), 1.0));
+    if (!TapTest(LuminanceCoords[LuminanceValuesCentrePixel])) {
+        imageStore(NextIterationOutput, PixelCoords, vec4(vec3(0.0), 1.0));
+    } else {
+        imageStore(NextIterationOutput, PixelCoords, vec4(vec3(Output), 1.0));
+    }
 }
