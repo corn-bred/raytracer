@@ -96,32 +96,90 @@ vec3 Weights(ivec2 centre, ivec2 neighbouring) {
     return vec3(w_n(centre, neighbouring), w_z(centre, neighbouring), w_l(centre, neighbouring));
 }
 
-ivec2 FindPriorFramePix(ivec2 pixel) {
+vec2 FindPriorFramePix(ivec2 pixel) {
     vec2 MotionVec = texelFetch(gMotion, pixel, 0).xy;
-    ivec2 MotionVecPixCoord = ivec2(float(MotionVec.x) * float(Width), -(float(MotionVec.y) * float(Height)));
-    ivec2 PriorPixCoord = pixel - MotionVecPixCoord;
+    vec2 MotionVecPixCoord = vec2(float(MotionVec.x) * float(Width), -(float(MotionVec.y) * float(Height)));
+    vec2 PriorPixCoord = vec2(pixel) - MotionVecPixCoord;
     return PriorPixCoord;
 }
 
 bool tap_n(ivec2 pixel, float threshold) {
     vec3 CurrNormal = texelFetch(gNormal, pixel, 0).xyz;
-    vec3 PriorNormal = texelFetch(prevNormal, FindPriorFramePix(pixel), 0).xyz;
+    vec3 PriorNormal = texelFetch(prevNormal, ivec2(FindPriorFramePix(pixel)), 0).xyz;
     return (dot(CurrNormal, PriorNormal) > threshold);
 }
 
 bool tap_d(ivec2 pixel, float threshold) {
     float CurrDepth = texelFetch(gDepth, pixel, 0).x;
-    float PriorDepth = texelFetch(prevDepth, FindPriorFramePix(pixel), 0).x;
+    float PriorDepth = texelFetch(prevDepth, ivec2(FindPriorFramePix(pixel)), 0).x;
     return (abs(CurrDepth - PriorDepth) < threshold);
 }
 
-bool TapTest(ivec2 centre) {
-    ivec2 taps[4] = {centre + ivec2(1, 1), centre + ivec2(1, 1), centre + ivec2(1, 1), centre + ivec2(1, 1)};
-    for (int i = 0; i < 4; i++) {
-        if (taps[i].x < 0 || taps[i].x >= Width || taps[i].y < 0 || taps[i].y >= Height) continue;
+//i cant believe this
 
-        if (!(tap_n(taps[i], 0.9) && tap_d(taps[i], 0.03))) return false;
+struct Tap {
+    ivec2 Pos;
+    float Weight;
+    bool Passing;
+};
+
+vec3 TapTest(ivec2 centre) {
+    vec2 ReprojPix = FindPriorFramePix(centre);
+    vec2 fracReprojPix = frac(ReprojPix); //less computation??? maybe
+
+    Tap taps[4] = {
+        {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), (1.0 - fracReprojPix.x) * (1.0 - fracReprojPix.y), false},
+        {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), (fracReprojPix.x) * (1.0 - fracReprojPix.y), false},
+        {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), (1.0 - fracReprojPix.x) * (fracReprojPix.y), false},
+        {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), (fracReprojPix.x) * (fracReprojPix.y), false}
     }
+    int Tests = 0;
+
+    for (int i = 0; i < 4; i++) {
+        if (taps[i].Pos.x < 0 || taps[i].Pos.x >= Width || taps[i].Pos.y < 0 || taps[i].Pos.y >= Height) continue;
+        if (!(tap_n(taps[i], 0.9) && tap_d(taps[i], 0.03))) {Tests++; taps[i].Passing == true;}
+    }
+
+    if (Tests != 0) {
+        if (Tests != 4) { //nested condition
+            //renormalize weights
+
+            float validWeight = 0.0;
+            for (int i = 0; i < 4; i++) {
+                if (taps[i].Passing) {
+                    validWeight += taps[i].Weight;
+                }
+            }
+            if (validWeight == 0.0) //edge case edge case do later do later
+
+            float divValidWeight = 1.0 / validWeight;
+            for (int i = 0; i < 4; i++) {
+                if (taps[i].Passing) {
+                    taps[i].Weight *= divValidWeight;
+                }
+            }
+        } else { //if tests all pass
+            //3x3 tap filter to check
+            Tap secondTaps[9] = {
+                
+            }
+            //if pass, 
+        }
+        
+
+        /*vec3 OutputColour = vec3(0.0);
+        for (int i = 0; i < 4; i++) {
+            OutputColour = 
+        } */
+        //..i have to restructure my passes so that integration can be fit in here great
+    } else {
+        //a
+    }
+
+    // if no tests pass do something 
+
+    
+
     return true;
 }
 
@@ -200,9 +258,12 @@ void main() {
     }
 
     Output = outputTopVal / max(outputBottomVal, vec3(epsilon));
-    if (!TapTest(LuminanceCoords[LuminanceValuesCentrePixel])) {
+    
+    /*if (!TapTest(LuminanceCoords[LuminanceValuesCentrePixel])) {
         imageStore(NextIterationOutput, PixelCoords, vec4(vec3(0.0), 1.0));
     } else {
         imageStore(NextIterationOutput, PixelCoords, vec4(vec3(Output), 1.0));
-    }
+    }*/
+
+    imageStore(NextIterationOutput, PixelCoords, vec4(vec3(Output), 1.0));
 }
