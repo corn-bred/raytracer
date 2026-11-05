@@ -181,7 +181,7 @@ vec3 TapTest(ivec2 centre) {
                 if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
                 if (!(tap_n(secondTaps[i], 0.9) && tap_d(secondTaps[i], 0.03))) {Tests++; secondTaps[i].Passing == true;}
             }
-            //if pass, 
+            //if pass, do the same weight thing, if not pass, the prior colour pixel will equal to the current colour pixel
         }
         
 

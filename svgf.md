@@ -49,9 +49,25 @@ Where $\alpha$ is the control of the temporal fade, $C'_i$ is the integrated col
 #### Disocclusion Event Handling
 I don't fully understand how this works yet, so don't follow my word.
 
-Each pixel tests a 2x2 region around it (I don't know which pixels it is) and tests the depth, normals, and mesh IDs from the previous frame. This test is for a dissoclussion, where a pixel which has been occluded by another pixel and now has been unoccluded from camera movement. This is so the filter doesn't blur a completely different pixel from another one. They check the depth, normal, and mesh ID versus the prior frames' corresponding data. How they do it is by testing different thresholds of each test. In the case where a test fails, it will be considered a recently disoccluded pixel.
+Each pixel tests a 2x2 region around it bilinearly and tests the depth, normals, and mesh IDs from the previous frame. This test is for a dissoclussion, where a pixel which has been occluded by another pixel and now has been unoccluded from camera movement. This is so the filter doesn't blur a completely different pixel from another one. They check the depth, normal, and mesh ID versus the prior frames' corresponding data. How they do it is by testing different thresholds of each test. In the case where a test fails, it will be considered a recently disoccluded pixel.
 
-The thresholds will be represented as $\tau_n$ and $\tau_z$. Also, whenever handling a prior frame pixel, I will be representing the new 2D vector motion update pixel as $p_{i-1}$.
+This test is also to adjust the prior accumulation frame via a weighted average. Each tap's weight is calculated differently for each tap.
+
+Let the reprojected subpixel be $p_{i-1}$.
+
+The $(-1, -1)$ equation is:
+$$(1 - \lfloor p_{i-1x} \rfloor) (1 - \lfloor p_{i-1y} \rfloor)$$
+
+The $(+1, -1)$ equation is:
+$$\lfloor p_{i-1x} \rfloor(1 - \lfloor p_{i-1y} \rfloor)$$
+
+The $(-1, +1)$ equation is:
+$$(1 - \lfloor p_{i-1x} \rfloor)\lfloor p_{i-1y} \rfloor$$
+
+The $(+1, +1)$ equation is:
+$$\lfloor p_{i-1x} \rfloor\lfloor p_{i-1y} \rfloor$$
+
+The thresholds will be represented as $\tau_n$ and $\tau_z$.    
 
 ##### Normal test
 
@@ -73,7 +89,9 @@ Where $\tau_z$ can be from 0 to 1.
 
 The test doesn't have a boolean equation, and it just checks if the current pixel's mesh ID equals to the prior mesh ID pixel.
 
-If all of these tests pass, it is allowed to use the regular luminance variance equation. If it doesn't, it advances to a 3x3 tap filter **which I didn't learn about yet**.
+If all of these tests pass, it is allowed to use the regular luminance variance equation. If some passes pass, it renormalizes the total weight of the passing taps to 1 and add the values together to make the new prior colour accumulation texture.
+
+If no taps pass, it advances to a 3x3 tap filter. It essentially does the same thing. If at least 1 passes, it renormalizes and adds the values together, but if none pass, the prior accumulation texture pixel value will equal to the current texture pixel value.
 ### Variance Estimation
 What SVGF uses is luminance variance estimation inside one of its weight factors. This affects the a-trous wavelet filter. 
 
