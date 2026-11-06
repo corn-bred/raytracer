@@ -960,7 +960,7 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 5;
+        int iterationNum = 6;
         for (int iteration = 0; iteration < iterationNum; iteration++) {
 
             SVGFShader.setInt("Iterations", iteration);
@@ -970,7 +970,7 @@ int main () {
 
             glActiveTexture(GL_TEXTURE3);
             glBindTexture(GL_TEXTURE_2D, InputAtrous);
-            SVGFShader.setInt("IntegratedColour", 3);
+            SVGFShader.setInt("InputColour", 3);
 
             glActiveTexture(GL_TEXTURE8);
             glBindTexture(GL_TEXTURE_2D, InputVariance);
