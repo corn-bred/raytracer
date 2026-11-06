@@ -8,14 +8,18 @@ layout(r32f, binding = 1) uniform image2D VarianceOutput;
 uniform sampler2D gDepth;
 uniform sampler2D gNormal;
 uniform sampler2D gMotion;
-uniform sampler2D IntegratedColour;
+uniform sampler2D InputColour;
 uniform sampler2D AccumulatedFirstMoment;
 uniform sampler2D AccumulatedSecondMoment;
-uniform sampler2D prevFirstMoment;
-uniform sampler2D prevSecondMoment;
 uniform sampler2D prevDepth;
 uniform sampler2D prevNormal;
 uniform sampler2D prevIterationVariance;
+
+uniform sampler2D priorColourHistory;
+uniform sampler2D priorFirstMomentHistory;
+uniform sampler2D priorSecondMomentHistory;
+uniform sampler2D currFirstMoment;
+uniform sampler2D currSecondMoment;
 
 uniform int FrameIndex;
 uniform int Width;
@@ -138,7 +142,7 @@ vec3 TapTest(ivec2 centre) {
     for (int i = 0; i < 4; i++) {
         if (taps[i].Pos.x < 0 || taps[i].Pos.x >= Width || taps[i].Pos.y < 0 || taps[i].Pos.y >= Height) continue;
         if (!(tap_n(taps[i], 0.9) && tap_d(taps[i], 0.03))) {Tests++; taps[i].Passing == true;}
-    }
+    }   
 
     if (Tests != 0) {
         if (Tests != 4) { //nested condition
@@ -179,7 +183,28 @@ vec3 TapTest(ivec2 centre) {
             int secondTests = 0;
             for (int i = 0; i < 9; i++) {
                 if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
-                if (!(tap_n(secondTaps[i], 0.9) && tap_d(secondTaps[i], 0.03))) {Tests++; secondTaps[i].Passing == true;}
+                if (!(tap_n(secondTaps[i], 0.9) && tap_d(secondTaps[i], 0.03))) {secondTests++; secondTaps[i].Passing == true;}
+            }
+
+            if (secondTests != 0) {
+                //renormalize weights
+
+                float validWeight = 0.0;
+                for (int i = 0; i < 4; i++) {
+                    if (secondTaps[i].Passing) {
+                        validWeight += secondTaps[i].Weight;
+                    }
+                }
+                if (validWeight == 0.0) //edge case edge case do later do later
+
+                float divValidWeight = 1.0 / validWeight;
+                for (int i = 0; i < 4; i++) {
+                    if (secondTaps[i].Passing) {
+                        secondTaps[i].Weight *= divValidWeight;
+                    }
+                }
+            } else {
+                //do the other prior frame accumulation clear
             }
             //if pass, do the same weight thing, if not pass, the prior colour pixel will equal to the current colour pixel
         }
@@ -202,6 +227,10 @@ vec3 TapTest(ivec2 centre) {
 }
 
 void main() {
+    if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
+        float alpha = 0.2;
+        vec3 AccumulatedColour = alpha * texelFetch() + (1.0 - alpha) * PreviousSample;
+    }
     // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
     int LuminanceValuesLength = 0;
 

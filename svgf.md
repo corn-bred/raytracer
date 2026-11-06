@@ -156,7 +156,6 @@ $$w_n = \mathrm{max}(0, n(p) \cdot n(q))^{\sigma_n}$$
 
 Where $n(p)$ is the normal of a point.
 ##### Luminance Weight
-I don't fully understand this
 
 The function is defined as:
 
