@@ -170,15 +170,15 @@ vec3 TapTest(ivec2 centre) {
             ...
             */
             Tap secondTaps[9] = {
-                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), 0.0, false},
-                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), 0.0, false},
-                {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), 0.0, false},
-                {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), 0.0, false},
-                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), 0.0, false},
-                {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), 0.0, false},
-                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 0.0, false},
-                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), 0.0, false},
-                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), 0.0, false},
+                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)) + epsilon), ReprojPix), false},
+                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ceil(ReprojPix.x), floor(ReprojPix.y))) + epsilon), ReprojPix), false},
+                {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)) + epsilon), ReprojPix), false},
+                {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)) + epsilon), ReprojPix), false},
+                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+                {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1) + epsilon), ReprojPix), false},
+                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1) + epsilon), ReprojPix), false},
+                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)) + epsilon), ReprojPix), false},
             }
             int secondTests = 0;
             for (int i = 0; i < 9; i++) {
