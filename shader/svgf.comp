@@ -4,8 +4,6 @@ layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 layout(rgba32f, binding = 0) uniform image2D NextIterationOutput;
 layout(r32f, binding = 1) uniform image2D VarianceOutput;
-layout(r32f, binding = 2) uniform image2D IntegratedFirstMoment;
-layout(r32f, binding = 2) uniform image2D IntegratedSecondMoment;
 
 uniform sampler2D gDepth;
 uniform sampler2D gNormal;
@@ -18,10 +16,6 @@ uniform sampler2D prevNormal;
 uniform sampler2D prevIterationVariance;
 
 uniform sampler2D priorColourHistory;
-uniform sampler2D priorFirstMomentHistory;
-uniform sampler2D priorSecondMomentHistory;
-uniform sampler2D currFirstMoment;
-uniform sampler2D currSecondMoment;
 
 uniform int FrameIndex;
 uniform int Width;
@@ -234,13 +228,8 @@ void main() {
         vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * texelFetch(priorColourHistory, PixelCoords, 0).rgb;
         //InputColour = Current Colour History
         //priorColourHistory = Prior colour accumulation texture
-        vec3 NextFirstMomentAccumulation = alpha * texelFetch(currFirstMoment, PixelCoords, 0).r + (1.0 - alpha) * texelFetch(priorFirstMomentHistory, PixelCoords, 0).r;
-        vec3 NextSecondMomentAccumulation = alpha * texelFetch(currSecondMoment, PixelCoords, 0).r + (1.0 - alpha) * texelFetch(priorSecondMomentHistory, PixelCoords, 0).r;
         imageStore(NextIterationOutput, PixelCoords, vec4(IntegratedColour, 1.0));
         //NextIterationOutput = Integrated Colour
-        imageStore(IntegratedFirstMoment, PixelCoords, vec4(NextFirstMomentAccumulation, 0.0, 0.0, 1.0));
-        imageStore(IntegratedSecondMoment, PixelCoords, vec4(NextSecondMomentAccumulation, 0.0, 0.0, 1.0));
-        //IntegratedFirstMoment & IntegratedSecondMoment is only used for pass 0.
 
     } else {
         // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)

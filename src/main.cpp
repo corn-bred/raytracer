@@ -922,6 +922,8 @@ int main () {
 
         //Pass 5
 
+        //Prepass (Pass < 0)
+
         GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
         GLuint InputVariance(0), OutputVariance(VarianceB);
 
@@ -960,8 +962,62 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 6;
-        for (int iteration = 0; iteration < iterationNum; iteration++) {
+        SVGFShader.setInt("Iterations", -1);
+
+        glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+        glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+
+        glActiveTexture(GL_TEXTURE3);
+        glBindTexture(GL_TEXTURE_2D, InputAtrous);
+        SVGFShader.setInt("InputColour", 3);
+
+        SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
+
+        InputAtrous = OutputAtrous;
+        OutputAtrous = (OutputAtrous == AtrousA)? AtrousB : AtrousA;
+
+        InputVariance = OutputVariance;
+        OutputVariance = (OutputVariance == VarianceA)? VarianceB : VarianceA;
+        
+        // Main passes
+
+        SVGFShader.bind();
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, gDepth);
+        SVGFShader.setInt("gDepth", 0);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, gNormal);
+        SVGFShader.setInt("gNormal", 1);
+
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, gMotion);
+        SVGFShader.setInt("gMotion", 2);
+
+        glActiveTexture(GL_TEXTURE4);
+        glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
+        SVGFShader.setInt("AccumulatedFirstMoment", 4);
+
+        glActiveTexture(GL_TEXTURE5);
+        glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
+        SVGFShader.setInt("AccumulatedSecondMoment", 5);
+
+        glActiveTexture(GL_TEXTURE6);
+        glBindTexture(GL_TEXTURE_2D, prevDepth);
+        SVGFShader.setInt("prevDepth", 6);
+
+        glActiveTexture(GL_TEXTURE7);
+        glBindTexture(GL_TEXTURE_2D, prevNormal);
+        SVGFShader.setInt("prevNormal", 7);
+
+        SVGFShader.setInt("FrameIndex", FrameIndex);
+
+        SVGFShader.setInt("Width", WIDTH);
+        SVGFShader.setInt("Height", HEIGHT);
+
+        int iterationNum = 5;
+        for (int iteration = 0; iteration <= iterationNum; iteration++) {
 
             SVGFShader.setInt("Iterations", iteration);
 
@@ -983,7 +1039,7 @@ int main () {
 
             InputVariance = OutputVariance;
             OutputVariance = (OutputVariance == VarianceA)? VarianceB : VarianceA;
-        }        
+        }
 
         //Final pass
 

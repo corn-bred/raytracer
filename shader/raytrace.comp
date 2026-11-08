@@ -552,5 +552,5 @@ void main () {
     /*if (FrameIndex == 1) {
         AccumulatedColour = NewSample;
     }*/
-    imageStore(ImageOut, PixelCoords, vec4(AccumulatedColour, 1.0));
+    imageStore(ImageOut, PixelCoords, vec4(NewSample, 1.0));
 }
