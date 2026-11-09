@@ -140,8 +140,8 @@ vec3 TapTest(ivec2 centre) {
         if (!(tap_n(taps[i].Pos, 0.9) && tap_d(taps[i].Pos, 0.03))) {Tests++; taps[i].Passing == true;}
     }   
 
-    if (Tests != 0) {
-        if (Tests != 4) { //nested condition
+    if (Tests != 0) { //if at least 1 tap passes
+        if (Tests != 4) { //& if at least 1 tap fails
             //renormalize weights
 
             float validWeight = 0.0;
@@ -160,31 +160,40 @@ vec3 TapTest(ivec2 centre) {
                     taps[i].Weight /= validWeight;
                 }
             }
-        } else { //if tests all pass
-            //3x3 tap filter to check
-            /*
-            ...
-            ...
-            ...
-            */
-            Tap secondTaps[9] = {
-                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-                {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-                {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-                {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-                {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-                {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-                {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            };
-            int secondTests = 0;
-            for (int i = 0; i < 9; i++) {
-                if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
-                if (!(tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03))) {secondTests++; secondTaps[i].Passing == true;}
-            }
+        }
+        
+        //accumulation
+        vec3 OutputColour = vec3(0.0);
+        for (int i = 0; i < 4; i++) {
+            OutputColour += texelFetch(priorColourHistory, taps[i].Pos, 0).rgb * taps[i].Weight;
+        }
+        return OutputColour;
+    } else { //if all 2x2 taps fail
+        //3x3 tap filter to check
+        /*
+        ...
+        ...
+        ...
+        */
+        Tap secondTaps[9] = {
+            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+        };
+        int secondTests = 0;
+        for (int i = 0; i < 9; i++) {
+            if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
+            if (!(tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03))) {secondTests++; secondTaps[i].Passing == true;}            
+        }
 
-            if (secondTests != 0) {
+        if (secondTests != 0) { //if at least 1 tap passes
+            if (secondTests != 9) { //& at least 1 tap fails 
                 //renormalize weights
 
                 float validWeight = 0.0;
@@ -202,25 +211,18 @@ vec3 TapTest(ivec2 centre) {
                         secondTaps[i].Weight *= validWeight;
                     }
                 }
-            } else {
-                //do the other prior frame accumulation clear
             }
-            //if pass, do the same weight thing, if not pass, the prior colour pixel will equal to the current colour pixel
+
+            //accumulation
+            vec3 OutputColour = vec3(0.0);
+            for (int i = 0; i < 4; i++) {
+                OutputColour += texelFetch(priorColourHistory, taps[i].Pos, 0).rgb * taps[i].Weight;
+            }
+            return OutputColour;
+        } else { //if all first taps fail and all second taps fail
+            return texelFetch(InputColour, PixelCoords, 0).rgb;
         }
-        
-
-        /*vec3 OutputColour = vec3(0.0);
-        for (int i = 0; i < 4; i++) {
-            OutputColour = 
-        } */
-        //..i have to restructure my passes so that integration can be fit in here great
-    } else {
-        //a
     }
-
-    // if no tests pass do something 
-
-    
 
     return vec3(0.0); //placeholder
 }
@@ -228,7 +230,7 @@ vec3 TapTest(ivec2 centre) {
 void main() {
     if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
         float alpha = 0.2;
-        vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * texelFetch(priorColourHistory, PixelCoords, 0).rgb;
+        vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * TapTest(PixelCoords);
         //InputColour = Current Colour History
         //priorColourHistory = Prior colour accumulation texture
         imageStore(NextIterationOutput, PixelCoords, vec4(IntegratedColour, 1.0));
