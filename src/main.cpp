@@ -389,20 +389,10 @@ int main () {
 
     // PASS 3: RAYTRACING & INDIRECT LIGHT
 
-    GLuint RaytraceShaderAccumulationTexture;
-    glGenTextures(1, &RaytraceShaderAccumulationTexture);
+    GLuint RaytraceCurrColour;
+    glGenTextures(1, &RaytraceCurrColour);
 
-    glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    GLuint IntegratedColour;
-    glGenTextures(1, &IntegratedColour);
-
-    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+    glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -426,7 +416,7 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, IntegratedColour, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, DisplayOutput, 0);
 
     GLenum AccumBufferAttachments[1] = {GL_COLOR_ATTACHMENT0};
     glDrawBuffers(1, AccumBufferAttachments);
@@ -469,6 +459,16 @@ int main () {
     // PASS 5: DENOISING (using Spatiotemporal Variance-Guided Filtering)
 
     ComputeShader SVGFShader("shader/svgf.comp");
+
+    GLuint IntegratedColour;
+
+    glGenTextures(1, &IntegratedColour);
+    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     GLuint AtrousA, AtrousB; //one will be reading, one will be for writing
 
@@ -698,7 +698,7 @@ int main () {
 
         /*if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
-            glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+            glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
             glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
             glBindTexture(GL_TEXTURE_2D, 0);
         }*/
@@ -758,8 +758,8 @@ int main () {
         prevBufferShader.setInt("gDepth", 1);
 
         glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
-        prevBufferShader.setInt("IntegratedColour", 2);
+        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
+        prevBufferShader.setInt("RaytraceCurrColour", 2);
 
         BufferQuad.bind();
 
@@ -840,8 +840,7 @@ int main () {
 
         RaytraceShader.bind();
 
-        glBindImageTexture(0, RaytraceShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-        glBindImageTexture(1, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
+        glBindImageTexture(0, RaytraceCurrColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         RaytraceShader.setInt("Width", WIDTH);
         RaytraceShader.setInt("Height", HEIGHT);
@@ -896,7 +895,7 @@ int main () {
         AccumShader.setInt("Raster", 0);
 
         glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, RaytraceShaderAccumulationTexture);
+        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
         AccumShader.setInt("Raytrace", 1);
 
         AccumShader.setInt("OutputType", static_cast<int>(OutputType));
@@ -913,7 +912,7 @@ int main () {
         glBindImageTexture(1, AccumulatedSecondMoment, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
         MomentsShader.setInt("IntegratedColour", 0);
 
         MomentsShader.setInt("FrameIndex", FrameIndex);
@@ -923,9 +922,6 @@ int main () {
         //Pass 5
 
         //Prepass (Pass < 0)
-
-        GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
-        GLuint InputVariance(0), OutputVariance(VarianceB);
 
         SVGFShader.bind();
 
@@ -941,6 +937,10 @@ int main () {
         glBindTexture(GL_TEXTURE_2D, gMotion);
         SVGFShader.setInt("gMotion", 2);
 
+        glActiveTexture(GL_TEXTURE3);
+        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
+        SVGFShader.setInt("InputColour", 3);
+        
         glActiveTexture(GL_TEXTURE4);
         glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
         SVGFShader.setInt("AccumulatedFirstMoment", 4);
@@ -962,24 +962,20 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
+        glActiveTexture(GL_TEXTURE8);
+        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
+        SVGFShader.setInt("priorColourHistory", 8);
+
         SVGFShader.setInt("Iterations", -1);
 
-        glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-        glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
-
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, InputAtrous);
-        SVGFShader.setInt("InputColour", 3);
+        glBindImageTexture(0, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
-
-        InputAtrous = OutputAtrous;
-        OutputAtrous = (OutputAtrous == AtrousA)? AtrousB : AtrousA;
-
-        InputVariance = OutputVariance;
-        OutputVariance = (OutputVariance == VarianceA)? VarianceB : VarianceA;
         
         // Main passes
+
+        GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
+        GLuint InputVariance(0), OutputVariance(VarianceB);
 
         SVGFShader.bind();
 
@@ -1063,7 +1059,7 @@ int main () {
 
         //_sleep(100);
     }
-    glDeleteTextures(1, &RaytraceShaderAccumulationTexture);
+    glDeleteTextures(1, &RaytraceCurrColour);
     glDeleteTextures(1, &gAlbedo);
     glfwTerminate();
     return 0;
