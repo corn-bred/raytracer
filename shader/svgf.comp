@@ -30,11 +30,11 @@ float Luminance(ivec2 point) {
     return dot(HumanLightSens, texelFetch(InputColour, point, 0).rgb);
 }
 
-float AverageLuminance(ivec2 point) { //ADD MOTION TO HERE
+float AverageLuminance(ivec2 point) {
     return texelFetch(AccumulatedFirstMoment, point, 0).r;
 }
 
-float LuminanceVariance(ivec2 point) { //ADD MOTION TO HERE
+float LuminanceVariance(ivec2 point) {
     if (Iterations == 0) {
         return texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0);
     } else {
@@ -125,19 +125,19 @@ struct Tap {
 
 vec3 TapTest(ivec2 centre) {
     vec2 ReprojPix = FindPriorFramePix(centre);
-    vec2 fracReprojPix = fract(ReprojPix); //less computation??? maybe
+    vec2 fractReprojPix = fract(ReprojPix); //less computation??? maybe
 
     Tap taps[4] = {
-        {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), (1.0 - fracReprojPix.x) * (1.0 - fracReprojPix.y), false},
-        {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), (fracReprojPix.x) * (1.0 - fracReprojPix.y), false},
-        {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), (1.0 - fracReprojPix.x) * (fracReprojPix.y), false},
-        {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), (fracReprojPix.x) * (fracReprojPix.y), false}
+        {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
+        {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), (fractReprojPix.x) * (fractReprojPix.y), false}
     };
     int Tests = 0;
 
     for (int i = 0; i < 4; i++) {
         if (taps[i].Pos.x < 0 || taps[i].Pos.x >= Width || taps[i].Pos.y < 0 || taps[i].Pos.y >= Height) continue;
-        if (!(tap_n(taps[i].Pos, 0.9) && tap_d(taps[i].Pos, 0.03))) {Tests++; taps[i].Passing == true;}
+        if (tap_n(taps[i].Pos, 0.9) && tap_d(taps[i].Pos, 0.03)) {Tests++; taps[i].Passing == true;}
     }   
 
     if (Tests != 0) { //if at least 1 tap passes
@@ -189,7 +189,7 @@ vec3 TapTest(ivec2 centre) {
         int secondTests = 0;
         for (int i = 0; i < 9; i++) {
             if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
-            if (!(tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03))) {secondTests++; secondTaps[i].Passing == true;}            
+            if (tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03)) {secondTests++; secondTaps[i].Passing == true;}            
         }
 
         if (secondTests != 0) { //if at least 1 tap passes
@@ -208,7 +208,7 @@ vec3 TapTest(ivec2 centre) {
 
                 for (int i = 0; i < 4; i++) {
                     if (secondTaps[i].Passing) {
-                        secondTaps[i].Weight *= validWeight;
+                        secondTaps[i].Weight /= validWeight;
                     }
                 }
             }

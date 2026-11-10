@@ -1013,7 +1013,7 @@ int main () {
         SVGFShader.setInt("Height", HEIGHT);
 
         int iterationNum = 5;
-        for (int iteration = 0; iteration <= iterationNum; iteration++) {
+        for (int iteration = 0; iteration < iterationNum; iteration++) {
 
             SVGFShader.setInt("Iterations", iteration);
 
