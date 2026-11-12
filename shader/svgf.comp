@@ -165,7 +165,7 @@ vec3 TapTest(ivec2 centre) {
         //accumulation
         vec3 OutputColour = vec3(0.0);
         for (int i = 0; i < 4; i++) {
-            OutputColour += texelFetch(priorColourHistory, taps[i].Pos, 0).rgb * taps[i].Weight;
+            OutputColour += texelFetch(priorColourHistory, clamp(taps[i].Pos, ivec2(0,0), ivec2(Width, Height)), 0).rgb * taps[i].Weight;
         }
         return OutputColour;
     } else { //if all 2x2 taps fail
@@ -196,27 +196,27 @@ vec3 TapTest(ivec2 centre) {
             if (secondTests != 9) { //& at least 1 tap fails 
                 //renormalize weights
 
-                float validWeight = 0.0;
-                for (int i = 0; i < 4; i++) {
+                float secondValidWeight = 0.0;
+                for (int i = 0; i < 9; i++) {
                     if (secondTaps[i].Passing) {
-                        validWeight += secondTaps[i].Weight;
+                        secondValidWeight += secondTaps[i].Weight;
                     }
                 }
-                if (validWeight == 0.0) //edge case edge case do later do later
+                if (secondValidWeight == 0.0) //edge case edge case do later do later
 
                 //float divValidWeight = 1.0 / validWeight;
 
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 9; i++) {
                     if (secondTaps[i].Passing) {
-                        secondTaps[i].Weight /= validWeight;
+                        secondTaps[i].Weight /= secondValidWeight;
                     }
                 }
             }
 
             //accumulation
             vec3 OutputColour = vec3(0.0);
-            for (int i = 0; i < 4; i++) {
-                OutputColour += texelFetch(priorColourHistory, taps[i].Pos, 0).rgb * taps[i].Weight;
+            for (int i = 0; i < 9; i++) {
+                OutputColour += texelFetch(priorColourHistory, clamp(secondTaps[i].Pos, ivec2(0,0), ivec2(Width, Height)), 0).rgb * secondTaps[i].Weight;
             }
             return OutputColour;
         } else { //if all first taps fail and all second taps fail
