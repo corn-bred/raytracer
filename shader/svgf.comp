@@ -151,7 +151,7 @@ vec3 TapTest(ivec2 centre) {
                 }
             }
 
-            if (validWeight == 0.0) //edge case edge case do later do later
+            if (validWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb;//edge case edge case do later do later
 
             //float divValidWeight = 1.0 / validWeight;
 
@@ -202,7 +202,7 @@ vec3 TapTest(ivec2 centre) {
                         secondValidWeight += secondTaps[i].Weight;
                     }
                 }
-                if (secondValidWeight == 0.0) //edge case edge case do later do later
+                if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb;//edge case edge case do later do later
 
                 //float divValidWeight = 1.0 / validWeight;
 
