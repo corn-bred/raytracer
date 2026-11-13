@@ -89,7 +89,7 @@ float w_l(ivec2 centre, ivec2 neighbouring) { //luminance similarity, defined in
 }
 
 float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
-    return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring);
+    return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring) * w_a(centre, neighbouring);
 }
 
 vec3 Weights(ivec2 centre, ivec2 neighbouring) {
@@ -148,10 +148,12 @@ vec3 TapTest(ivec2 centre) {
             for (int i = 0; i < 4; i++) {
                 if (taps[i].Passing) {
                     validWeight += taps[i].Weight;
+                } else {
+                    taps[i].Weight = 0.0;
                 }
             }
 
-            if (validWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb;//edge case edge case do later do later
+            if (validWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
 
             //float divValidWeight = 1.0 / validWeight;
 
@@ -168,7 +170,7 @@ vec3 TapTest(ivec2 centre) {
             OutputColour += texelFetch(priorColourHistory, clamp(taps[i].Pos, ivec2(0,0), ivec2(Width, Height)), 0).rgb * taps[i].Weight;
         }
         return OutputColour;
-    } else { //if all 2x2 taps fail
+    } else { //if all 2x2 taps fail try the 3x3 filter
         //3x3 tap filter to check
         /*
         ...
@@ -176,15 +178,15 @@ vec3 TapTest(ivec2 centre) {
         ...
         */
         Tap secondTaps[9] = {
-            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), 1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)),         1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)),          1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)),          1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
             {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1),     1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)),     1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
         };
         int secondTests = 0;
         for (int i = 0; i < 9; i++) {
@@ -200,9 +202,11 @@ vec3 TapTest(ivec2 centre) {
                 for (int i = 0; i < 9; i++) {
                     if (secondTaps[i].Passing) {
                         secondValidWeight += secondTaps[i].Weight;
+                    } else {
+                        secondTaps[i].Weight = 0.0;
                     }
                 }
-                if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb;//edge case edge case do later do later
+                if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
 
                 //float divValidWeight = 1.0 / validWeight;
 
