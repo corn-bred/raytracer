@@ -36,7 +36,7 @@ float AverageLuminance(ivec2 point) {
 
 float LuminanceVariance(ivec2 point) {
     if (Iterations == 0) {
-        return texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0);
+        return max(texelFetch(AccumulatedSecondMoment, point, 0).r - pow(texelFetch(AccumulatedFirstMoment, point, 0).r, 2.0), 0.0);
     } else {
         return texelFetch(prevIterationVariance, point, 0).r;
     }
@@ -46,8 +46,8 @@ const float sigma_z = 1.0, sigma_n = 128.0, sigma_l = 4.0;
 float Variance = 0.0;
 
 vec2 nablaW(ivec2 point) { //describes the average change in depth
-    float HorizontalChange = (texelFetch(gDepth, point + ivec2(1, 0), 0).r - texelFetch(gDepth, point + ivec2(-1, 0), 0).r) * 0.5;
-    float VerticalChange = (texelFetch(gDepth, point + ivec2(0, 1), 0).r - texelFetch(gDepth, point + ivec2(0, -1), 0).r) * 0.5;
+    float HorizontalChange = (texelFetch(gDepth, point + ivec2(1, 0), 0).r - texelFetch(gDepth, clamp(point + ivec2(-1, 0), ivec2(0), ivec2(Width - 1, Height - 1)), 0).r) * 0.5;
+    float VerticalChange = (texelFetch(gDepth, point + ivec2(0, 1), 0).r - texelFetch(gDepth, clamp(point + ivec2(0, -1), ivec2(0), ivec2(Width - 1, Height - 1)), 0).r) * 0.5;
     return vec2(HorizontalChange, VerticalChange);
 }
 
@@ -63,7 +63,7 @@ float GaussianVariance(ivec2 pixel) { //fix
     float Output = 0.0;
     for (int x = -1; x <= 1; x++) {
         for (int y = -1; y <= 1; y++) {
-            Output += LuminanceVariance(pixel + ivec2(x, y));
+            Output += LuminanceVariance(pixel + ivec2(x, y)) * gaussKernel[x + 1][y + 1];
         }
     }
     return Output;
@@ -89,7 +89,7 @@ float w_l(ivec2 centre, ivec2 neighbouring) { //luminance similarity, defined in
 }
 
 float FindWeight(ivec2 centre, ivec2 neighbouring) { //add them together
-    return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring) * w_a(centre, neighbouring);
+    return w_n(centre, neighbouring) * w_z(centre, neighbouring) * w_l(centre, neighbouring);
 }
 
 vec3 Weights(ivec2 centre, ivec2 neighbouring) {
@@ -104,14 +104,22 @@ vec2 FindPriorFramePix(ivec2 pixel) {
 }
 
 bool tap_n(ivec2 pixel, float threshold) {
+    vec2 priorPixel = FindPriorFramePix(pixel);
+    if (pixel.x < 0 || pixel.x >= Width || pixel.y < 0 || pixel.y >= Height ||
+        priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
+
     vec3 CurrNormal = texelFetch(gNormal, pixel, 0).xyz;
-    vec3 PriorNormal = texelFetch(prevNormal, ivec2(FindPriorFramePix(pixel)), 0).xyz;
+    vec3 PriorNormal = texelFetch(prevNormal, ivec2(priorPixel), 0).xyz;
     return (dot(CurrNormal, PriorNormal) > threshold);
 }
 
 bool tap_d(ivec2 pixel, float threshold) {
+    vec2 priorPixel = FindPriorFramePix(pixel);
+    if (pixel.x < 0 || pixel.x >= Width || pixel.y < 0 || pixel.y >= Height ||
+        priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
+
     float CurrDepth = texelFetch(gDepth, pixel, 0).x;
-    float PriorDepth = texelFetch(prevDepth, ivec2(FindPriorFramePix(pixel)), 0).x;
+    float PriorDepth = texelFetch(prevDepth, ivec2(priorPixel), 0).x;
     return (abs(CurrDepth - PriorDepth) < threshold);
 }
 
@@ -128,16 +136,15 @@ vec3 TapTest(ivec2 centre) {
     vec2 fractReprojPix = fract(ReprojPix); //less computation??? maybe
 
     Tap taps[4] = {
-        {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
-        {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), (fractReprojPix.x) * (fractReprojPix.y), false}
+        {ivec2(floor(centre.x), floor(centre.y)), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(ceil(centre.x), floor(centre.y)), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(floor(centre.x), ceil(centre.y)), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
+        {ivec2(ceil(centre.x), ceil(centre.y)), (fractReprojPix.x) * (fractReprojPix.y), false}
     };
     int Tests = 0;
 
     for (int i = 0; i < 4; i++) {
-        if (taps[i].Pos.x < 0 || taps[i].Pos.x >= Width || taps[i].Pos.y < 0 || taps[i].Pos.y >= Height) continue;
-        if (tap_n(taps[i].Pos, 0.9) && tap_d(taps[i].Pos, 0.03)) {Tests++; taps[i].Passing == true;}
+        if (tap_n(taps[i].Pos, 0.9) && tap_d(taps[i].Pos, 0.03)) {Tests++; taps[i].Passing = true;}
     }   
 
     if (Tests != 0) { //if at least 1 tap passes
@@ -167,7 +174,7 @@ vec3 TapTest(ivec2 centre) {
         //accumulation
         vec3 OutputColour = vec3(0.0);
         for (int i = 0; i < 4; i++) {
-            OutputColour += texelFetch(priorColourHistory, clamp(taps[i].Pos, ivec2(0,0), ivec2(Width, Height)), 0).rgb * taps[i].Weight;
+            OutputColour += texelFetch(priorColourHistory, clamp(taps[i].Pos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * taps[i].Weight;
         }
         return OutputColour;
     } else { //if all 2x2 taps fail try the 3x3 filter
@@ -178,20 +185,19 @@ vec3 TapTest(ivec2 centre) {
         ...
         */
         Tap secondTaps[9] = {
-            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y)),         1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y)),          1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x), ceil(ReprojPix.y)),          1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), ceil(ReprojPix.y)),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1),     1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)),     1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x), floor(centre.y)),         1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(centre.x), floor(centre.y)),          1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x), ceil(centre.y)),          1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(centre.x), ceil(centre.y)),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(ceil(centre.x), floor(centre.y) - 1),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x) - 1, ceil(centre.y)),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x) - 1, floor(centre.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x), floor(centre.y) - 1),     1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(floor(centre.x) - 1, floor(centre.y)),     1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
         };
         int secondTests = 0;
         for (int i = 0; i < 9; i++) {
-            if (secondTaps[i].Pos.x < 0 || secondTaps[i].Pos.x >= Width || secondTaps[i].Pos.y < 0 || secondTaps[i].Pos.y >= Height) continue;
-            if (tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03)) {secondTests++; secondTaps[i].Passing == true;}            
+            if (tap_n(secondTaps[i].Pos, 0.9) && tap_d(secondTaps[i].Pos, 0.03)) {secondTests++; secondTaps[i].Passing = true;}            
         }
 
         if (secondTests != 0) { //if at least 1 tap passes
@@ -235,10 +241,10 @@ void main() {
     if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
         float alpha = 0.2;
         vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * TapTest(PixelCoords);
-        //InputColour = Current Colour History
+        //InputColour = Current colour history
         //priorColourHistory = Prior colour accumulation texture
         imageStore(NextIterationOutput, PixelCoords, vec4(IntegratedColour, 1.0));
-        //NextIterationOutput = Integrated Colour
+        //NextIterationOutput = Integrated colour
 
     } else {
         // Variance calculation (this is following https://www.desmos.com/calculator/pbzhgpwjov btw (i made it hah)) (nevermind it isnt correct)
