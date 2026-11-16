@@ -135,11 +135,13 @@ vec3 TapTest(ivec2 centre) {
     vec2 ReprojPix = FindPriorFramePix(centre);
     vec2 fractReprojPix = fract(ReprojPix); //less computation??? maybe
 
+    ivec2 Base = ivec2(floor(centre.x), floor(centre.y));
+
     Tap taps[4] = {
-        {ivec2(floor(centre.x), floor(centre.y)), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(ceil(centre.x), floor(centre.y)), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(floor(centre.x), ceil(centre.y)), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
-        {ivec2(ceil(centre.x), ceil(centre.y)), (fractReprojPix.x) * (fractReprojPix.y), false}
+        {ivec2(Base.x, Base.y), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(Base.x + 1, Base.y), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(Base.x, Base.y + 1), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
+        {ivec2(Base.x + 1, Base.y + 1), (fractReprojPix.x) * (fractReprojPix.y), false}
     };
     int Tests = 0;
 
@@ -184,16 +186,17 @@ vec3 TapTest(ivec2 centre) {
         ...
         ...
         */
+
         Tap secondTaps[9] = {
-            {ivec2(floor(centre.x), floor(centre.y)),         1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(centre.x), floor(centre.y)),          1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(floor(centre.x), ceil(centre.y)),          1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(centre.x), ceil(centre.y)),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(ceil(centre.x), floor(centre.y) - 1),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(centre.x) - 1, ceil(centre.y)),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(floor(centre.x) - 1, floor(centre.y) - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(centre.x), floor(centre.y) - 1),     1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(floor(centre.x) - 1, floor(centre.y)),     1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x, Base.y),         1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x + 1, Base.y),          1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x, Base.y + 1),          1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x + 1, Base.y + 1),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x + 1, Base.y - 1),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(Base.x - 1, Base.y + 1),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(Base.x - 1, Base.y - 1), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(Base.x, Base.y - 1),     1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
+            {ivec2(Base.x - 1, Base.y),     1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
         };
         int secondTests = 0;
         for (int i = 0; i < 9; i++) {
@@ -226,7 +229,7 @@ vec3 TapTest(ivec2 centre) {
             //accumulation
             vec3 OutputColour = vec3(0.0);
             for (int i = 0; i < 9; i++) {
-                OutputColour += texelFetch(priorColourHistory, clamp(secondTaps[i].Pos, ivec2(0,0), ivec2(Width, Height)), 0).rgb * secondTaps[i].Weight;
+                OutputColour += texelFetch(priorColourHistory, clamp(secondTaps[i].Pos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * secondTaps[i].Weight;
             }
             return OutputColour;
         } else { //if all first taps fail and all second taps fail
@@ -240,7 +243,7 @@ vec3 TapTest(ivec2 centre) {
 void main() {
     if (PixelCoords.x >= Width || PixelCoords.y >= Height)
         return;
-        
+
     if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
         float alpha = 0.2;
         vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * TapTest(PixelCoords);
