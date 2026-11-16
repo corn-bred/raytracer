@@ -238,6 +238,9 @@ vec3 TapTest(ivec2 centre) {
 }
 
 void main() {
+    if (PixelCoords.x >= Width || PixelCoords.y >= Height)
+        return;
+        
     if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
         float alpha = 0.2;
         vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * TapTest(PixelCoords);
