@@ -7,16 +7,31 @@ For school, but I just took it as an excuse to make an awesome project. Followin
 - Bounding Volume Hierarchies
 - Custom model loading
 - Emissors
-- Dielectrics
+- Dielectrics (But not in denoising)
 - Metals
 - Lambertians
 - UV albedo & roughness textures
 - Smooth shading
+- Spatiotemporal Variance-Guided Filtering (took a billion years)
 
-Pass 1: Makes G-buffers to pass to Passes 2 & 3
-Pass 2: Rasterizer pass (Direct light)
-Pass 3: Pathtracer pass (Indirect light)
-Pass 4: Combines both passes and gamma correction adjustment
+Pass 1: Creating prior history buffer data
+
+Pass 2: Makes G-buffers
+
+Pass 3: Rasterizer pass (Direct light)
+
+Pass 4: Pathtracer pass (Indirect light)
+
+Pass 5: Combines both passes and gamma correction adjustment
+
+Pass 6: Temporal accumulation of moment calculation
+
+Pass 7: SVGF Denoiser
+
+- First iteration calculates taps for disocclusion and integrated colour
+- Next 5 perform the a-trous filtering and gaussian blurring
+
+
 
 Basically finished except some visual bugs
 
@@ -28,7 +43,7 @@ Triangles in scene: 67919
 
 Another example image:
  
-![example img](image.png)
+![example image](image-1.png)
 
 Specs:
 CPU: AMD Ryzen 5 4500 6-Core Processor

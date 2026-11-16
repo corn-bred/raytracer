@@ -105,8 +105,7 @@ vec2 FindPriorFramePix(ivec2 pixel) {
 
 bool tap_n(ivec2 pixel, float threshold) {
     vec2 priorPixel = FindPriorFramePix(pixel);
-    if (pixel.x < 0 || pixel.x >= Width || pixel.y < 0 || pixel.y >= Height ||
-        priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
+    if (priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
 
     vec3 CurrNormal = texelFetch(gNormal, pixel, 0).xyz;
     vec3 PriorNormal = texelFetch(prevNormal, ivec2(priorPixel), 0).xyz;
@@ -115,8 +114,7 @@ bool tap_n(ivec2 pixel, float threshold) {
 
 bool tap_d(ivec2 pixel, float threshold) {
     vec2 priorPixel = FindPriorFramePix(pixel);
-    if (pixel.x < 0 || pixel.x >= Width || pixel.y < 0 || pixel.y >= Height ||
-        priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
+    if (priorPixel.x < 0 || priorPixel.x >= Width || priorPixel.y < 0 || priorPixel.y >= Height) return false;
 
     float CurrDepth = texelFetch(gDepth, pixel, 0).x;
     float PriorDepth = texelFetch(prevDepth, ivec2(priorPixel), 0).x;

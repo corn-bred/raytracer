@@ -582,7 +582,7 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/cube.obj");
+    Model model("assets/stanford-dragon2.obj");
 
     Triangle tempTri;
     
