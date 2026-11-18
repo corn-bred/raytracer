@@ -399,7 +399,7 @@ int main () {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-    ComputeShader RaytraceShader("shader/raytrace.comp");
+    ComputeShader RaytraceShader("shader/main.comp");
 
     // PASS 4: ACCUMULATION PASS
 
