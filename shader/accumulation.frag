@@ -52,6 +52,6 @@ void main () {
             break;
     }
 
-    Result = vec3(linearToGamma(Result.r), linearToGamma(Result.g), linearToGamma(Result.b));
+    Result = vec3(linearToGamma(RaytraceData.r), linearToGamma(RaytraceData.g), linearToGamma(RaytraceData.b));
     DisplayOutput = vec4(Result, 1.0);
 }

@@ -37,7 +37,7 @@ float quadVertices[] = {
 // Utility Functions
 
 inline double random_double() {
-    // Returns a random real in [0,1].
+    // Returns a random real in [0,1).
     return rand() / (RAND_MAX + 1.0);
 }
 
@@ -47,21 +47,12 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 600;
+unsigned int WIDTH = 400;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter, ShownFPS;
 int FrameIndex = 0;
-
-enum class Output {
-    Raster,
-    Raytrace,
-    Combined,
-    Comparison
-};
-
-Output OutputType = Output::Combined;
 
 Camera CameraMain(glm::vec3(0.0, 0.0, 5.05));
 
@@ -103,19 +94,6 @@ void processInput(GLFWwindow *window, Camera &camera) { //Spaghetti code GO
         FrameIndex = 0;
     }
     camera.keyboardprocess(movements, DeltaTime, cameraSpeed);
-
-    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS) {
-        OutputType = Output::Raster;
-    }
-    if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS) {
-        OutputType = Output::Raytrace;
-    }
-    if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS) {
-        OutputType = Output::Combined;
-    }
-    if (glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS) {
-        OutputType = Output::Comparison;
-    }
 }
 
 float LastX = -1.0, LastY = -1.0;
@@ -184,343 +162,31 @@ int main () {
         return 1;
     }
 
-    //  Framebuffer setup
+    GLuint ComputeShaderAccumulationTexture;
+    glGenTextures(1, &ComputeShaderAccumulationTexture);
 
-    // PASS 1: G-BUFFER
-
-    GLuint gBufferFBO;
-
-    glGenFramebuffers(1, &gBufferFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
-
-    GLuint gPosition, gNormal, gAlbedo, gRoughness, gIsDielectric, gIOR, gIsEmissor, gMotion, gDepth;
-
-    //  gPosition
-    glGenTextures(1, &gPosition);
-    glBindTexture(GL_TEXTURE_2D, gPosition);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, gPosition, 0);
-
-    //  gNormal
-    glGenTextures(1, &gNormal);
-    glBindTexture(GL_TEXTURE_2D, gNormal);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, gNormal, 0);
-
-    //  gAlbedo
-    glGenTextures(1, &gAlbedo);
-    glBindTexture(GL_TEXTURE_2D, gAlbedo);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, gAlbedo, 0);
-
-    //  gRoughness
-    glGenTextures(1, &gRoughness);
-    glBindTexture(GL_TEXTURE_2D, gRoughness);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, gRoughness, 0);
-
-    //  gIsDielectric
-    glGenTextures(1, &gIsDielectric);
-    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT4, GL_TEXTURE_2D, gIsDielectric, 0);
-
-    //  gIOR
-    glGenTextures(1, &gIOR);
-    glBindTexture(GL_TEXTURE_2D, gIOR);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R16F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT5, GL_TEXTURE_2D, gIOR, 0);  
-    
-    //  gIsEmissor
-    glGenTextures(1, &gIsEmissor);
-    glBindTexture(GL_TEXTURE_2D, gIsEmissor);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, WIDTH, HEIGHT, 0, GL_RED, GL_UNSIGNED_BYTE, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT6, GL_TEXTURE_2D, gIsEmissor, 0);
-
-    //  gMotion
-    glGenTextures(1, &gMotion);
-    glBindTexture(GL_TEXTURE_2D, gMotion);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RG16F, WIDTH, HEIGHT, 0, GL_RG, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT7, GL_TEXTURE_2D, gMotion, 0);
-
-    //  gDepth
-    glGenTextures(1, &gDepth);
-    glBindTexture(GL_TEXTURE_2D, gDepth);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, WIDTH, HEIGHT, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, gDepth, 0);
-
-    GLuint gBufferAttachments[8] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3, GL_COLOR_ATTACHMENT4, GL_COLOR_ATTACHMENT5, GL_COLOR_ATTACHMENT6, GL_COLOR_ATTACHMENT7};
-    glDrawBuffers(8, gBufferAttachments);
-    
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        cerr << "G-Buffer FBO is incomplete" << endl;
-        return 1;
-    }
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-    Shader gBufferShader("shader/gBuffer.vert", "shader/gBuffer.frag");
-
-    // PASS 1.5: PRIOR FRAME TEXTURE CREATION
-
-    GLuint prevBufferFBO;
-
-    glGenFramebuffers(1, &prevBufferFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, prevBufferFBO);
-
-    /*
-    check this out
-        Our history buffers include
-        temporally integrated color and color moment data along with the
-        prior frame’s depths, normals, and mesh IDs. 
-    you better listen to the paper
-    in total, 5 textures + 1 required renderbuffer
-    */
-    
-    GLuint 
-        prevIntegratedColour, //integrated color is the final texture after temporal accumulation, then sent as a history texture output in the soon to come SVGF buffer
-        prevFirstMoment, //color moment is all textures accumulated, but without temporal accumulation
-        prevSecondMoment, //first moment but squared
-        prevDepth, //previous depth
-        prevNormal, //previous normal
-        prevFBODepth; //required for fbo to be complete
-    
-    //  prevIntegratedColour
-    glGenTextures(1, &prevIntegratedColour);
-    glBindTexture(GL_TEXTURE_2D, prevIntegratedColour);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    //this will be taken as an output for the denoiser after temporal accumulation
-
-    //  prevFirstMoment
-    glGenTextures(1, &prevFirstMoment);
-    glBindTexture(GL_TEXTURE_2D, prevFirstMoment);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, prevFirstMoment, 0);
-
-    //  prevSecondMoment
-    glGenTextures(1, &prevSecondMoment);
-    glBindTexture(GL_TEXTURE_2D, prevSecondMoment);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, prevSecondMoment, 0);
-
-    //  prevDepth
-    glGenTextures(1, &prevDepth);
-    glBindTexture(GL_TEXTURE_2D, prevDepth);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, prevDepth, 0);
-
-    //  prevNormal
-    glGenTextures(1, &prevNormal);
-    glBindTexture(GL_TEXTURE_2D, prevNormal);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT3, GL_TEXTURE_2D, prevNormal, 0);
-
-    //  prevFBODepth
-    glGenRenderbuffers(1, &prevFBODepth);
-    glBindRenderbuffer(GL_RENDERBUFFER, prevFBODepth);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, WIDTH, HEIGHT);
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, prevFBODepth);
-
-    GLuint prevBufferAttachments[4] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3};
-    glDrawBuffers(4, prevBufferAttachments);
-    
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        cerr << "Prior frame data FBO is incomplete: Error code 0x" << hex << glCheckFramebufferStatus(GL_FRAMEBUFFER) << endl;
-        return 1;
-    }
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-    Shader prevBufferShader("shader/prevBuffer.vert", "shader/prevBuffer.frag");
-
-    // PASS 2: RASTERIZATION & DIRECT LIGHT
-
-    GLuint RasterFBO;
-
-    glGenFramebuffers(1, &RasterFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, RasterFBO);
-
-    GLuint RasterOutput;
-
-    glGenTextures(1, &RasterOutput);
-    glBindTexture(GL_TEXTURE_2D, RasterOutput);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, RasterOutput, 0);
-
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        cerr << "Rasterizer FBO is incomplete" << endl;
-        return 1;
-    }
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-    Shader RasterShader("shader/raster.vert", "shader/raster.frag");
-    RasterLightArray RasterLightHandler(RasterShader, "pointLights");
-
-    // PASS 3: RAYTRACING & INDIRECT LIGHT
-
-    GLuint RaytraceCurrColour;
-    glGenTextures(1, &RaytraceCurrColour);
-
-    glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
+    glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    ComputeShader RaytraceShader("shader/main.comp");
-
-    // PASS 4: ACCUMULATION PASS
-
-    GLuint AccumFBO;
-    glGenFramebuffers(1, &AccumFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
-
-    GLuint DisplayOutput;
-
-    glGenTextures(1, &DisplayOutput);
-    glBindTexture(GL_TEXTURE_2D, DisplayOutput);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, DisplayOutput, 0);
-
-    GLenum AccumBufferAttachments[1] = {GL_COLOR_ATTACHMENT0};
-    glDrawBuffers(1, AccumBufferAttachments);
-
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        cerr << "Accumulation FBO is incomplete: Error code 0x" << hex << glCheckFramebufferStatus(GL_FRAMEBUFFER) << endl;
-        return 1;
-    }
     
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    Shader AccumShader("shader/accumulation.vert", "shader/accumulation.frag");
-
-    // PASS 4.5: MOMENT ACCUMULATION
-    
-    ComputeShader MomentsShader("shader/moments.comp");
-
-    GLuint AccumulatedFirstMoment, AccumulatedSecondMoment;
-
-    glGenTextures(1, &AccumulatedFirstMoment);
-    glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glGenTextures(1, &AccumulatedSecondMoment);
-    glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    // PASS 5: DENOISING (using Spatiotemporal Variance-Guided Filtering)
-
-    ComputeShader SVGFShader("shader/svgf.comp");
-
-    GLuint IntegratedColour;
-
-    glGenTextures(1, &IntegratedColour);
-    glBindTexture(GL_TEXTURE_2D, IntegratedColour);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    GLuint AtrousA, AtrousB; //one will be reading, one will be for writing
-
-    glGenTextures(1, &AtrousA);
-    glBindTexture(GL_TEXTURE_2D, AtrousA);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glGenTextures(1, &AtrousB);
-    glBindTexture(GL_TEXTURE_2D, AtrousB);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, WIDTH, HEIGHT, 0, GL_RGBA, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    GLuint VarianceA, VarianceB; //one will be reading, one will be for writing
-
-    glGenTextures(1, &VarianceA);
-    glBindTexture(GL_TEXTURE_2D, VarianceA);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glGenTextures(1, &VarianceB);
-    glBindTexture(GL_TEXTURE_2D, VarianceB);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, WIDTH, HEIGHT, 0, GL_RED, GL_FLOAT, NULL);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glBindTexture(GL_TEXTURE_2D, 0);
-
-    // FINAL PASS: DISPLAY PASS
-
-    Shader OutputShader("shader/output.vert", "shader/output.frag");
+    Shader ShaderSample("shader/output.vert", "shader/output.frag");
 
     VertexBuffer BufferQuad(&quadVertices, sizeof(quadVertices), GL_STATIC_DRAW);
     BufferQuad.addAttribute(0, 2, GL_FLOAT, 4, 0);
     BufferQuad.addAttribute(1, 2, GL_FLOAT, 4, 2);
 
+    ComputeShader ShaderCompute("shader/main.comp");
+
     //CORNELL BOX
 
     /*std::vector<Object> Objects;
 
-    ComputeObjectArray uObjects(Objects);
+    ObjectArray uObjects(Objects);
 
     Triangle tempTri;
     
@@ -566,32 +232,18 @@ int main () {
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
 
-    int steps = 4;
-    for (int i = 0; i < steps; i++) {
-        float offset = (-2.5 + (5.0 / (float(steps)) / 4.0)) + float(i) * (5.0 / float(steps));
-        cout << offset << endl;
-        tempTri.v0.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v1.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v2.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,0.5);
-        tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
-        uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), float(i) / float(steps));
-        tempTri.v0.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,-0.5); tempTri.v1.Position = glm::vec3(-(5.0 / (float(steps)) / 4.0) + offset,0,0.5); tempTri.v2.Position = glm::vec3((5.0 / (float(steps)) / 4.0) + offset,0,0.5);
-        tempTri.v0.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, 1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, 1.0, 0.0);
-        uObjects.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0), float(i) / float(steps));
-    }
+    BVH mainBVH(Objects);*/
 
-    BVH mainBVH(Objects);
-
-    GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
-
-    Model model("assets/stanford-dragon2.obj");
+    Model model("assets/backpack2.obj");
 
     Triangle tempTri;
     
     tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(3.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(5.0));
     tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
-    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(3.0));
+    model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(5.0));
 
     tempTri.v0.Position = glm::vec3(2.5,2.5,-2.5); tempTri.v1.Position = glm::vec3(2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,2.5,-2.5);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
@@ -627,8 +279,6 @@ int main () {
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
-
-    GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects, true);
 
     BVH mainBVH(model.GetObjectVector());
     mainBVH.Build();
@@ -651,57 +301,33 @@ int main () {
     ShaderStorageBuffer BVHBuffer(mainBVH.GetBVH().data(), mainBVH.GetBVH().size() * sizeof(FlatNode), GL_STATIC_DRAW);
     ShaderStorageBuffer TriangleIndices(mainBVH.GetTriIndices().data(), mainBVH.GetTriIndices().size() * sizeof(int), GL_STATIC_DRAW);
     ShaderStorageBuffer ObjectData(mainBVH.GetData().data(), mainBVH.GetData().size() * sizeof(Object), GL_STATIC_DRAW);
+    ShaderStorageBuffer EmissionData(model.objectHandler.LightIndices.data(), model.objectHandler.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
     //ShaderStorageBuffer EmissionData(uObjects.LightIndices.data(), uObjects.LightIndices.size() * sizeof(int), GL_STATIC_DRAW);
-    RaytraceShader.bind();
+    ShaderCompute.bind();
 
-    RaytraceShader.setInt("gPosition", 0);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, gPosition);
-
-    RaytraceShader.setInt("gNormal", 1);
+    ShaderCompute.setInt("MeshTextures", 1);
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, gNormal);
-
-    RaytraceShader.setInt("gAlbedo", 2);
-    glActiveTexture(GL_TEXTURE2);
-    glBindTexture(GL_TEXTURE_2D, gAlbedo);
-
-    RaytraceShader.setInt("gRoughness", 3);
-    glActiveTexture(GL_TEXTURE3);
-    glBindTexture(GL_TEXTURE_2D, gRoughness);
-
-    glActiveTexture(GL_TEXTURE4);
-    glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-    RaytraceShader.setInt("gIsDielectric", 4);
-    
-    glActiveTexture(GL_TEXTURE5);
-    glBindTexture(GL_TEXTURE_2D, gIOR);
-    RaytraceShader.setInt("gIOR", 5);
-
-    glActiveTexture(GL_TEXTURE6);
-    glBindTexture(GL_TEXTURE_2D, gIsEmissor);
-    RaytraceShader.setInt("gIsEmissor", 6);
+    glBindTexture(GL_TEXTURE_2D_ARRAY, model.GetTextureArrayID());
 
     BVHBuffer.bindToShader(0);
     TriangleIndices.bindToShader(1);
     ObjectData.bindToShader(2);
+    EmissionData.bindToShader(3);
     
-    RaytraceShader.setInt("EmissorSize", model.objectHandler.LightIndices.size());
-    //RaytraceShader.setInt("EmissorSize", uObjects.LightIndices.size());
-
-    glm::mat4 prevView(glm::mat4(1.0)), prevProjection(glm::mat4(1.0));
-
+    ShaderCompute.setInt("EmissorSize", model.objectHandler.LightIndices.size());
+    //ShaderCompute.setInt("EmissorSize", uObjects.LightIndices.size());
+    
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
         processInput(window, CameraMain);
         FrameIndex++;
 
-        /*if (FrameIndex == 1) {
+        if (FrameIndex == 1) {
             const float black[4] = {0.0f, 0.0f, 0.0f, 1.0f};
-            glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
+            glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
             glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1, 1, GL_RGBA, GL_FLOAT, black);
             glBindTexture(GL_TEXTURE_2D, 0);
-        }*/
+        }
 
         float CurrentFrame = glfwGetTime();
         DeltaTime = CurrentFrame - LastFrame;
@@ -709,28 +335,8 @@ int main () {
             ShownFPS = FPSCounter;
             FPSCounter = 0;
         }
-
         stringstream titlestring;
-        titlestring << "Cornbread Program (FPS: " << ShownFPS << ", Frame index: " << FrameIndex << ", Rendering type: ";
-        switch (OutputType) {
-            case Output::Raster:
-                titlestring << "Raster"; 
-                break;
-            case Output::Raytrace:
-                titlestring << "Raytracing"; 
-                break;
-            case Output::Combined:
-                titlestring << "Combined"; 
-                break;
-            case Output::Comparison:
-                titlestring << "Comparison"; 
-                break;
-            default:
-                titlestring << "Unknown"; 
-                break;
-        }
-        titlestring << ")";
-
+        titlestring << "Cornbread Program (FPS: " << ShownFPS << ", Frame index: " << FrameIndex <<")";
         glfwSetWindowTitle(window, titlestring.str().c_str()); 
         LastFrame = CurrentFrame;
 
@@ -743,311 +349,34 @@ int main () {
         
         glm::mat4 view = CameraMain.calculateView();
 
-        //updating previous texture data for denoising (pre-pass pass??)
+        ShaderCompute.bind();
 
-        glBindFramebuffer(GL_FRAMEBUFFER, prevBufferFBO);
+        glBindImageTexture(0, ComputeShaderAccumulationTexture, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
-        prevBufferShader.use();
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gNormal);
-        prevBufferShader.setInt("gNormal", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, gDepth);
-        prevBufferShader.setInt("gDepth", 1);
-
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
-        prevBufferShader.setInt("RaytraceCurrColour", 2);
-
-        BufferQuad.bind();
-
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        //Pass 1
-
-        glBindFramebuffer(GL_FRAMEBUFFER, gBufferFBO);
-        glClearColor(0.0, 0.0, 0.0, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        gBufferShader.use();
-
-        glm::mat4 matmodel = glm::mat4(1.0f);
-        gBufferShader.setMat4("model", matmodel);
-        gBufferShader.setMat4("view", view);
-        gBufferShader.setMat4("projection", projection);
-        gBufferShader.setMat4("prevView", prevView);
-        gBufferShader.setMat4("prevProjection", prevProjection);
-        gBufferShader.setVec2("Resolution", glm::vec2(WIDTH, HEIGHT));
-
-        glm::mat3 normalMatrix = glm::mat3(glm::transpose(glm::inverse(matmodel)));
-        gBufferShader.setMat3("normalMatrix", normalMatrix);
-
-        gBufferHandler.bindTextures(model.GetTextureArrayID());
-        
-        gBufferHandler.draw();
-
-        glDisable(GL_DEPTH_TEST);
-
-        prevView = view;
-        prevProjection = projection;
-
-        //Pass 2
-
-        glBindFramebuffer(GL_FRAMEBUFFER, RasterFBO);
-        glClearColor(0.0, 0.0, 0.0, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
-        RasterShader.use();
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gPosition);
-        RasterShader.setInt("gPosition", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, gNormal);
-        RasterShader.setInt("gNormal", 1);
-
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, gAlbedo);
-        RasterShader.setInt("gAlbedo", 2);
-
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, gRoughness);
-        RasterShader.setInt("gRoughness", 3);
-
-        glActiveTexture(GL_TEXTURE4);
-        glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-        RasterShader.setInt("gIsDielectric", 4);
-
-        glActiveTexture(GL_TEXTURE5);
-        glBindTexture(GL_TEXTURE_2D, gIOR);
-        RasterShader.setInt("gIOR", 5);
-
-        glActiveTexture(GL_TEXTURE6);
-        glBindTexture(GL_TEXTURE_2D, gIsEmissor);
-        RasterShader.setInt("gIsEmissor", 6);
-
-        RasterShader.setVec3("viewPos", CameraMain.position);
-
-        RasterLightHandler.addLightPoint(0, glm::vec3(0.0f, 2.49, 0.0f), glm::vec3(3.0), 1.0f, 0.09f, 0.032f);
-        //RasterLightHandler.addLightSpotlight(1, CameraMain.position, CameraMain.front, glm::vec3(1.0), 1.0, 1.10, 1.0f, 0.09f, 0.032f);
-
-        BufferQuad.bind();
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        //Pass 3
-
-        RaytraceShader.bind();
-
-        glBindImageTexture(0, RaytraceCurrColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-
-        RaytraceShader.setInt("Width", WIDTH);
-        RaytraceShader.setInt("Height", HEIGHT);
-        RaytraceShader.setFloat("glfwTime", CurrentFrame);
-        RaytraceShader.setInt("MSAAsamples", 1);
-        RaytraceShader.setInt("MaximumDepth", 4);
-        RaytraceShader.setInt("FrameIndex", FrameIndex);
-        RaytraceShader.setVec3("CameraPos", CameraMain.position);
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gPosition);
-        RaytraceShader.setInt("gPosition", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, gNormal);
-        RaytraceShader.setInt("gNormal", 1);
-
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, gAlbedo);
-        RaytraceShader.setInt("gAlbedo", 2);
-
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, gRoughness);
-        RaytraceShader.setInt("gRoughness", 3);
-
-        glActiveTexture(GL_TEXTURE4);
-        glBindTexture(GL_TEXTURE_2D, gIsDielectric);
-        RaytraceShader.setInt("gIsDielectric", 4);
-
-        glActiveTexture(GL_TEXTURE5);
-        glBindTexture(GL_TEXTURE_2D, gIOR);
-        RaytraceShader.setInt("gIOR", 5);
-
-        glActiveTexture(GL_TEXTURE6);
-        glBindTexture(GL_TEXTURE_2D, gIsEmissor);
-        RaytraceShader.setInt("gIsEmissor", 6);
+        ShaderCompute.setMat4("invView", glm::inverse(view));
+        ShaderCompute.setMat4("invProjection", glm::inverse(projection));
+        ShaderCompute.setVec3("CameraPos", CameraMain.position);
+        ShaderCompute.setInt("Width", WIDTH);
+        ShaderCompute.setInt("Height", HEIGHT);
+        ShaderCompute.setFloat("glfwTime", CurrentFrame);
+        ShaderCompute.setInt("MSAAsamples", 1);
+        ShaderCompute.setInt("MaximumDepth", 4);
+        ShaderCompute.setInt("FrameIndex", FrameIndex);
+        ShaderCompute.setFloat("Roughness", CurrentFrame/1.0);
+        ShaderCompute.setFloat("DefocusAngle", 0.5); 
+        ShaderCompute.setFloat("FocusDist", 2.5);
 
         //cout << "(" << CameraMain.position.x << ", " << CameraMain.position.y << ", " << CameraMain.position.z << ")\n";
 
-        RaytraceShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
+        ShaderCompute.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
-        //Pass 4
-
-        glBindFramebuffer(GL_FRAMEBUFFER, AccumFBO);
-        glClearColor(0.0, 0.0, 0.0, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);  
-
-        AccumShader.use();
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, RasterOutput);
-        AccumShader.setInt("Raster", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
-        AccumShader.setInt("Raytrace", 1);
-
-        AccumShader.setInt("OutputType", static_cast<int>(OutputType));
-
-        BufferQuad.bind();
-
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
-        //Pass 4.5
-
-        MomentsShader.bind();
         
-        glBindImageTexture(0, AccumulatedFirstMoment, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
-        glBindImageTexture(1, AccumulatedSecondMoment, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, RaytraceCurrColour);
-        MomentsShader.setInt("IntegratedColour", 0);
-
-        MomentsShader.setInt("FrameIndex", FrameIndex);
-
-        MomentsShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
-
-        //Pass 5
-
-        //Prepass (Pass < 0)
-
-        SVGFShader.bind();
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gDepth);
-        SVGFShader.setInt("gDepth", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, gNormal);
-        SVGFShader.setInt("gNormal", 1);
-
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, gMotion);
-        SVGFShader.setInt("gMotion", 2);
-
-        glActiveTexture(GL_TEXTURE3);
-        glBindTexture(GL_TEXTURE_2D, DisplayOutput);
-        SVGFShader.setInt("InputColour", 3);
         
-        glActiveTexture(GL_TEXTURE4);
-        glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
-        SVGFShader.setInt("AccumulatedFirstMoment", 4);
-
-        glActiveTexture(GL_TEXTURE5);
-        glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
-        SVGFShader.setInt("AccumulatedSecondMoment", 5);
-
-        glActiveTexture(GL_TEXTURE6);
-        glBindTexture(GL_TEXTURE_2D, prevDepth);
-        SVGFShader.setInt("prevDepth", 6);
-
-        glActiveTexture(GL_TEXTURE7);
-        glBindTexture(GL_TEXTURE_2D, prevNormal);
-        SVGFShader.setInt("prevNormal", 7);
-
-        SVGFShader.setInt("FrameIndex", FrameIndex);
-
-        SVGFShader.setInt("Width", WIDTH);
-        SVGFShader.setInt("Height", HEIGHT);
-
-        glActiveTexture(GL_TEXTURE8);
-        glBindTexture(GL_TEXTURE_2D, IntegratedColour);
-        SVGFShader.setInt("priorColourHistory", 8);
-
-        SVGFShader.setInt("Iterations", -1);
-
-        glBindImageTexture(0, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-
-        SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
-        
-        // Main passes
-
-        GLuint InputAtrous(IntegratedColour), OutputAtrous(AtrousB);
-        GLuint InputVariance(0), OutputVariance(VarianceB);
-
-        SVGFShader.bind();
+        ShaderSample.use();
 
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, gDepth);
-        SVGFShader.setInt("gDepth", 0);
-
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, gNormal);
-        SVGFShader.setInt("gNormal", 1);
-
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, gMotion);
-        SVGFShader.setInt("gMotion", 2);
-
-        glActiveTexture(GL_TEXTURE4);
-        glBindTexture(GL_TEXTURE_2D, AccumulatedFirstMoment);
-        SVGFShader.setInt("AccumulatedFirstMoment", 4);
-
-        glActiveTexture(GL_TEXTURE5);
-        glBindTexture(GL_TEXTURE_2D, AccumulatedSecondMoment);
-        SVGFShader.setInt("AccumulatedSecondMoment", 5);
-
-        glActiveTexture(GL_TEXTURE6);
-        glBindTexture(GL_TEXTURE_2D, prevDepth);
-        SVGFShader.setInt("prevDepth", 6);
-
-        glActiveTexture(GL_TEXTURE7);
-        glBindTexture(GL_TEXTURE_2D, prevNormal);
-        SVGFShader.setInt("prevNormal", 7);
-
-        SVGFShader.setInt("FrameIndex", FrameIndex);
-
-        SVGFShader.setInt("Width", WIDTH);
-        SVGFShader.setInt("Height", HEIGHT);
-
-        int iterationNum = 5;
-        for (int iteration = 0; iteration < iterationNum; iteration++) {
-
-            SVGFShader.setInt("Iterations", iteration);
-
-            glBindImageTexture(0, OutputAtrous, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
-            glBindImageTexture(1, OutputVariance, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
-
-            glActiveTexture(GL_TEXTURE3);
-            glBindTexture(GL_TEXTURE_2D, InputAtrous);
-            SVGFShader.setInt("InputColour", 3);
-
-            glActiveTexture(GL_TEXTURE8);
-            glBindTexture(GL_TEXTURE_2D, InputVariance);
-            SVGFShader.setInt("prevIterationVariance", 8);
-
-            SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
-
-            InputAtrous = OutputAtrous;
-            OutputAtrous = (OutputAtrous == AtrousA)? AtrousB : AtrousA;
-
-            InputVariance = OutputVariance;
-            OutputVariance = (OutputVariance == VarianceA)? VarianceB : VarianceA;
-        }
-
-        //Final pass
-
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
-        glClearColor(0.0, 0.0, 0.0, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        OutputShader.use();
-
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, InputAtrous);
-        OutputShader.setInt("DisplayOutput", 0);
+        glBindTexture(GL_TEXTURE_2D, ComputeShaderAccumulationTexture);
+        ShaderSample.setInt("TextureAccumulation", 0);
 
         BufferQuad.bind();
 
@@ -1056,11 +385,8 @@ int main () {
         glfwSwapBuffers(window);
         
         FPSCounter++;
-
-        //_sleep(100);
     }
-    glDeleteTextures(1, &RaytraceCurrColour);
-    glDeleteTextures(1, &gAlbedo);
+    glDeleteTextures(1, &ComputeShaderAccumulationTexture);
     glfwTerminate();
     return 0;
 }
