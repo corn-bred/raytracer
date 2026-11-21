@@ -129,7 +129,6 @@ bool tap_d(ivec2 currPixel, ivec2 priorPixel, float threshold) {
 //i cant believe this
 
 struct Tap {
-    ivec2 CurrPos;
     ivec2 PriorPos;
     float Weight;
     bool Passing;
@@ -140,31 +139,23 @@ vec3 TapTest(ivec2 centre) {
     vec2 fractReprojPix = fract(ReprojPix); //less computation??? maybe
 
     Tap taps[4] = {
-        {ivec2(0), ivec2(0), (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(0), ivec2(0),(fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
-        {ivec2(0), ivec2(0), (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
-        {ivec2(0), ivec2(0), (fractReprojPix.x) * (fractReprojPix.y), false}
+        {ivec2(0),  (1.0 - fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(0), (fractReprojPix.x) * (1.0 - fractReprojPix.y), false},
+        {ivec2(0),  (1.0 - fractReprojPix.x) * (fractReprojPix.y), false},
+        {ivec2(0),  (fractReprojPix.x) * (fractReprojPix.y), false}
     };
-    vec2 tmpPos = vec2(floor(ReprojPix.x), floor(ReprojPix.y));
-    taps[0].PriorPos = ivec2(tmpPos);
-    taps[0].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
+    ivec2 Base = ivec2(ReprojPix);
 
-    tmpPos = vec2(ceil(ReprojPix.x), floor(ReprojPix.y));
-    taps[1].PriorPos = ivec2(tmpPos);
-    taps[1].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-    tmpPos = vec2(floor(ReprojPix.x), ceil(ReprojPix.y));
-    taps[2].PriorPos = ivec2(tmpPos);
-    taps[2].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-    tmpPos = vec2(ceil(ReprojPix.x), ceil(ReprojPix.y));
-    taps[3].PriorPos = ivec2(tmpPos);
-    taps[3].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
+    ivec2 Offset[4] = {ivec2(0,0),ivec2(1,0), ivec2(0,1), ivec2(1,1)};
+    
+    for (int i = 0; i < 4; i++) {
+        taps[i].PriorPos = ivec2(Base + Offset[i]);
+    }
 
     int Tests = 0;
 
     for (int i = 0; i < 4; i++) {
-        if (tap_n(taps[i].CurrPos, taps[i].PriorPos, 0.9) && tap_d(taps[i].CurrPos, taps[i].PriorPos, 0.03)) {Tests++; taps[i].Passing = true;}
+        if (tap_n(centre, taps[i].PriorPos, 0.9) && tap_d(centre, taps[i].PriorPos, 0.03)) {Tests++; taps[i].Passing = true;}
     }   
 
     if (Tests != 0) { //if at least 1 tap passes
@@ -194,7 +185,7 @@ vec3 TapTest(ivec2 centre) {
         //accumulation
         vec3 OutputColour = vec3(0.0);
         for (int i = 0; i < 4; i++) {
-            OutputColour += texelFetch(priorColourHistory, clamp(taps[i].CurrPos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * taps[i].Weight;
+            OutputColour += texelFetch(priorColourHistory, clamp(taps[i].PriorPos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * taps[i].Weight;
         }
         return OutputColour;
     } else { //if all 2x2 taps fail try the 3x3 filter
@@ -205,88 +196,62 @@ vec3 TapTest(ivec2 centre) {
         ...
         */
 
-        ivec2 Base = ivec2(floor(centre.x), floor(centre.y));
+        ivec2 Base = ivec2(ReprojPix);
 
         Tap secondTaps[9] = {
-            {ivec2(0.0), ivec2(0.0), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0),      1.0 / (distance(vec2(floor(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0),           1.0 / (distance(vec2(ceil(ReprojPix.x), ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0),      1.0 / (distance(vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0),      1.0 / (distance(vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y)), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0), 1.0 / (distance(vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1), ReprojPix) + epsilon), false},
-            {ivec2(0.0), ivec2(0.0), 1.0 / (distance(vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y)), ReprojPix) + epsilon), false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
+            {ivec2(0.0), 0.0, false},
         };
 
-        tmpPos = vec2(floor(ReprojPix.x), floor(ReprojPix.y));
-        secondTaps[0].PriorPos = ivec2(tmpPos);
-        secondTaps[0].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
+        ivec2 SecondOffset[9] = {
+            ivec2(-1,1),    ivec2(0,1),     ivec2(1,1), 
+            ivec2(-1,0),    ivec2(0,0),     ivec2(1,0),
+            ivec2(-1,-1),   ivec2(0,-1),    ivec2(1,-1)
+        };
 
-        tmpPos = vec2(ceil(ReprojPix.x), floor(ReprojPix.y));
-        secondTaps[1].PriorPos = ivec2(tmpPos);
-        secondTaps[1].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(floor(ReprojPix.x), ceil(ReprojPix.y));
-        secondTaps[2].PriorPos = ivec2(tmpPos);
-        secondTaps[2].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(ceil(ReprojPix.x), ceil(ReprojPix.y));
-        secondTaps[3].PriorPos = ivec2(tmpPos);
-        secondTaps[3].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(ceil(ReprojPix.x), floor(ReprojPix.y) - 1);
-        secondTaps[4].PriorPos = ivec2(tmpPos);
-        secondTaps[4].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(floor(ReprojPix.x) - 1, ceil(ReprojPix.y));
-        secondTaps[5].PriorPos = ivec2(tmpPos);
-        secondTaps[5].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y) - 1);
-        secondTaps[6].PriorPos = ivec2(tmpPos);
-        secondTaps[6].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(floor(ReprojPix.x), floor(ReprojPix.y) - 1);
-        secondTaps[7].PriorPos = ivec2(tmpPos);
-        secondTaps[7].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
-
-        tmpPos = vec2(floor(ReprojPix.x) - 1, floor(ReprojPix.y));
-        secondTaps[8].PriorPos = ivec2(tmpPos);
-        secondTaps[8].CurrPos = ivec2(FindCurrFramePix(centre, tmpPos));
+        for (int i = 0; i < 9; i++) {
+            secondTaps[i].PriorPos = ivec2(Base + SecondOffset[i]);
+            secondTaps[i].Weight = 1.0 / (distance(vec2(secondTaps[i].PriorPos), ReprojPix) + epsilon);
+        }
 
         int secondTests = 0;
         for (int i = 0; i < 9; i++) {
-            if (tap_n(secondTaps[i].CurrPos, secondTaps[i].PriorPos, 0.9) && tap_d(secondTaps[i].CurrPos, secondTaps[i].PriorPos, 0.03)) {Tests++; secondTaps[i].Passing = true;}            
+            if (tap_n(centre, secondTaps[i].PriorPos, 0.9) && tap_d(centre, secondTaps[i].PriorPos, 0.03)) {secondTests++; secondTaps[i].Passing = true;}            
         }
 
         if (secondTests != 0) { //if at least 1 tap passes
-            if (secondTests != 9) { //& at least 1 tap fails 
-                //renormalize weights
+            //renormalize weights even if all pass because weights might not be normalized
 
-                float secondValidWeight = 0.0;
-                for (int i = 0; i < 9; i++) {
-                    if (secondTaps[i].Passing) {
-                        secondValidWeight += secondTaps[i].Weight;
-                    } else {
-                        secondTaps[i].Weight = 0.0;
-                    }
-                }
-                if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
-
-                //float divValidWeight = 1.0 / validWeight;
-
-                for (int i = 0; i < 9; i++) {
-                    if (secondTaps[i].Passing) {
-                        secondTaps[i].Weight /= secondValidWeight;
-                    }
+            float secondValidWeight = 0.0;
+            for (int i = 0; i < 9; i++) {
+                if (secondTaps[i].Passing) {
+                    secondValidWeight += secondTaps[i].Weight;
+                } else {
+                    secondTaps[i].Weight = 0.0;
                 }
             }
+            if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
+
+            //float divValidWeight = 1.0 / validWeight;
+
+            for (int i = 0; i < 9; i++) {
+                if (secondTaps[i].Passing) {
+                    secondTaps[i].Weight /= secondValidWeight;
+                }
+            }
+            
 
             //accumulation
             vec3 OutputColour = vec3(0.0);
             for (int i = 0; i < 9; i++) {
-                OutputColour += texelFetch(priorColourHistory, clamp(secondTaps[i].CurrPos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * secondTaps[i].Weight;
+                OutputColour += texelFetch(priorColourHistory, clamp(secondTaps[i].PriorPos, ivec2(0,0), ivec2(Width - 1, Height - 1)), 0).rgb * secondTaps[i].Weight;
             }
             return OutputColour;
         } else { //if all first taps fail and all second taps fail
