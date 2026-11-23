@@ -49,6 +49,9 @@ inline double random_double(double min, double max) {
 double AspectRatio = 16.0/9.0;
 unsigned int WIDTH = 600;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
+float TextureUpscale = 1.5;
+unsigned int WinWIDTH = WIDTH * TextureUpscale;
+unsigned int WinHEIGHT = HEIGHT * TextureUpscale;
 float FOV = 100.0;
 float DeltaTime, LastFrame;
 unsigned int FPSCounter, ShownFPS;
@@ -66,8 +69,8 @@ Output OutputType = Output::Combined;
 Camera CameraMain(glm::vec3(0.0, 0.0, 5.05));
 
 void framebufferSizeCallback(GLFWwindow *window, int width, int height) {
-    WIDTH = width;
-    HEIGHT = height;
+    WinWIDTH = width;
+    WinHEIGHT = height;
     glViewport(0, 0, width, height);
 }
 
@@ -155,7 +158,7 @@ int main () {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Raytracer", NULL, NULL);
+    GLFWwindow *window = glfwCreateWindow(WinWIDTH, WinHEIGHT, "Raytracer", NULL, NULL);
     if (!window) {
         cerr << "GLFW window creation failure\n";
         glfwTerminate();
@@ -168,7 +171,7 @@ int main () {
 
     GLFWmonitor *monitor = glfwGetPrimaryMonitor();
     GLFWvidmode *mode = const_cast<GLFWvidmode*>(glfwGetVideoMode(monitor));
-    glfwSetWindowPos(window, (mode->width - WIDTH)/2, (mode->height - HEIGHT)/2);
+    glfwSetWindowPos(window, (mode->width - WinWIDTH)/2, (mode->height - WinHEIGHT)/2);
 
     glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
 
@@ -185,6 +188,8 @@ int main () {
     }
 
     //  Framebuffer setup
+
+    glViewport(0, 0, WIDTH, HEIGHT);
 
     // PASS 1: G-BUFFER
 
@@ -745,6 +750,8 @@ int main () {
 
         //updating previous texture data for denoising (pre-pass pass??)
 
+        glViewport(0, 0, WIDTH, HEIGHT);
+
         glBindFramebuffer(GL_FRAMEBUFFER, prevBufferFBO);
 
         prevBufferShader.use();
@@ -1038,6 +1045,8 @@ int main () {
         }
 
         //Final pass
+
+        glViewport(0, 0, WinWIDTH, WinHEIGHT);
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glClearColor(0.0, 0.0, 0.0, 1.0);
