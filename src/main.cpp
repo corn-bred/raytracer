@@ -47,7 +47,7 @@ inline double random_double(double min, double max) {
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 600;
+unsigned int WIDTH = 200;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float TextureUpscale = 1.5;
 unsigned int WinWIDTH = WIDTH * TextureUpscale;
@@ -158,6 +158,7 @@ int main () {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     GLFWwindow *window = glfwCreateWindow(WinWIDTH, WinHEIGHT, "Raytracer", NULL, NULL);
     if (!window) {
         cerr << "GLFW window creation failure\n";
@@ -587,11 +588,11 @@ int main () {
 
     GBufferManager gBufferHandler(gBufferShader, uObjects.Objects, false);*/
 
-    Model model("assets/backpack2.obj");
+    Model model("assets/Sponza/sponza.obj");
 
     Triangle tempTri;
     
-    tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
+    /*tempTri.v0.Position = glm::vec3(1,2.49,-1); tempTri.v1.Position = glm::vec3(-1,2.49,-1); tempTri.v2.Position = glm::vec3(1,2.49,1);
     tempTri.v0.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v1.Normal = glm::vec3(0.0, -1.0, 0.0); tempTri.v2.Normal = glm::vec3(0.0, -1.0, 0.0);
     model.objectHandler.addTriangleEmission(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(3.0));
     tempTri.v0.Position = glm::vec3(-1,2.49,-1); tempTri.v1.Position = glm::vec3(1,2.49,1); tempTri.v2.Position = glm::vec3(-1,2.49,1);
@@ -631,7 +632,7 @@ int main () {
     model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
     tempTri.v0.Position = glm::vec3(-2.5,-2.5,-2.5); tempTri.v1.Position = glm::vec3(-2.5,2.5,2.5); tempTri.v2.Position = glm::vec3(-2.5,-2.5,2.5);
     tempTri.v0.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v1.Normal = glm::vec3(1.0, 0.0, 0.0); tempTri.v2.Normal = glm::vec3(1.0, 0.0, 0.0);
-    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);
+    model.objectHandler.addTriangle(tempTri.v0, tempTri.v1, tempTri.v2, glm::vec3(1.0, 0.0, 0.0), 1.0);*/
 
     GBufferManager gBufferHandler(gBufferShader, model.objectHandler.Objects, true);
 
@@ -975,6 +976,8 @@ int main () {
 
         SVGFShader.setInt("Iterations", -1);
 
+        SVGFShader.setFloat("glfwTime", CurrentFrame);
+
         glBindImageTexture(0, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
@@ -1019,7 +1022,7 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 5;
+        int iterationNum = 0;
         for (int iteration = 0; iteration < iterationNum; iteration++) {
 
             SVGFShader.setInt("Iterations", iteration);

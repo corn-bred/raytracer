@@ -21,10 +21,32 @@ uniform int FrameIndex;
 uniform int Width;
 uniform int Height;
 uniform int Iterations;
+uniform int glfwTime;
 
 const vec3 HumanLightSens = vec3(0.2126, 0.7152, 0.0722);
 const ivec2 PixelCoords = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
 const float epsilon = 1e-8;
+
+float hash(vec3 p) {
+    p = fract(p * 0.3183099 + 0.1);
+    p *= 17.0;
+    return fract(p.x * p.y * p.z * (p.x + p.y + p.z));
+}
+
+float rand(float seed) {
+    vec3 p = vec3(seed, seed * 2.345, seed * 5.678);
+    return hash(p);
+}
+
+float randRange(float seed, float min, float max) {
+    return min + (max - min) * rand(seed);
+}
+
+vec3 sampleSquare(float seed, int sampleIndex) {
+    float seedX = seed + float(sampleIndex) + PixelCoords.x + glfwTime;
+    float seedY = seedX + 3.12534 + PixelCoords.y;
+    return vec3(randRange(seedX, -0.5, 0.5), randRange(seedY, -0.5, 0.5), 0.0);
+}
 
 float Luminance(ivec2 point) {
     return dot(HumanLightSens, texelFetch(InputColour, point, 0).rgb);
@@ -173,11 +195,11 @@ vec3 TapTest(ivec2 centre) {
 
             if (validWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
 
-            //float divValidWeight = 1.0 / validWeight;
+            float divValidWeight = 1.0 / validWeight;
 
             for (int i = 0; i < 4; i++) {
                 if (taps[i].Passing) {
-                    taps[i].Weight /= validWeight;
+                    taps[i].Weight *= divValidWeight;
                 }
             }
         }
@@ -239,11 +261,11 @@ vec3 TapTest(ivec2 centre) {
             }
             if (secondValidWeight == 0.0) return texelFetch(InputColour, PixelCoords, 0).rgb; //Check if correct
 
-            //float divValidWeight = 1.0 / validWeight;
+            float secondDivValidWeight = 1.0 / secondValidWeight;
 
             for (int i = 0; i < 9; i++) {
                 if (secondTaps[i].Passing) {
-                    secondTaps[i].Weight /= secondValidWeight;
+                    secondTaps[i].Weight *= secondDivValidWeight;
                 }
             }
             
@@ -268,7 +290,9 @@ void main() {
 
     if (Iterations < 0) { // that would be what we call for prior frame history + current frame accumulation. defined previously in the last lines in raytrace.comp and all of moments.comp
         float alpha = 0.2;
-        vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * TapTest(PixelCoords);
+        vec3 IntegratedColour = alpha * texelFetch(InputColour, PixelCoords, 0).rgb + (1.0 - alpha) * texelFetch(priorColourHistory, PixelCoords, 0).rgb;
+        //TapTest(PixelCoords)
+        //texelFetch(priorColourHistory, PixelCoords, 0).rgb
         //InputColour = Current colour history
         //priorColourHistory = Prior colour accumulation texture
         imageStore(NextIterationOutput, PixelCoords, vec4(IntegratedColour, 1.0));
@@ -357,5 +381,6 @@ void main() {
         }*/
 
         imageStore(NextIterationOutput, PixelCoords, vec4(vec3(Output), 1.0));
+        //+ ivec2(round(randRange(glfwTime, -1.0, 1.0)), round(randRange(glfwTime+12.2, -1.0, 1.0)))
     }
 }
