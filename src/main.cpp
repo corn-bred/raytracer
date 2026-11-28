@@ -42,12 +42,12 @@ inline double random_double() {
 }
 
 inline double random_double(double min, double max) {
-    // Returns a random real in [min,max).
+    // Returns a random real in [min,max].
     return min + (max-min)*random_double();
 }
 
 double AspectRatio = 16.0/9.0;
-unsigned int WIDTH = 200;
+unsigned int WIDTH = 600;
 unsigned int HEIGHT = float(WIDTH) / AspectRatio;
 float TextureUpscale = 1.5;
 unsigned int WinWIDTH = WIDTH * TextureUpscale;
@@ -158,7 +158,6 @@ int main () {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     GLFWwindow *window = glfwCreateWindow(WinWIDTH, WinHEIGHT, "Raytracer", NULL, NULL);
     if (!window) {
         cerr << "GLFW window creation failure\n";
@@ -976,8 +975,6 @@ int main () {
 
         SVGFShader.setInt("Iterations", -1);
 
-        SVGFShader.setFloat("glfwTime", CurrentFrame);
-
         glBindImageTexture(0, IntegratedColour, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RGBA32F);
 
         SVGFShader.use((WIDTH + 15) / 16, (HEIGHT + 15) / 16, 1, GL_SHADER_IMAGE_ACCESS_BARRIER_BIT | GL_TEXTURE_FETCH_BARRIER_BIT);
@@ -1022,7 +1019,7 @@ int main () {
         SVGFShader.setInt("Width", WIDTH);
         SVGFShader.setInt("Height", HEIGHT);
 
-        int iterationNum = 0;
+        int iterationNum = 5;
         for (int iteration = 0; iteration < iterationNum; iteration++) {
 
             SVGFShader.setInt("Iterations", iteration);
